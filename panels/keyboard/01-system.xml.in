@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<KeyListEntries group="system" schema="org.gnome.settings-daemon.plugins.media-keys" _name="System">
+
+	<KeyListEntry name="logout" _description="Log out"/>
+
+	<KeyListEntry name="screensaver" _description="Lock screen"/>
+
+</KeyListEntries>
+

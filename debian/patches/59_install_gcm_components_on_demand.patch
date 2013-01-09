@@ -1,0 +1,231 @@
+Index: b/panels/color/cc-color-panel.c
+===================================================================
+--- a/panels/color/cc-color-panel.c
++++ b/panels/color/cc-color-panel.c
+@@ -25,6 +25,7 @@
+ #include <colord.h>
+ #include <gtk/gtk.h>
+ #include <gdk/gdkx.h>
++#include <gio/gio.h>
+ 
+ #include "cc-color-panel.h"
+ 
+@@ -260,32 +261,148 @@
+ }
+ 
+ static void
+-gcm_prefs_calibrate_cb (GtkWidget *widget, CcColorPanel *prefs)
++gcm_packagekit_finished_cb (GObject *source, GAsyncResult *res, gpointer user_data)
++{
++  GPtrArray *argv = (GPtrArray *)user_data;
++  GVariant *reply;
++  GError *error = NULL;
++  gboolean ret;
++
++  reply = g_dbus_proxy_call_finish (G_DBUS_PROXY (source), res, &error);
++  g_variant_unref (reply);
++
++  if (error != NULL)
++    {
++      g_warning ("failed to install required component: %s", error->message);
++      g_ptr_array_unref (argv);
++      g_error_free (error);
++      return;
++    }
++
++  ret = g_spawn_async (NULL, (gchar**) argv->pdata, NULL, 0,
++                       NULL, NULL, NULL, &error);
++  g_ptr_array_unref (argv);
++  if (!ret)
++    {
++      g_warning ("failed to run command: %s", error->message);
++      g_error_free (error);
++    }
++}
++
++struct gcm_packagekit_closure_data
++{
++  GPtrArray *argv;
++  guint xid;
++};
++
++static void
++gcm_packagekit_proxy_ready_cb (GObject *source, GAsyncResult *res, gpointer user_data)
++{
++  struct gcm_packagekit_closure_data *data =
++    (struct gcm_packagekit_closure_data *)user_data;
++  GDBusProxy *session_installer;
++  GVariantBuilder *builder;
++  GError *error = NULL;
++
++  session_installer = g_dbus_proxy_new_for_bus_finish (res, &error);
++  if (error != NULL)
++    {
++      g_warning ("failed to connect to PackageKit interface: %s",
++                 error->message);
++      g_ptr_array_unref (data->argv);
++      g_free (data);
++      g_error_free (error);
++      return;
++    }
++
++  builder = g_variant_builder_new (G_VARIANT_TYPE ("as"));
++  g_variant_builder_add (builder, "s",
++                         g_ptr_array_index (data->argv, 0));
++  g_dbus_proxy_call (session_installer,
++                     "InstallProvideFiles",
++                     g_variant_new ("(uass)",
++                                    data->xid,
++                                    builder,
++                                    "hide-finished"
++                                    ),
++                     G_DBUS_CALL_FLAGS_NONE,
++                     -1,
++                     NULL,
++                     &gcm_packagekit_finished_cb,
++                     data->argv);
++
++  g_free (data);
++  g_variant_builder_unref (builder);
++}
++
++static void
++gcm_prefs_install_component (guint xid, GPtrArray *argv)
++{
++  struct gcm_packagekit_closure_data *data;
++  data = g_malloc (sizeof (*data));
++  data->argv = argv;
++  data->xid = xid;
++  g_ptr_array_ref (data->argv);
++
++  g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
++                            G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
++                            G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS,
++                            NULL,
++                            "org.freedesktop.PackageKit",
++                            "/org/freedesktop/PackageKit",
++                            "org.freedesktop.PackageKit.Modify",
++                            NULL,
++                            &gcm_packagekit_proxy_ready_cb,
++                            data);
++}
++
++static void
++gcm_prefs_run_maybe_install (guint xid, gchar *filename, GPtrArray *argv)
+ {
+   gboolean ret;
+   GError *error = NULL;
++
++  ret = g_spawn_async (NULL, (gchar**) argv->pdata, NULL, 0,
++                       NULL, NULL, NULL, &error);
++  if (!ret)
++    {
++      if ((error->domain == g_spawn_error_quark ()) &&
++          (error->code == G_SPAWN_ERROR_NOENT))
++        {
++          gcm_prefs_install_component (xid, argv);
++        }
++      else
++        {
++          g_warning ("failed to run command: %s", error->message);
++        }
++      g_error_free (error);
++    }
++}
++
++static void
++gcm_prefs_calibrate_cb (GtkWidget *widget, CcColorPanel *prefs)
++{
+   guint xid;
+   GPtrArray *argv;
++  gchar *calibrater_filename;
+   CcColorPanelPrivate *priv = prefs->priv;
+ 
+   /* get xid */
+   xid = gdk_x11_window_get_xid (gtk_widget_get_window (GTK_WIDGET (priv->main_window)));
+ 
++  calibrater_filename = g_build_filename (BINDIR, "gcm-calibrate", NULL);
++
+   /* run with modal set */
+   argv = g_ptr_array_new_with_free_func (g_free);
+-  g_ptr_array_add (argv, g_build_filename (BINDIR, "gcm-calibrate", NULL));
++  g_ptr_array_add (argv, calibrater_filename);
+   g_ptr_array_add (argv, g_strdup ("--device"));
+   g_ptr_array_add (argv, g_strdup (cd_device_get_id (priv->current_device)));
+   g_ptr_array_add (argv, g_strdup ("--parent-window"));
+   g_ptr_array_add (argv, g_strdup_printf ("%i", xid));
+   g_ptr_array_add (argv, NULL);
+-  ret = g_spawn_async (NULL, (gchar**) argv->pdata, NULL, 0,
+-                       NULL, NULL, NULL, &error);
+-  if (!ret)
+-    {
+-      g_warning ("failed to run calibrate: %s", error->message);
+-      g_error_free (error);
+-    }
++
++  gcm_prefs_run_maybe_install (xid, calibrater_filename, argv);
++
+   g_ptr_array_unref (argv);
+ }
+ 
+@@ -656,10 +773,9 @@
+   GtkTreeModel *model;
+   GtkTreeSelection *selection;
+   gchar *options = NULL;
++  gchar *viewer_filename;
+   GPtrArray *argv = NULL;
+   guint xid;
+-  gboolean ret;
+-  GError *error = NULL;
+   CcColorPanelPrivate *priv = prefs->priv;
+ 
+   /* get the selected row */
+@@ -677,21 +793,17 @@
+   /* get xid */
+   xid = gdk_x11_window_get_xid (gtk_widget_get_window (GTK_WIDGET (priv->main_window)));
+ 
++  viewer_filename = g_build_filename (BINDIR, "gcm-viewer", NULL);
+   /* open up gcm-viewer as a info pane */
+   argv = g_ptr_array_new_with_free_func (g_free);
+-  g_ptr_array_add (argv, g_build_filename (BINDIR, "gcm-viewer", NULL));
++  g_ptr_array_add (argv, viewer_filename);
+   g_ptr_array_add (argv, g_strdup ("--profile"));
+   g_ptr_array_add (argv, g_strdup (cd_profile_get_id (profile)));
+   g_ptr_array_add (argv, g_strdup ("--parent-window"));
+   g_ptr_array_add (argv, g_strdup_printf ("%i", xid));
+   g_ptr_array_add (argv, NULL);
+-  ret = g_spawn_async (NULL, (gchar**) argv->pdata, NULL, 0,
+-                       NULL, NULL, NULL, &error);
+-  if (!ret)
+-    {
+-      g_warning ("failed to run calibrate: %s", error->message);
+-      g_error_free (error);
+-    }
++
++  gcm_prefs_run_maybe_install (xid, viewer_filename, argv);
+ 
+   g_ptr_array_unref (argv);
+   g_free (options);
+@@ -995,7 +1107,6 @@
+ {
+   GtkWidget *widget;
+   CdDeviceRelation relation;
+-  gchar *s;
+   CcColorPanelPrivate *priv = prefs->priv;
+ 
+   /* get profile */
+@@ -1026,13 +1137,7 @@
+   /* allow getting profile info */
+   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
+                "toolbutton_profile_view"));
+-  if ((s = g_find_program_in_path ("gcm-viewer")))
+-    {
+-      gtk_widget_set_sensitive (widget, TRUE);
+-      g_free (s);
+-    }
+-  else
+-      gtk_widget_set_sensitive (widget, FALSE);
++  gtk_widget_set_sensitive (widget, TRUE);
+ 
+   /* hide device specific stuff */
+   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,

@@ -1,0 +1,10 @@
+Index: b/panels/sound/data/gnome-sound-applet.desktop.in
+===================================================================
+--- a/panels/sound/data/gnome-sound-applet.desktop.in
++++ b/panels/sound/data/gnome-sound-applet.desktop.in
+@@ -14,4 +14,4 @@
+ #X-GNOME-Autostart-Phase=Panel
+ X-GNOME-Autostart-Notify=true
+ AutostartCondition=GNOME3 if-session gnome-fallback
+-OnlyShowIn=GNOME;Unity;
++OnlyShowIn=;

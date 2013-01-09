@@ -1,0 +1,16 @@
+# Description: the default sound theme is "ubuntu" for us
+# UbuntuSpecific: yes
+#
+Index: b/panels/sound/gvc-sound-theme-chooser.c
+===================================================================
+--- a/panels/sound/gvc-sound-theme-chooser.c
++++ b/panels/sound/gvc-sound-theme-chooser.c
+@@ -67,7 +67,7 @@
+ #define DEFAULT_ALERT_ID        "__default"
+ #define CUSTOM_THEME_NAME       "__custom"
+ #define NO_SOUNDS_THEME_NAME    "__no_sounds"
+-#define DEFAULT_THEME           "freedesktop"
++#define DEFAULT_THEME           "ubuntu"
+ 
+ enum {
+         THEME_DISPLAY_COL,

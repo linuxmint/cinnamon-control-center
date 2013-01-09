@@ -1,0 +1,19 @@
+Description: Handle the case where passwd re-asks for the current password when it was entered incorrectly (when using LDAP)
+ Based on a patch from Ryan Tandy
+Author: Chris Coulson <chris.coulson@canonical.com>
+Bug-Ubuntu: https:/launchpad.net/bugs/607357
+Forwarded: no
+
+Index: b/panels/user-accounts/run-passwd.c
+===================================================================
+--- a/panels/user-accounts/run-passwd.c
++++ b/panels/user-accounts/run-passwd.c
+@@ -408,7 +408,7 @@
+ 
+                         if (is_string_complete (str->str, "assword: ", "failure", "wrong", "error", NULL)) {
+ 
+-                                if (strstr (str->str, "assword: ") != NULL) {
++                                if (strstr (str->str, "assword: ") != NULL && strstr (str->str, "incorrect") == NULL) {
+                                         /* Authentication successful */
+ 
+                                         passwd_handler->backend_state = PASSWD_STATE_NEW;

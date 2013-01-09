@@ -1,0 +1,28 @@
+From 7b7f35b172e8c604aa723a3cd414088563a7d490 Mon Sep 17 00:00:00 2001
+From: Ryan Lortie <desrt@desrt.ca>
+Date: Mon, 19 Mar 2012 12:55:31 -0400
+Subject: [PATCH] background: don't 'download' image files
+
+The code for downloading files from remote uris was being triggered in
+the case of adding a background image file via the file chooser.  Don't
+set the 'source-url' attribute on the image in this case in order to
+avoid the problem.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=672405
+---
+ panels/background/bg-pictures-source.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+Index: b/panels/background/bg-pictures-source.c
+===================================================================
+--- a/panels/background/bg-pictures-source.c
++++ b/panels/background/bg-pictures-source.c
+@@ -335,7 +335,7 @@
+ 		"shading", G_DESKTOP_BACKGROUND_SHADING_SOLID,
+ 		"placement", G_DESKTOP_BACKGROUND_STYLE_ZOOM,
+ 		NULL);
+-  if (source_uri != NULL)
++  if (source_uri != NULL && !g_file_is_native (file))
+     g_object_set (G_OBJECT (item), "source-url", source_uri, NULL);
+ 
+   g_object_set_data (G_OBJECT (file), "item", item);

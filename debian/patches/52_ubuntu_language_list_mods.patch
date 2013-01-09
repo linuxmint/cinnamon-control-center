@@ -1,0 +1,153 @@
+Description: Makes the language list in User Accounts similar to the language list in language-selector.
+Forwarded: not-needed
+Author: Gunnar Hjalmarsson <ubuntu@gunnar.cc>
+
+Index: gnome-control-center-3.6.2/panels/common/cc-common-language.c
+===================================================================
+--- gnome-control-center-3.6.2.orig/panels/common/cc-common-language.c	2012-11-02 23:12:06.522757962 -0400
++++ gnome-control-center-3.6.2/panels/common/cc-common-language.c	2012-11-02 23:15:53.826748455 -0400
+@@ -530,6 +530,7 @@
+         ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+ 
+         /* Add some common languages first */
++/*
+         g_hash_table_insert (ht, g_strdup ("en_US.utf8"), g_strdup (_("English")));
+         if (gdm_language_has_translations ("en_GB"))
+                 g_hash_table_insert (ht, g_strdup ("en_GB.utf8"), g_strdup (_("British English")));
+@@ -550,9 +551,9 @@
+         if (gdm_language_has_translations ("ar") ||
+             gdm_language_has_translations ("ar_EG"))
+                 g_hash_table_insert (ht, g_strdup ("ar_EG.utf8"), g_strdup (_("Arabic")));
+-
++*/
+         /* Add the languages used by other users on the system */
+-        add_other_users_language (ht);
++//        add_other_users_language (ht);
+ 
+         /* Add current locale */
+         name = cc_common_language_get_current_language ();
+@@ -563,6 +564,35 @@
+                 g_free (name);
+         }
+ 
++        gchar  *command[] = { "/usr/share/language-tools/language-options", NULL };
++        GError *error = NULL;
++        gchar  *avail_languages;
++
++        if (!g_spawn_sync ( NULL,
++                            command,
++                            NULL,
++                            G_SPAWN_STDERR_TO_DEV_NULL,
++                            NULL,
++                            NULL,
++                            &avail_languages,
++                            NULL,
++                            NULL,
++                            &error )) {
++                g_debug ("Couldn't get available languages: %s", error->message);
++                g_error_free (error);
++                return;
++        }
++
++        name = strtok (avail_languages, "\n");
++        while (name != NULL) {
++                language = gdm_get_language_from_name (name, NULL);
++                g_hash_table_insert (ht, g_strdup (name), g_strdup (language));
++                name = strtok (NULL, "\n");
++        }
++        g_free (avail_languages);
++        g_free (name);
++        g_free (language);
++
+         return ht;
+ }
+ 
+Index: gnome-control-center-3.6.2/panels/common/cc-language-chooser.c
+===================================================================
+--- gnome-control-center-3.6.2.orig/panels/common/cc-language-chooser.c	2012-11-02 23:12:06.522757962 -0400
++++ gnome-control-center-3.6.2/panels/common/cc-language-chooser.c	2012-11-02 23:12:20.550757375 -0400
+@@ -106,20 +106,24 @@
+ 	user_langs = cc_common_language_get_initial_languages ();
+ 
+ 	/* Add the current locale first */
+-	name = cc_common_language_get_current_language ();
+-	display = g_hash_table_lookup (user_langs, name);
++//	name = cc_common_language_get_current_language ();
++//	display = g_hash_table_lookup (user_langs, name);
+ 
++        name = g_strdup ("en");
++        display = gdm_get_language_from_name (name, NULL);
+         gtk_list_store_append (store, &iter);
+         gtk_list_store_set (store, &iter, LOCALE_COL, name, DISPLAY_LOCALE_COL, display, -1);
+-        g_hash_table_remove (user_langs, name);
++
++        if (g_hash_table_lookup (user_langs, name) != NULL)
++                g_hash_table_remove (user_langs, name);
+         g_free (name);
+ 
+         /* The rest of the languages */
+ 	g_hash_table_foreach (user_langs, (GHFunc) languages_foreach_cb, store);
+ 
+ 	/* And now the "Other..." selection */
+-        gtk_list_store_append (store, &iter);
+-        gtk_list_store_set (store, &iter, LOCALE_COL, NULL, DISPLAY_LOCALE_COL, _("Other..."), -1);
++//        gtk_list_store_append (store, &iter);
++//        gtk_list_store_set (store, &iter, LOCALE_COL, NULL, DISPLAY_LOCALE_COL, _("Other..."), -1);
+ 
+         g_hash_table_destroy (user_langs);
+ }
+Index: gnome-control-center-3.6.2/panels/common/gdm-languages.c
+===================================================================
+--- gnome-control-center-3.6.2.orig/panels/common/gdm-languages.c	2012-11-02 23:12:06.522757962 -0400
++++ gnome-control-center-3.6.2/panels/common/gdm-languages.c	2012-11-02 23:12:20.550757375 -0400
+@@ -1131,6 +1131,7 @@
+         char *langinfo_codeset;
+         char *translated_language;
+         char *translated_territory;
++        char *modifier;
+         gboolean is_utf8 = TRUE;
+ 
+         g_return_val_if_fail (name != NULL, NULL);
+@@ -1153,12 +1154,13 @@
+         language_code = NULL;
+         territory_code = NULL;
+         codeset_code = NULL;
++        modifier = NULL;
+ 
+         gdm_parse_language_name (name,
+                                  &language_code,
+                                  &territory_code,
+                                  &codeset_code,
+-                                 NULL);
++                                 &modifier);
+ 
+         if (language_code == NULL) {
+                 goto out;
+@@ -1184,7 +1186,7 @@
+                                         translated_territory);
+         }
+ 
+-        language_name_get_codeset_details (name, &langinfo_codeset, &is_utf8);
++//        language_name_get_codeset_details (name, &langinfo_codeset, &is_utf8);
+ 
+         if (codeset_code == NULL && langinfo_codeset != NULL) {
+             codeset_code = g_strdup (langinfo_codeset);
+@@ -1196,6 +1198,10 @@
+                                         codeset_code);
+         }
+ 
++        if (modifier != NULL) {
++                g_string_append_printf (full_language, " - %s", modifier);
++        }
++
+ out:
+        g_free (language_code);
+        g_free (territory_code);
+@@ -1203,6 +1209,7 @@
+        g_free (langinfo_codeset);
+        g_free (translated_language);
+        g_free (translated_territory);
++       g_free (modifier);
+ 
+        if (full_language->len == 0) {
+                g_string_free (full_language, TRUE);

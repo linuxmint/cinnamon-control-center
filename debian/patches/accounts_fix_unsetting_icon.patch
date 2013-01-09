@@ -1,0 +1,16 @@
+# Upstream: https://bugzilla.gnome.org/show_bug.cgi?id=673841
+# Ubuntu: https://launchpad.net/bugs/978049
+#
+Index: gnome-control-center-3.6.2/panels/user-accounts/um-user.c
+===================================================================
+--- gnome-control-center-3.6.2.orig/panels/user-accounts/um-user.c	2012-11-01 20:44:03.426070880 -0400
++++ gnome-control-center-3.6.2/panels/user-accounts/um-user.c	2012-11-01 20:44:03.442070879 -0400
+@@ -730,7 +730,7 @@
+         GVariant *result;
+         GError *error = NULL;
+ 
+-        result = g_dbus_proxy_call_sync (user->proxy, "SetIconFile", g_variant_new ("(s)", icon_file), G_DBUS_CALL_FLAGS_NONE, -1, NULL, &error);
++        result = g_dbus_proxy_call_sync (user->proxy, "SetIconFile", g_variant_new ("(s)", icon_file ? icon_file : ""), G_DBUS_CALL_FLAGS_NONE, -1, NULL, &error);
+         if (!result) {
+                 g_warning ("SetIconFile call failed: %s", error->message);
+                 g_error_free (error);

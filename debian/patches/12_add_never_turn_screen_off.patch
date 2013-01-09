@@ -1,0 +1,29 @@
+Index: b/panels/screen/cc-screen-panel.c
+===================================================================
+--- a/panels/screen/cc-screen-panel.c
++++ b/panels/screen/cc-screen-panel.c
+@@ -402,8 +402,7 @@
+       gtk_tree_model_get (model, &iter,
+                           1, &value_tmp,
+                           -1);
+-      if (value == value_tmp ||
+-          (value_tmp > value_prev && value < value_tmp))
++      if (value == value_tmp)
+         {
+           gtk_combo_box_set_active_iter (combo_box, &iter);
+           return;
+Index: b/panels/screen/screen.ui
+===================================================================
+--- a/panels/screen/screen.ui
++++ b/panels/screen/screen.ui
+@@ -84,6 +84,10 @@
+         <col id="0" translatable="yes">1 hour</col>
+         <col id="1">3600</col>
+       </row>
++      <row>
++	<col id="0" translatable="yes">Never</col>
++	<col id="1">0</col>
++      </row>
+     </data>
+   </object>
+   <object class="GtkWindow" id="window1">

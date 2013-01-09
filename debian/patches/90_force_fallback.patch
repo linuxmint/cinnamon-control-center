@@ -1,0 +1,22 @@
+Index: b/panels/info/info.ui
+===================================================================
+--- a/panels/info/info.ui
++++ b/panels/info/info.ui
+@@ -1191,7 +1191,7 @@
+                             </child>
+                             <child>
+                               <object class="GtkLabel" id="fallback-label">
+-                                <property name="visible">True</property>
++                                <property name="visible">False</property>
+                                 <property name="can_focus">False</property>
+                                 <property name="xalign">1</property>
+                                 <property name="label" translatable="yes" comments="Hardware is not able to run GNOME 3's shell, so we might want to force running the 'Fallback' experience.">Forced _Fallback Mode</property>
+@@ -1240,7 +1240,7 @@
+                             </child>
+                             <child>
+                               <object class="GtkBox" id="graphics_fallback_switch_box">
+-                                <property name="visible">True</property>
++                                <property name="visible">False</property>
+                                 <property name="can_focus">False</property>
+                                 <property name="halign">start</property>
+                                 <property name="valign">center</property>

@@ -1,0 +1,406 @@
+# Description: set a navigation bar in the g-c-c shell
+# UbuntuSpecific: yes
+#
+=== modified file 'shell/Makefile.am'
+Index: gnome-control-center-3.6.3/shell/Makefile.am
+===================================================================
+--- gnome-control-center-3.6.3.orig/shell/Makefile.am	2012-10-01 11:39:00.000000000 +0200
++++ gnome-control-center-3.6.3/shell/Makefile.am	2012-11-22 10:20:59.485282338 +0100
+@@ -26,6 +26,8 @@
+ 	cc-shell-item-view.h			\
+ 	cc-shell-model.c			\
+ 	cc-shell-model.h			\
++	cc-shell-nav-bar.c			\
++	cc-shell-nav-bar.h			\
+ 	cc-editable-entry.c			\
+ 	cc-editable-entry.h			\
+ 	cc-panel.c				\
+Index: gnome-control-center-3.6.3/shell/cc-shell-marshal.list
+===================================================================
+--- gnome-control-center-3.6.3.orig/shell/cc-shell-marshal.list	2011-11-07 18:22:02.000000000 +0100
++++ gnome-control-center-3.6.3/shell/cc-shell-marshal.list	2012-11-22 10:20:56.873282212 +0100
+@@ -1 +1,2 @@
+ VOID:STRING,STRING,STRING
++VOID:VOID
+Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.c
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gnome-control-center-3.6.3/shell/cc-shell-nav-bar.c	2012-11-22 10:20:56.873282212 +0100
+@@ -0,0 +1,150 @@
++/*
++ * Copyright 2012 Canonical
++ *
++ * The Control Center is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by the
++ * Free Software Foundation; either version 2 of the License, or (at your
++ * option) any later version.
++ *
++ * The Control Center is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
++ * or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
++ * for more details.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with the Control Center; if not, write to the Free Software Foundation,
++ * Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
++ *
++ * Author: Aurélien Gâteau <aurelien.gateau@canonical.com>
++ */
++
++#include "cc-shell-nav-bar.h"
++#include "cc-shell-marshal.h"
++
++#include <glib/gi18n.h>
++
++G_DEFINE_TYPE (CcShellNavBar, cc_shell_nav_bar, GTK_TYPE_BOX)
++
++#define SHELL_NAV_BAR_PRIVATE(o) \
++  (G_TYPE_INSTANCE_GET_PRIVATE ((o), CC_TYPE_SHELL_NAV_BAR, CcShellNavBarPrivate))
++
++struct _CcShellNavBarPrivate
++{
++  GtkWidget *home_button;
++  GtkWidget *detail_button;
++};
++
++enum
++{
++  HOME_CLICKED,
++  LAST_SIGNAL
++};
++
++static guint signals[LAST_SIGNAL] = {0,};
++
++static void
++cc_shell_nav_bar_get_property (GObject    *object,
++                                 guint       property_id,
++                                 GValue     *value,
++                                 GParamSpec *pspec)
++{
++  switch (property_id)
++    {
++    default:
++      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
++    }
++}
++
++static void
++cc_shell_nav_bar_set_property (GObject      *object,
++                                 guint         property_id,
++                                 const GValue *value,
++                                 GParamSpec   *pspec)
++{
++  switch (property_id)
++    {
++    default:
++      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
++    }
++}
++
++static void
++cc_shell_nav_bar_dispose (GObject *object)
++{
++  G_OBJECT_CLASS (cc_shell_nav_bar_parent_class)->dispose (object);
++}
++
++static void
++cc_shell_nav_bar_finalize (GObject *object)
++{
++  G_OBJECT_CLASS (cc_shell_nav_bar_parent_class)->finalize (object);
++}
++
++static void
++home_button_clicked_cb (GtkButton *button,
++                        CcShellNavBar *bar)
++{
++  g_signal_emit (bar, signals[HOME_CLICKED], 0);
++}
++
++static void
++cc_shell_nav_bar_class_init (CcShellNavBarClass *klass)
++{
++  GObjectClass *object_class = G_OBJECT_CLASS (klass);
++
++  g_type_class_add_private (klass, sizeof (CcShellNavBarPrivate));
++
++  object_class->get_property = cc_shell_nav_bar_get_property;
++  object_class->set_property = cc_shell_nav_bar_set_property;
++  object_class->dispose = cc_shell_nav_bar_dispose;
++  object_class->finalize = cc_shell_nav_bar_finalize;
++
++  signals[HOME_CLICKED] = g_signal_new ("home-clicked",
++                                        CC_TYPE_SHELL_NAV_BAR,
++                                        G_SIGNAL_RUN_FIRST,
++                                        0,
++                                        NULL,
++                                        NULL,
++                                        cc_shell_marshal_VOID__VOID,
++                                        G_TYPE_NONE,
++                                        0);
++}
++
++static void
++cc_shell_nav_bar_init (CcShellNavBar *self)
++{
++  self->priv = SHELL_NAV_BAR_PRIVATE (self);
++  self->priv->home_button = gtk_button_new_with_mnemonic (_("_All Settings"));
++  self->priv->detail_button = gtk_button_new();
++
++  gtk_box_pack_start (GTK_BOX(self), self->priv->home_button, FALSE, FALSE, 0);
++  gtk_box_pack_start (GTK_BOX(self), self->priv->detail_button, FALSE, FALSE, 0);
++
++  gtk_widget_show (self->priv->home_button);
++
++  g_signal_connect (self->priv->home_button, "clicked",
++                    G_CALLBACK (home_button_clicked_cb), self);
++
++  GtkStyleContext *context = gtk_widget_get_style_context (GTK_WIDGET(self));
++  gtk_style_context_add_class (context, GTK_STYLE_CLASS_LINKED);
++  gtk_style_context_add_class (context, "breadcrumbs");
++}
++
++GtkWidget *
++cc_shell_nav_bar_new (void)
++{
++  return g_object_new (CC_TYPE_SHELL_NAV_BAR, NULL);
++}
++
++void
++cc_shell_nav_bar_show_detail_button (CcShellNavBar *bar, const gchar *label)
++{
++  gtk_widget_show (bar->priv->detail_button);
++  gtk_button_set_label (GTK_BUTTON (bar->priv->detail_button), label);
++}
++
++void
++cc_shell_nav_bar_hide_detail_button (CcShellNavBar *bar)
++{
++  gtk_widget_hide (bar->priv->detail_button);
++}
+Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.h
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gnome-control-center-3.6.3/shell/cc-shell-nav-bar.h	2012-11-22 10:20:56.877282212 +0100
+@@ -0,0 +1,76 @@
++/*
++ * Copyright 2012 Canonical
++ *
++ * The Control Center is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by the
++ * Free Software Foundation; either version 2 of the License, or (at your
++ * option) any later version.
++ *
++ * The Control Center is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
++ * or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
++ * for more details.
++ *
++ * You should have received a copy of the GNU General Public License along
++ * with the Control Center; if not, write to the Free Software Foundation,
++ * Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
++ *
++ * Author: Aurélien Gâteau <aurelien.gateau@canonical.com>
++ */
++
++#ifndef _CC_SHELL_NAV_BAR_H
++#define _CC_SHELL_NAV_BAR_H
++
++#include <gtk/gtk.h>
++
++G_BEGIN_DECLS
++
++#define CC_TYPE_SHELL_NAV_BAR cc_shell_nav_bar_get_type()
++
++#define CC_SHELL_NAV_BAR(obj) \
++  (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
++  CC_TYPE_SHELL_NAV_BAR, CcShellNavBar))
++
++#define CC_SHELL_NAV_BAR_CLASS(klass) \
++  (G_TYPE_CHECK_CLASS_CAST ((klass), \
++  CC_TYPE_SHELL_NAV_BAR, CcShellNavBarClass))
++
++#define CC_IS_SHELL_NAV_BAR(obj) \
++  (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
++  CC_TYPE_SHELL_NAV_BAR))
++
++#define CC_IS_SHELL_NAV_BAR_CLASS(klass) \
++  (G_TYPE_CHECK_CLASS_TYPE ((klass), \
++  CC_TYPE_SHELL_NAV_BAR))
++
++#define CC_SHELL_NAV_BAR_GET_CLASS(obj) \
++  (G_TYPE_INSTANCE_GET_CLASS ((obj), \
++  CC_TYPE_SHELL_NAV_BAR, CcShellNavBarClass))
++
++typedef struct _CcShellNavBar CcShellNavBar;
++typedef struct _CcShellNavBarClass CcShellNavBarClass;
++typedef struct _CcShellNavBarPrivate CcShellNavBarPrivate;
++
++struct _CcShellNavBar
++{
++  GtkBox parent;
++
++  CcShellNavBarPrivate *priv;
++};
++
++struct _CcShellNavBarClass
++{
++  GtkBoxClass parent_class;
++};
++
++GType cc_shell_nav_bar_get_type (void) G_GNUC_CONST;
++
++GtkWidget *cc_shell_nav_bar_new (void);
++
++void cc_shell_nav_bar_show_detail_button (CcShellNavBar *bar, const gchar *label);
++
++void cc_shell_nav_bar_hide_detail_button (CcShellNavBar *bar);
++
++G_END_DECLS
++
++#endif /* _CC_SHELL_NAV_BAR_H */
+Index: gnome-control-center-3.6.3/shell/gnome-control-center.c
+===================================================================
+--- gnome-control-center-3.6.3.orig/shell/gnome-control-center.c	2012-11-22 10:20:56.833282210 +0100
++++ gnome-control-center-3.6.3/shell/gnome-control-center.c	2012-11-22 10:20:59.485282338 +0100
+@@ -38,6 +38,7 @@
+ #include "cc-shell.h"
+ #include "cc-shell-category-view.h"
+ #include "cc-shell-model.h"
++#include "cc-shell-nav-bar.h"
+ 
+ G_DEFINE_TYPE (GnomeControlCenter, gnome_control_center, CC_TYPE_SHELL)
+ 
+@@ -75,6 +76,7 @@
+   GtkWidget  *search_entry;
+   GtkWidget  *lock_button;
+   GPtrArray  *custom_widgets;
++  GtkWidget  *nav_bar;
+ 
+   GMenuTree  *menu_tree;
+   GtkListStore *store;
+@@ -237,6 +239,7 @@
+   /* switch to the new panel */
+   gtk_widget_show (box);
+   notebook_select_page (priv->notebook, box);
++  cc_shell_nav_bar_show_detail_button (CC_SHELL_NAV_BAR(shell->priv->nav_bar), name);
+ 
+   /* set the title of the window */
+   icon_name = get_icon_name_from_g_icon (gicon);
+@@ -299,6 +302,8 @@
+ 
+   /* clear any custom widgets */
+   _shell_remove_all_custom_widgets (priv);
++
++  cc_shell_nav_bar_hide_detail_button (CC_SHELL_NAV_BAR (priv->nav_bar));
+ }
+ 
+ void
+@@ -902,11 +907,8 @@
+ 
+   child = notebook_get_selected_page (GTK_WIDGET (notebook));
+ 
+-  /* make sure the home button is shown on all pages except the overview page */
+-
+   if (child == priv->scrolled_window || child == priv->search_scrolled)
+     {
+-      gtk_widget_hide (W (priv->builder, "home-button"));
+       gtk_widget_show (W (priv->builder, "search-entry"));
+       gtk_widget_hide (W (priv->builder, "lock-button"));
+ 
+@@ -917,7 +919,6 @@
+     }
+   else
+     {
+-      gtk_widget_show (W (priv->builder, "home-button"));
+       gtk_widget_hide (W (priv->builder, "search-entry"));
+       /* set the scrolled window small so that it doesn't force
+          the window to be larger than this panel */
+@@ -1332,6 +1333,7 @@
+   GError *err = NULL;
+   GnomeControlCenterPrivate *priv;
+   GdkScreen *screen;
++  GtkWidget *widget;
+ 
+   priv = self->priv = CONTROL_CENTER_PRIVATE (self);
+ 
+@@ -1378,8 +1380,14 @@
+   g_signal_connect (priv->notebook, "notify::page",
+                     G_CALLBACK (notebook_page_notify_cb), priv);
+ 
+-  g_signal_connect (gtk_builder_get_object (priv->builder, "home-button"),
+-                    "clicked", G_CALLBACK (home_button_clicked_cb), self);
++  priv->nav_bar = cc_shell_nav_bar_new ();
++  widget = W (priv->builder, "hbox1");
++  gtk_box_pack_start (GTK_BOX (widget), priv->nav_bar, FALSE, FALSE, 0);
++  gtk_box_reorder_child (GTK_BOX (widget), priv->nav_bar, 0);
++  gtk_widget_show (priv->nav_bar);
++
++  g_signal_connect (priv->nav_bar,
++                    "home-clicked", G_CALLBACK (home_button_clicked_cb), self);
+ 
+   /* keep a list of custom widgets to unload on panel change */
+   priv->custom_widgets = g_ptr_array_new_with_free_func ((GDestroyNotify) g_object_unref);
+Index: gnome-control-center-3.6.3/shell/shell.ui
+===================================================================
+--- gnome-control-center-3.6.3.orig/shell/shell.ui	2012-11-14 12:42:44.000000000 +0100
++++ gnome-control-center-3.6.3/shell/shell.ui	2012-11-22 10:21:52.369284899 +0100
+@@ -34,36 +34,6 @@
+                       <object class="GtkHBox" id="hbox1">
+                         <property name="visible">True</property>
+                         <child>
+-                          <object class="GtkAspectFrame" id="home-aspect-frame">
+-                            <property name="visible">True</property>
+-			    <property name="can_focus">False</property>
+-			    <property name="xalign">0</property>
+-			    <property name="ratio">1</property>
+-			    <property name="shadow-type">none</property>
+-			    <property name="obey-child">False</property>
+-                            <child>
+-                              <object class="GtkButton" id="home-button">
+-                                <property name="use_action_appearance">False</property>
+-                                <property name="can_focus">True</property>
+-                                <property name="receives_default">True</property>
+-                                <property name="no_show_all">True</property>
+-                                <property name="use_action_appearance">False</property>
+-                                <property name="image">image1</property>
+-                                <property name="use_underline">True</property>
+-                                <child internal-child="accessible">
+-                                  <object class="AtkObject" id="home-button-atkobject">
+-                                    <property name="AtkObject::accessible-name" translatable="yes">All Settings</property>
+-                                  </object>
+-                                </child>
+-                              </object>
+-                            </child>
+-                          </object>
+-                          <packing>
+-                            <property name="expand">False</property>
+-                            <property name="position">0</property>
+-                          </packing>
+-                        </child>
+-                        <child>
+                           <object class="GtkAlignment" id="entry-alignment">
+                             <property name="visible">True</property>
+                             <property name="xalign">1</property>
+@@ -93,7 +63,7 @@
+                             </child>
+                           </object>
+                           <packing>
+-                            <property name="position">1</property>
++                            <property name="position">0</property>
+                           </packing>
+                         </child>
+                       </object>
+@@ -172,13 +142,6 @@
+       <column type="gchararray"/>
+     </columns>
+   </object>
+-  <object class="GtkSizeGroup" id="sizegroup">
+-    <property name="mode">vertical</property>
+-    <widgets>
+-      <widget name="home-button"/>
+-      <widget name="entry-alignment"/>
+-    </widgets>
+-  </object>
+   <object class="GtkImage" id="image1">
+     <property name="visible">True</property>
+     <property name="can_focus">False</property>

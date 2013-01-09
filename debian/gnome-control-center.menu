@@ -1,0 +1,4 @@
+?package(gnome-control-center):needs="X11" section="Applications/System/Administration" \
+  hints="Gnome" title="Gnome Control Center" \
+  icon="/usr/share/pixmaps/gnome-control-center.xpm" \
+  command="/usr/bin/gnome-control-center"

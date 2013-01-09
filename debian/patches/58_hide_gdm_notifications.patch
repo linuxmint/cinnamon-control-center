@@ -1,0 +1,17 @@
+Description: Hide "Show notifications when locked" settings when running
+ Unity. You currently need GNOME Shell running on GDM for that to work.
+Forwarded: not-needed
+Author: Jeremy Bicha <jbicha@ubuntu.com>
+Index: gnome-control-center-3.6.2/panels/screen/cc-screen-panel.c
+===================================================================
+--- gnome-control-center-3.6.2.orig/panels/screen/cc-screen-panel.c	2012-11-03 19:10:00.926617924 -0400
++++ gnome-control-center-3.6.2/panels/screen/cc-screen-panel.c	2012-11-03 19:17:14.902599774 -0400
+@@ -545,6 +545,8 @@
+                    "show-notifications",
+                    widget, "active",
+                    G_SETTINGS_BIND_DEFAULT);
++  if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
++    gtk_widget_hide (widget);
+ 
+   update_lock_screen_sensitivity (self);
+ 

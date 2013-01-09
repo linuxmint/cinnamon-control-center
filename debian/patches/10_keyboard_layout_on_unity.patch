@@ -1,0 +1,108 @@
+Index: gnome-control-center-3.6.3/panels/region/cc-region-panel.c
+===================================================================
+--- gnome-control-center-3.6.3.orig/panels/region/cc-region-panel.c	2012-11-23 19:09:05.019915889 -0500
++++ gnome-control-center-3.6.3/panels/region/cc-region-panel.c	2012-11-23 19:09:08.119915759 -0500
+@@ -130,10 +130,13 @@
+ {
+ 	CcRegionPanelPrivate *priv;
+ 	GtkWidget *prefs_widget;
++	const char *desktop;
+ 	GError *error = NULL;
+ 
+ 	priv = self->priv = REGION_PANEL_PRIVATE (self);
+ 
++	desktop = g_getenv ("XDG_CURRENT_DESKTOP");
++
+ 	priv->builder = gtk_builder_new ();
+ 
+ 	gtk_builder_add_from_file (priv->builder,
+@@ -145,16 +148,24 @@
+ 		return;
+ 	}
+ 
+-	prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
+-							     "region_notebook");
++	if (!g_strcmp0 (desktop, "GNOME")) {
++		prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
++								     "region_notebook");
++	} else {
++		prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
++								     "vbox1");
++	}
++
+ 	gtk_widget_set_size_request (GTK_WIDGET (prefs_widget), -1, 400);
+ 
+ 	gtk_widget_reparent (prefs_widget, GTK_WIDGET (self));
+ 
+ 	setup_xkb_tabs (priv->builder);
+-	setup_language (priv->builder);
+-	setup_formats (priv->builder);
+-	setup_system (priv->builder);
++	if (!g_strcmp0 (desktop, "GNOME")) {
++		setup_language (priv->builder);
++		setup_formats (priv->builder);
++		setup_system (priv->builder);
++	}
+ }
+ 
+ void
+Index: gnome-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in
+===================================================================
+--- gnome-control-center-3.6.3.orig/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:02.819915981 -0500
++++ gnome-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:08.119915759 -0500
+@@ -7,7 +7,7 @@
+ Type=Application
+ StartupNotify=true
+ Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings
+-OnlyShowIn=GNOME;Unity;
++OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-control-center
+ X-GNOME-Bugzilla-Component=region
+Index: gnome-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ gnome-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in	2012-11-23 19:09:08.123915759 -0500
+@@ -0,0 +1,17 @@
++[Desktop Entry]
++_Name=Keyboard Layout
++_Comment=Change your keyboard or input method settings
++Exec=gnome-control-center region
++Icon=preferences-desktop-keyboard-shortcuts
++Terminal=false
++Type=Application
++StartupNotify=true
++Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings
++OnlyShowIn=Unity;
++X-GNOME-Bugzilla-Bugzilla=GNOME
++X-GNOME-Bugzilla-Product=gnome-control-center
++X-GNOME-Bugzilla-Component=region
++X-GNOME-Bugzilla-Version=@VERSION@
++X-GNOME-Settings-Panel=region
++# Translators: those are keywords for the region control-center panel
++_Keywords=Language;Layout;Keyboard;Input Method;
+Index: gnome-control-center-3.6.3/configure.ac
+===================================================================
+--- gnome-control-center-3.6.3.orig/configure.ac	2012-11-23 19:09:05.027915889 -0500
++++ gnome-control-center-3.6.3/configure.ac	2012-11-23 19:11:51.987908906 -0500
+@@ -395,6 +395,7 @@
+ panels/keyboard/gnome-keybindings.pc
+ panels/region/Makefile
+ panels/region/gnome-region-panel.desktop.in
++panels/region/ubuntu-region-panel.desktop.in
+ panels/mouse/Makefile
+ panels/mouse/gnome-mouse-panel.desktop.in
+ panels/online-accounts/Makefile
+Index: gnome-control-center-3.6.3/panels/region/Makefile.am
+===================================================================
+--- gnome-control-center-3.6.3.orig/panels/region/Makefile.am	2012-11-23 19:09:05.027915889 -0500
++++ gnome-control-center-3.6.3/panels/region/Makefile.am	2012-11-23 19:11:12.023910577 -0500
+@@ -43,7 +43,7 @@
+ 	gnome-region-panel-options-dialog.ui
+ 
+ desktopdir = $(datadir)/applications
+-Desktop_in_files = gnome-region-panel.desktop.in
++Desktop_in_files = gnome-region-panel.desktop.in ubuntu-region-panel.desktop.in
+ desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
+ 
+ CLEANFILES = $(Desktop_in_files) $(desktop_DATA)

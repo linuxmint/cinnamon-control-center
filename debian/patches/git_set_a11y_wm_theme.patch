@@ -1,0 +1,60 @@
+From d834ebc3211a11514828b847981784a154924cfc Mon Sep 17 00:00:00 2001
+From: Cosimo Cecchi <cosimoc@gnome.org>
+Date: Tue, 13 Nov 2012 14:35:12 +0000
+Subject: a11y: also set the WM HighContrast theme when the switch is flipped
+
+Now that we have a HighContrast-specific WM theme.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=688257
+---
+diff --git a/panels/universal-access/cc-ua-panel.c b/panels/universal-access/cc-ua-panel.c
+index 183b58e..7fe97ae 100644
+--- a/panels/universal-access/cc-ua-panel.c
++++ b/panels/universal-access/cc-ua-panel.c
+@@ -40,7 +40,7 @@
+ #define KEY_TEXT_SCALING_FACTOR "text-scaling-factor"
+ #define KEY_GTK_THEME           "gtk-theme"
+ #define KEY_ICON_THEME          "icon-theme"
+-
++#define KEY_WM_THEME            "theme"
+ 
+ CC_PANEL_REGISTER (CcUaPanel, cc_ua_panel)
+ 
+@@ -349,19 +349,24 @@ set_contrast_mapping (const GValue       *value,
+                       gpointer            user_data)
+ {
+   gboolean hc;
+-  GSettings *settings = user_data;
++  CcUaPanel *self = user_data;
++  CcUaPanelPrivate *priv = self->priv;
+   GVariant *ret = NULL;
+ 
+   hc = g_value_get_boolean (value);
+   if (hc)
+     {
+       ret = g_variant_new_string (HIGH_CONTRAST_THEME);
+-      g_settings_set_string (settings, KEY_ICON_THEME, HIGH_CONTRAST_THEME);
++      g_settings_set_string (priv->interface_settings, KEY_ICON_THEME, HIGH_CONTRAST_THEME);
++
++      g_settings_set_string (priv->wm_settings, KEY_WM_THEME, HIGH_CONTRAST_THEME);
+     }
+   else
+     {
+-      g_settings_reset (settings, KEY_GTK_THEME);
+-      g_settings_reset (settings, KEY_ICON_THEME);
++      g_settings_reset (priv->interface_settings, KEY_GTK_THEME);
++      g_settings_reset (priv->interface_settings, KEY_ICON_THEME);
++
++      g_settings_reset (priv->wm_settings, KEY_WM_THEME);
+     }
+ 
+   return ret;
+@@ -377,7 +382,7 @@ cc_ua_panel_init_seeing (CcUaPanel *self)
+                                 "active", G_SETTINGS_BIND_DEFAULT,
+                                 get_contrast_mapping,
+                                 set_contrast_mapping,
+-                                priv->interface_settings,
++                                self,
+                                 NULL);
+   g_settings_bind_with_mapping (priv->interface_settings, KEY_TEXT_SCALING_FACTOR,
+                                 WID (priv->builder, "seeing_large_text_switch"),

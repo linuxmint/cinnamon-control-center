@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<KeyListEntries group="system" schema="org.gnome.settings-daemon.plugins.media-keys" _name="Launchers">
+
+	<KeyListEntry name="help" _description="Launch help browser"/>
+
+	<KeyListEntry name="calculator" _description="Launch calculator"/>
+
+	<KeyListEntry name="email" _description="Launch email client"/>
+
+	<KeyListEntry name="terminal" _description="Launch terminal"/>
+
+	<KeyListEntry name="www" _description="Launch web browser"/>
+
+	<KeyListEntry name="home" _description="Home folder"/>
+
+	<KeyListEntry name="search" _description="Search"/>
+
+</KeyListEntries>
+

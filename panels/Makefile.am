@@ -1,0 +1,35 @@
+SUBDIRS= \
+	common \
+	background \
+	screen \
+	power \
+	color \
+	display \
+	mouse \
+	online-accounts \
+	region \
+	info \
+	sound \
+	sound-nua \
+	keyboard \
+	universal-access \
+	user-accounts \
+	datetime
+
+if BUILD_WACOM
+SUBDIRS += wacom
+endif
+
+if BUILD_PRINTERS
+SUBDIRS += printers
+endif
+
+if BUILD_NETWORK
+SUBDIRS += network
+endif
+
+if BUILD_BLUETOOTH
+SUBDIRS += bluetooth
+endif
+
+-include $(top_srcdir)/git.mk

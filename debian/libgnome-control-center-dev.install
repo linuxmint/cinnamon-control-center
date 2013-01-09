@@ -1,0 +1,3 @@
+debian/tmp/usr/lib/pkgconfig
+debian/tmp/usr/include/gnome-control-center-1
+debian/tmp/usr/lib/libgnome-control-center.so
