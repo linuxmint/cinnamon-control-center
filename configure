@@ -657,8 +657,6 @@ ISOCODES_LIBS
 ISOCODES_CFLAGS
 BUILD_WACOM_FALSE
 BUILD_WACOM_TRUE
-WACOM_PANEL_LIBS
-WACOM_PANEL_CFLAGS
 BUILD_CHEESE_FALSE
 BUILD_CHEESE_TRUE
 CHEESE_LIBS
@@ -691,14 +689,10 @@ PRINTERS_PANEL_LIBS
 PRINTERS_PANEL_CFLAGS
 COLOR_PANEL_LIBS
 COLOR_PANEL_CFLAGS
-POWER_PANEL_LIBS
-POWER_PANEL_CFLAGS
 ONLINE_ACCOUNTS_PANEL_LIBS
 ONLINE_ACCOUNTS_PANEL_CFLAGS
 NETWORK_PANEL_LIBS
 NETWORK_PANEL_CFLAGS
-MOUSE_PANEL_LIBS
-MOUSE_PANEL_CFLAGS
 MEDIA_PANEL_LIBS
 MEDIA_PANEL_CFLAGS
 KEYBOARD_PANEL_LIBS
@@ -947,14 +941,10 @@ KEYBOARD_PANEL_CFLAGS
 KEYBOARD_PANEL_LIBS
 MEDIA_PANEL_CFLAGS
 MEDIA_PANEL_LIBS
-MOUSE_PANEL_CFLAGS
-MOUSE_PANEL_LIBS
 NETWORK_PANEL_CFLAGS
 NETWORK_PANEL_LIBS
 ONLINE_ACCOUNTS_PANEL_CFLAGS
 ONLINE_ACCOUNTS_PANEL_LIBS
-POWER_PANEL_CFLAGS
-POWER_PANEL_LIBS
 COLOR_PANEL_CFLAGS
 COLOR_PANEL_LIBS
 PRINTERS_PANEL_CFLAGS
@@ -975,8 +965,6 @@ BLUETOOTH_CFLAGS
 BLUETOOTH_LIBS
 CHEESE_CFLAGS
 CHEESE_LIBS
-WACOM_PANEL_CFLAGS
-WACOM_PANEL_LIBS
 ISOCODES_CFLAGS
 ISOCODES_LIBS
 SOCIALWEB_CFLAGS
@@ -1693,10 +1681,6 @@ Some influential environment variables:
               C compiler flags for MEDIA_PANEL, overriding pkg-config
   MEDIA_PANEL_LIBS
               linker flags for MEDIA_PANEL, overriding pkg-config
-  MOUSE_PANEL_CFLAGS
-              C compiler flags for MOUSE_PANEL, overriding pkg-config
-  MOUSE_PANEL_LIBS
-              linker flags for MOUSE_PANEL, overriding pkg-config
   NETWORK_PANEL_CFLAGS
               C compiler flags for NETWORK_PANEL, overriding pkg-config
   NETWORK_PANEL_LIBS
@@ -1706,10 +1690,6 @@ Some influential environment variables:
               pkg-config
   ONLINE_ACCOUNTS_PANEL_LIBS
               linker flags for ONLINE_ACCOUNTS_PANEL, overriding pkg-config
-  POWER_PANEL_CFLAGS
-              C compiler flags for POWER_PANEL, overriding pkg-config
-  POWER_PANEL_LIBS
-              linker flags for POWER_PANEL, overriding pkg-config
   COLOR_PANEL_CFLAGS
               C compiler flags for COLOR_PANEL, overriding pkg-config
   COLOR_PANEL_LIBS
@@ -1750,10 +1730,6 @@ Some influential environment variables:
   CHEESE_CFLAGS
               C compiler flags for CHEESE, overriding pkg-config
   CHEESE_LIBS linker flags for CHEESE, overriding pkg-config
-  WACOM_PANEL_CFLAGS
-              C compiler flags for WACOM_PANEL, overriding pkg-config
-  WACOM_PANEL_LIBS
-              linker flags for WACOM_PANEL, overriding pkg-config
   ISOCODES_CFLAGS
               C compiler flags for ISOCODES, overriding pkg-config
   ISOCODES_LIBS
@@ -13573,7 +13549,6 @@ PA_REQUIRED_VERSION=2.0
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
-GSD_REQUIRED_VERSION=3.4.2
 NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 GNOME_DESKTOP_REQUIRED_VERSION=3.5.91
@@ -14666,105 +14641,6 @@ $as_echo "yes" >&6; }
 
 fi
 
-pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for MOUSE_PANEL" >&5
-$as_echo_n "checking for MOUSE_PANEL... " >&6; }
-
-if test -n "$MOUSE_PANEL_CFLAGS"; then
-    pkg_cv_MOUSE_PANEL_CFLAGS="$MOUSE_PANEL_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= \$GSD_REQUIRED_VERSION x11\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_MOUSE_PANEL_CFLAGS=`$PKG_CONFIG --cflags "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-if test -n "$MOUSE_PANEL_LIBS"; then
-    pkg_cv_MOUSE_PANEL_LIBS="$MOUSE_PANEL_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= \$GSD_REQUIRED_VERSION x11\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_MOUSE_PANEL_LIBS=`$PKG_CONFIG --libs "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-
-
-
-if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        MOUSE_PANEL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11" 2>&1`
-        else
-	        MOUSE_PANEL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11" 2>&1`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$MOUSE_PANEL_PKG_ERRORS" >&5
-
-	as_fn_error $? "Package requirements ($COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11) were not met:
-
-$MOUSE_PANEL_PKG_ERRORS
-
-Consider adjusting the PKG_CONFIG_PATH environment variable if you
-installed software in a non-standard prefix.
-
-Alternatively, you may set the environment variables MOUSE_PANEL_CFLAGS
-and MOUSE_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details." "$LINENO" 5
-elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
-is in your PATH or set the PKG_CONFIG environment variable to the full
-path to pkg-config.
-
-Alternatively, you may set the environment variables MOUSE_PANEL_CFLAGS
-and MOUSE_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details.
-
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
-See \`config.log' for more details" "$LINENO" 5; }
-else
-	MOUSE_PANEL_CFLAGS=$pkg_cv_MOUSE_PANEL_CFLAGS
-	MOUSE_PANEL_LIBS=$pkg_cv_MOUSE_PANEL_LIBS
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-$as_echo "yes" >&6; }
-
-fi
 
 pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for NETWORK_PANEL" >&5
@@ -14948,105 +14824,6 @@ $as_echo "yes" >&6; }
 
 fi
 
-pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for POWER_PANEL" >&5
-$as_echo_n "checking for POWER_PANEL... " >&6; }
-
-if test -n "$POWER_PANEL_CFLAGS"; then
-    pkg_cv_POWER_PANEL_CFLAGS="$POWER_PANEL_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= \$GSD_REQUIRED_VERSION\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_POWER_PANEL_CFLAGS=`$PKG_CONFIG --cflags "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-if test -n "$POWER_PANEL_LIBS"; then
-    pkg_cv_POWER_PANEL_LIBS="$POWER_PANEL_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= \$GSD_REQUIRED_VERSION\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_POWER_PANEL_LIBS=`$PKG_CONFIG --libs "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-
-
-
-if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        POWER_PANEL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION" 2>&1`
-        else
-	        POWER_PANEL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION" 2>&1`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$POWER_PANEL_PKG_ERRORS" >&5
-
-	as_fn_error $? "Package requirements ($COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION) were not met:
-
-$POWER_PANEL_PKG_ERRORS
-
-Consider adjusting the PKG_CONFIG_PATH environment variable if you
-installed software in a non-standard prefix.
-
-Alternatively, you may set the environment variables POWER_PANEL_CFLAGS
-and POWER_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details." "$LINENO" 5
-elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
-is in your PATH or set the PKG_CONFIG environment variable to the full
-path to pkg-config.
-
-Alternatively, you may set the environment variables POWER_PANEL_CFLAGS
-and POWER_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details.
-
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
-See \`config.log' for more details" "$LINENO" 5; }
-else
-	POWER_PANEL_CFLAGS=$pkg_cv_POWER_PANEL_CFLAGS
-	POWER_PANEL_LIBS=$pkg_cv_POWER_PANEL_LIBS
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-$as_echo "yes" >&6; }
-
-fi
 
 pkg_failed=no
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for COLOR_PANEL" >&5
@@ -16244,137 +16021,8 @@ else
 fi
 
 
-# wacom is disabled for s390/s390x and non Linux platforms (needs udev)
-case $host_os in
-  linux*)
-    if test "$host_cpu" = s390 -o "$host_cpu" = s390x; then
-      have_wacom=no
-    else
+have_wacom=no
 
-pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for WACOM_PANEL" >&5
-$as_echo_n "checking for WACOM_PANEL... " >&6; }
-
-if test -n "$WACOM_PANEL_CFLAGS"; then
-    pkg_cv_WACOM_PANEL_CFLAGS="$WACOM_PANEL_CFLAGS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES
-                        gnome-settings-daemon >= \$GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= \$LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= \$GNOME_DESKTOP_REQUIRED_VERSION\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_WACOM_PANEL_CFLAGS=`$PKG_CONFIG --cflags "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-if test -n "$WACOM_PANEL_LIBS"; then
-    pkg_cv_WACOM_PANEL_LIBS="$WACOM_PANEL_LIBS"
- elif test -n "$PKG_CONFIG"; then
-    if test -n "$PKG_CONFIG" && \
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\$COMMON_MODULES
-                        gnome-settings-daemon >= \$GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= \$LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= \$GNOME_DESKTOP_REQUIRED_VERSION\""; } >&5
-  ($PKG_CONFIG --exists --print-errors "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION") 2>&5
-  ac_status=$?
-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-  test $ac_status = 0; }; then
-  pkg_cv_WACOM_PANEL_LIBS=`$PKG_CONFIG --libs "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION" 2>/dev/null`
-		      test "x$?" != "x0" && pkg_failed=yes
-else
-  pkg_failed=yes
-fi
- else
-    pkg_failed=untried
-fi
-
-
-
-if test $pkg_failed = yes; then
-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        WACOM_PANEL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION" 2>&1`
-        else
-	        WACOM_PANEL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION" 2>&1`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$WACOM_PANEL_PKG_ERRORS" >&5
-
-	as_fn_error $? "Package requirements ($COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION) were not met:
-
-$WACOM_PANEL_PKG_ERRORS
-
-Consider adjusting the PKG_CONFIG_PATH environment variable if you
-installed software in a non-standard prefix.
-
-Alternatively, you may set the environment variables WACOM_PANEL_CFLAGS
-and WACOM_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details." "$LINENO" 5
-elif test $pkg_failed = untried; then
-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
-$as_echo "no" >&6; }
-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
-is in your PATH or set the PKG_CONFIG environment variable to the full
-path to pkg-config.
-
-Alternatively, you may set the environment variables WACOM_PANEL_CFLAGS
-and WACOM_PANEL_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details.
-
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
-See \`config.log' for more details" "$LINENO" 5; }
-else
-	WACOM_PANEL_CFLAGS=$pkg_cv_WACOM_PANEL_CFLAGS
-	WACOM_PANEL_LIBS=$pkg_cv_WACOM_PANEL_LIBS
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-$as_echo "yes" >&6; }
-
-fi
-      have_wacom=yes
-    fi
-    ;;
-  *)
-    have_wacom=no
-    ;;
-esac
  if test x"$have_wacom" = x"yes"; then
   BUILD_WACOM_TRUE=
   BUILD_WACOM_FALSE='#'

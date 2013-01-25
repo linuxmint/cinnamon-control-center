@@ -2,10 +2,8 @@ SUBDIRS= \
 	common \
 	background \
 	screen \
-	power \
 	color \
 	display \
-	mouse \
 	online-accounts \
 	region \
 	info \
@@ -15,10 +13,6 @@ SUBDIRS= \
 	universal-access \
 	user-accounts \
 	datetime
-
-if BUILD_WACOM
-SUBDIRS += wacom
-endif
 
 if BUILD_PRINTERS
 SUBDIRS += printers
