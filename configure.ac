@@ -92,7 +92,6 @@ PA_REQUIRED_VERSION=2.0
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
-GSD_REQUIRED_VERSION=3.4.2
 NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 GNOME_DESKTOP_REQUIRED_VERSION=3.5.91
@@ -124,12 +123,10 @@ PKG_CHECK_MODULES(INFO_PANEL, $COMMON_MODULES libgtop-2.0
 		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
 PKG_CHECK_MODULES(KEYBOARD_PANEL, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
-PKG_CHECK_MODULES(MOUSE_PANEL, $COMMON_MODULES xi >= 1.2
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION x11)
+
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
 PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0 goa-backend-1.0 >= $GOA_REQUIRED_VERSION)
-PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
-                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION)
+
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.8)
 PKG_CHECK_MODULES(PRINTERS_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
@@ -220,23 +217,8 @@ else
 fi
 AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
 
-# wacom is disabled for s390/s390x and non Linux platforms (needs udev)
-case $host_os in
-  linux*)
-    if test "$host_cpu" = s390 -o "$host_cpu" = s390x; then
-      have_wacom=no
-    else
-      PKG_CHECK_MODULES(WACOM_PANEL, $COMMON_MODULES
-                        gnome-settings-daemon >= $GSD_REQUIRED_VERSION
-                        xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                        gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION)
-      have_wacom=yes
-    fi
-    ;;
-  *)
-    have_wacom=no
-    ;;
-esac
+have_wacom=no
+
 AM_CONDITIONAL(BUILD_WACOM, [test x"$have_wacom" = x"yes"])
 
 # This is a hard-dependency for the region and user-accounts panels
