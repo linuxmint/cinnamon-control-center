@@ -40,7 +40,7 @@
 #include "cc-shell-model.h"
 #include "cc-shell-nav-bar.h"
 
-G_DEFINE_TYPE (CinnamonControlCenter, CINNAMON_CONTROL_CENTER, CC_TYPE_SHELL)
+G_DEFINE_TYPE (CinnamonControlCenter, cinnamon_control_center, CC_TYPE_SHELL)
 
 #define CONTROL_CENTER_PRIVATE(o) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_CONTROL_CENTER, CinnamonControlCenterPrivate))
@@ -324,7 +324,7 @@ shell_show_overview_page (CinnamonControlCenter *center)
 }
 
 void
-CINNAMON_CONTROL_CENTER_set_overview_page (CinnamonControlCenter *center)
+cinnamon_control_center_set_overview_page (CinnamonControlCenter *center)
 {
   shell_show_overview_page (center);
 }
@@ -1080,7 +1080,7 @@ _shell_get_toplevel (CcShell *shell)
 
 /* GObject Implementation */
 static void
-CINNAMON_CONTROL_CENTER_get_property (GObject    *object,
+cinnamon_control_center_get_property (GObject    *object,
                                    guint       property_id,
                                    GValue     *value,
                                    GParamSpec *pspec)
@@ -1093,7 +1093,7 @@ CINNAMON_CONTROL_CENTER_get_property (GObject    *object,
 }
 
 static void
-CINNAMON_CONTROL_CENTER_set_property (GObject      *object,
+cinnamon_control_center_set_property (GObject      *object,
                                    guint         property_id,
                                    const GValue *value,
                                    GParamSpec   *pspec)
@@ -1106,7 +1106,7 @@ CINNAMON_CONTROL_CENTER_set_property (GObject      *object,
 }
 
 static void
-CINNAMON_CONTROL_CENTER_dispose (GObject *object)
+cinnamon_control_center_dispose (GObject *object)
 {
   CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (object)->priv;
 
@@ -1147,11 +1147,11 @@ CINNAMON_CONTROL_CENTER_dispose (GObject *object)
     }
 
 
-  G_OBJECT_CLASS (CINNAMON_CONTROL_CENTER_parent_class)->dispose (object);
+  G_OBJECT_CLASS (cinnamon_control_center_parent_class)->dispose (object);
 }
 
 static void
-CINNAMON_CONTROL_CENTER_finalize (GObject *object)
+cinnamon_control_center_finalize (GObject *object)
 {
   CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (object)->priv;
 
@@ -1185,21 +1185,21 @@ CINNAMON_CONTROL_CENTER_finalize (GObject *object)
       g_hash_table_destroy (priv->category_views);
     }
 
-  G_OBJECT_CLASS (CINNAMON_CONTROL_CENTER_parent_class)->finalize (object);
+  G_OBJECT_CLASS (cinnamon_control_center_parent_class)->finalize (object);
 }
 
 static void
-CINNAMON_CONTROL_CENTER_class_init (CinnamonControlCenterClass *klass)
+cinnamon_control_center_class_init (CinnamonControlCenterClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
   CcShellClass *shell_class = CC_SHELL_CLASS (klass);
 
   g_type_class_add_private (klass, sizeof (CinnamonControlCenterPrivate));
 
-  object_class->get_property = CINNAMON_CONTROL_CENTER_get_property;
-  object_class->set_property = CINNAMON_CONTROL_CENTER_set_property;
-  object_class->dispose = CINNAMON_CONTROL_CENTER_dispose;
-  object_class->finalize = CINNAMON_CONTROL_CENTER_finalize;
+  object_class->get_property = cinnamon_control_center_get_property;
+  object_class->set_property = cinnamon_control_center_set_property;
+  object_class->dispose = cinnamon_control_center_dispose;
+  object_class->finalize = cinnamon_control_center_finalize;
 
   shell_class->set_active_panel_from_id = _shell_set_active_panel_from_id;
   shell_class->embed_widget_in_header = _shell_embed_widget_in_header;
@@ -1363,7 +1363,7 @@ monitors_changed_cb (GdkScreen *screen,
 }
 
 static void
-CINNAMON_CONTROL_CENTER_init (CinnamonControlCenter *self)
+cinnamon_control_center_init (CinnamonControlCenter *self)
 {
   GError *err = NULL;
   CinnamonControlCenterPrivate *priv;
@@ -1449,19 +1449,19 @@ CINNAMON_CONTROL_CENTER_init (CinnamonControlCenter *self)
 }
 
 CinnamonControlCenter *
-CINNAMON_CONTROL_CENTER_new (void)
+cinnamon_control_center_new (void)
 {
   return g_object_new (CINNAMON_TYPE_CONTROL_CENTER, NULL);
 }
 
 void
-CINNAMON_CONTROL_CENTER_present (CinnamonControlCenter *center)
+cinnamon_control_center_present (CinnamonControlCenter *center)
 {
   gtk_window_present (GTK_WINDOW (center->priv->window));
 }
 
 void
-CINNAMON_CONTROL_CENTER_show (CinnamonControlCenter *center,
+cinnamon_control_center_show (CinnamonControlCenter *center,
 			   GtkApplication     *app)
 {
   gtk_window_set_application (GTK_WINDOW (center->priv->window), app);
