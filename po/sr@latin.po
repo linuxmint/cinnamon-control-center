@@ -3505,11 +3505,11 @@ msgstr "Izdanje ovog programa"
 msgid " — GNOME Volume Control Applet"
 msgstr " — Gnomovo programče za upravljanje jačinom zvuka"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Upravljanje jačinom zvuka"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Prikaži kontrolu jačine zvuka radne površi"
 

@@ -3460,11 +3460,11 @@ msgstr "ఈ అనువర్తనం యొక్క రూపాంతరం
 msgid " — GNOME Volume Control Applet"
 msgstr " — గ్నోమ్ వాల్యూమ్ కంట్రోల్ ఆప్లెట్"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "శబ్ద నియంత్రణ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "డెస్క్‍టాప్ శబ్దస్థాయి నియంత్రణను చూపించు"
 

@@ -3039,11 +3039,11 @@ msgstr "Nexşeya Bişkokan Hilbijêre"
 msgid "Custom"
 msgstr "Taybet"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr ""
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 #, fuzzy
 msgid "Volume Control"
 msgstr "Deng kêm bike"

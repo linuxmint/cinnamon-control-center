@@ -3459,11 +3459,11 @@ msgstr "ഈ പ്രയോഗത്തിന്റെ പതിപ്പു്"
 msgid " — GNOME Volume Control Applet"
 msgstr " — ഗ്നോം വോള്യം നിയന്ത്രണ ആപ്ലറ്റ്"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "ശബ്ദ ക്രമീകാരി"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "പണിയിട ശബ്ദ ക്രമീകാരി കാണിക്കുക"
 

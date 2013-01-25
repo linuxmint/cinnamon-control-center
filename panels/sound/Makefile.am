@@ -8,7 +8,7 @@ ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libsound.la
 
 bin_PROGRAMS =					\
-	gnome-sound-applet			\
+	cinnamon-sound-applet			\
 	$(NULL)
 
 AM_CPPFLAGS =					\

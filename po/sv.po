@@ -3003,11 +3003,11 @@ msgstr "Version för detta program"
 msgid " — GNOME Volume Control Applet"
 msgstr " — Panelprogrammet GNOME-volymkontroll"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Volymkontroll"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Visa skrivbordets volymkontroll"
 

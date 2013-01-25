@@ -3498,11 +3498,11 @@ msgstr "Versión de esta aplicación"
 msgid " — GNOME Volume Control Applet"
 msgstr " : Miniaplicación Control de volumen de GNOME"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Control de volumen"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Mostrar el control de volumen del escritorio"
 

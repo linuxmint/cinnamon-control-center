@@ -3410,11 +3410,11 @@ msgstr "このアプリケーションのバージョン"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME 音量調節アプレット"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "音量 コントロール"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "デスクトップの音量を調節するアプレットです"
 

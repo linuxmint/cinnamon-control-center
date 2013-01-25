@@ -3458,11 +3458,11 @@ msgstr "এই এপ্লিকেচনৰ সংস্কৰণ"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME ভলিউম নিয়ন্ত্ৰণ এপ্লেট"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "ভলিউমৰ নিয়ন্ত্ৰণ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "ডেস্কটপ ভলিউমৰ নিয়ন্ত্ৰণ দেখুৱাওক"
 

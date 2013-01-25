@@ -3629,11 +3629,11 @@ msgstr "Versie van deze toepassing"
 msgid " — GNOME Volume Control Applet"
 msgstr " — Gnome-applet voor het instellen van het volume"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Volumeregeling"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Volumeregeling voor werkomgeving tonen"
 

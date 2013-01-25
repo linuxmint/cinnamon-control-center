@@ -3503,11 +3503,11 @@ msgstr "ಅನ್ವಯದ ಆವೃತ್ತಿ"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME ಧ್ವನಿ ಪ್ರಮಾಣ ನಿಯಂತ್ರಣ ಆಪ್ಲೆಟ್"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "ಧ್ವನಿ ನಿಯಂತ್ರಣ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "ಗಣಕತೆರೆ ಧ್ವನಿ ನಿಯಂತ್ರಣವನ್ನು ತೋರಿಸಿ"
 

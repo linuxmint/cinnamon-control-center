@@ -3095,11 +3095,11 @@ msgstr "Верзија на оваа апликација"
 msgid " — GNOME Volume Control Applet"
 msgstr " — Аплетот за контрола на глас на GNOME "
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "Покажи ги контролите за глас"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 #| msgid "Unknown Volume Control %d"
 msgid "Volume Control"
 msgstr "Контрола на гласност"

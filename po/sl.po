@@ -3459,11 +3459,11 @@ msgstr "Različica programa"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME aplet nadzora glasnosti"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Nadzor glasnosti"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Pokaži namizni nadzornik zvoka"
 

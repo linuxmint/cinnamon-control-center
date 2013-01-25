@@ -3580,11 +3580,11 @@ msgstr "ଏହି ପ୍ରୟୋଗର ସଂସ୍କରଣ"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME ଭଲ୍ୟୁମ ନିୟନ୍ତ୍ରଣ ଆପଲେଟ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "ଭଲ୍ୟୁମ ନିୟନ୍ତ୍ରଣ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "ଡେସ୍କଟପ ଭଲ୍ୟୁମ ନିୟନ୍ତ୍ରଣ ଦର୍ଶାନ୍ତୁ"
 

@@ -2992,11 +2992,11 @@ msgstr "_Esbillar un soníu d'alerta:"
 msgid "Custom"
 msgstr "Personalizáu"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "Amosar el control de volume de l'escritoriu"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Volume Control"
 msgstr "Control de volume"
 

@@ -3466,11 +3466,11 @@ msgstr "Phiên bản ứng dụng này"
 msgid " — GNOME Volume Control Applet"
 msgstr " - Applet Điều khiển Âm lượng GNOME"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Điều khiển âm lượng"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Hiện điều khiển âm lượng"
 

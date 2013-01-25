@@ -2924,11 +2924,11 @@ msgstr "ئاگاھلاندۇرۇش ئاۋازى تاللاڭ(_H):"
 msgid "Custom"
 msgstr "ئىختىيارى"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "ئۈستەلئۈستى ئاۋاز تىزگىننى كۆرسەت"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Volume Control"
 msgstr "ئاۋاز تىزگىنى"
 

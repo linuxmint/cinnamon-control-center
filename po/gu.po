@@ -3495,11 +3495,11 @@ msgstr "આ કાર્યક્રમની આવૃત્તિ"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME વોલ્યુમ નિયંત્રણ એપલેટ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "વોલ્યુમ નિયંત્રણ"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "ડેસ્કટોપ વોલ્યુમ નિયંત્રણને બતાવો"
 

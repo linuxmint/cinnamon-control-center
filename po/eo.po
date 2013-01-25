@@ -3031,11 +3031,11 @@ msgstr "Versio de ĉi tiu aplikaĵo"
 msgid " — GNOME Volume Control Applet"
 msgstr " — Laŭtecregilo-aplikaĵeto de GNOME"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Laŭtecregilo"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Montri labortablan laŭtecregilon"
 

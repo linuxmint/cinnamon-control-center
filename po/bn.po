@@ -2518,11 +2518,11 @@ msgstr "সতর্ক করার জন্য শব্দ নির্ব�
 msgid "Custom"
 msgstr "স্বনির্বাচিত"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "ডেস্কটপ ভলিউম কন্ট্রোল প্রদর্শন"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Volume Control"
 msgstr "ভলিউম কন্ট্রোল"
 

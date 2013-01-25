@@ -3462,11 +3462,11 @@ msgstr "Бул иштеменени версиясы"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME үн бийиктигин башкаруу апплети"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Үн бийиктигин башкаруу"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Үн бийиктигин башкарууну ачуу"
 

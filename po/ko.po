@@ -3478,11 +3478,11 @@ msgstr "이 프로그램의 버전"
 msgid " — GNOME Volume Control Applet"
 msgstr " — 그놈 음량 조정 애플릿"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "음량 조정"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "데스크톱 음량 조절 표시"
 

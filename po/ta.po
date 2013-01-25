@@ -3475,11 +3475,11 @@ msgstr "இந்த பயன்பாட்டின் பதிப்பு 
 msgid " — GNOME Volume Control Applet"
 msgstr "—GNOME ஒலிவளவு கட்டுப்பாடு குறுநிரல்"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "பணிமேடை ஒலிவளவு கட்டுப்பாட்டை காட்டு"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Volume Control"
 msgstr "ஒலிவளவு கட்டுப்பாடு"
 

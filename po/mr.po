@@ -3471,11 +3471,11 @@ msgstr "या ॲप्लिकेशनची आवृत्ती"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME वॉल्युम कंट्रोल ॲप्लेट"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "आवाज नियंत्रण"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "डेस्कटॉप वॉल्युम कंट्रोल दाखवा"
 

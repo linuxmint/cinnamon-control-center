@@ -3663,13 +3663,13 @@ msgid " — GNOME Volume Control Applet"
 msgstr " — aplet Ovládanie hlasitosti GNOME"
 
 # desktop entry name
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Ovládanie hlasitosti"
 
 # PM: pracovnej plochy? nemyslí sa tu desktop enviroment  len to skrátene zapísali?
 # desktop entry comment
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 #, fuzzy
 msgid "Show desktop volume control"
 msgstr "Zobrazuje ovládanie hlasitosti pracovnej plochy"

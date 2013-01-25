@@ -85,7 +85,7 @@ panels/screen/gnome-screen-panel.desktop.in.in
 [type: gettext/glade]panels/screen/screen.ui
 panels/sound/applet-main.c
 panels/sound/cc-sound-panel.c
-panels/sound/data/gnome-sound-applet.desktop.in
+panels/sound/data/cinnamon-sound-applet.desktop.in
 panels/sound/data/gnome-sound-panel.desktop.in.in
 panels/sound/data/sounds/gnome-sounds-default.xml.in.in
 panels/sound/gvc-applet.c

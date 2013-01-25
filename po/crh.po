@@ -3329,11 +3329,11 @@ msgstr "Bu uyğulamanıñ sürümi"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME Gürlük Kontroli Uyğulamaçığı"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Gürlük Kontroli"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Masaüstü gürlük kontrolini köster"
 

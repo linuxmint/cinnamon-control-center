@@ -3041,11 +3041,11 @@ msgstr "Aplikazioaren bertsioa"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOMEren bolumena kontrolatzeko miniaplikazioa"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Show desktop volume control"
 msgstr "Erakutsi mahaigaineko bolumen-kontrola"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Volume Control"
 msgstr "Bolumen-kontrola"
 

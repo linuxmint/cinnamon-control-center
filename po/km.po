@@ -3446,11 +3446,11 @@ msgstr "កំណែ​កម្មវិធី​នេះ"
 msgid " — GNOME Volume Control Applet"
 msgstr " អាប់ភ្លេត​គ្រប់គ្រង​កម្រិត​សំឡេង​របស់  — GNOME"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "កា​រ​គ្រប់គ្រង​កម្រិត​សំឡេង"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "បង្ហាញ​ការ​គ្រប់គ្រង​កម្រិត​សំឡេង​នៅ​លើ​ផ្ទៃតុ"
 

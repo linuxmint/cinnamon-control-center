@@ -3599,12 +3599,12 @@ msgstr "Leagan an fheidhmchláir seo"
 msgid " — GNOME Volume Control Applet"
 msgstr ""
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 #, fuzzy
 msgid "Volume Control"
 msgstr "Rialtán UI"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr ""
 

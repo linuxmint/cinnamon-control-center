@@ -3456,11 +3456,11 @@ msgstr "Šios programos versija"
 msgid " — GNOME Volume Control Applet"
 msgstr " — GNOME garso valdymo įtaisas"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:1
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:1
 msgid "Volume Control"
 msgstr "Garsumo valdymas"
 
-#: ../panels/sound/data/gnome-sound-applet.desktop.in.h:2
+#: ../panels/sound/data/cinnamon-sound-applet.desktop.in.h:2
 msgid "Show desktop volume control"
 msgstr "Rodyti darbastalio garsumo valdiklį"
 
