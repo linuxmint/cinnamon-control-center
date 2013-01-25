@@ -1,6 +1,5 @@
 SUBDIRS= \
 	common \
-	background \
 	screen \
 	color \
 	display \

@@ -367,8 +367,6 @@ Makefile
 shell/libcinnamon-control-center.pc
 panels/Makefile
 panels/common/Makefile
-panels/background/Makefile
-panels/background/cinnamon-background-panel.desktop.in
 panels/bluetooth/Makefile
 panels/bluetooth/cinnamon-bluetooth-properties.desktop.in
 panels/datetime/Makefile
