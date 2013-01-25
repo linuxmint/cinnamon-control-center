@@ -1465,5 +1465,5 @@ cinnamon_control_center_show (CinnamonControlCenter *center,
 			   GtkApplication     *app)
 {
   gtk_window_set_application (GTK_WINDOW (center->priv->window), app);
-  gtk_widget_show (gtk_bin_get_child (GTK_BIN (center->priv->window)));
+ // gtk_widget_show (gtk_bin_get_child (GTK_BIN (center->priv->window)));
 }

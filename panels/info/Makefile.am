@@ -1,4 +1,4 @@
-cappletname = info
+cappletname = cinnamon-info
 
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\

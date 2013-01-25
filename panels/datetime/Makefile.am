@@ -1,5 +1,5 @@
 # This is used in PANEL_CFLAGS
-cappletname = datetime
+cappletname = cinnamon-datetime
 
 SUBDIRS = po-timezones
 

@@ -1,4 +1,4 @@
-cappletname = network
+cappletname = cinnamon-network
 
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\

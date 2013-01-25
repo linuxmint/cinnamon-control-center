@@ -1,6 +1,6 @@
 SUBDIRS = icons
 
-cappletname = color
+cappletname = cinnamon-color
 
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\

@@ -1,5 +1,5 @@
 # This is used in PANEL_CFLAGS
-cappletname = bluetooth
+cappletname = cinnamon-bluetooth
 
 ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libbluetooth.la

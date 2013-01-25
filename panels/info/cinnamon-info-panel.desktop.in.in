@@ -12,7 +12,7 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=cinnamon-control-center
 X-GNOME-Bugzilla-Component=info
 X-GNOME-Bugzilla-Version=@VERSION@
-X-GNOME-Settings-Panel=info
+X-GNOME-Settings-Panel=cinnamon-info
 # Translators: those are keywords for the System Information panel
 # "Preferred Applications" is the old name for the preference, so make
 # sure that you use the same "translation" for those keywords

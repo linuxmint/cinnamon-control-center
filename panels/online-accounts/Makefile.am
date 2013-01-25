@@ -1,4 +1,4 @@
-cappletname = online-accounts
+cappletname = cinnamon-online-accounts
 
 SUBDIRS = icons
 

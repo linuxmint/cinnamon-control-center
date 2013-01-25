@@ -1,5 +1,5 @@
 # This is used in PANEL_CFLAGS
-cappletname = display
+cappletname = cinnamon-display
 
 uidir = $(pkgdatadir)/ui
 dist_ui_DATA = display-capplet.ui
