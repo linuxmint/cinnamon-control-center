@@ -142,7 +142,7 @@ Index: cinnamon-control-center-3.6.2/shell/Makefile.am
 +	$(NULL)
 +
 +libcinnamon_control_center_la_LIBADD = 		\
-+	$(LIBGNOME_CONTROL_CENTER_LIBS)		\
++	$(LIBCINNAMON_CONTROL_CENTER_LIBS)		\
 +	$(NULL)
 +
 +libcinnamon_control_center_la_LIBTOOLFLAGS = --tag=disable-static

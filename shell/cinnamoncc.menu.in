@@ -39,7 +39,7 @@
 
   <!-- Avoid the shell having a launcher for itself -->
   <Exclude>
-    <Filename>gnome-control-center.desktop</Filename>
+    <Filename>cinnamon-control-center.desktop</Filename>
   </Exclude>
 
   <!-- Personal category -->
@@ -94,7 +94,7 @@
             <Category>X-GNOME-PersonalSettings</Category>
             <Category>X-GNOME-SystemSettings</Category>
             <Category>HardwareSettings</Category>
-            <Filename>gnome-control-center.desktop</Filename>
+            <Filename>cinnamon-control-center.desktop</Filename>
           </Or>
         </Not>
       </And>
