@@ -107,7 +107,7 @@ frob_account_dialog_CFLAGS = \
 	-DUIDIR=\""$(pkgdatadir)/ui/user-accounts"\"
 
 polkitdir = $(datadir)/polkit-1/actions
-polkit_in_files = org.gnome.controlcenter.user-accounts.policy.in
+polkit_in_files = org.cinnamon.controlcenter.user-accounts.policy.in
 
 @INTLTOOL_POLICY_RULE@
 polkit_DATA = $(polkit_in_files:.policy.in=.policy)

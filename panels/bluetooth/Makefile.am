@@ -19,8 +19,8 @@ libbluetooth_la_LIBADD = $(PANEL_LIBS) $(BLUETOOTH_LIBS)
 libbluetooth_la_LDFLAGS = $(PANEL_LDFLAGS)
 
 desktopdir = $(datadir)/applications
-desktop_in_in_files = bluetooth-properties.desktop.in.in
-desktop_in_files = bluetooth-properties.desktop.in
+desktop_in_in_files = cinnamon-bluetooth-properties.desktop.in.in
+desktop_in_files = cinnamon-bluetooth-properties.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 

@@ -22,8 +22,8 @@ AM_CPPFLAGS =					\
 	-DICON_DATA_DIR="\"$(pkgdatadir)/icons\"" \
 	$(NULL)
 
-noinst_LTLIBRARIES = libgnomevolumecontrol.la
-libgnomevolumecontrol_la_SOURCES =		\
+noinst_LTLIBRARIES = libcinnamonvolumecontrol.la
+libcinnamonvolumecontrol_la_SOURCES =		\
 	gvc-mixer-card.h			\
 	gvc-mixer-card.c			\
 	gvc-mixer-card-private.h		\
@@ -53,13 +53,13 @@ libgnomevolumecontrol_la_SOURCES =		\
 	gvc-pulseaudio-fake.h			\
 	$(NULL)
 
-gnome_sound_applet_LDADD =			\
+cinnamon_sound_applet_LDADD =			\
 	-lm					\
-	libgnomevolumecontrol.la		\
+	libcinnamonvolumecontrol.la		\
 	$(SOUND_PANEL_LIBS)			\
 	$(NULL)
 
-gnome_sound_applet_SOURCES =			\
+cinnamon_sound_applet_SOURCES =			\
 	gvc-stream-status-icon.h		\
 	gvc-stream-status-icon.c		\
 	gvc-applet.h				\
@@ -71,7 +71,7 @@ gnome_sound_applet_SOURCES =			\
 
 libsound_la_LIBADD =				\
 	-lm					\
-	libgnomevolumecontrol.la		\
+	libcinnamonvolumecontrol.la		\
 	$(PANEL_LIBS)				\
 	$(SOUND_PANEL_LIBS)			\
 	$(NULL)

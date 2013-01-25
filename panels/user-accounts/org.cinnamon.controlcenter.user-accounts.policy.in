@@ -4,10 +4,10 @@
  "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 
 <policyconfig>
-  <vendor>The GNOME Project</vendor>
+  <vendor>Linux Mint</vendor>
   <vendor_url>http://www.gnome.org/</vendor_url>
 
-  <action id="org.gnome.controlcenter.user-accounts.administration">
+  <action id="org.cinnamon.controlcenter.user-accounts.administration">
     <_description>Manage user accounts</_description>
     <_message>Authentication is required to change user data</_message>
     <defaults>

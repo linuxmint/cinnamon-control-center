@@ -21,7 +21,7 @@ AM_CPPFLAGS =						\
 
 libsoundnua_la_LIBADD =				\
 	-lm					\
-	../sound/libgnomevolumecontrol.la	\
+	../sound/libcinnamonvolumecontrol.la	\
 	$(PANEL_LIBS)				\
 	$(SOUND_PANEL_LIBS)			\
 	$(NULL)

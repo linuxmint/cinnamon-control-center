@@ -56,7 +56,7 @@ Index: cinnamon-control-center-3.6.2/panels/sound-nua/Makefile.am
 +
 +libsoundnua_la_LIBADD =				\
 +	-lm					\
-+	../sound/libgnomevolumecontrol.la	\
++	../sound/libcinnamonvolumecontrol.la	\
 +	$(PANEL_LIBS)				\
 +	$(SOUND_PANEL_LIBS)			\
 +	$(NULL)
