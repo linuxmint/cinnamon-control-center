@@ -26,7 +26,7 @@
 
 G_BEGIN_DECLS
 
-#define CINNAMON_TYPE_CONTROL_CENTER CINNAMON_CONTROL_CENTER_get_type()
+#define CINNAMON_TYPE_CONTROL_CENTER cinnamon_control_center_get_type()
 
 #define CINNAMON_CONTROL_CENTER(obj) \
   (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
