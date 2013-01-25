@@ -96,7 +96,6 @@ NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 GNOME_DESKTOP_REQUIRED_VERSION=3.5.91
 SCHEMAS_REQUIRED_VERSION=3.5.91
-LIBWACOM_REQUIRED_VERSION=0.6
 CLUTTER_REQUIRED_VERSION=1.11.3
 GOA_REQUIRED_VERSION=3.5.90
 
@@ -216,10 +215,6 @@ else
    have_cheese=no
 fi
 AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
-
-have_wacom=no
-
-AM_CONDITIONAL(BUILD_WACOM, [test x"$have_wacom" = x"yes"])
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
@@ -387,8 +382,6 @@ panels/keyboard/gnome-keybindings.pc
 panels/region/Makefile
 panels/region/gnome-region-panel.desktop.in
 panels/region/ubuntu-region-panel.desktop.in
-panels/mouse/Makefile
-panels/mouse/gnome-mouse-panel.desktop.in
 panels/online-accounts/Makefile
 panels/online-accounts/gnome-online-accounts-panel.desktop.in
 panels/online-accounts/icons/Makefile
@@ -434,15 +427,6 @@ panels/screen/Makefile
 panels/screen/gnome-screen-panel.desktop.in
 panels/info/Makefile
 panels/info/gnome-info-panel.desktop.in
-panels/power/Makefile
-panels/power/gnome-power-panel.desktop.in
-panels/power/icons/Makefile
-panels/power/icons/16x16/Makefile
-panels/power/icons/22x22/Makefile
-panels/power/icons/24x24/Makefile
-panels/power/icons/32x32/Makefile
-panels/power/icons/48x48/Makefile
-panels/power/icons/256x256/Makefile
 panels/color/Makefile
 panels/color/gnome-color-panel.desktop.in
 panels/color/icons/Makefile
@@ -465,9 +449,6 @@ panels/user-accounts/data/Makefile
 panels/user-accounts/data/gnome-user-accounts-panel.desktop.in
 panels/user-accounts/data/faces/Makefile
 panels/user-accounts/data/icons/Makefile
-panels/wacom/Makefile
-panels/wacom/calibrator/Makefile
-panels/wacom/gnome-wacom-panel.desktop.in
 po/Makefile.in
 shell/Makefile
 shell/gnome-control-center.desktop.in
@@ -505,11 +486,7 @@ if test "x$with_systemd" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
 fi
-if test "x$have_wacom" = "xyes"; then
-	AC_MSG_NOTICE([** wacom (Wacom tablet panel)])
-else
-	AC_MSG_NOTICE([   Wacom panel disabled])
-fi
+
 if test "x$enable_ibus" == "xyes"; then
 	AC_MSG_NOTICE([** IBus (Region panel IBus support)])
 else
