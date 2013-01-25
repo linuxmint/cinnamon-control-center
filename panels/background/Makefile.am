@@ -90,7 +90,7 @@ dist_pixmap_DATA = \
 	noise-texture-light.png
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-background-panel.desktop.in
+desktop_in_files = cinnamon-background-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES) stamp-gdesktop-enums-types.h

@@ -5,9 +5,9 @@ SUBDIRS = icons
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(ONLINE_ACCOUNTS_PANEL_CFLAGS)				\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	$(NULL)
 
 ccpanelsdir = $(PANELS_DIR)
@@ -30,7 +30,7 @@ dist_ui_DATA = online-accounts.ui
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-online-accounts-panel.desktop.in
+desktop_in_files = cinnamon-online-accounts-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA)

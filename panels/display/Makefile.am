@@ -44,7 +44,7 @@ iconssvgdir = $(datadir)/icons/hicolor/scalable/apps
 dist_iconssvg_DATA = icons/scalable/preferences-desktop-display.svg
 
 desktopdir = $(datadir)/applications
-Desktop_in_files = gnome-display-panel.desktop.in
+Desktop_in_files = cinnamon-display-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 INCLUDES   = $(PANEL_CFLAGS) \
@@ -52,7 +52,7 @@ INCLUDES   = $(PANEL_CFLAGS) \
 	     -DSBINDIR="\"$(sbindir)\"" \
 	     -DUIDIR="\"$(uidir)\"" \
 	     -DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
-	     -DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""
+	     -DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""
 
 CLEANFILES = $(Desktop_in_files) $(desktop_DATA)
 

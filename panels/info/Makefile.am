@@ -3,9 +3,9 @@ cappletname = info
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(INFO_PANEL_CFLAGS)				\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DDATADIR="\"$(datadir)\""			\
 	-DLIBEXECDIR="\"$(libexecdir)\""		\
 	$(NULL)
@@ -41,7 +41,7 @@ dist_ui_DATA = info.ui GnomeLogoVerticalMedium.svg
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-info-panel.desktop.in
+desktop_in_files = cinnamon-info-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 SPACEDIR=$(top_srcdir)/../gnome-settings-daemon/plugins/housekeeping/

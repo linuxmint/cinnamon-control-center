@@ -28,7 +28,7 @@ dist_ui_DATA = color.ui
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-color-panel.desktop.in
+desktop_in_files = cinnamon-color-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA)

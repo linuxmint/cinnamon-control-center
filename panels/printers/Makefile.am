@@ -13,7 +13,7 @@ INCLUDES = 						\
 	$(PRINTERS_PANEL_CFLAGS)			\
 	-I$(top_srcdir)/shell/				\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DDATADIR="\"$(uidir)\""			\
 	$(NULL)
 
@@ -53,7 +53,7 @@ libprinters_la_LDFLAGS = $(PANEL_LDFLAGS)
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-printers-panel.desktop.in
+desktop_in_files = cinnamon-printers-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA)

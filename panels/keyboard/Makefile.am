@@ -24,10 +24,10 @@ libkeyboard_la_LDFLAGS = $(PANEL_LDFLAGS)
 @INTLTOOL_DESKTOP_RULE@
 
 uidir   = $(pkgdatadir)/ui
-ui_DATA = gnome-keyboard-panel.ui
+ui_DATA = cinnamon-keyboard-panel.ui
 
 desktopdir = $(datadir)/applications
-Desktop_in_files = gnome-keyboard-panel.desktop.in
+Desktop_in_files = cinnamon-keyboard-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 @INTLTOOL_XML_NOMERGE_RULE@
@@ -37,19 +37,19 @@ xml_in_files = 00-multimedia.xml.in 01-launchers.xml.in 01-screenshot.xml.in 01-
 xml_DATA     = $(xml_in_files:.xml.in=.xml)
 
 pkgconfigdir = $(datadir)/pkgconfig
-pkgconfig_DATA = gnome-keybindings.pc
+pkgconfig_DATA = cinnamon-keybindings.pc
 
 INCLUDES = \
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\"" \
-	-DGNOMECC_UI_DIR="\"$(uidir)\"" \
-	-DGNOMECC_KEYBINDINGS_DIR="\"$(pkgdatadir)/keybindings\""
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\"" \
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\"" \
+	-DCINNAMONCC_KEYBINDINGS_DIR="\"$(pkgdatadir)/keybindings\""
 
 CLEANFILES = \
 	$(Desktop_in_files) \
 	$(desktop_DATA) \
 	$(xml_DATA)
-EXTRA_DIST = $(ui_DATA) $(xml_in_files) gnome-keybindings.pc.in
+EXTRA_DIST = $(ui_DATA) $(xml_in_files) cinnamon-keybindings.pc.in
 
 
 -include $(top_srcdir)/git.mk

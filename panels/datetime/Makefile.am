@@ -163,7 +163,7 @@ libdate_time_la_LDFLAGS = $(PANEL_LDFLAGS)
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-datetime-panel.desktop.in
+desktop_in_files = cinnamon-datetime-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA)

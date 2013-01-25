@@ -31,7 +31,7 @@ AC_SUBST(LIBCINNAMONCONTROLCENTER_AGE)
 
 IT_PROG_INTLTOOL([0.40.1])
 
-GETTEXT_PACKAGE=cinnamon-control-center-2.0
+GETTEXT_PACKAGE=cinnamon-control-center-1.0
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
 
@@ -368,22 +368,22 @@ shell/libcinnamon-control-center.pc
 panels/Makefile
 panels/common/Makefile
 panels/background/Makefile
-panels/background/gnome-background-panel.desktop.in
+panels/background/cinnamon-background-panel.desktop.in
 panels/bluetooth/Makefile
 panels/bluetooth/bluetooth-properties.desktop.in
 panels/datetime/Makefile
-panels/datetime/gnome-datetime-panel.desktop.in
+panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
 panels/display/Makefile
-panels/display/gnome-display-panel.desktop.in
+panels/display/cinnamon-display-panel.desktop.in
 panels/keyboard/Makefile
-panels/keyboard/gnome-keyboard-panel.desktop.in
-panels/keyboard/gnome-keybindings.pc
+panels/keyboard/cinnamon-keyboard-panel.desktop.in
+panels/keyboard/cinnamon-keybindings.pc
 panels/region/Makefile
-panels/region/gnome-region-panel.desktop.in
+panels/region/cinnamon-region-panel.desktop.in
 panels/region/ubuntu-region-panel.desktop.in
 panels/online-accounts/Makefile
-panels/online-accounts/gnome-online-accounts-panel.desktop.in
+panels/online-accounts/cinnamon-online-accounts-panel.desktop.in
 panels/online-accounts/icons/Makefile
 panels/online-accounts/icons/16x16/Makefile
 panels/online-accounts/icons/22x22/Makefile
@@ -393,10 +393,10 @@ panels/online-accounts/icons/48x48/Makefile
 panels/online-accounts/icons/256x256/Makefile
 panels/sound-nua/Makefile
 panels/sound-nua/data/Makefile
-panels/sound-nua/data/gnome-sound-nua-panel.desktop.in
+panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in
 panels/sound/Makefile
 panels/sound/data/Makefile
-panels/sound/data/gnome-sound-panel.desktop.in
+panels/sound/data/cinnamon-sound-panel.desktop.in
 panels/sound/data/symbolic-icons/Makefile
 panels/sound/data/symbolic-icons/scalable/Makefile
 panels/sound/data/symbolic-icons/scalable/status/Makefile
@@ -424,11 +424,11 @@ panels/sound/data/icons/scalable/apps/Makefile
 panels/sound/data/icons/scalable/devices/Makefile
 panels/sound/data/sounds/Makefile
 panels/screen/Makefile
-panels/screen/gnome-screen-panel.desktop.in
+panels/screen/cinnamon-screen-panel.desktop.in
 panels/info/Makefile
-panels/info/gnome-info-panel.desktop.in
+panels/info/cinnamon-info-panel.desktop.in
 panels/color/Makefile
-panels/color/gnome-color-panel.desktop.in
+panels/color/cinnamon-color-panel.desktop.in
 panels/color/icons/Makefile
 panels/color/icons/16x16/Makefile
 panels/color/icons/22x22/Makefile
@@ -439,14 +439,14 @@ panels/color/icons/64x64/Makefile
 panels/color/icons/256x256/Makefile
 panels/color/icons/scalable/Makefile
 panels/printers/Makefile
-panels/printers/gnome-printers-panel.desktop.in
+panels/printers/cinnamon-printers-panel.desktop.in
 panels/network/Makefile
-panels/network/gnome-network-panel.desktop.in
+panels/network/cinnamon-network-panel.desktop.in
 panels/universal-access/Makefile
-panels/universal-access/gnome-universal-access-panel.desktop.in
+panels/universal-access/cinnamon-universal-access-panel.desktop.in
 panels/user-accounts/Makefile
 panels/user-accounts/data/Makefile
-panels/user-accounts/data/gnome-user-accounts-panel.desktop.in
+panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in
 panels/user-accounts/data/faces/Makefile
 panels/user-accounts/data/icons/Makefile
 po/Makefile.in

@@ -49,7 +49,7 @@ G_BEGIN_DECLS
   CC_TYPE_SHELL, CcShellClass))
 
 
-#define CC_SHELL_PANEL_EXTENSION_POINT "control-center-1"
+#define CC_SHELL_PANEL_EXTENSION_POINT "cinnamon-control-center-1"
 
 typedef struct _CcShell CcShell;
 typedef struct _CcShellClass CcShellClass;
