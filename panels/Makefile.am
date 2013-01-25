@@ -7,11 +7,8 @@ SUBDIRS= \
 	online-accounts \
 	region \
 	info \
-	sound \
-	sound-nua \
 	keyboard \
 	universal-access \
-	user-accounts \
 	datetime
 
 if BUILD_PRINTERS

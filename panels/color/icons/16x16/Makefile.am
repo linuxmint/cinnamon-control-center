@@ -5,7 +5,7 @@ context = apps
 iconsdir = $(themedir)/$(size)/$(context)
 
 icons_DATA = 			  	\
-	preferences-color.png
+	cinnamon-preferences-color.png
 
 EXTRA_DIST =		\
 	$(icons_DATA)
