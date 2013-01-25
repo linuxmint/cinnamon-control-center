@@ -255,7 +255,7 @@ dnl =======================================
 dnl Panels
 dnl =======================================
 
-PANELS_DIR="${libdir}/control-center-1/panels"
+PANELS_DIR="${libdir}/cinnamon-control-center-1/panels"
 AC_SUBST(PANELS_DIR)
 
 PANEL_CFLAGS="-I\$(top_srcdir)/ -DG_LOG_DOMAIN=\"\\\"\$(cappletname)-cc-panel\\\"\""
@@ -452,7 +452,6 @@ panels/user-accounts/data/icons/Makefile
 po/Makefile.in
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
-man/Makefile
 ])
 
 AC_MSG_NOTICE([cinnamon-control-center was configured with the following options:])

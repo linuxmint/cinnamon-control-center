@@ -43,7 +43,7 @@ Index: cinnamon-control-center-3.6.2/shell/libcinnamon-control-center.pc.in
 +exec_prefix=@exec_prefix@
 +libdir=@libdir@
 +includedir=@includedir@
-+extensiondir=@libdir@/control-center-1/panels
++extensiondir=@libdir@/cinnamon-control-center-1/panels
 +
 +Name: libcinnamon-control-center
 +Description: A library to create GNOME Control Center extensions
