@@ -22,7 +22,7 @@
 #include "cc-shell-model.h"
 #include <string.h>
 
-#define GNOME_SETTINGS_PANEL_ID_KEY "X-GNOME-Settings-Panel"
+#define GNOME_SETTINGS_PANEL_ID_KEY "X-Cinnamon-Settings-Panel"
 #define GNOME_SETTINGS_PANEL_CATEGORY GNOME_SETTINGS_PANEL_ID_KEY
 #define GNOME_SETTINGS_PANEL_ID_KEYWORDS "Keywords"
 
