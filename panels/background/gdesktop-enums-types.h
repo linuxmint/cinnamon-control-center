@@ -7,7 +7,7 @@
 #include <glib-object.h>
 
 G_BEGIN_DECLS
-/* enumerations from "/home/hadess/Projects/gnome-install/include/gsettings-desktop-schemas/gdesktop-enums.h" */
+/* enumerations from "/usr/include/gsettings-desktop-schemas/gdesktop-enums.h" */
 GType g_desktop_proxy_mode_get_type (void) G_GNUC_CONST;
 #define G_DESKTOP_TYPE_DESKTOP_PROXY_MODE (g_desktop_proxy_mode_get_type())
 GType g_desktop_toolbar_style_get_type (void) G_GNUC_CONST;
