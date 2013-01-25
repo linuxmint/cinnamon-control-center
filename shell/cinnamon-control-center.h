@@ -64,15 +64,15 @@ struct _CinnamonControlCenterClass
   CcShellClass parent_class;
 };
 
-GType CINNAMON_CONTROL_CENTER_get_type (void) G_GNUC_CONST;
+GType cinnamon_control_center_get_type (void) G_GNUC_CONST;
 
-CinnamonControlCenter *CINNAMON_CONTROL_CENTER_new (void);
+CinnamonControlCenter *cinnamon_control_center_new (void);
 
-void CINNAMON_CONTROL_CENTER_present (CinnamonControlCenter *center);
+void cinnamon_control_center_present (CinnamonControlCenter *center);
 
-void CINNAMON_CONTROL_CENTER_show (CinnamonControlCenter *center, GtkApplication *app);
+void cinnamon_control_center_show (CinnamonControlCenter *center, GtkApplication *app);
 
-void CINNAMON_CONTROL_CENTER_set_overview_page (CinnamonControlCenter *center);
+void cinnamon_control_center_set_overview_page (CinnamonControlCenter *center);
 
 G_END_DECLS
 
