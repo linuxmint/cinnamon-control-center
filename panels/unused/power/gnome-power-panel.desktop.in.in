@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Power
 _Comment=Power management settings
-Exec=gnome-control-center power
+Exec=cinnamon-control-center power
 Icon=gnome-power-manager
 Terminal=false
 Type=Application
@@ -9,7 +9,7 @@ StartupNotify=true
 Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;HardwareSettings
 OnlyShowIn=GNOME;Unity;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=gnome-control-center
+X-GNOME-Bugzilla-Product=cinnamon-control-center
 X-GNOME-Bugzilla-Component=power
 X-GNOME-Bugzilla-Version=@VERSION@
 X-GNOME-Settings-Panel=power

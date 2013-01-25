@@ -1,5 +1,5 @@
-# gnome-control-center Korean message translation
-# This file is distributed under the same license as the gnome-control-center package.
+# cinnamon-control-center Korean message translation
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Young-Ho Cha <ganadist@chollian.net>, 2002, 2006.
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2011, 2012.
@@ -21,8 +21,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: cinnamon-control-center\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-21 17:51+0000\n"
 "PO-Revision-Date: 2012-11-03 01:35+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
@@ -5251,11 +5251,11 @@ msgstr "끝내기"
 msgid "Control Center"
 msgstr "제어판"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "시스템 설정"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;기본 설정;Settings;설정"
 

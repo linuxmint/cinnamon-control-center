@@ -1,12 +1,12 @@
-# translation of po_gnome-control-center-2.0-km.po to Khmer
-# Khmer translation for gnome-control-center
+# translation of po_cinnamon-control-center-2.0-km.po to Khmer
+# Khmer translation for cinnamon-control-center
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 # Khoem Sokhem <khoemsokhem@khmeros.info>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: po_gnome-control-center-2.0-km\n"
+"Project-Id-Version: po_cinnamon-control-center-2.0-km\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-03 12:50+0000\n"
@@ -5222,11 +5222,11 @@ msgstr "ចេញ"
 msgid "Control Center"
 msgstr "មជ្ឈមណ្ឌល​បញ្ជា"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "ការ​កំណត់​ប្រព័ន្ធ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "ចំណូលចិត្ត;ការ​កំណត់;"
 

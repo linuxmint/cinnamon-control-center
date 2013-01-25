@@ -7,7 +7,7 @@
 # Re. <ted.korostiled@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 08:45+0300\n"
 "PO-Revision-Date: 2012-09-26 08:49+0300\n"
@@ -5267,11 +5267,11 @@ msgstr "Вийти"
 msgid "Control Center"
 msgstr "Центр керування"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Системні параметри"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Налаштування;Параметри;"
 

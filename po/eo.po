@@ -1,6 +1,6 @@
-# Esperanto translation for gnome-control-center.
+# Esperanto translation for cinnamon-control-center.
 # Copyright (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Joop EGGEN <joop_eggen@yahoo.de>, 2006.
 # Ed GLEZ < >, 2006.
 # Brian CROOM < >, 2008.
@@ -4629,11 +4629,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Stircentro"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Sistemagordoj"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Agordoj;Agordoj;"
 

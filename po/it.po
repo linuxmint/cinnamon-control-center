@@ -1,7 +1,7 @@
-# Italian translation for gnome-control-center
+# Italian translation for cinnamon-control-center
 # Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
 # Alcune traduzioni sono state riprese da gnome-media
-# This file is relased with the same licence of gnome-control-center-package
+# This file is relased with the same licence of cinnamon-control-center-package
 # Christopher R. Gabriel, 2001, 2002.
 # Alessio Dessì <alkex@inwind.it>, 2003, 2004, 2005, 2006, 2007.
 # Milo Casagrande <milo@ubuntu.com>, 2009, 2012.
@@ -9,7 +9,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-30 14:05+0200\n"
 "PO-Revision-Date: 2012-04-30 15:04+0200\n"
@@ -4734,11 +4734,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Centro di controllo"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Impostazioni di sistema"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferenze;Impostazioni;"
 

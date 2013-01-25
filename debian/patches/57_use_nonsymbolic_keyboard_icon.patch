@@ -5,7 +5,7 @@ Index: b/panels/keyboard/gnome-keyboard-panel.desktop.in.in
 @@ -2,7 +2,7 @@
  _Name=Keyboard
  _Comment=Change keyboard settings
- Exec=gnome-control-center keyboard
+ Exec=cinnamon-control-center keyboard
 -Icon=input-keyboard
 +Icon=preferences-desktop-keyboard
  Terminal=false

@@ -1,10 +1,10 @@
-# Dzongkha translation of gnome-control-center
+# Dzongkha translation of cinnamon-control-center
 # Copyright @ 2006 Free Software Foundation, Inc.
 # Mindu Dorji
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD.dz\n"
+"Project-Id-Version: cinnamon-control-center.HEAD.dz\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-29 00:51+0000\n"
 "PO-Revision-Date: 2008-09-11 11:47+0530\n"

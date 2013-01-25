@@ -1,9 +1,9 @@
-# Translation of gnome-control-center to Croatiann
+# Translation of cinnamon-control-center to Croatiann
 # Copyright (C) Croatiann team
 # Translators: Automatski Prijevod <>,Danijel Studen <dstuden@vuka.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Robert Sedak <robert.sedak@sk.t-com.hr>,Vedran Vyroubal <vedran.vyroubal@inet.hr>,Miroslav Sabljić <civija@ubuntu-hr.org>
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 0\n"
+"Project-Id-Version: cinnamon-control-center 0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-08 11:11+0200\n"
 "PO-Revision-Date: 2008-05-15 15:44+0000\n"

@@ -1,5 +1,5 @@
-# translation of gnome-control-center.HEAD.lv.po to Latvian
-# gnome-control-center for Latvian.
+# translation of cinnamon-control-center.HEAD.lv.po to Latvian
+# cinnamon-control-center for Latvian.
 # Copyright (C) 2001, 2006, 2007, 2009 Free Software Foundation, Inc.
 #
 # Artis Trops <hornet@navigators.lv>, 2001.
@@ -9,9 +9,9 @@
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD.lv\n"
+"Project-Id-Version: cinnamon-control-center.HEAD.lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
 "PO-Revision-Date: 2012-09-23 22:35+0300\n"
 "Last-Translator: Anita Reitere <nitalynx@gmail.com>\n"
@@ -5459,11 +5459,11 @@ msgstr "Iziet"
 msgid "Control Center"
 msgstr "Vadības centrs"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Sistēmas iestatījumi"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Iestatījumi;Uzstādījumi;Konfigurācija;Preferences;Settings;"
 

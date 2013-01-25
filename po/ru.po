@@ -1,5 +1,5 @@
-# translation of gnome-control-center.master.ru.po to Russian
-# translation of gnome-control-center to Russian
+# translation of cinnamon-control-center.master.ru.po to Russian
+# translation of cinnamon-control-center to Russian
 #
 #
 # Max Valianskiy <maxcom@vinchi.ru>, 1998-99.
@@ -5306,11 +5306,11 @@ msgstr "Выход"
 msgid "Control Center"
 msgstr "Центр управления"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Параметры системы"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Настройки;Параметры;"
 

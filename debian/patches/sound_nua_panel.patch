@@ -2,10 +2,10 @@
 # Most of the code has now been upstreamed to Gnome, but they wanted
 # to keep their old design, so about 25% of the original patch remains.
 === modified file 'configure.ac'
-Index: gnome-control-center-3.6.2/configure.ac
+Index: cinnamon-control-center-3.6.2/configure.ac
 ===================================================================
---- gnome-control-center-3.6.2.orig/configure.ac	2012-11-13 16:25:40.665717988 +0100
-+++ gnome-control-center-3.6.2/configure.ac	2012-11-13 16:25:40.773717987 +0100
+--- cinnamon-control-center-3.6.2.orig/configure.ac	2012-11-13 16:25:40.665717988 +0100
++++ cinnamon-control-center-3.6.2/configure.ac	2012-11-13 16:25:40.773717987 +0100
 @@ -435,6 +435,9 @@
  panels/online-accounts/icons/32x32/Makefile
  panels/online-accounts/icons/48x48/Makefile
@@ -16,10 +16,10 @@ Index: gnome-control-center-3.6.2/configure.ac
  panels/sound/Makefile
  panels/sound/data/Makefile
  panels/sound/data/gnome-sound-panel.desktop.in
-Index: gnome-control-center-3.6.2/panels/Makefile.am
+Index: cinnamon-control-center-3.6.2/panels/Makefile.am
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/Makefile.am	2012-10-01 11:38:59.000000000 +0200
-+++ gnome-control-center-3.6.2/panels/Makefile.am	2012-11-13 16:25:40.777717988 +0100
+--- cinnamon-control-center-3.6.2.orig/panels/Makefile.am	2012-10-01 11:38:59.000000000 +0200
++++ cinnamon-control-center-3.6.2/panels/Makefile.am	2012-11-13 16:25:40.777717988 +0100
 @@ -10,6 +10,7 @@
  	region \
  	info \
@@ -28,10 +28,10 @@ Index: gnome-control-center-3.6.2/panels/Makefile.am
  	keyboard \
  	universal-access \
  	user-accounts \
-Index: gnome-control-center-3.6.2/panels/sound-nua/Makefile.am
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/Makefile.am
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/Makefile.am	2012-11-13 16:25:40.777717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/Makefile.am	2012-11-13 16:25:40.777717988 +0100
 @@ -0,0 +1,63 @@
 +SUBDIRS = data
 +
@@ -96,10 +96,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/Makefile.am
 +        Makefile.in
 +
 +-include $(top_srcdir)/git.mk
-Index: gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.c
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/cc-sound-panel.c
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.c	2012-11-13 16:25:40.777717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/cc-sound-panel.c	2012-11-13 16:25:40.777717988 +0100
 @@ -0,0 +1,141 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -242,10 +242,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.c
 +{
 +}
 +
-Index: gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.h
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/cc-sound-panel.h
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.h	2012-11-13 16:25:40.777717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/cc-sound-panel.h	2012-11-13 16:25:40.777717988 +0100
 @@ -0,0 +1,60 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -307,10 +307,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/cc-sound-panel.h
 +
 +#endif /* _CC_SOUND_PANEL_H */
 +
-Index: gnome-control-center-3.6.2/panels/sound-nua/data/Makefile.am
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/data/Makefile.am
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/data/Makefile.am	2012-11-13 16:25:40.777717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/data/Makefile.am	2012-11-13 16:25:40.777717988 +0100
 @@ -0,0 +1,17 @@
 +NULL =
 +
@@ -329,15 +329,15 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/data/Makefile.am
 +	$(NULL)
 +
 +-include $(top_srcdir)/git.mk
-Index: gnome-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in	2012-11-13 16:25:40.781717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in	2012-11-13 16:25:40.781717988 +0100
 @@ -0,0 +1,17 @@
 +[Desktop Entry]
 +_Name=Sound
 +_Comment=Change sound volume and sound events
-+Exec=gnome-control-center sound-nua
++Exec=cinnamon-control-center sound-nua
 +Icon=multimedia-volume-control
 +Terminal=false
 +Type=Application
@@ -345,16 +345,16 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.de
 +Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;
 +OnlyShowIn=Unity;
 +X-GNOME-Bugzilla-Bugzilla=GNOME
-+X-GNOME-Bugzilla-Product=gnome-control-center
++X-GNOME-Bugzilla-Product=cinnamon-control-center
 +X-GNOME-Bugzilla-Component=sound
 +X-GNOME-Bugzilla-Version=@VERSION@
 +X-GNOME-Settings-Panel=sound-nua
 +# Translators: those are keywords for the sound control-center panel
 +_Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
-Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.c
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.c
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.c	2012-11-13 16:25:40.797717987 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.c	2012-11-13 16:25:40.797717987 +0100
 @@ -0,0 +1,575 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -931,10 +931,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.c
 +
 +        return GTK_WIDGET (bar);
 +}
-Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.h
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.h
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.h	2012-11-13 16:25:40.873717987 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.h	2012-11-13 16:25:40.873717987 +0100
 @@ -0,0 +1,70 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -1006,10 +1006,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-balance-bar.h
 +G_END_DECLS
 +
 +#endif /* __GVC_BALANCE_BAR_H */
-Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.c
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.c
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.c	2012-11-13 16:26:26.245717312 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.c	2012-11-13 16:26:26.245717312 +0100
 @@ -0,0 +1,2187 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -3198,10 +3198,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.c
 +
 +        return TRUE;
 +}
-Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h	2012-11-13 16:25:40.893717986 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h	2012-11-13 16:25:40.893717986 +0100
 @@ -0,0 +1,56 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
 + *
@@ -3259,10 +3259,10 @@ Index: gnome-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h
 +G_END_DECLS
 +
 +#endif /* __GVC_MIXER_DIALOG_H */
-Index: gnome-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-10-01 11:39:00.000000000 +0200
-+++ gnome-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-11-13 16:25:40.897717987 +0100
+--- cinnamon-control-center-3.6.2.orig/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-10-01 11:39:00.000000000 +0200
++++ cinnamon-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-11-13 16:25:40.897717987 +0100
 @@ -7,7 +7,7 @@
  Type=Application
  StartupNotify=true
@@ -3270,12 +3270,12 @@ Index: gnome-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in
 -OnlyShowIn=GNOME;Unity;
 +OnlyShowIn=GNOME;
  X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-control-center
+ X-GNOME-Bugzilla-Product=cinnamon-control-center
  X-GNOME-Bugzilla-Component=sound
-Index: gnome-control-center-3.6.2/panels/universal-access/cc-ua-panel.c
+Index: cinnamon-control-center-3.6.2/panels/universal-access/cc-ua-panel.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/universal-access/cc-ua-panel.c	2012-11-13 16:25:40.341717994 +0100
-+++ gnome-control-center-3.6.2/panels/universal-access/cc-ua-panel.c	2012-11-13 16:25:40.897717987 +0100
+--- cinnamon-control-center-3.6.2.orig/panels/universal-access/cc-ua-panel.c	2012-11-13 16:25:40.341717994 +0100
++++ cinnamon-control-center-3.6.2/panels/universal-access/cc-ua-panel.c	2012-11-13 16:25:40.897717987 +0100
 @@ -492,7 +492,10 @@
    CcShell *shell;
  
@@ -3288,10 +3288,10 @@ Index: gnome-control-center-3.6.2/panels/universal-access/cc-ua-panel.c
  
    return TRUE;
  }
-Index: gnome-control-center-3.6.2/shell/gnome-control-center.c
+Index: cinnamon-control-center-3.6.2/shell/cinnamon-control-center.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/shell/gnome-control-center.c	2012-11-13 16:25:40.669717988 +0100
-+++ gnome-control-center-3.6.2/shell/gnome-control-center.c	2012-11-13 16:25:40.897717987 +0100
+--- cinnamon-control-center-3.6.2.orig/shell/cinnamon-control-center.c	2012-11-13 16:25:40.669717988 +0100
++++ cinnamon-control-center-3.6.2/shell/cinnamon-control-center.c	2012-11-13 16:25:40.897717987 +0100
 @@ -984,6 +984,10 @@
  
    g_clear_pointer (&priv->current_panel_id, g_free);

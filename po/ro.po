@@ -1,5 +1,5 @@
-# Romanian translation for gnome-control-center
-# This file is distributed under the same license as the gnome-control-center package.
+# Romanian translation for cinnamon-control-center
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Mugurel Tudor <mugurelu@gnome.ro>, 2002, 2003.
 # Mișu Moldovan <dumol@gnome.ro> 2003, 2004.
 # Sebastian Ivan <sebastian.ivan@ubuntu.ro>, 2005.
@@ -13,7 +13,7 @@
 # Daniel Șerbănescu <cyber19rider@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-03-23 00:45+0000\n"
@@ -28,19 +28,19 @@ msgstr ""
 "20)) ? 1 : 2);;\n"
 "X-Generator: Virtaal 0.6.1\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr "Locația de rețea curentă"
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr "URL pentru mai multe imagini de fundal"
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr "URL pentru mai multe teme"
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
@@ -48,7 +48,7 @@ msgstr ""
 "Scrieți numele locației curente de rețea. Această valoare este folosită "
 "pentru a determina configurația potrivită pentru proxy-ul de rețea."
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
@@ -56,7 +56,7 @@ msgstr ""
 "URL-ul de la care să fie aduse mai multe imagini de fundal. Dacă este lăsat "
 "gol, legătura nu va apărea."
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."
@@ -64,21 +64,21 @@ msgstr ""
 "URL-ul de la care să fie aduse mai multe teme. Dacă este lăsat gol, legătura "
 "nu va apărea."
 
-#: ../libgnome-control-center/cc-lockbutton.c:347
+#: ../libcinnamon-control-center/cc-lockbutton.c:347
 #: ../panels/screen/screen.ui.h:14
 msgid "Lock"
 msgstr "Blochează"
 
-#: ../libgnome-control-center/cc-lockbutton.c:356
+#: ../libcinnamon-control-center/cc-lockbutton.c:356
 #: ../panels/network/network.ui.h:22
 msgid "Unlock"
 msgstr "Deblochează"
 
-#: ../libgnome-control-center/cc-lockbutton.c:365
+#: ../libcinnamon-control-center/cc-lockbutton.c:365
 msgid "Locked"
 msgstr "Blocat"
 
-#: ../libgnome-control-center/cc-lockbutton.c:374
+#: ../libcinnamon-control-center/cc-lockbutton.c:374
 msgid ""
 "Dialog is unlocked.\n"
 "Click to prevent further changes"
@@ -86,7 +86,7 @@ msgstr ""
 "Dialogul este deblocat.\n"
 "Clic pentru a preveni alte schimbări"
 
-#: ../libgnome-control-center/cc-lockbutton.c:383
+#: ../libcinnamon-control-center/cc-lockbutton.c:383
 msgid ""
 "Dialog is locked.\n"
 "Click to make changes"
@@ -94,7 +94,7 @@ msgstr ""
 "Dialogul este blocat.\n"
 "Clic pentru a face schimbări"
 
-#: ../libgnome-control-center/cc-lockbutton.c:392
+#: ../libcinnamon-control-center/cc-lockbutton.c:392
 msgid ""
 "System policy prevents changes.\n"
 "Contact your system administrator"
@@ -102,76 +102,76 @@ msgstr ""
 "Politica sistemului previne schimbările.\n"
 "Contactați administratorul de sistem"
 
-#: ../libgnome-control-center/gconf-property-editor.c:134
+#: ../libcinnamon-control-center/gconf-property-editor.c:134
 msgid "Key"
 msgstr "Cheie"
 
-#: ../libgnome-control-center/gconf-property-editor.c:135
+#: ../libcinnamon-control-center/gconf-property-editor.c:135
 msgid "GConf key to which this property editor is attached"
 msgstr "Cheia GConf căreia îi este atașat acest editor de proprietăți"
 
-#: ../libgnome-control-center/gconf-property-editor.c:141
+#: ../libcinnamon-control-center/gconf-property-editor.c:141
 msgid "Callback"
 msgstr "Callback"
 
-#: ../libgnome-control-center/gconf-property-editor.c:142
+#: ../libcinnamon-control-center/gconf-property-editor.c:142
 msgid "Issue this callback when the value associated with key gets changed"
 msgstr "Rulează acest callback când valoarea asociată cheii se modifică"
 
-#: ../libgnome-control-center/gconf-property-editor.c:147
+#: ../libcinnamon-control-center/gconf-property-editor.c:147
 msgid "Change set"
 msgstr "Set de schimbări"
 
-#: ../libgnome-control-center/gconf-property-editor.c:148
+#: ../libcinnamon-control-center/gconf-property-editor.c:148
 msgid ""
 "GConf change set containing data to be forwarded to the gconf client on apply"
 msgstr ""
 "Set de schimbări GConf conținând datele de trimis clientului Gconf pentru "
 "aplicare"
 
-#: ../libgnome-control-center/gconf-property-editor.c:153
+#: ../libcinnamon-control-center/gconf-property-editor.c:153
 msgid "Conversion to widget callback"
 msgstr "Callback de conversie spre widget"
 
-#: ../libgnome-control-center/gconf-property-editor.c:154
+#: ../libcinnamon-control-center/gconf-property-editor.c:154
 msgid ""
 "Callback to be issued when data are to be converted from GConf to the widget"
 msgstr "Callback inițiat la conversia datelor din GConf spre widget"
 
-#: ../libgnome-control-center/gconf-property-editor.c:159
+#: ../libcinnamon-control-center/gconf-property-editor.c:159
 msgid "Conversion from widget callback"
 msgstr "Callback de conversie din widget"
 
-#: ../libgnome-control-center/gconf-property-editor.c:160
+#: ../libcinnamon-control-center/gconf-property-editor.c:160
 msgid ""
 "Callback to be issued when data are to be converted to GConf from the widget"
 msgstr "Callback inițiat la conversia datelor spre GConf din widget"
 
-#: ../libgnome-control-center/gconf-property-editor.c:165
+#: ../libcinnamon-control-center/gconf-property-editor.c:165
 msgid "UI Control"
 msgstr "Control UI"
 
-#: ../libgnome-control-center/gconf-property-editor.c:166
+#: ../libcinnamon-control-center/gconf-property-editor.c:166
 msgid "Object that controls the property (normally a widget)"
 msgstr "Obiect care controlează proprietatea (în mod normal un widget)"
 
-#: ../libgnome-control-center/gconf-property-editor.c:181
+#: ../libcinnamon-control-center/gconf-property-editor.c:181
 msgid "Property editor object data"
 msgstr "Obiect editor proprietăți"
 
-#: ../libgnome-control-center/gconf-property-editor.c:182
+#: ../libcinnamon-control-center/gconf-property-editor.c:182
 msgid "Custom data required by the specific property editor"
 msgstr "Date personalizate cerute de editorul specific de proprietăți"
 
-#: ../libgnome-control-center/gconf-property-editor.c:188
+#: ../libcinnamon-control-center/gconf-property-editor.c:188
 msgid "Property editor data freeing callback"
 msgstr "Callback de eliberare a datelor editorului de proprietăți"
 
-#: ../libgnome-control-center/gconf-property-editor.c:189
+#: ../libcinnamon-control-center/gconf-property-editor.c:189
 msgid "Callback to be issued when property editor object data is to be freed"
 msgstr "Callback inițiat la eliberarea datelor din editorul de proprietăți"
 
-#: ../libgnome-control-center/gconf-property-editor.c:1474
+#: ../libcinnamon-control-center/gconf-property-editor.c:1474
 #, c-format
 msgid ""
 "Couldn't find the file '%s'.\n"
@@ -184,7 +184,7 @@ msgstr ""
 "Verificați existența lui și încercați din nou, sau alegeți o altă imagine de "
 "fundal."
 
-#: ../libgnome-control-center/gconf-property-editor.c:1482
+#: ../libcinnamon-control-center/gconf-property-editor.c:1482
 #, c-format
 msgid ""
 "I don't know how to open the file '%s'.\n"
@@ -197,11 +197,11 @@ msgstr ""
 "\n"
 "Alegeți o altă imagine."
 
-#: ../libgnome-control-center/gconf-property-editor.c:1604
+#: ../libcinnamon-control-center/gconf-property-editor.c:1604
 msgid "Please select an image."
 msgstr "Alegeți o imagine."
 
-#: ../libgnome-control-center/gconf-property-editor.c:1609
+#: ../libcinnamon-control-center/gconf-property-editor.c:1609
 msgid "_Select"
 msgstr "_Alege"
 
@@ -3531,7 +3531,7 @@ msgstr ""
 "Executați „%s --help” pentru a vedea întreaga listă a comenzilor "
 "disponibile.\n"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Configurări de sistem"
 

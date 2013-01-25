@@ -4660,11 +4660,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Kontrol-zentroa"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 msgid "Preferences;Settings;"
 msgstr "Hobespenak;Ezarpenak;"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2 ../shell/shell.ui.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2 ../shell/shell.ui.h:2
 msgid "System Settings"
 msgstr "Sistemaren ezarpenak"
 

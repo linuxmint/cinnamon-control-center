@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
 "PO-Revision-Date: 2012-09-19 12:06+0530\n"
 "Last-Translator: Nilamdyuti Goswami <ngoswami@redhat.com>\n"
@@ -5232,11 +5232,11 @@ msgstr "প্ৰস্থান কৰক"
 msgid "Control Center"
 msgstr "নিয়ন্ত্ৰণ কেন্দ্ৰ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "চিস্টেম সংহতিসমূহ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "পছন্দসমূহ;সংহতিসমূহ;"
 

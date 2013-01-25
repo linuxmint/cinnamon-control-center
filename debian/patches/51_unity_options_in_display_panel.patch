@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.4.2/panels/display/cc-display-panel.c
+Index: cinnamon-control-center-3.4.2/panels/display/cc-display-panel.c
 ===================================================================
---- gnome-control-center-3.4.2.orig/panels/display/cc-display-panel.c	2012-05-15 12:18:30.000000000 +0200
-+++ gnome-control-center-3.4.2/panels/display/cc-display-panel.c	2012-07-23 10:26:57.281976435 +0200
+--- cinnamon-control-center-3.4.2.orig/panels/display/cc-display-panel.c	2012-05-15 12:18:30.000000000 +0200
++++ cinnamon-control-center-3.4.2/panels/display/cc-display-panel.c	2012-07-23 10:26:57.281976435 +0200
 @@ -54,6 +54,13 @@
  #define MINIMUM_WIDTH 675
  #define MINIMUM_HEIGHT 530
@@ -401,10 +401,10 @@ Index: gnome-control-center-3.4.2/panels/display/cc-display-panel.c
                                    "display", 0);
  }
 -
-Index: gnome-control-center-3.4.2/panels/display/display-capplet.ui
+Index: cinnamon-control-center-3.4.2/panels/display/display-capplet.ui
 ===================================================================
---- gnome-control-center-3.4.2.orig/panels/display/display-capplet.ui	2012-03-05 15:04:55.000000000 +0100
-+++ gnome-control-center-3.4.2/panels/display/display-capplet.ui	2012-07-23 10:26:45.805976846 +0200
+--- cinnamon-control-center-3.4.2.orig/panels/display/display-capplet.ui	2012-03-05 15:04:55.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/display/display-capplet.ui	2012-07-23 10:26:45.805976846 +0200
 @@ -1,6 +1,14 @@
  <?xml version="1.0"?>
  <interface>

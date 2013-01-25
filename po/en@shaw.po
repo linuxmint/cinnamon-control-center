@@ -1,9 +1,9 @@
-# Shavian translation for gnome-control-center.
+# Shavian translation for cinnamon-control-center.
 # Copyright (C) 2009 The Gnome Foundation.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&component=general\n"
 "POT-Creation-Date: 2010-05-12 22:49+0000\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr "𐑒𐑳𐑮𐑩𐑯𐑑 𐑯𐑧𐑑𐑢𐑻𐑒 𐑤𐑴𐑒𐑱𐑖𐑩𐑯"
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr "𐑥𐑹 𐑚𐑨𐑒𐑜𐑮𐑬𐑯𐑛𐑟 URL"
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr "𐑥𐑹 𐑔𐑰𐑥𐑟 URL"
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
@@ -35,7 +35,7 @@ msgstr ""
 "𐑕𐑧𐑑 𐑞𐑦𐑕 𐑑 𐑿𐑼 𐑒𐑳𐑮𐑩𐑯𐑑 𐑤𐑴𐑒𐑱𐑖𐑩𐑯 𐑯𐑱𐑥. 𐑞𐑦𐑕 𐑦𐑟 𐑿𐑟𐑛 𐑑 𐑛𐑦𐑑𐑻𐑥𐑦𐑯 𐑞 𐑩𐑐𐑮𐑴𐑐𐑮𐑦𐑩𐑑 𐑯𐑧𐑑𐑢𐑻𐑒 "
 "𐑐𐑮𐑪𐑒𐑕𐑦 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑱𐑖𐑩𐑯."
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
@@ -43,7 +43,7 @@ msgstr ""
 "URL 𐑓𐑹 𐑢𐑺 𐑑 𐑜𐑧𐑑 𐑥𐑹 𐑛𐑧𐑕𐑒𐑑𐑪𐑐 𐑚𐑨𐑒𐑜𐑮𐑬𐑯𐑛𐑟. 𐑦𐑓 𐑕𐑧𐑑 𐑑 𐑩𐑯 𐑧𐑥𐑐𐑑𐑦 𐑕𐑑𐑮𐑦𐑙 𐑞 𐑤𐑦𐑙𐑒 𐑢𐑦𐑤 𐑯𐑪𐑑 "
 "𐑩𐑐𐑽."
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."

@@ -1,12 +1,12 @@
-# Northern Sotho translation of gnome-control-center.
+# Northern Sotho translation of cinnamon-control-center.
 # Copyright (C) 2004 Zuza Software Foundation (Translate.org.za)
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Zuza Software Foundation <info@translate.org.za>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center HEAD\n"
+"Project-Id-Version: cinnamon-control-center HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-17 22:10+0200\n"
 "PO-Revision-Date: 2004-11-27 17:02+0200\n"

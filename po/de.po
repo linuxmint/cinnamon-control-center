@@ -1,4 +1,4 @@
-# German gnome-control-center translation
+# German cinnamon-control-center translation
 # Copyright (C) 1998-2004 Free Software Foundation, Inc.
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Karsten Weiss <karsten@addx.au.s.shuttle.de>, 1999.
@@ -19,7 +19,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-21 14:06+0000\n"
@@ -5321,11 +5321,11 @@ msgstr "Verlassen"
 msgid "Control Center"
 msgstr "Kontrollzentrum"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systemeinstellungen"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Einstellungen"
 

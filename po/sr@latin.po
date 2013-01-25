@@ -1,6 +1,6 @@
-# Serbian translation of gnome-control-center
+# Serbian translation of cinnamon-control-center
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2012.
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Maintainer: Veljko M. Stanojević <veljko@vms.homelinux.net>
 # Reviewed on 2005-03-03 by: Danilo Šegan <danilo@gnome.org>
 # Translated on 2006-03-11 by: Slobodan D. Sredojević <slobo@akrep.be>
@@ -8,7 +8,7 @@
 # Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5293,11 +5293,11 @@ msgstr "Izađi"
 msgid "Control Center"
 msgstr "Upravljački centar"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Podešavanja sistema"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Postavke;Podešavanja;"
 

@@ -5253,11 +5253,11 @@ msgstr "बाहेर पडा"
 msgid "Control Center"
 msgstr "नियंत्रण केंद्र"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "सिस्टम सेटिंग्स्"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "पसंती;सेटिंग्स्;"
 

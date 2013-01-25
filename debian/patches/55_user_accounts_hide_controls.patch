@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.6.2/panels/user-accounts/um-password-dialog.c
+Index: cinnamon-control-center-3.6.2/panels/user-accounts/um-password-dialog.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/user-accounts/um-password-dialog.c	2012-11-01 05:51:33.536393528 -0400
-+++ gnome-control-center-3.6.2/panels/user-accounts/um-password-dialog.c	2012-11-01 05:51:35.420393449 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/user-accounts/um-password-dialog.c	2012-11-01 05:51:33.536393528 -0400
++++ cinnamon-control-center-3.6.2/panels/user-accounts/um-password-dialog.c	2012-11-01 05:51:35.420393449 -0400
 @@ -52,6 +52,7 @@
          GtkWidget *ok_button;
  
@@ -85,10 +85,10 @@ Index: gnome-control-center-3.6.2/panels/user-accounts/um-password-dialog.c
                  pixbuf = um_user_render_icon (user, FALSE, 48);
                  gtk_image_set_from_pixbuf (GTK_IMAGE (um->user_icon), pixbuf);
                  g_object_unref (pixbuf);
-Index: gnome-control-center-3.6.2/panels/user-accounts/um-user-panel.c
+Index: cinnamon-control-center-3.6.2/panels/user-accounts/um-user-panel.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/user-accounts/um-user-panel.c	2012-11-01 05:51:33.536393528 -0400
-+++ gnome-control-center-3.6.2/panels/user-accounts/um-user-panel.c	2012-11-01 05:51:35.420393449 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/user-accounts/um-user-panel.c	2012-11-01 05:51:33.536393528 -0400
++++ cinnamon-control-center-3.6.2/panels/user-accounts/um-user-panel.c	2012-11-01 05:51:35.420393449 -0400
 @@ -604,6 +604,17 @@
          if (um_user_get_locked (user))
                  gtk_widget_set_sensitive (widget, FALSE);
@@ -107,10 +107,10 @@ Index: gnome-control-center-3.6.2/panels/user-accounts/um-user-panel.c
          widget = get_widget (d, "account-language-combo");
          model = um_editable_combo_get_model (UM_EDITABLE_COMBO (widget));
          cc_add_user_languages (model);
-Index: gnome-control-center-3.6.2/panels/user-accounts/um-utils.c
+Index: cinnamon-control-center-3.6.2/panels/user-accounts/um-utils.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/user-accounts/um-utils.c	2012-11-01 05:51:33.536393528 -0400
-+++ gnome-control-center-3.6.2/panels/user-accounts/um-utils.c	2012-11-01 05:51:35.420393449 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/user-accounts/um-utils.c	2012-11-01 05:51:33.536393528 -0400
++++ cinnamon-control-center-3.6.2/panels/user-accounts/um-utils.c	2012-11-01 05:51:35.420393449 -0400
 @@ -746,3 +746,27 @@
          g_string_free (item3, TRUE);
          g_string_free (item4, TRUE);
@@ -139,10 +139,10 @@ Index: gnome-control-center-3.6.2/panels/user-accounts/um-utils.c
 +
 +        return using_ecryptfs;
 +}
-Index: gnome-control-center-3.6.2/panels/user-accounts/um-utils.h
+Index: cinnamon-control-center-3.6.2/panels/user-accounts/um-utils.h
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/user-accounts/um-utils.h	2012-11-01 05:51:33.536393528 -0400
-+++ gnome-control-center-3.6.2/panels/user-accounts/um-utils.h	2012-11-01 05:51:35.420393449 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/user-accounts/um-utils.h	2012-11-01 05:51:33.536393528 -0400
++++ cinnamon-control-center-3.6.2/panels/user-accounts/um-utils.h	2012-11-01 05:51:35.420393449 -0400
 @@ -65,6 +65,8 @@
  void     generate_username_choices        (const gchar     *name,
                                             GtkListStore    *store);

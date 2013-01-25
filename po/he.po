@@ -1,5 +1,5 @@
-# translation of gnome-control-center.HEAD.he.po to Hebrew
-# translation of gnome-control-center.gnome-2-0.he.po to Hebrew
+# translation of cinnamon-control-center.HEAD.he.po to Hebrew
+# translation of cinnamon-control-center.gnome-2-0.he.po to Hebrew
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003.
@@ -9,7 +9,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD.he\n"
+"Project-Id-Version: cinnamon-control-center.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-22 14:57+0300\n"
 "PO-Revision-Date: 2012-09-22 14:58+0200\n"
@@ -5200,12 +5200,12 @@ msgstr "יציאה"
 msgid "Control Center"
 msgstr "לוח בקרה"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "הגדרות מערכת"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "העדפות;הגדרות;"
 

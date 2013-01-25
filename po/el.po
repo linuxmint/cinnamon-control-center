@@ -5338,11 +5338,11 @@ msgstr "Έξοδος"
 msgid "Control Center"
 msgstr "Κέντρο ελέγχου"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Ρυθμίσεις συστήματος"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Επιλογές;Ρυθμίσεις;Preferences;Settings;"
 

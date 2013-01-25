@@ -1,11 +1,11 @@
-# Kyrgyz translation for gnome-control-center.
-# Copyright (C) 2012 gnome-control-center authors
-# This file is distributed under the same license as the gnome-control-center package.
+# Kyrgyz translation for cinnamon-control-center.
+# Copyright (C) 2012 cinnamon-control-center authors
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Timur Zhamakeev <ztimur@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-25 09:33+0000\n"
@@ -5211,11 +5211,11 @@ msgstr "Чыгуу"
 msgid "Control Center"
 msgstr "Башкаруу борбору"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Системалык параметрлер"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr ""
 

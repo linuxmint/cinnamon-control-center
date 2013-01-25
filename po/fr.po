@@ -1,6 +1,6 @@
-# French translation of gnome-control-center.
+# French translation of cinnamon-control-center.
 # Copyright (C) 1998-2012 Free Software Foundation, Inc.
-# This file is under the same license as the gnome-control-center package.
+# This file is under the same license as the cinnamon-control-center package.
 #
 # Vincent Renardias <vincent@ldsol.com>, 1998-1999.
 # Fabrice Bellet <fabrice.bellet@imag.fr>, 1999.
@@ -29,7 +29,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center HEAD\n"
+"Project-Id-Version: cinnamon-control-center HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5302,11 +5302,11 @@ msgstr "Quitter"
 msgid "Control Center"
 msgstr "Centre de contrôle"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Paramètres système"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Préférences;Paramètres;Réglages;"
 

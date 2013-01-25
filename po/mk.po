@@ -1,5 +1,5 @@
 # translation of mk.po to Macedonian
-# translation of gnome-control-center.HEAD.mk.po to
+# translation of cinnamon-control-center.HEAD.mk.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-11-29 09:05+0000\n"
 "PO-Revision-Date: 2011-12-10 20:46+0100\n"
 "Last-Translator: Jovan N\n"
@@ -4719,7 +4719,7 @@ msgstr ""
 msgid "Control Center"
 msgstr "Контролен центар"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:2
 msgid "System Settings"
 msgstr "Системски поставувања"

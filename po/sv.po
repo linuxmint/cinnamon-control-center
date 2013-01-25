@@ -1,6 +1,6 @@
-# Swedish messages for gnome-control-center.
+# Swedish messages for cinnamon-control-center.
 # Copyright (C) 1998-2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # FIXME: "Cursor" and "Pointer" are used inconsistently throughout the
 # application! Needs to be bug reported.
@@ -11,7 +11,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-28 08:02+0200\n"
 "PO-Revision-Date: 2012-03-28 08:05+0100\n"
@@ -4586,12 +4586,12 @@ msgstr ""
 msgid "Control Center"
 msgstr "Kontrollpanel"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systeminställningar"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Inställningar;"
 

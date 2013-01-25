@@ -1,4 +1,4 @@
-# Traducció del gnome-control-center de l'equip de Softcatalà.
+# Traducció del cinnamon-control-center de l'equip de Softcatalà.
 # Copyright © 1999-2009 Free Software Foundation, Inc.
 # Ivan Vilata i Balaguer <ivan@selidor.net>, 1999, 2000.
 # Softcatalà <linux@softcatala.org>, 2000, 2001.
@@ -10,7 +10,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-23 01:26+0200\n"
 "PO-Revision-Date: 2012-09-22 18:54+0200\n"
@@ -5271,11 +5271,11 @@ msgstr "Ix"
 msgid "Control Center"
 msgstr "Centre de control"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Paràmetres del sistema"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferències;Paràmetres;"
 

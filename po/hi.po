@@ -1,4 +1,4 @@
-# translation of gnome-control-center.master.hi.po to Hindi
+# translation of cinnamon-control-center.master.hi.po to Hindi
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -9,7 +9,7 @@
 # rajesh <rajeshkajha@yahoo.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.master.hi\n"
+"Project-Id-Version: cinnamon-control-center.master.hi\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5413,11 +5413,11 @@ msgstr "बाहर"
 msgid "Control Center"
 msgstr "नियंत्रण केंद्र"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "तंत्र विन्यास"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "वरीयताएँ;सेटिंग्स;"
 

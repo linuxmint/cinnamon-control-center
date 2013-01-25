@@ -1,4 +1,4 @@
-# gnome-control-center Finnish translation
+# cinnamon-control-center Finnish translation
 # Copyright (C) 2004-2009 Free Software Foundation, Inc.
 # Mikko Rauhala <mjr@iki.fi>, x-2000
 #
@@ -18,7 +18,7 @@
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-21 14:06+0000\n"
@@ -5283,11 +5283,11 @@ msgstr "Lopeta"
 msgid "Control Center"
 msgstr "Järjestelmän asetukset"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Järjestelmäasetukset"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Ominaisuudet;Asetukset;Preferences;Settings;"
 

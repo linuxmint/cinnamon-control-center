@@ -1,12 +1,12 @@
-# Kazakh translation for gnome-control-center.
-# Copyright (C) 2010 gnome-control-center's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center package.
+# Kazakh translation for cinnamon-control-center.
+# Copyright (C) 2010 cinnamon-control-center's COPYRIGHT HOLDER
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: cinnamon-control-center master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-02-08 14:46+0000\n"
 "PO-Revision-Date: 2012-05-27 12:02+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
@@ -4690,12 +4690,12 @@ msgstr ""
 msgid "Control Center"
 msgstr "Басқару орталығы"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Жүйелік баптаулар"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 #| msgid "Preferences"
 msgid "Preferences;Settings;"
 msgstr "Баптаулар;Қалаулар;"

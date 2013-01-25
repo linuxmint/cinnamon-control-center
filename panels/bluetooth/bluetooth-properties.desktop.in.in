@@ -2,7 +2,7 @@
 _Name=Bluetooth
 _Comment=Configure Bluetooth settings
 Icon=bluetooth
-Exec=gnome-control-center bluetooth
+Exec=cinnamon-control-center bluetooth
 Terminal=false
 Type=Application
 Categories=GTK;GNOME;Settings;X-GNOME-NetworkSettings;HardwareSettings;X-GNOME-Settings-Panel;

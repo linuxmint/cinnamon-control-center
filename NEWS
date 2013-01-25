@@ -772,7 +772,7 @@ Version 3.3.2 (2011-11-22)
 
 Common:
 - Always collect locales from the directory (Bastien Nocera) (#660725)
-- Do not install private libgnome-control-center (Bastien Nocera) (#655287)
+- Do not install private libcinnamon-control-center (Bastien Nocera) (#655287)
 - Fix handling of <Primary> (Bastien Nocera) (#748444)
 
 Background:
@@ -859,7 +859,7 @@ Shell:
 - Don't crash when loading the icon fails (Christian Persch) (#660513)
 - Use icon for "All Settings" button (Bastien Nocera) (#657043)
 - Add a11y label for the All Settings button (Bastien Nocera)
-- Merge libgnome-control-center into main binary (Bastien Nocera)
+- Merge libcinnamon-control-center into main binary (Bastien Nocera)
 
 Sound:
 - Fix possible infinite loop in combo box (Bastien Nocera)
@@ -2448,7 +2448,7 @@ Translations:
 - ro (Lucian Adrian Grijincu)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.90.1 (2010-09-22)
+cinnamon-control-center 2.90.1 (2010-09-22)
 
 - Add new background panel
 
@@ -2479,7 +2479,7 @@ General:
 - Loads of GTK3 deprecation work
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.5 (2010-07-12)
+cinnamon-control-center 2.31.5 (2010-07-12)
 
 Date and Time:
 - Add application icon (Thomas Wood, Lapo Calamandrei)
@@ -2494,7 +2494,7 @@ Shell:
 Universal Access:
 - Add size groups (Thomas Wood)
 
-libgnome-control-center:
+libcinnamon-control-center:
 - Derive CcPanel from GtkBin, rather than GtkAlignment (Thomas Wood)
 
 General:
@@ -2510,7 +2510,7 @@ Translations:
 
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.4.2 (2010-06-30)
+cinnamon-control-center 2.31.4.2 (2010-06-30)
 
 Date and Time:
 - Work around a cairo bug that prevents the map being display correctly
@@ -2526,7 +2526,7 @@ Translations:
 - he (Yaron Shahrabani)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.4.1 (2010-06-29)
+cinnamon-control-center 2.31.4.1 (2010-06-29)
 
 Date and Time:
 - Fix memory leak (Thomas Wood)
@@ -2535,7 +2535,7 @@ Date and Time:
 - Prevent crash when DBus service is not available (Thomas Wood)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.4 (2010-06-29)
+cinnamon-control-center 2.31.4 (2010-06-29)
 
 General:
 - Updated to use GTK+ 3 (Rodrigo Moya, Richard Hughes, Bastien Nocera)
@@ -2546,7 +2546,7 @@ Date and Time:
 Shell:
 - Switch to using GtkApplication rather than libunique (Richard Hughes)
 
-libgnome-control-center:
+libcinnamon-control-center:
 - Remove redundant properties from CcPanel (Thomas Wood)
 
 Translations:
@@ -2562,7 +2562,7 @@ Translations:
 
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.3 (2010-06-07)
+cinnamon-control-center 2.31.3 (2010-06-07)
 
 About Me:
 - Catch error messages from passwd (#620135) (Bin Li)
@@ -2597,7 +2597,7 @@ Translations:
 - he (Yaron Shahrabani)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.2 (2010-05-24)
+cinnamon-control-center 2.31.2 (2010-05-24)
 
 About Me:
 - Don't hang when new and old password are too similar (Milan Bouchet-Valat)
@@ -2607,7 +2607,7 @@ Shell:
 - Add a new shell that supports embedded settings panels
   (Thomas Wood, William Jon McCann)
 
-libgnome-control-center:
+libcinnamon-control-center:
 - Add a new library that provides an API to create embedded settings panels for
   the new shell (Thomas Wood, William Jon McCann)
 
@@ -2637,7 +2637,7 @@ Translations:
 - en@shaw (Thomas Thurman)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.31.1 (2010-05-05)
+cinnamon-control-center 2.31.1 (2010-05-05)
 
 Common:
 - Use only single GTK+ includes (Javier Jardón) (#615292)
@@ -2692,7 +2692,7 @@ Translations:
 - sl (Matej Urbančič)
 - zh_CN (Funda Wang)
 -------------------------------------------------------------------------------
-gnome-control-center 2.30.0 (2010-03-25)
+cinnamon-control-center 2.30.0 (2010-03-25)
 
 About me:
 - Fix global variable confusion (Michal Schmidt)
@@ -2744,7 +2744,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.29.92 (2010-03-08)
+cinnamon-control-center 2.29.92 (2010-03-08)
 
 Translations:
 - ar (Khaled Hosny)
@@ -2765,7 +2765,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.29.91 (2010-02-24)
+cinnamon-control-center 2.29.91 (2010-02-24)
 
 Appearance:
  - Add 'span' as a style for backgrounds
@@ -2791,7 +2791,7 @@ Translations:
 - ta (vasudeven)
 - zh_HK & zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.29.90 (2010-02-08)
+cinnamon-control-center 2.29.90 (2010-02-08)
 
 About-me:
 - Fix hangs when 'passwd' outputs unexpected answers (Milan Bouchet-Valat)
@@ -2813,7 +2813,7 @@ Translations:
 - pt_BR (Antonio Fernandes C. Neto)
 - sl (Matej Urbančič, Andrej Žnidaršič)
 -------------------------------------------------------------------------------
-gnome-control-center 2.29.6 (2010-01-26)
+cinnamon-control-center 2.29.6 (2010-01-26)
 
 About-me:
 - Add translator comments to 'Home' string (Claude Paroz) (#605944)
@@ -2837,7 +2837,7 @@ Translations:
 - ta (vasudeven)
 - uk (Maxim V. Dziumanenko)
 -------------------------------------------------------------------------------
-gnome-control-center 2.29.4 (2009-12-24)
+cinnamon-control-center 2.29.4 (2009-12-24)
 
 General:
 - Drop obsolete check for HAL (#595832) (Jens Granseuer)
@@ -2938,7 +2938,7 @@ Translations:
 - th (อาคม โชติพันธวานนท์)
 - zh_CN (Tao Wei)
 -------------------------------------------------------------------------------
-gnome-control-center 2.28.0 (2009-09-21)
+cinnamon-control-center 2.28.0 (2009-09-21)
 
 Appearance:
 - Add link buttons to get more themes/backgrounds online (William Jon McCann)
@@ -3005,7 +3005,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.91 (2009-08-24)
+cinnamon-control-center 2.27.91 (2009-08-24)
 
 Appearance:
 - Use unique widget IDs (Jens Granseuer) (#592182)
@@ -3046,7 +3046,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.90 (2009-08-17)
+cinnamon-control-center 2.27.90 (2009-08-17)
 
 About-me:
 - Remove old code poking directly into the pwent (Matthias Clasen)
@@ -3094,7 +3094,7 @@ Translations:
 - or (Manoj Kumar Giri)
 - sv (Daniel Nylander)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.5 (2009-07-28)
+cinnamon-control-center 2.27.5 (2009-07-28)
 
 Default applications:
 - Don't clear the custom browser command on startup (Jens Granseuer) (#590316)
@@ -3122,7 +3122,7 @@ Translations:
 - nb (Kjartan Maraas)
 - pt_BR (Krix Apolinário)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.4.1 (2009-07-16)
+cinnamon-control-center 2.27.4.1 (2009-07-16)
 
 About me:
 - EXTRA_DIST fingerprint icons (Rodrigo Moya)
@@ -3136,7 +3136,7 @@ Network:
 Translations:
 - gu (Sweta Kothari)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.4 (2009-07-15)
+cinnamon-control-center 2.27.4 (2009-07-15)
 
 About me:
 - New icons for fingerprint screen (Michael Langlie)
@@ -3175,7 +3175,7 @@ Translations:
 - gu (Sweta Kothari)
 - uk (Maxim V. Dziumanenko)
 -------------------------------------------------------------------------------
-gnome-control-center 2.27.3 (2009-06-29)
+cinnamon-control-center 2.27.3 (2009-06-29)
 
 About me:
 - Initialize GThread subsystem (Vivian Zhang) (#583451)
@@ -3250,7 +3250,7 @@ Translations:
 - zh_CN (M Zhang, Deng Xiyue)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.26.0 (2009-03-16)
+cinnamon-control-center 2.26.0 (2009-03-16)
 
 About me:
 - Fix warning when selecting a finger to enroll in the combo box
@@ -3309,7 +3309,7 @@ Translations:
 - tr (Baris Cicek)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.25.92 (2009-03-02)
+cinnamon-control-center 2.25.92 (2009-03-02)
 
 General:
 - remove lots of deprecated GDK/GTK+ calls (Thomas H.P. Andersen) (#572325)
@@ -3371,7 +3371,7 @@ Translations:
 - zh_TW (Chao-Hsiung Liao)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.25.90 (2009-02-04)
+cinnamon-control-center 2.25.90 (2009-02-04)
 
 General:
 - Rename gnome-network-preferences to gnome-network-properties (Luca Ferretti)
@@ -3451,7 +3451,7 @@ Translations:
 - zh_TW (Chao-Hsiung Liao)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.25.3 (2008-12-18)
+cinnamon-control-center 2.25.3 (2008-12-18)
 
 General:
 - Remove sound capplet and documentation, it moved to gnome-media
@@ -3473,7 +3473,7 @@ Display:
 - Remove unneeded help button (Federico Mena Quintero)
 
 -------------------------------------------------------------------------------
-gnome-control-center 2.25.2 (2008-12-02)
+cinnamon-control-center 2.25.2 (2008-12-02)
 
 General:
 - Only include top-level headers for glib and GTK+ (Maxim Ermilov) (#561562)
@@ -3518,7 +3518,7 @@ Translations:
 - es (Jorge Gonzalez)
 - it (Luca Ferretti)
 -------------------------------------------------------------------------------
-gnome-control-center 2.25.1 (2008-11-05)
+cinnamon-control-center 2.25.1 (2008-11-05)
 
 General:
 - resurrect gnome-font-viewer and gnome-thumbnail-font (Davyd Madeley)
@@ -3588,12 +3588,12 @@ Translations:
 - th (Theppitak Karoonboonyanan)
 - uk (Maxim V. Dziumanenko)
 -------------------------------------------------------------------------------
-gnome-control-center 2.24.0.1 (2008-09-24)
+cinnamon-control-center 2.24.0.1 (2008-09-24)
 
 Appearance:
 - fix newly-introduced crash in theme tab (Jens Granseuer) (#553541)
 -------------------------------------------------------------------------------
-gnome-control-center 2.24.0 (2008-09-22)
+cinnamon-control-center 2.24.0 (2008-09-22)
 
 Accessibility:
 - improve tooltip wording (Wang Xin)
@@ -3685,7 +3685,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.23.90 (2008-08-18)
+cinnamon-control-center 2.23.90 (2008-08-18)
 
 Appearance:
 - Use default icon for unknown themes (Jens Granseuer)
@@ -3730,7 +3730,7 @@ Translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 -------------------------------------------------------------------------------
-gnome-control-center 2.23.6 (2008-08-04)
+cinnamon-control-center 2.23.6 (2008-08-04)
 
 Appearance:
 - Make theme installation from GIO-supported sources work (including
@@ -3778,7 +3778,7 @@ Translations:
 - pt_BR (Leonardo Ferreira Fontenelle)
 - sv (Daniel Nylander)
 -------------------------------------------------------------------------------
-gnome-control-center 2.23.5 (2008-07-24)
+cinnamon-control-center 2.23.5 (2008-07-24)
 
 General:
 - Remove VFS methods code (Rodrigo Moya)
@@ -3825,7 +3825,7 @@ Typing Break:
   but award some bonus time according to the already elapsed break time
   (Andrey Gusev, #133295).
 -------------------------------------------------------------------------------
-gnome-control-center 2.23.4 (2008-06-16)
+cinnamon-control-center 2.23.4 (2008-06-16)
 
 default applications:
 - Convert to use GConfPropertyEditor and remove a lot of duplicated code in
@@ -3847,7 +3847,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.23.3 (2008-06-04)
+cinnamon-control-center 2.23.3 (2008-06-04)
 
 appearance:
 - Remove the last traces of gnome-vfs (Lincoln de Sousa) (#524401)
@@ -3878,7 +3878,7 @@ updated translations:
 - vi (Clytie Siddall)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.23.2 (2008-05-17)
+cinnamon-control-center 2.23.2 (2008-05-17)
 
 about-me:
 - Fix image scaling on the photo button (Ben LeMasurier) (#309629)
@@ -3920,7 +3920,7 @@ updated translations:
 - pt_BR (Leonardo Ferreira Fontenelle)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.23.1
+cinnamon-control-center 2.23.1
 
 about-me:
 - Launch the error dialog with the proper parent (Jens Granseuer)
@@ -3993,7 +3993,7 @@ updated translations:
 - ru (Yuri Kozlov)
 - te (Sunil Mohan Adapa)
 ------------------------------------------------------------------------------
-gnome-control-center 2.22.1
+cinnamon-control-center 2.22.1
 
 appearance:
 - Don't resize the font samples vertically when the window is resized
@@ -4045,7 +4045,7 @@ updated translations:
 - tr (Baris Cicek)
 - vi (Nguyen Thaii Ngoc Duy)
 ------------------------------------------------------------------------------
-gnome-control-center 2.22.0
+cinnamon-control-center 2.22.0
 
 about-me:
 - Fix misspelling of "palindrome" (Jens Granseuer) (#519398)
@@ -4083,7 +4083,7 @@ updated translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.92
+cinnamon-control-center 2.21.92
 
 about-me:
 
@@ -4146,7 +4146,7 @@ updated translations:
 - sv (Daniel Nylander)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.91
+cinnamon-control-center 2.21.91
 
 appearance:
 - Add a comment for translators (Jens Granseuer) (#514598)
@@ -4229,7 +4229,7 @@ updated translations:
 - zh_HK (Chao-Hsiung Liao)
 - zh_TW (Chao-Hsiung Liao)
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.90
+cinnamon-control-center 2.21.90
 
 appearance:
 - Update list model when the background changes (Soren Sandmann)
@@ -4274,7 +4274,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - tr (Gil Forcada)
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.5
+cinnamon-control-center 2.21.5
 
 appearance:
 - Read WindowTitleFont and DocumentsFont from meta-theme and use to set
@@ -4318,7 +4318,7 @@ updated translations:
 - vi (Clytie Siddall)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.4
+cinnamon-control-center 2.21.4
 
 about-me:
 - Add a translation hint (Jens Granseuer)
@@ -4389,7 +4389,7 @@ updated translations:
 - sv (Daniel Nylander)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.2
+cinnamon-control-center 2.21.2
 
 about-me:
 - Add another string to the list of recognized error returns from passwd
@@ -4434,7 +4434,7 @@ updated translations:
 - sl (Matej Urbancic)
 - sv (Daniel Nylander)
 ------------------------------------------------------------------------------
-gnome-control-center 2.21.1
+cinnamon-control-center 2.21.1
 
 appearance:
 - Unify "invalid theme" error messages and be a bit more verbose
@@ -4518,7 +4518,7 @@ updated translations:
 - nb (Kjartan Maraas)
 - sl (Matej Urbancic)
 ------------------------------------------------------------------------------
-gnome-control-center 2.20.3
+cinnamon-control-center 2.20.3
 
 about-me:
 - Don't get confused when the user does not have a password set and passwd
@@ -4555,7 +4555,7 @@ updated translations:
 - pt_BR (Leonardo Ferreira Fontenelle)
 - uz@cyrillic (Nurali Abdurahmonov)
 ------------------------------------------------------------------------------
-gnome-control-center 2.20.1
+cinnamon-control-center 2.20.1
 
 appearance:
 - Made theme sorting case-insensitive (Jens Granseuer) (#481224)
@@ -4577,7 +4577,7 @@ updated translations:
 - gl (Ignacio Casal Quinteiro)
 - it (Luca Ferretti)
 ------------------------------------------------------------------------------
-gnome-control-center 2.20.0.1
+cinnamon-control-center 2.20.0.1
 
 at-properties:
 - Make logout button sensitive whenever a11y settings have been enable or
@@ -4595,7 +4595,7 @@ updated translations:
 - ko (Changwoo Ryu)
 - ta (I. Felix)
 ------------------------------------------------------------------------------
-gnome-control-center 2.20.0
+cinnamon-control-center 2.20.0
 
 appearance:
 - Correct translatable property value of "Save As" (Claude Paroz) (#473810)
@@ -4639,7 +4639,7 @@ updated translations:
 - uk (Maxim Dziumanenko)
 - vi (Clytie Siddall)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.92
+cinnamon-control-center 2.19.92
 
 appearance:
 - Fixed leaks (Jens Granseuer)
@@ -4655,7 +4655,7 @@ updated translations:
 - ta (I. Felix)
 - vi (Clytie Siddall)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.91
+cinnamon-control-center 2.19.91
 
 about-me:
 - Honor mail address attributes when setting up Home and Work addresses
@@ -4717,7 +4717,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.90
+cinnamon-control-center 2.19.90
 
 about-me:
 - Use g_get_user_special_dir() instead of hard-coding ~/Pictures (Jens
@@ -4784,7 +4784,7 @@ updated translations:
 - ta (I. Felix)
 - th (Theppitak Karoonboonyanan)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.6
+cinnamon-control-center 2.19.6
 
 about-me:
 - Add a tooltip to the image button to make it accessible (Jens Granseuer)
@@ -4881,7 +4881,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.5
+cinnamon-control-center 2.19.5
 
 about-me:
 - Fix a small typo in the comments (Guilherme de S. Pastore)
@@ -4987,7 +4987,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - vi (Clytie Siddall, Nguyen Thai Ngoc Duy)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.4
+cinnamon-control-center 2.19.4
 
 appearance:
 - Fixed leaks (Jens Granseuer)
@@ -5045,7 +5045,7 @@ updated translations:
 - sv (Daniel Nylander)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.3
+cinnamon-control-center 2.19.3
 
 about-me:
 - Use g_file_set_contents instead of a single fwrite (Bastien Nocera)
@@ -5133,7 +5133,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.19.1
+cinnamon-control-center 2.19.1
 
 about-me:
 - Build fixes (Bastien Nocera)
@@ -5204,7 +5204,7 @@ settings daemon:
   settings (Federico Mena Quintero) (#217790 and #378338)
 
 general:
-- Rename module name to gnome-control-center (Rodrigo Moya)
+- Rename module name to cinnamon-control-center (Rodrigo Moya)
 
 updated translations:
 - ar (Djihed Afifi)
@@ -5215,7 +5215,7 @@ updated translations:
 - sv (Daniel Nylander)
 - zh_CN (Funda Wang)
 ------------------------------------------------------------------------------
-gnome-control-center 2.18.1
+cinnamon-control-center 2.18.1
 
 sound:
 - Initialize threads earlier (Christian Persch) (#416239)
@@ -5249,7 +5249,7 @@ updated translations:
 - pt_BR (Leonardo Ferreira Fontenelle)
 - uk (Maxim Dziumanenko)
 ------------------------------------------------------------------------------
-gnome-control-center 2.18.0
+cinnamon-control-center 2.18.0
 
 about-me:
 - Really fixed #411697 (Jens Granseuer)
@@ -5304,7 +5304,7 @@ updated translations:
 - zh_HK (Abel Cheung)
 - zh_TW (Abel Cheung)
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.92
+cinnamon-control-center 2.17.92
 
 about-me:
 - Change default dir for the image chooser (Jens Granseuer) (#408305)
@@ -5375,7 +5375,7 @@ updated translations:
 - vi (Nguyen Thai Ngoc Duy)
 - zh_CN (Abel Cheung)
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.91
+cinnamon-control-center 2.17.91
 
 common:
 - Compilation fixes (Kjartan Maraas)
@@ -5497,7 +5497,7 @@ updated translations:
 - sv (Daniel Nylander)
 - th (Theppitak Karoonboonyanan)
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.90
+cinnamon-control-center 2.17.90
 
 common:
 - Removed non-critical g_return_if_fail (Thomas Wood) (#353620)
@@ -5555,7 +5555,7 @@ settings daemon:
 - Added missing NULL-check (Jan Arne Petersen) (#395083)
 - Removed variable that was never initialized (Jens Granseuer) (#382502)
 - Quit application when window is closed (Rodrigo Moya) (#394303)
-- Set program name to gnome-control-center (Rodrigo Moya)
+- Set program name to cinnamon-control-center (Rodrigo Moya)
 
 updated translations:
 - ar (Djihed Afifi)
@@ -5571,7 +5571,7 @@ updated translations:
 - sv (Daniel Nylander)
 - th (Theppitak Karoonboonyanan)
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.5
+cinnamon-control-center 2.17.5
 
 about-me:
 - Fix displaying of image selected by the user (Hiroyuki Ikezoe) (#343584)
@@ -5664,7 +5664,7 @@ translations:
 - sv (Daniel Nylander)
 - th (Theppitak Karoonboonyanan)
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.4
+cinnamon-control-center 2.17.4
 
 background:
 - Plug a leak (Kjartan Maraas) (#376949)
@@ -5714,7 +5714,7 @@ Daniel Nylander (sv)
 Theppitak Karoonboonyanan (th)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.3
+cinnamon-control-center 2.17.3
 
 common:
 - Clean up file transfer dialog (Thomas Wood) (319926)
@@ -5746,7 +5746,7 @@ translations:
 - sv (Daniel Nylander)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.17.1
+cinnamon-control-center 2.17.1
 
 control-center:
 - Don't install unused GNOME_Control_Center.server.in file (Rodrigo Moya)
@@ -5774,7 +5774,7 @@ translations:
 - nn (Åsmund Skjæveland)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.16.2
+cinnamon-control-center 2.16.2
 
 keyboard:
 - Fixed crashes when failed DBUS connection to the server (Sergey Udaltsov)
@@ -5791,7 +5791,7 @@ translations:
 - pl (Marek Stepien)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.16.1
+cinnamon-control-center 2.16.1
 
 about-me:
 - Fixed compilation issues on Sun Studio (Matt Keenan) (349079)
@@ -5817,7 +5817,7 @@ translations:
 - nn (Åsmund Skjæveland)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.16.0
+cinnamon-control-center 2.16.0
 
 background:
 - avoid excess strduping (Kjartan Maraas) (#352252)
@@ -5857,7 +5857,7 @@ Translations:
 - zh_TW (Chao-Hsiung Liao, Abel Cheung)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.15.92
+cinnamon-control-center 2.15.92
 
 background:
 - fix "Background dialogue resizes when shown" (Rodney Dawes) (#332830)
@@ -5916,7 +5916,7 @@ Clytie Siddall (vi)
 Funda Wang (zh_CN)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.15.91
+cinnamon-control-center 2.15.91
 
 misc:
 - require libebook-1.2 1.7.90 for the new API (Sebastien Bacher)
@@ -5977,7 +5977,7 @@ updated translations:
 - zh_TW (Chao-Hsiung Liao)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.15.90
+cinnamon-control-center 2.15.90
 
 misc:
 - add an encoding key to some .directory.in (Vincent Fretin) (#338593)
@@ -6011,7 +6011,7 @@ updated translations:
 - th (Theppitak Karoonboonyanan)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.15.4
+cinnamon-control-center 2.15.4
 
 background:
 - Removed redundant GNOMELOCALEDIR (Sergey Udaltsov) (345178)
@@ -6056,7 +6056,7 @@ updated translations:
 - sv (Daniel Nylander)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.15.3
+cinnamon-control-center 2.15.3
 
 about me:
 - Fixed typo (Rodrigo Moya) (324971)
@@ -6116,7 +6116,7 @@ updated translations:
 - zh_TW (Chao-Hsiung Liao)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.14.2
+cinnamon-control-center 2.14.2
 
 about-me:
 - Fixed label alignment (Sebastien Bacher) (343056)
@@ -6141,7 +6141,7 @@ updated translations:
 - zh_TW (Chao-Hsiung Liao)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.14.1
+cinnamon-control-center 2.14.1
 
 background:
 - Fixed crash on startup (Rodney Dawes) (331486)
@@ -6187,7 +6187,7 @@ updated translations:
 - vi (Clytie Siddall)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.14.0
+cinnamon-control-center 2.14.0
 
 default applications:
 - Use correct text domain name (Luca Cavalli) (332833)
@@ -6246,7 +6246,7 @@ updated translations:
 - zh_CN (Funda Wang)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.93
+cinnamon-control-center 2.13.93
 
 default applications:
 - Fixed hang with multiple windows opened (Luca Cavalli) (328094)
@@ -6293,7 +6293,7 @@ updated translations:
 - vi (Clytie Siddall)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.92
+cinnamon-control-center 2.13.92
 
 background:
 - Re-added instant apply (Rodney Dawes)
@@ -6323,13 +6323,13 @@ updated translations:
 - zh_CN (Funda Wang)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.91
+cinnamon-control-center 2.13.91
 
 build:
 - enable generation of Makefile for spanish docs to fix the build.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.90
+cinnamon-control-center 2.13.90
 
 about-me:
 - Preserve tab navigation on the dialog (Diego González) (317468)
@@ -6411,7 +6411,7 @@ updated translations:
 - zh_CN (Funda Wang)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.5.1
+cinnamon-control-center 2.13.5.1
 
 default applications:
 - Fixed loading of translations from XML file (Luca Cavalli)
@@ -6430,7 +6430,7 @@ updated translations:
 - sr (Slobodan D. Sredojevic)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.5
+cinnamon-control-center 2.13.5
 
 background:
 - Changed main dialog to use explicit apply with OK and cancel buttons
@@ -6489,7 +6489,7 @@ updated translations:
 - zh_TW (Chao-Hsiung Liao)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.4
+cinnamon-control-center 2.13.4
 
 default-applications:
 - Added Opera to list of default browsers (pholie) (324629)
@@ -6520,7 +6520,7 @@ updated translations:
 - vi (Clytie Siddall)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.3
+cinnamon-control-center 2.13.3
 
 about-me:
 - Added a preview to the filechooser used for selecting an image (Mathias Clasen)
@@ -6565,7 +6565,7 @@ translations:
 - zh_CN (Funda Wang)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.2
+cinnamon-control-center 2.13.2
 
 background:
 - Sanity check on GConf string values (Alexis Robert) (320647)
@@ -6595,7 +6595,7 @@ translations:
 - th (Theppitak Karoonboonyanan)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.13.1
+cinnamon-control-center 2.13.1
 
 default-applications:
 - Add Sylpheed-Claws to the list of possible mailers (Colin Leroy)
@@ -6639,7 +6639,7 @@ translations:
 - sv (Christian Rose)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.12.1
+cinnamon-control-center 2.12.1
 
 background:
 - Make sure that the filename is valid utf8 and the file exists with utf8 
@@ -6680,7 +6680,7 @@ Clytie Siddall (vi)
 Funda Wang (zh_CN)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.12.0
+cinnamon-control-center 2.12.0
 
 translations:
 Jordi Mallach (ca)
@@ -6703,7 +6703,7 @@ Baris Cicek (tr)
 Clytie Siddall (vi)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.92
+cinnamon-control-center 2.11.92
 
 about-me:
 - typo fix (Francisco Javier F. Serrado) (#312845)
@@ -6754,7 +6754,7 @@ Funda Wang (zh_CN)
 Woodman Tuen (zh_TW)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.91
+cinnamon-control-center 2.11.91
 
 about-me:
 
@@ -6804,7 +6804,7 @@ Clytie Siddall (vi)
 Funda Wang (zh_CN)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.90
+cinnamon-control-center 2.11.90
 
 general:
 
@@ -6854,7 +6854,7 @@ Clytie Siddall (vi)
 Funda Wang (zh_CN)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.6
+cinnamon-control-center 2.11.6
 
 general:
 
@@ -6900,7 +6900,7 @@ Marcel Telka (sk)
 Theppitak Karoonboonyanan (th)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.5
+cinnamon-control-center 2.11.5
 
 - new "about-me" capplet by Diego Gonzalez <diego@pemas.net>
 
@@ -6921,7 +6921,7 @@ Funda Wang (zh_CN)
 Woodman Tuen (zh_TW)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.4
+cinnamon-control-center 2.11.4
 
 - fix a crasher with the clipboard manager (Sebastien Bacher)
 - fix a crasher when changing the volume with the multimedia keys
@@ -6930,7 +6930,7 @@ gnome-control-center 2.11.4
   (Carlos Garnacho Parro)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.3
+cinnamon-control-center 2.11.3
 
 - fix mute handling, particularly for devices without hardware mute support 
   or with applications that use volume=0 for mute (Ronald S. Bultje)
@@ -6954,7 +6954,7 @@ Elian Myftiu (sq)
 Theppitak Karoonboonyanan (th)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.11.1
+cinnamon-control-center 2.11.1
 
 - allow to configure the menubar shortcut (Sebastien Bacher)
 - new shell layout code (Carlos Garnacho Parro)
@@ -6978,7 +6978,7 @@ Maxim Dziumanenko (uk)
 Canonical Ltd (xh)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.10.0
+cinnamon-control-center 2.10.0
 
 background:
 - fix the crashes with non-UTF8 names (Rodney Dawes)
@@ -7024,7 +7024,7 @@ Maxim Dziumanenko (uk)
 Woodman Tuen (zh_TW)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.9.91
+cinnamon-control-center 2.9.91
 
 general:
 - check for xmodmap files, and offer to load them (#143487)
@@ -7087,7 +7087,7 @@ Baris Cicek (tr)
 Funda Wang (zh_CN)
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.9.4
+cinnamon-control-center 2.9.4
 
 - fix the build out of the source dir (Closes: #158333).
 - don't set "close" as the default button for the differents capplets 
@@ -7122,7 +7122,7 @@ Elian Myftiu (sq)
 Christian Rose (sv)
 
 
-gnome-control-center 2.9.3
+cinnamon-control-center 2.9.3
 
 - Add a button to turn off a sound event (#14272).
 - Allow to use themes with the ".tgz" extension (#148895).
@@ -7134,7 +7134,7 @@ gnome-control-center 2.9.3
 - Updated to use libnautilus-extensions.
 - Updated the menu entries for the new gnome-menus system.
 
-gnome-control-center 2.8.1
+cinnamon-control-center 2.8.1
 
 - Some tweaking of the available default applications
 - Background capplet fixes (#154003)
@@ -7143,7 +7143,7 @@ gnome-control-center 2.8.1
 - update translations
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.8.0
+cinnamon-control-center 2.8.0
 
 Jody Goldberg
  * Fixed float/int mismatch in peditor
@@ -7161,7 +7161,7 @@ Translations:
  * All translations updated
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.7.1
+cinnamon-control-center 2.7.1
 
 Translations:
  * Bosnian translation added.
@@ -7182,12 +7182,12 @@ Jeroen Zwartepoorte:
  * Use the parent type in the G_DEFINE_TYPE
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.7.0
+cinnamon-control-center 2.7.0
     * No NEWS file updates this time due to time pressures.  2.7.1
     should have a full change.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.6.1
+cinnamon-control-center 2.6.1
 
 Jody:
     * Add the ximian shell to the tarball and polish it up a bit
@@ -7206,7 +7206,7 @@ Sergey V. Udaltsov:
     * Merged the keyboard preview branch. The keyboard capplet got another tab.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.6.1
+cinnamon-control-center 2.6.1
 
 Alex Larsson:
     https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=119494
@@ -7232,7 +7232,7 @@ Padraig O'Briain:
     http://bugzilla.gnome.org/show_bug.cgi?id=131538.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.6.0.3
+cinnamon-control-center 2.6.0.3
 
 Jody:
     http://bugzilla.gnome.org/show_bug.cgi?id=138701
@@ -7241,7 +7241,7 @@ Jody:
     * Merge in some build fixes for sun's forte and Irix
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.5.4
+cinnamon-control-center 2.5.4
 
 Dennis Cranston :
     http://bugzilla.gnome.org/show_bug.cgi?id=133715
@@ -7290,7 +7290,7 @@ msuarezalvarez@arnet.com.ar :
 	* Another typo in the new a11y settings daemon extensions
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.5.1
+cinnamon-control-center 2.5.1
 
 Jody:
     http://bugzilla.gnome.org/show_bug.cgi?id=125899
@@ -7302,7 +7302,7 @@ Sergey:
     * Merge gswitchit into gnome-settings-daemon and keyboard capplet
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.5.0
+cinnamon-control-center 2.5.0
 
 Jody:
     * Add libxklavier and prep for inclusion of gswitchit's
@@ -7314,7 +7314,7 @@ Jody:
 
 ------------------------------------------------------------------------------
 
-gnome-control-center 2.1.6
+cinnamon-control-center 2.1.6
 
 Jody:
 	* gnome-keyboard-properties.c (accessibility_button_clicked) : fix
@@ -7324,7 +7324,7 @@ Jonathan:
 	* gnome-theme-info.c : Rewrite.  Now working
 	* gnome-theme-manager : Fix lots of bugs.  Use the rewrite.
 
-gnome-control-center 2.1.0.2
+cinnamon-control-center 2.1.0.2
 
 Jody:
 	http://bugzilla.gnome.org/show_bug.cgi?id=93211
@@ -7339,7 +7339,7 @@ Iain Holmes:
 	* Add an image size label for background capplet.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.1.0.1
+cinnamon-control-center 2.1.0.1
 
 Jody:
 	* Some minor ui tweaks for accessx.
@@ -7347,7 +7347,7 @@ Jody:
 	* fix accelerators for ui-properties capplet.
 
 ------------------------------------------------------------------------------
-gnome-control-center 2.0.1
+cinnamon-control-center 2.0.1
 
 Chema:
 	http://bugzilla.gnome.org/show_bug.cgi?id=86018

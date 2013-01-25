@@ -222,7 +222,7 @@ on_menu_activate_open_volume_control (GtkMenuItem *item,
 
         error = NULL;
         context = gdk_app_launch_context_new ();
-        app = g_app_info_create_from_commandline ("gnome-control-center sound", "Sound preferences", 0, &error);
+        app = g_app_info_create_from_commandline ("cinnamon-control-center sound", "Sound preferences", 0, &error);
         if (app)
                 g_app_info_launch (app, NULL, G_APP_LAUNCH_CONTEXT (context), &error);
 

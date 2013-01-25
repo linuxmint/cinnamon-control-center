@@ -1,5 +1,5 @@
-# Translation of gnome-control-center.HEAD.lt.po to Lithuanian
-# Lithuanian translation of gnome-control-center
+# Translation of cinnamon-control-center.HEAD.lt.po to Lithuanian
+# Lithuanian translation of cinnamon-control-center
 # Copyright (C) 2000-2009 Free Software Foundation, Inc.
 # Gediminas Paulauskas <menesis@chatsubo.lt>, 2000-2002.
 # Vaidotas Zemlys <mpiktas@delfi.lt>, 2003.
@@ -12,8 +12,8 @@
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: cinnamon-control-center master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-21 14:06+0000\n"
 "PO-Revision-Date: 2012-09-21 20:50+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
@@ -5208,12 +5208,12 @@ msgstr "Išeiti"
 msgid "Control Center"
 msgstr "Valdymo centras"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Sistemos nustatymai"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Nustatymai;Parinktys;"
 

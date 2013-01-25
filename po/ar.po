@@ -1,5 +1,5 @@
-# translation of gnome-control-center to Arabic
-# This file is under the same license as the gnome-control-center package.
+# translation of cinnamon-control-center to Arabic
+# This file is under the same license as the cinnamon-control-center package.
 # Copyright (C) Listed translators
 # Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
 # Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
@@ -12,7 +12,7 @@
 # Ibrahim Saed <ibraheem5000@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-20 06:40+0200\n"
 "PO-Revision-Date: 2012-09-20 06:40+0200\n"
@@ -5271,11 +5271,11 @@ msgstr "أنهِ"
 msgid "Control Center"
 msgstr "مركز التحكّم"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "إعدادات النظام"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "تفضيلات;إعدادات;"
 

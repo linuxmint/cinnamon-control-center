@@ -1,10 +1,10 @@
 Subject: [PATCH] power: Add configuration for lid action
 Bug: https://bugzilla.gnome.org/show_bug.cgi?id=659045
 Bug-Ubuntu: https://bugs.launchpad.net/bugs/792636
-Index: gnome-control-center-3.6.3/panels/power/cc-power-panel.c
+Index: cinnamon-control-center-3.6.3/panels/power/cc-power-panel.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/power/cc-power-panel.c	2012-11-23 18:22:00.580034015 -0500
-+++ gnome-control-center-3.6.3/panels/power/cc-power-panel.c	2012-11-23 18:22:09.132033658 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/power/cc-power-panel.c	2012-11-23 18:22:00.580034015 -0500
++++ cinnamon-control-center-3.6.3/panels/power/cc-power-panel.c	2012-11-23 18:22:09.132033658 -0500
 @@ -932,6 +932,7 @@
  set_ac_battery_ui_mode (CcPowerPanel *self)
  {
@@ -54,10 +54,10 @@ Index: gnome-control-center-3.6.3/panels/power/cc-power-panel.c
    widget = WID (self->priv->builder, "vbox_power");
    gtk_widget_reparent (widget, (GtkWidget *) self);
  }
-Index: gnome-control-center-3.6.3/panels/power/power.ui
+Index: cinnamon-control-center-3.6.3/panels/power/power.ui
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/power/power.ui	2012-11-23 18:22:00.580034015 -0500
-+++ gnome-control-center-3.6.3/panels/power/power.ui	2012-11-23 18:59:32.479939834 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/power/power.ui	2012-11-23 18:22:00.580034015 -0500
++++ cinnamon-control-center-3.6.3/panels/power/power.ui	2012-11-23 18:59:32.479939834 -0500
 @@ -53,6 +53,33 @@
        </row>
      </data>

@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Universal Access
 _Comment=Universal Access Preferences
-Exec=gnome-control-center universal-access
+Exec=cinnamon-control-center universal-access
 Icon=preferences-desktop-accessibility
 Terminal=false
 Type=Application
@@ -9,7 +9,7 @@ StartupNotify=true
 Categories=GNOME;GTK;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
 OnlyShowIn=GNOME;Unity;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=gnome-control-center
+X-GNOME-Bugzilla-Product=cinnamon-control-center
 X-GNOME-Bugzilla-Component=Universal Access
 X-GNOME-Bugzilla-Version=@VERSION@
 X-GNOME-Settings-Panel=universal-access

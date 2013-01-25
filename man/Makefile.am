@@ -10,7 +10,7 @@ XSLTPROC_FLAGS = \
 	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
 
 man_MANS = \
-	gnome-control-center.1
+	cinnamon-control-center.1
 
 xml_files = $(man_MANS:.1=.xml)
 

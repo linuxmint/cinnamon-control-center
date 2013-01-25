@@ -15,7 +15,7 @@
 # Fran Dieguez <frandieguez@gnome.org>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center-master-po-gl-72290.merged\n"
+"Project-Id-Version: cinnamon-control-center-master-po-gl-72290.merged\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-19 02:51+0200\n"
 "PO-Revision-Date: 2012-09-19 02:51+0200\n"
@@ -5278,11 +5278,11 @@ msgstr "Saír"
 msgid "Control Center"
 msgstr "Centro de control"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Preferencias do sistema"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferencias;Configuración;"
 

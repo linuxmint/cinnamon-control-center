@@ -1,6 +1,6 @@
-# Slovak translation for gnome-control-center.
+# Slovak translation for cinnamon-control-center.
 # Copyright (C) 2000-2005, 2007-2009, 2011-2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Stanislav Višňovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000, 2001, 2002, 2003, 2004.
 # Marcel Telka <marcel@telka.sk>, 2005.
 # Peter Tuhársky <tuharsky@misbb.sk>, 2007.
@@ -9,7 +9,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-11-03 14:38+0000\n"
@@ -5542,11 +5542,11 @@ msgstr "Ukončiť"
 msgid "Control Center"
 msgstr "Ovládacie centrum"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Nastavenia systému"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Nastavenia;"
 

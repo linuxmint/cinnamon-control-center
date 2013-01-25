@@ -1,6 +1,6 @@
-# Terjemahan Bahasa Indonesia dari gnome-control-center
-# Copyright (C) 2003 gnome-control-center's copyright holder
-# This file is distributed under the same license as the gnome-control-center package.
+# Terjemahan Bahasa Indonesia dari cinnamon-control-center
+# Copyright (C) 2003 cinnamon-control-center's copyright holder
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 #
 # Mohammad DAMT <mdamt@bisnisweb.com>, 2003.
@@ -9,7 +9,7 @@
 # Andika Triwidada <andika@gmail.com>, 2009, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5254,11 +5254,11 @@ msgstr "Keluar"
 msgid "Control Center"
 msgstr "Pusat Pengaturan"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Tatanan Sistem"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferensi;Pengaturan;"
 

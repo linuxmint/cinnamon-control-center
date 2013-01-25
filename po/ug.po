@@ -1,11 +1,11 @@
-# Uighur translation for gnome-control-center
+# Uighur translation for cinnamon-control-center
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Sahran <sahran@live.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-08-27 12:07+0000\n"
@@ -4163,7 +4163,7 @@ msgstr ""
 "%s\n"
 "'%s --help' ئىجرا قىلىپ بۇيرۇق قۇرىنىڭ تولۇق تاللانما تىزىمىنى كۆرۈڭ.\n"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "سىستېما تەڭشىكى"
 

@@ -1,11 +1,11 @@
-# Afrikaans translation of gnome-control-center.
+# Afrikaans translation of cinnamon-control-center.
 # Copyright (C) 2004 Zuza Software Foundation
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Zuza Software Foundation <info@translate.org.za>, 2004
 # F Wolff <friedel@translate.org.za>, 2009, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 2.6-branch\n"
+"Project-Id-Version: cinnamon-control-center 2.6-branch\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-09-20 08:54+0000\n"
@@ -4174,7 +4174,7 @@ msgstr ""
 "%s\n"
 "Laat loop '%s --help' om 'n volledige lys opdraglynkeuses te sien.\n"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Stelselinstellings"
 

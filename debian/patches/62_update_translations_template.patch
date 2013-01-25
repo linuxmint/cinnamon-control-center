@@ -1,8 +1,8 @@
 # Description: files to translate from ubuntu patches
-Index: gnome-control-center-3.6.2/po/POTFILES.in
+Index: cinnamon-control-center-3.6.2/po/POTFILES.in
 ===================================================================
---- gnome-control-center-3.6.2.orig/po/POTFILES.in	2012-11-02 23:34:11.946702529 -0400
-+++ gnome-control-center-3.6.2/po/POTFILES.in	2012-11-02 23:35:25.194699465 -0400
+--- cinnamon-control-center-3.6.2.orig/po/POTFILES.in	2012-11-02 23:34:11.946702529 -0400
++++ cinnamon-control-center-3.6.2/po/POTFILES.in	2012-11-02 23:35:25.194699465 -0400
 @@ -81,6 +87,7 @@
  [type: gettext/glade]panels/region/gnome-region-panel-input-chooser.ui
  panels/region/gnome-region-panel-system.c
@@ -13,6 +13,6 @@ Index: gnome-control-center-3.6.2/po/POTFILES.in
  panels/sound/applet-main.c
 @@ -135,3 +142,4 @@
  shell/gnomecc.directory.in
- shell/gnome-control-center.desktop.in.in
+ shell/cinnamon-control-center.desktop.in.in
  [type: gettext/glade]shell/shell.ui
 +shell/cc-shell-nav-bar.c

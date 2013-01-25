@@ -1,13 +1,13 @@
-# translation of gnome-control-center.gnome-2-20.ne.po to Nepali
+# translation of cinnamon-control-center.gnome-2-20.ne.po to Nepali
 # Nepali Translation projectE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Pawan Chitrakar   <pawan@nplinux.org>, 2004.
 # Narayan Kumar Magar <narayan@mpp.org.np>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.gnome-2-20.ne\n"
+"Project-Id-Version: cinnamon-control-center.gnome-2-20.ne\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-09-18 20:00+0100\n"
 "PO-Revision-Date: 2007-12-21 11:45+0545\n"

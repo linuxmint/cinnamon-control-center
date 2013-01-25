@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.4.2/panels/keyboard/01-launchers.xml.in
+Index: cinnamon-control-center-3.4.2/panels/keyboard/01-launchers.xml.in
 ===================================================================
---- gnome-control-center-3.4.2.orig/panels/keyboard/01-launchers.xml.in	2011-08-25 11:09:31.000000000 -0400
-+++ gnome-control-center-3.4.2/panels/keyboard/01-launchers.xml.in	2012-08-25 23:34:01.889092065 -0400
+--- cinnamon-control-center-3.4.2.orig/panels/keyboard/01-launchers.xml.in	2011-08-25 11:09:31.000000000 -0400
++++ cinnamon-control-center-3.4.2/panels/keyboard/01-launchers.xml.in	2012-08-25 23:34:01.889092065 -0400
 @@ -7,6 +7,8 @@
  
  	<KeyListEntry name="email" _description="Launch email client"/>

@@ -11,7 +11,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 1.5.5\n"
+"Project-Id-Version: cinnamon-control-center 1.5.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-17 22:10+0200\n"
 "PO-Revision-Date: 2003-01-02 12:26+0100\n"

@@ -480,7 +480,7 @@ char *
 bg_pictures_source_get_cache_path (void)
 {
   return g_build_filename (g_get_user_cache_dir (),
-			   "gnome-control-center",
+			   "cinnamon-control-center",
 			   "backgrounds",
 			   NULL);
 }

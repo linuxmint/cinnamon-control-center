@@ -2,10 +2,10 @@ Description: Makes the language list in User Accounts similar to the language li
 Forwarded: not-needed
 Author: Gunnar Hjalmarsson <ubuntu@gunnar.cc>
 
-Index: gnome-control-center-3.6.2/panels/common/cc-common-language.c
+Index: cinnamon-control-center-3.6.2/panels/common/cc-common-language.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/common/cc-common-language.c	2012-11-02 23:12:06.522757962 -0400
-+++ gnome-control-center-3.6.2/panels/common/cc-common-language.c	2012-11-02 23:15:53.826748455 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/common/cc-common-language.c	2012-11-02 23:12:06.522757962 -0400
++++ cinnamon-control-center-3.6.2/panels/common/cc-common-language.c	2012-11-02 23:15:53.826748455 -0400
 @@ -530,6 +530,7 @@
          ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
  
@@ -62,10 +62,10 @@ Index: gnome-control-center-3.6.2/panels/common/cc-common-language.c
          return ht;
  }
  
-Index: gnome-control-center-3.6.2/panels/common/cc-language-chooser.c
+Index: cinnamon-control-center-3.6.2/panels/common/cc-language-chooser.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/common/cc-language-chooser.c	2012-11-02 23:12:06.522757962 -0400
-+++ gnome-control-center-3.6.2/panels/common/cc-language-chooser.c	2012-11-02 23:12:20.550757375 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/common/cc-language-chooser.c	2012-11-02 23:12:06.522757962 -0400
++++ cinnamon-control-center-3.6.2/panels/common/cc-language-chooser.c	2012-11-02 23:12:20.550757375 -0400
 @@ -106,20 +106,24 @@
  	user_langs = cc_common_language_get_initial_languages ();
  
@@ -96,10 +96,10 @@ Index: gnome-control-center-3.6.2/panels/common/cc-language-chooser.c
  
          g_hash_table_destroy (user_langs);
  }
-Index: gnome-control-center-3.6.2/panels/common/gdm-languages.c
+Index: cinnamon-control-center-3.6.2/panels/common/gdm-languages.c
 ===================================================================
---- gnome-control-center-3.6.2.orig/panels/common/gdm-languages.c	2012-11-02 23:12:06.522757962 -0400
-+++ gnome-control-center-3.6.2/panels/common/gdm-languages.c	2012-11-02 23:12:20.550757375 -0400
+--- cinnamon-control-center-3.6.2.orig/panels/common/gdm-languages.c	2012-11-02 23:12:06.522757962 -0400
++++ cinnamon-control-center-3.6.2/panels/common/gdm-languages.c	2012-11-02 23:12:20.550757375 -0400
 @@ -1131,6 +1131,7 @@
          char *langinfo_codeset;
          char *translated_language;

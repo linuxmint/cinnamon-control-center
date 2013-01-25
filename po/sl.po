@@ -1,6 +1,6 @@
-# Slovenian translations for gnome-control-center.
-# Copyright (C) 2009 gnome-control-center COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center package.
+# Slovenian translations for cinnamon-control-center.
+# Copyright (C) 2009 cinnamon-control-center COPYRIGHT HOLDER
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Andraž Tori <andraz.tori1@guest.arnes.si>, 2004.
 # Matjaž Horvat <m@owca.info>, 2005 - 2006.
@@ -9,8 +9,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Project-Id-Version: cinnamon-control-center master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-19 06:38+0000\n"
 "PO-Revision-Date: 2012-09-19 09:03+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
@@ -5213,12 +5213,12 @@ msgstr "Končaj"
 msgid "Control Center"
 msgstr "Nadzorno središče"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Sistemske nastavitve"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Možnosti;Nastavitve;"
 

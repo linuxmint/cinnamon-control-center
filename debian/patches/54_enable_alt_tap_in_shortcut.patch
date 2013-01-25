@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.6.3/panels/keyboard/keyboard-shortcuts.c
+Index: cinnamon-control-center-3.6.3/panels/keyboard/keyboard-shortcuts.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/keyboard/keyboard-shortcuts.c	2012-11-21 18:09:33.690816155 +0100
-+++ gnome-control-center-3.6.3/panels/keyboard/keyboard-shortcuts.c	2012-11-21 18:09:34.222816183 +0100
+--- cinnamon-control-center-3.6.3.orig/panels/keyboard/keyboard-shortcuts.c	2012-11-21 18:09:33.690816155 +0100
++++ cinnamon-control-center-3.6.3/panels/keyboard/keyboard-shortcuts.c	2012-11-21 18:09:34.222816183 +0100
 @@ -1626,7 +1626,7 @@
    gtk_tree_view_column_set_sort_column_id (column, DETAIL_DESCRIPTION_COLUMN);
  
@@ -11,10 +11,10 @@ Index: gnome-control-center-3.6.3/panels/keyboard/keyboard-shortcuts.c
                                                 NULL);
  
    g_signal_connect (renderer, "accel_edited",
-Index: gnome-control-center-3.6.3/panels/keyboard/cc-keyboard-item.c
+Index: cinnamon-control-center-3.6.3/panels/keyboard/cc-keyboard-item.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/keyboard/cc-keyboard-item.c	2012-05-24 16:20:10.000000000 +0200
-+++ gnome-control-center-3.6.3/panels/keyboard/cc-keyboard-item.c	2012-11-21 18:09:34.222816183 +0100
+--- cinnamon-control-center-3.6.3.orig/panels/keyboard/cc-keyboard-item.c	2012-05-24 16:20:10.000000000 +0200
++++ cinnamon-control-center-3.6.3/panels/keyboard/cc-keyboard-item.c	2012-11-21 18:09:34.222816183 +0100
 @@ -143,14 +143,25 @@
                const char     *value,
  	      gboolean        set_backend)

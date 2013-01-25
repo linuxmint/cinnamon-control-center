@@ -1,12 +1,12 @@
-# translation of gnome-control-center.master.gu.po to Gujarati
+# translation of cinnamon-control-center.master.gu.po to Gujarati
 # Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
 # Ankit Patel <ankit@redhat.com>, 2006, 2007, 2009.
 # Sweta Kothari <swkothar@redhat.com>, 2008, 2009, 2010, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.master.gu\n"
+"Project-Id-Version: cinnamon-control-center.master.gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-09 09:14+0000\n"
 "PO-Revision-Date: 2012-10-29 11:54+0530\n"
 "Last-Translator: \n"
@@ -5290,11 +5290,11 @@ msgstr "બહાર નીકળો"
 msgid "Control Center"
 msgstr "નિયંત્રણ કેન્દ્ર"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "સિસ્ટમ સુયોજનો"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "પસંદગીઓ;સુયોજનો;"
 

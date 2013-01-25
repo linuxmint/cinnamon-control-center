@@ -19,7 +19,7 @@ INCLUDES =						\
 	-DUIDIR="\"$(uidir)\""				\
 	-DDATADIR="\"$(datadir)\""			\
 	-DGNOME_DESKTOP_USE_UNSTABLE_API		\
-	-DPIXMAP_DIR=\""$(datadir)/gnome-control-center/pixmaps"\"	\
+	-DPIXMAP_DIR=\""$(datadir)/cinnamon-control-center/pixmaps"\"	\
 	$(NULL)
 
 ccpanelsdir = $(PANELS_DIR)

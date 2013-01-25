@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Printers
 _Comment=Change printer settings
-Exec=gnome-control-center printers
+Exec=cinnamon-control-center printers
 Icon=printer
 Terminal=false
 Type=Application

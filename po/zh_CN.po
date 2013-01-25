@@ -1,6 +1,6 @@
-# Simplified Chinese translation for gnome-control-center.
+# Simplified Chinese translation for cinnamon-control-center.
 # Copyright (C) 2002, 2003, 2006, 2009, 2010, 2011 Free Software Foundation, Inc.
-# This file is distributed under the same license as gnome-control-center package.
+# This file is distributed under the same license as cinnamon-control-center package.
 # Some translations are taken from tranditional Chinese translation.
 # by Abel Cheung <maddog@linuxhall.org>, 2001.
 # He Qiangqiang <carton@linux.net.cn>, 2002.
@@ -24,7 +24,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-22 15:49+0000\n"
@@ -5239,11 +5239,11 @@ msgstr "退出"
 msgid "Control Center"
 msgstr "控制中心"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "系统设置"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;首选项;设置;"
 

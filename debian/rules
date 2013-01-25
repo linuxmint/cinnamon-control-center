@@ -20,9 +20,9 @@ DEB_CONFIGURE_EXTRA_FLAGS += --disable-scrollkeeper \
                              --without-cheese \
                              --with-clutter
 
-DEB_DH_MAKESHLIBS_ARGS_gnome-control-center = --no-act
+DEB_DH_MAKESHLIBS_ARGS_cinnamon-control-center = --no-act
 
-binary-post-install/gnome-control-center-data::
+binary-post-install/cinnamon-control-center-data::
 	rm -rf debian/capplets-data/usr/share/applications/mimeinfo.cache
 	rm -rf debian/capplets-data/usr/share/pkgconfig
 	dh_installmime -p$(cdbs_curpkg)

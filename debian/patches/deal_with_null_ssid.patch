@@ -1,16 +1,16 @@
 From: Dan Williams <dcbw@redhat.com>
 Subject: Avoid crashing when SSIDs are NULL.
-Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/gnome-control-center/+bug/908670
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/cinnamon-control-center/+bug/908670
 Bug: https://bugzilla.gnome.org/show_bug.cgi?id=672922
 
 ---
  panels/network/cc-network-panel.c |    6 ++++++
  1 file changed, 6 insertions(+)
 
-Index: gnome-control-center-3.5.2/panels/network/cc-network-panel.c
+Index: cinnamon-control-center-3.5.2/panels/network/cc-network-panel.c
 ===================================================================
---- gnome-control-center-3.5.2.orig/panels/network/cc-network-panel.c	2012-06-08 16:49:24.888332382 +1200
-+++ gnome-control-center-3.5.2/panels/network/cc-network-panel.c	2012-06-08 17:00:13.600309923 +1200
+--- cinnamon-control-center-3.5.2.orig/panels/network/cc-network-panel.c	2012-06-08 16:49:24.888332382 +1200
++++ cinnamon-control-center-3.5.2/panels/network/cc-network-panel.c	2012-06-08 17:00:13.600309923 +1200
 @@ -1128,13 +1128,19 @@
          if (aps != NULL)
                  for (i = 0; i < aps->len; i++) {

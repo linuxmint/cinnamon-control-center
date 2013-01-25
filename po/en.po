@@ -18,104 +18,104 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:134
+#: ../libcinnamon-control-center/gconf-property-editor.c:134
 msgid "Key"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:135
+#: ../libcinnamon-control-center/gconf-property-editor.c:135
 msgid "GConf key to which this property editor is attached"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:141
+#: ../libcinnamon-control-center/gconf-property-editor.c:141
 msgid "Callback"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:142
+#: ../libcinnamon-control-center/gconf-property-editor.c:142
 msgid "Issue this callback when the value associated with key gets changed"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:147
+#: ../libcinnamon-control-center/gconf-property-editor.c:147
 msgid "Change set"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:148
+#: ../libcinnamon-control-center/gconf-property-editor.c:148
 msgid ""
 "GConf change set containing data to be forwarded to the gconf client on apply"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:153
+#: ../libcinnamon-control-center/gconf-property-editor.c:153
 msgid "Conversion to widget callback"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:154
+#: ../libcinnamon-control-center/gconf-property-editor.c:154
 msgid ""
 "Callback to be issued when data are to be converted from GConf to the widget"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:159
+#: ../libcinnamon-control-center/gconf-property-editor.c:159
 msgid "Conversion from widget callback"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:160
+#: ../libcinnamon-control-center/gconf-property-editor.c:160
 msgid ""
 "Callback to be issued when data are to be converted to GConf from the widget"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:165
+#: ../libcinnamon-control-center/gconf-property-editor.c:165
 msgid "UI Control"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:166
+#: ../libcinnamon-control-center/gconf-property-editor.c:166
 msgid "Object that controls the property (normally a widget)"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:181
+#: ../libcinnamon-control-center/gconf-property-editor.c:181
 msgid "Property editor object data"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:182
+#: ../libcinnamon-control-center/gconf-property-editor.c:182
 msgid "Custom data required by the specific property editor"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:188
+#: ../libcinnamon-control-center/gconf-property-editor.c:188
 msgid "Property editor data freeing callback"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:189
+#: ../libcinnamon-control-center/gconf-property-editor.c:189
 msgid "Callback to be issued when property editor object data is to be freed"
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:1406
+#: ../libcinnamon-control-center/gconf-property-editor.c:1406
 #, c-format
 msgid ""
 "Couldn't find the file '%s'.\n"
@@ -124,7 +124,7 @@ msgid ""
 "picture."
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:1414
+#: ../libcinnamon-control-center/gconf-property-editor.c:1414
 #, c-format
 msgid ""
 "I don't know how to open the file '%s'.\n"
@@ -133,11 +133,11 @@ msgid ""
 "Please select a different picture instead."
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:1536
+#: ../libcinnamon-control-center/gconf-property-editor.c:1536
 msgid "Please select an image."
 msgstr ""
 
-#: ../libgnome-control-center/gconf-property-editor.c:1541
+#: ../libcinnamon-control-center/gconf-property-editor.c:1541
 msgid "_Select"
 msgstr ""
 
@@ -3182,7 +3182,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr ""
 

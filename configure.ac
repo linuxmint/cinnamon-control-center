@@ -1,6 +1,6 @@
-m4_define([gnome_control_center_version], 3.6.3)
-AC_INIT([gnome-control-center], [gnome_control_center_version],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center])
+m4_define([cinnamon_control_center_version], 1.0.0)
+AC_INIT([cinnamon-control-center], [cinnamon_control_center_version],
+        [http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center])
 
 AC_CONFIG_SRCDIR([shell])
 AC_CONFIG_HEADERS([config.h])
@@ -19,19 +19,19 @@ AC_HEADER_STDC
 LT_PREREQ([2.2])
 LT_INIT
 
-# .so version for libgnome-control-center
-LIBGNOMECONTROLCENTER_CURRENT=1
-LIBGNOMECONTROLCENTER_REVISION=0
-LIBGNOMECONTROLCENTER_AGE=0
-AC_SUBST(LIBGNOMECONTROLCENTER_CURRENT)
-AC_SUBST(LIBGNOMECONTROLCENTER_REVISION)
-AC_SUBST(LIBGNOMECONTROLCENTER_AGE)
+# .so version for libcinnamon-control-center
+LIBCINNAMONCONTROLCENTER_CURRENT=1
+LIBCINNAMONCONTROLCENTER_REVISION=0
+LIBCINNAMONCONTROLCENTER_AGE=0
+AC_SUBST(LIBCINNAMONCONTROLCENTER_CURRENT)
+AC_SUBST(LIBCINNAMONCONTROLCENTER_REVISION)
+AC_SUBST(LIBCINNAMONCONTROLCENTER_AGE)
 
 # Internationalization support
 
 IT_PROG_INTLTOOL([0.40.1])
 
-GETTEXT_PACKAGE=gnome-control-center-2.0
+GETTEXT_PACKAGE=cinnamon-control-center-2.0
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
 
@@ -107,7 +107,7 @@ COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  gsettings-desktop-schemas >= $SCHEMAS_REQUIRED_VERSION
  libnotify >= $LIBNOTIFY_REQUIRED_VERSION"
 
-PKG_CHECK_MODULES(LIBGNOME_CONTROL_CENTER, $COMMON_MODULES)
+PKG_CHECK_MODULES(LIBCINNAMON_CONTROL_CENTER, $COMMON_MODULES)
 PKG_CHECK_MODULES(LIBLANGUAGE, $COMMON_MODULES gnome-desktop-3.0 fontconfig)
 PKG_CHECK_MODULES(LIBSHORTCUTS, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(SHELL, $COMMON_MODULES libgnome-menu-3.0 gio-unix-2.0 x11)
@@ -261,7 +261,7 @@ AC_SUBST(PANELS_DIR)
 PANEL_CFLAGS="-I\$(top_srcdir)/ -DG_LOG_DOMAIN=\"\\\"\$(cappletname)-cc-panel\\\"\""
 AC_SUBST(PANEL_CFLAGS)
 
-PANEL_LIBS="\$(top_builddir)/shell/libgnome-control-center.la"
+PANEL_LIBS="\$(top_builddir)/shell/libcinnamon-control-center.la"
 AC_SUBST(PANEL_LIBS)
 
 PANEL_LDFLAGS="-export_dynamic -avoid-version -module -no-undefined -export-symbols-regex '^g_io_module_(load|unload)'"
@@ -297,7 +297,7 @@ AC_ARG_ENABLE(update-mimedb,
                    enable_update_mimedb=yes)
 AM_CONDITIONAL(ENABLE_UPDATE_MIMEDB, test x$enable_update_mimedb = xyes)
 
-CONTROL_CENTER_VERSION=gnome_control_center_version
+CONTROL_CENTER_VERSION=cinnamon_control_center_version
 AC_SUBST(CONTROL_CENTER_VERSION)
 
 dnl =======================================
@@ -364,7 +364,7 @@ fi
 
 AC_OUTPUT([
 Makefile
-shell/libgnome-control-center.pc
+shell/libcinnamon-control-center.pc
 panels/Makefile
 panels/common/Makefile
 panels/background/Makefile
@@ -451,11 +451,11 @@ panels/user-accounts/data/faces/Makefile
 panels/user-accounts/data/icons/Makefile
 po/Makefile.in
 shell/Makefile
-shell/gnome-control-center.desktop.in
+shell/cinnamon-control-center.desktop.in
 man/Makefile
 ])
 
-AC_MSG_NOTICE([gnome-control-center was configured with the following options:])
+AC_MSG_NOTICE([cinnamon-control-center was configured with the following options:])
 if test "x$have_networkmanager" = "xyes"; then
 	AC_MSG_NOTICE([** NetworkManager (Network panel)])
 else

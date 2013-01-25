@@ -1,4 +1,4 @@
-# gnome-control-center yn Gymraeg.
+# cinnamon-control-center yn Gymraeg.
 # www.kyfieithu.co.uk <kyfieithu@kyfieithu.co.uk>, 2003.
 # Dafydd Harries <daf@muse.19inch.net>, 2003.
 # Dafydd Tomos <i10n@da.fydd.org>, 2004.
@@ -20,7 +20,7 @@
 # [rj] Wedi gyrru'r cyfan drwy Cysill, 29ain Mai 2005.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-08 13:45+0000\n"
 "PO-Revision-Date: 2006-03-08 12:53-0000\n"

@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Date & Time
 _Comment=Date and Time preferences panel
-Exec=gnome-control-center datetime
+Exec=cinnamon-control-center datetime
 Icon=preferences-system-time
 Terminal=false
 Type=Application

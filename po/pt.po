@@ -1,6 +1,6 @@
-# gnome-control-center's Portuguese Translation
-# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 gnome-control-center
-# Distributed under the same licence as the gnome-control-center package
+# cinnamon-control-center's Portuguese Translation
+# Copyright © 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 cinnamon-control-center
+# Distributed under the same licence as the cinnamon-control-center package
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1999.
 #
@@ -5268,11 +5268,11 @@ msgstr "Sair"
 msgid "Control Center"
 msgstr "Centro de Controlo"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Definições de Sistema"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferências;Definições;"
 

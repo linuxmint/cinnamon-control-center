@@ -24,7 +24,7 @@
 #include <glib/gi18n.h>
 #include <stdlib.h>
 
-#include "gnome-control-center.h"
+#include "cinnamon-control-center.h"
 
 #include <gtk/gtk.h>
 #include <string.h>
@@ -67,7 +67,7 @@ const GOptionEntry all_options[] = {
 static int
 application_command_line_cb (GApplication  *application,
                              GApplicationCommandLine  *command_line,
-                             GnomeControlCenter      *shell)
+                             CinnamonControlCenter      *shell)
 {
   int argc;
   char **argv;
@@ -118,11 +118,11 @@ application_command_line_cb (GApplication  *application,
 
   cc_shell_log_set_debug (verbose);
 
-  gnome_control_center_show (shell, GTK_APPLICATION (application));
+  cinnamon_control_center_show (shell, GTK_APPLICATION (application));
 
   if (show_overview)
     {
-      gnome_control_center_set_overview_page (shell);
+      cinnamon_control_center_set_overview_page (shell);
     }
   else if (start_panels != NULL && start_panels[0] != NULL)
     {
@@ -149,7 +149,7 @@ application_command_line_cb (GApplication  *application,
         }
     }
 
-  gnome_control_center_present (shell);
+  cinnamon_control_center_present (shell);
   gdk_notify_startup_complete ();
 
   g_strfreev (argv);
@@ -168,7 +168,7 @@ help_activated (GSimpleAction *action,
                 GVariant      *parameter,
                 gpointer       user_data)
 {
-  GnomeControlCenter *shell = user_data;
+  CinnamonControlCenter *shell = user_data;
   CcPanel *panel = cc_shell_get_active_panel (CC_SHELL (shell));
   GtkWidget *window = cc_shell_get_toplevel (CC_SHELL (shell));
   const char *uri = NULL;
@@ -190,13 +190,13 @@ quit_activated (GSimpleAction *action,
                 GVariant      *parameter,
                 gpointer       user_data)
 {
-  GnomeControlCenter *shell = user_data;
+  CinnamonControlCenter *shell = user_data;
   g_object_unref (shell);
 }
 
 static void
 application_startup_cb (GApplication       *application,
-                        GnomeControlCenter *shell)
+                        CinnamonControlCenter *shell)
 {
   GMenu *menu, *section;
   GAction *action;
@@ -231,7 +231,7 @@ application_startup_cb (GApplication       *application,
 int
 main (int argc, char **argv)
 {
-  GnomeControlCenter *shell;
+  CinnamonControlCenter *shell;
   GtkApplication *application;
   int status;
 
@@ -249,9 +249,9 @@ main (int argc, char **argv)
   /* register a symbolic icon size for use in sidebar lists */
   gtk_icon_size_register ("cc-sidebar-list", 24, 24);
 
-  notify_init ("gnome-control-center");
+  notify_init ("cinnamon-control-center");
 
-  shell = gnome_control_center_new ();
+  shell = cinnamon_control_center_new ();
 
   /* enforce single instance of this application */
   application = gtk_application_new ("org.gnome.ControlCenter", G_APPLICATION_HANDLES_COMMAND_LINE);

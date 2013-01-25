@@ -1,11 +1,11 @@
-# translation of gnome-control-center-2.0 to Uzbek
+# translation of cinnamon-control-center-2.0 to Uzbek
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Nurali Abdurahmonov <mavnur@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center-2.0 trunk\n"
+"Project-Id-Version: cinnamon-control-center-2.0 trunk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-07 20:26+0500\n"
 "PO-Revision-Date: 2007-11-12 09:36+0500\n"

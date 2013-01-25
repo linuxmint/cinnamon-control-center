@@ -2,10 +2,10 @@
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
         "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
 
-<refentry id="gnome-control-center">
+<refentry id="cinnamon-control-center">
 
         <refentryinfo>
-                <title>gnome-control-center</title>
+                <title>cinnamon-control-center</title>
                 <productname>GNOME</productname>
 
                 <authorgroup>
@@ -20,26 +20,26 @@
         </refentryinfo>
 
         <refmeta>
-                <refentrytitle>gnome-control-center</refentrytitle>
+                <refentrytitle>cinnamon-control-center</refentrytitle>
                 <manvolnum>1</manvolnum>
                 <refmiscinfo class="manual">User Commands</refmiscinfo>
         </refmeta>
 
         <refnamediv>
-                <refname>gnome-control-center</refname>
+                <refname>cinnamon-control-center</refname>
                 <refpurpose>Configure GNOME settings</refpurpose>
         </refnamediv>
 
         <refsynopsisdiv>
                 <cmdsynopsis>
-                        <command>gnome-control-center <arg choice="opt" rep="repeat">OPTION</arg> <arg choice="opt">PANEL</arg> <arg choice="opt" rep="repeat">ARG</arg></command>
+                        <command>cinnamon-control-center <arg choice="opt" rep="repeat">OPTION</arg> <arg choice="opt">PANEL</arg> <arg choice="opt" rep="repeat">ARG</arg></command>
                 </cmdsynopsis>
         </refsynopsisdiv>
 
         <refsect1>
                 <title>Description</title>
 
-                <para><command>gnome-control-center</command> is a graphical
+                <para><command>cinnamon-control-center</command> is a graphical
                 user interface to configure various aspects of GNOME.</para>
 
                 <para>When run without arguments, the shell displays the
@@ -54,7 +54,7 @@
                 which tab to open (for multi-tabbed panels) or which
                 item to display (for panels with lists).</para>
 
-                <para>Note that <command>gnome-control-center</command>
+                <para>Note that <command>cinnamon-control-center</command>
                 is not meant to expose each and every setting that is
                 available. The settings that can be found here represent
                 what is considered useful and commonly needed options.

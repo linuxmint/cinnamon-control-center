@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 2.25.90\n"
+"Project-Id-Version: cinnamon-control-center 2.25.90\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-11 11:28+0000\n"
@@ -5250,11 +5250,11 @@ msgstr "Thoát"
 msgid "Control Center"
 msgstr "Trung tâm điều khiển"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Thiết lập hệ thống"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr ""
 "Preferences;Tuỳ;thích;Tuy;thich;Cấu;hình;Cau;hinh;Settings;Thiết;lập;Thiet;"

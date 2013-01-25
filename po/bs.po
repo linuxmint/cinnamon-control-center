@@ -1,11 +1,11 @@
-# translation of gnome-control-center.HEAD.bs.po to Bosnian
+# translation of cinnamon-control-center.HEAD.bs.po to Bosnian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2004.
 # Kenan Hadžiavdić <kenan@bgnett.no>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD.bs\n"
+"Project-Id-Version: cinnamon-control-center.HEAD.bs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-17 22:10+0200\n"
 "PO-Revision-Date: 2004-07-31 15:15+0200\n"

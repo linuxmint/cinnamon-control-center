@@ -1,6 +1,6 @@
 # Danish translation of the Gnome Control Center.
 # Copyright (C) 1998-2012
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2000.
 # Birger Langkjer <birger.langkjer@image.dk>
 # Keld Simonsen <keld@dkuug.dk>, 2000.
@@ -43,7 +43,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-15 06:35+0200\n"
 "PO-Revision-Date: 2012-10-12 17:28+0200\n"
@@ -5307,11 +5307,11 @@ msgstr "Afslut"
 msgid "Control Center"
 msgstr "Kontrolcenter"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systemindstillinger"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Indstillinger;Opsætning;"
 

@@ -1,5 +1,5 @@
 /* XPM */
-static char * gnome_control_center_xpm[] = {
+static char * cinnamon_control_center_xpm[] = {
 "32 32 326 2",
 "  	c None",
 ". 	c #959791",

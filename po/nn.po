@@ -1,5 +1,5 @@
 # translation of nn.po to Norwegian Nynorsk
-# Norwegian (nynorsk) translation of gnome-control-center.
+# Norwegian (nynorsk) translation of cinnamon-control-center.
 # Copyright (C) 1999-2008 Free Software Foundation, Inc.
 # Copyright (C) Roy-Magne Mo <rmo@sunnmore.net>, 2001.
 # Eskild Hustvedt <eskildh@gnome.org> 2008
@@ -4937,11 +4937,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Kontrollsenter"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systeminnstillingar"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr ""
 

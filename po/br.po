@@ -1,4 +1,4 @@
-# Breton translation of gnome-control-center.
+# Breton translation of cinnamon-control-center.
 # Copyright (C) 2004-2005 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-menu package.
 #
@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-control-center\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&component=general\n"
 "POT-Creation-Date: 2009-09-09 04:08+0000\n"
 "PO-Revision-Date: 2009-09-09 12:20+0100\n"
 "Last-Translator: Denis\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid "Set this to your current location name. This is used to determine the appropriate network proxy configuration."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid "URL for where to get more desktop backgrounds. If set to an empty string the link will not appear."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid "URL for where to get more desktop themes. If set to an empty string the link will not appear."
 msgstr ""
 

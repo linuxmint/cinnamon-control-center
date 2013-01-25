@@ -1,4 +1,4 @@
-Source: gnome-control-center
+Source: cinnamon-control-center
 Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
@@ -54,9 +54,9 @@ Build-Depends: autotools-dev,
                shared-mime-info
 #               libclutter-1.0-dev (>= 1.11.3),
 #               libclutter-gtk-1.0-dev
-Vcs-Bzr: http://code.launchpad.net/~ubuntu-desktop/gnome-control-center/ubuntu
+Vcs-Bzr: http://code.launchpad.net/~ubuntu-desktop/cinnamon-control-center/ubuntu
 
-Package: gnome-control-center
+Package: cinnamon-control-center
 Architecture: any
 Section: gnome
 Depends: ${misc:Depends},
@@ -65,8 +65,8 @@ Depends: ${misc:Depends},
          apg,
          desktop-file-utils,
          gkbd-capplet (>= 3.5.90),
-         gnome-control-center-data (<< ${gnome:NextVersion}),
-         gnome-control-center-data (>= ${source:Version}),
+         cinnamon-control-center-data (<< ${gnome:NextVersion}),
+         cinnamon-control-center-data (>= ${source:Version}),
          gnome-desktop3-data,
          gnome-icon-theme (>= 2.24),
          gnome-icon-theme-symbolic,
@@ -104,18 +104,18 @@ Description: utilities to configure the GNOME desktop
  It also contains a front end to these applets, which can also be
  accessed with the GNOME panel or the Nautilus file manager.
 
-Package: gnome-control-center-dev
+Package: cinnamon-control-center-dev
 Architecture: all
 Section: devel
 Depends: ${misc:Depends}
 Description: utilities to configure the GNOME desktop
  This package contains the file required to get the keydirs location
 
-Package: gnome-control-center-data
+Package: cinnamon-control-center-data
 Architecture: all
 Section: gnome
 Depends: ${misc:Depends}
-Recommends: gnome-control-center (>= ${source:Version})
+Recommends: cinnamon-control-center (>= ${source:Version})
 Provides: capplets-data
 Conflicts: capplets-data
 Replaces: capplets-data,
@@ -130,17 +130,17 @@ Breaks: gdm (<< 3.0),
         gnome-settings-daemon (<< 3.0)
 Description: configuration applets for GNOME - data files
  This package contains data files (icons, pixmaps, locales files) needed by
- the configuration applets in the gnome-control-center package.
+ the configuration applets in the cinnamon-control-center package.
 
-Package: libgnome-control-center-dev
+Package: libcinnamon-control-center-dev
 Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
-         libgnome-control-center1 (= ${binary:Version})
+         libcinnamon-control-center1 (= ${binary:Version})
 Description: utilities to configure the GNOME desktop
  This package contains the files needed to build Control Center panels
 
-Package: libgnome-control-center1
+Package: libcinnamon-control-center1
 Architecture: any
 Section: libs
 Depends: ${misc:Depends},

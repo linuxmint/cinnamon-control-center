@@ -1,4 +1,4 @@
-# Chinese (Taiwan) translation of gnome-control-center.
+# Chinese (Taiwan) translation of cinnamon-control-center.
 # Copyright (C) 1999, 2001-07 Free Software Foundation, Inc.
 # GNOME 1.x:
 # S.J. Luo <crystal@mickey.ee.nctu.edu.tw>, 1999.
@@ -11,7 +11,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 3.3.91\n"
+"Project-Id-Version: cinnamon-control-center 3.3.91\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-26 11:51+0800\n"
 "PO-Revision-Date: 2012-09-26 11:33+0800\n"
@@ -5221,11 +5221,11 @@ msgstr "結束"
 msgid "Control Center"
 msgstr "控制中心"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "系統設定值"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;偏好設定;設定值;"
 

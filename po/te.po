@@ -1,4 +1,4 @@
-# translation of gnome-control-center.master.te.po to Telugu
+# translation of cinnamon-control-center.master.te.po to Telugu
 # Telugu translation of control-center
 # Copyright (C) 2011 Gnome Telugu Contributors.
 # Copyright (C) 2005, 2011,2012 Swecha Telugu Localisation Team <localization@swecha.net>.
@@ -15,7 +15,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.master.te\n"
+"Project-Id-Version: cinnamon-control-center.master.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-19 08:47+0000\n"
@@ -5228,11 +5228,11 @@ msgstr "నిష్క్రమించు"
 msgid "Control Center"
 msgstr "నియంత్రణా కేంద్రం"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "వ్యవస్థ అమరికలు"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "ప్రాధాన్యతలు;అమరికలు;"
 

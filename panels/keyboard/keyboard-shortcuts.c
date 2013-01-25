@@ -621,7 +621,7 @@ reload_sections (GtkBuilder *builder)
       char *dir_path;
       const gchar *name;
 
-      dir_path = g_build_filename (data_dirs[i], "gnome-control-center", "keybindings", NULL);
+      dir_path = g_build_filename (data_dirs[i], "cinnamon-control-center", "keybindings", NULL);
 
       dir = g_dir_open (dir_path, 0, NULL);
       if (!dir)

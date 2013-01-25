@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.6.3/panels/region/cc-region-panel.c
+Index: cinnamon-control-center-3.6.3/panels/region/cc-region-panel.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/region/cc-region-panel.c	2012-11-23 19:09:05.019915889 -0500
-+++ gnome-control-center-3.6.3/panels/region/cc-region-panel.c	2012-11-23 19:09:08.119915759 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/region/cc-region-panel.c	2012-11-23 19:09:05.019915889 -0500
++++ cinnamon-control-center-3.6.3/panels/region/cc-region-panel.c	2012-11-23 19:09:08.119915759 -0500
 @@ -130,10 +130,13 @@
  {
  	CcRegionPanelPrivate *priv;
@@ -46,10 +46,10 @@ Index: gnome-control-center-3.6.3/panels/region/cc-region-panel.c
  }
  
  void
-Index: gnome-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:02.819915981 -0500
-+++ gnome-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:08.119915759 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:02.819915981 -0500
++++ cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:08.119915759 -0500
 @@ -7,7 +7,7 @@
  Type=Application
  StartupNotify=true
@@ -57,17 +57,17 @@ Index: gnome-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in
 -OnlyShowIn=GNOME;Unity;
 +OnlyShowIn=GNOME;
  X-GNOME-Bugzilla-Bugzilla=GNOME
- X-GNOME-Bugzilla-Product=gnome-control-center
+ X-GNOME-Bugzilla-Product=cinnamon-control-center
  X-GNOME-Bugzilla-Component=region
-Index: gnome-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in	2012-11-23 19:09:08.123915759 -0500
++++ cinnamon-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.in	2012-11-23 19:09:08.123915759 -0500
 @@ -0,0 +1,17 @@
 +[Desktop Entry]
 +_Name=Keyboard Layout
 +_Comment=Change your keyboard or input method settings
-+Exec=gnome-control-center region
++Exec=cinnamon-control-center region
 +Icon=preferences-desktop-keyboard-shortcuts
 +Terminal=false
 +Type=Application
@@ -75,16 +75,16 @@ Index: gnome-control-center-3.6.3/panels/region/ubuntu-region-panel.desktop.in.i
 +Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings
 +OnlyShowIn=Unity;
 +X-GNOME-Bugzilla-Bugzilla=GNOME
-+X-GNOME-Bugzilla-Product=gnome-control-center
++X-GNOME-Bugzilla-Product=cinnamon-control-center
 +X-GNOME-Bugzilla-Component=region
 +X-GNOME-Bugzilla-Version=@VERSION@
 +X-GNOME-Settings-Panel=region
 +# Translators: those are keywords for the region control-center panel
 +_Keywords=Language;Layout;Keyboard;Input Method;
-Index: gnome-control-center-3.6.3/configure.ac
+Index: cinnamon-control-center-3.6.3/configure.ac
 ===================================================================
---- gnome-control-center-3.6.3.orig/configure.ac	2012-11-23 19:09:05.027915889 -0500
-+++ gnome-control-center-3.6.3/configure.ac	2012-11-23 19:11:51.987908906 -0500
+--- cinnamon-control-center-3.6.3.orig/configure.ac	2012-11-23 19:09:05.027915889 -0500
++++ cinnamon-control-center-3.6.3/configure.ac	2012-11-23 19:11:51.987908906 -0500
 @@ -395,6 +395,7 @@
  panels/keyboard/gnome-keybindings.pc
  panels/region/Makefile
@@ -93,10 +93,10 @@ Index: gnome-control-center-3.6.3/configure.ac
  panels/mouse/Makefile
  panels/mouse/gnome-mouse-panel.desktop.in
  panels/online-accounts/Makefile
-Index: gnome-control-center-3.6.3/panels/region/Makefile.am
+Index: cinnamon-control-center-3.6.3/panels/region/Makefile.am
 ===================================================================
---- gnome-control-center-3.6.3.orig/panels/region/Makefile.am	2012-11-23 19:09:05.027915889 -0500
-+++ gnome-control-center-3.6.3/panels/region/Makefile.am	2012-11-23 19:11:12.023910577 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/region/Makefile.am	2012-11-23 19:09:05.027915889 -0500
++++ cinnamon-control-center-3.6.3/panels/region/Makefile.am	2012-11-23 19:11:12.023910577 -0500
 @@ -43,7 +43,7 @@
  	gnome-region-panel-options-dialog.ui
  

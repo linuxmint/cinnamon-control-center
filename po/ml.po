@@ -1,8 +1,8 @@
 # translation of ml.po to
-# translation of gnome-control-center.master.ml.po to
-# translation of gnome-control-center.HEAD.ml.po to
-# This file is distributed under the same license as the gnome-control-center package.
-# Copyright (C) 2007-2008 gnome-control-center'S COPYRIGHT HOLDER.
+# translation of cinnamon-control-center.master.ml.po to
+# translation of cinnamon-control-center.HEAD.ml.po to
+# This file is distributed under the same license as the cinnamon-control-center package.
+# Copyright (C) 2007-2008 cinnamon-control-center'S COPYRIGHT HOLDER.
 # FSF-India <locale@gnu.org.in>, 2003.
 # Santhosh|സന്തോഷ് Thottingal|തോട്ടിങ്ങല്‍ <santhosh00@gmail.com>, 2007.
 # Ani Peter <apeter@redhat.com>, 2007, 2009, 2012.
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-21 14:09+0000\n"
 "PO-Revision-Date: 2012-09-21 19:41+0000\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
@@ -5235,11 +5235,11 @@ msgstr "പുറത്തു് കടക്കുക"
 msgid "Control Center"
 msgstr "നിയന്ത്രണകേന്ദ്രം"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "സിസ്റ്റത്തിന്റെ സജ്ജീകരണങ്ങള്‍"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;"
 

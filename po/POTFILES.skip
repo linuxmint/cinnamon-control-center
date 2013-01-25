@@ -18,4 +18,4 @@ panels/universal-access/gnome-universal-access-panel.desktop.in
 panels/user-accounts/data/gnome-user-accounts-panel.desktop.in
 panels/user-accounts/fingerprint-strings.h
 panels/wacom/gnome-wacom-panel.desktop.in
-shell/gnome-control-center.desktop.in
+shell/cinnamon-control-center.desktop.in

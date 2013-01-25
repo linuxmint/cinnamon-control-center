@@ -7,7 +7,7 @@
 # Chris Leonard <cjl@laptop.org>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-22 11:21+0100\n"
 "PO-Revision-Date: 2012-09-22 11:22+0100\n"
@@ -5253,11 +5253,11 @@ msgstr "Quit"
 msgid "Control Center"
 msgstr "Control Centre"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "System Settings"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;"
 

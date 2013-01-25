@@ -1,7 +1,7 @@
-# translation of gnome-control-center.master.ta.po to Tamil
-# Tamil translation of gnome-control-center
+# translation of cinnamon-control-center.master.ta.po to Tamil
+# Tamil translation of cinnamon-control-center
 # Copyright (C) 2002
-# This file is distributed under the same license as the gnome-control-center.
+# This file is distributed under the same license as the cinnamon-control-center.
 #
 # Dinesh Nadarajah <dinesh_list@sbcglobal.net>, 2002, 2004.
 # Ma SivaKumar <tamil@leatherlink.net>, 2004.
@@ -13,7 +13,7 @@
 # Shantha kumar <shkumar@redhat.com>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.master.ta\n"
+"Project-Id-Version: cinnamon-control-center.master.ta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-19 17:41+0530\n"
 "PO-Revision-Date: 2012-09-19 17:49+0530\n"
@@ -5247,11 +5247,11 @@ msgstr "வெளியேறு"
 msgid "Control Center"
 msgstr "கட்டுப்பாட்டு மையம்"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 msgid "Preferences;Settings;"
 msgstr "விருப்பங்கள்;அமைப்புகள்"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2 ../shell/shell.ui.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2 ../shell/shell.ui.h:2
 msgid "System Settings"
 msgstr "கணினி அமைப்புகள்"
 

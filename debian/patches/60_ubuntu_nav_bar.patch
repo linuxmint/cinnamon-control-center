@@ -2,10 +2,10 @@
 # UbuntuSpecific: yes
 #
 === modified file 'shell/Makefile.am'
-Index: gnome-control-center-3.6.3/shell/Makefile.am
+Index: cinnamon-control-center-3.6.3/shell/Makefile.am
 ===================================================================
---- gnome-control-center-3.6.3.orig/shell/Makefile.am	2012-10-01 11:39:00.000000000 +0200
-+++ gnome-control-center-3.6.3/shell/Makefile.am	2012-11-22 10:20:59.485282338 +0100
+--- cinnamon-control-center-3.6.3.orig/shell/Makefile.am	2012-10-01 11:39:00.000000000 +0200
++++ cinnamon-control-center-3.6.3/shell/Makefile.am	2012-11-22 10:20:59.485282338 +0100
 @@ -26,6 +26,8 @@
  	cc-shell-item-view.h			\
  	cc-shell-model.c			\
@@ -15,17 +15,17 @@ Index: gnome-control-center-3.6.3/shell/Makefile.am
  	cc-editable-entry.c			\
  	cc-editable-entry.h			\
  	cc-panel.c				\
-Index: gnome-control-center-3.6.3/shell/cc-shell-marshal.list
+Index: cinnamon-control-center-3.6.3/shell/cc-shell-marshal.list
 ===================================================================
---- gnome-control-center-3.6.3.orig/shell/cc-shell-marshal.list	2011-11-07 18:22:02.000000000 +0100
-+++ gnome-control-center-3.6.3/shell/cc-shell-marshal.list	2012-11-22 10:20:56.873282212 +0100
+--- cinnamon-control-center-3.6.3.orig/shell/cc-shell-marshal.list	2011-11-07 18:22:02.000000000 +0100
++++ cinnamon-control-center-3.6.3/shell/cc-shell-marshal.list	2012-11-22 10:20:56.873282212 +0100
 @@ -1 +1,2 @@
  VOID:STRING,STRING,STRING
 +VOID:VOID
-Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.c
+Index: cinnamon-control-center-3.6.3/shell/cc-shell-nav-bar.c
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.3/shell/cc-shell-nav-bar.c	2012-11-22 10:20:56.873282212 +0100
++++ cinnamon-control-center-3.6.3/shell/cc-shell-nav-bar.c	2012-11-22 10:20:56.873282212 +0100
 @@ -0,0 +1,150 @@
 +/*
 + * Copyright 2012 Canonical
@@ -177,10 +177,10 @@ Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.c
 +{
 +  gtk_widget_hide (bar->priv->detail_button);
 +}
-Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.h
+Index: cinnamon-control-center-3.6.3/shell/cc-shell-nav-bar.h
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ gnome-control-center-3.6.3/shell/cc-shell-nav-bar.h	2012-11-22 10:20:56.877282212 +0100
++++ cinnamon-control-center-3.6.3/shell/cc-shell-nav-bar.h	2012-11-22 10:20:56.877282212 +0100
 @@ -0,0 +1,76 @@
 +/*
 + * Copyright 2012 Canonical
@@ -258,17 +258,17 @@ Index: gnome-control-center-3.6.3/shell/cc-shell-nav-bar.h
 +G_END_DECLS
 +
 +#endif /* _CC_SHELL_NAV_BAR_H */
-Index: gnome-control-center-3.6.3/shell/gnome-control-center.c
+Index: cinnamon-control-center-3.6.3/shell/cinnamon-control-center.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/shell/gnome-control-center.c	2012-11-22 10:20:56.833282210 +0100
-+++ gnome-control-center-3.6.3/shell/gnome-control-center.c	2012-11-22 10:20:59.485282338 +0100
+--- cinnamon-control-center-3.6.3.orig/shell/cinnamon-control-center.c	2012-11-22 10:20:56.833282210 +0100
++++ cinnamon-control-center-3.6.3/shell/cinnamon-control-center.c	2012-11-22 10:20:59.485282338 +0100
 @@ -38,6 +38,7 @@
  #include "cc-shell.h"
  #include "cc-shell-category-view.h"
  #include "cc-shell-model.h"
 +#include "cc-shell-nav-bar.h"
  
- G_DEFINE_TYPE (GnomeControlCenter, gnome_control_center, CC_TYPE_SHELL)
+ G_DEFINE_TYPE (CinnamonControlCenter, cinnamon_control_center, CC_TYPE_SHELL)
  
 @@ -75,6 +76,7 @@
    GtkWidget  *search_entry;
@@ -317,7 +317,7 @@ Index: gnome-control-center-3.6.3/shell/gnome-control-center.c
           the window to be larger than this panel */
 @@ -1332,6 +1333,7 @@
    GError *err = NULL;
-   GnomeControlCenterPrivate *priv;
+   CinnamonControlCenterPrivate *priv;
    GdkScreen *screen;
 +  GtkWidget *widget;
  
@@ -340,10 +340,10 @@ Index: gnome-control-center-3.6.3/shell/gnome-control-center.c
  
    /* keep a list of custom widgets to unload on panel change */
    priv->custom_widgets = g_ptr_array_new_with_free_func ((GDestroyNotify) g_object_unref);
-Index: gnome-control-center-3.6.3/shell/shell.ui
+Index: cinnamon-control-center-3.6.3/shell/shell.ui
 ===================================================================
---- gnome-control-center-3.6.3.orig/shell/shell.ui	2012-11-14 12:42:44.000000000 +0100
-+++ gnome-control-center-3.6.3/shell/shell.ui	2012-11-22 10:21:52.369284899 +0100
+--- cinnamon-control-center-3.6.3.orig/shell/shell.ui	2012-11-14 12:42:44.000000000 +0100
++++ cinnamon-control-center-3.6.3/shell/shell.ui	2012-11-22 10:21:52.369284899 +0100
 @@ -34,36 +34,6 @@
                        <object class="GtkHBox" id="hbox1">
                          <property name="visible">True</property>

@@ -26,7 +26,7 @@
  * 02111-1307, USA.
  *
  * Most of this code originally comes from gnome-about-me-password.c,
- * from gnome-control-center.
+ * from cinnamon-control-center.
  */
 
 #include <config.h>

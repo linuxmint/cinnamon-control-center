@@ -1,7 +1,7 @@
-# translation of gnome-control-center.HEAD.po to Punjabi
-# Punjabi translation of gnome-control-center.HEAD.
-# Copyright (C) 2004 THE gnome-control-center.HEAD'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-control-center.HEAD package.
+# translation of cinnamon-control-center.HEAD.po to Punjabi
+# Punjabi translation of cinnamon-control-center.HEAD.
+# Copyright (C) 2004 THE cinnamon-control-center.HEAD'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cinnamon-control-center.HEAD package.
 #
 #
 # Amanpreet Singh Alam <amanlinux@netscape.net>, 2004.
@@ -9,7 +9,7 @@
 # A S Alam <aalam@users.sf.net>, 2009, 2010, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD\n"
+"Project-Id-Version: cinnamon-control-center.HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5268,11 +5268,11 @@ msgstr "ਬਾਹਰ"
 msgid "Control Center"
 msgstr "ਕੰਟਰੋਲ ਕੇਂਦਰ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "ਮੇਰੀ ਪਸੰਦ;ਸੈਟਿੰਗ;"
 

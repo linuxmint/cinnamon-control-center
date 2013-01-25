@@ -1,6 +1,6 @@
-# Biełaruski pierakład gnome-control-center
+# Biełaruski pierakład cinnamon-control-center
 # Copyright (C) 2007 Aleś Navicki
-# Distributed under the terms of gnome-control-center's license.
+# Distributed under the terms of cinnamon-control-center's license.
 # Aleś Navicki <zolak@lacinka.org>, 2007
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007
 msgid ""

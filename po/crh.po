@@ -1,10 +1,10 @@
-# Qırımtatarca gnome-control-center.
-# This file is distributed under the same license as the gnome-control-center package.
+# Qırımtatarca cinnamon-control-center.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Reşat SABIQ <tilde.birlik@gmail.com>, 2009, 2010, 2011, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-16 19:00-0500\n"
 "PO-Revision-Date: 2012-08-16 19:24-0500\n"
@@ -5162,11 +5162,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Kontrol Merkezi"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Sistem Ayarları"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Tercihler;Ayarlar;"
 

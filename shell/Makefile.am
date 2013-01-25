@@ -3,7 +3,7 @@ INCLUDES =					\
 	$(SHELL_CFLAGS)				\
 	$(CHEESE_CFLAGS)
 
-bin_PROGRAMS = gnome-control-center
+bin_PROGRAMS = cinnamon-control-center
 
 MARSHAL_FILES = cc-shell-marshal.c cc-shell-marshal.h
 BUILT_SOURCES = $(MARSHAL_FILES)
@@ -14,12 +14,12 @@ cc-shell-marshal.h: cc-shell-marshal.list
 cc-shell-marshal.c: cc-shell-marshal.list
 	$(AM_V_GEN) $(GLIB_GENMARSHAL) --prefix=cc_shell_marshal $< --body --header > $@
 
-gnome_control_center_SOURCES =			\
+cinnamon_control_center_SOURCES =			\
 	control-center.c			\
 	cc-shell-log.c				\
 	cc-shell-log.h				\
-	gnome-control-center.c			\
-	gnome-control-center.h			\
+	cinnamon-control-center.c			\
+	cinnamon-control-center.h			\
 	cc-shell-category-view.c		\
 	cc-shell-category-view.h		\
 	cc-shell-item-view.c			\
@@ -30,22 +30,22 @@ gnome_control_center_SOURCES =			\
 	cc-shell-nav-bar.h			\
 	$(MARSHAL_FILES)
 
-gnome_control_center_LDADD =			\
-	libgnome-control-center.la		\
+cinnamon_control_center_LDADD =			\
+	libcinnamon-control-center.la		\
 	$(SHELL_LIBS)				\
 	$(CHEESE_LIBS)
 
-gnome_control_center_LDFLAGS = -export-dynamic
+cinnamon_control_center_LDFLAGS = -export-dynamic
 
-lib_LTLIBRARIES = libgnome-control-center.la
+lib_LTLIBRARIES = libcinnamon-control-center.la
 
-libgnome_control_center_include_HEADERS =      \
+libcinnamon_control_center_include_HEADERS =      \
 	cc-panel.h                              \
 	cc-shell.h                              \
 	cc-editable-entry.h			\
 	$(NULL)
 
-libgnome_control_center_la_SOURCES =		\
+libcinnamon_control_center_la_SOURCES =		\
 	cc-panel.c				\
 	cc-panel.h				\
 	cc-shell.c				\
@@ -54,21 +54,21 @@ libgnome_control_center_la_SOURCES =		\
 	cc-editable-entry.h			\
 	$(NULL)
 
-libgnome_control_center_la_LDFLAGS =		\
+libcinnamon_control_center_la_LDFLAGS =		\
 	-no-undefined				\
 	-version-info $(LIBGNOMECONTROLCENTER_CURRENT):$(LIBGNOMECONTROLCENTER_REVISION):$(LIBGNOMECONTROLCENTER_AGE) \
 	$(NULL)
 
-libgnome_control_center_la_LIBADD = 		\
+libcinnamon_control_center_la_LIBADD = 		\
 	$(LIBGNOME_CONTROL_CENTER_LIBS)		\
 	$(NULL)
 
-libgnome_control_center_la_LIBTOOLFLAGS = --tag=disable-static
+libcinnamon_control_center_la_LIBTOOLFLAGS = --tag=disable-static
 
-libgnome_control_center_includedir = $(includedir)/gnome-control-center-1/libgnome-control-center
+libcinnamon_control_center_includedir = $(includedir)/cinnamon-control-center-1/libcinnamon-control-center
 
 pkgconfigdir=$(libdir)/pkgconfig
-pkgconfig_DATA=libgnome-control-center.pc
+pkgconfig_DATA=libcinnamon-control-center.pc
 
 AM_CPPFLAGS =							\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""		\
@@ -86,7 +86,7 @@ uidir = $(pkgdatadir)/ui
 ui_DATA = shell.ui
 
 sysdir = $(datadir)/applications
-sys_in_files = gnome-control-center.desktop.in
+sys_in_files = cinnamon-control-center.desktop.in
 sys_DATA = $(sys_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
@@ -97,12 +97,12 @@ directory_DATA = $(directory_in_files:.directory.in=.directory)
 
 EXTRA_DIST =					\
 	$(ui_DATA)				\
-	gnome-control-center.desktop.in.in	\
+	cinnamon-control-center.desktop.in.in	\
 	gnomecc.directory.in			\
 	gnomecc.menu.in				\
-	libgnome-control-center.pc.in  \
+	libcinnamon-control-center.pc.in  \
 	cc-shell-marshal.list
 
-DISTCLEANFILES = gnome-control-center.desktop gnome-control-center.desktop.in gnomecc.directory gnomecc.menu
+DISTCLEANFILES = cinnamon-control-center.desktop cinnamon-control-center.desktop.in gnomecc.directory gnomecc.menu
 
 -include $(top_srcdir)/git.mk

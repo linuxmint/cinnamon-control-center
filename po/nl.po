@@ -1,5 +1,5 @@
-# Dutch translation for gnome-control-center
-# This file is distributed under the same license as the gnome-control-center package.
+# Dutch translation for cinnamon-control-center
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Bas Wagter <B.J.Wagter@bk.tudelft.nl>
 # Hein-Jan Leliveld <h.j.leliveld@student.tn.tudelft.nl>
 # desktop                  - werkblad
@@ -20,7 +20,7 @@
 # Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-06 15:05+0200\n"
 "PO-Revision-Date: 2012-10-06 15:07+0200\n"
@@ -5464,11 +5464,11 @@ msgstr ""
 msgid "Control Center"
 msgstr "Configuratiecentrum"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systeeminstellingen"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferences;Settings;Voorkeuren;Instellingen;"
 

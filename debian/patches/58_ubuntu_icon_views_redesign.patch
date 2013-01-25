@@ -1,7 +1,7 @@
-Index: gnome-control-center-3.6.3/shell/gnome-control-center.c
+Index: cinnamon-control-center-3.6.3/shell/cinnamon-control-center.c
 ===================================================================
---- gnome-control-center-3.6.3.orig/shell/gnome-control-center.c	2012-11-24 10:39:18.476282140 -0500
-+++ gnome-control-center-3.6.3/shell/gnome-control-center.c	2012-11-24 10:52:26.776249171 -0500
+--- cinnamon-control-center-3.6.3.orig/shell/cinnamon-control-center.c	2012-11-24 10:39:18.476282140 -0500
++++ cinnamon-control-center-3.6.3/shell/cinnamon-control-center.c	2012-11-24 10:52:26.776249171 -0500
 @@ -50,7 +50,8 @@
   * for the user than resizing vertically
   * Both sizes are defined in https://live.gnome.org/Design/SystemSettings/ */

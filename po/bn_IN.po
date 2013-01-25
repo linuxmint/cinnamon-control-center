@@ -23,19 +23,19 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr "নেটওয়ার্কের বর্তমান অবস্থান"
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr "অতিরিক্ত পটভূমির ছবি প্রাপ্ত করার URL"
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr "অতিরিক্ত থিম প্রাপ্ত করার URL"
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
@@ -43,7 +43,7 @@ msgstr ""
 "বর্তমান অবস্থানের নাম হিসাবে এটি ধার্য করুন। নেটওয়ার্ক প্রক্সির যথাযত কনফিগারেশন "
 "সনাক্ত করার জন্য এটি প্রয়োগ করা হয়।"
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
@@ -51,7 +51,7 @@ msgstr ""
 "ডেস্কটপের জন্য পটভূমির অতিরিক্ত ছবি প্রাপ্ত করার URL। এই ক্ষেত্রে একটি ফাঁকা পংক্তি "
 "চিহ্নিত হলে লিংক প্রদর্শন করা হবে না।"
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."

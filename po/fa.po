@@ -1,7 +1,7 @@
-# Persian translation of gnome-control-center.
+# Persian translation of cinnamon-control-center.
 # Copyright (C) 2003, 2005 Sharif FarsiWeb, Inc.
 # Copyright (C) 2010 Iranian Free Software Users Group (IFSUG.org) translation team
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2003.
 # Masoud Ahmadzadeh <masoud@bamdad.org>, 2005.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
@@ -12,7 +12,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center HEAD\n"
+"Project-Id-Version: cinnamon-control-center HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-10-09 09:14+0000\n"
@@ -1361,7 +1361,7 @@ msgstr "تغییر تنظیمات صفحه‌کلید"
 msgid "Shortcut;Repeat;Blink;"
 msgstr "میان‌بر;تکرار;چشمک;"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
 msgid "Custom Shortcut"
 msgstr "میان‌بر سفارشی"
@@ -1390,7 +1390,7 @@ msgstr "_وفقه:"
 msgid "_Speed:"
 msgstr "_سرعت:"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #. short delay
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
 #: ../panels/universal-access/uap.ui.h:49
@@ -1439,12 +1439,12 @@ msgstr "سرعت چشمک‌زدن مکان‌نما"
 msgid "Layout Settings"
 msgstr "تنظیمات چیدمان"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
 msgid "Add Shortcut"
 msgstr "اضافه‌کردن میان‌بر"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
 msgid "Remove Shortcut"
 msgstr "حذف میان‌بر"
@@ -1458,13 +1458,13 @@ msgstr ""
 "برای ویرایش یک کلید میان‌بر، روی ردیف مربوط به آن کلیک کرده و یک ترکیب جدید "
 "تایپ کنید، و یا برای پاک‌کردن پس‌بر را فشار دهید."
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
 #: ../panels/region/gnome-region-panel.ui.h:28
 msgid "Shortcuts"
 msgstr "میان‌برها"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/keyboard/keyboard-shortcuts.c:557
 #: ../panels/keyboard/keyboard-shortcuts.c:565
 msgid "Custom Shortcuts"
@@ -4060,7 +4060,7 @@ msgstr "تنظیمات موشی"
 msgid "Pointing and Clicking"
 msgstr "نشانه و کلیک"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/universal-access/zoom-options.c:357
 msgctxt "Distance"
 msgid "Short"
@@ -5212,7 +5212,7 @@ msgstr "استایلوس"
 msgid "Eraser Pressure Feel"
 msgstr "حساسیت فشار پاک‌کن"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #: ../panels/wacom/wacom-stylus-page.ui.h:13
 msgid "Soft"
 msgstr "نرم"
@@ -5275,11 +5275,11 @@ msgstr "خروج"
 msgid "Control Center"
 msgstr "مرکز کنترل"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "تنظیمات سیستم"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "ترجیحات;تنظیمات;"
 
@@ -5331,7 +5331,7 @@ msgstr "همه‌ی تنظیمات"
 #~ msgid "Take a screenshot"
 #~ msgstr "یک عکس‌صفحه بگیرید"
 
-# ../capplets/keybindings/gnome-keybinding-properties.c:873gnome-control-center.gnome-2-10.fa.po:609:2: parse error
+# ../capplets/keybindings/gnome-keybinding-properties.c:873cinnamon-control-center.gnome-2-10.fa.po:609:2: parse error
 #~ msgid "Shortcut"
 #~ msgstr "میان‌بر"
 

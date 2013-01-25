@@ -1,12 +1,12 @@
-# translation of gnome-control-center.master.kn.po to Kannada
-# translation of gnome-control-center.HEAD.po to
+# translation of cinnamon-control-center.master.kn.po to Kannada
+# translation of cinnamon-control-center.HEAD.po to
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Shankar Prasad <svenkate@redhat.com>, 2008, 2009, 2010, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.master.kn\n"
+"Project-Id-Version: cinnamon-control-center.master.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
@@ -5290,11 +5290,11 @@ msgstr "ನಿರ್ಗಮಿಸು"
 msgid "Control Center"
 msgstr "ನಿಯಂತ್ರಣ ಕೇಂದ್ರ"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "ಆದ್ಯತೆಗಳು;ಸಿದ್ಧತೆಗಳು;"
 

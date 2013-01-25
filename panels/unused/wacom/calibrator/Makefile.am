@@ -7,7 +7,7 @@ INCLUDES = 						\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
 	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
-	-DPIXMAP_DIR=\""$(datadir)/gnome-control-center/pixmaps"\"	\
+	-DPIXMAP_DIR=\""$(datadir)/cinnamon-control-center/pixmaps"\"	\
 	$(NULL)
 
 

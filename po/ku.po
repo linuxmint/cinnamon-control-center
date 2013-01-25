@@ -1,4 +1,4 @@
-# translation of gnome-control-center.HEAD.po to Kurdish
+# translation of cinnamon-control-center.HEAD.po to Kurdish
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 # Erdal Ronahi <erdal.ronahi@gmail.com>, 2005.
@@ -6,7 +6,7 @@
 # Erdal Ronahî <erdal dot ronahi at gmail dot com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD\n"
+"Project-Id-Version: cinnamon-control-center.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-10-18 15:38+0200\n"
 "PO-Revision-Date: 2011-10-18 16:05+0200\n"
@@ -4460,7 +4460,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Mîhengên pergalê"
 

@@ -1,4 +1,4 @@
-# Burmese Translations of gnome-control-center
+# Burmese Translations of cinnamon-control-center
 # Copyright (C) 2011 Myanmar L10n Team
 # This file is distributed under the same license as the above package.
 # ye`monkyaw <yemonkyaw007@gmail.com>, 2011.
@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-24 08:32+0100\n"
 "PO-Revision-Date: 2011-10-14 00:28+0630\n"
@@ -22,31 +22,31 @@ msgstr ""
 "X-Poedit-Country: MYANMAR\n"
 "X-Generator: Narro 0.9.4 on http://translate.libreworks.info\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr "လက်ရှိကွန်ရက်တည်နေရာ"
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
 msgstr ""
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."

@@ -1,4 +1,4 @@
-# Norwegian bokmål translation of gnome-control-center.
+# Norwegian bokmål translation of cinnamon-control-center.
 # Copyright (C) 1999-2005 Free Software Foundation, Inc.
 #
 # Kjartan Maraas <kmaraas@gnome.org>, 1999-2012.
@@ -6,7 +6,7 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center 3.6.x\n"
+"Project-Id-Version: cinnamon-control-center 3.6.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-13 12:31+0200\n"
 "PO-Revision-Date: 2012-10-13 12:33+0200\n"
@@ -5247,11 +5247,11 @@ msgstr "Avslutt"
 msgid "Control Center"
 msgstr "Kontrollsenter"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Systeminnstillinger"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Brukervalg;Innstillinger"
 

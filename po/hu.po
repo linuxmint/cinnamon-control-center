@@ -1,6 +1,6 @@
-# Hungarian translation of gnome-control-center.
+# Hungarian translation of cinnamon-control-center.
 # Copyright (C) 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-control-center package.
+# This file is distributed under the same license as the cinnamon-control-center package.
 #
 # Szabolcs Ban <shooby at gnome dot hu>, 1998, 1999, 2000.
 # Emese Kovacs <emese at gnome dot hu>, 2001.
@@ -14,7 +14,7 @@
 # Peter Trombitas <trombipeti at gmail dot com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center master\n"
+"Project-Id-Version: cinnamon-control-center master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-20 14:38+0200\n"
 "PO-Revision-Date: 2012-10-08 23:33+0200\n"
@@ -5258,11 +5258,11 @@ msgstr "Kilépés"
 msgid "Control Center"
 msgstr "Vezérlőközpont"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Rendszerbeállítások"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Tulajdonságok;Beállítások;"
 

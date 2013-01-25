@@ -12,7 +12,7 @@
 # Aviary.pl <gnomepl@aviary.pl>, 2007-2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center\n"
+"Project-Id-Version: cinnamon-control-center\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-19 01:04+0200\n"
 "PO-Revision-Date: 2012-09-13 17:03+0200\n"
@@ -5300,11 +5300,11 @@ msgstr "Zakończ"
 msgid "Control Center"
 msgstr "Centrum sterowania"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1 ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Ustawienia systemu"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:2
+#: ../shell/cinnamon-control-center.desktop.in.in.h:2
 msgid "Preferences;Settings;"
 msgstr "Preferencje;Ustawienia;Konfiguracja;Opcje;"
 

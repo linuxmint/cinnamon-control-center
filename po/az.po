@@ -1,13 +1,13 @@
-# translation of gnome-control-center.HEAD.az.po to Azerbaijani
-# translation of gnome-control-center.HEAD.po to Azerbaijani
-# translation of gnome-control-center.HEAD.az.po to Azerbaijani Turkish
+# translation of cinnamon-control-center.HEAD.az.po to Azerbaijani
+# translation of cinnamon-control-center.HEAD.po to Azerbaijani
+# translation of cinnamon-control-center.HEAD.az.po to Azerbaijani Turkish
 # Copyright (C) 1998,1999,2003, 2004 Free Software Foundation, Inc.
 # Mətin Əmirov <metin@karegen.com>, 2003, 2004.
 # Metin Amiroff <metin@karegen.com>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-control-center.HEAD\n"
+"Project-Id-Version: cinnamon-control-center.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-17 22:10+0200\n"
 "PO-Revision-Date: 2004-09-04 19:45+0300\n"

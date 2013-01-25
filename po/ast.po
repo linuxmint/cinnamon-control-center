@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: control-center-2.0\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-control-center&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-10-23 12:52+0000\n"
 "PO-Revision-Date: 2011-10-23 19:59+0100\n"
 "Last-Translator: ivarela <ivarela@softastur.org>\n"
@@ -4313,7 +4313,7 @@ msgstr ""
 "%s\n"
 "Executar '%s --help' pa ver una llista completa de les opciones de comandu disponibles.\n"
 
-#: ../shell/gnome-control-center.desktop.in.in.h:1
+#: ../shell/cinnamon-control-center.desktop.in.in.h:1
 #: ../shell/shell.ui.h:1
 msgid "System Settings"
 msgstr "Preferencies del sistema"

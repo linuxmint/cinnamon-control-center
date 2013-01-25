@@ -1,6 +1,6 @@
 # Translation of oc.po to Occitan
 # Translation of oc.po to Occitan
-# Occitan translation of gnome-control-center
+# Occitan translation of cinnamon-control-center
 # This file is distributed under the same license as the PACKAGE package.#
 # Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2006-2008, 2010.
 msgid ""
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../gnome-control-center.schemas.in.h:1
+#: ../cinnamon-control-center.schemas.in.h:1
 msgid "Current network location"
 msgstr "Emplaçament ret actuala"
 
-#: ../gnome-control-center.schemas.in.h:2
+#: ../cinnamon-control-center.schemas.in.h:2
 msgid "More backgrounds URL"
 msgstr "URL per mai d'imatges de rèire plan"
 
-#: ../gnome-control-center.schemas.in.h:3
+#: ../cinnamon-control-center.schemas.in.h:3
 msgid "More themes URL"
 msgstr "URL per mai de tèmas"
 
-#: ../gnome-control-center.schemas.in.h:4
+#: ../cinnamon-control-center.schemas.in.h:4
 msgid ""
 "Set this to your current location name. This is used to determine the "
 "appropriate network proxy configuration."
@@ -36,7 +36,7 @@ msgstr ""
 "De definir coma vòstre nom d'emplaçament actual. Servís a determinar la "
 "configuracion ret apropriada del servidor mandatari."
 
-#: ../gnome-control-center.schemas.in.h:5
+#: ../cinnamon-control-center.schemas.in.h:5
 msgid ""
 "URL for where to get more desktop backgrounds. If set to an empty string the "
 "link will not appear."
@@ -44,7 +44,7 @@ msgstr ""
 "URL ont es possible de recuperar mai d'imatges de rèire plan pel burèu. Se "
 "la cadena es voida, lo ligam apareis pas."
 
-#: ../gnome-control-center.schemas.in.h:6
+#: ../cinnamon-control-center.schemas.in.h:6
 msgid ""
 "URL for where to get more desktop themes. If set to an empty string the link "
 "will not appear."
