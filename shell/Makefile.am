@@ -56,11 +56,11 @@ libcinnamon_control_center_la_SOURCES =		\
 
 libcinnamon_control_center_la_LDFLAGS =		\
 	-no-undefined				\
-	-version-info $(LIBGNOMECONTROLCENTER_CURRENT):$(LIBGNOMECONTROLCENTER_REVISION):$(LIBGNOMECONTROLCENTER_AGE) \
+	-version-info $(LIBCINNAMONCONTROLCENTER_CURRENT):$(LIBCINNAMONCONTROLCENTER_REVISION):$(LIBCINNAMONCONTROLCENTER_AGE) \
 	$(NULL)
 
 libcinnamon_control_center_la_LIBADD = 		\
-	$(LIBGNOME_CONTROL_CENTER_LIBS)		\
+	$(LIBCINNAMON_CONTROL_CENTER_LIBS)		\
 	$(NULL)
 
 libcinnamon_control_center_la_LIBTOOLFLAGS = --tag=disable-static
@@ -77,9 +77,9 @@ AM_CPPFLAGS =							\
 	-DPANELS_DIR="\"$(PANELS_DIR)\""
 
 menudir = $(sysconfdir)/xdg/menus
-menu_DATA = gnomecc.menu
+menu_DATA = cinnamoncc.menu
 
-gnomecc.menu: gnomecc.menu.in
+cinnamoncc.menu: cinnamoncc.menu.in
 	$(AM_V_GEN) cat $< | sed 's,@applicationsdir@,$(datadir)/applications/,' > $@
 
 uidir = $(pkgdatadir)/ui
@@ -91,7 +91,7 @@ sys_DATA = $(sys_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 directorydir = $(datadir)/desktop-directories
-directory_in_files = gnomecc.directory.in
+directory_in_files = cinnamoncc.directory.in
 directory_DATA = $(directory_in_files:.directory.in=.directory)
 @INTLTOOL_DIRECTORY_RULE@
 

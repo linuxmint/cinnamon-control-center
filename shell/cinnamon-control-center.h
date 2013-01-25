@@ -18,62 +18,62 @@
  * Author: Thomas Wood <thos@gnome.org>
  */
 
-#ifndef _GNOME_CONTROL_CENTER_H
-#define _GNOME_CONTROL_CENTER_H
+#ifndef _CINNAMON_CONTROL_CENTER_H
+#define _CINNAMON_CONTROL_CENTER_H
 
 #include <glib-object.h>
 #include "cc-shell.h"
 
 G_BEGIN_DECLS
 
-#define GNOME_TYPE_CONTROL_CENTER gnome_control_center_get_type()
+#define CINNAMON_TYPE_CONTROL_CENTER CINNAMON_CONTROL_CENTER_get_type()
 
-#define GNOME_CONTROL_CENTER(obj) \
+#define CINNAMON_CONTROL_CENTER(obj) \
   (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
-  GNOME_TYPE_CONTROL_CENTER, GnomeControlCenter))
+  CINNAMON_TYPE_CONTROL_CENTER, CinnamonControlCenter))
 
-#define GNOME_CONTROL_CENTER_CLASS(klass) \
+#define CINNAMON_CONTROL_CENTER_CLASS(klass) \
   (G_TYPE_CHECK_CLASS_CAST ((klass), \
-  GNOME_TYPE_CONTROL_CENTER, GnomeControlCenterClass))
+  CINNAMON_TYPE_CONTROL_CENTER, CinnamonControlCenterClass))
 
 #define GNOME_IS_CONTROL_CENTER(obj) \
   (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
-  GNOME_TYPE_CONTROL_CENTER))
+  CINNAMON_TYPE_CONTROL_CENTER))
 
 #define GNOME_IS_CONTROL_CENTER_CLASS(klass) \
   (G_TYPE_CHECK_CLASS_TYPE ((klass), \
-  GNOME_TYPE_CONTROL_CENTER))
+  CINNAMON_TYPE_CONTROL_CENTER))
 
-#define GNOME_CONTROL_CENTER_GET_CLASS(obj) \
+#define CINNAMON_CONTROL_CENTER_GET_CLASS(obj) \
   (G_TYPE_INSTANCE_GET_CLASS ((obj), \
-  GNOME_TYPE_CONTROL_CENTER, GnomeControlCenterClass))
+  CINNAMON_TYPE_CONTROL_CENTER, CinnamonControlCenterClass))
 
-typedef struct _GnomeControlCenter GnomeControlCenter;
-typedef struct _GnomeControlCenterClass GnomeControlCenterClass;
-typedef struct _GnomeControlCenterPrivate GnomeControlCenterPrivate;
+typedef struct _CinnamonControlCenter CinnamonControlCenter;
+typedef struct _CinnamonControlCenterClass CinnamonControlCenterClass;
+typedef struct _CinnamonControlCenterPrivate CinnamonControlCenterPrivate;
 
-struct _GnomeControlCenter
+struct _CinnamonControlCenter
 {
   CcShell parent;
 
-  GnomeControlCenterPrivate *priv;
+  CinnamonControlCenterPrivate *priv;
 };
 
-struct _GnomeControlCenterClass
+struct _CinnamonControlCenterClass
 {
   CcShellClass parent_class;
 };
 
-GType gnome_control_center_get_type (void) G_GNUC_CONST;
+GType CINNAMON_CONTROL_CENTER_get_type (void) G_GNUC_CONST;
 
-GnomeControlCenter *gnome_control_center_new (void);
+CinnamonControlCenter *CINNAMON_CONTROL_CENTER_new (void);
 
-void gnome_control_center_present (GnomeControlCenter *center);
+void CINNAMON_CONTROL_CENTER_present (CinnamonControlCenter *center);
 
-void gnome_control_center_show (GnomeControlCenter *center, GtkApplication *app);
+void CINNAMON_CONTROL_CENTER_show (CinnamonControlCenter *center, GtkApplication *app);
 
-void gnome_control_center_set_overview_page (GnomeControlCenter *center);
+void CINNAMON_CONTROL_CENTER_set_overview_page (CinnamonControlCenter *center);
 
 G_END_DECLS
 
-#endif /* _GNOME_CONTROL_CENTER_H */
+#endif /* _CINNAMON_CONTROL_CENTER_H */

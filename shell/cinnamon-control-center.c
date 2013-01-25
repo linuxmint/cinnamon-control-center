@@ -20,7 +20,7 @@
  */
 
 
-#include "gnome-control-center.h"
+#include "cinnamon-control-center.h"
 
 #include <glib/gi18n.h>
 #include <gio/gio.h>
@@ -40,10 +40,10 @@
 #include "cc-shell-model.h"
 #include "cc-shell-nav-bar.h"
 
-G_DEFINE_TYPE (GnomeControlCenter, gnome_control_center, CC_TYPE_SHELL)
+G_DEFINE_TYPE (CinnamonControlCenter, CINNAMON_CONTROL_CENTER, CC_TYPE_SHELL)
 
 #define CONTROL_CENTER_PRIVATE(o) \
-  (G_TYPE_INSTANCE_GET_PRIVATE ((o), GNOME_TYPE_CONTROL_CENTER, GnomeControlCenterPrivate))
+  (G_TYPE_INSTANCE_GET_PRIVATE ((o), CINNAMON_TYPE_CONTROL_CENTER, CinnamonControlCenterPrivate))
 
 #define W(b,x) GTK_WIDGET (gtk_builder_get_object (b, x))
 
@@ -63,7 +63,7 @@ typedef enum {
 	SMALL_SCREEN_FALSE
 } CcSmallScreen;
 
-struct _GnomeControlCenterPrivate
+struct _CinnamonControlCenterPrivate
 {
   GtkBuilder *builder;
   GtkWidget  *notebook;
@@ -178,14 +178,14 @@ get_icon_name_from_g_icon (GIcon *gicon)
 }
 
 static gboolean
-activate_panel (GnomeControlCenter *shell,
+activate_panel (CinnamonControlCenter *shell,
                 const gchar        *id,
 		const gchar       **argv,
                 const gchar        *desktop_file,
                 const gchar        *name,
                 GIcon              *gicon)
 {
-  GnomeControlCenterPrivate *priv = shell->priv;
+  CinnamonControlCenterPrivate *priv = shell->priv;
   GType panel_type = G_TYPE_INVALID;
   GList *panels, *l;
   GtkWidget *box;
@@ -271,7 +271,7 @@ activate_panel (GnomeControlCenter *shell,
 }
 
 static void
-_shell_remove_all_custom_widgets (GnomeControlCenterPrivate *priv)
+_shell_remove_all_custom_widgets (CinnamonControlCenterPrivate *priv)
 {
   GtkBox *box;
   GtkWidget *widget;
@@ -288,9 +288,9 @@ _shell_remove_all_custom_widgets (GnomeControlCenterPrivate *priv)
 }
 
 static void
-shell_show_overview_page (GnomeControlCenter *center)
+shell_show_overview_page (CinnamonControlCenter *center)
 {
-  GnomeControlCenterPrivate *priv = center->priv;
+  CinnamonControlCenterPrivate *priv = center->priv;
 
   notebook_select_page (priv->notebook, priv->scrolled_window);
 
@@ -324,7 +324,7 @@ shell_show_overview_page (GnomeControlCenter *center)
 }
 
 void
-gnome_control_center_set_overview_page (GnomeControlCenter *center)
+CINNAMON_CONTROL_CENTER_set_overview_page (CinnamonControlCenter *center)
 {
   shell_show_overview_page (center);
 }
@@ -334,7 +334,7 @@ item_activated_cb (CcShellCategoryView *view,
                    gchar               *name,
                    gchar               *id,
                    gchar               *desktop_file,
-                   GnomeControlCenter  *shell)
+                   CinnamonControlCenter  *shell)
 {
   GError *err = NULL;
 
@@ -352,7 +352,7 @@ item_activated_cb (CcShellCategoryView *view,
 static gboolean
 category_focus_out (GtkWidget          *view,
                     GdkEventFocus      *event,
-                    GnomeControlCenter *shell)
+                    CinnamonControlCenter *shell)
 {
   gtk_icon_view_unselect_all (GTK_ICON_VIEW (view));
 
@@ -362,7 +362,7 @@ category_focus_out (GtkWidget          *view,
 static gboolean
 category_focus_in (GtkWidget          *view,
                    GdkEventFocus      *event,
-                   GnomeControlCenter *shell)
+                   CinnamonControlCenter *shell)
 {
   GtkTreePath *path;
 
@@ -379,7 +379,7 @@ category_focus_in (GtkWidget          *view,
 }
 
 static GList *
-get_item_views (GnomeControlCenter *shell)
+get_item_views (CinnamonControlCenter *shell)
 {
   GList *list, *l;
   GList *res;
@@ -401,7 +401,7 @@ get_item_views (GnomeControlCenter *shell)
 static gboolean
 keynav_failed (GtkIconView        *current_view,
                GtkDirectionType    direction,
-               GnomeControlCenter *shell)
+               CinnamonControlCenter *shell)
 {
   GList *views, *v;
   GtkIconView *new_view;
@@ -504,7 +504,7 @@ keynav_failed (GtkIconView        *current_view,
 static gboolean
 model_filter_func (GtkTreeModel              *model,
                    GtkTreeIter               *iter,
-                   GnomeControlCenterPrivate *priv)
+                   CinnamonControlCenterPrivate *priv)
 {
   gchar *name, *description;
   gchar *needle, *haystack;
@@ -579,9 +579,9 @@ category_filter_func (GtkTreeModel *model,
 
 static void
 search_entry_changed_cb (GtkEntry           *entry,
-                         GnomeControlCenter *center)
+                         CinnamonControlCenter *center)
 {
-  GnomeControlCenterPrivate *priv = center->priv;
+  CinnamonControlCenterPrivate *priv = center->priv;
   char *str;
 
   /* if the entry text was set manually (not by the user) */
@@ -614,7 +614,7 @@ search_entry_changed_cb (GtkEntry           *entry,
 static gboolean
 search_entry_key_press_event_cb (GtkEntry    *entry,
                                  GdkEventKey *event,
-                                 GnomeControlCenterPrivate   *priv)
+                                 CinnamonControlCenterPrivate   *priv)
 {
   if (event->keyval == GDK_KEY_Return)
     {
@@ -641,7 +641,7 @@ search_entry_key_press_event_cb (GtkEntry    *entry,
 
 static void
 on_search_selection_changed (GtkTreeSelection   *selection,
-                             GnomeControlCenter *shell)
+                             CinnamonControlCenter *shell)
 {
   GtkTreeModel *model;
   GtkTreeIter   iter;
@@ -663,12 +663,12 @@ on_search_selection_changed (GtkTreeSelection   *selection,
 }
 
 static void
-setup_search (GnomeControlCenter *shell)
+setup_search (CinnamonControlCenter *shell)
 {
   GtkWidget *search_view, *widget;
   GtkCellRenderer *renderer;
   GtkTreeViewColumn *column;
-  GnomeControlCenterPrivate *priv = shell->priv;
+  CinnamonControlCenterPrivate *priv = shell->priv;
 
   g_return_if_fail (priv->store != NULL);
 
@@ -742,15 +742,15 @@ setup_search (GnomeControlCenter *shell)
 }
 
 static void
-setup_lock (GnomeControlCenter *shell)
+setup_lock (CinnamonControlCenter *shell)
 {
-  GnomeControlCenterPrivate *priv = shell->priv;
+  CinnamonControlCenterPrivate *priv = shell->priv;
 
   priv->lock_button = W (priv->builder, "lock-button");
 }
 
 static void
-maybe_add_category_view (GnomeControlCenter *shell,
+maybe_add_category_view (CinnamonControlCenter *shell,
                          const char         *name)
 {
   GtkTreeModel *filter;
@@ -799,7 +799,7 @@ maybe_add_category_view (GnomeControlCenter *shell,
 }
 
 static void
-reload_menu (GnomeControlCenter *shell)
+reload_menu (CinnamonControlCenter *shell)
 {
   GError *error;
   GMenuTreeDirectory *d;
@@ -856,16 +856,16 @@ reload_menu (GnomeControlCenter *shell)
 
 static void
 on_menu_changed (GMenuTree          *monitor,
-                 GnomeControlCenter *shell)
+                 CinnamonControlCenter *shell)
 {
   gtk_list_store_clear (shell->priv->store);
   reload_menu (shell);
 }
 
 static void
-setup_model (GnomeControlCenter *shell)
+setup_model (CinnamonControlCenter *shell)
 {
-  GnomeControlCenterPrivate *priv = shell->priv;
+  CinnamonControlCenterPrivate *priv = shell->priv;
 
   gtk_widget_set_margin_top (shell->priv->main_vbox, 8);
   gtk_widget_set_margin_bottom (shell->priv->main_vbox, 8);
@@ -876,7 +876,7 @@ setup_model (GnomeControlCenter *shell)
 
   priv->store = (GtkListStore *) cc_shell_model_new ();
   priv->category_views = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
-  priv->menu_tree = gmenu_tree_new_for_path (MENUDIR "/gnomecc.menu", 0);
+  priv->menu_tree = gmenu_tree_new_for_path (MENUDIR "/cinnamoncc.menu", 0);
 
   reload_menu (shell);
 
@@ -884,7 +884,7 @@ setup_model (GnomeControlCenter *shell)
 }
 
 static void
-load_panel_plugins (GnomeControlCenter *shell)
+load_panel_plugins (CinnamonControlCenter *shell)
 {
   GList *modules;
 
@@ -909,7 +909,7 @@ load_panel_plugins (GnomeControlCenter *shell)
 
 static void
 home_button_clicked_cb (GtkButton *button,
-                        GnomeControlCenter *shell)
+                        CinnamonControlCenter *shell)
 {
   shell_show_overview_page (shell);
 }
@@ -917,7 +917,7 @@ home_button_clicked_cb (GtkButton *button,
 static void
 notebook_page_notify_cb (GtkNotebook              *notebook,
 			 GParamSpec               *spec,
-                         GnomeControlCenterPrivate *priv)
+                         CinnamonControlCenterPrivate *priv)
 {
   int nat_height;
   GtkWidget *child;
@@ -967,7 +967,7 @@ static void
 _shell_embed_widget_in_header (CcShell      *shell,
                                GtkWidget    *widget)
 {
-  GnomeControlCenterPrivate *priv = GNOME_CONTROL_CENTER (shell)->priv;
+  CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (shell)->priv;
   GtkBox *box;
 
   /* add to header */
@@ -988,7 +988,7 @@ _shell_set_active_panel_from_id (CcShell      *shell,
   gchar *name = NULL;
   gchar *desktop = NULL;
   GIcon *gicon = NULL;
-  GnomeControlCenterPrivate *priv = GNOME_CONTROL_CENTER (shell)->priv;
+  CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (shell)->priv;
   GtkWidget *old_panel;
 
   /* When loading the same panel again, just set the argv */
@@ -1049,7 +1049,7 @@ _shell_set_active_panel_from_id (CcShell      *shell,
     {
       g_warning ("Could not find settings panel \"%s\"", start_id);
     }
-  else if (activate_panel (GNOME_CONTROL_CENTER (shell), start_id, argv, desktop,
+  else if (activate_panel (CINNAMON_CONTROL_CENTER (shell), start_id, argv, desktop,
                            name, gicon) == FALSE)
     {
       /* Failed to activate the panel for some reason */
@@ -1075,12 +1075,12 @@ _shell_set_active_panel_from_id (CcShell      *shell,
 static GtkWidget *
 _shell_get_toplevel (CcShell *shell)
 {
-  return GNOME_CONTROL_CENTER (shell)->priv->window;
+  return CINNAMON_CONTROL_CENTER (shell)->priv->window;
 }
 
 /* GObject Implementation */
 static void
-gnome_control_center_get_property (GObject    *object,
+CINNAMON_CONTROL_CENTER_get_property (GObject    *object,
                                    guint       property_id,
                                    GValue     *value,
                                    GParamSpec *pspec)
@@ -1093,7 +1093,7 @@ gnome_control_center_get_property (GObject    *object,
 }
 
 static void
-gnome_control_center_set_property (GObject      *object,
+CINNAMON_CONTROL_CENTER_set_property (GObject      *object,
                                    guint         property_id,
                                    const GValue *value,
                                    GParamSpec   *pspec)
@@ -1106,9 +1106,9 @@ gnome_control_center_set_property (GObject      *object,
 }
 
 static void
-gnome_control_center_dispose (GObject *object)
+CINNAMON_CONTROL_CENTER_dispose (GObject *object)
 {
-  GnomeControlCenterPrivate *priv = GNOME_CONTROL_CENTER (object)->priv;
+  CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (object)->priv;
 
   g_free (priv->current_panel_id);
 
@@ -1147,13 +1147,13 @@ gnome_control_center_dispose (GObject *object)
     }
 
 
-  G_OBJECT_CLASS (gnome_control_center_parent_class)->dispose (object);
+  G_OBJECT_CLASS (CINNAMON_CONTROL_CENTER_parent_class)->dispose (object);
 }
 
 static void
-gnome_control_center_finalize (GObject *object)
+CINNAMON_CONTROL_CENTER_finalize (GObject *object)
 {
-  GnomeControlCenterPrivate *priv = GNOME_CONTROL_CENTER (object)->priv;
+  CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (object)->priv;
 
   if (priv->filter_string)
     {
@@ -1185,21 +1185,21 @@ gnome_control_center_finalize (GObject *object)
       g_hash_table_destroy (priv->category_views);
     }
 
-  G_OBJECT_CLASS (gnome_control_center_parent_class)->finalize (object);
+  G_OBJECT_CLASS (CINNAMON_CONTROL_CENTER_parent_class)->finalize (object);
 }
 
 static void
-gnome_control_center_class_init (GnomeControlCenterClass *klass)
+CINNAMON_CONTROL_CENTER_class_init (CinnamonControlCenterClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
   CcShellClass *shell_class = CC_SHELL_CLASS (klass);
 
-  g_type_class_add_private (klass, sizeof (GnomeControlCenterPrivate));
+  g_type_class_add_private (klass, sizeof (CinnamonControlCenterPrivate));
 
-  object_class->get_property = gnome_control_center_get_property;
-  object_class->set_property = gnome_control_center_set_property;
-  object_class->dispose = gnome_control_center_dispose;
-  object_class->finalize = gnome_control_center_finalize;
+  object_class->get_property = CINNAMON_CONTROL_CENTER_get_property;
+  object_class->set_property = CINNAMON_CONTROL_CENTER_set_property;
+  object_class->dispose = CINNAMON_CONTROL_CENTER_dispose;
+  object_class->finalize = CINNAMON_CONTROL_CENTER_finalize;
 
   shell_class->set_active_panel_from_id = _shell_set_active_panel_from_id;
   shell_class->embed_widget_in_header = _shell_embed_widget_in_header;
@@ -1209,7 +1209,7 @@ gnome_control_center_class_init (GnomeControlCenterClass *klass)
 static gboolean
 window_key_press_event (GtkWidget          *win,
 			GdkEventKey        *event,
-			GnomeControlCenter *self)
+			CinnamonControlCenter *self)
 {
   GdkKeymap *keymap;
   gboolean retval;
@@ -1255,7 +1255,7 @@ window_key_press_event (GtkWidget          *win,
 }
 
 static gint
-get_monitor_height (GnomeControlCenter *self)
+get_monitor_height (CinnamonControlCenter *self)
 {
   GdkScreen *screen;
   GdkRectangle rect;
@@ -1269,7 +1269,7 @@ get_monitor_height (GnomeControlCenter *self)
 }
 
 static gboolean
-update_monitor_number (GnomeControlCenter *self)
+update_monitor_number (CinnamonControlCenter *self)
 {
   gboolean changed = FALSE;
   GtkWidget *widget;
@@ -1292,7 +1292,7 @@ update_monitor_number (GnomeControlCenter *self)
 }
 
 static CcSmallScreen
-is_small (GnomeControlCenter *self)
+is_small (CinnamonControlCenter *self)
 {
   if (get_monitor_height (self) <= FIXED_HEIGHT)
     return SMALL_SCREEN_TRUE;
@@ -1300,7 +1300,7 @@ is_small (GnomeControlCenter *self)
 }
 
 static void
-update_small_screen_settings (GnomeControlCenter *self)
+update_small_screen_settings (CinnamonControlCenter *self)
 {
   CcSmallScreen small;
 
@@ -1331,7 +1331,7 @@ update_small_screen_settings (GnomeControlCenter *self)
 static gboolean
 main_window_configure_cb (GtkWidget *widget,
                           GdkEvent  *event,
-                          GnomeControlCenter *self)
+                          CinnamonControlCenter *self)
 {
   update_small_screen_settings (self);
   return FALSE;
@@ -1340,7 +1340,7 @@ main_window_configure_cb (GtkWidget *widget,
 static void
 application_set_cb (GObject    *object,
                     GParamSpec *pspec,
-                    GnomeControlCenter *self)
+                    CinnamonControlCenter *self)
 {
   /* update small screen settings now - to avoid visible resizing, we want
    * to do it before showing the window, and GtkApplicationWindow cannot be
@@ -1354,7 +1354,7 @@ application_set_cb (GObject    *object,
 
 static void
 monitors_changed_cb (GdkScreen *screen,
-                     GnomeControlCenter *self)
+                     CinnamonControlCenter *self)
 {
   /* We reset small_screen_set to make sure that the
    * window gets maximised if need be, in update_small_screen_settings() */
@@ -1363,10 +1363,10 @@ monitors_changed_cb (GdkScreen *screen,
 }
 
 static void
-gnome_control_center_init (GnomeControlCenter *self)
+CINNAMON_CONTROL_CENTER_init (CinnamonControlCenter *self)
 {
   GError *err = NULL;
-  GnomeControlCenterPrivate *priv;
+  CinnamonControlCenterPrivate *priv;
   GdkScreen *screen;
   GtkWidget *widget;
 
@@ -1448,20 +1448,20 @@ gnome_control_center_init (GnomeControlCenter *self)
   notebook_page_notify_cb (GTK_NOTEBOOK (priv->notebook), NULL, priv);
 }
 
-GnomeControlCenter *
-gnome_control_center_new (void)
+CinnamonControlCenter *
+CINNAMON_CONTROL_CENTER_new (void)
 {
-  return g_object_new (GNOME_TYPE_CONTROL_CENTER, NULL);
+  return g_object_new (CINNAMON_TYPE_CONTROL_CENTER, NULL);
 }
 
 void
-gnome_control_center_present (GnomeControlCenter *center)
+CINNAMON_CONTROL_CENTER_present (CinnamonControlCenter *center)
 {
   gtk_window_present (GTK_WINDOW (center->priv->window));
 }
 
 void
-gnome_control_center_show (GnomeControlCenter *center,
+CINNAMON_CONTROL_CENTER_show (CinnamonControlCenter *center,
 			   GtkApplication     *app)
 {
   gtk_window_set_application (GTK_WINDOW (center->priv->window), app);
