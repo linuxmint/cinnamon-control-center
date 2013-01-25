@@ -26,7 +26,7 @@ msgstr ""
 "POT-Creation-Date: 2012-09-21 17:51+0000\n"
 "PO-Revision-Date: 2012-11-03 01:35+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
-"Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
+"Language-Team: GNOME Korea <cinnamon-kr@googlegroups.com>\n"
 "Language: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,16 +116,16 @@ msgstr "바탕 화면 배경 없음"
 msgid "Current background"
 msgstr "현재 배경"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "배경"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "배경 바꾸기"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Wallpaper;배경;Screen;화면;Desktop;바탕 화면;"
 
@@ -455,7 +455,7 @@ msgid "Webcam"
 msgstr "웹캠"
 
 #: ../panels/color/color.ui.h:3
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:1
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:1
 msgid "Color"
 msgstr "색"
 
@@ -529,12 +529,12 @@ msgid ""
 "Image files can be dragged on this window to auto-complete the above fields."
 msgstr "그림 파일을 이 창에 끌어오면 위의 항목을 자동으로 완성할 수 있습니다."
 
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:2
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:2
 msgid "Color management settings"
 msgstr "색 관리 설정"
 
 #. Translators: those are keywords for the color control-center panel
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:4
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr ""
 "Color;색;ICC;Profile;프로파일;Calibrate;보정;Printer;프린터;Display;디스플레"
@@ -725,16 +725,16 @@ msgstr "11월"
 msgid "December"
 msgstr "12월"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:1
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:1
 msgid "Date & Time"
 msgstr "날짜 및 시각"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Date and Time preferences panel"
 msgstr "날짜 및 시각 기본 설정 패널"
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Clock;Timezone;Location;"
 msgstr "Clock;시계;Timezone;시간대;Location;위치;"
 
@@ -766,7 +766,7 @@ msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr "180도"
 
-#. Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c
+#. Keep this string in sync with cinnamon-desktop/libcinnamon-desktop/cinnamon-rr-labeler.c
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external projector.  Here, "Mirrored" is being
 #. * used as an adjective.  For example, the Spanish translation could be
@@ -849,16 +849,16 @@ msgstr "알림: 해상도 옵션을 제한할 수도 있습니다"
 msgid "_Detect Displays"
 msgstr "디스플레이 검색(_D)"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Displays"
 msgstr "디스플레이"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Change resolution and position of monitors and projectors"
 msgstr "모니터 및 프로젝터의 해상도와 위치를 바꿉니다"
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr ""
 "Panel;패널;Projector;프로젝터;xrandr;Screen;화면;Resolution;해상도;Refresh;주"
@@ -1044,16 +1044,16 @@ msgstr "시스템 최신 업데이트된 상태"
 msgid "Checking for Updates"
 msgstr "업데이트를 확인하는 중"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "Details"
 msgstr "자세히 보기"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "시스템 정보"
 
 #. sure that you use the same "translation" for those keywords
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1210,18 +1210,18 @@ msgid "Eject"
 msgstr "빼기"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 #: ../panels/universal-access/uap.ui.h:68
 msgid "Typing"
 msgstr "자판 입력"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:2
-#: ../panels/region/gnome-region-panel.ui.h:26
+#: ../panels/region/cinnamon-region-panel.ui.h:26
 msgid "Switch to next source"
 msgstr "다음 입력 소스로 전환"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:3
-#: ../panels/region/gnome-region-panel.ui.h:24
+#: ../panels/region/cinnamon-region-panel.ui.h:24
 msgid "Switch to previous source"
 msgstr "이전 입력 소스로 전환"
 
@@ -1285,7 +1285,7 @@ msgid "Copy a screenshot of an area to clipboard"
 msgstr "영역 스크린샷 클립보드로 복사"
 
 #: ../panels/keyboard/01-system.xml.in.h:1
-#: ../panels/region/gnome-region-panel.ui.h:39
+#: ../panels/region/cinnamon-region-panel.ui.h:39
 msgid "System"
 msgstr "시스템"
 
@@ -1298,7 +1298,7 @@ msgid "Lock screen"
 msgstr "화면 잠그기"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:1
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:1
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:1
 msgid "Universal Access"
 msgstr "접근성"
 
@@ -1353,105 +1353,105 @@ msgstr "대체 문자 키"
 msgid "Compose Key"
 msgstr "구성 키"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
 msgid "Keyboard"
 msgstr "키보드"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
 msgid "Change keyboard settings"
 msgstr "키보드 설정 바꾸기"
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr "Shortcut;바로 가기;Repeat;반복;Blink;깜박;"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "Custom Shortcut"
 msgstr "사용자 설정 바로 가기 키"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "_Name:"
 msgstr "이름(_N):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "C_ommand:"
 msgstr "명령(_O):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Repeat Keys"
 msgstr "반복 키"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
 msgid "Key presses _repeat when key is held down"
 msgstr "키를 누르고 있을 때 키 반복(_R)"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
 msgid "_Delay:"
 msgstr "지연 시간(_D):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "_Speed:"
 msgstr "속도(_S):"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 #: ../panels/universal-access/uap.ui.h:49
 msgid "Short"
 msgstr "짧게"
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Slow"
 msgstr "느리게"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat keys speed"
 msgstr "반복 키 빠르기"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 #: ../panels/universal-access/uap.ui.h:52
 msgid "Long"
 msgstr "길게"
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "Fast"
 msgstr "빠르게"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
 msgid "Cursor Blinking"
 msgstr "커서 깜빡이기"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Cursor _blinks in text fields"
 msgstr "텍스트 입력란에서 커서 깜박이기(_B)"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
 msgid "S_peed:"
 msgstr "속도(_P):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 msgid "Cursor blink speed"
 msgstr "커서 깜빡임 빠르기"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "Layout Settings"
 msgstr "키보드 배치 설정"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "Add Shortcut"
 msgstr "바로 가기 추가"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:21
 msgid "Remove Shortcut"
 msgstr "바로 가기 제거"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:22
 #: ../panels/wacom/button-mapping.ui.h:3
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
@@ -1460,8 +1460,8 @@ msgstr ""
 "바로 가기 키를 편집하려면, 해당 줄을 누르고 새 키를 누르십시오. 지우려면 백스"
 "페이스를 누르십시오."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
-#: ../panels/region/gnome-region-panel.ui.h:29
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:29
 msgid "Shortcuts"
 msgstr "바로 가기"
 
@@ -1508,107 +1508,107 @@ msgstr "다시 설정(_R)"
 msgid "_Test Your Settings"
 msgstr "설정 검사(_T)"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse & Touchpad"
 msgstr "마우스 및 터치패드"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr "마우스 및 터치패드 기본 설정을 설정합니다"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr ""
 "Trackpad;트랙패드;Pointer;포인터;Click;클릭;누르기;Tab;탭;Double;더블;Button;"
 "버튼;단추;Trackball;트랙볼;"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Mouse Preferences"
 msgstr "마우스 기본 설정"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "General"
 msgstr "일반"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Double-click timeout"
 msgstr "두번 누르기 제한시간"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "_Double-click"
 msgstr "두번 누르기(_D)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Primary _button"
 msgstr "첫번째 단추(_B)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "_Left"
 msgstr "왼쪽(_L)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "_Right"
 msgstr "오른쪽(_R)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Mouse"
 msgstr "마우스"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "_Pointer speed"
 msgstr "포인터 속도(_P)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Touchpad"
 msgstr "터치패드"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "Disable while _typing"
 msgstr "키 입력 중에는 사용하지 않기(_T)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Tap to _click"
 msgstr "마우스 단추를 누르려면 패드 터치(_C)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Two _finger scroll"
 msgstr "두 손가락 스크롤(_F)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "C_ontent sticks to fingers"
 msgstr "손가락 따라 내용 스크롤(_O)"
 
-#: ../panels/mouse/gnome-mouse-test.c:134
-#: ../panels/mouse/gnome-mouse-test.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-test.c:134
+#: ../panels/mouse/cinnamon-mouse-test.ui.h:1
 msgid "Try clicking, double clicking, scrolling"
 msgstr "한 번 누르기, 두 번 누르기, 스크롤을 시도"
 
-#: ../panels/mouse/gnome-mouse-test.c:139
+#: ../panels/mouse/cinnamon-mouse-test.c:139
 msgid "Five clicks, GEGL time!"
 msgstr "다섯번 누름, 게글 타임!"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Double click, primary button"
 msgstr "두 번 누르기, 첫번째 단추"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Single click, primary button"
 msgstr "한 번 누르기, 첫번째 단추"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Double click, middle button"
 msgstr "두 번 누르기, 가운데 단추"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Single click, middle button"
 msgstr "한 번 누르기, 가운데 단추"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Double click, secondary button"
 msgstr "두 번 누르기, 두번째 단추"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Single click, secondary button"
 msgstr "한 번 누르기, 두번째 단추"
 
@@ -1632,17 +1632,17 @@ msgstr "시스템 네트워크 서비스가 이 버전과 호환되지 않습니
 msgid "Air_plane Mode"
 msgstr "비행 모드(_P)"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 #: ../panels/network/network-mobile.ui.h:7
 msgid "Network"
 msgstr "네트워크"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "네트워크 설정"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;Proxy;"
 msgstr "Network;네트워크;Wireless;무선;IP;LAN;랜;Proxy;프록시"
 
@@ -2346,16 +2346,16 @@ msgstr "서버의 계정은 제거하지 않습니다."
 msgid "_Remove"
 msgstr "제거(_R)"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:1
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:1
 msgid "Online Accounts"
 msgstr "온라인 계정"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:2
 msgid "Manage online accounts"
 msgstr "온라인 계정 관리"
 
 #. Translators: those are keywords for the online-accounts control-center panel
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:4
 msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 msgstr ""
 "Google;구글;Facebook;페이스북;Twitter;트위터;Yahoo;야후;Web;웹;Online;온라인;"
@@ -2570,16 +2570,16 @@ msgid ""
 "Tip: <a href=\"screen\">screen brightness</a> affects how much power is used"
 msgstr "조언: <a href=\"screen\">화면 밝기</a>는 전력 소비량에 영향을 미칩니다"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "전원"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr "전원 관리 설정"
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr ""
 "Power;전원;Sleep;절전;Suspend;대기 모드;Hibernate;최대 절전;Battery;배터리;"
@@ -2812,16 +2812,16 @@ msgstr "시험 페이지"
 msgid "Could not load ui: %s"
 msgstr "UI를 읽어들일 수 없습니다: %s"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Printers"
 msgstr "프린터"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:2
 msgid "Change printer settings"
 msgstr "프린터 설정 바꾸기"
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr ""
 "Printer;프린터;Queue;대기열;Print;인쇄;Paper;용지;종이;Ink;잉크;Toner;토너;"
@@ -3214,36 +3214,36 @@ msgstr ""
 "죄송합니다. 시스템 인쇄 서비스가\n"
 "존재하지 않는 것 같습니다."
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Region & Language"
 msgstr "지역 및 언어"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:2
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:2
 msgid "Change your region and language settings"
 msgstr "지역 및 언어 설정을 바꿉니다"
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Language;Layout;Keyboard;"
 msgstr "Language;언어;Layout;배치;Keyboard;키보드;"
 
-#: ../panels/region/gnome-region-panel-formats.c:142
+#: ../panels/region/cinnamon-region-panel-formats.c:142
 msgid "Imperial"
 msgstr "야드파운드법"
 
-#: ../panels/region/gnome-region-panel-formats.c:144
+#: ../panels/region/cinnamon-region-panel-formats.c:144
 msgid "Metric"
 msgstr "미터법"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:1
 msgid "Choose an input source"
 msgstr "입력 소스 선택"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:2
 msgid "Select an input source to add"
 msgstr "추가할 입력 소스를 선택하십시오"
 
-#: ../panels/region/gnome-region-panel-system.c:470
+#: ../panels/region/cinnamon-region-panel-system.c:470
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings."
@@ -3251,164 +3251,164 @@ msgstr ""
 "로그인 화면, 시스템 계정, 새 사용자 계정은 시스템 영역의 지역 및 언어 설정을 "
 "사용합니다."
 
-#: ../panels/region/gnome-region-panel-system.c:475
-#: ../panels/region/gnome-region-panel.ui.h:31
+#: ../panels/region/cinnamon-region-panel-system.c:475
+#: ../panels/region/cinnamon-region-panel.ui.h:31
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings. You may change the system settings to match "
 "yours."
 msgstr "로그인 화면 시스템 계정, 새 사용자 계정은 시스템 영역의 지역 및 언어 설정을 사용합니다. 설정하신 내용과 맞추려면 시스템 설정을 바꿔야 합니다."
 
-#: ../panels/region/gnome-region-panel-system.c:478
+#: ../panels/region/cinnamon-region-panel-system.c:478
 msgid "Copy Settings"
 msgstr "설정 복사"
 
-#: ../panels/region/gnome-region-panel-system.c:481
-#: ../panels/region/gnome-region-panel.ui.h:38
+#: ../panels/region/cinnamon-region-panel-system.c:481
+#: ../panels/region/cinnamon-region-panel.ui.h:38
 msgid "Copy Settings..."
 msgstr "설정 복사..."
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Region and Language"
 msgstr "지역과 언어"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr "표시 언어를 선택하십시오(다음에 로그인할 때 바뀐 내용을 적용합니다)"
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 msgid "Add Language"
 msgstr "언어 추가"
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Remove Language"
 msgstr "언어 제거"
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "Install languages..."
 msgstr "언어 설치..."
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid "Language"
 msgstr "언어"
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 msgid "Select a region (change will be applied the next time you log in)"
 msgstr "지역을 선택하십시오(다음에 로그인할 때 바뀐 내용을 적용합니다)"
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Add Region"
 msgstr "지역 추가"
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Remove Region"
 msgstr "지역 제거"
 
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Dates"
 msgstr "날짜"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Times"
 msgstr "시간"
 
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Numbers"
 msgstr "숫자"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Currency"
 msgstr "화폐"
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid "Measurement"
 msgstr "단위"
 
-#: ../panels/region/gnome-region-panel.ui.h:15
+#: ../panels/region/cinnamon-region-panel.ui.h:15
 msgid "Examples"
 msgstr "예제"
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 msgid "Formats"
 msgstr "형식"
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 msgid "Select keyboards or other input sources"
 msgstr "키보드 또는 기타 입력 소스 선택"
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 msgid "Add Input Source"
 msgstr "입력 소스 추가"
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 msgid "Remove Input Source"
 msgstr "입력 소스 제거"
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 msgid "Move Input Source Up"
 msgstr "입력 소스를 위로 이동"
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 msgid "Move Input Source Down"
 msgstr "입력 소스를 아래로 이동"
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 msgid "Input Source Settings"
 msgstr "입력 소스 설정"
 
-#: ../panels/region/gnome-region-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:23
 msgid "Show Keyboard Layout"
 msgstr "키보드 배치 보이기"
 
 # 키 조합. 번역하지 않음.
-#: ../panels/region/gnome-region-panel.ui.h:25
+#: ../panels/region/cinnamon-region-panel.ui.h:25
 msgid "Ctrl+Alt+Space"
 msgstr "Ctrl+Alt+Space"
 
 # 키 조합. 번역하지 않음.
-#: ../panels/region/gnome-region-panel.ui.h:27
+#: ../panels/region/cinnamon-region-panel.ui.h:27
 msgid "Ctrl+Alt+Shift+Space"
 msgstr "Ctrl+Alt+Shift+Space"
 
-#: ../panels/region/gnome-region-panel.ui.h:28
+#: ../panels/region/cinnamon-region-panel.ui.h:28
 msgid "Shortcut Settings"
 msgstr "바로 가기 설정"
 
-#: ../panels/region/gnome-region-panel.ui.h:30
+#: ../panels/region/cinnamon-region-panel.ui.h:30
 msgid "Input Sources"
 msgstr "입력 소스"
 
 #. 'display' means 'output' here, as in 'translated messages that are displayed to the user'
-#: ../panels/region/gnome-region-panel.ui.h:33
+#: ../panels/region/cinnamon-region-panel.ui.h:33
 msgid "Display language:"
 msgstr "표시 언어:"
 
-#: ../panels/region/gnome-region-panel.ui.h:34
+#: ../panels/region/cinnamon-region-panel.ui.h:34
 msgid "Input source:"
 msgstr "입력 소스:"
 
-#: ../panels/region/gnome-region-panel.ui.h:35
+#: ../panels/region/cinnamon-region-panel.ui.h:35
 msgid "Format:"
 msgstr "포맷:"
 
-#: ../panels/region/gnome-region-panel.ui.h:36
+#: ../panels/region/cinnamon-region-panel.ui.h:36
 msgid "Your settings"
 msgstr "설정 내용"
 
-#: ../panels/region/gnome-region-panel.ui.h:37
+#: ../panels/region/cinnamon-region-panel.ui.h:37
 msgid "System settings"
 msgstr "시스템 설정"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:1
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:1
 msgid "Brightness & Lock"
 msgstr "밝기와 잠금"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Screen brightness and lock settings"
 msgstr "화면 밝기 및 잠금 설정"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr ""
 "Brightness;밝기;Lock;잠그기;잠금;Dim;어둡게;Blank;화면 끄기;Monitor;모니터;"
@@ -3486,40 +3486,40 @@ msgstr "음량 조정"
 msgid "Show desktop volume control"
 msgstr "데스크톱 음량 조절 표시"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:1
 msgid "Sound"
 msgstr "소리"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Change sound volume and sound events"
 msgstr "사운드 음량과 사운드 이벤트를 바꿉니다"
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgstr "Card;카드;Microphone;마이크;Volume;볼륨;음량;Fade;페이드;Balance;균형;밸런스;Bluetooth;블루투스;Headset;헤드셋;Audio;오디오;"
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr "멍멍"
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr "뚝뚝"
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr "챙챙"
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr "핑핑"
 
@@ -3741,12 +3741,12 @@ msgstr "사용자 설정"
 msgid "No shortcut set"
 msgstr "새 바로 가기 모음"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Universal Access Preferences"
 msgstr "접근성 기본 설정"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
@@ -4359,16 +4359,16 @@ msgstr ""
 "지문을 성공적으로 저장했습니다. 이제 지문 인식 장치를 이용해 로그인할 수 있습"
 "니다."
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "User Accounts"
 msgstr "사용자 계정"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:2
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:2
 msgid "Add or remove users"
 msgstr "사용자 추가 및 제거"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr ""
 "Login;로그인;Name;이름;Fingerprint;지문;Avatar;아바타;Logo;로고;Face;얼굴;"
@@ -5014,65 +5014,65 @@ msgstr "동작"
 msgid "Display Mapping"
 msgstr "디스플레이 매핑"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:1
-#: ../panels/wacom/gnome-wacom-properties.ui.h:7
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:7
 msgid "Wacom Tablet"
 msgstr "왓콤 태블릿"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:2
 msgid "Set your Wacom tablet preferences"
 msgstr "왓콤 태블릿을 설정합니다"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:4
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;태블릿;Wacom;왓콤;Stylus;스타일러스;Eraser;지우개;Mouse;마우스;"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
 msgstr "태블릿(절대 좌표)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:2
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:2
 msgid "Touchpad (relative)"
 msgstr "터치패드(상대 좌표)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:3
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:3
 msgid "Tablet Preferences"
 msgstr "태블릿 기본 설정"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:4
 msgid "No tablet detected"
 msgstr "검색된 태블릿 없음"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:5
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:5
 msgid "Please plug in or turn on your Wacom tablet"
 msgstr "왓콤 태블릿을 연결하거나 켜십시오"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:6
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:6
 msgid "Bluetooth Settings"
 msgstr "블루투스 설정"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:8
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:8
 msgid "Map to Monitor..."
 msgstr "모니터에 연결하기..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:9
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:9
 msgid "Map Buttons..."
 msgstr "단추 연결하기..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:10
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:10
 msgid "Calibrate..."
 msgstr "보정..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:11
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:11
 msgid "Adjust display resolution"
 msgstr "디스플레이 해상도 조절하기"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:12
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:12
 msgid "Tracking Mode"
 msgstr "트래킹 모드"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:13
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:13
 msgid "Left-Handed Orientation"
 msgstr "왼손잡이 방향"
 

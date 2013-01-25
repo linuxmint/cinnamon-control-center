@@ -834,7 +834,7 @@ map_buttons_button_clicked_cb (GtkButton   *button,
 	g_assert (priv->mapping_builder == NULL);
 	priv->mapping_builder = gtk_builder_new ();
 	gtk_builder_add_from_file (priv->mapping_builder,
-				   GNOMECC_UI_DIR "/button-mapping.ui",
+				   CINNAMONCC_UI_DIR "/button-mapping.ui",
 				   &error);
 
 	if (error != NULL) {
@@ -1094,7 +1094,7 @@ cc_wacom_page_init (CcWacomPage *self)
 	priv->builder = gtk_builder_new ();
 
 	gtk_builder_add_objects_from_file (priv->builder,
-					   GNOMECC_UI_DIR "/gnome-wacom-properties.ui",
+					   CINNAMONCC_UI_DIR "/cinnamon-wacom-properties.ui",
 					   objects,
 					   &error);
 	if (error != NULL) {
@@ -1147,7 +1147,7 @@ set_icon_name (CcWacomPage *page,
 	priv = page->priv;
 
 	filename = g_strdup_printf ("%s.svg", icon_name);
-	path = g_build_filename (GNOMECC_UI_DIR, filename, NULL);
+	path = g_build_filename (CINNAMONCC_UI_DIR, filename, NULL);
 	g_free (filename);
 
 	gtk_image_set_from_file (GTK_IMAGE (WID (widget_name)), path);

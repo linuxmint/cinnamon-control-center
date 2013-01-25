@@ -5,8 +5,8 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(MOUSE_PANEL_CFLAGS)				\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	$(NULL)
 
 
@@ -17,22 +17,22 @@ libmouse_properties_la_SOURCES =	\
 	mouse-module.c			\
 	cc-mouse-panel.c		\
 	cc-mouse-panel.h		\
-	gnome-mouse-properties.c	\
-	gnome-mouse-properties.h	\
+	cinnamon-mouse-properties.c	\
+	cinnamon-mouse-properties.h	\
 	gsd-input-helper.c		\
 	gsd-input-helper.h		\
-	gnome-mouse-test.c		\
-	gnome-mouse-test.h
+	cinnamon-mouse-test.c		\
+	cinnamon-mouse-test.h
 
 libmouse_properties_la_LIBADD = $(PANEL_LIBS) $(MOUSE_PANEL_LIBS)
 libmouse_properties_la_LDFLAGS = $(PANEL_LDFLAGS)
 
 test_gnome_mouse_test_SOURCES =			\
-	gnome-mouse-test.c		\
-	gnome-mouse-test.h		\
-	test-gnome-mouse-test.c
+	cinnamon-mouse-test.c		\
+	cinnamon-mouse-test.h		\
+	test-cinnamon-mouse-test.c
 
-noinst_PROGRAMS = test-gnome-mouse-test
+noinst_PROGRAMS = test-cinnamon-mouse-test
 
 test_gnome_mouse_test_CPPFLAGS = $(INCLUDES)
 test_gnome_mouse_test_LDADD = $(PANEL_LIBS) $(MOUSE_PANEL_LIBS)
@@ -41,13 +41,13 @@ test_gnome_mouse_test_LDADD = $(PANEL_LIBS) $(MOUSE_PANEL_LIBS)
 
 uidir   = $(pkgdatadir)/ui
 ui_DATA =				\
-	gnome-mouse-properties.ui	\
-	gnome-mouse-test.ui		\
+	cinnamon-mouse-properties.ui	\
+	cinnamon-mouse-test.ui		\
 	scroll-test-gegl.svg		\
 	scroll-test.svg
 
 desktopdir = $(datadir)/applications
-Desktop_in_files = gnome-mouse-panel.desktop.in
+Desktop_in_files = cinnamon-mouse-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 INPUTDIR=$(top_srcdir)/../gnome-settings-daemon/plugins/common/

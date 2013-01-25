@@ -5,8 +5,8 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(WACOM_PANEL_CFLAGS)				\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DPIXMAP_DIR=\""$(datadir)/cinnamon-control-center/pixmaps"\"	\
 	$(NULL)
 

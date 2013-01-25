@@ -80,284 +80,284 @@ msgstr "အချက်ပေးဖောင်တွင်ပြမည့်ခ
 msgid "Show more _details"
 msgstr "အသေးစိတ်ကြည့်ရန်"
 
-#: ../capplets/about-me/gnome-about-me.c:716
+#: ../capplets/about-me/cinnamon-about-me.c:716
 msgid "Select Image"
 msgstr "ပုံရွေးပါ"
 
-#: ../capplets/about-me/gnome-about-me.c:718
+#: ../capplets/about-me/cinnamon-about-me.c:718
 msgid "No Image"
 msgstr "ပုံမရှိပါ"
 
-#: ../capplets/about-me/gnome-about-me.c:746
+#: ../capplets/about-me/cinnamon-about-me.c:746
 #: ../capplets/appearance/appearance-desktop.c:658
 msgid "Images"
 msgstr "ပုံများ"
 
-#: ../capplets/about-me/gnome-about-me.c:750
+#: ../capplets/about-me/cinnamon-about-me.c:750
 #: ../capplets/appearance/theme-installer.c:766
 msgid "All Files"
 msgstr "ဖိုင်အားလုံး"
 
-#: ../capplets/about-me/gnome-about-me.c:890
+#: ../capplets/about-me/cinnamon-about-me.c:890
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:911
+#: ../capplets/about-me/cinnamon-about-me.c:911
 msgid "Unable to open address book"
 msgstr "လိပ်စာစာရင်းကိုဖွင့်၍မရပါ"
 
-#: ../capplets/about-me/gnome-about-me.c:934
+#: ../capplets/about-me/cinnamon-about-me.c:934
 #, c-format
 msgid "About %s"
 msgstr "%s အကြောင်း"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:1
 msgid "A_IM/iChat:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:2
 msgid "A_ddress:"
 msgstr "လိပ်စာ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:3
 msgid "A_ssistant:"
 msgstr "လက်ထောက်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:4
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
 msgid "About Me"
 msgstr "ကျွန်တော့်အကြောင်း"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:5
 msgid "Address"
 msgstr "နေရပ်လိပ်စာ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:6
 msgid "C_ity:"
 msgstr "မြို့"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:7
 msgid "C_ompany:"
 msgstr "ကုမ္မဏီ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:8
 msgid "Cale_ndar:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:9
 msgid "Change Passwo_rd..."
 msgstr "စကားဝှက်ပြောင်းရန်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:10
 msgid "Ci_ty:"
 msgstr "_T မြို့"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:11
 msgid "Co_untry:"
 msgstr "_U နိုင်ငံ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:12
 msgid "Contact"
 msgstr "ဆက်သွယ်ရန်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:13
 msgid "Cou_ntry:"
 msgstr "_N  နိုင်ငံ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:14
 msgid "Disable _Fingerprint Login..."
 msgstr "_F လက်ဗွေစနစ်ဖြင့်ဝင်ရောက်မှုကိုပယ်ဖျက်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:15
 msgid "Email"
 msgstr "အီးမေးလ်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:16
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:16
 msgid "Enable _Fingerprint Login..."
 msgstr "လက်ဗွေစနစ်ဖြင့်ဝင်ရောက်မှုကိုအသုံးပြု"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:17
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:17
 msgid "Full Name"
 msgstr "အမည်အပြည့်အစုံ"
 
 #. Home vs Work (phone)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:19
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:19
 msgid "Hom_e:"
 msgstr "_E အိမ်ဖုန်း"
 
 #. Home vs Work (address)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:21
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:21
 msgid "Home"
 msgstr "အိမ်လိပ်စာ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:22
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:22
 msgid "IC_Q:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:23
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:23
 msgid "Instant Messaging"
 msgstr "အင်တာနက်ဆက်သွယ်မှု"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:24
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:24
 msgid "Job"
 msgstr "အလုပ်အကိုင်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:25
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:25
 msgid "M_SN:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:26
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:26
 msgid "P.O. _box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:27
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:27
 msgid "P._O. box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:28
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:28
 msgid "Personal Info"
 msgstr "ကိုယ်ရေးရာဇဝင်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:29
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:29
 msgid "Select your photo"
 msgstr "ဓာတ်ပုံရွေးပါ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:30
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:30
 msgid "State/Pro_vince:"
 msgstr "_V ပြည်နယ်/စီရင်စု"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:31
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:31
 msgid "Telephone"
 msgstr "တယ်လီဖုန်းနံပါတ်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:32
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:32
 msgid "User name:"
 msgstr "အသုံးပြုမည့်အမည်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:33
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:33
 msgid "Web"
 msgstr "ဝဘ်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:34
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:34
 msgid "Web _log:"
 msgstr "_L ဝဘ်မှတ်သားချက်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:35
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:35
 msgid "Wor_k:"
 msgstr "_K အလုပ်ဖုန်း"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:36
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:36
 msgid "Work"
 msgstr "အလုပ်အကိုင်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:37
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:37
 msgid "Work _fax:"
 msgstr "ရုံး၏ ဖက်(စ်)"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:38
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:38
 msgid "ZIP/_Postal code:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:39
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:39
 msgid "_Address:"
 msgstr "_A လိပ်စာ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:40
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:40
 msgid "_Department:"
 msgstr "_D ဌာန"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:41
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:41
 msgid "_GroupWise:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:42
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:42
 msgid "_Home page:"
 msgstr "_H အင်တာနက်စာမျက်နှာ"
 
 #. Home vs Work (email)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:44
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:44
 msgid "_Home:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:45
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:45
 msgid "_Manager:"
 msgstr "_M မန်နေဂျာ"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:46
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:46
 msgid "_Mobile:"
 msgstr "_M မိုဘိုင်းဖုန်း"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:47
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:47
 msgid "_Profession:"
 msgstr "_P ကျွမ်းကျင်မှု/စိတ်ဝင်စားမှု"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:48
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:48
 msgid "_State/Province:"
 msgstr "_S ပြည်နယ်/စီရင်စု"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:49
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:49
 msgid "_Title:"
 msgstr "_T ခေါင်းစဉ်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:50
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:50
 msgid "_Work:"
 msgstr "_W အလုပ်"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:51
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:51
 msgid "_XMPP:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:52
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:52
 msgid "_Yahoo:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:53
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:53
 msgid "_ZIP/Postal code:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "ကိုယ်ရေးအချက်အလက်များကိုသတ်မှတ်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:100
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:100
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr "ဒရိုက်ဗ်သို့ဝင်ရောက်ခွင့်မရှိပါ စနစ်ပိုင်းခန့်ခွဲသူကိုဆက်သွယ်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:102
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:102
 msgid "The device is already in use."
 msgstr "ဤဒရိုက်ဗ်ကိုအသုံးပြုထားသည်"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:104
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:104
 msgid "An internal error occured"
 msgstr "စနစ်ပိုင်းဆိုင်ရာအမှားဖြစ်ပွားသည်"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:221
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:221
 msgid "Delete registered fingerprints?"
 msgstr "မှတ်ပုံတင်ထားသည့်လက်ဗွေမှတ်စနစ်ကိုဖျက်သိမ်း"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:224
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:224
 msgid "_Delete Fingerprints"
 msgstr "_D လက်ဗွေမှတ်စနစ်ကိုဖျက်သိမ်း"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:231
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:231
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr "အသုံးပြုရန်မှတ်ပုံတင်ထားသည့် လက်ဗွေကိုဖျက်ပစ်မလား ဖျက်မယ်ဆိုရင် လက်ဗွေစနစ်ဖြင်မဝင်ရောက်နိုင်တော့ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:359
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:359
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:1
 msgid "Done!"
 msgstr "ပြီးဆုံး"
 
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:405
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:427
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:405
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:427
 #, c-format
 msgid "Could not access '%s' device"
 msgstr "ဒရိုက်ဗ် '%s' ကိုဝင်လို့မရပါ"
@@ -365,21 +365,21 @@ msgstr "ဒရိုက်ဗ် '%s' ကိုဝင်လို့မရပါ
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:476
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:476
 #, c-format
 msgid "Could not start finger capture on '%s' device"
 msgstr "ဒရိုက်ဗ် '%s'မှာလက်ဗွေမှတ်ခြင်းကိုမလုပ်ဆောင်နိုင်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:523
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:523
 msgid "Could not access any fingerprint readers"
 msgstr "လက်ဗွေမှတ်ကရိယာကိုအသုံးမပြုနိုင်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:524
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:524
 msgid "Please contact your system administrator for help."
 msgstr "အကူအညီအတွက် စနစ်ပိုင်းဆိုင်ရာခန့်ခဲ့သူနဲ့ဆက်သွယ်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:554
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:554
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:2
 msgid "Enable Fingerprint Login"
 msgstr "လက်ဗွေမှတ်စနစ်ဖြင့်ဝင်ရောက်ခြင်းကိုအသုံးပြုပါ"
 
@@ -387,90 +387,90 @@ msgstr "လက်ဗွေမှတ်စနစ်ဖြင့်ဝင်ရေ
 #. * The variable is the name of the device, for example:
 #. * "To enable fingerprint login, you need to save one of your fingerprints, using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:584
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:584
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the '%s' device."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:593
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:593
 msgid "Swipe finger on reader"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:595
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:595
 msgid "Place finger on reader"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:3
 msgid "Left index finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:4
 msgid "Left little finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:5
 msgid "Left middle finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:6
 msgid "Left ring finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:7
 msgid "Left thumb"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:8
 msgid "Other finger: "
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:9
 msgid "Right index finger"
 msgstr "ညာလက်ညှိုး"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:10
 msgid "Right little finger"
 msgstr "ညာလက်သန်း"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:11
 msgid "Right middle finger"
 msgstr "ညာလက်ခလယ်"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:12
 msgid "Right ring finger"
 msgstr "ညာလက်သူကြွယ်"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:13
 msgid "Right thumb"
 msgstr "ညာလက်မ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:14
 msgid "Select finger"
 msgstr "လက်ချောင်းရွေးပါ"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:15
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:161
+#: ../capplets/about-me/cinnamon-about-me-password.c:161
 msgid "Child exited unexpectedly"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:296
+#: ../capplets/about-me/cinnamon-about-me-password.c:296
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:309
+#: ../capplets/about-me/cinnamon-about-me-password.c:309
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:408
+#: ../capplets/about-me/cinnamon-about-me-password.c:408
 msgid "Authenticated!"
 msgstr "အသိအမှတ်ပြုသည်"
 
@@ -480,106 +480,106 @@ msgstr "အသိအမှတ်ပြုသည်"
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:474
-#: ../capplets/about-me/gnome-about-me-password.c:559
+#: ../capplets/about-me/cinnamon-about-me-password.c:474
+#: ../capplets/about-me/cinnamon-about-me-password.c:559
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
 msgstr "စကားဝှက်ပထမအကြီမ်အသိအမှတ်ပြုစဉ်ကတည်းကပြောင်းသွားပြီ ပြန်အသိအမှတ်ပြုခြင်းလုပ်ဆောင်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.c:476
+#: ../capplets/about-me/cinnamon-about-me-password.c:476
 msgid "That password was incorrect."
 msgstr "စကားဝှက်မှားနေသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:527
+#: ../capplets/about-me/cinnamon-about-me-password.c:527
 msgid "Your password has been changed."
 msgstr "စကားဝှက်ကိုပြောင်းပြီးပြီ"
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:537
+#: ../capplets/about-me/cinnamon-about-me-password.c:537
 #, c-format
 msgid "System error: %s."
 msgstr "စနစ်ပိုင်းဆိုင်ရာအမှား : %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:540
+#: ../capplets/about-me/cinnamon-about-me-password.c:540
 msgid "The password is too short."
 msgstr "စကားဝှက်တိုလွန်းသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:544
+#: ../capplets/about-me/cinnamon-about-me-password.c:544
 msgid "The password is too simple."
 msgstr "စကားဝှက်ကအရမ်းလွယ်လွန်းသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:549
+#: ../capplets/about-me/cinnamon-about-me-password.c:549
 msgid "The old and new passwords are too similar."
 msgstr "စကားဝှက်အဟောင်းနှင့်အသစ်ပေးတဲ့စကားဝှက်တူနေသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:551
+#: ../capplets/about-me/cinnamon-about-me-password.c:551
 msgid "The new password must contain numeric or special character(s)."
 msgstr "စကားဝှက်မှာ ဂဏန်းများနှင့် အထူးပြုအက္ခရာများပါဝင်ရမည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:554
+#: ../capplets/about-me/cinnamon-about-me-password.c:554
 msgid "The old and new passwords are the same."
 msgstr "စကားဝှက်အဟောင်းနှင် အသစ်တူညီနေသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:556
+#: ../capplets/about-me/cinnamon-about-me-password.c:556
 msgid "The new password has already been used recently."
 msgstr "စကားဝှက်အသစ်က လက်တလောအသုံးပြုထားပြီးဖြစ်သည်"
 
 #. translators: Unable to launch <program>: <error message>
-#: ../capplets/about-me/gnome-about-me-password.c:827
+#: ../capplets/about-me/cinnamon-about-me-password.c:827
 #, c-format
 msgid "Unable to launch %s: %s"
 msgstr " %s: %s ကိုဖွင့်မရဘူး"
 
-#: ../capplets/about-me/gnome-about-me-password.c:831
+#: ../capplets/about-me/cinnamon-about-me-password.c:831
 msgid "Unable to launch backend"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:832
+#: ../capplets/about-me/cinnamon-about-me-password.c:832
 msgid "A system error has occurred"
 msgstr "စနစ်ပိုင်းဆိုင်ရာအမှားဖြစ်သွားသည်"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:852
+#: ../capplets/about-me/cinnamon-about-me-password.c:852
 msgid "Checking password..."
 msgstr "စကားဝှက်ကို စစ်နေသည်"
 
-#: ../capplets/about-me/gnome-about-me-password.c:939
+#: ../capplets/about-me/cinnamon-about-me-password.c:939
 msgid "Click <b>Change password</b> to change your password."
 msgstr "စကားဝှက်အသစ်ပြောင်းရန်  <b>စကားဝှက်ပြောင်း</b>ကိုနှိပ်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.c:942
+#: ../capplets/about-me/cinnamon-about-me-password.c:942
 msgid "Please type your password in the <b>New password</b> field."
 msgstr "<b>စကားဝှက်အသစ်</b> ရိုက်ရန်နေရာတွင် စကားဝှက်ကိုရိုက်ထည့်ပေးပါ "
 
-#: ../capplets/about-me/gnome-about-me-password.c:945
-#: ../capplets/about-me/gnome-about-me-password.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-password.c:945
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:5
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr "<b>စကားဝှက်ပြန်ရိုက်ရန်</b>နေရာတွင် စကားဝှက်ကိုပြန်ရိုက်ထည့်ပေးပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.c:948
+#: ../capplets/about-me/cinnamon-about-me-password.c:948
 msgid "The two passwords are not equal."
 msgstr "စကားဝှက်နှစ်လုံးတူညီမှုမရှိပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:1
 msgid "Change pa_ssword"
 msgstr "_S စကားဝှက်ကိုပြောင်း"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:2
 msgid "Change password"
 msgstr "စကားဝှက်ပြောင်းပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:3
 msgid "Change your password"
 msgstr "စကားဝှက်ပြောင်းခြင်း"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:4
 msgid "Current _password:"
 msgstr "လက်ရှိစကားဝှက်"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:6
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -589,15 +589,15 @@ msgstr ""
 "စကားဝှက်ကိုပြောင်းရန် စကားဝှက်ကို အောက်တွင်မြင်ရသည့် စကားဝှက်များရိုက်ရန် နေရာတွင်ရိုက်၍ <b>အသိအမှတ်ပြု</"
 "b>  ဆိုသည့်ခလုတ်ကိုနှိပ်ပါ"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:8
 msgid "_Authenticate"
 msgstr "_A အသိအမှတ်ပြု"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:9
 msgid "_New password:"
 msgstr "_N စကားဝှက်အသစ်"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:10
 msgid "_Retype new password:"
 msgstr "_R စကားဝှက်ကိုပြန်ရိုက်ရန်"
 
@@ -727,8 +727,8 @@ msgid "Specify the name of the page to show (theme|background|fonts|interface)"
 msgstr ""
 
 #: ../capplets/appearance/appearance-main.c:144
-#: ../capplets/default-applications/gnome-da-capplet.c:960
-#: ../capplets/mouse/gnome-mouse-properties.c:593
+#: ../capplets/default-applications/cinnamon-da-capplet.c:960
+#: ../capplets/mouse/cinnamon-mouse-properties.c:593
 msgid "page"
 msgstr ""
 
@@ -737,8 +737,8 @@ msgid "[WALLPAPER...]"
 msgstr ""
 
 #: ../capplets/appearance/appearance-style.c:172
-#: ../capplets/common/gnome-theme-info.c:446
-#: ../capplets/common/gnome-theme-info.c:638
+#: ../capplets/common/cinnamon-theme-info.c:446
+#: ../capplets/common/cinnamon-theme-info.c:638
 msgid "Default Pointer"
 msgstr ""
 
@@ -748,7 +748,7 @@ msgid "Install"
 msgstr ""
 
 #: ../capplets/appearance/appearance-style.c:256
-#: ../capplets/common/gnome-theme-info.c:1646
+#: ../capplets/common/cinnamon-theme-info.c:1646
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme engine "
@@ -802,7 +802,7 @@ msgid "The current theme suggests a font."
 msgstr ""
 
 #: ../capplets/appearance/appearance-themes.c:1046
-#: ../capplets/default-applications/gnome-da-capplet.c:691
+#: ../capplets/default-applications/cinnamon-da-capplet.c:691
 msgid "Custom"
 msgstr "စိတ်ကြိုက်"
 
@@ -896,7 +896,7 @@ msgid "Icons only"
 msgstr "ပုံသကင်္တများသာ"
 
 #: ../capplets/appearance/data/appearance.ui.h:24
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Large"
 msgstr ""
 
@@ -937,7 +937,7 @@ msgid "Scale"
 msgstr "စကေး"
 
 #: ../capplets/appearance/data/appearance.ui.h:34
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:31
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:31
 msgid "Small"
 msgstr ""
 
@@ -1015,7 +1015,7 @@ msgid "Zoom"
 msgstr ""
 
 #: ../capplets/appearance/data/appearance.ui.h:54
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:45
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:45
 msgid "_Add..."
 msgstr "_A ထည့်ရန်"
 
@@ -1061,7 +1061,7 @@ msgid "_Monochrome"
 msgstr ""
 
 #: ../capplets/appearance/data/appearance.ui.h:66
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:5
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:5
 msgid "_Name:"
 msgstr "_N အမည်"
 
@@ -1115,50 +1115,50 @@ msgstr "_W ဝင်ဒိုး"
 msgid "dots per inch"
 msgstr ""
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:1
 msgid "Appearance"
 msgstr ""
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:2
 msgid "Customize the look of the desktop"
 msgstr "အလုပ်ခုံမြင်ကွင်းကိုစိတ်ကြိုက်သတ်မှတ်"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:1
 msgid "Installs themes packages for various parts of the desktop"
 msgstr "အလုပ်ခုံ အစိတ်အပိုင်းများအတွက် အမြင်အဆင်ပက်ကေ့များကိုသွင်းပါ"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:2
 msgid "Theme Installer"
 msgstr "အမြင်အဆင်သွင်းယူရန်"
 
-#: ../capplets/appearance/data/gnome-theme-package.xml.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-package.xml.in.h:1
 msgid "Gnome Theme Package"
 msgstr "Gnome အမြင်အဆင်ပက်ကေ့"
 
-#: ../capplets/appearance/gnome-wp-info.c:50
+#: ../capplets/appearance/cinnamon-wp-info.c:50
 msgid "No Desktop Background"
 msgstr "အလုပ်ခုံနောက်ခံမရှိပါ"
 
-#: ../capplets/appearance/gnome-wp-item.c:261
+#: ../capplets/appearance/cinnamon-wp-item.c:261
 msgid "Slide Show"
 msgstr ""
 
-#: ../capplets/appearance/gnome-wp-item.c:263
+#: ../capplets/appearance/cinnamon-wp-item.c:263
 msgid "Image"
 msgstr ""
 
-#: ../capplets/appearance/gnome-wp-item.c:269
+#: ../capplets/appearance/cinnamon-wp-item.c:269
 msgid "multiple sizes"
 msgstr ""
 
 #. translators: x pixel(s) by y pixel(s)
-#: ../capplets/appearance/gnome-wp-item.c:272
+#: ../capplets/appearance/cinnamon-wp-item.c:272
 #, c-format
 msgid "%d %s by %d %s"
 msgstr "%d %s အရ %d %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:274
-#: ../capplets/appearance/gnome-wp-item.c:276
+#: ../capplets/appearance/cinnamon-wp-item.c:274
+#: ../capplets/appearance/cinnamon-wp-item.c:276
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "ပစ်ဇယ်"
@@ -1167,7 +1167,7 @@ msgstr[0] "ပစ်ဇယ်"
 #. * mime type, size
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:284
+#: ../capplets/appearance/cinnamon-wp-item.c:284
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1182,7 +1182,7 @@ msgstr ""
 #. * Image missing
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:296
+#: ../capplets/appearance/cinnamon-wp-item.c:296
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1193,7 +1193,7 @@ msgstr ""
 "%s\n"
 "ဖိုင်တွဲ: %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:300
+#: ../capplets/appearance/cinnamon-wp-item.c:300
 msgid "Image missing"
 msgstr ""
 
@@ -1309,7 +1309,7 @@ msgstr ""
 
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
@@ -1495,49 +1495,49 @@ msgstr "ပုံကိုရွေးချယ်ပေးပါ"
 msgid "_Select"
 msgstr "_S ရွေးချယ်ပါ"
 
-#: ../capplets/common/gnome-theme-info.c:639
+#: ../capplets/common/cinnamon-theme-info.c:639
 msgid "Default Pointer - Current"
 msgstr "မူလညွှန်ပြသကေင်္တ - လက်ရှီ"
 
-#: ../capplets/common/gnome-theme-info.c:643
+#: ../capplets/common/cinnamon-theme-info.c:643
 msgid "White Pointer"
 msgstr "အဖြူရောင် ညွှန်ပြသကေင်္တ"
 
-#: ../capplets/common/gnome-theme-info.c:644
+#: ../capplets/common/cinnamon-theme-info.c:644
 msgid "White Pointer - Current"
 msgstr "အဖြူရောင်ညွှန်ပြသကေင်္တ - လက်ရှီ"
 
-#: ../capplets/common/gnome-theme-info.c:648
+#: ../capplets/common/cinnamon-theme-info.c:648
 msgid "Large Pointer"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:649
+#: ../capplets/common/cinnamon-theme-info.c:649
 msgid "Large Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:653
+#: ../capplets/common/cinnamon-theme-info.c:653
 msgid "Large White Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:654
+#: ../capplets/common/cinnamon-theme-info.c:654
 msgid "Large White Pointer"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1622
+#: ../capplets/common/cinnamon-theme-info.c:1622
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme '%s' is "
 "not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1630
+#: ../capplets/common/cinnamon-theme-info.c:1630
 #, c-format
 msgid ""
 "This theme will not look as intended because the required window manager "
 "theme '%s' is not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1637
+#: ../capplets/common/cinnamon-theme-info.c:1637
 #, c-format
 msgid ""
 "This theme will not look as intended because the required icon theme '%s' is "
@@ -1545,7 +1545,7 @@ msgid ""
 msgstr ""
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:17
 msgid "Preferred Applications"
 msgstr "ပိုကြိုက်ဆော့ဝဲများ"
 
@@ -1553,45 +1553,45 @@ msgstr "ပိုကြိုက်ဆော့ဝဲများ"
 msgid "Select your default applications"
 msgstr "ပုံသေသုံးအပ္ပလီကေးရှင်းများရွေးပါ"
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:2
 msgid "Visual Assistance"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:98
-#: ../capplets/default-applications/gnome-da-capplet.c:362
-#: ../capplets/default-applications/gnome-da-capplet.c:383
+#: ../capplets/default-applications/cinnamon-da-capplet.c:98
+#: ../capplets/default-applications/cinnamon-da-capplet.c:362
+#: ../capplets/default-applications/cinnamon-da-capplet.c:383
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:722
+#: ../capplets/default-applications/cinnamon-da-capplet.c:722
 msgid "Could not load the main interface"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:724
+#: ../capplets/default-applications/cinnamon-da-capplet.c:724
 msgid "Please make sure that the applet is properly installed"
 msgstr ""
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/default-applications/gnome-da-capplet.c:959
+#: ../capplets/default-applications/cinnamon-da-capplet.c:959
 msgid "Specify the name of the page to show (internet|multimedia|system|a11y)"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:964
+#: ../capplets/default-applications/cinnamon-da-capplet.c:964
 msgid "- GNOME Default Applications"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:1
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Accessibility"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:3
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr ""
@@ -1599,300 +1599,300 @@ msgstr ""
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:4
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:1
 msgid "C_ommand:"
 msgstr "_O ကွန်မန်း"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:5
 msgid "Co_mmand:"
 msgstr "_M ကွန်မန်း"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:6
 msgid "E_xecute flag:"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:7
 msgid "Image Viewer"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:8
 msgid "Instant Messenger"
 msgstr "စကားပြောပရိုဂရမ်"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:9
 msgid "Internet"
 msgstr "အင်တာနက်"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:10
 msgid "Mail Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:11
 msgid "Mobility"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:12
 msgid "Multimedia"
 msgstr "မာတီမီဒီယာ"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:13
 msgid "Multimedia Player"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:14
 msgid "Open link in new _tab"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:15
 msgid "Open link in new _window"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:16
 msgid "Open link with web browser _default"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:18
 msgid "Run at st_art"
 msgstr "_A အစပြုပြုချင်း ဖွင့်ပါ"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:19
 msgid "Run in t_erminal"
 msgstr "_E တာမီနယ်တွင်ဖွင့်ပါ"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:20
 msgid "System"
 msgstr "စနစ်ဆိုင်ရာ"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:21
 msgid "Terminal Emulator"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:22
 msgid "Text Editor"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:23
 msgid "Video Player"
 msgstr "ရုပ်ရှင်ဖွင့်စက်"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:24
 msgid "Visual"
 msgstr "ပုံသွင်ပြင်"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:25
 msgid "Web Browser"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:26
 msgid "_Run at start"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "Dasher"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Debian Sensible Browser"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "GNOME OnScreen Keyboard"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Listen"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Midori"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla 1.6"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Mail"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Mozilla Thunderbird"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Muine Music Player"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "Mutt"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:37
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "NXterm"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:38
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Netscape Communicator"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:39
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Opera"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:40
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:41
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "Orca with Magnifier"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:42
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "RXVT"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:43
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "Rhythmbox Music Player"
 msgstr " Rhythmbox သီချင်းဖွင့်စက်"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:44
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:45
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "SeaMonkey Mail"
 msgstr "SeaMonkey အီးမေးလ်"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:46
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Standard XTerminal"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:47
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:48
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Sylpheed-Claws"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:49
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Terminator"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:50
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Thunderbird"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:51
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "Totem Movie Player"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:52
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:52
 msgid "aterm"
 msgstr ""
 
@@ -1977,14 +1977,14 @@ msgstr ""
 msgid "Monitors"
 msgstr "မော်နီတာ"
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:44
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:44
 #, c-format
 msgid ""
 "Usage: %s SOURCE_FILE DEST_NAME\n"
 "\n"
 "This program installs a RANDR profile for multi-monitor setups into\n"
 "a systemwide location.  The resulting profile will get used when\n"
-"the RANDR plug-in gets run in gnome-settings-daemon.\n"
+"the RANDR plug-in gets run in cinnamon-settings-daemon.\n"
 "\n"
 "SOURCE_FILE - a full pathname, typically /home/username/.config/monitors."
 "xml\n"
@@ -1995,63 +1995,63 @@ msgid ""
 msgstr ""
 
 #. Translators: only able to install RANDR profiles as root
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:151
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:151
 msgid "This program can only be used by the root user"
 msgstr ""
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:168
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:168
 msgid "The source filename must be absolute"
 msgstr ""
 
 #. Translators: first %s is a filename; second %s is an error message
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:179
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:179
 #, c-format
 msgid "Could not open %s: %s\n"
 msgstr ""
 
 #. Translators: first %s is a filename; second %s is an error message
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:188
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:188
 #, c-format
 msgid "Could not get information for %s: %s\n"
 msgstr ""
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:195
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:195
 #, c-format
 msgid "%s must be a regular file\n"
 msgstr ""
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:204
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:204
 msgid "This program must only be run through pkexec(1)"
 msgstr ""
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:209
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:209
 msgid "PKEXEC_UID must be set to an integer value"
 msgstr ""
 
 #. Translators: we are complaining that a file must be really owned by the user who called this program
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:215
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:215
 #, c-format
 msgid "%s must be owned by you\n"
 msgstr ""
 
 #. Translators: here we are saying that a plain filename must look like "filename", not like "some_dir/filename"
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:223
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:223
 #, c-format
 msgid "%s must not have any directory components\n"
 msgstr ""
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:231
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:231
 #, c-format
 msgid "%s must be a directory\n"
 msgstr "%s  သည်ဖိုင်လမ်းညွှန်ဖြစ်နိုင်သည်\n"
 
 #. Translators: the first %s/%s is a directory/filename; the last %s is an error message
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:242
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:242
 #, c-format
 msgid "Could not open %s/%s: %s\n"
 msgstr "%s/%s: %s ကိုဖွင့်မရပါ\n"
 
-#: ../capplets/display/gnome-display-properties-install-systemwide.c:262
+#: ../capplets/display/cinnamon-display-properties-install-systemwide.c:262
 #, c-format
 msgid "Could not rename %s to %s: %s\n"
 msgstr "%s to %s: %s အမည်ပြောင်းမရပါ\n"
@@ -2165,25 +2165,25 @@ msgid "The type of accelerator."
 msgstr ""
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:119
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:119
 #: ../typing-break/drwright.c:498
 msgid "Disabled"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:200
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:200
 msgid "<Unknown Action>"
 msgstr "<အမည်မသိလုပ်ဆောင်ချက်>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:950
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1581
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:950
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1581
 msgid "Custom Shortcuts"
 msgstr "စိတ်ကြိုက အမြန်ခလုတ်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1092
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1092
 msgid "Error saving the new shortcut"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1171
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1171
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -2191,50 +2191,50 @@ msgid ""
 "Please try with a key such as Control, Alt or Shift at the same time."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1201
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1201
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
 "\"%s\""
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1207
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1207
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1215
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1215
 msgid "_Reassign"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1335
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1335
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1536
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1536
 msgid "Too many custom shortcuts"
 msgstr "စိတ်ကြိုက်အမြန်ခလုတ်များ များလွန်းသည်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1832
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1832
 msgid "Action"
 msgstr "လုပ်ဆောင်ချက်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1854
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1854
 msgid "Shortcut"
 msgstr "အမြန်ခလုတ်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:2
 msgid "Custom Shortcut"
 msgstr "စိတ်ကြိုက်အမြန်ခလုတ်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:3
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:3
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "ကီးဘုတ် အမြန်ခလုတ်"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:4
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
 "combination, or press backspace to clear."
@@ -2244,375 +2244,375 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "ကွန်မန်းသို့အမြန်ခလုတ်များကို ထည့်သွင်းပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:205
-#: ../capplets/keyboard/gnome-keyboard-properties.c:210
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:205
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:210
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:215
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:215
 msgid "Start the page with the typing break settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:220
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:220
 msgid "Start the page with the accessibility settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:226
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:226
 msgid "- GNOME Keyboard Preferences"
 msgstr "GNOME ကီးဘုတ်လိုလားချက်များ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:1
 msgid "Beep when _accessibility features are turned on or off"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:2
 msgid "Beep when a _modifier key is pressed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:3
 msgid "Beep when a _toggle key is pressed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:4
 msgid "Beep when a key is pr_essed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:5
 msgid "Beep when a key is reje_cted"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:6
 msgid "Beep when key is _accepted"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:7
 msgid "Beep when key is _rejected"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:8
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:4
 msgid "Bounce Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:9
 msgid "Flash _window titlebar"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:10
 msgid "Flash entire _screen"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:11
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:14
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "General"
 msgstr "အထွေထွေရေးရာ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:12
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:13
 msgid "Show _visual feedback for the alert sound"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:14
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:39
 msgid "Slow Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:15
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:40
 msgid "Sticky Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:16
 msgid "Visual cues for sounds"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:2
 msgid "All_ow postponing of breaks"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:3
 msgid "Audio _Feedback..."
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:5
 msgid "Check if breaks are allowed to be postponed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:6
 msgid "Cursor Blinking"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:7
 msgid "Cursor _blinks in text fields"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:8
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Cursor blinks speed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:9
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "D_elay:"
 msgstr "_E ကြာချိန်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:10
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:11
 msgid "Duration of the break when typing is disallowed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:12
 msgid "Duration of work before forcing a break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:13
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Fast"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:15
 msgid "Key presses _repeat when key is held down"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:16
 msgid "Keyboard Preferences"
 msgstr "ကီးဘုတ်လိုလားချက်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:17
 msgid "Keyboard _model:"
 msgstr "ကီးဘုတ်အမျိုးအစား"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:18
 msgid "Layouts"
 msgstr "လက်ကွက်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:19
 msgid "List of keyboard layouts selected for usage"
 msgstr "အသုံးပြုရန်အတွက် ကီးဘုတ်လက်ကွက်စာရင်း"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:20
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:21
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:19
 msgid "Long"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:22
 msgid "Mouse Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:23
 msgid "Move _Down"
 msgstr "_D အောက်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:24
 msgid "Move _Up"
 msgstr "_U အပေါ်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:25
 msgid "Move the selected keyboard layout down in the list"
 msgstr "စာရင်းထဲမှ ကီးဘုတ်ပုံစံကို အောက်သို့ချပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:26
 msgid "Move the selected keyboard layout up in the list"
 msgstr "စာရင်းထဲမှ ကီးဘုတ်ပုံစံကို အပေါ်သို့တင်ပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:27
 msgid "New windows u_se active window's layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:28
 msgid "Print a diagram of the selected keyboard layout"
 msgstr "ရွေးချယ်သည့် ကီးဘုတ်လက်ကွက်ပုံစံကို ပုံနှိပ်ပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:29
 msgid "Remove the selected keyboard layout from the list"
 msgstr "ရွေးချယ်လိုက်သည့် ကီးဘုတ်လက်ကွက်ကိုစာရင်းမှဖယ်ထုတ်ပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:30
 msgid "Repeat Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:31
 msgid "Repeat keys speed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:32
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:34
 msgid "Reset to De_faults"
 msgstr "_F မူလတိုင်းပြန်သတ်မှတ်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:35
 msgid "S_peed:"
 msgstr "_P အမြန်နှုန်း"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:36
 msgid "Select a keyboard layout to be added to the list"
 msgstr "စာရင်းထဲသို့ထည့်ရန် ကီးဘုတ်လက်ကွက်ကိုရွေးပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:37
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:37
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:27
 msgid "Short"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:38
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "Slow"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:41
 msgid "Typing Break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:42
 msgid "View and edit keyboard layout options"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:43
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Acceleration:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:44
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:44
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:46
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:46
 msgid "_Break interval lasts:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:47
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:38
 msgid "_Delay:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:48
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:48
 msgid "_Ignore fast duplicate keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:49
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:49
 msgid "_Lock screen to enforce typing break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:50
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:50
 msgid "_Only accept long keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:51
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:51
 msgid "_Options..."
 msgstr "_O ရွေးချယ်စရာများ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:52
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:52
 msgid "_Pointer can be controlled using the keypad"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:53
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:53
 msgid "_Separate layout for each window"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:54
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:54
 msgid "_Show..."
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:55
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:55
 msgid "_Simulate simultaneous keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:56
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:56
 msgid "_Speed:"
 msgstr "_S အမြန်နှုန်း"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:57
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:57
 msgid "_Type to test settings:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:58
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:58
 msgid "_Work interval lasts:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:59
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:59
 msgid "minutes"
 msgstr "မိနစ်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:1
 msgid "By _country"
 msgstr "_C နိုင်ငံအရ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:2
 msgid "By _language"
 msgstr "_L ဘာသာစကားအရ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:3
 msgid "Choose a Layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:4
 msgid "Preview:"
 msgstr "နမူနာ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:5
 msgid "_Country:"
 msgstr "_C နိုင်ငံ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:6
 msgid "_Language:"
 msgstr "_L ဘာသာစကား"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:7
 msgid "_Variants:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:1
 msgid "Choose a Keyboard Model"
 msgstr "ကီးဘုတ်အမျိုးအစားရွေးပါ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:2
 msgid "_Models:"
 msgstr "_M အမျိုးအစား"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:3
 msgid "_Vendors:"
 msgstr "_V ထုတ်လုပ်သူ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-options-dialog.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr "ကီးဘုတ်လက်ကွက်ရွေးချယ်ရန်"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:82
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:82
 msgid "Unknown"
 msgstr "အမည်မဲ့"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:242
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:242
 msgid "Layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:168
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:168
 msgid "Vendors"
 msgstr "ထုတ်လုပ်သူ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:234
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:234
 msgid "Models"
 msgstr "အမျိုးအစားများ"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:235
-#: ../capplets/network/gnome-network-properties.c:581
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:235
+#: ../capplets/network/cinnamon-network-properties.c:581
 msgid "Default"
 msgstr "မူလပုံစံ"
 
@@ -2626,370 +2626,370 @@ msgstr "ကီးဘုတ်အစီအမံများကိုသတ်မ
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:89
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:89
 msgid "gesture|Move left"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:94
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:94
 msgid "gesture|Move right"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:99
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:99
 msgid "gesture|Move up"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:104
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:104
 msgid "gesture|Move down"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:109
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:109
 msgid "gesture|Disabled"
 msgstr ""
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/mouse/gnome-mouse-properties.c:592
+#: ../capplets/mouse/cinnamon-mouse-properties.c:592
 msgid "Specify the name of the page to show (general|accessibility)"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.c:597
+#: ../capplets/mouse/cinnamon-mouse-properties.c:597
 msgid "- GNOME Mouse Preferences"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Choose type of click _beforehand"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Choose type of click with mo_use gestures"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "D_ouble click:"
 msgstr "_O နှစ်ချက်နှိပ်"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "D_rag click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Disable _touchpad while typing"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Double-Click Timeout"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "Drag and Drop"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "Dwell Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Enable _mouse clicks with touchpad"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "Enable h_orizontal scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "High"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "Locate Pointer"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:20
 msgid "Low"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:21
 msgid "Mouse Orientation"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:22
 msgid "Mouse Preferences"
 msgstr "မောက်(စ်)လိုလားချက်"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:23
 msgid "Pointer Speed"
 msgstr "ပွိုင့်တာ အမြန်နှုန်း"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:24
 msgid "Scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:25
 msgid "Seco_ndary click:"
 msgstr "_N "
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:26
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:28
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:28
 msgid "Show click type _window"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:29
 msgid "Simulated Secondary Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:32
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:32
 msgid "Thr_eshold:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:33
 msgid ""
 "To test your double-click settings, try to double-click on the light bulb."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:34
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "Touchpad"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:35
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "Two-_finger scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:36
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "You can also use the Dwell Click panel applet to choose the click type."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:39
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:39
 msgid "_Disabled"
 msgstr "_D အသုံးမပြု"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:40
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:40
 msgid "_Edge scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:41
 msgid "_Initiate click when stopping pointer movement"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:42
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:42
 msgid "_Left-handed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:43
 msgid "_Motion threshold:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:44
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:44
 msgid "_Right-handed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:45
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:45
 msgid "_Sensitivity:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:46
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:46
 msgid "_Single click:"
 msgstr "_S တစ်ချက်နှိပ်"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:47
 msgid "_Timeout:"
 msgstr "_T ကြာချိန်"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:48
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:48
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr ""
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "မောက်(စ်)"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "မောက်(စ်)လိုလားချက်များကို သတ်မှတ်ပါ"
 
-#: ../capplets/network/gnome-network-properties.c:699
-#: ../capplets/network/gnome-network-properties.c:850
+#: ../capplets/network/cinnamon-network-properties.c:699
+#: ../capplets/network/cinnamon-network-properties.c:850
 msgid "New Location..."
 msgstr "တည်နေရာအသစ်"
 
-#: ../capplets/network/gnome-network-properties.c:816
+#: ../capplets/network/cinnamon-network-properties.c:816
 msgid "Location already exists"
 msgstr "တည်နေရာသတ်မှတ်ထားပြီး"
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "ကွန်ရက် ကြားခံ"
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "ကွန်ရက် ကြားခံလိုလားချက်ကိုသတ်မှတ်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:1
+#: ../capplets/network/cinnamon-network-properties.ui.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>_R အင်တာနက်ကိုတိုက်ရိုက်ချိတ်ခြင်း</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:2
+#: ../capplets/network/cinnamon-network-properties.ui.h:2
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>_A ကြားခံကိုအလိုအလျောက်သတ်မှတ်ခြင်း</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:3
+#: ../capplets/network/cinnamon-network-properties.ui.h:3
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "_M စိတ်ကြိုက်ကြားခံသတ်မှတ်ခြင်း"
 
-#: ../capplets/network/gnome-network-properties.ui.h:4
+#: ../capplets/network/cinnamon-network-properties.ui.h:4
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_U အသိအမှတ်ပြုခြင်း</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:5
+#: ../capplets/network/cinnamon-network-properties.ui.h:5
 msgid "Autoconfiguration _URL:"
 msgstr "_U အလိုအလျောက် URL သတ်မှတ်ခြင်း"
 
-#: ../capplets/network/gnome-network-properties.ui.h:6
+#: ../capplets/network/cinnamon-network-properties.ui.h:6
 msgid "C_reate"
 msgstr "_R ထည့်သွင်း"
 
-#: ../capplets/network/gnome-network-properties.ui.h:7
+#: ../capplets/network/cinnamon-network-properties.ui.h:7
 msgid "Create New Location"
 msgstr "နေရာအသစ်ထည့်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:8
+#: ../capplets/network/cinnamon-network-properties.ui.h:8
 msgid "HTTP Proxy Details"
 msgstr "HTTP ကြားခံအသေးစိတ်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:9
+#: ../capplets/network/cinnamon-network-properties.ui.h:9
 msgid "H_TTP proxy:"
 msgstr "_T HTTP ကြားခံ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:10
+#: ../capplets/network/cinnamon-network-properties.ui.h:10
 msgid "Ignore Host List"
 msgstr "အသုံးမပြုသည့် အခြေစိုက်စာရင်း"
 
-#: ../capplets/network/gnome-network-properties.ui.h:11
+#: ../capplets/network/cinnamon-network-properties.ui.h:11
 msgid "Ignored Hosts"
 msgstr "အသုံးမပြုသည့် အခြေစိုက်များ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:12
+#: ../capplets/network/cinnamon-network-properties.ui.h:12
 msgid "Location:"
 msgstr "တည်နေရာ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:13
+#: ../capplets/network/cinnamon-network-properties.ui.h:13
 msgid "Network Proxy Preferences"
 msgstr "နက်ဝက် ကြားခံလိုလားချက် သတ်မှတ်ရန်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:14
+#: ../capplets/network/cinnamon-network-properties.ui.h:14
 msgid "Port:"
 msgstr "ဆက်သွယ်ပေါက်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:15
+#: ../capplets/network/cinnamon-network-properties.ui.h:15
 msgid "Proxy Configuration"
 msgstr "ကြားခံ သတ်မှတ်ခြင်း"
 
-#: ../capplets/network/gnome-network-properties.ui.h:16
+#: ../capplets/network/cinnamon-network-properties.ui.h:16
 msgid "S_ocks host:"
 msgstr "_O Socks အခြေစိုက်ရာ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:17
+#: ../capplets/network/cinnamon-network-properties.ui.h:17
 msgid "The location already exists."
 msgstr "တည်နေရာကိုထည့်သွင်းပြီသားဖြစ်သည်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:18
+#: ../capplets/network/cinnamon-network-properties.ui.h:18
 msgid "U_sername:"
 msgstr "_S အသုံးပြုအမည်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:19
+#: ../capplets/network/cinnamon-network-properties.ui.h:19
 msgid "_Delete Location"
 msgstr "_D တည်နေရာကိုဖျက်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:20
+#: ../capplets/network/cinnamon-network-properties.ui.h:20
 msgid "_Details"
 msgstr "_D အသေးစိတ်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:21
+#: ../capplets/network/cinnamon-network-properties.ui.h:21
 msgid "_FTP proxy:"
 msgstr "_FTP ကြားခံ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:22
+#: ../capplets/network/cinnamon-network-properties.ui.h:22
 msgid "_Location name:"
 msgstr "_L တည်နေရာ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:23
+#: ../capplets/network/cinnamon-network-properties.ui.h:23
 msgid "_Password:"
 msgstr "_P စကားဝှက်"
 
-#: ../capplets/network/gnome-network-properties.ui.h:24
+#: ../capplets/network/cinnamon-network-properties.ui.h:24
 msgid "_Secure HTTP proxy:"
 msgstr "_S HTTPs ကြားခံ"
 
-#: ../capplets/network/gnome-network-properties.ui.h:25
+#: ../capplets/network/cinnamon-network-properties.ui.h:25
 msgid "_Use the same proxy for all protocols"
 msgstr "_U ပရိုတိုကောအားလုံးအတွက် ကြားခံ တစ်မျိုးသာသုံးမည်"
 
-#: ../capplets/windows/gnome-window-properties.c:344
+#: ../capplets/windows/cinnamon-window-properties.c:344
 msgid "Cannot start the preferences application for your window manager"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.c:603
+#: ../capplets/windows/cinnamon-window-properties.c:603
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:609
+#: ../capplets/windows/cinnamon-window-properties.c:609
 msgid "H_yper"
 msgstr "H_yper"
 
-#: ../capplets/windows/gnome-window-properties.c:616
+#: ../capplets/windows/cinnamon-window-properties.c:616
 msgid "S_uper (or \"Windows logo\")"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.c:623
+#: ../capplets/windows/cinnamon-window-properties.c:623
 msgid "_Meta"
 msgstr "_Meta"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:1
+#: ../capplets/windows/cinnamon-window-properties.ui.h:1
 msgid "Movement Key"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:2
+#: ../capplets/windows/cinnamon-window-properties.ui.h:2
 msgid "Titlebar Action"
 msgstr "ခေါင်းစီးဘားတန်းလုပ်ဆောင်မှု"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:3
+#: ../capplets/windows/cinnamon-window-properties.ui.h:3
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:4
+#: ../capplets/windows/cinnamon-window-properties.ui.h:4
 msgid "Window Preferences"
 msgstr "ဝင်ဒိုးလိုလားချက်များ"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:5
+#: ../capplets/windows/cinnamon-window-properties.ui.h:5
 msgid "Window Selection"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:6
+#: ../capplets/windows/cinnamon-window-properties.ui.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_D အခုလုပ်ဆောင်မှုကိုပြုလုပ်ရန် ခေါင်းစဉ်ဘားတန်းကို နှစ်ချက်နှိပ်ပါ"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:7
+#: ../capplets/windows/cinnamon-window-properties.ui.h:7
 msgid "_Interval before raising:"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:8
+#: ../capplets/windows/cinnamon-window-properties.ui.h:8
 msgid "_Raise selected windows after an interval"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:9
+#: ../capplets/windows/cinnamon-window-properties.ui.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:10
+#: ../capplets/windows/cinnamon-window-properties.ui.h:10
 msgid "seconds"
 msgstr "စက္ကန့်"
 
@@ -3001,7 +3001,7 @@ msgstr "ဝင်းဒိုးဆိုင်ရာ ဂုဏ်သတ္တ�
 msgid "Windows"
 msgstr "ဝင်းဒိုး"
 
-#: ../libwindow-settings/gnome-wm-manager.c:316
+#: ../libwindow-settings/cinnamon-wm-manager.c:316
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr ""
@@ -3111,7 +3111,7 @@ msgstr ""
 #: ../shell/control-center.schemas.in.h:13
 msgid ""
 "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;default-"
-"applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+"applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 msgstr ""
 
 #: ../shell/control-center.schemas.in.h:14
@@ -3310,11 +3310,11 @@ msgstr ""
 msgid "I_nstall Font"
 msgstr "_N ဖောင့်သွင်းရန်"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:1
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:1
 msgid "Font Viewer"
 msgstr "ဖောင့်ကြည့်ရန်"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:2
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "Preview fonts"
 msgstr "ဖောင့်နမူနာကြည့်"
 

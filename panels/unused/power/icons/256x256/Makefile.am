@@ -2,7 +2,7 @@ NULL =
 
 icondir = $(datadir)/icons/hicolor/256x256/apps
 icon_DATA = 				\
-	gnome-power-manager.png			\
+	cinnamon-power-manager.png			\
 	$(NULL)
 
 EXTRA_DIST = \

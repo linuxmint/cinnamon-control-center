@@ -22,10 +22,10 @@
 #include "cc-region-panel.h"
 #include <gtk/gtk.h>
 
-#include "gnome-region-panel-xkb.h"
-#include "gnome-region-panel-lang.h"
-#include "gnome-region-panel-formats.h"
-#include "gnome-region-panel-system.h"
+#include "cinnamon-region-panel-xkb.h"
+#include "cinnamon-region-panel-lang.h"
+#include "cinnamon-region-panel-formats.h"
+#include "cinnamon-region-panel-system.h"
 
 G_DEFINE_DYNAMIC_TYPE (CcRegionPanel, cc_region_panel, CC_TYPE_PANEL)
 
@@ -140,7 +140,7 @@ cc_region_panel_init (CcRegionPanel * self)
 	priv->builder = gtk_builder_new ();
 
 	gtk_builder_add_from_file (priv->builder,
-				   GNOMECC_UI_DIR "/gnome-region-panel.ui",
+				   CINNAMONCC_UI_DIR "/cinnamon-region-panel.ui",
 				   &error);
 	if (error != NULL) {
 		g_warning ("Error loading UI file: %s", error->message);

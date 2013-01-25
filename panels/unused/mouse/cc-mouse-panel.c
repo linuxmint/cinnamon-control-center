@@ -23,8 +23,8 @@
  */
 
 #include "cc-mouse-panel.h"
-#include "gnome-mouse-properties.h"
-#include "gnome-mouse-test.h"
+#include "cinnamon-mouse-properties.h"
+#include "cinnamon-mouse-test.h"
 #include <gtk/gtk.h>
 
 #include <glib/gi18n.h>
@@ -188,7 +188,7 @@ cc_mouse_panel_init (CcMousePanel *self)
   priv->builder = gtk_builder_new ();
 
   gtk_builder_add_from_file (priv->builder,
-                             GNOMECC_UI_DIR "/gnome-mouse-properties.ui",
+                             CINNAMONCC_UI_DIR "/cinnamon-mouse-properties.ui",
                              &error);
   if (error != NULL)
     {
@@ -197,7 +197,7 @@ cc_mouse_panel_init (CcMousePanel *self)
     }
 
   gtk_builder_add_from_file (priv->builder,
-                             GNOMECC_UI_DIR "/gnome-mouse-test.ui",
+                             CINNAMONCC_UI_DIR "/cinnamon-mouse-test.ui",
                              &error);
   if (error != NULL)
     {

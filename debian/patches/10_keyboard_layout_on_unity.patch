@@ -46,10 +46,10 @@ Index: cinnamon-control-center-3.6.3/panels/region/cc-region-panel.c
  }
  
  void
-Index: cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel.desktop.in.in
 ===================================================================
---- cinnamon-control-center-3.6.3.orig/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:02.819915981 -0500
-+++ cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.desktop.in.in	2012-11-23 19:09:08.119915759 -0500
+--- cinnamon-control-center-3.6.3.orig/panels/region/cinnamon-region-panel.desktop.in.in	2012-11-23 19:09:02.819915981 -0500
++++ cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel.desktop.in.in	2012-11-23 19:09:08.119915759 -0500
 @@ -7,7 +7,7 @@
  Type=Application
  StartupNotify=true
@@ -86,23 +86,23 @@ Index: cinnamon-control-center-3.6.3/configure.ac
 --- cinnamon-control-center-3.6.3.orig/configure.ac	2012-11-23 19:09:05.027915889 -0500
 +++ cinnamon-control-center-3.6.3/configure.ac	2012-11-23 19:11:51.987908906 -0500
 @@ -395,6 +395,7 @@
- panels/keyboard/gnome-keybindings.pc
+ panels/keyboard/cinnamon-keybindings.pc
  panels/region/Makefile
- panels/region/gnome-region-panel.desktop.in
+ panels/region/cinnamon-region-panel.desktop.in
 +panels/region/ubuntu-region-panel.desktop.in
  panels/mouse/Makefile
- panels/mouse/gnome-mouse-panel.desktop.in
+ panels/mouse/cinnamon-mouse-panel.desktop.in
  panels/online-accounts/Makefile
 Index: cinnamon-control-center-3.6.3/panels/region/Makefile.am
 ===================================================================
 --- cinnamon-control-center-3.6.3.orig/panels/region/Makefile.am	2012-11-23 19:09:05.027915889 -0500
 +++ cinnamon-control-center-3.6.3/panels/region/Makefile.am	2012-11-23 19:11:12.023910577 -0500
 @@ -43,7 +43,7 @@
- 	gnome-region-panel-options-dialog.ui
+ 	cinnamon-region-panel-options-dialog.ui
  
  desktopdir = $(datadir)/applications
--Desktop_in_files = gnome-region-panel.desktop.in
-+Desktop_in_files = gnome-region-panel.desktop.in ubuntu-region-panel.desktop.in
+-Desktop_in_files = cinnamon-region-panel.desktop.in
++Desktop_in_files = cinnamon-region-panel.desktop.in ubuntu-region-panel.desktop.in
  desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
  
  CLEANFILES = $(Desktop_in_files) $(desktop_DATA)

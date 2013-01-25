@@ -5,10 +5,10 @@ cappletname = color
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(COLOR_PANEL_CFLAGS)				\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
 	-DBINDIR="\"$(bindir)\""			\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	$(NULL)
 
 ccpanelsdir = $(PANELS_DIR)

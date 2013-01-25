@@ -660,7 +660,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/keyboard/cc
 +  GError *error = NULL;
    GtkWidget *widget;
  
-+  const gchar *uifile = GNOMECC_UI_DIR "/gnome-keyboard-panel.ui";
++  const gchar *uifile = CINNAMONCC_UI_DIR "/cinnamon-keyboard-panel.ui";
 +
    obj = G_OBJECT_CLASS (cc_keyboard_panel_parent_class)->constructor (gtype, n_properties, properties);
  
@@ -688,7 +688,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/keyboard/cc
 -static const char *
 -cc_keyboard_panel_get_help_uri (CcPanel *panel)
 -{
--  return "help:gnome-help/keyboard";
+-  return "help:cinnamon-help/keyboard";
 -}
 -
 -static void
@@ -737,7 +737,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/keyboard/cc
  static void
  cc_keyboard_panel_init (CcKeyboardPanel *self)
  {
--  const gchar *uifile = GNOMECC_UI_DIR "/gnome-keyboard-panel.ui";
+-  const gchar *uifile = CINNAMONCC_UI_DIR "/cinnamon-keyboard-panel.ui";
 -  CcKeyboardPanelPrivate *priv;
 -  GError *error = NULL;
 -
@@ -1748,11 +1748,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cc-r
  #include "cc-region-panel.h"
  #include <gtk/gtk.h>
  
--#include "gnome-region-panel-input.h"
-+#include "gnome-region-panel-xkb.h"
- #include "gnome-region-panel-lang.h"
- #include "gnome-region-panel-formats.h"
- #include "gnome-region-panel-system.h"
+-#include "cinnamon-region-panel-input.h"
++#include "cinnamon-region-panel-xkb.h"
+ #include "cinnamon-region-panel-lang.h"
+ #include "cinnamon-region-panel-formats.h"
+ #include "cinnamon-region-panel-system.h"
  
 -CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
 +G_DEFINE_DYNAMIC_TYPE (CcRegionPanel, cc_region_panel, CC_TYPE_PANEL)
@@ -1766,7 +1766,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cc-r
 -static const char *
 -cc_region_panel_get_help_uri (CcPanel *panel)
 -{
--  return "help:gnome-help/prefs-language";
+-  return "help:cinnamon-help/prefs-language";
 -}
 -
  static void
@@ -1803,9 +1803,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cc-r
  	setup_language (priv->builder);
  	setup_formats (priv->builder);
  	setup_system (priv->builder);
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input.c	2012-11-14 12:42:44.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input.c	1970-01-01 01:00:00.000000000 +0100
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input.c	2012-11-14 12:42:44.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input.c	1970-01-01 01:00:00.000000000 +0100
 @@ -1,1568 +0,0 @@
 -/*
 - * Copyright (C) 2011 Red Hat, Inc.
@@ -1844,7 +1844,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -#endif
 -
 -#include "gdm-languages.h"
--#include "gnome-region-panel-input.h"
+-#include "cinnamon-region-panel-input.h"
 -
 -#define WID(s) GTK_WIDGET(gtk_builder_get_object (builder, s))
 -
@@ -3298,7 +3298,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -
 -  builder = gtk_builder_new ();
 -  gtk_builder_add_from_file (builder,
--                             GNOMECC_UI_DIR "/gnome-region-panel-input-chooser.ui",
+-                             CINNAMONCC_UI_DIR "/cinnamon-region-panel-input-chooser.ui",
 -                             NULL);
 -  chooser = WID ("input_source_chooser");
 -  input_chooser = chooser;
@@ -3375,9 +3375,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -
 -  return gtk_tree_selection_get_selected (selection, model, iter);
 -}
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input-chooser.ui cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input-chooser.ui
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input-chooser.ui	2012-10-01 11:38:59.000000000 +0200
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input-chooser.ui	1970-01-01 01:00:00.000000000 +0100
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input-chooser.ui cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input-chooser.ui
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input-chooser.ui	2012-10-01 11:38:59.000000000 +0200
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input-chooser.ui	1970-01-01 01:00:00.000000000 +0100
 @@ -1,157 +0,0 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -<interface>
@@ -3536,11 +3536,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -    </action-widgets>
 -  </object>
 -</interface>
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input.h cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input.h
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-input.h	2012-10-01 11:38:59.000000000 +0200
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-input.h	1970-01-01 01:00:00.000000000 +0100
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input.h cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input.h
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-input.h	2012-10-01 11:38:59.000000000 +0200
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-input.h	1970-01-01 01:00:00.000000000 +0100
 @@ -1,36 +0,0 @@
--/* gnome-region-panel-input.h
+-/* cinnamon-region-panel-input.h
 - * Copyright (C) 2011 Red Hat, Inc.
 - *
 - * Written by Matthias Clasen
@@ -3576,9 +3576,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -G_END_DECLS
 -
 -#endif  /* __GNOME_KEYBOARD_PROPERTY_INPUT_H */
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-layout-chooser.ui cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-layout-chooser.ui
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-layout-chooser.ui	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-layout-chooser.ui	2011-08-25 17:09:31.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-layout-chooser.ui cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-layout-chooser.ui
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-layout-chooser.ui	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-layout-chooser.ui	2011-08-25 17:09:31.000000000 +0200
 @@ -0,0 +1,180 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<interface>
@@ -3760,9 +3760,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +    </action-widgets>
 +  </object>
 +</interface>
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-options-dialog.ui cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-options-dialog.ui
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-options-dialog.ui	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-options-dialog.ui	2011-08-25 17:09:31.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-options-dialog.ui cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-options-dialog.ui
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-options-dialog.ui	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-options-dialog.ui	2011-08-25 17:09:31.000000000 +0200
 @@ -0,0 +1,79 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<interface>
@@ -3843,9 +3843,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +    </action-widgets>
 +  </object>
 +</interface>
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-system.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-system.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-system.c	2012-11-05 09:38:42.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-system.c	2012-04-10 17:01:29.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-system.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-system.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-system.c	2012-11-05 09:38:42.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-system.c	2012-04-10 17:01:29.000000000 +0200
 @@ -29,16 +29,13 @@
  
  #include <glib/gi18n.h>
@@ -3856,8 +3856,8 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +#include <libgnomekbd/gkbd-keyboard-config.h>
  #include "cc-common-language.h"
  #include "gdm-languages.h"
- #include "gnome-region-panel-system.h"
-+#include "gnome-region-panel-xkb.h"
+ #include "cinnamon-region-panel-system.h"
++#include "cinnamon-region-panel-xkb.h"
  
 -#define WID(s) GTK_WIDGET(gtk_builder_get_object (dialog, s))
 -
@@ -4140,9 +4140,9 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
  
          bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, NULL);
          g_dbus_proxy_new (bus,
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.ui cinnamon-control-center-3.4.2/panels/region/gnome-region-panel.ui
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel.ui	2012-10-01 11:39:03.000000000 +0200
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel.ui	2012-04-10 17:01:29.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel.ui cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel.ui
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel.ui	2012-10-01 11:39:03.000000000 +0200
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel.ui	2012-04-10 17:01:29.000000000 +0200
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="UTF-8"?>
  <interface>
@@ -5128,11 +5128,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 -    </widgets>
 -  </object>
  </interface>
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkb.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkb.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkb.c	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkb.c	2011-09-01 12:01:00.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkb.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkb.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkb.c	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkb.c	2011-09-01 12:01:00.000000000 +0200
 @@ -0,0 +1,190 @@
-+/* gnome-region-panel-xkb.c
++/* cinnamon-region-panel-xkb.c
 + * Copyright (C) 2003-2007 Sergey V. Udaltsov
 + *
 + * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -5161,7 +5161,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +#include <gdk/gdkx.h>
 +#include <glib/gi18n.h>
 +
-+#include "gnome-region-panel-xkb.h"
++#include "cinnamon-region-panel-xkb.h"
 +
 +#include <libgnomekbd/gkbd-desktop-config.h>
 +
@@ -5322,11 +5322,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +	gkbd_keyboard_config_term (&gswic);
 +	gtk_widget_set_sensitive (WID ("xkb_reset_to_defaults"), enable);
 +}
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkb.h cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkb.h
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkb.h	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkb.h	2011-08-25 17:09:31.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkb.h cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkb.h
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkb.h	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkb.h	2011-08-25 17:09:31.000000000 +0200
 @@ -0,0 +1,96 @@
-+/* gnome-region-panel-xkb.h
++/* cinnamon-region-panel-xkb.h
 + * Copyright (C) 2003-2007 Sergey V Udaltsov
 + *
 + * Written by Sergey V. Udaltsov <svu@gnome.org>
@@ -5422,11 +5422,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +
 +G_END_DECLS
 +#endif				/* __GNOME_KEYBOARD_PROPERTY_XKB_H */
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbltadd.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbltadd.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbltadd.c	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbltadd.c	2012-03-05 15:04:55.000000000 +0100
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbltadd.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbltadd.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbltadd.c	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbltadd.c	2012-03-05 15:04:55.000000000 +0100
 @@ -0,0 +1,495 @@
-+/* gnome-region-panel-xkbltadd.c
++/* cinnamon-region-panel-xkbltadd.c
 + * Copyright (C) 2007 Sergey V. Udaltsov
 + *
 + * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -5456,7 +5456,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +#include <libgnomekbd/gkbd-keyboard-drawing.h>
 +#include <libgnomekbd/gkbd-util.h>
 +
-+#include "gnome-region-panel-xkb.h"
++#include "cinnamon-region-panel-xkb.h"
 +
 +enum {
 +	COMBO_BOX_MODEL_COL_SORT,
@@ -5807,8 +5807,8 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +	GtkListStore *model;
 +	GtkTreeModelFilter *filtered_model;
 +
-+	gtk_builder_add_from_file (chooser_dialog, GNOMECC_UI_DIR
-+				   "/gnome-region-panel-layout-chooser.ui",
++	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
++				   "/cinnamon-region-panel-layout-chooser.ui",
 +				   NULL);
 +	chooser = CWID ("xkb_layout_chooser");
 +	xkb_filtered_layouts_list = CWID ("xkb_filtered_layouts_list");
@@ -5921,11 +5921,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +
 +	return v_id;
 +}
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkblt.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkblt.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkblt.c	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkblt.c	2011-09-01 12:01:00.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkblt.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkblt.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkblt.c	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkblt.c	2011-09-01 12:01:00.000000000 +0200
 @@ -0,0 +1,470 @@
-+/* gnome-region-panel-xkblt.c
++/* cinnamon-region-panel-xkblt.c
 + * Copyright (C) 2003-2007 Sergey V. Udaltsov
 + *
 + * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -5956,7 +5956,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +#include <libgnomekbd/gkbd-desktop-config.h>
 +#include <libgnomekbd/gkbd-keyboard-drawing.h>
 +
-+#include "gnome-region-panel-xkb.h"
++#include "cinnamon-region-panel-xkb.h"
 +
 +enum {
 +	SEL_LAYOUT_TREE_COL_DESCRIPTION,
@@ -6395,11 +6395,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +	g_signal_connect (xkb_keyboard_settings, "changed",
 +			  G_CALLBACK (xkb_layouts_update_list), dialog);
 +}
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbot.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbot.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbot.c	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbot.c	2012-03-05 15:04:55.000000000 +0100
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbot.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbot.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbot.c	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbot.c	2012-03-05 15:04:55.000000000 +0100
 @@ -0,0 +1,515 @@
-+/* gnome-region-panel-xkbot.c
++/* cinnamon-region-panel-xkbot.c
 + * Copyright (C) 2003-2007 Sergey V. Udaltsov
 + *
 + * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -6428,7 +6428,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +#include <glib/gi18n.h>
 +#include <string.h>
 +
-+#include "gnome-region-panel-xkb.h"
++#include "cinnamon-region-panel-xkb.h"
 +
 +static GtkBuilder *chooser_dialog = NULL;
 +static const char *current1st_level_id = NULL;
@@ -6843,8 +6843,8 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +	GtkWidget *chooser;
 +
 +	chooser_dialog = gtk_builder_new ();
-+	gtk_builder_add_from_file (chooser_dialog, GNOMECC_UI_DIR
-+				   "/gnome-region-panel-options-dialog.ui",
++	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
++				   "/cinnamon-region-panel-options-dialog.ui",
 +				   NULL);
 +
 +	chooser = CWID ("xkb_options_dialog");
@@ -6914,11 +6914,11 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +	g_signal_connect (xkb_keyboard_settings, "changed",
 +			  G_CALLBACK (xkb_options_update), dialog);
 +}
-diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbpv.c cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbpv.c
---- cinnamon-control-center-3.6.3/panels/region/gnome-region-panel-xkbpv.c	1970-01-01 01:00:00.000000000 +0100
-+++ cinnamon-control-center-3.4.2/panels/region/gnome-region-panel-xkbpv.c	2011-08-25 17:09:31.000000000 +0200
+diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbpv.c cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbpv.c
+--- cinnamon-control-center-3.6.3/panels/region/cinnamon-region-panel-xkbpv.c	1970-01-01 01:00:00.000000000 +0100
++++ cinnamon-control-center-3.4.2/panels/region/cinnamon-region-panel-xkbpv.c	2011-08-25 17:09:31.000000000 +0200
 @@ -0,0 +1,120 @@
-+/* gnome-region-panel-xkbpv.c
++/* cinnamon-region-panel-xkbpv.c
 + * Copyright (C) 2003-2007 Sergey V. Udaltsov
 + *
 + * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -6945,7 +6945,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/gnom
 +
 +#include <libgnomekbd/gkbd-keyboard-drawing.h>
 +
-+#include "gnome-region-panel-xkb.h"
++#include "cinnamon-region-panel-xkb.h"
 +
 +#ifdef HAVE_X11_EXTENSIONS_XKB_H
 +#include "X11/XKBlib.h"
@@ -7042,32 +7042,32 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/Make
 --- cinnamon-control-center-3.6.3/panels/region/Makefile.am	2012-10-01 11:38:59.000000000 +0200
 +++ cinnamon-control-center-3.4.2/panels/region/Makefile.am	2012-03-05 15:04:55.000000000 +0100
 @@ -23,9 +23,12 @@
- 	gnome-region-panel-lang.h \
- 	gnome-region-panel-system.c \
- 	gnome-region-panel-system.h \
--	gnome-region-panel-input.c \
--	gnome-region-panel-input.h \
+ 	cinnamon-region-panel-lang.h \
+ 	cinnamon-region-panel-system.c \
+ 	cinnamon-region-panel-system.h \
+-	cinnamon-region-panel-input.c \
+-	cinnamon-region-panel-input.h \
 -	$(NULL)
-+	gnome-region-panel-xkb.c \
-+	gnome-region-panel-xkblt.c \
-+	gnome-region-panel-xkbltadd.c \
-+	gnome-region-panel-xkbot.c \
-+	gnome-region-panel-xkbpv.c \
-+	gnome-region-panel-xkb.h
++	cinnamon-region-panel-xkb.c \
++	cinnamon-region-panel-xkblt.c \
++	cinnamon-region-panel-xkbltadd.c \
++	cinnamon-region-panel-xkbot.c \
++	cinnamon-region-panel-xkbpv.c \
++	cinnamon-region-panel-xkb.h
  
  libregion_la_LIBADD = $(PANEL_LIBS) $(REGION_PANEL_LIBS) $(builddir)/../common/liblanguage.la
  
 @@ -36,8 +39,8 @@
  uidir   = $(pkgdatadir)/ui
  ui_DATA = \
- 	gnome-region-panel.ui \
--	gnome-region-panel-input-chooser.ui \
+ 	cinnamon-region-panel.ui \
+-	cinnamon-region-panel-input-chooser.ui \
 -	$(NULL)
-+	gnome-region-panel-layout-chooser.ui \
-+	gnome-region-panel-options-dialog.ui
++	cinnamon-region-panel-layout-chooser.ui \
++	cinnamon-region-panel-options-dialog.ui
  
  desktopdir = $(datadir)/applications
- Desktop_in_files = gnome-region-panel.desktop.in
+ Desktop_in_files = cinnamon-region-panel.desktop.in
  
 --- cinnamon-control-center-3.4.2/configure.ac	2012-05-15 12:19:58.000000000 +0200
 +++ cinnamon-control-center-3.6.3/configure.ac	2012-11-14 13:08:00.000000000 +0100

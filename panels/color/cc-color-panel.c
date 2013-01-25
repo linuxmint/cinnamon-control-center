@@ -2497,7 +2497,7 @@ cc_color_panel_init (CcColorPanel *prefs)
 
   priv->builder = gtk_builder_new ();
   gtk_builder_add_from_file (priv->builder,
-                             GNOMECC_UI_DIR "/color.ui",
+                             CINNAMONCC_UI_DIR "/color.ui",
                              &error);
 
   if (error != NULL)

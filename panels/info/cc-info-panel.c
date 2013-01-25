@@ -2003,7 +2003,7 @@ cc_info_panel_init (CcInfoPanel *self)
     }
 
   gtk_builder_add_from_file (self->priv->builder,
-                             GNOMECC_UI_DIR "/info.ui",
+                             CINNAMONCC_UI_DIR "/info.ui",
                              &error);
 
   if (error != NULL)

@@ -1,4 +1,4 @@
-/* gnome-region-panel-xkb.h
+/* cinnamon-region-panel-xkb.h
  * Copyright (C) 2003-2007 Sergey V Udaltsov
  *
  * Written by Sergey V. Udaltsov <svu@gnome.org>

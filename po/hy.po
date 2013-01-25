@@ -156,57 +156,57 @@ msgstr "Խնդրում ենք նկար ընտրել։"
 msgid "_Select"
 msgstr "_Ընտրել"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:1
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:1
 msgid "Date And Time"
 msgstr "Ամսաթիվ և Ժամանակ"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Date and Time preferences panel"
 msgstr "Ամսաթիվը և Ժամանակի նախընտրությունների վահանակ"
 
-#: ../panels/default-applications/gnome-default-applications-panel.desktop.in.in.h:1
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:17
+#: ../panels/default-applications/cinnamon-default-applications-panel.desktop.in.in.h:1
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:17
 msgid "Preferred Applications"
 msgstr "Նախընտրելի ծրագրեր"
 
-#: ../panels/default-applications/gnome-default-applications-panel.desktop.in.in.h:2
+#: ../panels/default-applications/cinnamon-default-applications-panel.desktop.in.in.h:2
 msgid "Select your default applications"
 msgstr "Ընտրել նախնական ծրագրերը"
 
-#: ../panels/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../panels/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr "Սկսել նախընտրելի տեսողական աջակցող տեխնոլոգիան"
 
-#: ../panels/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../panels/default-applications/cinnamon-at-session.desktop.in.in.h:2
 msgid "Visual Assistance"
 msgstr "Տեսողական օգնություն"
 
-#: ../panels/default-applications/gnome-da-capplet.c:99
-#: ../panels/default-applications/gnome-da-capplet.c:363
-#: ../panels/default-applications/gnome-da-capplet.c:384
+#: ../panels/default-applications/cinnamon-da-capplet.c:99
+#: ../panels/default-applications/cinnamon-da-capplet.c:363
+#: ../panels/default-applications/cinnamon-da-capplet.c:384
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr "Սխալ՝ %s կոնֆիգուրացիան պահպանելիս"
 
-#: ../panels/default-applications/gnome-da-capplet.c:692
+#: ../panels/default-applications/cinnamon-da-capplet.c:692
 msgid "Custom"
 msgstr "Սովորական"
 
-#: ../panels/default-applications/gnome-da-capplet.c:723
+#: ../panels/default-applications/cinnamon-da-capplet.c:723
 msgid "Could not load the main interface"
 msgstr "Չի հաջողվել բեռնել գլխավոր ինտերֆեյսը"
 
-#: ../panels/default-applications/gnome-da-capplet.c:725
+#: ../panels/default-applications/cinnamon-da-capplet.c:725
 msgid "Please make sure that the applet is properly installed"
 msgstr "Խնդրում ենք համոզվել, որ ապլետը ճիշտ է տեղադրված"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:1
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:1
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Accessibility"
 msgstr "Հասանելիություն"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:3
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:3
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr "Բոլոր %s դեպքերը կտեղափոխվեն իրական տողերով"
@@ -214,301 +214,301 @@ msgstr "Բոլոր %s դեպքերը կտեղափոխվեն իրական տող�
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:4
-#: ../panels/keybindings/gnome-keybinding-properties.ui.h:1
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:4
+#: ../panels/keybindings/cinnamon-keybinding-properties.ui.h:1
 msgid "C_ommand:"
 msgstr "Հ_րաման՝"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:5
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:5
 msgid "Co_mmand:"
 msgstr "Հ_րաման՝"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:6
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:6
 msgid "E_xecute flag:"
 msgstr "Գ_ործարկել դրոշակը՝"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:7
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:7
 msgid "Image Viewer"
 msgstr "Նկարի դիտակ"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:8
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:8
 msgid "Instant Messenger"
 msgstr "Ակնթարթային հաղորդագրող"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:9
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:9
 msgid "Internet"
 msgstr "Համացանց"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:10
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:10
 msgid "Mail Reader"
 msgstr "Էլ–փոստ ընթերցող"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:11
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:11
 msgid "Mobility"
 msgstr "Շարժունություն"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:12
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:12
 msgid "Multimedia"
 msgstr "Մուլտիմեդիա"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:13
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:13
 msgid "Multimedia Player"
 msgstr "Մուլտիմեդիա նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:14
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:14
 msgid "Open link in new _tab"
 msgstr "Բացել տողը նոր _ներդիրով"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:15
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:15
 msgid "Open link in new _window"
 msgstr "Բացել տողը նոր _պատուհանով"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:16
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:16
 msgid "Open link with web browser _default"
 msgstr "Բացել տողը նոր վեբ զննիչով _նախնական"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:18
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:18
 msgid "Run at st_art"
 msgstr "Սկսել սկ_զբից"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:19
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:19
 msgid "Run in t_erminal"
 msgstr "Սկսել տ_երմինալում"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:20
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:20
 msgid "System"
 msgstr "Համակարգ"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:21
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:21
 msgid "Terminal Emulator"
 msgstr "Տերմինալի էմուլյատոր"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:22
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:22
 msgid "Text Editor"
 msgstr "Տեքստային խմբագիր"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:23
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:23
 msgid "Video Player"
 msgstr "Վիդեո նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:24
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:24
 msgid "Visual"
 msgstr "Տեսողական"
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:25
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:25
 msgid "Web Browser"
 msgstr "Վեբ զննիչ "
 
-#: ../panels/default-applications/gnome-default-applications-properties.ui.h:26
+#: ../panels/default-applications/cinnamon-default-applications-properties.ui.h:26
 msgid "_Run at start"
 msgstr "_Սկսել սկզբից"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:1
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Բալսա"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:2
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr "Banshee երաժշտական նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:3
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr "Claws Mail"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:4
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:4
 #: ../panels/universal-access/uap.ui.h:31
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:5
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Debian Sensible Browser"
 msgstr "Debian Զգայուն զննիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:6
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr "Debian Տերմինալի էմուլյատոր"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:7
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:8
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr "Շրջապատել"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:9
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr "Epiphany վեբ զննիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:10
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr "Evolution փոստային ընթերցող"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:11
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:12
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:13
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr "GNOME խոշորացույց առանց էկրանի ընթերցող սարքի"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:14
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "GNOME OnScreen Keyboard"
 msgstr "GNOME OnScreen ստեղնաշար"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:15
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr "GNOME տերմինալ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:16
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:17
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr "Gnopernicus"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:18
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr "Gnopernicus խոշորացույցով"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:19
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr "Iceape"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:20
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr "Iceape էլ–փոստ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:21
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr "Icedove"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:22
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr "Iceweasel"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:23
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr "KDE խոշորացույց առանց էկրանի ընթերցող սարքի"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:24
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr "KMail"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:25
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:26
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr "Konsole"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:27
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr "Linux էկրանի ընթերցող սարք"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:28
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr "Linux–ի էկրանի ընթերցող սարք խոշորացույցով"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:29
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Listen"
 msgstr "Լսել"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:30
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Midori"
 msgstr "Midori"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:31
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:32
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:33
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Mail"
 msgstr "Mozilla էլ–փոստ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:34
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:35
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Muine Music Player"
 msgstr "Muine երաժշտական նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:36
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:37
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:38
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Netscape Communicator"
 msgstr "Netscape հաղորդակցվող"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:39
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Opera"
 msgstr "Opera"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:40
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca"
 msgstr "Orca"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:41
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "Orca with Magnifier"
 msgstr "Orca խոշորացույցով"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:42
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:43
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:44
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:45
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "SeaMonkey Mail"
 msgstr "SeaMonkey էլ–փոստ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:46
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Standard XTerminal"
 msgstr "Ստանդարտ X–տերմինալ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:47
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:48
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:49
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Terminator"
 msgstr "Terminator"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:50
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:51
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "Totem Movie Player"
 msgstr "Totem նվագարկիչ"
 
-#: ../panels/default-applications/gnome-default-applications.xml.in.h:52
+#: ../panels/default-applications/cinnamon-default-applications.xml.in.h:52
 msgid "aterm"
 msgstr "aterm"
 
@@ -584,22 +584,22 @@ msgstr "_Որոշում՝"
 msgid "_Show monitors in panel"
 msgstr "_Մոնիտորները ցույց տալ վահանակի վրա"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Change resolution and position of monitors"
 msgstr "Փոխել մոնիտորների բաժանումը և դիրքը"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Monitors"
 msgstr "Մոնիտորներ"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:44
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:44
 #, c-format
 msgid ""
 "Usage: %s SOURCE_FILE DEST_NAME\n"
 "\n"
 "This program installs a RANDR profile for multi-monitor setups into\n"
 "a systemwide location.  The resulting profile will get used when\n"
-"the RANDR plug-in gets run in gnome-settings-daemon.\n"
+"the RANDR plug-in gets run in cinnamon-settings-daemon.\n"
 "\n"
 "SOURCE_FILE - a full pathname, typically /home/username/.config/monitors."
 "xml\n"
@@ -613,7 +613,7 @@ msgstr ""
 "Այս ծրագիրը տեղադրում է RANDR պրոֆիլը բազմակի մոնիտորային ռեժիմի համար "
 "նշված\n"
 "համակարգային տարածքում։ Վերջնական պրոֆիլը կդառնա սովոր սովորական, երբ\n"
-"RANDR plug-in գործարկվում է gnome-settings-daemon -ում։\n"
+"RANDR plug-in գործարկվում է cinnamon-settings-daemon -ում։\n"
 "\n"
 "SOURCE_FILE - ամբողջական ճանապարհն է, տիպիկ /home/username/.config/monitors."
 "xml\n"
@@ -623,60 +623,60 @@ msgstr ""
 "            այնպես որ արդյունքը տիպիկ կլինի %s/DEST_NAME\n"
 
 #. Translators: only able to install RANDR profiles as root
-#: ../panels/display/gnome-display-properties-install-systemwide.c:151
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:151
 msgid "This program can only be used by the root user"
 msgstr "Այս ծրագիրը կարող է օգտագործվել միայն արմատային օգտագործողի կողմից"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:168
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:168
 msgid "The source filename must be absolute"
 msgstr "Պետք է նշված լինի ֆայլի բացարձակ անունը"
 
 #. Translators: first %s is a filename; second %s is an error message
-#: ../panels/display/gnome-display-properties-install-systemwide.c:179
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:179
 msgid "Could not open %s: %s\n"
 msgstr "Չի հաջողվել բացել %s. %s\n"
 
 #. Translators: first %s is a filename; second %s is an error message
-#: ../panels/display/gnome-display-properties-install-systemwide.c:188
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:188
 msgid "Could not get information for %s: %s\n"
 msgstr "Չի հաջողվել ստանալ %s -ի վերաբերյալ տեղեկատվություն․ %s\n"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:195
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:195
 #, c-format
 msgid "%s must be a regular file\n"
 msgstr "%s պետք է լինի ռեգուլյար ֆայլ\n"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:204
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:204
 msgid "This program must only be run through pkexec(1)"
 msgstr "Այս ծրագիրը պետք է գործարկվի միայն pkexec(1) - ի միջոցով"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:209
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:209
 msgid "PKEXEC_UID must be set to an integer value"
 msgstr "PKEXEC_UID պետք է սահմանվի ամբողջ արժեք"
 
 #. Translators: we are complaining that a file must be really owned by the user who called this program
-#: ../panels/display/gnome-display-properties-install-systemwide.c:215
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:215
 #, c-format
 msgid "%s must be owned by you\n"
 msgstr "%s -ը պետք է լինի ձեր սեփականությունը\n"
 
 #. Translators: here we are saying that a plain filename must look like "filename", not like "some_dir/filename"
-#: ../panels/display/gnome-display-properties-install-systemwide.c:223
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:223
 #, c-format
 msgid "%s must not have any directory components\n"
 msgstr "%s -ը պետք է չունենա որևէ պանակ-կոմպոնոնտներ\n"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:231
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:231
 #, c-format
 msgid "%s must be a directory\n"
 msgstr "%s -ը պետք է լինի պանակ\n"
 
 #. Translators: the first %s/%s is a directory/filename; the last %s is an error message
-#: ../panels/display/gnome-display-properties-install-systemwide.c:242
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:242
 msgid "Could not open %s/%s: %s\n"
 msgstr "Չի հաջողվել բացել %s/%s. %s\n"
 
-#: ../panels/display/gnome-display-properties-install-systemwide.c:262
+#: ../panels/display/cinnamon-display-properties-install-systemwide.c:262
 #, c-format
 msgid "Could not rename %s to %s: %s\n"
 msgstr "Չի հաջողվել անվանափոխել %s -ը %s -ով․ %s\n"
@@ -795,25 +795,25 @@ msgid "The type of accelerator."
 msgstr "Արագացուցչի տեսակը։"
 
 #: ../panels/keybindings/eggcellrendererkeys.c:242
-#: ../panels/keybindings/gnome-keybinding-properties.c:100
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:100
 #: ../typing-break/drwright.c:498
 msgid "Disabled"
 msgstr "Ապաակտիվացված է"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:181
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:181
 msgid "<Unknown Action>"
 msgstr "<Անհայտ գործողություն>"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:931
-#: ../panels/keybindings/gnome-keybinding-properties.c:1562
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:931
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1562
 msgid "Custom Shortcuts"
 msgstr "Սովորական ստեղների համադրություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1073
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1073
 msgid "Error saving the new shortcut"
 msgstr "Սխալ՝ ստեղների համադրությունը պահպանելիս"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1152
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1152
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -825,7 +825,7 @@ msgstr ""
 "Խնդրում ենք փորձել այնպիսի ստեղներով ինչպիսիք են Control, Alt կամ Shift–ը "
 "միաժամանակ։"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1182
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1182
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
@@ -834,7 +834,7 @@ msgstr ""
 "\"%s\" ստեղների համադրությունն արդեն օգտագործված է՝\n"
 "\"%s\""
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1188
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1188
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
@@ -842,37 +842,37 @@ msgstr ""
 "Եթե \"%s\" ստեղների համադրությունը վերանշանակեք, \"%s\" ստեղների "
 "համադրությունը կապաակտիվացվի։"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1196
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1196
 msgid "_Reassign"
 msgstr "_Վերանշանակել"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1316
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1316
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr "Սխալ՝ կոնֆիգուրացիայի տվյալների բազայում արագացուցիչն անջատելիս՝ %s"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1517
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1517
 msgid "Too many custom shortcuts"
 msgstr "Չափազանց շատ սովորական ստեղների համադրություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1849
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1849
 msgid "Action"
 msgstr "Գործողություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.c:1871
+#: ../panels/keybindings/cinnamon-keybinding-properties.c:1871
 msgid "Shortcut"
 msgstr "Ստեղների համադրություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.ui.h:2
+#: ../panels/keybindings/cinnamon-keybinding-properties.ui.h:2
 msgid "Custom Shortcut"
 msgstr "Սովորական ստեղների համադրություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.ui.h:3
-#: ../panels/keybindings/gnome-keybindings-panel.desktop.in.in.h:2
+#: ../panels/keybindings/cinnamon-keybinding-properties.ui.h:3
+#: ../panels/keybindings/cinnamon-keybindings-panel.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Ստեղնաշարի ստեղների համադրություն"
 
-#: ../panels/keybindings/gnome-keybinding-properties.ui.h:4
+#: ../panels/keybindings/cinnamon-keybinding-properties.ui.h:4
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
 "combination, or press backspace to clear."
@@ -880,157 +880,157 @@ msgstr ""
 "Ստեղների համադրությունը խմբագրելու համար կտտացրեք համապատասխան տողի վրա և "
 "մեքենագրեք ստեղների նոր համադրություն կամ սեղմեք backspace–ը ջնջելու համար։"
 
-#: ../panels/keybindings/gnome-keybinding-properties.ui.h:5
+#: ../panels/keybindings/cinnamon-keybinding-properties.ui.h:5
 msgid "_Name:"
 msgstr "_Անվանում՝"
 
-#: ../panels/keybindings/gnome-keybindings-panel.desktop.in.in.h:1
+#: ../panels/keybindings/cinnamon-keybindings-panel.desktop.in.in.h:1
 msgid "Assign shortcut keys to commands"
 msgstr "Նշանակել ստեղների համադրություն հրամանների համար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:1
 msgid "Beep when _accessibility features are turned on or off"
 msgstr "Ազդանշանել, երբ _հասանելիությունը միացված կամ անջատված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:2
 msgid "Beep when a _modifier key is pressed"
 msgstr "Ազդանշանել, երբ _մոդիֆիկատորի ստեղնը միացված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:3
 msgid "Beep when a _toggle key is pressed"
 msgstr "Ազդանշանել, երբ _փոխանջատչի ստեղնը սեղմված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:4
 msgid "Beep when a key is pr_essed"
 msgstr "Ազդանշանել, երբ _ստեղնը սեղմված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:5
 msgid "Beep when a key is reje_cted"
 msgstr "Ազդանշանել, երբ ստեղնը մերժ_ված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:6
 msgid "Beep when key is _accepted"
 msgstr "Ազդանշանել, երբ ստեղնն _ընդունված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:7
 msgid "Beep when key is _rejected"
 msgstr "Ազդանշանել, երբ ստեղնը _մերժված է"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:8
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:4
 #: ../panels/universal-access/uap.ui.h:17
 msgid "Bounce Keys"
 msgstr "Անցման ստեղներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:9
 msgid "Flash _window titlebar"
 msgstr "_Պատուհանի վերնագրի տողի թարթում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:10
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:10
 msgid "Flash entire _screen"
 msgstr "Ամբողջ _էկրանի թարթում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:11
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:14
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "General"
 msgstr "Ընդհանուր"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:12
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr "Ստեղնաշարի հասանելիության ձայնային հետդարձ կապ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:13
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:13
 msgid "Show _visual feedback for the alert sound"
 msgstr "Ցույց տալ _տեսողական հետդարձ կապ զգուշացման ազդանշանի ձայնի համար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:14
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:39
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:39
 #: ../panels/universal-access/uap.ui.h:76
 msgid "Slow Keys"
 msgstr "Դանդաղ ստեղներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:15
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:40
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:40
 #: ../panels/universal-access/uap.ui.h:80
 msgid "Sticky Keys"
 msgstr "Կպչուն ստեղներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:16
 msgid "Visual cues for sounds"
 msgstr "Տեսողական հուշում ձայների համար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:2
 msgid "All_ow postponing of breaks"
 msgstr "Թու_յլատրել ընդմիջումների հետաձգումը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:3
 msgid "Audio _Feedback..."
 msgstr "Ձայնային _հետդարձ կապ..."
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:5
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Ստուգել, երբ թույլատրվում է ընդմիջումներն հետաձգել"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:6
 msgid "Cursor Blinking"
 msgstr "Կուրսորի թարթում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:7
 msgid "Cursor _blinks in text fields"
 msgstr "Կուրսորը _թարթում է տեքստի շրջանում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:8
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 #: ../panels/universal-access/uap.ui.h:29
 msgid "Cursor blinks speed"
 msgstr "Կուրսորի թարթման արագություն"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:9
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 #: ../panels/universal-access/uap.ui.h:30
 msgid "D_elay:"
 msgstr "Հ_ետաձգում՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:10
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:10
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr ""
 "Ապաա_կտիվացնել կպչուն ստեղները, եթե երկու ստեղները սեղմվում են միաժամանակ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:11
 msgid "Duration of the break when typing is disallowed"
 msgstr "Ընդմիջման ժամանակը, երբ չի թույլատրվում մեքենագրելը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:12
 msgid "Duration of work before forcing a break"
 msgstr "Աշխատանքի տևողությունը նախքան ստիպողական ընդմիջումը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:13
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Fast"
 msgstr "Արագ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:15
 msgid "Key presses _repeat when key is held down"
 msgstr "Սեղմած ստեղնի նորից սեղմում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:16
 msgid "Keyboard Preferences"
 msgstr "Ստեղնաշարի նախընտրություններ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:17
 msgid "Keyboard _model:"
 msgstr "Ստեղնաշարի _մոդել՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:18
 msgid "Layouts"
 msgstr "Դասավորություններ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:19
 msgid "List of keyboard layouts selected for usage"
 msgstr "Օգտագործման համար ընտրված ստեղնաշարային դասավորությունների ցուցակը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:20
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -1039,54 +1039,54 @@ msgstr ""
 "հետևանքով բարդություններից խուսափելու համար"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:21
-#: ../panels/mouse/gnome-mouse-properties.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:21
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:19
 #: ../panels/universal-access/uap.ui.h:53
 msgid "Long"
 msgstr "Երկար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:22
 #: ../panels/universal-access/uap.ui.h:56
 msgid "Mouse Keys"
 msgstr "Մկնիկի ստեղներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:23
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:23
 msgid "Move _Down"
 msgstr "Շարժել _ներքև"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:24
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:24
 msgid "Move _Up"
 msgstr "Շարժել _վերև"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:25
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:25
 msgid "Move the selected keyboard layout down in the list"
 msgstr "Ընտրված ստեղնաշարային դասավորությունը տեղափոխել ցուցակում դեպի ներքև"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:26
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:26
 msgid "Move the selected keyboard layout up in the list"
 msgstr "Ընտրված ստեղնաշարային դասավորությունը տեղափոխել ցուցակում դեպի վերև"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:27
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:27
 msgid "New windows u_se active window's layout"
 msgstr "Նոր պատուհաններն օգտագործում են ակտիվ պատուհանի ծրագիրը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:28
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:28
 msgid "Print a diagram of the selected keyboard layout"
 msgstr "Ընտրված ստեղնաշարային դասավորության համար տպել սխեմա"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:29
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:29
 msgid "Remove the selected keyboard layout from the list"
 msgstr "Հեռացնել ընտրված ստեղնաշարային դասավորությունը ցուցակից"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:30
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:30
 msgid "Repeat Keys"
 msgstr "Կրկնել ստեղները"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:31
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:31
 msgid "Repeat keys speed"
 msgstr "Կրկնել ստեղների արագությունը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:32
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:32
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
@@ -1094,174 +1094,174 @@ msgstr ""
 "Փոխարինել ընթացիկ ստեղնաշարային դասավորության պարամետրերը\n"
 "լռելյայն պարամետրերով"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:34
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:34
 msgid "Reset to De_faults"
 msgstr "Վերադարձնել լռելյայն վիճակին"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:35
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:35
 msgid "S_peed:"
 msgstr "Ա_րագություն՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:36
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:36
 msgid "Select a keyboard layout to be added to the list"
 msgstr "Ընտրեք ցուցակին ավելացվող ստեղնաշարային դասավորությունը"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:37
-#: ../panels/mouse/gnome-mouse-properties.ui.h:27
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:37
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:27
 #: ../panels/universal-access/uap.ui.h:73
 msgid "Short"
 msgstr "Կարճ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:38
-#: ../panels/mouse/gnome-mouse-properties.ui.h:30
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:38
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "Slow"
 msgstr "Դանդաղ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:41
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:41
 msgid "Typing Break"
 msgstr "Աշխատանքային ընդմիջում"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:42
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:42
 msgid "View and edit keyboard layout options"
 msgstr "Դիտել և խմբագրել ստեղնաշարի դասավորության ընտրանքները"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:43
-#: ../panels/mouse/gnome-mouse-properties.ui.h:37
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:43
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Acceleration:"
 msgstr "_Արագացում՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:44
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:44
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr "_Օժանդակ հատկությունները կարելի է փոփոխել ստեղների համադրություններով"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:45
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:45
 msgid "_Add..."
 msgstr "_Ավելացնել…"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:46
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:46
 msgid "_Break interval lasts:"
 msgstr "_Ընդմիջման տևողությունը."
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:47
-#: ../panels/mouse/gnome-mouse-properties.ui.h:38
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:47
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:38
 msgid "_Delay:"
 msgstr "_Հետաձգում՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:48
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:48
 msgid "_Ignore fast duplicate keypresses"
 msgstr "_Անտեսել ստեղների սեղմման արագ կրկնումները"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:49
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:49
 msgid "_Lock screen to enforce typing break"
 msgstr "_Արգելափակել էկրանը աշխատանքային ընդմիջման համար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:50
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:50
 msgid "_Only accept long keypresses"
 msgstr "_Ընդունել միայն ստեղների երկար սեղմումները"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:51
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:51
 msgid "_Options..."
 msgstr "_Ընտրացանկ..."
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:52
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:52
 msgid "_Pointer can be controlled using the keypad"
 msgstr "_Ցուցիչը կարող է կառավարվել ստեղնխմբով"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:53
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:53
 msgid "_Separate layout for each window"
 msgstr "_Առանձին դասավորություն ամեն մի պատուհանի համար"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:54
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:54
 msgid "_Simulate simultaneous keypresses"
 msgstr "_Մոդելավորել ստեղների միաժամանակյա սեղմումները"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:55
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:55
 msgid "_Speed:"
 msgstr "_Արագություն՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:56
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:56
 msgid "_Type to test settings:"
 msgstr "_Մեքենագրել պարամետրերը ստուգելու համար՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:57
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:57
 msgid "_Work interval lasts:"
 msgstr "_Աշխատանքի ընդմիջումը տևում է՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-dialog.ui.h:58
+#: ../panels/keyboard/cinnamon-keyboard-properties-dialog.ui.h:58
 msgid "minutes"
 msgstr "րոպեներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:1
 msgid "By _country"
 msgstr "Երկրով"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:2
 msgid "By _language"
 msgstr "Լեզվով"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:3
 msgid "Choose a Layout"
 msgstr "Ընտրել դասավորություն"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:4
 msgid "Preview:"
 msgstr "Նախնական տեսք՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:5
 msgid "_Country:"
 msgstr "_Երկիր՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:6
 msgid "_Language:"
 msgstr "_Լեզու՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:7
 msgid "_Variants:"
 msgstr "_Տարբերակներ՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-model-chooser.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:1
 msgid "Choose a Keyboard Model"
 msgstr "Ընտրել ստեղնաշարի մոդելը"
 
-#: ../panels/keyboard/gnome-keyboard-properties-model-chooser.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:2
 msgid "_Models:"
 msgstr "_Մոդելներ՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-model-chooser.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:3
 msgid "_Vendors:"
 msgstr "_Վաճառող՝"
 
-#: ../panels/keyboard/gnome-keyboard-properties-options-dialog.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-properties-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr "Ստեղնաշարի դասավորության ընտրանքներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-xkb.c:81
+#: ../panels/keyboard/cinnamon-keyboard-properties-xkb.c:81
 msgid "Unknown"
 msgstr "Անհայտ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-xkblt.c:241
+#: ../panels/keyboard/cinnamon-keyboard-properties-xkblt.c:241
 msgid "Layout"
 msgstr "Դասավորություն"
 
-#: ../panels/keyboard/gnome-keyboard-properties-xkbmc.c:166
+#: ../panels/keyboard/cinnamon-keyboard-properties-xkbmc.c:166
 msgid "Vendors"
 msgstr "Վաճառողներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-xkbmc.c:232
+#: ../panels/keyboard/cinnamon-keyboard-properties-xkbmc.c:232
 msgid "Models"
 msgstr "Մոդելներ"
 
-#: ../panels/keyboard/gnome-keyboard-properties-xkbot.c:233
-#: ../panels/network/gnome-network-properties.c:582
+#: ../panels/keyboard/cinnamon-keyboard-properties-xkbot.c:233
+#: ../panels/network/cinnamon-network-properties.c:582
 msgid "Default"
 msgstr "Նախնական"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
 msgid "Keyboard"
 msgstr "Ստեղնաշար"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
 msgid "Set your keyboard preferences"
 msgstr "Կարգավորել ստեղնաշարի նախընտրությունները"
 
@@ -1272,329 +1272,329 @@ msgstr "Հնարավոր չէ բեռնել '%s' պատկերանիշը\n"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../panels/mouse/gnome-mouse-accessibility.c:90
+#: ../panels/mouse/cinnamon-mouse-accessibility.c:90
 msgid "gesture|Move left"
 msgstr "շարժում|դեպի ձախ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../panels/mouse/gnome-mouse-accessibility.c:95
+#: ../panels/mouse/cinnamon-mouse-accessibility.c:95
 msgid "gesture|Move right"
 msgstr "շարժում|դեպի աջ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../panels/mouse/gnome-mouse-accessibility.c:100
+#: ../panels/mouse/cinnamon-mouse-accessibility.c:100
 msgid "gesture|Move up"
 msgstr "շարժում|դեպի վեր"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../panels/mouse/gnome-mouse-accessibility.c:105
+#: ../panels/mouse/cinnamon-mouse-accessibility.c:105
 msgid "gesture|Move down"
 msgstr "շարժում|դեպի վար"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../panels/mouse/gnome-mouse-accessibility.c:110
+#: ../panels/mouse/cinnamon-mouse-accessibility.c:110
 msgid "gesture|Disabled"
 msgstr "շարժում|ապաակտիվացված է"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Choose type of click _beforehand"
 msgstr "Ընտրել կտտացնելու տեսակը _նախապես"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:3
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Choose type of click with mo_use gestures"
 msgstr "Ընտրել կտտացնելու տեսակը մկն_իկի շարժումներով"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "D_ouble click:"
 msgstr "Կ_րկնակի կտտոց՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "D_rag click:"
 msgstr "Ա_րգելակի կտտոց՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Disable _touchpad while typing"
 msgstr "Ապաակտիվացնել _սենսորային վահանակը մեքենագրելու ժամանակ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Double-Click Timeout"
 msgstr "Հապաղում կրկնակի կտտոցի դեպքում"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "Drag and Drop"
 msgstr "Քաշել և գցել"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "Dwell Click"
 msgstr "Կրկնակի կտտոց"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Enable _mouse clicks with touchpad"
 msgstr "Ակտիվացնել _մկնիկի կտտոցը սենսորային վահանակի հետ միաժամանակ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "Enable h_orizontal scrolling"
 msgstr "Ակտիվացնել հ_որիզոնական ոլորումը"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 #: ../panels/universal-access/uap.ui.h:40
 msgid "High"
 msgstr "Բարձր"
 
 #. large threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 #: ../panels/universal-access/uap.ui.h:50
 msgid "Large"
 msgstr "Մեծ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "Locate Pointer"
 msgstr "Տեղակայել ցուցիչը"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:20
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:20
 #: ../panels/universal-access/uap.ui.h:54
 msgid "Low"
 msgstr "Ցածր"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:21
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:21
 msgid "Mouse Orientation"
 msgstr "Մկնիկի ուղղությունը"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:22
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:22
 msgid "Mouse Preferences"
 msgstr "Մկնիկի նախընտրություններ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:23
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:23
 msgid "Pointer Speed"
 msgstr "Ցուցչի արագություն"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:24
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:24
 msgid "Scrolling"
 msgstr "Ոլորում"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:25
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:25
 msgid "Seco_ndary click:"
 msgstr "Երկր_որդական կտտոց՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:26
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:26
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr "Ցու_յց տալ ցուցչի դիրքը, երբ ղեկավարման ստեղնը սեղմված է"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:28
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:28
 msgid "Show click type _window"
 msgstr "Ցույց տալ պատուհանի կտտոցի _տեսակը"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:29
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:29
 #: ../panels/universal-access/uap.ui.h:75
 msgid "Simulated Secondary Click"
 msgstr "Մոդելավորված երկրորդական կտտոց"
 
 #. small threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:31
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:31
 #: ../panels/universal-access/uap.ui.h:78
 msgid "Small"
 msgstr "Փոքր"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:32
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:32
 msgid "Thr_eshold:"
 msgstr "Սահմանային _արժեք՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:33
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:33
 msgid ""
 "To test your double-click settings, try to double-click on the light bulb."
 msgstr ""
 "Կրկնակի կտտոցի պարամետրերը ստուգելու համար փորձեք կրկնակի կտտացնել վառվող "
 "լույսի վրա։"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:34
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "Touchpad"
 msgstr "Սենսորային վահանակ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:35
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "Two-_finger scrolling"
 msgstr "Ոլորում երկու _մատով"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:36
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "You can also use the Dwell Click panel applet to choose the click type."
 msgstr ""
 "Կարող եք նաև օգտագործել հապաղումով կտտոցը վահանակի ապլետի կտտոցի տեսակը "
 "ընտրելու համար։"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:39
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:39
 msgid "_Disabled"
 msgstr "_Ապաակտիվացված է"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:40
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:40
 msgid "_Edge scrolling"
 msgstr "_Եզրային ոլորում"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:41
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:41
 msgid "_Initiate click when stopping pointer movement"
 msgstr "_Գործարկել կտտոցը, երբ դադարեցվում է ցուցչի շարժումը"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:42
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:42
 msgid "_Left-handed"
 msgstr "_Ձախ ձեռքով"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:43
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:43
 #: ../panels/universal-access/uap.ui.h:98
 msgid "_Motion threshold:"
 msgstr "_Շարժման սահմանային արժեք՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:44
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:44
 msgid "_Right-handed"
 msgstr "_Աջ ձեռքով"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:45
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:45
 msgid "_Sensitivity:"
 msgstr "_Զգայունություն՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:46
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:46
 msgid "_Single click:"
 msgstr "_Մեկ կտտոց՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:47
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:47
 msgid "_Timeout:"
 msgstr "_Ժամանակը լրացել է՝"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:48
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:48
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr "_Իրականցնել երկրորդական կտտոցը՝ պահելով հիմնական կոճակը"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Մկնիկ"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Կարգավորել մկնիկի նախընտրությունները"
 
-#: ../panels/network/gnome-network-properties.c:700
-#: ../panels/network/gnome-network-properties.c:851
+#: ../panels/network/cinnamon-network-properties.c:700
+#: ../panels/network/cinnamon-network-properties.c:851
 msgid "New Location..."
 msgstr "Նոր տեղակայություն..."
 
-#: ../panels/network/gnome-network-properties.c:817
+#: ../panels/network/cinnamon-network-properties.c:817
 msgid "Location already exists"
 msgstr "Տեղակայությունն արդեն գոյություն ունի"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Ցանցի պրոքսի"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "Կարգավորել ցանցի պրոքսիի նախընտրությունները"
 
-#: ../panels/network/gnome-network-properties.ui.h:1
+#: ../panels/network/cinnamon-network-properties.ui.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>Ու_ղիղ համացանցային կապ</b>"
 
-#: ../panels/network/gnome-network-properties.ui.h:2
+#: ../panels/network/cinnamon-network-properties.ui.h:2
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>_Ավտոմատ պրոքսի կոնֆիգուրացիա</b>"
 
-#: ../panels/network/gnome-network-properties.ui.h:3
+#: ../panels/network/cinnamon-network-properties.ui.h:3
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>_Ձեռքով պրոքսի կոնֆիգուրացիա</b>"
 
-#: ../panels/network/gnome-network-properties.ui.h:4
+#: ../panels/network/cinnamon-network-properties.ui.h:4
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Օգտագործել վավերացումը</b>"
 
-#: ../panels/network/gnome-network-properties.ui.h:5
+#: ../panels/network/cinnamon-network-properties.ui.h:5
 msgid "Autoconfiguration _URL:"
 msgstr "Վավերացում _URL՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:6
+#: ../panels/network/cinnamon-network-properties.ui.h:6
 msgid "C_reate"
 msgstr "Ս_տեղծել"
 
-#: ../panels/network/gnome-network-properties.ui.h:7
+#: ../panels/network/cinnamon-network-properties.ui.h:7
 msgid "Create New Location"
 msgstr "Ստեղծել նոր տեղակայություն"
 
-#: ../panels/network/gnome-network-properties.ui.h:8
+#: ../panels/network/cinnamon-network-properties.ui.h:8
 msgid "HTTP Proxy Details"
 msgstr "HTTP պրոքսի մանրամասներ"
 
-#: ../panels/network/gnome-network-properties.ui.h:9
+#: ../panels/network/cinnamon-network-properties.ui.h:9
 msgid "H_TTP proxy:"
 msgstr "H_TTP պրոքսի՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:10
+#: ../panels/network/cinnamon-network-properties.ui.h:10
 msgid "Ignore Host List"
 msgstr "Անտեսել հոսթի ցուցակը"
 
-#: ../panels/network/gnome-network-properties.ui.h:11
+#: ../panels/network/cinnamon-network-properties.ui.h:11
 msgid "Ignored Hosts"
 msgstr "Անտեսված հոսթեր"
 
-#: ../panels/network/gnome-network-properties.ui.h:12
+#: ../panels/network/cinnamon-network-properties.ui.h:12
 msgid "Location:"
 msgstr "Տեղակայություն՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:13
+#: ../panels/network/cinnamon-network-properties.ui.h:13
 msgid "Network Proxy Preferences"
 msgstr "Ցանցի պրոքսիի նախընտրություններ"
 
-#: ../panels/network/gnome-network-properties.ui.h:14
+#: ../panels/network/cinnamon-network-properties.ui.h:14
 msgid "Port:"
 msgstr "Պորտ՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:15
+#: ../panels/network/cinnamon-network-properties.ui.h:15
 msgid "Proxy Configuration"
 msgstr "Պրոքսի կոնֆիգուրացիա"
 
-#: ../panels/network/gnome-network-properties.ui.h:16
+#: ../panels/network/cinnamon-network-properties.ui.h:16
 msgid "S_ocks host:"
 msgstr "S_ocks հոսթ՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:17
+#: ../panels/network/cinnamon-network-properties.ui.h:17
 msgid "The location already exists."
 msgstr "Տեղանքն արդեն գոյություն ունի։"
 
-#: ../panels/network/gnome-network-properties.ui.h:18
+#: ../panels/network/cinnamon-network-properties.ui.h:18
 msgid "U_sername:"
 msgstr "Օ_գտագործողի անունը՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:19
+#: ../panels/network/cinnamon-network-properties.ui.h:19
 msgid "_Delete Location"
 msgstr "_Ջնջել տեղակայությունը"
 
-#: ../panels/network/gnome-network-properties.ui.h:20
+#: ../panels/network/cinnamon-network-properties.ui.h:20
 msgid "_Details"
 msgstr "_Մանրամասներ"
 
-#: ../panels/network/gnome-network-properties.ui.h:21
+#: ../panels/network/cinnamon-network-properties.ui.h:21
 msgid "_FTP proxy:"
 msgstr "_FTP պրոքսի՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:22
+#: ../panels/network/cinnamon-network-properties.ui.h:22
 msgid "_Location name:"
 msgstr "_Տեղակայության անվանումը՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:23
+#: ../panels/network/cinnamon-network-properties.ui.h:23
 msgid "_Password:"
 msgstr "_Գաղտնաբառ՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:24
+#: ../panels/network/cinnamon-network-properties.ui.h:24
 msgid "_Secure HTTP proxy:"
 msgstr "_Ապահովել HTTP պրոքսի՝"
 
-#: ../panels/network/gnome-network-properties.ui.h:25
+#: ../panels/network/cinnamon-network-properties.ui.h:25
 msgid "_Use the same proxy for all protocols"
 msgstr "_Միևնույն պրոքսին օգտագործել բոլոր պրոտոկոլների համար"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:1
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:1
 msgid "Universal Access"
 msgstr "Համընդհանուր Հասանելիություն"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Universal Access Preferences"
 msgstr "Համընդհանուր հասանելիության նախընտրություններ"
 
@@ -2117,11 +2117,11 @@ msgstr "օգտագործում. %s ֆոնտֆայլ\n"
 msgid "I_nstall Font"
 msgstr "Տեղադրել տառատեսակ"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:1
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:1
 msgid "Font Viewer"
 msgstr "Տառատեսակ ցուցադրող"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:2
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "Preview fonts"
 msgstr "Ցուցադրել տառատեսակները"
 
@@ -2150,11 +2150,11 @@ msgstr "ՏԱՌԱՏԵՍԱԿԻ ՖԱՅԼ, ԱՐՏԱԾՄԱՆ ՖԱՅԼ"
 msgid "Error parsing arguments: %s\n"
 msgstr "Սխալը վերլուծող փաստարկումներ. %s\n"
 
-#: ../examples/gnome-example-panel.desktop.in.in.h:1
+#: ../examples/cinnamon-example-panel.desktop.in.in.h:1
 msgid "Example Panel"
 msgstr "Վահանակի Օրինակ"
 
-#: ../examples/gnome-example-panel.desktop.in.in.h:2
+#: ../examples/cinnamon-example-panel.desktop.in.in.h:2
 msgid "Example preferences panel"
 msgstr "Նախընտրությունների վահանակի օրինակ"
 

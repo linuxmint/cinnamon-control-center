@@ -141,16 +141,16 @@ msgstr ""
 msgid "_Select"
 msgstr ""
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr ""
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr ""
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;"
 msgstr ""
 
@@ -216,17 +216,17 @@ msgstr ""
 msgid "Current background"
 msgstr ""
 
-#: ../panels/background/gnome-wp-info.c:59
+#: ../panels/background/cinnamon-wp-info.c:59
 msgid "No Desktop Background"
 msgstr ""
 
-#: ../panels/background/gnome-wp-item.c:277
+#: ../panels/background/cinnamon-wp-item.c:277
 msgid "multiple sizes"
 msgstr ""
 
 #. translators: 100 × 100px
 #. * Note that this is not an "x", but U+00D7 MULTIPLICATION SIGN
-#: ../panels/background/gnome-wp-item.c:285
+#: ../panels/background/cinnamon-wp-item.c:285
 #, c-format
 msgid "%d × %d"
 msgstr ""
@@ -324,15 +324,15 @@ msgid "September"
 msgstr ""
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Clock;Timezone;Location;"
 msgstr ""
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:3
 msgid "Date and Time"
 msgstr ""
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Date and Time preferences panel"
 msgstr ""
 
@@ -383,16 +383,16 @@ msgstr ""
 msgid "_Resolution:"
 msgstr ""
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Change resolution and position of monitors and projectors"
 msgstr ""
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Displays"
 msgstr ""
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr ""
 
@@ -506,16 +506,16 @@ msgstr ""
 msgid "Version %s"
 msgstr ""
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "System Info"
 msgstr ""
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr ""
 
 #. Translators: those are keywords for the System Information panel
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid "device;system;information;memory;processor;version;"
 msgstr ""
 
@@ -592,17 +592,17 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
 msgid "Change keyboard settings"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 msgid "Keyboard"
 msgstr ""
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr ""
 
@@ -667,94 +667,94 @@ msgstr ""
 msgid "Shortcut"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "C_ommand:"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "Cursor Blinking"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "Cursor _blinks in text fields"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 #: ../panels/universal-access/uap.ui.h:28
 msgid "Cursor blinks speed"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Custom Shortcut"
 msgstr ""
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Fast"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "General"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "Key presses _repeat when key is held down"
 msgstr ""
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 #: ../panels/universal-access/uap.ui.h:51
 msgid "Long"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat Keys"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 msgid "Repeat keys speed"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
 msgid "S_peed:"
 msgstr ""
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
-#: ../panels/mouse/gnome-mouse-properties.ui.h:24
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:24
 #: ../panels/universal-access/uap.ui.h:71
 msgid "Short"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Shortcuts"
 msgstr ""
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
-#: ../panels/mouse/gnome-mouse-properties.ui.h:26
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:26
 msgid "Slow"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
 "Backspace to clear."
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "_Delay:"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 msgid "_Name:"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "_Speed:"
 msgstr ""
 
@@ -838,59 +838,59 @@ msgstr ""
 msgid "Video CD"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:1
+#: ../panels/media/cinnamon-media-properties.ui.h:1
 msgid "Acti_on:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:2
+#: ../panels/media/cinnamon-media-properties.ui.h:2
 msgid "CD _audio:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:3
+#: ../panels/media/cinnamon-media-properties.ui.h:3
 msgid "Media and Autorun"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:4
+#: ../panels/media/cinnamon-media-properties.ui.h:4
 msgid "Select how media should be handled"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:5
+#: ../panels/media/cinnamon-media-properties.ui.h:5
 msgid "Select how other media should be handled"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:6
+#: ../panels/media/cinnamon-media-properties.ui.h:6
 msgid "_DVD video:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:7
+#: ../panels/media/cinnamon-media-properties.ui.h:7
 msgid "_Music player:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:8
+#: ../panels/media/cinnamon-media-properties.ui.h:8
 msgid "_Never prompt or start programs on media insertion"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:9
+#: ../panels/media/cinnamon-media-properties.ui.h:9
 msgid "_Other Media..."
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:10
+#: ../panels/media/cinnamon-media-properties.ui.h:10
 msgid "_Photos:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:11
+#: ../panels/media/cinnamon-media-properties.ui.h:11
 msgid "_Software:"
 msgstr ""
 
-#: ../panels/media/gnome-media-properties.ui.h:12
+#: ../panels/media/cinnamon-media-properties.ui.h:12
 msgid "_Type:"
 msgstr ""
 
-#: ../panels/media/gnome-media-panel.desktop.in.in.h:1
+#: ../panels/media/cinnamon-media-panel.desktop.in.in.h:1
 msgid "Configure media and autorun preferences"
 msgstr ""
 
-#: ../panels/media/gnome-media-panel.desktop.in.in.h:2
+#: ../panels/media/cinnamon-media-panel.desktop.in.in.h:2
 msgid "Removable Media"
 msgstr ""
 
@@ -1065,16 +1065,16 @@ msgstr ""
 msgid "Could not load ui: %s"
 msgstr ""
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Change printer settings"
 msgstr ""
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:3
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:3
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr ""
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printers"
 msgstr ""
 
@@ -1096,7 +1096,7 @@ msgstr ""
 
 #. Translators: This checkbox is checked when the default printer is selected.
 #: ../panels/printers/printers.ui.h:7
-#: ../panels/region/gnome-region-panel-xkbot.c:229
+#: ../panels/region/cinnamon-region-panel-xkbot.c:229
 #: ../panels/sound/gvc-sound-theme-chooser.c:589
 msgid "Default"
 msgstr ""
@@ -1168,291 +1168,291 @@ msgstr ""
 msgid "toolbutton2"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Install languages..."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Keyboard _model:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 msgid "Language"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Layouts"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "List of keyboard layouts selected for usage"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid "Move _Down"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 msgid "Move _Up"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Move the selected keyboard layout down in the list"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Move the selected keyboard layout up in the list"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "New windows u_se active window's layout"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Print a diagram of the selected keyboard layout"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:12
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Region and Language"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Remove the selected keyboard layout from the list"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 msgid "Reset to De_faults"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 msgid "Select a display language"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 msgid "Select a keyboard layout to be added to the list"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 msgid "View and edit keyboard layout options"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 msgid "_Add..."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 msgid "_Options..."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 msgid "_Separate layout for each window"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:1
 msgid "By _country"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:2
 msgid "By _language"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:3
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:3
 msgid "Choose a Layout"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:4
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:4
 msgid "Preview:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:5
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:5
 msgid "_Country:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:6
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:6
 msgid "_Language:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:7
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:7
 msgid "_Variants:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-model-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-model-chooser.ui.h:1
 msgid "Choose a Keyboard Model"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-model-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-model-chooser.ui.h:2
 msgid "_Models:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-model-chooser.ui.h:3
+#: ../panels/region/cinnamon-region-panel-model-chooser.ui.h:3
 msgid "_Vendors:"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-options-dialog.ui.h:1
+#: ../panels/region/cinnamon-region-panel-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr ""
 
 #. TRANSLATORS: device type
 #. TRANSLATORS: AP type
-#: ../panels/region/gnome-region-panel-xkb.c:70
+#: ../panels/region/cinnamon-region-panel-xkb.c:70
 #: ../panels/network/panel-common.c:65 ../panels/network/panel-common.c:138
 msgid "Unknown"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-xkblt.c:220
+#: ../panels/region/cinnamon-region-panel-xkblt.c:220
 msgid "Layout"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-xkbmc.c:163
+#: ../panels/region/cinnamon-region-panel-xkbmc.c:163
 msgid "Vendors"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-xkbmc.c:229
+#: ../panels/region/cinnamon-region-panel-xkbmc.c:229
 msgid "Models"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Change your region and language settings"
 msgstr ""
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:3
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:3
 msgid "Language;Layout;"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Disable _touchpad while typing"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:3
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Double-Click Timeout"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Drag and Drop"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Enable _mouse clicks with touchpad"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "Enable h_orizontal scrolling"
 msgstr ""
 
 #. high sensitivity
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 #: ../panels/universal-access/uap.ui.h:39
 msgid "High"
 msgstr ""
 
 #. large threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 #: ../panels/universal-access/uap.ui.h:48
 msgid "Large"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Locate Pointer"
 msgstr ""
 
 #. low sensitivity
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 #: ../panels/universal-access/uap.ui.h:52
 msgid "Low"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "Mouse"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:19
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:19
 msgid "Mouse Orientation"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:20
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:20
 msgid "Mouse Preferences"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:21
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:21
 msgid "Pointer Speed"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:22
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:22
 msgid "Scrolling"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:23
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:23
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr ""
 
 #. small threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:28
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:28
 #: ../panels/universal-access/uap.ui.h:75
 msgid "Small"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:29
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:29
 msgid "Thr_eshold:"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:30
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "To test your settings, try to double-click on the face."
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:31
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:31
 msgid "Touchpad"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:32
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:32
 msgid "Two-_finger scrolling"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:33
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:33
 msgid "_Acceleration:"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:34
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "_Disabled"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:35
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "_Edge scrolling"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:36
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "_Left-handed"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:37
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Right-handed"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:38
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:38
 msgid "_Sensitivity:"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:39
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:39
 msgid "_Timeout:"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse and Touchpad"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr ""
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr ""
 
@@ -1565,16 +1565,16 @@ msgstr ""
 msgid "Failed to connect"
 msgstr ""
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 msgid "Network"
 msgstr ""
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr ""
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;"
 msgstr ""
 
@@ -1690,16 +1690,16 @@ msgctxt "proxy method"
 msgid "None"
 msgstr ""
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr ""
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr ""
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;"
 msgstr ""
 
@@ -1836,15 +1836,15 @@ msgid "When the sleep button is pressed:"
 msgstr ""
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Brightness;Lock;Dim;Blank;"
 msgstr ""
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:3
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:3
 msgid "Screen"
 msgstr ""
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Screen brightness and lock settings"
 msgstr ""
 
@@ -2146,52 +2146,52 @@ msgid "Volume Control"
 msgstr ""
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;"
 msgstr ""
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:3
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:3
 msgid "Change sound volume and sound events"
 msgstr ""
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Sound"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr ""
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Keyboard;Mouse;a11y;Accessibility;"
 msgstr ""
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:3
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:3
 msgid "Universal Access"
 msgstr ""
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid "Universal Access Preferences"
 msgstr ""
 
@@ -2946,16 +2946,16 @@ msgstr ""
 msgid "Other Accounts"
 msgstr ""
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "Add or remove users"
 msgstr ""
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:3
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:3
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr ""
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "User Accounts"
 msgstr ""
 

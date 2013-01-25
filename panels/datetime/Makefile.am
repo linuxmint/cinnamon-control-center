@@ -111,7 +111,7 @@ AM_CPPFLAGS =						\
 	$(PANEL_CFLAGS)					\
 	$(DATETIME_PANEL_CFLAGS)			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DDATADIR="\"$(uidir)\""			\
 	$(NULL)
 

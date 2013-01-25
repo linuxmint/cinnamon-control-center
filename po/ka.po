@@ -46,7 +46,7 @@ msgstr ""
 "POT-Creation-Date: 2008-09-26 22:56+0200\n"
 "PO-Revision-Date: 2008-09-26 23:35+0200\n"
 "Last-Translator: Vladimer Sichinava  ვლადიმერ სიჭინავა <vsichi@gnome.org>\n"
-"Language-Team: Georgian <http://mail.gnome.org/mailman/listinfo/gnome-ge-"
+"Language-Team: Georgian <http://mail.gnome.org/mailman/listinfo/cinnamon-ge-"
 "list>\n"
 "MIME-Version: 1.0\n"
 "Content-Type:  text/plain; charset=UTF-8\n"
@@ -82,25 +82,25 @@ msgstr "გაფრთხილების სარკმელზე გა�
 msgid "Show more _details"
 msgstr "_დამატებითი ცნობები"
 
-#: ../capplets/about-me/gnome-about-me.c:739
+#: ../capplets/about-me/cinnamon-about-me.c:739
 msgid "Select Image"
 msgstr "სურათის ამორჩევა"
 
-#: ../capplets/about-me/gnome-about-me.c:741
+#: ../capplets/about-me/cinnamon-about-me.c:741
 msgid "No Image"
 msgstr "არავითარი სურათი"
 
-#: ../capplets/about-me/gnome-about-me.c:769
+#: ../capplets/about-me/cinnamon-about-me.c:769
 #: ../capplets/appearance/appearance-desktop.c:661
 msgid "Images"
 msgstr "სურათები"
 
-#: ../capplets/about-me/gnome-about-me.c:773
+#: ../capplets/about-me/cinnamon-about-me.c:773
 #: ../capplets/appearance/theme-installer.c:696
 msgid "All Files"
 msgstr "ყველა ფაილი"
 
-#: ../capplets/about-me/gnome-about-me.c:911
+#: ../capplets/about-me/cinnamon-about-me.c:911
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
@@ -108,164 +108,164 @@ msgstr ""
 "შეცდომა მისამართების წიგნაკიდან ინფორმაციის მიღებისას\n"
 "Evolution-ის მონაცემთა სერვერი ვერ უმკლავდება პროტოკოლს"
 
-#: ../capplets/about-me/gnome-about-me.c:932
+#: ../capplets/about-me/cinnamon-about-me.c:932
 msgid "Unable to open address book"
 msgstr "შეუძლებელია წიგნაკის გახსნა"
 
-#: ../capplets/about-me/gnome-about-me.c:946
+#: ../capplets/about-me/cinnamon-about-me.c:946
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr "უცნობი ID სახელი, შესაძლოა მომხმარებლების ბაზა დაზიანებულია"
 
-#: ../capplets/about-me/gnome-about-me.c:976
-#: ../capplets/about-me/gnome-about-me.c:978
+#: ../capplets/about-me/cinnamon-about-me.c:976
+#: ../capplets/about-me/cinnamon-about-me.c:978
 #, c-format
 msgid "About %s"
 msgstr "%s-ის შესახებ"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 msgid "About Me"
 msgstr "ჩემს შესახებ"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "თქვენი პირადი ინფორმაცია"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 msgid "<b>Email</b>"
 msgstr "<b>ელფოსტა</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
 msgid "<b>Home</b>"
 msgstr "<b>ბინა</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>მყისიერი მიმოწერა</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 msgid "<b>Job</b>"
 msgstr "<b>თანამდებობა</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 msgid "<b>Telephone</b>"
 msgstr "<b>ტელეფონი</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 msgid "<b>Web</b>"
 msgstr "<b>WWW</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Work</b>"
 msgstr "<b>სამსახური</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 msgid "<span size=\"larger\" weight=\"bold\">Change your password</span>"
 msgstr "<span size=\"larger\" weight=\"bold\">პაროლის შეცვლა</span>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 msgid "A_ddress:"
 msgstr "მის_ამართი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_ssistant:"
 msgstr "ა_სისტენტი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "Address"
 msgstr "მისამართი"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 msgid "C_ity:"
 msgstr "ქალაქ_ი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 msgid "C_ompany:"
 msgstr "კ_ომპანია:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 msgid "Cale_ndar:"
 msgstr "კალე_ნდარი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 msgid "Change Passwo_rd..."
 msgstr "_პაროლის შეცვლა..."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 msgid "Change pa_ssword"
 msgstr "პაროლის შ_ეცვლა"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 msgid "Change password"
 msgstr "პაროლის შეცვლა"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 msgid "Ci_ty:"
 msgstr "ქა_ლაქი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 msgid "Co_untry:"
 msgstr "ქვ_ეყანა:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 msgid "Contact"
 msgstr "კონტაქტი"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 msgid "Cou_ntry:"
 msgstr "ქვეყა_ნა:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 msgid "Current _password:"
 msgstr "მიმდინარე _პაროლი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Full Name"
 msgstr "სრული სახელი"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 msgid "Hom_e:"
 msgstr "_სახლი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 msgid "P.O. _box:"
 msgstr "სა_ფოსთო ყუთი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "P._O. box:"
 msgstr "_საფოსტო ყუთი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "Personal Info"
 msgstr "პირადი ინფორმაცია"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
-#: ../capplets/about-me/gnome-about-me-password.c:938
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me-password.c:938
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr "გთხოვთ ხელახლა აკრიფოთ პაროლი ველში <b>ხელახალი აკრეფა</b>."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "Select your photo"
 msgstr "ფოტოს ამორჩევა"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 msgid "State/Pro_vince:"
 msgstr "მხარე/პროვინცია:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -277,109 +277,109 @@ msgstr ""
 "აუტენტიფიკაციის შემდგომ, თქვენი ახალი პაროლი დამოწმების მიზნით ორჯერ აკრიფეთ "
 "და დააწკაპეთ <b>პაროლის შეცვლა</b>-ს."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:37
+#: ../capplets/about-me/cinnamon-about-me.glade.h:37
 msgid "User name:"
 msgstr "მომხმარებელი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "Web _log:"
 msgstr "ვებ ჟურნა_ლი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 msgid "Wor_k:"
 msgstr "_სამსახური:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "Work _fax:"
 msgstr "სამსახურის _ფაქსი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "Zip/_Postal code:"
 msgstr "საფოსტო ინ_დექსი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 msgid "_Address:"
 msgstr "მის_ამართი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 msgid "_Authenticate"
 msgstr "_ავტორიზაცია"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Department:"
 msgstr "_განყოფილება:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 msgid "_Groupwise:"
 msgstr "_დაჯგუფება:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 msgid "_Home page:"
 msgstr "პირადი ვე_ბგვერდი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 msgid "_Home:"
 msgstr "სახ_ლი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 msgid "_Jabber:"
 msgstr "_Jabber:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 msgid "_Manager:"
 msgstr "მ_მართველი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_Mobile:"
 msgstr "_მობილური:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 msgid "_New password:"
 msgstr "_ახალი პაროლი:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_Profession:"
 msgstr "_პროფესია:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Retype new password:"
 msgstr "ხ_ელახალი შეყვანა:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_State/Province:"
 msgstr "მხარე/პრ_ოვინცია:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:55
+#: ../capplets/about-me/cinnamon-about-me.glade.h:55
 msgid "_Title:"
 msgstr "_სათაური:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:56
+#: ../capplets/about-me/cinnamon-about-me.glade.h:56
 msgid "_Work:"
 msgstr "_სამსახური:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:57
+#: ../capplets/about-me/cinnamon-about-me.glade.h:57
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:58
+#: ../capplets/about-me/cinnamon-about-me.glade.h:58
 msgid "_Zip/Postal code:"
 msgstr "საფოსტო _ინდექსი:"
 
-#: ../capplets/about-me/gnome-about-me-password.c:162
+#: ../capplets/about-me/cinnamon-about-me-password.c:162
 msgid "Child exited unexpectedly"
 msgstr "შვილი პროცესი უცაბედად გაითიშა"
 
-#: ../capplets/about-me/gnome-about-me-password.c:297
+#: ../capplets/about-me/cinnamon-about-me-password.c:297
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr "შეუძლებელია შვილი პროცესის შეყვანის არხის დახურვა: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:310
+#: ../capplets/about-me/cinnamon-about-me-password.c:310
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr "შეუძლებელია შვილი პროცესის გამოყვანის არხის დახურვა: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:409
+#: ../capplets/about-me/cinnamon-about-me-password.c:409
 msgid "Authenticated!"
 msgstr "ავტორიზიზირებულია!"
 
@@ -389,77 +389,77 @@ msgstr "ავტორიზიზირებულია!"
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:475
-#: ../capplets/about-me/gnome-about-me-password.c:551
+#: ../capplets/about-me/cinnamon-about-me-password.c:475
+#: ../capplets/about-me/cinnamon-about-me-password.c:551
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
 msgstr ""
 "უკანასკნელი ავტორიზაციის დროს თქვენი პაროლი შეიცვალა! გთხოვთ ხელახლა სცადოთ."
 
-#: ../capplets/about-me/gnome-about-me-password.c:477
+#: ../capplets/about-me/cinnamon-about-me-password.c:477
 msgid "That password was incorrect."
 msgstr "არასწორი პაროლი."
 
-#: ../capplets/about-me/gnome-about-me-password.c:524
+#: ../capplets/about-me/cinnamon-about-me-password.c:524
 msgid "Your password has been changed."
 msgstr "თქვენი პაროლი შეცვლილია."
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:534
+#: ../capplets/about-me/cinnamon-about-me-password.c:534
 #, c-format
 msgid "System error: %s."
 msgstr "სისტემური შეცდომა: %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:537
+#: ../capplets/about-me/cinnamon-about-me-password.c:537
 msgid "The password is too short."
 msgstr "ძალიან მოკლე პაროლი."
 
-#: ../capplets/about-me/gnome-about-me-password.c:540
+#: ../capplets/about-me/cinnamon-about-me-password.c:540
 msgid "The password is too simple."
 msgstr "ძალიან მარტივი პაროლი."
 
-#: ../capplets/about-me/gnome-about-me-password.c:543
+#: ../capplets/about-me/cinnamon-about-me-password.c:543
 msgid "The old and new passwords are too similar."
 msgstr "ახალი და ძველი პაროლი ერთმანეთს ჰგვანან."
 
-#: ../capplets/about-me/gnome-about-me-password.c:545
+#: ../capplets/about-me/cinnamon-about-me-password.c:545
 msgid "The new password must contain numeric or special character(s)."
 msgstr "ახალი პაროლი ციფრებს ან სიმბოლოებს უნდა შეიცავდეს."
 
-#: ../capplets/about-me/gnome-about-me-password.c:548
+#: ../capplets/about-me/cinnamon-about-me-password.c:548
 msgid "The old and new passwords are the same."
 msgstr "ძველი და ახალი პაროლი ერთი და იგივიეა."
 
 #. translators: Unable to launch <program>: <error message>
-#: ../capplets/about-me/gnome-about-me-password.c:820
+#: ../capplets/about-me/cinnamon-about-me-password.c:820
 #, c-format
 msgid "Unable to launch %s: %s"
 msgstr "შეუძლებელია გაშვება %s: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:824
+#: ../capplets/about-me/cinnamon-about-me-password.c:824
 msgid "Unable to launch backend"
 msgstr "შეუძლებელია შიდა პროგრამის გაშვება"
 
-#: ../capplets/about-me/gnome-about-me-password.c:825
+#: ../capplets/about-me/cinnamon-about-me-password.c:825
 msgid "A system error has occurred"
 msgstr "დაიშვა სისტემური შეცდომა"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:845
+#: ../capplets/about-me/cinnamon-about-me-password.c:845
 msgid "Checking password..."
 msgstr "პაროლის შემოწმება..."
 
-#: ../capplets/about-me/gnome-about-me-password.c:932
+#: ../capplets/about-me/cinnamon-about-me-password.c:932
 msgid "Click <b>Change password</b> to change your password."
 msgstr "პაროლის შესაცვლელად დააწკაპუნეთ <b>პაროლის შეცვლა</b>-ს."
 
-#: ../capplets/about-me/gnome-about-me-password.c:935
+#: ../capplets/about-me/cinnamon-about-me-password.c:935
 msgid "Please type your password in the <b>New password</b> field."
 msgstr "გთხოვთ შეიყვანოთ პაროლი ახალ ველში <b>ახალი პაროლი</b>."
 
-#: ../capplets/about-me/gnome-about-me-password.c:941
+#: ../capplets/about-me/cinnamon-about-me-password.c:941
 msgid "The two passwords are not equal."
 msgstr "პაროლები ერთმანეთს არ ემთხვევიან."
 
@@ -592,8 +592,8 @@ msgstr ""
 "საჩვენებელი გვერდის სახელის მითითება (theme|background|fonts|interface)"
 
 #: ../capplets/appearance/appearance-main.c:116
-#: ../capplets/default-applications/gnome-da-capplet.c:880
-#: ../capplets/mouse/gnome-mouse-properties.c:444
+#: ../capplets/default-applications/cinnamon-da-capplet.c:880
+#: ../capplets/mouse/cinnamon-mouse-properties.c:444
 msgid "page"
 msgstr "page"
 
@@ -602,8 +602,8 @@ msgid "[WALLPAPER...]"
 msgstr "[WALLPAPER...]"
 
 #: ../capplets/appearance/appearance-style.c:171
-#: ../capplets/common/gnome-theme-info.c:442
-#: ../capplets/common/gnome-theme-info.c:634
+#: ../capplets/common/cinnamon-theme-info.c:442
+#: ../capplets/common/cinnamon-theme-info.c:634
 msgid "Default Pointer"
 msgstr "ნაგულისხმევი კურსორი"
 
@@ -613,7 +613,7 @@ msgid "Install"
 msgstr "დაყენება"
 
 #: ../capplets/appearance/appearance-style.c:253
-#: ../capplets/common/gnome-theme-info.c:1644
+#: ../capplets/common/cinnamon-theme-info.c:1644
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme engine "
@@ -669,7 +669,7 @@ msgid "The current theme suggests a font."
 msgstr "მიმდინარე გაფორმებისთვის სასურველი შრიფტი."
 
 #: ../capplets/appearance/appearance-themes.c:1045
-#: ../capplets/default-applications/gnome-da-capplet.c:630
+#: ../capplets/default-applications/cinnamon-da-capplet.c:630
 #: ../capplets/sound/sound-properties-capplet.c:262
 #: ../capplets/sound/sound-theme.c:648 ../capplets/sound/sound-theme.c:720
 msgid "Custom"
@@ -904,7 +904,7 @@ msgid "Window Border"
 msgstr "ფანჯარის ჩარჩო"
 
 #: ../capplets/appearance/data/appearance.glade.h:62
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:50
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:50
 msgid "_Add..."
 msgstr "_დამატება..."
 
@@ -1039,31 +1039,31 @@ msgstr "ფა_ნჯრები:"
 msgid "dots per inch"
 msgstr "წერტილი დუიმში"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:1
 msgid "Appearance"
 msgstr "გარემოს იერსახე"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:2
 msgid "Customize the look of the desktop"
 msgstr "სამუშაო მაგიდის ხედის გალამაზება"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:1
 msgid "Installs themes packages for various parts of the desktop"
 msgstr "აყენებს სამუშაო მაგიდის სხვადასხვა ნაწილების თემებს"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:2
 msgid "Theme Installer"
 msgstr "გაფორმების დამყენებელი"
 
-#: ../capplets/appearance/data/gnome-theme-package.xml.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-package.xml.in.h:1
 msgid "Gnome Theme Package"
 msgstr "გნომის გაფორმებების პაკეტი"
 
-#: ../capplets/appearance/gnome-wp-info.c:50
+#: ../capplets/appearance/cinnamon-wp-info.c:50
 msgid "No Wallpaper"
 msgstr "ფონური სურათის გარეშე"
 
-#: ../capplets/appearance/gnome-wp-item.c:209
+#: ../capplets/appearance/cinnamon-wp-item.c:209
 msgid "Slide Show"
 msgstr "სლაიდების ჩვენება"
 
@@ -1071,7 +1071,7 @@ msgstr "სლაიდების ჩვენება"
 #. * mime type, x pixel(s) by y pixel(s)
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:217
+#: ../capplets/appearance/cinnamon-wp-item.c:217
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1082,8 +1082,8 @@ msgstr ""
 "%s, %d %s მიერ %d %s\n"
 "დასტა: %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:223
-#: ../capplets/appearance/gnome-wp-item.c:225
+#: ../capplets/appearance/cinnamon-wp-item.c:223
+#: ../capplets/appearance/cinnamon-wp-item.c:225
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "პიქსელი"
@@ -1211,13 +1211,13 @@ msgstr "შეუძლებელია ძირითადი ინტე�
 
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"ვერ ვუშვებ პარამეტრების მმართველს 'gnome-settings-daemon'.\n"
+"ვერ ვუშვებ პარამეტრების მმართველს 'cinnamon-settings-daemon'.\n"
 "გნომის პარამეტრების მმართველის გაშვების გარეშე ზოგმა პარამეტრმა შეიძლება "
 "ეფექტი არ იქონიოს. ეს შეიძლება ნიშნავდეს პრობლემებს ბონობოსთან (Bonobo), ან "
 "უკვე გაშვებულია არა გნომის (მაგალითად KDE) პარამეტრების მმართველი და ის "
@@ -1416,49 +1416,49 @@ msgstr "გთხოვთ აირჩიოთ ნახატი."
 msgid "_Select"
 msgstr "_არჩევა"
 
-#: ../capplets/common/gnome-theme-info.c:635
+#: ../capplets/common/cinnamon-theme-info.c:635
 msgid "Default Pointer - Current"
 msgstr "ნაგულისხმევი მიმთითებელი - მიმდინარე"
 
-#: ../capplets/common/gnome-theme-info.c:639
+#: ../capplets/common/cinnamon-theme-info.c:639
 msgid "White Pointer"
 msgstr "თეთრი კურსორი"
 
-#: ../capplets/common/gnome-theme-info.c:640
+#: ../capplets/common/cinnamon-theme-info.c:640
 msgid "White Pointer - Current"
 msgstr "თეთრი კურსორი - მიმდინარე"
 
-#: ../capplets/common/gnome-theme-info.c:644
+#: ../capplets/common/cinnamon-theme-info.c:644
 msgid "Large Pointer"
 msgstr "დიდი კურსორი"
 
-#: ../capplets/common/gnome-theme-info.c:645
+#: ../capplets/common/cinnamon-theme-info.c:645
 msgid "Large Pointer - Current"
 msgstr "დიდი კურსორი - მიმდინარე"
 
-#: ../capplets/common/gnome-theme-info.c:649
+#: ../capplets/common/cinnamon-theme-info.c:649
 msgid "Large White Pointer - Current"
 msgstr "დიდი თეთრი კურსორი - მიმდინარე"
 
-#: ../capplets/common/gnome-theme-info.c:650
+#: ../capplets/common/cinnamon-theme-info.c:650
 msgid "Large White Pointer"
 msgstr "დიდი თეთრი კურსორი"
 
-#: ../capplets/common/gnome-theme-info.c:1620
+#: ../capplets/common/cinnamon-theme-info.c:1620
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme '%s' is "
 "not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1628
+#: ../capplets/common/cinnamon-theme-info.c:1628
 #, c-format
 msgid ""
 "This theme will not look as intended because the required window manager "
 "theme '%s' is not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1635
+#: ../capplets/common/cinnamon-theme-info.c:1635
 #, c-format
 msgid ""
 "This theme will not look as intended because the required icon theme '%s' is "
@@ -1466,7 +1466,7 @@ msgid ""
 msgstr ""
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:22
 msgid "Preferred Applications"
 msgstr "სასურველი პროგრამები"
 
@@ -1474,337 +1474,337 @@ msgstr "სასურველი პროგრამები"
 msgid "Select your default applications"
 msgstr "ნაგულისხმები პროგრამების ამორჩევა"
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:2
 #, fuzzy
 msgid "Visual Assistance"
 msgstr "_ვიზუალური სისტემური შეტყობინება"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:94
-#: ../capplets/default-applications/gnome-da-capplet.c:345
-#: ../capplets/default-applications/gnome-da-capplet.c:366
+#: ../capplets/default-applications/cinnamon-da-capplet.c:94
+#: ../capplets/default-applications/cinnamon-da-capplet.c:345
+#: ../capplets/default-applications/cinnamon-da-capplet.c:366
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr "შეცდომა კონფიგურაციის შენახვისას: %s"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:650
+#: ../capplets/default-applications/cinnamon-da-capplet.c:650
 msgid "Could not load the main interface"
 msgstr "შეუძლებელია ძირითადი ინტერფეისის გამოყენება"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:652
+#: ../capplets/default-applications/cinnamon-da-capplet.c:652
 msgid "Please make sure that the applet is properly installed"
 msgstr "გთხოვთ დარწმუნდეთ, რომ ალპეტი სწორადაა დაყენებული"
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/default-applications/gnome-da-capplet.c:879
+#: ../capplets/default-applications/cinnamon-da-capplet.c:879
 #, fuzzy
 msgid "Specify the name of the page to show (internet|multimedia|system|a11y)"
 msgstr ""
 "საჩვენებელი გვერდის სახელის მითითება (theme|background|fonts|interface)"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
 msgid "<b>Image Viewer</b>"
 msgstr "<b>სურათების მნახველი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "<b>Instant Messenger</b>"
 msgstr "<b>მყისიერი შეტყობინება</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 msgid "<b>Mail Reader</b>"
 msgstr "<b> ფოსტის წამკითხავი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 msgid "<b>Mobility</b>"
 msgstr "<b>მობილითი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "<b>Multimedia Player</b>"
 msgstr "<b>მულტიმედიის დამკვრელი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 msgid "<b>Terminal Emulator</b>"
 msgstr "<b>ტერმინალის ემულატორი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "<b>Text Editor</b>"
 msgstr "<b>ტექსტური რედაქტორი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "<b>Video Player</b>"
 msgstr "<b>ვიდეო დამკვრელი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:9
 msgid "<b>Visual</b>"
 msgstr "<b>ვიზუალი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 msgid "<b>Web Browser</b>"
 msgstr "<b>ვებ ბროუზერი</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:28
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:28
 msgid "Accessibility"
 msgstr "_დამხმარე საშუალებები"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr "ყველა %s დამთხვევა შეიცვლება შესაბამისი ბმულით"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "C_ommand:"
 msgstr "ბრძა_ნება:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "Co_mmand:"
 msgstr "ბრძა_ნება:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "E_xecute flag:"
 msgstr "ალმის _გაშვება"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Internet"
 msgstr "ინტერნეტი"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Multimedia"
 msgstr "მულტიმედია"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 msgid "Open link in new _tab"
 msgstr "ბმულის ახალ _სარკმელში გახსნა"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 msgid "Open link in new _window"
 msgstr "ბმულის ახალ _ფანჯარაში გახსნა"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:21
 msgid "Open link with web browser _default"
 msgstr "ბმულის _ნაგულისხმევ ვებ ბრაუზერში გახსნა"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:23
 msgid "Run at st_art"
 msgstr "დაწყებისას გ_აშვება"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:24
 msgid "Run in t_erminal"
 msgstr "ტ_ერმინალში გაშვება"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:25
 msgid "System"
 msgstr "სისტემა"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:26
 msgid "_Run at start"
 msgstr "შ_ესვლისთანავე გაშვება"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr "Banshee მუსიკის დამკვრელი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr "Claws Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Debian Sensible Browser"
 msgstr "Debian Sensible Browser"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr "დებიანის ტერმინალის ემულატორი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr "ეპიფანია ვებ ბროუზერი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr "ევოლუშენ ფოსტის მკითხველი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr "ფაირფოქსი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr "გნომის ლუპა ეკრანის მკითხველის გარეშე"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "GNOME OnScreen Keyboard"
 msgstr "გნომის ეკრან კლავიატურა"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr "გნომის ტერმინალი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr "Gnopernicus"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr "Gnopernicus ლუპითურთ"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr "Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr "Iceape Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr "Icedove"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr "Iceweasel"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr "კდე-ს ლუპა ეკრანის მკითხველის გარეშე"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr "Konsole"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr "ლინუქსის ეკრან კლავიატურა"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr "ლინუქსის ეკრან მკითხველი ლუპით"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Midori"
 msgstr "Midori"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Mozilla"
 msgstr "მოზილა"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla Mail"
 msgstr "Mozilla Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Muine Music Player"
 msgstr "Muine Music Player"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:37
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "Netscape Communicator"
 msgstr "Netscape Communicator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:38
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Opera"
 msgstr "Opera"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:39
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Orca"
 msgstr "Orca"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:40
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca with Magnifier"
 msgstr "Orca გამადიდებელი შუშით"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:41
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:42
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "Rhythmbox Music Player"
 msgstr "რითმბოქს მუსიკის დამკვრელი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:43
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:44
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey Mail"
 msgstr "SeaMonkey Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:45
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "Standard XTerminal"
 msgstr "სტანდარტული X ტერმინალი"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:46
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:47
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:48
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Terminator"
 msgstr "Terminator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:49
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:50
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Totem Movie Player"
 msgstr "ტოტემ ფილმის გამშვები"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:51
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "aterm"
 msgstr "aterm"
 
@@ -1912,7 +1912,7 @@ msgstr ""
 "მდგომარეობაში ყოფნის დროს შეუძლებელია გარჩევადობის გასწორება."
 
 #: ../capplets/keybindings/00-multimedia-key.xml.in.h:1
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "ხმა"
 
@@ -1949,27 +1949,27 @@ msgid "The type of accelerator."
 msgstr "ამაჩქარებლის ტიპი."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:90
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:90
 #: ../capplets/sound/sound-theme.c:415 ../capplets/sound/sound-theme.c:433
 #: ../capplets/sound/sound-theme.c:543 ../capplets/sound/sound-theme.c:559
 #: ../typing-break/drwright.c:480
 msgid "Disabled"
 msgstr "გამორთული"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:171
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:171
 msgid "<Unknown Action>"
 msgstr "<უცნობი მოქმედებაა>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:804
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:804
 msgid "Custom Shortcuts"
 msgstr "საკუთარი მალსახმობი"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:938
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:938
 #, fuzzy, c-format
 msgid "Error saving the new shortcut: %s"
 msgstr "შეცდომა კონფიგურაციის შენახვისას: %s"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1016
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1016
 #, fuzzy, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -1980,7 +1980,7 @@ msgstr ""
 "შემთხვევაში შეუძლებელი გახდება ჩვეულებრივი ტექსტის აკრეფვა.\n"
 "გთხოვთ სცადოთ Control, Alt , ან Shift კლავიშების ერთდროული კომბინაციები.\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1046
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1046
 #, fuzzy, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
@@ -1989,38 +1989,38 @@ msgstr ""
 "სხარტი კლავიშები \"%s\" უკვე გამოყენებულია აქ:\n"
 " \"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1052
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1052
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1060
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1060
 msgid "_Reassign"
 msgstr "_გადაბარება"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1180
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1180
 #, fuzzy, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr "შეცდომა ამაჩქარებლის მოხსნისას კონფიგურაციის ბაზაში: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1362
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1362
 msgid "Action"
 msgstr "მოქმედება"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1384
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1384
 msgid "Shortcut"
 msgstr "მალსახმობი"
 
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "სხარტი კლავიშები"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 #, fuzzy
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
@@ -2033,213 +2033,213 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "ბრძანებისთვის სხარტი კლავიშის მინიჭება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:248
-#: ../capplets/keyboard/gnome-keyboard-properties.c:253
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:248
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:253
 #: ../capplets/sound/sound-properties-capplet.c:1185
 #: ../capplets/sound/sound-properties-capplet.c:1187
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr "გამოყენება და გასვლა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:256
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:256
 #: ../capplets/sound/sound-properties-capplet.c:1189
 msgid "Retrieve and store legacy settings"
 msgstr "არსებული პარამეტრების მოძიება და შენახვა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:260
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:260
 msgid "Start the page with the typing break settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:265
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:265
 msgid "Start the page with the accessibility settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:274
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:274
 msgid "- GNOME Keyboard Preferences"
 msgstr "- გნომის კლავიატურის პარამეტრები"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
 msgid "<b>Bounce Keys</b>"
 msgstr "<b>მხტუნავი კლავიშები</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>კურსორის ციმციმი</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 #, fuzzy
 msgid "<b>General</b>"
 msgstr "<b>რენდერინგი</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>ავტოგამეორება</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 #, fuzzy
 msgid "<b>Slow Keys</b>"
 msgstr "<b>ნელი კლავიშების ჩართვა</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<b>Sticky Keys</b>"
 msgstr "<b>წ_ებოვანი კლავიშები</b>"
 
 #. fast acceleration
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>სწრაფი</i></small>"
 
 #. long delay
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>გრძლად</i></small>"
 
 #. short delay
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>მოკლედ</i></small>"
 
 #. slow acceleration
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>ნელა</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "A_cceleration:"
 msgstr "_აჩქარება:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "All_ow postponing of breaks"
 msgstr "წყვეტების გადადების დაშ_ვება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 msgid "Audio _Feedback..."
 msgstr "უკუ ხ_მოვანი სიგნალი..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 #, fuzzy
 msgid "Beep when _accessibility features are turned on or off"
 msgstr "პიპინი, როდესაც ფ_უნქცია ირთვება ან ითიშება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 #, fuzzy
 msgid "Beep when a _modifier key is pressed"
 msgstr "პიპინი, თუ მართვის კლავიში დაჭერილია"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 #, fuzzy
 msgid "Beep when a _toggle key is pressed"
 msgstr "პიპინი, თუ მართვის კლავიში დაჭერილია"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 #, fuzzy
 msgid "Beep when a key is pr_essed"
 msgstr "პიპინი, თუ მართვის კლავიში დაჭერილია"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 #, fuzzy
 msgid "Beep when a key is reje_cted"
 msgstr "პიპინი, კლავიშის _უარყოფის შემთხვევაში"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 #, fuzzy
 msgid "Beep when key is _accepted"
 msgstr "პიპინი,როდესაც:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 #, fuzzy
 msgid "Beep when key is _rejected"
 msgstr "პიპინი, კლავიშის _უარყოფის შემთხვევაში"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 msgid "By _country"
 msgstr "ქ_ვეყნის მიხედვით:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 msgid "By _language"
 msgstr "_ენის მიხედვით"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 msgid "Check if breaks are allowed to be postponed"
 msgstr "შემოწმება, დაშვებულია თუ არა წყვეტების გადადება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid "Choose a Keyboard Model"
 msgstr "კლავიატურის მოდელის არჩევა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid "Choose a Layout"
 msgstr "განლაგების არჩევა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 #, fuzzy
 msgid "Cursor _blinks in text fields"
 msgstr "ტექტურ სარკმელის ველებში კურსორის _ციმციმი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:31
 msgid "Cursor blinks speed"
 msgstr "კურსორის ციმციმის სიჩქარე"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:32
 msgid "D_elay:"
 msgstr "დ_აყოვნება:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 #, fuzzy
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr "_გათიშვა, ორი კლავიშის ერთდროული დაჭერის შემთხვევაში"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "Duration of the break when typing is disallowed"
 msgstr "წყვეტის ხანგრძლივობა, როდესაც აკრეფვა აკრძალულია"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "Duration of work before forcing a break"
 msgstr "მუშაობის ხანგრძლივობა წყვეტის გააქტიურებამდე"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:36
 msgid "General"
 msgstr "საერთო"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "Key presses _repeat when key is held down"
 msgstr ""
 "კლავიშის დაჭერების _გამეორება, როცა კლავიში დაჭერილ მდგომარეობაშია გაჩერებული"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 #, fuzzy
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr "კლავიატურის სპეც შესაძლებლობანი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 #, fuzzy
 msgid "Keyboard Layout Options"
 msgstr "განლაგების ვარიანტები"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 msgid "Keyboard Preferences"
 msgstr "კლავიატურის პარამეტრები"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "Keyboard _model:"
 msgstr "კლავიატურის _მოდელი:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "Layout _Options..."
 msgstr "განლაგების _პარამეტრები..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "Layouts"
 msgstr "განლაგებები"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -2247,129 +2247,129 @@ msgstr ""
 "ეკრანის ბლოკირება გარკვეული დროის შემდეგ, კლავიშების განმეორებითი დაჭერის "
 "მიერ გამოწვეული ზიანის თავიდან აცილების მიზნით"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:42
 msgid "Mouse Keys"
 msgstr "თაგვის ღილაკები"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:43
 msgid "Preview:"
 msgstr "წინასწარი ნახვა:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:44
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:44
 msgid "Repeat keys speed"
 msgstr "კლავიშების გამეორების სიჩქარე"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:45
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:45
 msgid "Reset to De_faults"
 msgstr "ნა_გულისხმევზე დაყენება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:46
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:46
 msgid "S_peed:"
 msgstr "_სიჩქარე:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:47
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:47
 msgid "Separate _layout for each window"
 msgstr "ცალკეული ფანჯრისთვის _განლაგების შეცვლა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:48
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:48
 msgid "Typing Break"
 msgstr "ბეჭდვის წყვეტა"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:49
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:49
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:51
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:51
 msgid "_Break interval lasts:"
 msgstr "_წყვეტის ინტერვალი გრძელდება:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:52
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:52
 msgid "_Country:"
 msgstr "ქვ_ეყანა:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:53
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:53
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:43
 msgid "_Delay:"
 msgstr "_დაყოვნება:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:54
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:54
 #, fuzzy
 msgid "_Ignore fast duplicate keypresses"
 msgstr "ორმაგი დაჭერის _იგრორირება როდესაც:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:55
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:55
 msgid "_Language:"
 msgstr "ე_ნა:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:56
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:56
 #, fuzzy
 msgid "_Lock screen to enforce typing break"
 msgstr "<b>ეკრანის ჩა_კეტვა</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:57
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:57
 msgid "_Models:"
 msgstr "_მოდელები:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:58
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:58
 #, fuzzy
 msgid "_Only accept long keypresses"
 msgstr "დაჭერის მიღება მხ_ოლოდ როცა:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:59
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:59
 msgid "_Pointer can be controlled using the keypad"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:60
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:60
 msgid "_Selected layouts:"
 msgstr "_არჩეული განლაგებები:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:61
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:61
 msgid "_Simulate simultaneous keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:62
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:62
 msgid "_Speed:"
 msgstr "_სიჩქარე:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:63
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:63
 msgid "_Type to test settings:"
 msgstr "პარამე_ტრების შესამოწმებელი ველი:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:64
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:64
 msgid "_Variants:"
 msgstr "_ვარიანტი:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:65
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:65
 msgid "_Vendors:"
 msgstr "_მწარმოებლები:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:66
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:66
 msgid "_Work interval lasts:"
 msgstr "_სამუშაო ინტერვალი გრძელდება:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:67
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:67
 msgid "minutes"
 msgstr "წუთი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:81
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:81
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:305
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:305
 msgid "Layout"
 msgstr "განლაგება"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:311
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:211
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:311
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:211
 #: ../capplets/sound/sound-theme.c:419 ../capplets/sound/sound-theme.c:539
 msgid "Default"
 msgstr "ნაგულისხმევი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:169
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:169
 msgid "Vendors"
 msgstr "მწარმოებელი"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:235
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:235
 msgid "Models"
 msgstr "მოდელები"
 
@@ -2383,286 +2383,286 @@ msgstr "კლავიატურის პარამეტრების �
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:89
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:89
 msgid "gesture|Move left"
 msgstr "თაგუნა მარცხნივ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:94
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:94
 msgid "gesture|Move right"
 msgstr "თაგუნა მარჯვნივ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:99
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:99
 msgid "gesture|Move up"
 msgstr "თაგუნა ზემოთ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:104
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:104
 msgid "gesture|Move down"
 msgstr "თაგუნა ქვემოთ"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:109
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:109
 #, fuzzy
 msgid "gesture|Disabled"
 msgstr "გამორთული"
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/mouse/gnome-mouse-properties.c:443
+#: ../capplets/mouse/cinnamon-mouse-properties.c:443
 #, fuzzy
 msgid "Specify the name of the page to show (general|accessibility)"
 msgstr ""
 "საჩვენებელი გვერდის სახელის მითითება (theme|background|fonts|interface)"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:452
+#: ../capplets/mouse/cinnamon-mouse-properties.c:452
 #, fuzzy
 msgid "- GNOME Mouse Preferences"
 msgstr "- გნომის ხმის პარამეტრები"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
 #, fuzzy
 msgid "<b>Double-Click Timeout</b>"
 msgstr "<b>ორმაგი დაწკაპვის ლოდინის ვადა</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>გადათრევა და გაშვება</b>"
 
 #. Dwell Click = Clicking without hardware buttons (by letting the pointer sit on the click target for a certain amount of time)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 #, fuzzy
 msgid "<b>Dwell Click</b>"
 msgstr "<b>მიქშერის ნაგულისხმევი არხები</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 #, fuzzy
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>სურათების მნახველი</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>თაგუნას ორიენტაცია</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 #, fuzzy
 msgid "<b>Pointer Speed</b>"
 msgstr "<b>სიჩქარე</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<b>Simulated Secondary Click</b>"
 msgstr "<b>მეორადი წკაპის სიმულირება</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid ""
 "<i>To test your double-click settings, try to double-click on the light bulb."
 "</i>"
 msgstr ""
 
 #. Dwell Click = Clicking without hardware buttons (by letting the pointer sit on the click target for a certain amount of time)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid ""
 "<i>You can also use the Dwell Click panel applet to choose the click type.</"
 "i>"
 msgstr ""
 
 #. high sensitivity
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 #, fuzzy
 msgid "<small><i>High</i></small>"
 msgstr "<small><i>გრძლად</i></small>"
 
 #. large threshold
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 #, fuzzy
 msgid "<small><i>Large</i></small>"
 msgstr "<small><i>გრძლად</i></small>"
 
 #. low sensitivity
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 #, fuzzy
 msgid "<small><i>Low</i></small>"
 msgstr "<small><i>გრძლად</i></small>"
 
 #. small threshold
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
 #, fuzzy
 msgid "<small><i>Small</i></small>"
 msgstr "<small><i>ნელა</i></small>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:29
 msgid "Choose type of click _beforehand"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:30
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:30
 msgid "Choose type of click with mo_use gestures"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:33
 msgid "D_ouble click:"
 msgstr "_ორმაგი წკაპი:"
 
 #. click to initiate drag-and-drop (like normally click and hold)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:35
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:35
 msgid "D_rag click:"
 msgstr "წკაპი გადათ_რევით:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:37
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:37
 msgid "Mouse Preferences"
 msgstr "თაგვის პარამეტრები"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:38
 msgid "Seco_ndary click:"
 msgstr "_მეორადი წკაპი:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:39
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:39
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:40
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:40
 msgid "Show click type _window"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:41
 #, fuzzy
 msgid "Thr_eshold:"
 msgstr "_ბიჯი"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:42
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:42
 msgid "_Acceleration:"
 msgstr "_აჩქარება:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:44
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:44
 msgid "_Initiate click when stopping pointer movement"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:45
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:45
 #, fuzzy
 msgid "_Left-handed"
 msgstr "_ცაცია თაგვი"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:46
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:46
 #, fuzzy
 msgid "_Motion threshold:"
 msgstr "_ბიჯი"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:47
 msgid "_Right-handed"
 msgstr "მა_რჯვენა ხელზე"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:48
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:48
 msgid "_Sensitivity:"
 msgstr "_მგრძნობელობა:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:49
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:49
 msgid "_Single click:"
 msgstr "_ერთმაგი წკაპი:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:50
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:50
 msgid "_Timeout:"
 msgstr "_ლოდინის ვადა:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:51
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:51
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr ""
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "თაგვი"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "თაგვის პარამეტრების დაყენება"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "ქსელის პროქსი"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "თვენი ქსელის პროქსის პარამეტრების დაყენება"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>ინტერნეტში პირდაპირი შ_ეერთება</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 msgid "<b>Ignore Host List</b>"
 msgstr "<b>ჰოსტების ნუსხის იგნორირება</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>პროქრის _ავტომატური კონფიგურირება</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>პროქსის _ხელით კონფიგურირება</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Use authentication</b>"
 msgstr "<b>აუთენტიფიკაცის _გამოყენება</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "Autoconfiguration _URL:"
 msgstr "ავტოკონფიგურაციის _მისამართი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 msgid "HTTP Proxy Details"
 msgstr "HTTP პროქსის დეტალები"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "H_TTP proxy:"
 msgstr "H_TTP პროქსი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "Ignored Hosts"
 msgstr "იგნორირებული ჰოსტები"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "Network Proxy Preferences"
 msgstr "ქსელის პროქსის პარამეტრები"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 msgid "Port:"
 msgstr "პორტი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Proxy Configuration"
 msgstr "პროქსის კონფიგურაცია"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 msgid "S_ocks host:"
 msgstr "Socks _ჰოსტი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "U_sername:"
 msgstr "_სახელი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 msgid "_Details"
 msgstr "_ცნობები"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_FTP proxy:"
 msgstr "_FTP პროქსი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_Password:"
 msgstr "_პაროლი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Secure HTTP proxy:"
 msgstr "უსაფრთხო _HTTP პროქსი:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Use the same proxy for all protocols"
 msgstr "ყველა პროტოკოლისთვის იგივე პროქსის _გამოყენება"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "ხმის ჩართვა და მის სისტემის მოვლენებთან ასოციაცია"
 
@@ -2938,68 +2938,68 @@ msgstr "ხმოვანი ფაილები"
 msgid "Custom..."
 msgstr "გა_მართვა..."
 
-#: ../capplets/windows/gnome-window-properties.c:344
+#: ../capplets/windows/cinnamon-window-properties.c:344
 msgid "Cannot start the preferences application for your window manager"
 msgstr "შეუძლებელია ფანჯრების მმართველისთვის პარამეტრების გაშვება"
 
 #. translators: this is the Control key
-#: ../capplets/windows/gnome-window-properties.c:602
+#: ../capplets/windows/cinnamon-window-properties.c:602
 msgid "C_ontrol"
 msgstr "_Ctrl"
 
-#: ../capplets/windows/gnome-window-properties.c:607
+#: ../capplets/windows/cinnamon-window-properties.c:607
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:613
+#: ../capplets/windows/cinnamon-window-properties.c:613
 msgid "H_yper"
 msgstr "_ტირე"
 
-#: ../capplets/windows/gnome-window-properties.c:620
+#: ../capplets/windows/cinnamon-window-properties.c:620
 msgid "S_uper (or \"Windows logo\")"
 msgstr "_ზედა (ან \"ფანჯრის ლოგო\")"
 
-#: ../capplets/windows/gnome-window-properties.c:627
+#: ../capplets/windows/cinnamon-window-properties.c:627
 msgid "_Meta"
 msgstr "_მეტა"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 msgid "<b>Movement Key</b>"
 msgstr "<b>მოძრაობის ღილაკი</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>თავსართს მოქმედება</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 msgid "<b>Window Selection</b>"
 msgstr "<b>მონიშვნა ფანჯარაში</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr "ფანჯარის გადასაადგილებლად, დააჭირეთ და დაჭერილზე გადაიტანეთ ფანჯარა:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "ფანჯარის პარამეტრები"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "ო_რჯერ დააწკაპეთ ფანჯრის თავსართს, რომ შეასრულოთ ეს მოქმედება:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "_ინტერვალი ამოწევამდე"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "მონიშნული ფანჯრის _ამოტანა ინტერვალის მერე"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "ფანჯრის მონიშვნა ზედ თაგვის გადატარებისას"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "წამი"
 
@@ -3190,7 +3190,7 @@ msgstr "<b>გახსნა %s</b>"
 msgid "Remove from System Items"
 msgstr "სისტემური ელემენტებიდან ამოღება"
 
-#: ../libwindow-settings/gnome-wm-manager.c:318
+#: ../libwindow-settings/cinnamon-wm-manager.c:318
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "ფანჯრების მმართველმა \"%s\" არ დაარეგისტრირა კონფიგურირების ხელსაწყო\n"
@@ -3297,11 +3297,11 @@ msgstr ""
 #, fuzzy
 msgid ""
 "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;default-"
-"applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+"applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 msgstr ""
 "[მაგიდის ფონის შეცვლა;background.desktop,გაფორმების შეცვლა;gtk-theme-"
 "selector.desktop,სასურველი პროგრამების განსაზღვრა;default-applications."
-"desktop,პრინტერის დამატება;gnome-cups-manager.desktop]"
+"desktop,პრინტერის დამატება;cinnamon-cups-manager.desktop]"
 
 #: ../shell/control-center.schemas.in.h:14
 #, fuzzy
@@ -3966,11 +3966,11 @@ msgstr "დახმარების პარამეტრების ჩ�
 
 #~ msgid ""
 #~ "The sound file for this event does not exist.\n"
-#~ "You may want to install the gnome-audio package for a set of default "
+#~ "You may want to install the cinnamon-audio package for a set of default "
 #~ "sounds."
 #~ msgstr ""
 #~ "არ არსებობს ხმოვანი ფაილი მოცემული მოვლენისთვის.\n"
-#~ "საჭიროა gnome-audio პაკეტის დაყენება, სტანდარტული ხმებისთვის."
+#~ "საჭიროა cinnamon-audio პაკეტის დაყენება, სტანდარტული ხმებისთვის."
 
 #~ msgid "The sound file for this event does not exist."
 #~ msgstr "არ არსებობს ხმოვანი ფაილი მოცემული მოვლენისთვის."

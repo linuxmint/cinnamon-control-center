@@ -47,345 +47,345 @@ msgstr ""
 msgid "Show more _details"
 msgstr "Nánar um þema"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 #, fuzzy
 msgid "About Me"
 msgstr "_Um"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your personal information"
 msgstr "Upplýsingar um MIME-tegund"
 
-#: ../capplets/about-me/gnome-about-me.c:554
+#: ../capplets/about-me/cinnamon-about-me.c:554
 #, fuzzy
 msgid "Select Image"
 msgstr "_Velja"
 
-#: ../capplets/about-me/gnome-about-me.c:556
+#: ../capplets/about-me/cinnamon-about-me.c:556
 #, fuzzy
 msgid "No Image"
 msgstr "Myndir"
 
-#: ../capplets/about-me/gnome-about-me.c:706
+#: ../capplets/about-me/cinnamon-about-me.c:706
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:727
+#: ../capplets/about-me/cinnamon-about-me.c:727
 msgid "Unable to open address book"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:739
+#: ../capplets/about-me/cinnamon-about-me.c:739
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:770
-#: ../capplets/about-me/gnome-about-me.c:772
+#: ../capplets/about-me/cinnamon-about-me.c:770
+#: ../capplets/about-me/cinnamon-about-me.c:772
 #, fuzzy, c-format
 msgid "About %s"
 msgstr "_Um"
 
-#: ../capplets/about-me/gnome-about-me-password.c:101
-#: ../capplets/about-me/gnome-about-me-password.c:479
+#: ../capplets/about-me/cinnamon-about-me-password.c:101
+#: ../capplets/about-me/cinnamon-about-me-password.c:479
 msgid "Old password is incorrect, please retype it"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:112
+#: ../capplets/about-me/cinnamon-about-me-password.c:112
 msgid "System error has occurred"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:113
+#: ../capplets/about-me/cinnamon-about-me-password.c:113
 msgid "Could not run /usr/bin/passwd"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:114
+#: ../capplets/about-me/cinnamon-about-me-password.c:114
 msgid "Unable to launch backend"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:116
-#: ../capplets/about-me/gnome-about-me-password.c:117
+#: ../capplets/about-me/cinnamon-about-me-password.c:116
+#: ../capplets/about-me/cinnamon-about-me-password.c:117
 msgid "Unexpected error has occurred"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:315
+#: ../capplets/about-me/cinnamon-about-me-password.c:315
 msgid "Password is too short"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:318
-#: ../capplets/about-me/gnome-about-me-password.c:321
+#: ../capplets/about-me/cinnamon-about-me-password.c:318
+#: ../capplets/about-me/cinnamon-about-me-password.c:321
 msgid "Password is too simple"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:324
+#: ../capplets/about-me/cinnamon-about-me-password.c:324
 msgid "Old and new passwords are too similar"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:328
+#: ../capplets/about-me/cinnamon-about-me-password.c:328
 msgid "Old and new password are the same"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:406
+#: ../capplets/about-me/cinnamon-about-me-password.c:406
 #, fuzzy
 msgid "Please type the passwords."
 msgstr "_Lykilorð:"
 
-#: ../capplets/about-me/gnome-about-me-password.c:414
+#: ../capplets/about-me/cinnamon-about-me-password.c:414
 msgid "Please type the password again, it is wrong."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:417
+#: ../capplets/about-me/cinnamon-about-me-password.c:417
 msgid "Click on Change Password to change the password."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 #: ../vfs-methods/themus/apply-font.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:1
 #: ../capplets/font/font-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:1
 msgid "    "
 msgstr " "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 #, fuzzy
 msgid "<b>Email</b>"
 msgstr "<i>Lítil</i>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 #, fuzzy
 msgid "<b>Home</b>"
 msgstr "<b>Hraði</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 #, fuzzy
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>Leturmálun</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 #, fuzzy
 msgid "<b>Job</b>"
 msgstr "<b>Stuðningur</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Please type the passwords.</b>"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 #, fuzzy
 msgid "<b>Telephone</b>"
 msgstr "<b>Víxllyklar</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 #, fuzzy
 msgid "<b>Web</b>"
 msgstr "<b>Hraði</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 #, fuzzy
 msgid "<b>Work</b>"
 msgstr "<b>Stuðningur</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_IM/iChat:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 #, fuzzy
 msgid "A_ddress:"
 msgstr "Bæt_a við:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "A_ssistant:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 #, fuzzy
 msgid "Address"
 msgstr "_smellt"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 #, fuzzy
 msgid "C_ity:"
 msgstr "Stíll:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 #, fuzzy
 msgid "C_ompany:"
 msgstr "Skipu_n:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 #, fuzzy
 msgid "Cale_ndar:"
 msgstr "_Flokkur:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 #, fuzzy
 msgid "Change Passwo_rd..."
 msgstr "Breyta setti"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 #, fuzzy
 msgid "Change Password"
 msgstr "Breyta setti"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 #, fuzzy
 msgid "Ci_ty:"
 msgstr "Stíll:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 #, fuzzy
 msgid "Co_untry:"
 msgstr "Control"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 #, fuzzy
 msgid "Contact"
 msgstr "_Innihald"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 #, fuzzy
 msgid "Cou_ntry:"
 msgstr "Control"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Full Name"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 #, fuzzy
 msgid "Hom_e:"
 msgstr "_Nafn:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "IC_Q:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "M_SN:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 #, fuzzy
 msgid "Old pa_ssword:"
 msgstr "_Lykilorð:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "P.O. _box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "P._O. box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
 #, fuzzy
 msgid "Personal Info"
 msgstr "S_tjórnborðsletur:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "State/Pro_vince:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 #, fuzzy
 msgid "User name:"
 msgstr "N_otandanafn:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid "Web _log:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:36
+#: ../capplets/about-me/cinnamon-about-me.glade.h:36
 msgid "Wor_k:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:37
+#: ../capplets/about-me/cinnamon-about-me.glade.h:37
 msgid "Work _fax:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "Zip/_Postal code:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 #, fuzzy
 msgid "_Address:"
 msgstr "Bæt_a við:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "_Department:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "_Groupwise:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 #, fuzzy
 msgid "_Home page:"
 msgstr "_Nafn þema:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 #, fuzzy
 msgid "_Home:"
 msgstr "_Nafn:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Jabber:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 #, fuzzy
 msgid "_Manager:"
 msgstr "_Stækkunargler"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 #, fuzzy
 msgid "_Mobile:"
 msgstr "_Skrá"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 #, fuzzy
 msgid "_New password:"
 msgstr "_Lykilorð:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 #, fuzzy
 msgid "_Profession:"
 msgstr "Útgáfa:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 #, fuzzy
 msgid "_Retype new password:"
 msgstr "_Lykilorð:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_State/Province:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 #, fuzzy
 msgid "_Title:"
 msgstr "Stíll:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_Work:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Yahoo:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_Zip/Postal code:"
 msgstr ""
 
@@ -489,7 +489,7 @@ msgid "_Import"
 msgstr "Flytja _inn"
 
 #: ../capplets/accessibility/keyboard/accessibility-keyboard.desktop.in.in.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 #: ../capplets/keyboard/keyboard.desktop.in.in.h:1
 msgid "Keyboard"
 msgstr "Lyklaborð"
@@ -498,7 +498,7 @@ msgstr "Lyklaborð"
 msgid "Set your keyboard accessibility preferences"
 msgstr "Skilgreina lyklaborðsaðgengi"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.c:59
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.c:59
 msgid ""
 "This system does not seem to have the XKB extension.  The keyboard "
 "accessibility features will not operate without it."
@@ -506,91 +506,91 @@ msgstr ""
 "Þetta kerfi virðist ekki vera með XKB-viðbótina. Án hennar virka "
 "aðgengisþættir lyklaborðs ekki."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:2
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 #: ../capplets/theme-switcher/theme-install.glade.h:1
 #: ../capplets/theme-switcher/theme-properties.glade.h:1
 msgid "*"
 msgstr "*"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:3
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:3
 msgid "<b>Enable Bo_unce Keys</b>"
 msgstr "<b>Virkja sko_pplykla</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:4
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:4
 msgid "<b>Enable Slo_w Keys</b>"
 msgstr "<b>Virkja _letilykla</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:5
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:5
 msgid "<b>Enable _Mouse Keys</b>"
 msgstr "<b>Virkja _músarlykla</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:6
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:6
 msgid "<b>Enable _Repeat Keys</b>"
 msgstr "<b>Virkja _fjöllykla</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:7
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:7
 msgid "<b>Enable _Sticky Keys</b>"
 msgstr "<b>Virkja _klísturlykla</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:8
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:8
 msgid "<b>Features</b>"
 msgstr "<b>Þættir</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:9
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:9
 msgid "<b>Toggle Keys</b>"
 msgstr "<b>Víxllyklar</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:10
 msgid "Basic"
 msgstr "Almennt"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:11
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:11
 msgid "Beep if key is re_jected"
 msgstr "Tísta ef lykli er hafnað"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:12
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:12
 msgid "Beep when _features turned on or off from keyboard"
 msgstr "Tísta þegar _þættir eru slegnir á eða af með lyklaborðinu"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:13
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:13
 msgid "Beep when _modifier is pressed"
 msgstr "Tísta þegar ýtt er á _breytulykil."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:14
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:14
 msgid "Beep when an LED is turned on and two beeps when one is turned off."
 msgstr "Tísta þegar kveikt er á díóðu og pípa tvisvar þegar slökkt er."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:15
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:15
 msgid "Beep when key is:"
 msgstr "Tísta þegar lykillinn er:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:16
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:16
 msgid "Del_ay:"
 msgstr "_Hik:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:17
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:17
 msgid "Delay between keypress and pointer mo_vement:"
 msgstr "Hik milli innsláttar og bendishreyfingar."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:18
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:18
 msgid "Disa_ble if two keys pressed together"
 msgstr "Óvir_kja ef slegið er á tvo lykla samtímis"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:19
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:19
 msgid "E_nable Toggle Keys"
 msgstr "H_eimila víxllykla"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:20
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:20
 msgid "Filters"
 msgstr "Síur"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:21
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:21
 msgid "I_gnore duplicate keypresses within:"
 msgstr "Líta _framhjá tvíslætti á lykla innan:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:22
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:22
 msgid ""
 "Ignore all subsequent presses of the SAME key if they happen within a user "
 "selectable period of time."
@@ -598,23 +598,23 @@ msgstr ""
 "Líta framhjá öllum samfelldum slætti á SAMA lykil ef hann fer fram innan "
 "tíma sem notandi getur stillt."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:23
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:23
 msgid "Keyboard Accessibility Preferences (AccessX)"
 msgstr "Stillingar lyklaborðsaðgengis (AccessX)"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:24
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:24
 msgid "Ma_ximum pointer speed:"
 msgstr "_Hámarkshraði bendis:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:25
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:25
 msgid "Mouse Keys"
 msgstr "Músarlyklar"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:26
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:26
 msgid "Mouse _Preferences..."
 msgstr "Músar_stillingar..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:27
 msgid ""
 "Only accept keys after they have been pressed and held for a user adjustable "
 "amount of time."
@@ -622,7 +622,7 @@ msgstr ""
 "Aðeins samþykkja lykla eftir að ýtt hefur verið á þá og þeim haldið í tíma "
 "sem notandi getur stillt."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:28
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:28
 msgid ""
 "Perform multiple simultaneous key press operations by pressing modifier keys "
 "in sequence."
@@ -630,70 +630,70 @@ msgstr ""
 "Framkvæma fjölda samtíma innsláttaraðgerða með því að ýta á breytilykla í "
 "röð."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:29
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
 msgid "S_peed:"
 msgstr "H_raði:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:30
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:30
 msgid "Time to acce_lerate to maximum speed:"
 msgstr "Tími hröðunar að _mesta hraða:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:31
 msgid "Turn the numeric keypad into a mouse control pad."
 msgstr "Breytta töluskika í músarskika."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:32
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:32
 msgid "_Disable if unused for:"
 msgstr "Óvir_kja ef ónotað í:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:33
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:33
 msgid "_Enable keyboard accessibility features"
 msgstr "_Virkja lyklaborðsaðgengisþætti"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:34
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:34
 msgid "_Import Feature Settings..."
 msgstr "Flytja _inn þáttastillingar..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:35
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:35
 msgid "_Only accept keys held for:"
 msgstr "Sam_þykkja aðeins lykla sem haldið er í:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:36
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "_Type to test settings:"
 msgstr "Vélrita til að _prófa stillingar:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:37
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:37
 msgid "_accepted"
 msgstr "s_amþykktur"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:38
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:38
 msgid "_pressed"
 msgstr "_smellt"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:39
 msgid "_rejected"
 msgstr "_hafnað"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:40
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:40
 msgid "characters/second"
 msgstr "letureiningar/sekúndu"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:41
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:41
 msgid "milliseconds"
 msgstr "millisekúndur"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:42
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:42
 msgid "pixels/second"
 msgstr "pixlar/sekúndu"
 
 #. set the timeout value  label with correct value of timeout
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:43
-#: ../capplets/mouse/gnome-mouse-properties.c:138
-#: ../capplets/mouse/gnome-mouse-properties.c:885
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.c:138
+#: ../capplets/mouse/cinnamon-mouse-properties.c:885
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "sekúndur"
 
@@ -707,95 +707,95 @@ msgstr "Breyta skjáborðsbakgrunni"
 msgid "Desktop Background"
 msgstr "Bakgrunnur"
 
-#: ../capplets/background/gnome-background-properties.glade.h:1
+#: ../capplets/background/cinnamon-background-properties.glade.h:1
 #, fuzzy
 msgid "<b>Desktop _Wallpaper</b>"
 msgstr "Lyklaborðsstillingar"
 
-#: ../capplets/background/gnome-background-properties.glade.h:2
+#: ../capplets/background/cinnamon-background-properties.glade.h:2
 #, fuzzy
 msgid "<b>_Desktop Colors</b>"
 msgstr "Lyklaborðsstillingar"
 
-#: ../capplets/background/gnome-background-properties.glade.h:3
+#: ../capplets/background/cinnamon-background-properties.glade.h:3
 #, fuzzy
 msgid "Desktop Background Preferences"
 msgstr "Bakgrunnsstillingar"
 
-#: ../capplets/background/gnome-background-properties.glade.h:4
+#: ../capplets/background/cinnamon-background-properties.glade.h:4
 msgid "Open a dialog to specify the color"
 msgstr ""
 
-#: ../capplets/background/gnome-background-properties.glade.h:5
+#: ../capplets/background/cinnamon-background-properties.glade.h:5
 msgid "_Add Wallpaper"
 msgstr "Bæt_a við skjáborðsmynd"
 
-#: ../capplets/background/gnome-background-properties.glade.h:6
+#: ../capplets/background/cinnamon-background-properties.glade.h:6
 #, fuzzy
 msgid "_Style:"
 msgstr "Stíll:"
 
-#: ../capplets/background/gnome-wp-capplet.c:74
+#: ../capplets/background/cinnamon-wp-capplet.c:74
 #: ../capplets/common/capplet-util.c:340
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:333
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:333
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Villa kom upp við sýningu hjálpar: %s"
 
-#: ../capplets/background/gnome-wp-capplet.c:1042
-#: ../capplets/background/gnome-wp-capplet.c:1060
+#: ../capplets/background/cinnamon-wp-capplet.c:1042
+#: ../capplets/background/cinnamon-wp-capplet.c:1060
 #, fuzzy
 msgid "Centered"
 msgstr "_Miðja"
 
-#: ../capplets/background/gnome-wp-capplet.c:1068
-#: ../capplets/background/gnome-wp-capplet.c:1085
+#: ../capplets/background/cinnamon-wp-capplet.c:1068
+#: ../capplets/background/cinnamon-wp-capplet.c:1085
 #, fuzzy
 msgid "Fill Screen"
 msgstr "Skjár"
 
-#: ../capplets/background/gnome-wp-capplet.c:1093
-#: ../capplets/background/gnome-wp-capplet.c:1110
+#: ../capplets/background/cinnamon-wp-capplet.c:1093
+#: ../capplets/background/cinnamon-wp-capplet.c:1110
 #, fuzzy
 msgid "Scaled"
 msgstr "Kv_arða"
 
-#: ../capplets/background/gnome-wp-capplet.c:1118
-#: ../capplets/background/gnome-wp-capplet.c:1135
+#: ../capplets/background/cinnamon-wp-capplet.c:1118
+#: ../capplets/background/cinnamon-wp-capplet.c:1135
 #, fuzzy
 msgid "Tiled"
 msgstr "_Raða"
 
-#: ../capplets/background/gnome-wp-capplet.c:1159
-#: ../capplets/background/gnome-wp-capplet.c:1168
+#: ../capplets/background/cinnamon-wp-capplet.c:1159
+#: ../capplets/background/cinnamon-wp-capplet.c:1168
 #, fuzzy
 msgid "Solid Color"
 msgstr "Heill litur"
 
-#: ../capplets/background/gnome-wp-capplet.c:1176
-#: ../capplets/background/gnome-wp-capplet.c:1185
+#: ../capplets/background/cinnamon-wp-capplet.c:1176
+#: ../capplets/background/cinnamon-wp-capplet.c:1185
 #, fuzzy
 msgid "Horizontal Gradient"
 msgstr "Láréttur stigill"
 
-#: ../capplets/background/gnome-wp-capplet.c:1193
-#: ../capplets/background/gnome-wp-capplet.c:1202
+#: ../capplets/background/cinnamon-wp-capplet.c:1193
+#: ../capplets/background/cinnamon-wp-capplet.c:1202
 #, fuzzy
 msgid "Vertical Gradient"
 msgstr "Lóðréttur stigill"
 
 #. Create the file chooser dialog stuff here
-#: ../capplets/background/gnome-wp-capplet.c:1251
+#: ../capplets/background/cinnamon-wp-capplet.c:1251
 #, fuzzy
 msgid "Add Wallpaper"
 msgstr "Bæta við skjáborðsmynd"
 
-#: ../capplets/background/gnome-wp-info.c:57
+#: ../capplets/background/cinnamon-wp-info.c:57
 msgid "No Wallpaper"
 msgstr "Engin skjáborðsmynd"
 
-#: ../capplets/background/gnome-wp-item.c:292
-#: ../capplets/background/gnome-wp-item.c:294
+#: ../capplets/background/cinnamon-wp-item.c:292
+#: ../capplets/background/cinnamon-wp-item.c:294
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -803,13 +803,13 @@ msgstr[1] ""
 
 #: ../capplets/common/activate-settings-daemon.c:18
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"Get ekki ræst stillingastjórann 'gnome-settings-daemon'.\n"
+"Get ekki ræst stillingastjórann 'cinnamon-settings-daemon'.\n"
 "Ef GNOME-stillingastjórinn er ekki ræstur, geta vissar stillingar ekki "
 "virkað. Þetta gæti gefið til kynna vandamál með Bonobo, eða að annar (t.d. "
 "KDE) stillingastjóri er virkur og virkar ekki með GNOME-stillingastjóranum."
@@ -824,9 +824,9 @@ msgid "Just apply settings and quit"
 msgstr "Taka breytingar í notkun og hætta"
 
 #: ../capplets/common/capplet-util.c:243
-#: ../capplets/default-applications/gnome-default-applications-properties.c:765
-#: ../capplets/keyboard/gnome-keyboard-properties.c:225
-#: ../capplets/mouse/gnome-mouse-properties.c:1021
+#: ../capplets/default-applications/cinnamon-default-applications-properties.c:765
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:225
+#: ../capplets/mouse/cinnamon-mouse-properties.c:1021
 #: ../capplets/sound/sound-properties-capplet.c:244
 msgid "Retrieve and store legacy settings"
 msgstr "Sækja og geyma legacy-stillingar"
@@ -1004,7 +1004,7 @@ msgid "_Select"
 msgstr "_Velja"
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Preferred Applications"
 msgstr "Valin forrit"
 
@@ -1012,206 +1012,206 @@ msgstr "Valin forrit"
 msgid "Select your default applications"
 msgstr "Veldu sjálfgefin forrit"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:9
 #, fuzzy
 msgid "Debian Sensible Browser"
 msgstr "Sjálfgefinn vafri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:10
 msgid "Epiphany"
 msgstr "Epiphany"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:11
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:12
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:13
 #, fuzzy
 msgid "Firebird"
 msgstr "Firebird/FireFox"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:14
 msgid "Firefox"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:15
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:16
 #, fuzzy
 msgid "Mozilla"
 msgstr "Mozilla Mail"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:17
 msgid "Netscape Communicator"
 msgstr "Netscape Communicator"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:18
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:19
 #, fuzzy
 msgid "W3M Text Browser"
 msgstr "Lynx textavafri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:20
 msgid "Lynx Text Browser"
 msgstr "Lynx textavafri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:21
 msgid "Links Text Browser"
 msgstr "Links textavafri"
 
-#. The code in gnome-default-applications-properties.c makes sure
+#. The code in cinnamon-default-applications-properties.c makes sure
 #. * there is only one (the first entry in this list) Evolution entry
 #. * in the list shown to the user
 #.
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:36
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:37
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:38
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:39
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:40
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:41
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:36
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:37
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:38
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:39
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:40
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:41
 msgid "Evolution Mail Reader"
 msgstr "Evolution póstforrit"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:42
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:42
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:43
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:43
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:44
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:45
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:44
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:45
 msgid "Thunderbird"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:46
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:46
 msgid "Mozilla Mail"
 msgstr "Mozilla Mail"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:47
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:47
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:58
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:58
 #, fuzzy
 msgid "Debian Terminal Emulator"
 msgstr "Sjálfgefið stjórnborð"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:59
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:59
 #, fuzzy
 msgid "GNOME Terminal"
 msgstr "Skel"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:60
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:60
 msgid "Standard XTerminal"
 msgstr "Staðlað XStjórnborð"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:61
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:61
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:62
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:62
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:63
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:63
 #, fuzzy
 msgid "aterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:64
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:64
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.c:123
+#: ../capplets/default-applications/cinnamon-default-applications-properties.c:123
 msgid "Please specify a name and a command for this editor."
 msgstr "Skilgreindu nafn og skipun fyrir þennan ritil."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "Add..."
 msgstr "Bæta við..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 #, fuzzy
 msgid "C_ustom"
 msgstr "Skilgreina"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 #, fuzzy
 msgid "C_ustom:"
 msgstr "Skilgreina"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "Can open _URIs"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 #, fuzzy
 msgid "Can open multiple _files"
 msgstr "Þetta forrit getur opnað _fleiri skrár"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "Co_mmand:"
 msgstr "Skipu_n:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "Custom Editor Properties"
 msgstr "Skilgreindir eiginleikar ritils"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:9
 msgid "Default Mail Reader"
 msgstr "Sjálfgefið póstforrit"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 msgid "Default Terminal"
 msgstr "Sjálfgefið stjórnborð"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
 msgid "Default Text Editor"
 msgstr "Sjálfgefinn textaritill"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:12
 msgid "Default Web Browser"
 msgstr "Sjálfgefinn vafri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 msgid "Default Window Manager"
 msgstr "Sjálfgefinn gluggastjóri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "Delete"
 msgstr "Eyða"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "E_xec Flag:"
 msgstr "_Keyrsluflagg:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "Edit..."
 msgstr "Breyta..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Mail Reader"
 msgstr "Póstforrit"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 #, fuzzy
 msgid "Run in a _terminal"
 msgstr "Keyra í s_tjórnborði:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 #, fuzzy
 msgid "Run in a t_erminal"
 msgstr "Keyra í s_tjórnborði:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:21
 msgid ""
 "Select the window manager you want.  You will need to hit apply, wave the "
 "magic wand, and do a magic dance for it to work."
@@ -1219,44 +1219,44 @@ msgstr ""
 "Veldu gluggastjóra. Þú verður að smella á nota, sveifla töfrasprotanum og "
 "dansa hringdans til að það virki."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:22
 msgid "Terminal"
 msgstr "Skel"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:23
 msgid "Text Editor"
 msgstr "Textaritill"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:24
 msgid "Understands _Netscape Remote Control"
 msgstr "Skilur _Netscape fjarstýringu"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:25
 msgid "Use this _editor to open text files in the file manager"
 msgstr "Nota þennan _ritil til að opna textaskrár í skráarstjóra."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:26
 msgid "Web Browser"
 msgstr "Vafri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:27
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:27
 msgid "Window Manager"
 msgstr "Gluggastjóri"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:28
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:28
 #, fuzzy
 msgid "_Command:"
 msgstr "Skipu_n:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:29
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:29
 msgid "_Name:"
 msgstr "_Nafn:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:30
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:30
 msgid "_Properties..."
 msgstr "_Eiginleikar..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:31
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:31
 #, fuzzy
 msgid "_Select:"
 msgstr "_Velja"
@@ -1539,29 +1539,29 @@ msgid "The type of accelerator."
 msgstr "Tegund flýtilykils."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:197
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:197
 #: ../libbackground/applier.c:624 ../typing-break/drwright.c:477
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:545
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:545
 msgid "<Unknown Action>"
 msgstr "<Óþekkt aðgerð>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:566
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:566
 msgid "Desktop"
 msgstr "Skjáborð"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:567
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:567
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "Hljóð"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:571
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:571
 msgid "Window Management"
 msgstr "Gluggastjórnun"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:668
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:668
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for:\n"
@@ -1570,30 +1570,30 @@ msgstr ""
 "Flýtivísunin \"%s\" er þegar notuð fyrir:\n"
 "\"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:700
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:700
 #, c-format
 msgid "Error setting new accelerator in configuration database: %s\n"
 msgstr "Villa við skilgreiningu nýs flýtilykils í stillingagrunni: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:750
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:750
 #, fuzzy, c-format
 msgid "Error unsetting accelerator in configuration database: %s\n"
 msgstr "Villa við skilgreiningu nýs flýtilykils í stillingagrunni: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:857
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:857
 msgid "Action"
 msgstr "Aðgerð"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:881
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:881
 msgid "Shortcut"
 msgstr "Flýtivísun"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Flýtilyklar"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 #, fuzzy
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new "
@@ -1605,12 +1605,12 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "Tengja flýtilykla við skipanir"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:84
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:84
 #, fuzzy
 msgid "Unknown"
 msgstr "Óþekktur bendill"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:273
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:273
 msgid "Layout"
 msgstr "Umbrot"
 
@@ -1618,129 +1618,129 @@ msgstr "Umbrot"
 #. the below options are to be included in the selected list.
 #. This is a HIG-compliant alternative to allowing no
 #. selection in the group.
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:277
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:228
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:277
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:228
 #, fuzzy
 msgid "Default"
 msgstr "GNOME-sjálfgefið"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:75
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:75
 #, fuzzy
 msgid "Models"
 msgstr "Líkan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:106
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:106
 #, c-format
 msgid "There was an error launching the keyboard capplet : %s"
 msgstr "Það kom upp villa við ræsingu lyklaborðs-cappletsins : %s"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:202
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:202
 msgid "_Accessibility"
 msgstr "_Aðgengi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:221
-#: ../capplets/keyboard/gnome-keyboard-properties.c:223
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:221
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:223
 #: ../capplets/sound/sound-properties-capplet.c:240
 #: ../capplets/sound/sound-properties-capplet.c:242
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr "Nota stillingar og hætta (aðeins samhæfing; nú í umsjón púka)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:227
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:227
 msgid "Start the page with the typing break settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 #, fuzzy
 msgid "..."
 msgstr "Bæta við..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>Blikkandi bendill</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>Fjöllyklar</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<b>_Lock screen to enforce typing break</b>"
 msgstr "<b>_Læsa skjá til að skylda vélritunarhlé</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>Hratt</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>Lengi</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>Stutt</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>Hægt</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "A_vailable layouts:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
 msgid "All_ow postponing of breaks"
 msgstr "Leyf_a frestun hlés"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Athuga hvort frestun hléa er leyfð"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 #, fuzzy
 msgid "Choose A Keyboard Model"
 msgstr "Lyklaborð"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 #, fuzzy
 msgid "Choose A Layout"
 msgstr "_Loka og skrá út"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 msgid "Cursor _blinks in text boxes and fields"
 msgstr "Bendill _blikkar í textarömmum og dálkum"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 msgid "Duration of the break when typing is disallowed"
 msgstr "Lengd hlés þegar vélritun er ekki leyfð"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 msgid "Duration of work before forcing a break"
 msgstr "Vinnutími fyrir skylduhlé"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 msgid "Key presses _repeat when key is held down"
 msgstr "Innsláttur endurtekinn þegar lykli er haldið niðri"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 msgid "Keyboard Preferences"
 msgstr "Lyklaborðsstillingar"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 #, fuzzy
 msgid "Keyboard _model:"
 msgstr "Lyklaborð"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 #, fuzzy
 msgid "Layout Options"
 msgstr "Myndavalk_ostir:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 #, fuzzy
 msgid "Layouts"
 msgstr "Umbrot"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -1748,64 +1748,64 @@ msgstr ""
 "Læsa skjá eftir ákveðinn tíma til að hindra skemmdir vegna einhæfrar "
 "lyklaborðsnotkunar."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid "Microsoft Natural Keyboard"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 #, fuzzy
 msgid "Preview:"
 msgstr "Breidd forsýningar"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
 #, fuzzy
 msgid "Reset To De_faults"
 msgstr "Nota sjálfgefinn flokk foreldris"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 msgid "Separate _group for each window"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "Typing Break"
 msgstr "Innsláttarhlé"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "_Accessibility..."
 msgstr "_Aðgengi..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
 #, fuzzy
 msgid "_Add..."
 msgstr "Bæta við..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "_Break interval lasts:"
 msgstr "Tími hlés _varir:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 msgid "_Delay:"
 msgstr "Hi_k:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 #, fuzzy
 msgid "_Models:"
 msgstr "Líkan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 #, fuzzy
 msgid "_Selected layouts:"
 msgstr "_Veldu textaritil"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "_Speed:"
 msgstr "_Hraði:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "_Work interval lasts:"
 msgstr "_Vinnutími varir:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid "minutes"
 msgstr "mínútur"
 
@@ -1813,265 +1813,265 @@ msgstr "mínútur"
 msgid "Set your keyboard preferences"
 msgstr "Stilltu lyklaborðið"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:559
+#: ../capplets/mouse/cinnamon-mouse-properties.c:559
 msgid "Unknown Cursor"
 msgstr "Óþekktur bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:761
+#: ../capplets/mouse/cinnamon-mouse-properties.c:761
 msgid "Default Cursor"
 msgstr "Sjálfgefin bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:762
+#: ../capplets/mouse/cinnamon-mouse-properties.c:762
 msgid "Default Cursor - Current"
 msgstr "Sjálfgefin bendill - núverandi"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:763
+#: ../capplets/mouse/cinnamon-mouse-properties.c:763
 msgid "The default cursor that ships with X"
 msgstr "Sjálfgefinn bendill sem kemur með X"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:767
+#: ../capplets/mouse/cinnamon-mouse-properties.c:767
 msgid "White Cursor"
 msgstr "Hvítur bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:768
+#: ../capplets/mouse/cinnamon-mouse-properties.c:768
 msgid "White Cursor - Current"
 msgstr "Hvítur bendill - núverandi"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:769
+#: ../capplets/mouse/cinnamon-mouse-properties.c:769
 msgid "The default cursor inverted"
 msgstr "Hverfður sjálfgefinn bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:773
+#: ../capplets/mouse/cinnamon-mouse-properties.c:773
 msgid "Large Cursor"
 msgstr "Stór bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:774
+#: ../capplets/mouse/cinnamon-mouse-properties.c:774
 msgid "Large Cursor - Current"
 msgstr "Stór bendill - núverandi"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:775
+#: ../capplets/mouse/cinnamon-mouse-properties.c:775
 msgid "Large version of normal cursor"
 msgstr "Stór útgáfa af venjulegum bendli"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:779
+#: ../capplets/mouse/cinnamon-mouse-properties.c:779
 msgid "Large White Cursor - Current"
 msgstr "Stór hvítur bendill - Núverandi"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:780
+#: ../capplets/mouse/cinnamon-mouse-properties.c:780
 msgid "Large White Cursor"
 msgstr "Stór hvítur bendill"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:781
+#: ../capplets/mouse/cinnamon-mouse-properties.c:781
 msgid "Large version of white cursor"
 msgstr "Stór útgáfa af hvítum bendli"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:975
+#: ../capplets/mouse/cinnamon-mouse-properties.c:975
 msgid "Cursor Theme"
 msgstr "Bendla_þema:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Double-Click Timeout </b>"
 msgstr "<b>Tímamörk tvísmellingar</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:3
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>Draga og sleppa</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>Staðsetja vísi</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>Stefna músar</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Speed</b>"
 msgstr "<b>Hraði</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 msgid "<i>Fast</i>"
 msgstr "<i>Hratt</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<i>High</i>"
 msgstr "<i>Mikil</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid "<i>Large</i>"
 msgstr "<i>Stór</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:10
 msgid "<i>Low</i>"
 msgstr "<i>Lágt</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid "<i>Slow</i>"
 msgstr "<i>Hægt</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:12
 msgid "<i>Small</i>"
 msgstr "<i>Lítil</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "Buttons"
 msgstr "Hnappar"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:14
 #, fuzzy
 msgid "Cursor Size:"
 msgstr "Stærð bendils"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 msgid "Cursors"
 msgstr "Bendlar"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:16
 msgid "Highlight the _pointer when you press Ctrl"
 msgstr "Lýsa vísinn þegar ýtt er á Ctrl"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 #, fuzzy
 msgid "Large"
 msgstr "S_tór"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:18
 #, fuzzy
 msgid "Medium"
 msgstr "_Miðlungs"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "Motion"
 msgstr "Hreyfing"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:20
 msgid "Mouse Preferences"
 msgstr "Músarstillingar"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 #, fuzzy
 msgid "Small"
 msgstr "S_már"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:22
 msgid "_Acceleration:"
 msgstr "_Hröðun:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "_Left-handed mouse"
 msgstr "_Örvhent mús"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:24
 msgid "_Sensitivity:"
 msgstr "_Næmi:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "_Threshold:"
 msgstr "_Þröskuldur:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:26
 msgid "_Timeout:"
 msgstr "_Tímamörk:"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Mús"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Stilltu músina"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Netsel"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your network proxy preferences"
 msgstr "Netselsstillingar"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "      "
 msgstr " "
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 #, fuzzy
 msgid "<b>D_irect internet connection</b>"
 msgstr "<b>_Beint Internetsamband</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>Ignore Host List</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>Sjálfvirk_ar selstillingar</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>_Handvirkar selstillingar</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "<b>_Use authentication</b>"
 msgstr "<b>Nota a_uðkenningu</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 #, fuzzy
 msgid "Advanced Configuration"
 msgstr "Slóð sjálfvirkrar _uppsetningar:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "Autoconfiguration _URL:"
 msgstr "Slóð sjálfvirkrar _uppsetningar:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "HTTP Proxy Details"
 msgstr "Nánar um HTTP-sel"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "H_TTP proxy:"
 msgstr "H_TTP sel:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 #, fuzzy
 msgid "Network Proxy Preferences"
 msgstr "Netselsstillingar"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Port:"
 msgstr "Hlið:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 #, fuzzy
 msgid "Proxy Configuration"
 msgstr "Netselsstillingar"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "S_ocks host:"
 msgstr "S_ætisþjónn:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 #, fuzzy
 msgid "U_sername:"
 msgstr "N_otandanafn:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_Details"
 msgstr "_Nánar"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_FTP proxy:"
 msgstr "_FTP sel:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Password:"
 msgstr "_Lykilorð:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Secure HTTP proxy:"
 msgstr "Ö_ruggt HTTP sel:"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "Virkja hljóð og tengja hljóð við atvik"
 
@@ -2116,120 +2116,120 @@ msgstr "H_ljóð fyrir atvik"
 msgid "_Visual feedback:"
 msgstr "M_yndræn svörun:"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:347
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:347
 msgid ""
 "No themes could be found on your system.  This probably means that your "
 "\"Theme Preferences\" dialog was improperly installed, or you haven't "
-"installed the \"gnome-themes\" package."
+"installed the \"cinnamon-themes\" package."
 msgstr ""
 "Engin þemu fundust í kerfinu. Þetta þýðir líklega að \"Þemastillingar\"-"
-"valglugginn var ekki rétt uppsettur, eða að þú hefur ekki sett upp \"gnome-"
+"valglugginn var ekki rétt uppsettur, eða að þú hefur ekki sett upp \"cinnamon-"
 "themes\" pakkann."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:227
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:227
 msgid "This theme is not in a supported format."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:244
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:244
 msgid "Failed to create temporary directory"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:264
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:264
 msgid ""
 "Can not install theme. \n"
 "The bzip2 utility is not installed."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:282
-#: ../capplets/theme-switcher/gnome-theme-installer.c:319
-#: ../capplets/theme-switcher/gnome-theme-installer.c:399
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:282
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:319
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:399
 #, fuzzy
 msgid "Installation Failed"
 msgstr "Þemainnsetning"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:302
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:302
 msgid ""
 "Can not install themes. \n"
 "The gzip utility is not installed."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:340
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:340
 #, c-format
 msgid ""
 "Icon Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:343
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:343
 #, c-format
 msgid "Gnome Theme %s correctly installed"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:346
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:346
 #, c-format
 msgid ""
 "Windows Border Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:349
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:349
 #, c-format
 msgid ""
 "Controls Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:357
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:357
 msgid "The theme is an engine. You need to compile the theme."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:374
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:374
 #, fuzzy
 msgid "The file format is invalid"
 msgstr "Skráin %s er ekki gild wav skrá"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:468
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:468
 msgid "No theme file location specified to install"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:485
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:485
 msgid "The theme file location specified to install is invalid"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:505
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:505
 #, c-format
 msgid ""
 "Insufficient permissions to install the theme in:\n"
 "%s"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:526
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:526
 #, fuzzy
 msgid "The file format is invalid."
 msgstr "Skráin %s er ekki gild wav skrá"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:553
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:553
 #, c-format
 msgid ""
 "%s is the path where the theme files will be installed. This can not be "
 "selected as the source location"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:607
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:607
 msgid ""
 "Cannot install theme.\n"
 "The tar program is not installed on your system."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:680
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:680
 msgid "Custom theme"
 msgstr "Skilgreint þema"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:680
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:680
 msgid "You can save this theme by pressing the Save Theme button."
 msgstr "Þú getur vista þetta þema með því að smella á Vista þema"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:1476
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:1476
 msgid ""
 "The default theme schemas could not be found on your system.  This means "
 "that you probably don't have metacity installed, or that your gconf is "
@@ -2238,11 +2238,11 @@ msgstr ""
 "Sjálfgefin þemaskemu fundust ekki á kerfinu þínu. Þetta merkir að þú ert "
 "líklega ekki með metacity uppsett, eða að gconf-ið þitt er vitlaust stillt."
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:72
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:72
 msgid "Theme name must be present"
 msgstr "Þemanafn verður að vera til staðar."
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:104
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:104
 msgid "The theme already exists. Would you like to replace it?"
 msgstr ""
 
@@ -2366,112 +2366,112 @@ msgstr "_Nafn þema:"
 msgid "theme selection tree"
 msgstr ""
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:1
 msgid "Customize the appearance of toolbars and menubars in applications"
 msgstr "Breyta útliti tækjastiku og valmynda í forritum."
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:2
 msgid "Menus & Toolbars"
 msgstr "Valblöð og tækjastikur"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:2
 msgid "<b>Behavior and Appearance</b>"
 msgstr "<b>Hegðun og útlit</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:3
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:3
 msgid "<b>Preview</b>"
 msgstr "<b>Forsýning</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:4
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:4
 msgid "C_ut"
 msgstr "K_lippa"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:5
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:5
 msgid "Icons only"
 msgstr "Aðeins táknmyndir"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:6
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:6
 msgid "Menu and Toolbar Preferences"
 msgstr "Stillingar fyrir valmyndir og tækjastiku."
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:7
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:7
 msgid "New File"
 msgstr "Ný skrá"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:8
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:8
 msgid "Open File"
 msgstr "Opna skrá"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:9
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:9
 msgid "Save File"
 msgstr "Vista skrá"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:10
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:10
 msgid "Show _icons in menus"
 msgstr "Sýna tákn í valmyndum"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:11
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:11
 msgid "Text below icons"
 msgstr "Texti fyrir neðan táknmyndir"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:12
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:12
 msgid "Text beside icons"
 msgstr "Texti við hlið táknmynda"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:13
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:13
 msgid "Text only"
 msgstr "Bara texti"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:14
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:14
 #, fuzzy
 msgid "Toolbar _button labels:"
 msgstr "Hnappamiðar á tækjastiku:"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:15
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:15
 msgid "_Copy"
 msgstr "_Afrita"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:16
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:16
 msgid "_Detachable toolbars"
 msgstr "F_æranlegar tækjastikur"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:17
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:17
 msgid "_Edit"
 msgstr "Sýs_l"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:18
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:18
 msgid "_Editable menu accelerators"
 msgstr ""
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:19
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:19
 msgid "_File"
 msgstr "_Skrá"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:20
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:20
 msgid "_New"
 msgstr "_Ný"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:21
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:21
 msgid "_Open"
 msgstr "_Opna"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:22
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:22
 msgid "_Paste"
 msgstr "_Líma"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:23
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:23
 msgid "_Print"
 msgstr "_Prenta"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:24
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:24
 msgid "_Quit"
 msgstr "_Hætta"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:25
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:25
 msgid "_Save"
 msgstr "_Vista"
 
-#: ../capplets/windows/gnome-window-properties.c:386
+#: ../capplets/windows/cinnamon-window-properties.c:386
 #, c-format
 msgid ""
 "<b>Cannot start the preferences application for your window manager</b>\n"
@@ -2482,63 +2482,63 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../capplets/windows/gnome-window-properties.c:644
+#: ../capplets/windows/cinnamon-window-properties.c:644
 msgid "Control"
 msgstr "Control"
 
-#: ../capplets/windows/gnome-window-properties.c:649
+#: ../capplets/windows/cinnamon-window-properties.c:649
 msgid "Alt"
 msgstr "Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:655
+#: ../capplets/windows/cinnamon-window-properties.c:655
 msgid "Hyper"
 msgstr "Ofur"
 
-#: ../capplets/windows/gnome-window-properties.c:662
+#: ../capplets/windows/cinnamon-window-properties.c:662
 msgid "Super (or \"Windows logo\")"
 msgstr "Yfir (eða \"Windows lógó\")"
 
-#: ../capplets/windows/gnome-window-properties.c:669
+#: ../capplets/windows/cinnamon-window-properties.c:669
 msgid "Meta"
 msgstr "Lýsigögn"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 #, fuzzy
 msgid "<b>Movement Key</b>"
 msgstr "<b>Fjöllyklar</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 #, fuzzy
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>Forrit</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 #, fuzzy
 msgid "<b>Window Selection</b>"
 msgstr "Núans:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To _move a window, press-and-hold this key then grab the window:"
 msgstr ""
 "Til að flytja glugga, haltu þessu_m lykli inni og gríptu síðan gluggann:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "Gluggastillingar"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_Tvísmelltu á titilstiku til að framkvæma þessa aðgerð:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "Tími _fyrir hækkun:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "_Hækkar valda glugga eftir ákveðinn tíma"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Velur glugga þegar músin fer yfir þá"
 
@@ -2566,66 +2566,66 @@ msgid "GNOME Control Center"
 msgstr "GNOME-stjórnstöð"
 
 #: ../control-center/gnomecc.desktop.in.in.h:2
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:2
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "The GNOME configuration tool"
 msgstr "GNOME stillingatækið"
 
-#: ../gnome-settings-daemon/actions/acme.glade.h:1
+#: ../cinnamon-settings-daemon/actions/acme.glade.h:1
 msgid "Volume"
 msgstr "Hljóðstyrkur"
 
-#: ../gnome-settings-daemon/factory.c:36
+#: ../cinnamon-settings-daemon/factory.c:36
 msgid "Could not initialize Bonobo"
 msgstr "Mér tókst ekki að frumstilla Bonobo"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:397
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:397
 msgid "Slow Keys Alert"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:398
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:398
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:400
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:400
 #, fuzzy
 msgid "Do you want to activate Slow Keys?"
 msgstr "Viltu halda þessari upplausn?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:401
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:401
 #, fuzzy
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Viltu halda þessari upplausn?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:410
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:410
 msgid "Sticky Keys Alert"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:413
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:413
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
 "keyboard works."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:415
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:415
 #, fuzzy
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Viltu halda þessari upplausn?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:416
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:416
 #, fuzzy
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Viltu halda þessari upplausn?"
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:107
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:107
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2634,37 +2634,37 @@ msgstr ""
 "Get ekki búið til efnisskrána \"%s\".\n"
 "Þarf að gera það til að heimila bendlabreytingar."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:209
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:209
 #, c-format
 msgid "Key Binding (%s) has its action defined multiple times\n"
 msgstr "Lykilbinding (%s) er með fjölskilgreindar aðgerðir\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:222
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:222
 #, c-format
 msgid "Key Binding (%s) has its binding defined multiple times\n"
 msgstr "Lykilbinding (%s) er með fjölskilgreinda bindingu\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:228
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:228
 #, c-format
 msgid "Key Binding (%s) is incomplete\n"
 msgstr "Lykilbinding (%s) er ófullgerð\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:256
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:256
 #, c-format
 msgid "Key Binding (%s) is invalid\n"
 msgstr "Lykilbinding (%s) er ógild\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:292
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:292
 #, c-format
 msgid "It seems that another application already has access to key '%d'."
 msgstr "Það lítur út fyrir að annað forrit sé þegar með aðgang að lykli '%d'."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:361
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:361
 #, c-format
 msgid "Key Binding (%s) is already in use\n"
 msgstr "Lykilbinding (%s) er þegar í notkun\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:436
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:436
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -2673,7 +2673,7 @@ msgstr ""
 "Villa við keyrslu (%s)\n"
 "sem er tengt við lykilinn (%s)"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:103
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:103
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -2691,7 +2691,7 @@ msgid ""
 "- The result of <b>%s</b>"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:117
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:117
 msgid ""
 "You are using XFree 4.3.0.\n"
 "There are known problems with complex XKB configurations.\n"
@@ -2699,51 +2699,51 @@ msgid ""
 "software."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:227
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:227
 #, fuzzy
 msgid "Do _not show this warning again"
 msgstr "_Ekki sýna þessi skilaboð framar"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:238
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:238
 msgid ""
 "The X system keyboard settings differ from your current GNOME keyboard "
 "settings.  Which set would you like to use?"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:251
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:251
 #, fuzzy
 msgid "Use X settings"
 msgstr "Skjástillingar %d\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:253
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:253
 msgid "Use GNOME settings"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:129
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:129
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
 "Verify that this command exists."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:145
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:145
 msgid ""
 "Couldn't put the machine to sleep.\n"
 "Verify that the machine is correctly configured."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:155
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:155
 #, c-format
 msgid "Permissions on the file %s are broken\n"
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:200
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:200
 msgid ""
 "Couldn't load the Glade file.\n"
 "Make sure that this daemon is properly installed."
 msgstr ""
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:113
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:113
 #, c-format
 msgid ""
 "There was an error starting up the screensaver:\n"
@@ -2758,53 +2758,53 @@ msgstr ""
 "\n"
 "Skjásvæfa verður óvirk í þessari lotu."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:123
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:123
 msgid "_Do not show this message again"
 msgstr "_Ekki sýna þessi skilaboð framar"
 
-#: ../gnome-settings-daemon/gnome-settings-sound.c:129
+#: ../cinnamon-settings-daemon/cinnamon-settings-sound.c:129
 #, c-format
 msgid "Couldn't load sound file %s as sample %s"
 msgstr "Mér tókst ekki að hlaða inn hljóðskrána %s sem dæmi %s"
 
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:214
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:262
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:214
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:262
 msgid "Cannot determine user's home directory"
 msgstr "Tekst ekki að ákvarða heimasvæði notanda"
 
-#: ../gnome-settings-daemon/gnome-settings-xsettings.c:215
+#: ../cinnamon-settings-daemon/cinnamon-settings-xsettings.c:215
 #, c-format
 msgid "GConf key %s set to type %s but its expected type was %s\n"
 msgstr "GConf lykill %s stilltur á gerð %s en ætluð gerð hans var %s\n"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:1
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:1
 #, fuzzy
 msgid "A_vailable files:"
 msgstr "Myndavalk_ostir:"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:2
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:2
 #, fuzzy
 msgid "Do _not show this warning again."
 msgstr "_Ekki sýna þessi skilaboð framar"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:3
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:3
 msgid "Load modmap files"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:4
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:4
 msgid "Would you like to load the modmap file(s)?"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:5
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:5
 msgid "_Load"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:6
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:6
 #, fuzzy
 msgid "_Loaded files:"
 msgstr "Líkan"
 
-#: ../gnome-settings-daemon/reaper.c:103
+#: ../cinnamon-settings-daemon/reaper.c:103
 msgid "Error creating signal pipe."
 msgstr "Villa við gerð merkjapípu."
 
@@ -2856,11 +2856,11 @@ msgstr "Hljóðskrá þessa atviks er ekki til."
 #: ../libsounds/sound-view.c:149
 msgid ""
 "The sound file for this event does not exist.\n"
-"You may want to install the gnome-audio package\n"
+"You may want to install the cinnamon-audio package\n"
 "for a set of default sounds."
 msgstr ""
 "Hljóðskrá fyrir þetta atvik er ekki til.\n"
-"Þú vilt kannski setja upp gnome-audio pakkann\n"
+"Þú vilt kannski setja upp cinnamon-audio pakkann\n"
 "til að fá safn sjálfgefinna hljóða."
 
 #: ../libsounds/sound-view.c:224
@@ -2896,7 +2896,7 @@ msgstr "S_pila"
 msgid "_Remove"
 msgstr "Fja_rlægja:"
 
-#: ../libwindow-settings/gnome-wm-manager.c:320
+#: ../libwindow-settings/cinnamon-wm-manager.c:320
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "Gluggastjórinn \"%s\" hefur ekki skráð stillingartæki\n"
@@ -3393,7 +3393,7 @@ msgstr "Á að smámynda TrueType letur"
 msgid "Whether to thumbnail Type1 fonts"
 msgstr "Á að smámynda Type1 letur"
 
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:1
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:1
 #, fuzzy
 msgid "GNOME Font Viewer"
 msgstr "GNOME-stjórnstöð"

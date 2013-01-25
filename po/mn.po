@@ -48,24 +48,24 @@ msgstr "Сануулгын цонхонд товчлууруудыг харуу�
 msgid "Show more _details"
 msgstr "Илүү _нарийвчилж харуулах"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 msgid "About Me"
 msgstr "Миний тухай"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "MIME-төрлийн мэдээлэл"
 
-#: ../capplets/about-me/gnome-about-me.c:605
+#: ../capplets/about-me/cinnamon-about-me.c:605
 msgid "Select Image"
 msgstr "Зургийг сонгох"
 
-#: ../capplets/about-me/gnome-about-me.c:607
+#: ../capplets/about-me/cinnamon-about-me.c:607
 msgid "No Image"
 msgstr "Зураг байхгүй байна"
 
-#: ../capplets/about-me/gnome-about-me.c:770
+#: ../capplets/about-me/cinnamon-about-me.c:770
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
@@ -73,35 +73,35 @@ msgstr ""
 "Хаягийн номны мэдээлэлд орох үед алдаа гарлаа\n"
 "Протоколд Эволюшн Өгөгдөл Сервер орж чадахгүй байна"
 
-#: ../capplets/about-me/gnome-about-me.c:791
+#: ../capplets/about-me/cinnamon-about-me.c:791
 msgid "Unable to open address book"
 msgstr "Хаягийн дэвтэр нээгдэх боломжгүй"
 
-#: ../capplets/about-me/gnome-about-me.c:803
+#: ../capplets/about-me/cinnamon-about-me.c:803
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr "Үл мэдэгдэх логин ID, хэрэглэгчийн өгөгдөл магадгүй гэмтсэн байна"
 
-#: ../capplets/about-me/gnome-about-me.c:834
-#: ../capplets/about-me/gnome-about-me.c:836
+#: ../capplets/about-me/cinnamon-about-me.c:834
+#: ../capplets/about-me/cinnamon-about-me.c:836
 #, c-format
 msgid "About %s"
 msgstr "%s-ны тухай"
 
-#: ../capplets/about-me/gnome-about-me-password.c:172
+#: ../capplets/about-me/cinnamon-about-me-password.c:172
 msgid "Child exited unexpectedly"
 msgstr "Хүү санамсаргүй гацлаа"
 
-#: ../capplets/about-me/gnome-about-me-password.c:295
+#: ../capplets/about-me/cinnamon-about-me-password.c:295
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr "backend_stdin IO суваг унтраах боломжгүй : %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:308
+#: ../capplets/about-me/cinnamon-about-me-password.c:308
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr "backend_stdout IO суваг унтраах боломжгүй : %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:449
+#: ../capplets/about-me/cinnamon-about-me-password.c:449
 msgid "Authenticated!"
 msgstr "Батлагдлаа!"
 
@@ -111,225 +111,225 @@ msgstr "Батлагдлаа!"
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:466
-#: ../capplets/about-me/gnome-about-me-password.c:539
+#: ../capplets/about-me/cinnamon-about-me-password.c:466
+#: ../capplets/about-me/cinnamon-about-me-password.c:539
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
 msgstr "Нууц үг таныг шинээр зөв нэвтрэхэд өөрчлөгдөнө! Дахин нэвтэрнэ үү."
 
-#: ../capplets/about-me/gnome-about-me-password.c:468
+#: ../capplets/about-me/cinnamon-about-me-password.c:468
 msgid "That password was incorrect."
 msgstr "Нууц үг буруу."
 
-#: ../capplets/about-me/gnome-about-me-password.c:514
+#: ../capplets/about-me/cinnamon-about-me-password.c:514
 msgid "Your password has been changed."
 msgstr "Таны нууц үг өөрчилөгдлөө."
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:524
+#: ../capplets/about-me/cinnamon-about-me-password.c:524
 #, c-format
 msgid "System error: %s."
 msgstr "Системийн алдаа: %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:526
+#: ../capplets/about-me/cinnamon-about-me-password.c:526
 msgid "The password is too short."
 msgstr "Нууц үг хэтэрхий богино байна."
 
-#: ../capplets/about-me/gnome-about-me-password.c:528
-#: ../capplets/about-me/gnome-about-me-password.c:530
+#: ../capplets/about-me/cinnamon-about-me-password.c:528
+#: ../capplets/about-me/cinnamon-about-me-password.c:530
 msgid "The password is too simple."
 msgstr "Нууц үг хэтэрхий энгийн байна."
 
-#: ../capplets/about-me/gnome-about-me-password.c:532
+#: ../capplets/about-me/cinnamon-about-me-password.c:532
 msgid "The old and new passwords are too similar."
 msgstr "Хуучин болон шинэ нууц үг хэтэрхий төстэй байна."
 
-#: ../capplets/about-me/gnome-about-me-password.c:534
+#: ../capplets/about-me/cinnamon-about-me-password.c:534
 msgid "The new password must contain numeric or special character(s)."
 msgstr "Тоо юмуу эсвэл тусгай тэмдэгтийг агуулах ёстой."
 
-#: ../capplets/about-me/gnome-about-me-password.c:536
+#: ../capplets/about-me/cinnamon-about-me-password.c:536
 msgid "The old and new passwords are the same."
 msgstr "Хуучин болон шинэ нууц үг ижил байна."
 
-#: ../capplets/about-me/gnome-about-me-password.c:787
+#: ../capplets/about-me/cinnamon-about-me-password.c:787
 #, c-format
 msgid "Unable to launch /usr/bin/passwd: %s"
 msgstr "/usr/bin/passwd ажиллахгүй байна: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:789
+#: ../capplets/about-me/cinnamon-about-me-password.c:789
 msgid "Unable to launch backend"
 msgstr "Холбоог эхлүүлэх боломжгүй"
 
-#: ../capplets/about-me/gnome-about-me-password.c:790
+#: ../capplets/about-me/cinnamon-about-me-password.c:790
 msgid "A system error has occurred"
 msgstr "Системд алдаа гарсан байна"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:810
+#: ../capplets/about-me/cinnamon-about-me-password.c:810
 msgid "Checking password..."
 msgstr "Нууц үгийг шалгаж байна..."
 
-#: ../capplets/about-me/gnome-about-me-password.c:897
+#: ../capplets/about-me/cinnamon-about-me-password.c:897
 msgid "Click <b>Change password</b> to change your password."
 msgstr ""
 "Нууц үгээ өөрчлөхийн тулд <b>Нууц үгээ өөрчлөх</b> гэсэн товчин дээр дарна."
 
-#: ../capplets/about-me/gnome-about-me-password.c:900
+#: ../capplets/about-me/cinnamon-about-me-password.c:900
 msgid "Please type your password in the <b>New password</b> field."
 msgstr "<b>Шинэ нууц үг талбарт</b> нууц үгээ оруулна уу."
 
-#: ../capplets/about-me/gnome-about-me-password.c:903
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me-password.c:903
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr "Нууц үгээ дахин <b>Шинэ нууц үгээ давт</b> талбарт оруулна уу."
 
-#: ../capplets/about-me/gnome-about-me-password.c:906
+#: ../capplets/about-me/cinnamon-about-me-password.c:906
 msgid "The two passwords are not equal."
 msgstr "Хоёр нууц үг тохирохгүй байна."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 #: ../vfs-methods/themus/apply-font.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
 #: ../capplets/sound/sound-properties.glade.h:1
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:1
 msgid "    "
 msgstr "    "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 msgid "<b>Email</b>"
 msgstr "<i>Э-Шуудан</i>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 msgid "<b>Home</b>"
 msgstr "<b>Home</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>Яаралтай мэдээлэл</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 msgid "<b>Job</b>"
 msgstr "<b>Ажил</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Telephone</b>"
 msgstr "<b>Утас</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 msgid "<b>Web</b>"
 msgstr "<b>Вэб</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 msgid "<b>Work</b>"
 msgstr "<b>Ажил</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 msgid "<span size=\"larger\" weight=\"bold\">Change your password</span>"
 msgstr "<span size=\"larger\" weight=\"bold\">Нууц үгээ өөрчилөх</span>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 msgid "A_ddress:"
 msgstr "Х_аяг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "A_ssistant:"
 msgstr "_Туслагч:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 msgid "Address"
 msgstr "Хаяг"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 msgid "C_ity:"
 msgstr "Х_от:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 msgid "C_ompany:"
 msgstr "К_омпани:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 msgid "Cale_ndar:"
 msgstr "Хуа_нли:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 msgid "Change Passwo_rd..."
 msgstr "Нэвт_рэх үгээ өөрчлөх..."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 msgid "Change pa_ssword"
 msgstr "Нууц үгээ өө_рчлөх"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 msgid "Change password"
 msgstr "Нууц үгээ өөрчлөх"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 msgid "Ci_ty:"
 msgstr "Х_от:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 msgid "Co_untry:"
 msgstr "У_лс:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 msgid "Contact"
 msgstr "Холбоо"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Cou_ntry:"
 msgstr "У_лс:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 msgid "Current _password:"
 msgstr "_Одоогийн нууц үг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "Full Name"
 msgstr "Бүтэн нэр"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "Hom_e:"
 msgstr "Гэр:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "P.O. _box:"
 msgstr "P.O. _хайрцаг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
 msgid "P._O. box:"
 msgstr "P._O. хайрцаг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "Personal Info"
 msgstr "Хувийн мэдээлэл"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid "State/Pro_vince:"
 msgstr "Улс/Орон н_утаг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:36
+#: ../capplets/about-me/cinnamon-about-me.glade.h:36
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -341,91 +341,91 @@ msgstr ""
 "Ахин нэвтэрсэний дараа шинэ нууц үгээ оруулж, бататгахын тулд дахин оруулаад "
 "<b>Нууц үг солих</b> дээр дарна уу."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "User name:"
 msgstr "Хэрэглэгчийн нэр:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 msgid "Web _log:"
 msgstr "Веб _лог:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "Wor_k:"
 msgstr "_Ажил:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "Work _fax:"
 msgstr "Aжлын _факс:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 msgid "Zip/_Postal code:"
 msgstr "Zip/_Шуудангийн код:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 msgid "_Address:"
 msgstr "_Хаяг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Authenticate"
 msgstr "_Баталгаажуулах"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 msgid "_Department:"
 msgstr "_Хэлтэс:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 msgid "_Groupwise:"
 msgstr "_Бүлэглэл:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 msgid "_Home page:"
 msgstr "_Гэрийн хуудас:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 msgid "_Home:"
 msgstr "_Гэр:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 msgid "_Jabber:"
 msgstr "_Гэмтэл:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_Manager:"
 msgstr "_Удирдлага:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 msgid "_Mobile:"
 msgstr "_Гар утас:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_New password:"
 msgstr "_Шинэ нэвтрэх үг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Profession:"
 msgstr "_Мэргэжил:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_Retype new password:"
 msgstr "_Шинэ нэвтрэх үгийг дахин бичнэ үү:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:55
+#: ../capplets/about-me/cinnamon-about-me.glade.h:55
 msgid "_State/Province:"
 msgstr "_Улс/Орон нутаг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:56
+#: ../capplets/about-me/cinnamon-about-me.glade.h:56
 msgid "_Title:"
 msgstr "_Гарчиг:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:57
+#: ../capplets/about-me/cinnamon-about-me.glade.h:57
 msgid "_Work:"
 msgstr "_Ажил:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:58
+#: ../capplets/about-me/cinnamon-about-me.glade.h:58
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:59
+#: ../capplets/about-me/cinnamon-about-me.glade.h:59
 msgid "_Zip/Postal code:"
 msgstr "_Zip/Шуудангийн код:"
 
@@ -525,7 +525,7 @@ msgid "_Import"
 msgstr "_Оруулж ирэх"
 
 #: ../capplets/accessibility/keyboard/accessibility-keyboard.desktop.in.in.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 #: ../capplets/keyboard/keyboard.desktop.in.in.h:1
 msgid "Keyboard"
 msgstr "Гар"
@@ -534,7 +534,7 @@ msgstr "Гар"
 msgid "Set your keyboard accessibility preferences"
 msgstr "Гарт хялбар хандалтын тохируулга хийх"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.c:59
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.c:59
 msgid ""
 "This system does not seem to have the XKB extension.  The keyboard "
 "accessibility features will not operate without it."
@@ -542,88 +542,88 @@ msgstr ""
 "Энэ систем XKB-өргөтгөлгүй юм шиг байна. Гарын хялбар хандалт нь үүнгүйгээр "
 "баталгаажиж чадахгүй."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:2
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 msgid "*"
 msgstr "*"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:3
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:3
 msgid "<b>Enable Bo_unce Keys</b>"
 msgstr "<b>_Хязгаар товчлуурууд боломжтой</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:4
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:4
 msgid "<b>Enable Slo_w Keys</b>"
 msgstr "<b>_Удаан товчлуурууд боломжтой</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:5
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:5
 msgid "<b>Enable _Mouse Keys</b>"
 msgstr "<b>_Хулгана түлхүүр боломжтой</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:6
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:6
 msgid "<b>Enable _Repeat Keys</b>"
 msgstr "<b>_Давталт түлхүүрүүд боломжтой</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:7
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:7
 msgid "<b>Enable _Sticky Keys</b>"
 msgstr "<b>_Наалттай түлхүүрүүд боломжтой</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:8
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:8
 msgid "<b>Features</b>"
 msgstr "<b>Шинжүүд</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:9
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:9
 msgid "<b>Toggle Keys</b>"
 msgstr "<b>Сэлгэгч түлхүүрүүд</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:10
 msgid "Basic"
 msgstr "Үндсэн"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:11
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:11
 msgid "Beep if key is re_jected"
 msgstr "Түлхүүрүүдийг _хүлээж аваагүй бол чимээ өгөх"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:12
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:12
 msgid "Beep when _features turned on or off from keyboard"
 msgstr "Гарын а_жиллагааны хэрэгслүүд идэвхижих эсвэл хаагдах үед чимээ өгөх"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:13
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:13
 msgid "Beep when _modifier is pressed"
 msgstr "Өөрчлөгчийг албадах үед _чимээ өгөх"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:14
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:14
 msgid "Beep when an LED is turned on and two beeps when one is turned off."
 msgstr "LED асахад нэг чимээ, унтрахад хоёр чимээ өгөх."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:15
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:15
 msgid "Beep when key is:"
 msgstr "Хэрвээ түлхүүр ...бол чимээ өгөх:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:16
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:16
 msgid "Del_ay:"
 msgstr "_Хоцролт:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:17
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:17
 msgid "Delay between keypress and pointer mo_vement:"
 msgstr "Товчлуур даралт ба түүчээний _хөдөлгөөний хоорондын хүлээлт"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:18
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:18
 msgid "Disa_ble if two keys pressed together"
 msgstr "Хоёр товчлуур _зэрэг дарагдвал хаалттай"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:19
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:19
 msgid "E_nable Toggle Keys"
 msgstr "Холбогч түлхүүрүүд нээлттэй"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:20
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:20
 msgid "Filters"
 msgstr "Шүүлтүүр"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:21
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:21
 msgid "I_gnore duplicate keypresses within:"
 msgstr "Товчлуурын давхар тогшилтыг дараах дотор х_эрэгсэхгүй байх:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:22
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:22
 msgid ""
 "Ignore all subsequent presses of the SAME key if they happen within a user "
 "selectable period of time."
@@ -631,23 +631,23 @@ msgstr ""
 "Нэг товчлуурын үргэлжилсэн даралтыг хэрэглэгчийн тогтоосон хугацаан дотор "
 "хэрэгсэхгүй байх."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:23
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:23
 msgid "Keyboard Accessibility Preferences (AccessX)"
 msgstr "Гарын хялбар хандалтын Тохиргоо (AccessX)"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:24
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:24
 msgid "Ma_ximum pointer speed:"
 msgstr "Хулганы заагчийн ма_ксимал хурд:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:25
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:25
 msgid "Mouse Keys"
 msgstr "Хулгана товчлуур"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:26
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:26
 msgid "Mouse _Preferences..."
 msgstr "Хулгана _Тохируулгууд..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:27
 msgid ""
 "Only accept keys after they have been pressed and held for a user adjustable "
 "amount of time."
@@ -655,7 +655,7 @@ msgstr ""
 "Хэрэглэгчийн тодорхойлсон хугацаанд түлхүүрүүдийг дарсны дараа хүлээн "
 "зөвшөөрнө."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:28
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:28
 msgid ""
 "Perform multiple simultaneous key press operations by pressing modifier keys "
 "in sequence."
@@ -663,67 +663,67 @@ msgstr ""
 "Дараалсан товчлууруудын хослол дарснаар зэрэг товчилуур дарах үйлдлийг "
 "гүйцэтгэнэ."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:29
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "S_peed:"
 msgstr "Х_урд:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:30
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:30
 msgid "Time to acce_lerate to maximum speed:"
 msgstr "Максимум хурд хүртэл хур_дасгах хугацаа:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:31
 msgid "Turn the numeric keypad into a mouse control pad."
 msgstr "Хулганы удирдлагад гарын тооны машины хэсгийг хэрэглэх."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:32
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:32
 msgid "_Disable if unused for:"
 msgstr "Хэрвээ дараахад хэрэглэгдээгүй бол _хаах:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:33
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:33
 msgid "_Enable keyboard accessibility features"
 msgstr "_Гарын хялбар тусламжийн ажиллагаа боломжтой"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:34
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:34
 msgid "_Import Feature Settings..."
 msgstr "_Ажиллагааны тохируулгыг _импортлох..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:35
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:35
 msgid "_Only accept keys held for:"
 msgstr "Товчлуурын даралтыг _зөвхөн дараахын хувьд зөвшөөрөх:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:36
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid "_Type to test settings:"
 msgstr "Тохируулга шалгалтын төрлүүд:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:37
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:37
 msgid "_accepted"
 msgstr "_зөвшөөрөгдсөн"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:38
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:38
 msgid "_pressed"
 msgstr "_дарагдсан"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:39
 msgid "_rejected"
 msgstr "бу_цаагдсан"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:40
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:40
 msgid "characters/second"
 msgstr "Тэмдэгт/Секунд"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:41
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
 msgid "milliseconds"
 msgstr "Миллисекунд"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:42
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:42
 msgid "pixels/second"
 msgstr "Цэгүүд/Секунд"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:43
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:43
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "Секундүүд"
 
@@ -735,97 +735,97 @@ msgstr "Ажлын талбары дэвсгэрийн тохиргоог өөр
 msgid "Desktop Background"
 msgstr "Ажлын талбарын дэвсгэр"
 
-#: ../capplets/background/gnome-background-properties.glade.h:1
+#: ../capplets/background/cinnamon-background-properties.glade.h:1
 msgid "<b>Desktop _Wallpaper</b>"
 msgstr "<b>Ажлын талбарын _Туурга цаас</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:2
+#: ../capplets/background/cinnamon-background-properties.glade.h:2
 msgid "<b>_Desktop Colors</b>"
 msgstr "<b>_Ажлын талбарын өнгө</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:3
+#: ../capplets/background/cinnamon-background-properties.glade.h:3
 msgid "Desktop Background Preferences"
 msgstr "Ажлын талбарын дэвсгэрийн тохируулгууд"
 
-#: ../capplets/background/gnome-background-properties.glade.h:4
+#: ../capplets/background/cinnamon-background-properties.glade.h:4
 msgid "Open a dialog to specify the color"
 msgstr "Өнгө тодорхойлох цонхыг нээх"
 
-#: ../capplets/background/gnome-background-properties.glade.h:5
+#: ../capplets/background/cinnamon-background-properties.glade.h:5
 msgid "_Add Wallpaper"
 msgstr "_Туурга цаас нэмэх"
 
-#: ../capplets/background/gnome-background-properties.glade.h:6
+#: ../capplets/background/cinnamon-background-properties.glade.h:6
 msgid "_Finish"
 msgstr "_Дуусгах"
 
-#: ../capplets/background/gnome-background-properties.glade.h:7
+#: ../capplets/background/cinnamon-background-properties.glade.h:7
 #: ../capplets/theme-switcher/theme-properties.glade.h:21
 msgid "_Remove"
 msgstr "_Устгах"
 
-#: ../capplets/background/gnome-background-properties.glade.h:8
+#: ../capplets/background/cinnamon-background-properties.glade.h:8
 msgid "_Style:"
 msgstr "_Загвар:"
 
-#: ../capplets/background/gnome-wp-capplet.c:74
+#: ../capplets/background/cinnamon-wp-capplet.c:74
 #: ../capplets/common/capplet-util.c:340
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:333
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:333
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Тусламж үзүүлэхэд алдаа гарлаа: %s"
 
-#: ../capplets/background/gnome-wp-capplet.c:984
+#: ../capplets/background/cinnamon-wp-capplet.c:984
 msgid "Centered"
 msgstr "Голлосон"
 
-#: ../capplets/background/gnome-wp-capplet.c:988
+#: ../capplets/background/cinnamon-wp-capplet.c:988
 msgid "Fill Screen"
 msgstr "Дэлгэц дүүрэн"
 
-#: ../capplets/background/gnome-wp-capplet.c:992
+#: ../capplets/background/cinnamon-wp-capplet.c:992
 msgid "Scaled"
 msgstr "Хуваарилсан"
 
-#: ../capplets/background/gnome-wp-capplet.c:996
+#: ../capplets/background/cinnamon-wp-capplet.c:996
 msgid "Zoom"
 msgstr "Хэмжээг өөрчлөх"
 
-#: ../capplets/background/gnome-wp-capplet.c:1000
+#: ../capplets/background/cinnamon-wp-capplet.c:1000
 msgid "Tiled"
 msgstr "Дүүргэн"
 
-#: ../capplets/background/gnome-wp-capplet.c:1021
+#: ../capplets/background/cinnamon-wp-capplet.c:1021
 msgid "Solid Color"
 msgstr "Нэг өнгөт"
 
-#: ../capplets/background/gnome-wp-capplet.c:1025
+#: ../capplets/background/cinnamon-wp-capplet.c:1025
 msgid "Horizontal Gradient"
 msgstr "Босоо шугамдсан"
 
-#: ../capplets/background/gnome-wp-capplet.c:1029
+#: ../capplets/background/cinnamon-wp-capplet.c:1029
 msgid "Vertical Gradient"
 msgstr "Хэвтээ шугамдсан"
 
 #. Create the file chooser dialog stuff here
-#: ../capplets/background/gnome-wp-capplet.c:1075
+#: ../capplets/background/cinnamon-wp-capplet.c:1075
 msgid "Add Wallpaper"
 msgstr "Aрын фон нэмэх"
 
-#: ../capplets/background/gnome-wp-capplet.c:1092
+#: ../capplets/background/cinnamon-wp-capplet.c:1092
 msgid "Images"
 msgstr "Зургууд"
 
-#: ../capplets/background/gnome-wp-capplet.c:1096
+#: ../capplets/background/cinnamon-wp-capplet.c:1096
 msgid "All Files"
 msgstr "Бүх файлууд"
 
-#: ../capplets/background/gnome-wp-info.c:57
+#: ../capplets/background/cinnamon-wp-info.c:57
 msgid "No Wallpaper"
 msgstr "Туурга цаасгүй"
 
-#: ../capplets/background/gnome-wp-item.c:343
-#: ../capplets/background/gnome-wp-item.c:345
+#: ../capplets/background/cinnamon-wp-item.c:343
+#: ../capplets/background/cinnamon-wp-item.c:345
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "цэг"
@@ -833,13 +833,13 @@ msgstr[1] "цэгүүд"
 
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"Тохируулгын менежер »gnome-settings-daemon« эхлүүлэх боломжгүй байна.\n"
+"Тохируулгын менежер »cinnamon-settings-daemon« эхлүүлэх боломжгүй байна.\n"
 "GNOME-менежергүйгээр хэд хэдэн тохируулга гүйцэлдэхгүй байх боломжтой. Энэ "
 "нь Bonobo -той эсвэл  GNOME бус (ж.нь. KDE-) тохируулгын менежер хэдийнэ "
 "идэвхижих ба GNOME тохируулгын менежертэй зөрчилдөнө."
@@ -854,8 +854,8 @@ msgid "Just apply settings and quit"
 msgstr "Тохируулгыг хэрэглээд гарах"
 
 #: ../capplets/common/capplet-util.c:243
-#: ../capplets/keyboard/gnome-keyboard-properties.c:225
-#: ../capplets/mouse/gnome-mouse-properties.c:1027
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:225
+#: ../capplets/mouse/cinnamon-mouse-properties.c:1027
 #: ../capplets/sound/sound-properties-capplet.c:762
 msgid "Retrieve and store legacy settings"
 msgstr "Хүлээн авсан тохируулгыг олоод хадгалах"
@@ -1038,7 +1038,7 @@ msgid "_Select"
 msgstr "_Сонгох"
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Preferred Applications"
 msgstr "Эрхэмлэсэн х.программууд"
 
@@ -1046,245 +1046,245 @@ msgstr "Эрхэмлэсэн х.программууд"
 msgid "Select your default applications"
 msgstr "Та өөрийн стандарт х.программыг сонгоно уу"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:77
-#: ../capplets/default-applications/gnome-da-capplet.c:101
-#: ../capplets/default-applications/gnome-da-capplet.c:146
-#: ../capplets/default-applications/gnome-da-capplet.c:191
-#: ../capplets/default-applications/gnome-da-capplet.c:245
-#: ../capplets/default-applications/gnome-da-capplet.c:294
-#: ../capplets/default-applications/gnome-da-capplet.c:576
-#: ../capplets/default-applications/gnome-da-capplet.c:597
+#: ../capplets/default-applications/cinnamon-da-capplet.c:77
+#: ../capplets/default-applications/cinnamon-da-capplet.c:101
+#: ../capplets/default-applications/cinnamon-da-capplet.c:146
+#: ../capplets/default-applications/cinnamon-da-capplet.c:191
+#: ../capplets/default-applications/cinnamon-da-capplet.c:245
+#: ../capplets/default-applications/cinnamon-da-capplet.c:294
+#: ../capplets/default-applications/cinnamon-da-capplet.c:576
+#: ../capplets/default-applications/cinnamon-da-capplet.c:597
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr "Тохиргоог хадгалахад алдаа гарлаа: %s"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:719
+#: ../capplets/default-applications/cinnamon-da-capplet.c:719
 #: ../capplets/sound/sound-properties-capplet.c:319
 msgid "Custom"
 msgstr "Хэвшмэл"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:739
+#: ../capplets/default-applications/cinnamon-da-capplet.c:739
 msgid "Could not load the main interface"
 msgstr "Гол интерфейсийг ачаалж чадсангүй"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:741
+#: ../capplets/default-applications/cinnamon-da-capplet.c:741
 msgid "Please make sure that the applet is properly installed"
 msgstr "Энэ апплет зөв суусан эсэхийг нягтлана уу"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Балса"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Debian Sensible Browser"
 msgstr "Дебиан тохиромжтой хөтлөгч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Debian Terminal Emulator"
 msgstr "Дебиан терминал эмулатор"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "ETerm"
 msgstr "ЭТерм"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Encompass"
 msgstr "Энкомпасс"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Epiphany Web Browser"
 msgstr "Epiphany вэб хөтөч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "Evolution Mail Reader"
 msgstr "Эволюшн Мэйл Уншигч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Evolution Mail Reader 1.4"
 msgstr "Эволюшн Мэйл Уншигч 1.4"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Evolution Mail Reader 1.5"
 msgstr "Эволюшн Мэйл Уншигч 1.5"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader 1.6"
 msgstr "Эволюшн Мэйл Уншигч 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Evolution Mail Reader 2.0"
 msgstr "Эволюшн Мэйл Уншигч 2.0"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Evolution Mail Reader 2.2"
 msgstr "Эволюшн Мэйл Уншигч 2.2"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "Evolution Mail Reader 2.4"
 msgstr "Эволюшн Мэйл Уншигч 2.4"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "GNOME Terminal"
 msgstr "ГНОМЕ Терминал"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Galeon"
 msgstr "Галеон"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "KMail"
 msgstr "КМэйл"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Konqueror"
 msgstr "Конкюрор"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Links Text Browser"
 msgstr "Зүүн текст хөтөч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Lynx Text Browser"
 msgstr "Люнкс Текст хөтөч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Mozilla"
 msgstr "Моцилла"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "Mozilla 1.6"
 msgstr "Моцилла 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "Mozilla Mail"
 msgstr "Моцилла Мэйл"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Mutt"
 msgstr "Мутт"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "NXterm"
 msgstr "НКСтерм"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Netscape Communicator"
 msgstr "Netscape Холбогч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Opera"
 msgstr "Опера"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "RXVT"
 msgstr "РКСВТ"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Standard XTerminal"
 msgstr "Стандарт КСТерминал"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "W3M Text Browser"
 msgstr "W3M текст хөтөч"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "aterm"
 msgstr "aterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
 msgid "<b>Audio Player</b>"
 msgstr "<b>Дуу тоглуулагч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "<b>Image Viewer</b>"
 msgstr "<b>Зураг харагч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 msgid "<b>Instant Messenger</b>"
 msgstr "<b>Мессэнжир</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 msgid "<b>Mail Reader</b>"
 msgstr "<b>Майл уншигч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "<b>Terminal Emulator</b>"
 msgstr "<b>Терминал эмулатор</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 msgid "<b>Text Editor</b>"
 msgstr "<b>Текст боловсруулагч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "<b>Video Player</b>"
 msgstr "<b>Видео тоглуулагч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "<b>Web Browser</b>"
 msgstr "<b>Вэб хөтөч</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr "Бүх %s тохиолдолууд нь одоогийн холбоосоор солигдсон байна"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
 msgid "Co_mmand:"
 msgstr "Т_ушаал:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:12
 msgid "E_xecute flag:"
 msgstr "Дарцаг _ачаалах:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 msgid "Internet"
 msgstr "Интернет"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "Open link in new _tab"
 msgstr "Шинэ _табд холбоос нээх"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "Open link in new _window"
 msgstr "Шинэ _цонхонд холбоос нээх"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Open link with web browser _default"
 msgstr "_Стандарт вэб хөтчөөр холбоосыг нээх"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 msgid "Run in t_erminal"
 msgstr "_Терминалд ажиллуулах"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 msgid "System"
 msgstr "Систем"
 
@@ -1592,29 +1592,29 @@ msgid "The type of accelerator."
 msgstr "Шорткатын төрөл"
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:187
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:187
 #: ../libbackground/applier.c:624 ../typing-break/drwright.c:470
 msgid "Disabled"
 msgstr "Хаагдсан"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:534
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:534
 msgid "<Unknown Action>"
 msgstr "<Тодорхойгүй үйлдэл>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:555
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:555
 msgid "Desktop"
 msgstr "Ажлын талбар"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:556
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:556
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "Аудио"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:560
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:560
 msgid "Window Management"
 msgstr "Цонхны зохион байгуулалт"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:668
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:668
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become unusable to type "
@@ -1624,7 +1624,7 @@ msgstr ""
 "Энэ түлхүүрийг ашиглахад хэрэглэгдэхгүй тул \"%s\" шорткатыг хэрэглэхгүй.\n"
 "Энэ түлхүүртэй Control, Alt эсвэл Shift-ийг нэгэн зэрэг дарна уу.\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:697
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:697
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for:\n"
@@ -1633,31 +1633,31 @@ msgstr ""
 "\"%s\" Шорткат хэдийнэ хэрэглэгдсэн:\n"
 " \"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:729
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:729
 #, c-format
 msgid "Error setting new accelerator in configuration database: %s\n"
 msgstr ""
 "Тохируулгын өгөгдлийн баазад шинэ шорткатыг оруулахад гарсан алдаа: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:779
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:779
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s\n"
 msgstr "Тохируулгын өгөгдлийн баазаас шорткатыг устгах үед алдаа гарлаа: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:886
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:886
 msgid "Action"
 msgstr "Үйлдэл"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:910
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:910
 msgid "Shortcut"
 msgstr "Шорткат"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Гарын шорткат"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new "
 "accelerator, or press backspace to clear."
@@ -1669,11 +1669,11 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "Тушаалуудад шорткат оноох"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:87
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:87
 msgid "Unknown"
 msgstr "Үл мэдэгдэх"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:282
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:282
 msgid "Layout"
 msgstr "Үзэмж"
 
@@ -1681,26 +1681,26 @@ msgstr "Үзэмж"
 #. the below options are to be included in the selected list.
 #. This is a HIG-compliant alternative to allowing no
 #. selection in the group.
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:286
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:231
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:286
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:231
 msgid "Default"
 msgstr "Стандарт"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:77
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:77
 msgid "Models"
 msgstr "Модел"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:109
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:109
 #, c-format
 msgid "There was an error launching the keyboard tool: %s"
 msgstr "Гарны хэрэгслэлийг ачаалахад алдаа гарлаа: %s"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:202
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:202
 msgid "_Accessibility"
 msgstr "_Хялбарчилал"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:221
-#: ../capplets/keyboard/gnome-keyboard-properties.c:223
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:221
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:223
 #: ../capplets/sound/sound-properties-capplet.c:758
 #: ../capplets/sound/sound-properties-capplet.c:760
 msgid ""
@@ -1709,161 +1709,161 @@ msgstr ""
 "Зөвхөн тохируулга хэрэглээд гарах (Зөвхөн зүй зохицолд; одоо daemon-оор "
 "боловсруулагдана)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:227
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:227
 msgid "Start the page with the typing break settings showing"
 msgstr "Завсарлага тохируулгыг агуулах хуудасны эхлэлийг харуулах"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>Анивчдаг түүчээ</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>Товчлуурын давталт</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 msgid "<b>_Lock screen to enforce typing break</b>"
 msgstr "<b>Дэлгэц _түгжээд завсарлага шаардах</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>Хурдан</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>Урт</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>Богино</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>Удаан</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
 msgid "A_vailable layouts:"
 msgstr "Байгаа ү_зэмжүүд:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "All_ow postponing of breaks"
 msgstr "Завсарлага зөөлт _зөвшөөрөх"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Завсарлага зөөлт зөвшөөрөх эсэхийг тогтоо"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "Choose a Keyboard Model"
 msgstr "Гарын загвараа сонгоно уу"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 msgid "Choose a Layout"
 msgstr "Гарын засвар сонгох"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 msgid "Choose..."
 msgstr "Сонгох..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 msgid "Cursor _blinks in text boxes and fields"
 msgstr "Түүчээг текст талбар болон текст дотор а_нивчуулах"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 msgid "Cursor blinks speed"
 msgstr "Түүчээ анивчих хурд"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 msgid "Duration of the break when typing is disallowed"
 msgstr "Бичих үед гарсан завсарлагын үргэлжлэх хугацаа"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 msgid "Duration of work before forcing a break"
 msgstr "Завсарлага шаардагдахаас өмнөх ажлын хугацаа"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 msgid "Key presses _repeat when key is held down"
 msgstr "Хэрвээ товчлуур доош дарагдсан бол түүнийг _давтах"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 msgid "Keyboard Preferences"
 msgstr "Гарын тохируулга"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 msgid "Keyboard _model:"
 msgstr "Гарын _загвар:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 msgid "Layout Options"
 msgstr "Үзэмж сонголт"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid "Layouts"
 msgstr "Үзэмж"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
 msgstr "Санамсаргүй эсвэл гажуудал товч дарагдахаас хамгаалж дэлгэц түгжих"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 msgid "Microsoft Natural Keyboard"
 msgstr "Microsoft Natural Гар"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
 msgid "Preview:"
 msgstr "Тольдох:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
 msgid "Repeat keys speed"
 msgstr "Түлхүүр давтагдах хурд"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 msgid "Reset To De_faults"
 msgstr "_Стандартыг сэргээх"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "Separate _group for each window"
 msgstr "Цонх бүрийн тусгай бүлгүүд"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
 msgid "Typing Break"
 msgstr "Бичих үеийн завсарлага"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "_Accessibility..."
 msgstr "_Хялбарчилал..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 msgid "_Add..."
 msgstr "_Нэмэх..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 msgid "_Break interval lasts:"
 msgstr "_Сүүлийн завсарлагын интервал:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 msgid "_Delay:"
 msgstr "_Хүлээлт:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "_Models:"
 msgstr "_Модел:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "_Selected layouts:"
 msgstr "_Сонгогдсон үзэмжүүд:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "_Speed:"
 msgstr "Х_урд:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:42
 msgid "_Work interval lasts:"
 msgstr "_Сүүлийн ажлын интервал:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:43
 msgid "minutes"
 msgstr "Минут"
 
@@ -1872,263 +1872,263 @@ msgid "Set your keyboard preferences"
 msgstr "Өөрийн гарын тохируулгыг тогтоох"
 
 #. set the timeout value  label with correct value of timeout
-#: ../capplets/mouse/gnome-mouse-properties.c:138
-#: ../capplets/mouse/gnome-mouse-properties.c:891
+#: ../capplets/mouse/cinnamon-mouse-properties.c:138
+#: ../capplets/mouse/cinnamon-mouse-properties.c:891
 #, c-format
 msgid "%d millisecond"
 msgid_plural "%d milliseconds"
 msgstr[0] "%d миллисекунд"
 msgstr[1] "%d миллисекунд"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:567
+#: ../capplets/mouse/cinnamon-mouse-properties.c:567
 msgid "Unknown Pointer"
 msgstr "Тодорхойгүй түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:768
+#: ../capplets/mouse/cinnamon-mouse-properties.c:768
 msgid "Default Pointer"
 msgstr "Стандарт түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:769
+#: ../capplets/mouse/cinnamon-mouse-properties.c:769
 msgid "Default Pointer - Current"
 msgstr "Стандарт түүчээ- Идэвхитэй"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:770
+#: ../capplets/mouse/cinnamon-mouse-properties.c:770
 msgid "The default pointer that ships with X"
 msgstr "X -н стандарт түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:774
+#: ../capplets/mouse/cinnamon-mouse-properties.c:774
 msgid "White Pointer"
 msgstr "Цагаан түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:775
+#: ../capplets/mouse/cinnamon-mouse-properties.c:775
 msgid "White Pointer - Current"
 msgstr "Цагаан түүчээ - Идэвхитэй"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:776
+#: ../capplets/mouse/cinnamon-mouse-properties.c:776
 msgid "The default pointer inverted"
 msgstr "Урвуулсан стандарт түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:780
+#: ../capplets/mouse/cinnamon-mouse-properties.c:780
 msgid "Large Pointer"
 msgstr "Том түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:781
+#: ../capplets/mouse/cinnamon-mouse-properties.c:781
 msgid "Large Pointer - Current"
 msgstr "Том түүчээ - Идэвхитэй"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:782
+#: ../capplets/mouse/cinnamon-mouse-properties.c:782
 msgid "Large version of normal pointer"
 msgstr "Энгийн түүчээний том хувилбар"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:786
+#: ../capplets/mouse/cinnamon-mouse-properties.c:786
 msgid "Large White Pointer - Current"
 msgstr "Том цагаан түүчээ - Идэвхитэй"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:787
+#: ../capplets/mouse/cinnamon-mouse-properties.c:787
 msgid "Large White Pointer"
 msgstr "Том цагаан түүчээ"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:788
+#: ../capplets/mouse/cinnamon-mouse-properties.c:788
 msgid "Large version of white pointer"
 msgstr "Цагаан түүчээний том хувилбар"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:981
+#: ../capplets/mouse/cinnamon-mouse-properties.c:981
 msgid "Pointer Theme"
 msgstr "Түүчээний сэдэв"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Double-Click Timeout </b>"
 msgstr "<b>Давхар товшилтын Х/И завсар</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:3
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>Татаад тавих</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>Түүчээний байрлал</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>Хулганы чиглэл</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Speed</b>"
 msgstr "<b>Хурд</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 msgid "<i>Fast</i>"
 msgstr "<i>Хурдан</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<i>High</i>"
 msgstr "<i>Өндөр</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid "<i>Large</i>"
 msgstr "<i>Том</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:10
 msgid "<i>Low</i>"
 msgstr "<i>Бага</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid "<i>Slow</i>"
 msgstr "<i>Удаан</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:12
 msgid "<i>Small</i>"
 msgstr "<i>Жижиг</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "Buttons"
 msgstr "Товчнууд"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:14
 msgid "Highlight the _pointer when you press Ctrl"
 msgstr "Таныг Ctrl дарахад _түүчээг онцгойлох"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 msgid "Large"
 msgstr "Том"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:16
 msgid "Medium"
 msgstr "Дунд"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 msgid "Motion"
 msgstr "Хөдөлгөөн"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:18
 msgid "Mouse Preferences"
 msgstr "Хулганы тохируулга"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "Pointer Size:"
 msgstr "Түүчээний хэмжээ:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:20
 msgid "Pointers"
 msgstr "Түүчээнүүд"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 msgid "Small"
 msgstr "Жижиг"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:22
 msgid "_Acceleration:"
 msgstr "Ху_рдасгалт:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "_Left-handed mouse"
 msgstr "_Зүүн гарын хулгана"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:24
 msgid "_Sensitivity:"
 msgstr "_Мэдрэмж:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "_Threshold:"
 msgstr "_Хязгаар:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:26
 msgid "_Timeout:"
 msgstr "_Завсар:"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Хулгана"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Хулганы тохируулга хийх"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Сүлжээ-итгэмжлэгч"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "Сүлжээ-итгэмжлэгчийн тохируулгыг хийх"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "      "
 msgstr "      "
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>Интернэтийн _шууд холболт</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>Ignore Host List</b>"
 msgstr "<b>Хостын жагсаалтаас татгалзах</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>Итгэмжлэгчийн _автомат тохируулга</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>Итгэмжлэгчийн _гар тохируулга</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Гэрчилгээ хэрэглэнэ</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 msgid "Advanced Configuration"
 msgstr "Нарийвчилсан тохируулга"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "Autoconfiguration _URL:"
 msgstr "Автомат тохируулгын _URL:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "HTTP Proxy Details"
 msgstr "HTTP-итгэмжлэгч дэлгэрэнгүй"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "H_TTP proxy:"
 msgstr "_HTTP-итгэмжлэгч:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 msgid "Network Proxy Preferences"
 msgstr "Сүлжээ-итгэмжлэгчийн тохируулга"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Port:"
 msgstr "Порт:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 msgid "Proxy Configuration"
 msgstr "Итгэмжлэгчийн тохируулга"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "S_ocks host:"
 msgstr "S_ocks-хост:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 msgid "U_sername:"
 msgstr "_Хэрэглэгчийн нэр:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_Details"
 msgstr "_Дэлгэрэнгүй"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_FTP proxy:"
 msgstr "_FTP-итгэмжлэгч:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Password:"
 msgstr "_Нэвтрэх үг:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Secure HTTP proxy:"
 msgstr "_HTTP-итгэмжлэгчийг баталгаажуулах:"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "Чимээг идэвхижүүлж үйлдлүүдтэй холбох"
 
@@ -2217,36 +2217,36 @@ msgstr "_Системд дуу тоглуулах"
 msgid "_Visual system beep"
 msgstr "_Системийн дохиог харуулах"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:368
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:368
 msgid "Would you like to remove this theme?"
 msgstr "Та энэ загварыг устгахыг хүсч байна уу?"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:433
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:433
 msgid "Theme deleted succesfully. Please select another theme."
 msgstr "Загвар амжилттай устгагдлаа. Өөр сэдэв сонгоно уу."
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:442
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:442
 msgid "Theme can not be deleted"
 msgstr "Загвар устгагдсангүй"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:535
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:535
 msgid ""
 "No themes could be found on your system.  This probably means that your "
 "\"Theme Preferences\" dialog was improperly installed, or you haven't "
-"installed the \"gnome-themes\" package."
+"installed the \"cinnamon-themes\" package."
 msgstr ""
 "Таны системд загвар олдсонгүй. Энэ нь магад таны »Загвар тохируулга« эсвэл "
-"»gnome-themes« пакет зөв суугаагүй гэсэн үг."
+"»cinnamon-themes« пакет зөв суугаагүй гэсэн үг."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:255
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:255
 msgid "This theme is not in a supported format."
 msgstr "Энэ загвар нь дэмжигдээгүй формат байна."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:273
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:273
 msgid "Failed to create temporary directory"
 msgstr "Түр зуурын директор үүсэх боломжгүй байна"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:294
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:294
 msgid ""
 "Can not install theme. \n"
 "The bzip2 utility is not installed."
@@ -2254,13 +2254,13 @@ msgstr ""
 "Загвар суухгүй байна. \n"
 " bzip2 хэрэглээ суусангүй. "
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:313
-#: ../capplets/theme-switcher/gnome-theme-installer.c:352
-#: ../capplets/theme-switcher/gnome-theme-installer.c:432
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:313
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:352
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:432
 msgid "Installation Failed"
 msgstr "Суулгалт нурлаа"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:334
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:334
 msgid ""
 "Can not install themes. \n"
 "The gzip utility is not installed."
@@ -2268,21 +2268,21 @@ msgstr ""
 "Загвар суухгүй байна. \n"
 "gzip хэрэглээ суусангүй. "
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:378
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:378
 #, c-format
 msgid "GNOME Theme %s correctly installed"
 msgstr "%s ГНОМЕ Загвар амжилттай суулаа"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:388
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:388
 msgid "The theme is an engine. You need to compile the theme."
 msgstr "Загвар бол үйл ажиллагааны нэгж юм. Та загварыг эмхтгэх хэрэгтэй."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:406
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:406
 msgid "The file format is invalid"
 msgstr "Файлын формат хүчингүй байна"
 
 #. TODO: currently cannot apply "gnome themes"
-#: ../capplets/theme-switcher/gnome-theme-installer.c:452
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:452
 #, c-format
 msgid ""
 "<span weight=\"bold\" size=\"larger\">The theme \"%s\" has been installed.</"
@@ -2294,23 +2294,23 @@ msgstr ""
 "\n"
 "Та үүнийг хэрэглэхийг хүсэж байна уу одоогийнхыгоо авч үлдэх үү?"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:455
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:455
 msgid "Keep Current Theme"
 msgstr "Одоогийн загварыг авч үлдэх"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:457
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:457
 msgid "Apply New Theme"
 msgstr "Шинэ загварыг хэрэглэх"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:531
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:531
 msgid "No theme file location specified to install"
 msgstr "Файлын загвар суулгах байрлалыг тодорхойлоогүй байна"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:546
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:546
 msgid "The theme file location specified to install is invalid"
 msgstr "Файлын загвар суулгах байрлал хүчингүй"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:566
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:566
 #, c-format
 msgid ""
 "Insufficient permissions to install the theme in:\n"
@@ -2319,11 +2319,11 @@ msgstr ""
 "Загварыг суулгахад орох боломжгүй зөвшөөрөл:\n"
 "%s"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:587
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:587
 msgid "The file format is invalid."
 msgstr "Файлын формат хүчингүй байна."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:614
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:614
 #, c-format
 msgid ""
 "%s is the path where the theme files will be installed. This can not be "
@@ -2332,15 +2332,15 @@ msgstr ""
 "%s бол загварын файлууд суулгах зам. Тиймээс тэр эх байрлалаар хэрэглэгдэх "
 "боломжгүй"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:686
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:686
 msgid "Custom theme"
 msgstr "Хэвшмэл загвар"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:686
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:686
 msgid "You can save this theme by pressing the Save Theme button."
 msgstr "Та »Загвар хадгалах«-товчийг товшиж энэ загварыг хадгалаж болно."
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:1604
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:1604
 msgid ""
 "The default theme schemas could not be found on your system.  This means "
 "that you probably don't have metacity installed, or that your gconf is "
@@ -2349,11 +2349,11 @@ msgstr ""
 "Таны системд стандарт загварын схем олдсонгүй. Энэ нь таныг Metacity "
 "суулгаагүй эсвэл таны GConf алдаатай тохируулагдсаныг зааж байна."
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:73
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:73
 msgid "Theme name must be present"
 msgstr "Загварийн нэр үзүүлэгдэх ёстой"
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:144
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:144
 msgid "The theme already exists. Would you like to replace it?"
 msgstr "Завар байна. Та үүнийг солих уу?"
 
@@ -2459,111 +2459,111 @@ msgstr "Загвар _хадгалах..."
 msgid "theme selection tree"
 msgstr "Загвар сонголтын мод"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:1
 msgid "Customize the appearance of toolbars and menubars in applications"
 msgstr "Х.програмийн багажны ба цэсний самбарын харагдалтыг тохируулах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:2
 msgid "Menus & Toolbars"
 msgstr "Цэс ба багажны самбар"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:2
 msgid "<b>Behavior and Appearance</b>"
 msgstr "<b>Харьцаа ба харагдац</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:3
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:3
 msgid "<b>Preview</b>"
 msgstr "<b>Урьд. харах</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:4
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:4
 msgid "C_ut"
 msgstr "_Тасдах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:5
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:5
 msgid "Icons only"
 msgstr "Зөвхөн эмблем"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:6
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:6
 msgid "Menu and Toolbar Preferences"
 msgstr "Цэс ба багажны самбарын тохируулга"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:7
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:7
 msgid "New File"
 msgstr "Шинэ файл"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:8
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:8
 msgid "Open File"
 msgstr "Файл нээх"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:9
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:9
 msgid "Save File"
 msgstr "Файл хадгалах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:10
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:10
 msgid "Show _icons in menus"
 msgstr "Цэсэнд _тэмдэгүүдийг харуулах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:11
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:11
 msgid "Text below icons"
 msgstr "Эмблемийн доор текст"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:12
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:12
 msgid "Text beside icons"
 msgstr "Эмблемийн дэргэд текст"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:13
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:13
 msgid "Text only"
 msgstr "Зөвхөн текст"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:14
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:14
 msgid "Toolbar _button labels:"
 msgstr "Түүлбар _товчны бичээс:"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:15
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:15
 msgid "_Copy"
 msgstr "_Хуулах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:16
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:16
 msgid "_Detachable toolbars"
 msgstr "Салгах _боломжит багажны самбар"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:17
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:17
 msgid "_Edit"
 msgstr "_Боловсруулах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:18
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:18
 msgid "_Editable menu accelerators"
 msgstr "_Боловсруулах боломжтой цэсний хурдасгуур"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:19
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:19
 msgid "_File"
 msgstr "_Файл"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:20
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:20
 msgid "_New"
 msgstr "_Шинэ"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:21
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:21
 msgid "_Open"
 msgstr "Нэ_эх"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:22
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:22
 msgid "_Paste"
 msgstr "_Буулгах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:23
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:23
 msgid "_Print"
 msgstr "Хэ_влэх"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:24
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:24
 msgid "_Quit"
 msgstr "_Дуусгах"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:25
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:25
 msgid "_Save"
 msgstr "Ха_дгалах"
 
-#: ../capplets/windows/gnome-window-properties.c:385
+#: ../capplets/windows/cinnamon-window-properties.c:385
 #, c-format
 msgid ""
 "<b>Cannot start the preferences application for your window manager</b>\n"
@@ -2575,59 +2575,59 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../capplets/windows/gnome-window-properties.c:642
+#: ../capplets/windows/cinnamon-window-properties.c:642
 msgid "C_ontrol"
 msgstr "_Хяналт"
 
-#: ../capplets/windows/gnome-window-properties.c:647
+#: ../capplets/windows/cinnamon-window-properties.c:647
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:653
+#: ../capplets/windows/cinnamon-window-properties.c:653
 msgid "H_yper"
 msgstr "H_yper"
 
-#: ../capplets/windows/gnome-window-properties.c:660
+#: ../capplets/windows/cinnamon-window-properties.c:660
 msgid "S_uper (or \"Windows logo\")"
 msgstr "_Супер (эсвэл \"Цонхны тэмдэг\")"
 
-#: ../capplets/windows/gnome-window-properties.c:667
+#: ../capplets/windows/cinnamon-window-properties.c:667
 msgid "_Meta"
 msgstr "_Мета"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 msgid "<b>Movement Key</b>"
 msgstr "<b>Шилжүүлэгч товч</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>Толгой самбарны үйлдлүүд</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 msgid "<b>Window Selection</b>"
 msgstr "<b>Цонхны сонголт</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr "Цонх зөөхдөө дараах товчийг дараад барьж цонхонд хүрнэ:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "Цонхны тохируулга"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "Энэ үйлдлийг гүйцэтгэхдээ толгой самбарыг _давхар товшино:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "_Өргөлтийн өмнөх хүлээлт:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "Идэвхижсэн цонх тодорхой хугацааны дараа ө_ргөгдөх"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Хулганыг дээгүүр нь хөдөлгөхөд цонхнуудыг сонгоно"
 
@@ -2652,19 +2652,19 @@ msgid "GNOME Control Center"
 msgstr "GNOME-Хянах төв"
 
 #: ../control-center/gnomecc.desktop.in.in.h:2
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:2
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "The GNOME configuration tool"
 msgstr "GNOME-тохируулгын хэрэгсэл"
 
-#: ../gnome-settings-daemon/actions/acme.glade.h:1
+#: ../cinnamon-settings-daemon/actions/acme.glade.h:1
 msgid "Volume"
 msgstr "Дуу"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:406
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:406
 msgid "Slow Keys Alert"
 msgstr "Удаашруулах товчлуурын дохио"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:407
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:407
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -2672,39 +2672,39 @@ msgstr ""
 "Та Shift товчлуурыг 8 секунт даржээ. Энэ нь гарын ажиллагаанд нөлөөлдөг "
 "удаашруулах товчлуурын үйл ажиллагааны хослол юм."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:409
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:409
 msgid "Do you want to activate Slow Keys?"
 msgstr "Та удаашруулах товчлуурыг идэвхижүүлэхийг хүсч байна уу?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:410
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:410
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Та удаашруулах товчлуурыг идэвхигүйжүүлэхийг хүсч байна уу?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:428
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:428
 msgid "_Activate"
 msgstr "_Идэвхижүлэх"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:428
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:428
 msgid "_Deactivate"
 msgstr "_Идэвхгүй болгох"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:412
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:429
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:412
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:429
 msgid "Do_n't activate"
 msgstr "_Бүү идэвхижүүл"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:412
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:429
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:412
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:429
 msgid "Do_n't deactivate"
 msgstr "_Бүү идэвхигүйжүүл"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:421
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:421
 msgid "Sticky Keys Alert"
 msgstr "Наалт товчлуурын дохио"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:422
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:422
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -2712,7 +2712,7 @@ msgstr ""
 "Та Shift товчлуурыг 5 удаа дараалуулан даржээ. Энэ нь таны гарын ажиллагаанд "
 "нөлөөлдөг наалт товчлуурын үйл ажиллагааны хослол юм."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:424
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:424
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -2722,15 +2722,15 @@ msgstr ""
 "Энэ нь таны гарын ажиллагаанд нөлөөлдөг наалт шорткатын үйл ажиллагааг "
 "унтраана."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:426
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:426
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Та наалт товчлуурыг идэвхижүүлэхийг хүсч байна уу?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:427
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:427
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Та наалт товчлуурыг идэвхгүйжүүлэхийг хүсч байна уу?"
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:74
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:74
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2739,7 +2739,7 @@ msgstr ""
 "\"%s\" лавлах үүсгэж чадсангүй.\n"
 "Энэ нь түүчээний загварыг өөрчилөхөд шаардлагатай."
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:96
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:96
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2748,44 +2748,44 @@ msgstr ""
 "\"%s\" лавлах үүсгэж чадсангүй.\n"
 "Энэ нь түүчээ өөрчилөхөд шаардлагатай."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:208
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:208
 #, c-format
 msgid "Key Binding (%s) has its action defined multiple times\n"
 msgstr "Шорткатын (%s) хувьд олон дахин үйлдэл тогтоох\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:221
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:221
 #, c-format
 msgid "Key Binding (%s) has its binding defined multiple times\n"
 msgstr "Шорткат (%s) нь олон удаагаар тогтоогддог\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:227
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:227
 #, c-format
 msgid "Key Binding (%s) is incomplete\n"
 msgstr "Шорткат (%s) бүрэн бус\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:255
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:255
 #, c-format
 msgid "Key Binding (%s) is invalid\n"
 msgstr "Шорткат (%s) хүчингүй\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:291
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:291
 #, c-format
 msgid "It seems that another application already has access to key '%u'."
 msgstr "Өөр програм хэдийнээ '%u' түлхүүрт олгогдсон бололтой байна."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:360
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:360
 #, c-format
 msgid "Key Binding (%s) is already in use\n"
 msgstr "Шорткат (%s) хэдийнээ хэрэглээнд байна\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:435
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:435
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
 "which is linked to the key (%s)"
 msgstr "(%2$s) товчлуурт холбогдсон (%1$s)-г ажиллуулах үед алдаа гарлаа"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:105
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:105
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -2816,7 +2816,7 @@ msgstr ""
 "- <b>%s</b>-н үр дүн\n"
 "- <b>%s</b>-н үр дүн"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:119
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:119
 msgid ""
 "You are using XFree 4.3.0.\n"
 "There are known problems with complex XKB configurations.\n"
@@ -2828,11 +2828,11 @@ msgstr ""
 "Энгийн тохиргоо хэрэглэх эсвэл XFree-н илүү шинэ хувилбар хэрэглэхийг "
 "оролдоно уу."
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:249
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:249
 msgid "Do _not show this warning again"
 msgstr "_Энэ сануулгыг дахин бүү харуул"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:263
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:263
 #, c-format
 msgid ""
 "<b>The X system keyboard settings differ from your current GNOME keyboard "
@@ -2849,15 +2849,15 @@ msgstr ""
 "\n"
 "Та алийг нь хэрэглэхийг хүсч байна вэ?"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:286
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:286
 msgid "Use X settings"
 msgstr "Х тохиргоог хэрэглэх"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:288
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:288
 msgid "Keep GNOME settings"
 msgstr "GNOME тохиргоог хэрэглэх"
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:118
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:118
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -2866,7 +2866,7 @@ msgstr ""
 "Тушаал биелсэнгүй: %s\n"
 "Энэ тушаал байгаа эсэхийг нягтал."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:134
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:134
 msgid ""
 "Couldn't put the machine to sleep.\n"
 "Verify that the machine is correctly configured."
@@ -2874,7 +2874,7 @@ msgstr ""
 "Тооцоолуурыг унтуулах горимд оруулж чадсангүй.\n"
 "Тооцоолуураа зөв тохируулсан эсэхээ нягтлана уу."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:168
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:168
 msgid ""
 "Couldn't load the Glade file.\n"
 "Make sure that this daemon is properly installed."
@@ -2882,7 +2882,7 @@ msgstr ""
 "Glade файл ачаалагдсангүй.\n"
 "Энэ хэвтүүл зөв суусан эсэхийг нягтлана уу."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:110
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:110
 #, c-format
 msgid ""
 "There was an error starting up the screensaver:\n"
@@ -2897,51 +2897,51 @@ msgstr ""
 "\n"
 "Дэлгэцийн энэ хугацаанд ажиллахгүй."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:120
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:120
 msgid "_Do not show this message again"
 msgstr "_Энэ мэдээг дахин бүү харуул"
 
-#: ../gnome-settings-daemon/gnome-settings-sound.c:127
+#: ../cinnamon-settings-daemon/cinnamon-settings-sound.c:127
 #, c-format
 msgid "Couldn't load sound file %s as sample %s"
 msgstr " %s дууны файл %s жишээгээр ачаалагдсангүй"
 
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:212
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:260
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:212
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:260
 msgid "Cannot determine user's home directory"
 msgstr "Хэрэглэгчийн гэр лавлахыг илрүүлж чадсангүй"
 
-#: ../gnome-settings-daemon/gnome-settings-xsettings.c:212
+#: ../cinnamon-settings-daemon/cinnamon-settings-xsettings.c:212
 #, c-format
 msgid "GConf key %s set to type %s but its expected type was %s\n"
 msgstr ""
 "GConf түлхүүр %s нь %s төрөлтэй боловч түүний тохирох төрөл нь %s байлаа\n"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:1
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:1
 msgid "A_vailable files:"
 msgstr "_Боломжит файлууд:"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:2
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:2
 msgid "Do _not show this warning again."
 msgstr "_Энэ сануулгыг дахин бүү харуул"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:3
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:3
 msgid "Load modmap files"
 msgstr "modmap файлыг ачаалж байна"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:4
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:4
 msgid "Would you like to load the modmap file(s)?"
 msgstr "modmap файлыг ачаалахыг хүсч байна уу?"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:5
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:5
 msgid "_Load"
 msgstr "_Ачаалах"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:6
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:6
 msgid "_Loaded files:"
 msgstr "_Ачаалагдсан файлууд:"
 
-#: ../gnome-settings-daemon/reaper.c:103
+#: ../cinnamon-settings-daemon/reaper.c:103
 msgid "Error creating signal pipe."
 msgstr "Сигналын шугам үүсгэх үеийн алдаа."
 
@@ -3016,10 +3016,10 @@ msgstr "Энэ үйлдэлд чимээ байхгүй"
 #: ../libsounds/sound-view.c:140
 msgid ""
 "The sound file for this event does not exist.\n"
-"You may want to install the gnome-audio package for a set of default sounds."
+"You may want to install the cinnamon-audio package for a set of default sounds."
 msgstr ""
 "Энэ үйлдийн хувьд тогтоосон дууны файл алга.\n"
-"Та стандарт дуугаар авахыг хүсэж байвал »gnome-audio« пакетыг суулгана уу."
+"Та стандарт дуугаар авахыг хүсэж байвал »cinnamon-audio« пакетыг суулгана уу."
 
 #: ../libsounds/sound-view.c:151
 msgid "The sound file for this event does not exist."
@@ -3038,7 +3038,7 @@ msgstr "%s файл хүчингүй wav файл байна"
 msgid "System Sounds"
 msgstr "Системийн чимээ"
 
-#: ../libwindow-settings/gnome-wm-manager.c:320
+#: ../libwindow-settings/cinnamon-wm-manager.c:320
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "»%s« цонхны менежер тохируулгын хэрэгслээр бүртгүүлээгүй байна\n"
@@ -3506,7 +3506,7 @@ msgstr "TrueType-бичгүүдийг бяцхан зураг загварээр
 msgid "Whether to thumbnail Type1 fonts"
 msgstr "Type1-бичгүүдийг бяцхан зураг загварээр харуулах эсэх?"
 
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:1
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:1
 msgid "GNOME Font Viewer"
 msgstr "GNOME Фонт харагч"
 

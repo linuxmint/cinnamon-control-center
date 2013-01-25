@@ -1017,7 +1017,7 @@ cc_power_panel_init (CcPowerPanel *self)
 
   error = NULL;
   gtk_builder_add_from_file (self->priv->builder,
-                             GNOMECC_UI_DIR "/power.ui",
+                             CINNAMONCC_UI_DIR "/power.ui",
                              &error);
 
   if (error != NULL)

@@ -12,10 +12,10 @@ Index: cinnamon-control-center-3.6.2/configure.ac
  panels/online-accounts/icons/256x256/Makefile
 +panels/sound-nua/Makefile
 +panels/sound-nua/data/Makefile
-+panels/sound-nua/data/gnome-sound-nua-panel.desktop.in
++panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in
  panels/sound/Makefile
  panels/sound/data/Makefile
- panels/sound/data/gnome-sound-panel.desktop.in
+ panels/sound/data/cinnamon-sound-panel.desktop.in
 Index: cinnamon-control-center-3.6.2/panels/Makefile.am
 ===================================================================
 --- cinnamon-control-center-3.6.2.orig/panels/Makefile.am	2012-10-01 11:38:59.000000000 +0200
@@ -317,22 +317,22 @@ Index: cinnamon-control-center-3.6.2/panels/sound-nua/data/Makefile.am
 +@INTLTOOL_DESKTOP_RULE@
 +
 +appsdir = $(datadir)/applications
-+apps_in_files = gnome-sound-nua-panel.desktop.in
++apps_in_files = cinnamon-sound-nua-panel.desktop.in
 +apps_DATA = $(apps_in_files:.desktop.in=.desktop)
 +
 +EXTRA_DIST =					\
-+	gnome-sound-nua-panel.desktop.in.in		\
++	cinnamon-sound-nua-panel.desktop.in.in		\
 +	$(NULL)
 +
 +CLEANFILES =					\
-+	gnome-sound-nua-panel.desktop		\
++	cinnamon-sound-nua-panel.desktop		\
 +	$(NULL)
 +
 +-include $(top_srcdir)/git.mk
-Index: cinnamon-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.2/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in
 ===================================================================
 --- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ cinnamon-control-center-3.6.2/panels/sound-nua/data/gnome-sound-nua-panel.desktop.in.in	2012-11-13 16:25:40.781717988 +0100
++++ cinnamon-control-center-3.6.2/panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in	2012-11-13 16:25:40.781717988 +0100
 @@ -0,0 +1,17 @@
 +[Desktop Entry]
 +_Name=Sound
@@ -3259,10 +3259,10 @@ Index: cinnamon-control-center-3.6.2/panels/sound-nua/gvc-mixer-dialog.h
 +G_END_DECLS
 +
 +#endif /* __GVC_MIXER_DIALOG_H */
-Index: cinnamon-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in
+Index: cinnamon-control-center-3.6.2/panels/sound/data/cinnamon-sound-panel.desktop.in.in
 ===================================================================
---- cinnamon-control-center-3.6.2.orig/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-10-01 11:39:00.000000000 +0200
-+++ cinnamon-control-center-3.6.2/panels/sound/data/gnome-sound-panel.desktop.in.in	2012-11-13 16:25:40.897717987 +0100
+--- cinnamon-control-center-3.6.2.orig/panels/sound/data/cinnamon-sound-panel.desktop.in.in	2012-10-01 11:39:00.000000000 +0200
++++ cinnamon-control-center-3.6.2/panels/sound/data/cinnamon-sound-panel.desktop.in.in	2012-11-13 16:25:40.897717987 +0100
 @@ -7,7 +7,7 @@
  Type=Application
  StartupNotify=true

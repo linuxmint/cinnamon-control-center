@@ -498,7 +498,7 @@ net_vpn_init (NetVpn *vpn)
 
         vpn->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_file (vpn->priv->builder,
-                                   GNOMECC_UI_DIR "/network-vpn.ui",
+                                   CINNAMONCC_UI_DIR "/network-vpn.ui",
                                    &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

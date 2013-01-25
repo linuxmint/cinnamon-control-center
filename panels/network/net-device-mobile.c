@@ -533,7 +533,7 @@ net_device_mobile_init (NetDeviceMobile *device_mobile)
 
         device_mobile->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_file (device_mobile->priv->builder,
-                                   GNOMECC_UI_DIR "/network-mobile.ui",
+                                   CINNAMONCC_UI_DIR "/network-mobile.ui",
                                    &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

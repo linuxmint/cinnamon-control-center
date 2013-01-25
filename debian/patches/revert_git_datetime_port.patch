@@ -4626,8 +4626,8 @@ Index: cinnamon-control-center-3.6.2/po/POTFILES.in
 @@ -25,7 +25,6 @@
  [type: gettext/glade]panels/common/language-chooser.ui
  [type: gettext/glade]panels/datetime/datetime.ui
- panels/datetime/gnome-datetime-panel.desktop.in.in
+ panels/datetime/cinnamon-datetime-panel.desktop.in.in
 -panels/datetime/org.gnome.controlcenter.datetime.policy.in
  panels/display/cc-display-panel.c
  [type: gettext/glade]panels/display/display-capplet.ui
- panels/display/gnome-display-panel.desktop.in.in
+ panels/display/cinnamon-display-panel.desktop.in.in

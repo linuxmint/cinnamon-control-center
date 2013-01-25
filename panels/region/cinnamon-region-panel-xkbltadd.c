@@ -1,4 +1,4 @@
-/* gnome-region-panel-xkbltadd.c
+/* cinnamon-region-panel-xkbltadd.c
  * Copyright (C) 2007 Sergey V. Udaltsov
  *
  * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -28,7 +28,7 @@
 #include <libgnomekbd/gkbd-keyboard-drawing.h>
 #include <libgnomekbd/gkbd-util.h>
 
-#include "gnome-region-panel-xkb.h"
+#include "cinnamon-region-panel-xkb.h"
 
 enum {
 	COMBO_BOX_MODEL_COL_SORT,
@@ -379,8 +379,8 @@ xkb_layout_choose (GtkBuilder * dialog)
 	GtkListStore *model;
 	GtkTreeModelFilter *filtered_model;
 
-	gtk_builder_add_from_file (chooser_dialog, GNOMECC_UI_DIR
-				   "/gnome-region-panel-layout-chooser.ui",
+	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
+				   "/cinnamon-region-panel-layout-chooser.ui",
 				   NULL);
 	chooser = CWID ("xkb_layout_chooser");
 	xkb_filtered_layouts_list = CWID ("xkb_filtered_layouts_list");

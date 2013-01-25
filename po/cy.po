@@ -25,7 +25,7 @@ msgstr ""
 "POT-Creation-Date: 2006-03-08 13:45+0000\n"
 "PO-Revision-Date: 2006-03-08 12:53-0000\n"
 "Last-Translator: Rhys Jones <rhys@sucs.org>\n"
-"Language-Team: Cymraeg <gnome-cy@pengwyn.linux.org.uk>\n"
+"Language-Team: Cymraeg <cinnamon-cy@pengwyn.linux.org.uk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,24 +59,24 @@ msgstr "Y botymau a ddangosir yn y ddeialog rhybudd"
 msgid "Show more _details"
 msgstr "Dangos _mwy o fanylion"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 msgid "About Me"
 msgstr "Amdana I"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "Gosodwch eich gwybodaeth bersonol"
 
-#: ../capplets/about-me/gnome-about-me.c:604
+#: ../capplets/about-me/cinnamon-about-me.c:604
 msgid "Select Image"
 msgstr "Dewis Delwedd"
 
-#: ../capplets/about-me/gnome-about-me.c:606
+#: ../capplets/about-me/cinnamon-about-me.c:606
 msgid "No Image"
 msgstr "Dim Delwedd"
 
-#: ../capplets/about-me/gnome-about-me.c:769
+#: ../capplets/about-me/cinnamon-about-me.c:769
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
@@ -84,290 +84,290 @@ msgstr ""
 "Roedd gwall wrth geisio cael gwybodaeth y llyfr cyfeiriadau\n"
 "Fedr Gweinydd Data Evolution ddim delio â'r protocol"
 
-#: ../capplets/about-me/gnome-about-me.c:790
+#: ../capplets/about-me/cinnamon-about-me.c:790
 msgid "Unable to open address book"
 msgstr "Methu agor y llyfr cyfeiriadau"
 
-#: ../capplets/about-me/gnome-about-me.c:802
+#: ../capplets/about-me/cinnamon-about-me.c:802
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr ""
 "ID mewngofnodi anhysbys, gall fod y gronfa ddata o ddefnyddwyr wedi ei llygru"
 
-#: ../capplets/about-me/gnome-about-me.c:833
-#: ../capplets/about-me/gnome-about-me.c:835
+#: ../capplets/about-me/cinnamon-about-me.c:833
+#: ../capplets/about-me/cinnamon-about-me.c:835
 #, c-format
 msgid "About %s"
 msgstr "Ynghylch %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:116
-#: ../capplets/about-me/gnome-about-me-password.c:707
+#: ../capplets/about-me/cinnamon-about-me-password.c:116
+#: ../capplets/about-me/cinnamon-about-me-password.c:707
 msgid "Old password is incorrect, please retype it"
 msgstr "Hen gyfrinair yn anghywir, aildeipiwch ef"
 
-#: ../capplets/about-me/gnome-about-me-password.c:127
+#: ../capplets/about-me/cinnamon-about-me-password.c:127
 msgid "System error has occurred"
 msgstr "Digwyddodd gwall system"
 
-#: ../capplets/about-me/gnome-about-me-password.c:128
+#: ../capplets/about-me/cinnamon-about-me-password.c:128
 msgid "Could not run /usr/bin/passwd"
 msgstr "Methu rhedeg /usr/bin/passwd"
 
-#: ../capplets/about-me/gnome-about-me-password.c:129
+#: ../capplets/about-me/cinnamon-about-me-password.c:129
 msgid "Unable to launch backend"
 msgstr "Methu lansio'r ochr gefn"
 
-#: ../capplets/about-me/gnome-about-me-password.c:131
-#: ../capplets/about-me/gnome-about-me-password.c:132
+#: ../capplets/about-me/cinnamon-about-me-password.c:131
+#: ../capplets/about-me/cinnamon-about-me-password.c:132
 msgid "Unexpected error has occurred"
 msgstr "Digwyddodd gwall anhysbys"
 
-#: ../capplets/about-me/gnome-about-me-password.c:331
+#: ../capplets/about-me/cinnamon-about-me-password.c:331
 msgid "Password is too short"
 msgstr "Cyfrinair yn rhy fyr"
 
-#: ../capplets/about-me/gnome-about-me-password.c:334
-#: ../capplets/about-me/gnome-about-me-password.c:337
+#: ../capplets/about-me/cinnamon-about-me-password.c:334
+#: ../capplets/about-me/cinnamon-about-me-password.c:337
 msgid "Password is too simple"
 msgstr "Cyfrinair yn rhy syml"
 
-#: ../capplets/about-me/gnome-about-me-password.c:340
+#: ../capplets/about-me/cinnamon-about-me-password.c:340
 msgid "Old and new passwords are too similar"
 msgstr "Mae'r cyfrinair newydd yn rhy debyg i'r hen un"
 
-#: ../capplets/about-me/gnome-about-me-password.c:343
+#: ../capplets/about-me/cinnamon-about-me-password.c:343
 msgid "Must contain numeric or special character(s)"
 msgstr "Rhaid iddo gynnwys nod(au) arbennig neu rif(au)"
 
-#: ../capplets/about-me/gnome-about-me-password.c:348
+#: ../capplets/about-me/cinnamon-about-me-password.c:348
 msgid "Old and new password are the same"
 msgstr "Mae'r cyfrinair newydd yr un peth â'r hen un"
 
-#: ../capplets/about-me/gnome-about-me-password.c:634
+#: ../capplets/about-me/cinnamon-about-me-password.c:634
 msgid "Please type the passwords."
 msgstr "Teipiwch y cyfrineiriau."
 
-#: ../capplets/about-me/gnome-about-me-password.c:642
+#: ../capplets/about-me/cinnamon-about-me-password.c:642
 msgid "Please type the password again, it is wrong."
 msgstr "Teipiwch y cyfrinair eto: mae'n anghywir."
 
-#: ../capplets/about-me/gnome-about-me-password.c:645
+#: ../capplets/about-me/cinnamon-about-me-password.c:645
 msgid "Click on Change Password to change the password."
 msgstr "Cliciwch Newid Cyfrinair er mwyn newid y cyfrinair."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 #: ../vfs-methods/themus/apply-font.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:1
 msgid "    "
 msgstr "    "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 msgid "<b>Email</b>"
 msgstr "<b>E-bost</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 msgid "<b>Home</b>"
 msgstr "<b>Cartref</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>Negesu Chwim</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 msgid "<b>Job</b>"
 msgstr "<b>Swydd</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Please type the passwords.</b>"
 msgstr "<b>Teipiwch y cyfrineiriau.</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 msgid "<b>Telephone</b>"
 msgstr "<b>Ffôn</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 msgid "<b>Web</b>"
 msgstr "<b>Gwe</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 msgid "<b>Work</b>"
 msgstr "<b>Gwaith</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 msgid "A_ddress:"
 msgstr "_Cyfeiriad:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "A_ssistant:"
 msgstr "_Cynorthwyydd:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 msgid "Address"
 msgstr "Cyfeiriad"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 msgid "C_ity:"
 msgstr "_Dinas:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 msgid "C_ompany:"
 msgstr "_Cwmni:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 msgid "Cale_ndar:"
 msgstr "C_alendr:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 msgid "Change Passwo_rd..."
 msgstr "Newid C_yfrinair..."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 msgid "Change Password"
 msgstr "Newid Cyfrinair"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 msgid "Ci_ty:"
 msgstr "_Dinas:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 msgid "Co_untry:"
 msgstr "_Gwlad:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 msgid "Contact"
 msgstr "Cyswllt"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 msgid "Cou_ntry:"
 msgstr "G_wlad:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Full Name"
 msgstr "Enw Llawn"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 msgid "Hom_e:"
 msgstr "_Cartref:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 msgid "Old pa_ssword:"
 msgstr "Hen _gyfrinair:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "P.O. _box:"
 msgstr "Blwch _post:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "P._O. box:"
 msgstr "_Blwch post:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
 msgid "Personal Info"
 msgstr "Gwybodaeth Bersonol"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "State/Pro_vince:"
 msgstr "Talaith/_Ardal:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 msgid "User name:"
 msgstr "Enw defnyddiwr:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid "Web _log:"
 msgstr "Gwe_log:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:36
+#: ../capplets/about-me/cinnamon-about-me.glade.h:36
 msgid "Wor_k:"
 msgstr "_Gwaith:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:37
+#: ../capplets/about-me/cinnamon-about-me.glade.h:37
 msgid "Work _fax:"
 msgstr "_Ffacs gwaith:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "Zip/_Postal code:"
 msgstr "Co_d post/zip:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 msgid "_Address:"
 msgstr "_Cyfeiriad:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "_Department:"
 msgstr "_Adran:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "_Groupwise:"
 msgstr "_Groupwise:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 msgid "_Home page:"
 msgstr "Tudalen _cartref:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 msgid "_Home:"
 msgstr "C_artref:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Jabber:"
 msgstr "_Jabber:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 msgid "_Manager:"
 msgstr "_Rheolwr:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 msgid "_Mobile:"
 msgstr "_Ffôn symudol:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 msgid "_New password:"
 msgstr "Cyfrinair _newydd:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 msgid "_Profession:"
 msgstr "_Proffesiwn:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 msgid "_Retype new password:"
 msgstr "_Aildeipiwch y cyfrinair newydd:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_State/Province:"
 msgstr "_Talaith/Ardal:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 msgid "_Title:"
 msgstr "_Teitl:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_Work:"
 msgstr "_Gwaith:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_Zip/Postal code:"
 msgstr "_Cod post/zip:"
 
@@ -473,7 +473,7 @@ msgid "_Import"
 msgstr "_Mewnforio"
 
 #: ../capplets/accessibility/keyboard/accessibility-keyboard.desktop.in.in.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 #: ../capplets/keyboard/keyboard.desktop.in.in.h:1
 msgid "Keyboard"
 msgstr "Bysellfwrdd"
@@ -482,7 +482,7 @@ msgstr "Bysellfwrdd"
 msgid "Set your keyboard accessibility preferences"
 msgstr "Dewis eich hoffterau hygyrchedd bysellfwrdd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.c:59
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.c:59
 msgid ""
 "This system does not seem to have the XKB extension.  The keyboard "
 "accessibility features will not operate without it."
@@ -490,89 +490,89 @@ msgstr ""
 "Ymddengys nad yw'r estyniad XKB ar gael ar y system hon. Ni fydd nodweddion "
 "hygyrchedd y bysellfwrdd yn gweithio hebddi."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:2
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 #: ../capplets/theme-switcher/theme-install.glade.h:1
 msgid "*"
 msgstr "*"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:3
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:3
 msgid "<b>Enable Bo_unce Keys</b>"
 msgstr "<b>Galluogi Bysellau Sb_onciog</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:4
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:4
 msgid "<b>Enable Slo_w Keys</b>"
 msgstr "<b>Galluogi Bysellau _Araf</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:5
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:5
 msgid "<b>Enable _Mouse Keys</b>"
 msgstr "<b>Galluogi Bysellau _Llygoden</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:6
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:6
 msgid "<b>Enable _Repeat Keys</b>"
 msgstr "<b>Galluogi Bysellau _Ailadroddus</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:7
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:7
 msgid "<b>Enable _Sticky Keys</b>"
 msgstr "<b>Galluogi Bysellau _Gludiog</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:8
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:8
 msgid "<b>Features</b>"
 msgstr "<b>Nodweddion</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:9
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:9
 msgid "<b>Toggle Keys</b>"
 msgstr "<b>Bysellau Togl</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:10
 msgid "Basic"
 msgstr "Sylfaenol"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:11
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:11
 msgid "Beep if key is re_jected"
 msgstr "Bîp os ni _wrthodir y fysell"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:12
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:12
 msgid "Beep when _features turned on or off from keyboard"
 msgstr "Bîp wrth droi'r _nodwedd ymlaen neu bant o'r bysellfwrdd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:13
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:13
 msgid "Beep when _modifier is pressed"
 msgstr "Bîp pan mae'r _addasydd yn cael ei wasgu"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:14
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:14
 msgid "Beep when an LED is turned on and two beeps when one is turned off."
 msgstr "Bîp pan fo'r LED yn goleuo a dau fîp pan mae'n cael ei ddiffodd."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:15
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:15
 msgid "Beep when key is:"
 msgstr "Bîp os yw'r fysell yn:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:16
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:16
 msgid "Del_ay:"
 msgstr "_Oedi:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:17
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:17
 msgid "Delay between keypress and pointer mo_vement:"
 msgstr "Oedi rhwng gwasgu bysell a symudiad y _pwyntydd:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:18
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:18
 msgid "Disa_ble if two keys pressed together"
 msgstr "_Analluogi pan mae dwy fysell yn cael eu gwasgu ar yr un pryd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:19
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:19
 msgid "E_nable Toggle Keys"
 msgstr "Galluogi Bysellau _Togl"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:20
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:20
 msgid "Filters"
 msgstr "Hidlau"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:21
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:21
 msgid "I_gnore duplicate keypresses within:"
 msgstr "Anwybyddu a_il-wasgiadau o fewn:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:22
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:22
 msgid ""
 "Ignore all subsequent presses of the SAME key if they happen within a user "
 "selectable period of time."
@@ -580,23 +580,23 @@ msgstr ""
 "Anwybyddu pob gwasgiad dilynol o'r UN fysell os maent yn digwydd o fewn "
 "cyfnod a gall y defnyddiwr ei ddewis."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:23
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:23
 msgid "Keyboard Accessibility Preferences (AccessX)"
 msgstr "Hoffterau Hygyrchedd Bysellfwrdd (AccessX)"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:24
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:24
 msgid "Ma_ximum pointer speed:"
 msgstr "Cyflymdra m_wya'r pwyntydd:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:25
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:25
 msgid "Mouse Keys"
 msgstr "Bysellau Llygoden"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:26
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:26
 msgid "Mouse _Preferences..."
 msgstr "Hoffterau _Llygoden..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:27
 msgid ""
 "Only accept keys after they have been pressed and held for a user adjustable "
 "amount of time."
@@ -604,7 +604,7 @@ msgstr ""
 "Derbyn bysellau dim ond ar ôl iddynt gael eu gwasgu a'u dal am gyfnod gall y "
 "defnyddiwr ei ddewis."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:28
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:28
 msgid ""
 "Perform multiple simultaneous key press operations by pressing modifier keys "
 "in sequence."
@@ -612,67 +612,67 @@ msgstr ""
 "Cyflawni nifer o wasgiadau bysell cydamserol gan wasgu dilyniant o fysellau "
 "addasu."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:29
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "S_peed:"
 msgstr "Cy_flymder:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:30
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:30
 msgid "Time to acce_lerate to maximum speed:"
 msgstr "Amser i gyf_lymu i'r cyflymder mwyaf:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:31
 msgid "Turn the numeric keypad into a mouse control pad."
 msgstr "Trowch y bysellfwrdd rhifau yn fysellfwrdd rheoli'r llygoden"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:32
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:32
 msgid "_Disable if unused for:"
 msgstr "_Analluogi os na ddefnyddiwyd am:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:33
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:33
 msgid "_Enable keyboard accessibility features"
 msgstr "_Galluogi nodweddion hygyrchedd bysellfwrdd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:34
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:34
 msgid "_Import Feature Settings..."
 msgstr "_Mewnforio Gosodiadau Nodweddion..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:35
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:35
 msgid "_Only accept keys held for:"
 msgstr "_Derbyn bysell wedi'u dal am:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:36
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid "_Type to test settings:"
 msgstr "_Teipiwch i arbrofi'r gosodiadau:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:37
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:37
 msgid "_accepted"
 msgstr "_derbyniwyd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:38
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:38
 msgid "_pressed"
 msgstr "_gwasgedig"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:39
 msgid "_rejected"
 msgstr "_gwrthodwyd"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:40
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:40
 msgid "characters/second"
 msgstr "nodau'r eiliad"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:41
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
 msgid "milliseconds"
 msgstr "milfedau o eiliadau"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:42
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:42
 msgid "pixels/second"
 msgstr "picseli'r eiliad"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:43
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:43
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "eiliadau"
 
@@ -684,97 +684,97 @@ msgstr "Newid gosodiadau eich Cefndir Penbwrdd"
 msgid "Desktop Background"
 msgstr "Cefndir Penbwrdd"
 
-#: ../capplets/background/gnome-background-properties.glade.h:1
+#: ../capplets/background/cinnamon-background-properties.glade.h:1
 msgid "<b>Desktop _Wallpaper</b>"
 msgstr "<b>Papur _Wal Penbwrdd</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:2
+#: ../capplets/background/cinnamon-background-properties.glade.h:2
 msgid "<b>_Desktop Colors</b>"
 msgstr "<b>_Lliwiau Penbwrdd</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:3
+#: ../capplets/background/cinnamon-background-properties.glade.h:3
 msgid "Desktop Background Preferences"
 msgstr "Hoffterau Cefndir Penbwrdd"
 
-#: ../capplets/background/gnome-background-properties.glade.h:4
+#: ../capplets/background/cinnamon-background-properties.glade.h:4
 msgid "Open a dialog to specify the color"
 msgstr "Agorwch ddeialog i ddewis y lliw"
 
-#: ../capplets/background/gnome-background-properties.glade.h:5
+#: ../capplets/background/cinnamon-background-properties.glade.h:5
 msgid "_Add Wallpaper"
 msgstr "_Ychwanegu Papur Wal"
 
-#: ../capplets/background/gnome-background-properties.glade.h:6
+#: ../capplets/background/cinnamon-background-properties.glade.h:6
 msgid "_Finish"
 msgstr "_Gorffen"
 
-#: ../capplets/background/gnome-background-properties.glade.h:7
+#: ../capplets/background/cinnamon-background-properties.glade.h:7
 #: ../capplets/theme-switcher/theme-properties.glade.h:19
 msgid "_Remove"
 msgstr "_Gwaredu:"
 
-#: ../capplets/background/gnome-background-properties.glade.h:8
+#: ../capplets/background/cinnamon-background-properties.glade.h:8
 msgid "_Style:"
 msgstr "_Arddull:"
 
-#: ../capplets/background/gnome-wp-capplet.c:74
+#: ../capplets/background/cinnamon-wp-capplet.c:74
 #: ../capplets/common/capplet-util.c:340
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:333
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:333
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Gwall wrth ddangos cymorth:%s"
 
-#: ../capplets/background/gnome-wp-capplet.c:984
+#: ../capplets/background/cinnamon-wp-capplet.c:984
 msgid "Centered"
 msgstr "Wedi ei ganoli"
 
-#: ../capplets/background/gnome-wp-capplet.c:988
+#: ../capplets/background/cinnamon-wp-capplet.c:988
 msgid "Fill Screen"
 msgstr "Llenwi'r Sgrin"
 
-#: ../capplets/background/gnome-wp-capplet.c:992
+#: ../capplets/background/cinnamon-wp-capplet.c:992
 msgid "Scaled"
 msgstr "Graddio"
 
-#: ../capplets/background/gnome-wp-capplet.c:996
+#: ../capplets/background/cinnamon-wp-capplet.c:996
 msgid "Zoom"
 msgstr "Chwyddo"
 
-#: ../capplets/background/gnome-wp-capplet.c:1000
+#: ../capplets/background/cinnamon-wp-capplet.c:1000
 msgid "Tiled"
 msgstr "Teilsio"
 
-#: ../capplets/background/gnome-wp-capplet.c:1021
+#: ../capplets/background/cinnamon-wp-capplet.c:1021
 msgid "Solid Color"
 msgstr "Lliw Unffurf"
 
-#: ../capplets/background/gnome-wp-capplet.c:1025
+#: ../capplets/background/cinnamon-wp-capplet.c:1025
 msgid "Horizontal Gradient"
 msgstr "Graddfa Lorweddol"
 
-#: ../capplets/background/gnome-wp-capplet.c:1029
+#: ../capplets/background/cinnamon-wp-capplet.c:1029
 msgid "Vertical Gradient"
 msgstr "Graddfa Fertigol"
 
 #. Create the file chooser dialog stuff here
-#: ../capplets/background/gnome-wp-capplet.c:1075
+#: ../capplets/background/cinnamon-wp-capplet.c:1075
 msgid "Add Wallpaper"
 msgstr "Ychwanegu Papur Wal"
 
-#: ../capplets/background/gnome-wp-capplet.c:1092
+#: ../capplets/background/cinnamon-wp-capplet.c:1092
 msgid "Images"
 msgstr "Delweddau"
 
-#: ../capplets/background/gnome-wp-capplet.c:1096
+#: ../capplets/background/cinnamon-wp-capplet.c:1096
 msgid "All Files"
 msgstr "Pob Ffeil"
 
-#: ../capplets/background/gnome-wp-info.c:57
+#: ../capplets/background/cinnamon-wp-info.c:57
 msgid "No Wallpaper"
 msgstr "Dim Papur Wal"
 
-#: ../capplets/background/gnome-wp-item.c:343
-#: ../capplets/background/gnome-wp-item.c:345
+#: ../capplets/background/cinnamon-wp-item.c:343
+#: ../capplets/background/cinnamon-wp-item.c:345
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "picsel"
@@ -782,13 +782,13 @@ msgstr[1] "bicsel"
 
 #: ../capplets/common/activate-settings-daemon.c:18
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"Methu cychwyn y rheolwr gosodiadau 'gnome-settings-daemon'.\n"
+"Methu cychwyn y rheolwr gosodiadau 'cinnamon-settings-daemon'.\n"
 "Heb i'r rheolydd gosodiadau GNOME fod yn weithgar, mae'n bosib na fydd rhai "
 "hoffterau'n dod i rym. Gall hyn olygu fod problem gyda Bonobo, neu fe all "
 "rheolydd gosodiadau arall (e.e. KDE) fod yn weithgar ac yn creu "
@@ -804,8 +804,8 @@ msgid "Just apply settings and quit"
 msgstr "Cymhwyso'r gosodiadau a therfynu"
 
 #: ../capplets/common/capplet-util.c:243
-#: ../capplets/keyboard/gnome-keyboard-properties.c:225
-#: ../capplets/mouse/gnome-mouse-properties.c:1016
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:225
+#: ../capplets/mouse/cinnamon-mouse-properties.c:1016
 #: ../capplets/sound/sound-properties-capplet.c:244
 msgid "Retrieve and store legacy settings"
 msgstr "Nol a chadw'r hen osodiadau"
@@ -982,7 +982,7 @@ msgid "_Select"
 msgstr "_Dewis"
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Preferred Applications"
 msgstr "Rhaglenni Amgen"
 
@@ -990,245 +990,245 @@ msgstr "Rhaglenni Amgen"
 msgid "Select your default applications"
 msgstr "Dewiswch eich rhaglenni rhagosodedig"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:55
+#: ../capplets/default-applications/cinnamon-da-capplet.c:55
 msgid "Could not display help"
 msgstr "Methu dangos y cymorth"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:57
-#: ../capplets/default-applications/gnome-da-capplet.c:765
+#: ../capplets/default-applications/cinnamon-da-capplet.c:57
+#: ../capplets/default-applications/cinnamon-da-capplet.c:765
 msgid "Please make sure that the applet is properly installed"
 msgstr "Gwnewch yn siwr fod y rhaglennig wedi ei osod yn gywir"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:92
-#: ../capplets/default-applications/gnome-da-capplet.c:125
-#: ../capplets/default-applications/gnome-da-capplet.c:170
-#: ../capplets/default-applications/gnome-da-capplet.c:215
-#: ../capplets/default-applications/gnome-da-capplet.c:269
-#: ../capplets/default-applications/gnome-da-capplet.c:318
-#: ../capplets/default-applications/gnome-da-capplet.c:600
-#: ../capplets/default-applications/gnome-da-capplet.c:621
+#: ../capplets/default-applications/cinnamon-da-capplet.c:92
+#: ../capplets/default-applications/cinnamon-da-capplet.c:125
+#: ../capplets/default-applications/cinnamon-da-capplet.c:170
+#: ../capplets/default-applications/cinnamon-da-capplet.c:215
+#: ../capplets/default-applications/cinnamon-da-capplet.c:269
+#: ../capplets/default-applications/cinnamon-da-capplet.c:318
+#: ../capplets/default-applications/cinnamon-da-capplet.c:600
+#: ../capplets/default-applications/cinnamon-da-capplet.c:621
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr "Gwall wrth gadw cyfluniad: %s"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:743
+#: ../capplets/default-applications/cinnamon-da-capplet.c:743
 msgid "Custom"
 msgstr "Addasedig"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:763
+#: ../capplets/default-applications/cinnamon-da-capplet.c:763
 msgid "Could not load the main interface"
 msgstr "Methu llwytho'r prif ryngwyneb"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Debian Sensible Browser"
 msgstr "\"Sensible-Browser\" (Debian)"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Debian Terminal Emulator"
 msgstr "Efelychydd Terfynell Debian"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Epiphany Web Browser"
 msgstr "Porwr Gwe Epiphany"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "Evolution Mail Reader"
 msgstr "Y Darllenwr Ebost Evolution"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Evolution Mail Reader 1.4"
 msgstr "Darllenwr Ebost Evolution 1.4"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Evolution Mail Reader 1.5"
 msgstr "Darllenwr Ebost Evolution 1.5"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader 1.6"
 msgstr "Darllenwr Ebost Evolution 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Evolution Mail Reader 2.0"
 msgstr "Darllenwr Ebost Evolution 2.0"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Evolution Mail Reader 2.2"
 msgstr "Darllenwr Ebost Evolution 2.2"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "Evolution Mail Reader 2.4"
 msgstr "Darllenwr Ebost Evolution 2.4"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "GNOME Terminal"
 msgstr "Terfynell GNOME"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Links Text Browser"
 msgstr "Y Porwr Gwe Links"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Lynx Text Browser"
 msgstr "Y Porwr Gwe Lynx"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "Mozilla Mail"
 msgstr "E-bost Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Netscape Communicator"
 msgstr "Netscape Communicator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Opera"
 msgstr "Opera"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Standard XTerminal"
 msgstr "XTerminal arferol"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "W3M Text Browser"
 msgstr "Y Porwr Gwe W3M"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "aterm"
 msgstr "aterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
 msgid "<b>Audio Player</b>"
 msgstr "<b>Chwaraeydd Sain</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "<b>Image Viewer</b>"
 msgstr "<b>Gwelydd Delweddau</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 msgid "<b>Instant Messenger</b>"
 msgstr "<b>Negesu Chwim</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 msgid "<b>Mail Reader</b>"
 msgstr "<b>Darllenwr E-bost</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "<b>Terminal Emulator</b>"
 msgstr "<b>Efelychydd Terfynell</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 msgid "<b>Text Editor</b>"
 msgstr "<b>Golygydd Testun</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "<b>Video Player</b>"
 msgstr "<b>Chwaraewr Fideo</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "<b>Web Browser</b>"
 msgstr "<b>Porwr Gwe</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr "Fe roddir y cyswllt go iawn yn lle pob %s"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
 msgid "Co_mmand:"
 msgstr "_Gorchymyn:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:12
 msgid "E_xecute flag:"
 msgstr "Baner E_xec:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 msgid "Internet"
 msgstr "Rhyngrwyd"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "Multimedia"
 msgstr "Amlgyfrwng"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "Open link in new _tab"
 msgstr "Agor cyswllt mewn _tab newydd"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "Open link in new _window"
 msgstr "Agor cyswllt mewn _ffenestr newydd"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Open link with web browser _default"
 msgstr "Agor cyswllt gyda'r porwr gwe sy'n _ragosodiad"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 msgid "Run in t_erminal"
 msgstr "Rhedeg mewn t_erfynell"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 msgid "System"
 msgstr "System"
 
@@ -1520,29 +1520,29 @@ msgid "The type of accelerator."
 msgstr "Y math o gyflymydd."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:197
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:197
 #: ../libbackground/applier.c:624 ../typing-break/drwright.c:471
 msgid "Disabled"
 msgstr "Analluogwyd"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:544
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:544
 msgid "<Unknown Action>"
 msgstr "<Gweithred Anhysbys>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:565
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:565
 msgid "Desktop"
 msgstr "Penbwrdd"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:566
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:566
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "Sain"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:570
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:570
 msgid "Window Management"
 msgstr "Rheoli Ffenestri"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:676
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:676
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become unusable to type "
@@ -1553,7 +1553,7 @@ msgstr ""
 "allweddell yna.\n"
 "Ail-geisiwch gydag allwedd fel Control, Alt or Shift ar yr un pryd.\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:705
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:705
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for:\n"
@@ -1562,30 +1562,30 @@ msgstr ""
 "Defnyddir y byrlwybr \"%s\" eisoes ar gyfer:\n"
 " \"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:737
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:737
 #, c-format
 msgid "Error setting new accelerator in configuration database: %s\n"
 msgstr "Gwall wrth osod cyflymydd newydd yn y gronfa cyfluniad: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:787
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:787
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s\n"
 msgstr "Gwall wrth ddadosod cyflymydd yn y gronfa cyfluniad: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:894
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:894
 msgid "Action"
 msgstr "Gweithred"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:918
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:918
 msgid "Shortcut"
 msgstr "Byrlwybr"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Llwybrau byr y Bysellfwrdd"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new "
 "accelerator, or press backspace to clear."
@@ -1597,11 +1597,11 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "_Neilltuo bysell byrlwybr â gorchmynion"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:84
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:84
 msgid "Unknown"
 msgstr "Anhysbys"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:273
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:273
 msgid "Layout"
 msgstr "Cyflwyniad"
 
@@ -1609,26 +1609,26 @@ msgstr "Cyflwyniad"
 #. the below options are to be included in the selected list.
 #. This is a HIG-compliant alternative to allowing no
 #. selection in the group.
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:277
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:228
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:277
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:228
 msgid "Default"
 msgstr "Rhagosodiad"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:75
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:75
 msgid "Models"
 msgstr "Modelau"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:109
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:109
 #, c-format
 msgid "There was an error launching the keyboard tool: %s"
 msgstr "Roedd gwall wrth gychwyn offer y bysellfwrdd: %s"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:202
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:202
 msgid "_Accessibility"
 msgstr "_Hygyrchedd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:221
-#: ../capplets/keyboard/gnome-keyboard-properties.c:223
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:221
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:223
 #: ../capplets/sound/sound-properties-capplet.c:240
 #: ../capplets/sound/sound-properties-capplet.c:242
 msgid ""
@@ -1637,99 +1637,99 @@ msgstr ""
 "Cymhwyso'r gosodiadau a therfynu (cydnawsedd yn unig; trinnir gan ellyll "
 "bellach)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:227
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:227
 msgid "Start the page with the typing break settings showing"
 msgstr "Cychwyn y dudalen gyda'r gosodiadau gorffwys teipio yn dangos"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 msgid "..."
 msgstr "..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>Chwincio'r Cyrchydd</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>Bysellau Ailadroddus</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<b>_Lock screen to enforce typing break</b>"
 msgstr "<b>_Cloi'r sgrin er mwyn gorfodi'r saib teipio</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>Cyflym</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>Hir</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>Byr</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>Araf</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "A_vailable layouts:"
 msgstr "_Cynlluniau ar gael:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
 msgid "All_ow postponing of breaks"
 msgstr "_Caniatáu gohirio seibiau"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Gwirio os ceir gohirio seibiau"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 msgid "Choose a Keyboard Model"
 msgstr "Dewiswch Fodel Bysellfwrdd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 msgid "Choose a Layout"
 msgstr "Dewiswch Gynllun"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 msgid "Cursor _blinks in text boxes and fields"
 msgstr "_Mae'r cyrchydd yn chwincio mewn blychau testun a meysydd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 msgid "Cursor blinks speed"
 msgstr "Cyflymder chwincio'r cyrchwr"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 msgid "Duration of the break when typing is disallowed"
 msgstr "Hyd y saib tra mae teipio wedi ei wahardd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 msgid "Duration of work before forcing a break"
 msgstr "Hyd y gwaith cyn gorfodi saib"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 msgid "Key presses _repeat when key is held down"
 msgstr "Bysellau yn _ailadrodd wrth gael eu dal i lawr"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 msgid "Keyboard Preferences"
 msgstr "Hoffterau Bysellfwrdd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 msgid "Keyboard _model:"
 msgstr "Model bysellfwrdd"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 msgid "Layout Options"
 msgstr "Opsiynau Cynllun:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid "Layouts"
 msgstr "Cynlluniau"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -1737,63 +1737,63 @@ msgstr ""
 "Cloi'r sgrin ar ôl cyfnod penodedig er mwyn cynorthwyo atal anafiadau "
 "defnydd bysellfwrdd ailadroddus"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 msgid "Microsoft Natural Keyboard"
 msgstr "Bysellfwrdd Naturiol Microsoft"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
 msgid "Preview:"
 msgstr "Rhagolwg:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
 msgid "Repeat keys speed"
 msgstr "Cyflymder ail-adrodd bysellau"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 msgid "Reset To De_faults"
 msgstr "_Ailosod i'r dewisiadau rhagosodedig"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "Separate _group for each window"
 msgstr "_Grwp ar wahân ar gyfer pob ffenestr"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
 msgid "Typing Break"
 msgstr "Gorffwys Teipio"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "_Accessibility..."
 msgstr "_Hygyrchedd..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 msgid "_Add..."
 msgstr "_Ychwanegu..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 msgid "_Break interval lasts:"
 msgstr "_Cyfnod seibio yn para:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 msgid "_Delay:"
 msgstr "_Oediad:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "_Models:"
 msgstr "_Modelau:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "_Selected layouts:"
 msgstr "_Cynlluniau dewiswyd:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "_Speed:"
 msgstr "_Cyflymder:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:42
 msgid "_Work interval lasts:"
 msgstr "_Cyfnod gweithio yn para:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:43
 msgid "minutes"
 msgstr "munud"
 
@@ -1802,263 +1802,263 @@ msgid "Set your keyboard preferences"
 msgstr "Gosodwch eich hoffterau bysellfwrdd"
 
 #. set the timeout value  label with correct value of timeout
-#: ../capplets/mouse/gnome-mouse-properties.c:138
-#: ../capplets/mouse/gnome-mouse-properties.c:880
+#: ../capplets/mouse/cinnamon-mouse-properties.c:138
+#: ../capplets/mouse/cinnamon-mouse-properties.c:880
 #, c-format
 msgid "%d milliseconds"
 msgid_plural "%d milliseconds"
 msgstr[0] "%d milfed eiliad"
 msgstr[1] "%d milfedau o eiliadau"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:560
+#: ../capplets/mouse/cinnamon-mouse-properties.c:560
 msgid "Unknown Pointer"
 msgstr "Pwyntydd Anhysbys"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:761
+#: ../capplets/mouse/cinnamon-mouse-properties.c:761
 msgid "Default Pointer"
 msgstr "Pwyntydd Rhagosodedig"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:762
+#: ../capplets/mouse/cinnamon-mouse-properties.c:762
 msgid "Default Pointer - Current"
 msgstr "Pwyntydd Rhagosodedig - Cyfredol"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:763
+#: ../capplets/mouse/cinnamon-mouse-properties.c:763
 msgid "The default pointer that ships with X"
 msgstr "Y pwyntydd rhagosodedig a gludir gydag X"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:767
+#: ../capplets/mouse/cinnamon-mouse-properties.c:767
 msgid "White Pointer"
 msgstr "Pwyntydd Gwyn"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:768
+#: ../capplets/mouse/cinnamon-mouse-properties.c:768
 msgid "White Pointer - Current"
 msgstr "Pwyntydd Gwyn - Cyfredol"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:769
+#: ../capplets/mouse/cinnamon-mouse-properties.c:769
 msgid "The default pointer inverted"
 msgstr "Y pwyntydd rhagosodedig wedi'i wrthdroi"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:773
+#: ../capplets/mouse/cinnamon-mouse-properties.c:773
 msgid "Large Pointer"
 msgstr "Pwyntydd Mawr"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:774
+#: ../capplets/mouse/cinnamon-mouse-properties.c:774
 msgid "Large Pointer - Current"
 msgstr "Pwyntydd Mawr - Cyfredol"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:775
+#: ../capplets/mouse/cinnamon-mouse-properties.c:775
 msgid "Large version of normal pointer"
 msgstr "Fersiwn mawr o'r pwyntydd arferol"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:779
+#: ../capplets/mouse/cinnamon-mouse-properties.c:779
 msgid "Large White Pointer - Current"
 msgstr "Pwyntydd Mawr Gwyn - Cyfredol"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:780
+#: ../capplets/mouse/cinnamon-mouse-properties.c:780
 msgid "Large White Pointer"
 msgstr "Pwyntydd Mawr Gwyn"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:781
+#: ../capplets/mouse/cinnamon-mouse-properties.c:781
 msgid "Large version of white pointer"
 msgstr "Fersiwn mawr o'r pwyntydd gwyn"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:970
+#: ../capplets/mouse/cinnamon-mouse-properties.c:970
 msgid "Pointer Theme"
 msgstr "Thema Pwyntydd"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Double-Click Timeout </b>"
 msgstr "<b>Amser Aros am Glic Dwbl</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:3
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>Llusgo a Gollwng</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>Lleoli'r Pwyntydd</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>Cyfeiriadaeth Llygoden</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Speed</b>"
 msgstr "<b>Cyflymder</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 msgid "<i>Fast</i>"
 msgstr "<i>Cyflym</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<i>High</i>"
 msgstr "<i>Uchel</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid "<i>Large</i>"
 msgstr "<i>Mawr</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:10
 msgid "<i>Low</i>"
 msgstr "<i>Isel</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid "<i>Slow</i>"
 msgstr "<i>Araf</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:12
 msgid "<i>Small</i>"
 msgstr "<i>Bach</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "Buttons"
 msgstr "Botymau"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:14
 msgid "Highlight the _pointer when you press Ctrl"
 msgstr "Amlygu'r _pwyntydd pan rydych chi'n gwasgu Ctrl"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 msgid "Large"
 msgstr "Mawr"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:16
 msgid "Medium"
 msgstr "Canolig"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 msgid "Motion"
 msgstr "Symudiad"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:18
 msgid "Mouse Preferences"
 msgstr "Hoffterau Llygoden"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "Pointer Size:"
 msgstr "Maint Pwyntydd:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:20
 msgid "Pointers"
 msgstr "Pwyntyddion"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 msgid "Small"
 msgstr "Bach"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:22
 msgid "_Acceleration:"
 msgstr "_Cyflymiad:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "_Left-handed mouse"
 msgstr "_Llygoden lawchwith"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:24
 msgid "_Sensitivity:"
 msgstr "_Sensitifrwydd:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "_Threshold:"
 msgstr "_Trothwy:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:26
 msgid "_Timeout:"
 msgstr "_Terfyn aros:"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Llygoden"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Gosodwch eich hoffterau llygoden"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Dirprwy Rhwydwaith"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "Gosod eich hoffterau dirprwy rhwydwaith"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "      "
 msgstr "      "
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>_Cysylltiad Rhyngrwyd uniongyrchol</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>Ignore Host List</b>"
 msgstr "<b>Anwybyddu Rhestr Gwesteiwyr</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>Cyfluniad dirprwy _awtomatig</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>Cyflunio dirprwy â _llaw</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Defnyddio dilysiant</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 msgid "Advanced Configuration"
 msgstr "Cyfluniad Uwch"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "Autoconfiguration _URL:"
 msgstr "_URL cyfluniad awtomatig:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "HTTP Proxy Details"
 msgstr "Manylion dirprwy HTTP"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "H_TTP proxy:"
 msgstr "Dirprwy _HTTP:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 msgid "Network Proxy Preferences"
 msgstr "Hoffterau Dirprwy Rhwydwaith"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Port:"
 msgstr "Porth:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 msgid "Proxy Configuration"
 msgstr "Cyfluniad Dirprwy"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "S_ocks host:"
 msgstr "Gweinydd S_ocks:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 msgid "U_sername:"
 msgstr "_Enw Defnyddiwr:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_Details"
 msgstr "_Manylion"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_FTP proxy:"
 msgstr "Dirprwy _FTP:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Password:"
 msgstr "_Cyfrinair:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Secure HTTP proxy:"
 msgstr "Dirprwy HTTP _Diogel:"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "Galluogi sain a chysylltu seiniau â digwyddiadau"
 
@@ -2099,37 +2099,37 @@ msgstr "_Chwarae synau'r system"
 msgid "_Visual system beep"
 msgstr "Bîp _gweledol y system"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:368
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:368
 msgid "Would you like to remove this theme?"
 msgstr "Hoffech chi dynnu'r thema hon?"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:433
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:433
 msgid "Theme deleted succesfully. Please select another theme."
 msgstr "Thema wedi'i ddileu yn llwyddiannus. Dewiswch thema wahanol."
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:442
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:442
 msgid "Theme can not be deleted"
 msgstr "Methu dileu'r thema"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:529
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:529
 msgid ""
 "No themes could be found on your system.  This probably means that your "
 "\"Theme Preferences\" dialog was improperly installed, or you haven't "
-"installed the \"gnome-themes\" package."
+"installed the \"cinnamon-themes\" package."
 msgstr ""
 "Ni chanfuwyd unrhyw themâu ar eich system. Mae'n debyg golyga hyn bod eich "
 "deialog \"Hoffterau Thema\" wedi ei osod yn anghywir, neu nad ydych wedi "
-"gosod y pecyn \"gnome-themes\"."
+"gosod y pecyn \"cinnamon-themes\"."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:227
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:227
 msgid "This theme is not in a supported format."
 msgstr "Nid yw'r thema mewn ffurf a gynhelir."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:242
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:242
 msgid "Failed to create temporary directory"
 msgstr "Methu creu cyfeiriadur dros dro"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:260
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:260
 msgid ""
 "Can not install theme. \n"
 "The bzip2 utility is not installed."
@@ -2137,13 +2137,13 @@ msgstr ""
 "Methu gosod thema. \n"
 "Nid yw'r rhaglen bzip2 wedi ei osod."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:276
-#: ../capplets/theme-switcher/gnome-theme-installer.c:309
-#: ../capplets/theme-switcher/gnome-theme-installer.c:383
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:276
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:309
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:383
 msgid "Installation Failed"
 msgstr "Methodd Gosodiad"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:294
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:294
 msgid ""
 "Can not install themes. \n"
 "The gzip utility is not installed."
@@ -2151,7 +2151,7 @@ msgstr ""
 "Methu gosod themâu. \n"
 "Nid yw'r rhaglen bzip2 wedi ei osod."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:330
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:330
 #, c-format
 msgid ""
 "Icon Theme %s correctly installed.\n"
@@ -2160,12 +2160,12 @@ msgstr ""
 "Thema Eicon %s wedi ei gosod yn gywir.\n"
 "Gallwch ei dewis yn y manylion themâu."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:333
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:333
 #, c-format
 msgid "Gnome Theme %s correctly installed"
 msgstr "Thema Gnome %s wedi ei gosod yn gywir"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:336
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:336
 #, c-format
 msgid ""
 "Windows Border Theme %s correctly installed.\n"
@@ -2174,7 +2174,7 @@ msgstr ""
 "Thema Border Ffenest %s wedi ei gosod yn gywir.\n"
 "Gallwch ei dewis yn y manylion themâu."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:339
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:339
 #, c-format
 msgid ""
 "Controls Theme %s correctly installed.\n"
@@ -2183,23 +2183,23 @@ msgstr ""
 "Thema Rheolyddion %s wedi ei gosod yn gywir.\n"
 "Gallwch ei dewis yn y manylion themâu."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:345
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:345
 msgid "The theme is an engine. You need to compile the theme."
 msgstr "Mae'r thema yn injan. Rhaid i chi grynhoi'r thema."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:360
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:360
 msgid "The file format is invalid"
 msgstr "Fformat ffeil yn annilys"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:450
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:450
 msgid "No theme file location specified to install"
 msgstr "Ni chafodd lleoliad ffeil thema ei bennu ar gyfer ei osod"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:469
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:469
 msgid "The theme file location specified to install is invalid"
 msgstr "Roedd y lleoliad ffeil thema a benodwyd i'w osod yn annilys"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:489
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:489
 #, c-format
 msgid ""
 "Insufficient permissions to install the theme in:\n"
@@ -2208,11 +2208,11 @@ msgstr ""
 "Caniatadau annigonol i osod y thema yn:\n"
 "%s"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:510
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:510
 msgid "The file format is invalid."
 msgstr "Fformat ffeil yn annilys."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:537
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:537
 #, c-format
 msgid ""
 "%s is the path where the theme files will be installed. This can not be "
@@ -2221,7 +2221,7 @@ msgstr ""
 "%s yw'r llwybr lle fydd y ffeiliau thema wedi ei gosod. Ni ellir dewis hwn "
 "fel lleoliad y ffynhonnell"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:591
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:591
 msgid ""
 "Cannot install theme.\n"
 "The tar program is not installed on your system."
@@ -2229,15 +2229,15 @@ msgstr ""
 "Methu gosod thema.\n"
 "Nid yw'r rhaglen tar wedi ei osod ar eich system."
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:686
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:686
 msgid "Custom theme"
 msgstr "Thema Addasedig"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:686
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:686
 msgid "You can save this theme by pressing the Save Theme button."
 msgstr "Gallwch gadw'r thema yma drwy glicio'r botwm Cadw Thema."
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:1584
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:1584
 msgid ""
 "The default theme schemas could not be found on your system.  This means "
 "that you probably don't have metacity installed, or that your gconf is "
@@ -2247,11 +2247,11 @@ msgstr ""
 "awgrymu nad yw metacity wedi ei ymsefydlu gennych, neu fod eich gconf wedi "
 "ei gyflunio'n anghywir."
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:72
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:72
 msgid "Theme name must be present"
 msgstr "Rhaid bod enw thema yn bresennol"
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:104
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:104
 msgid "The theme already exists. Would you like to replace it?"
 msgstr "Mae'r thema'n bodoli eisoes. A hoffech ei newid?"
 
@@ -2368,111 +2368,111 @@ msgstr "_Enw thema:"
 msgid "theme selection tree"
 msgstr "coeden dewis thema"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:1
 msgid "Customize the appearance of toolbars and menubars in applications"
 msgstr "Addasu golwg bariau offer a bariau dewislenni mewn rhaglenni"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:2
 msgid "Menus & Toolbars"
 msgstr "Dewislenni a Bariau Offer"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:2
 msgid "<b>Behavior and Appearance</b>"
 msgstr "<b>Ymddygiad ac Ymddangosiad</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:3
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:3
 msgid "<b>Preview</b>"
 msgstr "<b>Rhagolwg</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:4
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:4
 msgid "C_ut"
 msgstr "T_orri"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:5
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:5
 msgid "Icons only"
 msgstr "Eiconau'n unig"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:6
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:6
 msgid "Menu and Toolbar Preferences"
 msgstr "Hoffterau Dewislen a Bar Offer"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:7
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:7
 msgid "New File"
 msgstr "Ffeil Newydd"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:8
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:8
 msgid "Open File"
 msgstr "Agor Ffeil"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:9
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:9
 msgid "Save File"
 msgstr "Cadw Ffeil"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:10
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:10
 msgid "Show _icons in menus"
 msgstr "Dangos _eiconau mewn dewislenni"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:11
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:11
 msgid "Text below icons"
 msgstr "Testun islaw eiconau"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:12
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:12
 msgid "Text beside icons"
 msgstr "Testun wrth ochr eiconau"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:13
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:13
 msgid "Text only"
 msgstr "Testun yn unig"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:14
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:14
 msgid "Toolbar _button labels:"
 msgstr "Labeli _botymau bar offer:"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:15
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:15
 msgid "_Copy"
 msgstr "_Copïo"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:16
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:16
 msgid "_Detachable toolbars"
 msgstr "Barau offer gellir _datgysylltu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:17
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:17
 msgid "_Edit"
 msgstr "_Golygu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:18
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:18
 msgid "_Editable menu accelerators"
 msgstr "Posib _golygu cyflymwyr dewislen"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:19
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:19
 msgid "_File"
 msgstr "_Ffeil"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:20
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:20
 msgid "_New"
 msgstr "_Newydd"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:21
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:21
 msgid "_Open"
 msgstr "_Agor"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:22
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:22
 msgid "_Paste"
 msgstr "_Gludo"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:23
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:23
 msgid "_Print"
 msgstr "_Argraffu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:24
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:24
 msgid "_Quit"
 msgstr "_Gadael"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:25
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:25
 msgid "_Save"
 msgstr "_Cadw"
 
-#: ../capplets/windows/gnome-window-properties.c:385
+#: ../capplets/windows/cinnamon-window-properties.c:385
 #, c-format
 msgid ""
 "<b>Cannot start the preferences application for your window manager</b>\n"
@@ -2483,60 +2483,60 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../capplets/windows/gnome-window-properties.c:642
+#: ../capplets/windows/cinnamon-window-properties.c:642
 msgid "C_ontrol"
 msgstr "C_ontrol"
 
-#: ../capplets/windows/gnome-window-properties.c:647
+#: ../capplets/windows/cinnamon-window-properties.c:647
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:653
+#: ../capplets/windows/cinnamon-window-properties.c:653
 msgid "H_yper"
 msgstr "_Goruwch (hyper)"
 
-#: ../capplets/windows/gnome-window-properties.c:660
+#: ../capplets/windows/cinnamon-window-properties.c:660
 msgid "S_uper (or \"Windows logo\")"
 msgstr "_Uwch (neu \"Logo Windows\")"
 
-#: ../capplets/windows/gnome-window-properties.c:667
+#: ../capplets/windows/cinnamon-window-properties.c:667
 msgid "_Meta"
 msgstr "_Meta"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 msgid "<b>Movement Key</b>"
 msgstr "<b>Bysell Symud</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>Gweithred Bar Teitl</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 msgid "<b>Window Selection</b>"
 msgstr "<b>Dewis Ffenestri</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr ""
 "I symud ffenestr, gwasgwch a chydiwch y fysell yma yna cydiwch yn y ffenestr:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "Hoffterau Ffenestr"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_Rhoi clic dwbl ar y bar teitl i gyflawni'r weithred hon:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "_Cyfnod cyn codi:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "_Codi ffenestri dewisedig ar ôl cyfnod"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Dewis ffenestri pan fo'r llygoden yn symud drostynt"
 
@@ -2561,35 +2561,35 @@ msgid "GNOME Control Center"
 msgstr "Canolfan Reoli GNOME"
 
 #: ../control-center/gnomecc.desktop.in.in.h:2
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:2
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "The GNOME configuration tool"
 msgstr "Yr erfyn cyfluniad GNOME"
 
-#: ../gnome-settings-daemon/actions/acme-fb-level.c:149
+#: ../cinnamon-settings-daemon/actions/acme-fb-level.c:149
 msgid "No '/dev/pmu' device found"
 msgstr "Dim dyfais '/dev/pmu' wedi ei ganfod"
 
-#: ../gnome-settings-daemon/actions/acme-fb-level.c:156
+#: ../cinnamon-settings-daemon/actions/acme-fb-level.c:156
 msgid "Not a powerbook"
 msgstr "Ddim yn 'powerbook'"
 
-#: ../gnome-settings-daemon/actions/acme-fb-level.c:173
+#: ../cinnamon-settings-daemon/actions/acme-fb-level.c:173
 msgid "Wrong permission for '/dev/pmu' device"
 msgstr "Caniatâd anghywir ar gyfer y ddyfais '/dev/pmu'"
 
-#: ../gnome-settings-daemon/actions/acme.glade.h:1
+#: ../cinnamon-settings-daemon/actions/acme.glade.h:1
 msgid "Volume"
 msgstr "Lefel Sain"
 
-#: ../gnome-settings-daemon/factory.c:66
+#: ../cinnamon-settings-daemon/factory.c:66
 msgid "Could not initialize Bonobo"
 msgstr "Methu ymgychwyn Bonobo"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:406
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:406
 msgid "Slow Keys Alert"
 msgstr "Rhybudd Bysellau Araf"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:407
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:407
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -2597,39 +2597,39 @@ msgstr ""
 "Rydych newydd ddal lawr y fysell Shift am 8 eiliad. Dyma'r byrlwybr ar gyfer "
 "y nodwedd Bysellau Araf, sy'n effeithio sut mae'ch bysellfwrdd yn gweithio"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:409
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:409
 msgid "Do you want to activate Slow Keys?"
 msgstr "Ydych chi eisiau troi Bysellau Araf ymlaen?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:410
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:410
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Ydych chi eisiau troi Bysellau Araf i ffwrdd?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:428
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:428
 msgid "_Activate"
 msgstr "_Actifadu"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:428
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:428
 msgid "_Deactivate"
 msgstr "_Dad-actifadu"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:412
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:429
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:412
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:429
 msgid "Do_n't activate"
 msgstr "_Peidio ag actifadu"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:412
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:429
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:412
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:429
 msgid "Do_n't deactivate"
 msgstr "_Peidio â dad-actifadu"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:421
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:421
 msgid "Sticky Keys Alert"
 msgstr "Rhybudd Bysellau Gludiog"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:422
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:422
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -2638,7 +2638,7 @@ msgstr ""
 "gyfer y nodwedd Bysellau Gludiog, sy'n effeithio sut mae'ch bysellfwrdd yn "
 "gweithio"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:424
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:424
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -2648,15 +2648,15 @@ msgstr ""
 "mewn rhes. Mae hyn yn troi'r nodwedd Bysedd Gludiog ymlaen, sy'n effeithio "
 "sut mae'ch bysellfwrdd yn gweithio."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:426
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:426
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Ydych chi eisiau troi Bysellau Gludiog ymlaen?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:427
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:427
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Ydych chi eisiau troi Bysellau Gludio i ffwrdd?"
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:74
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:74
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2665,7 +2665,7 @@ msgstr ""
 "Methu creu'r cyfeiriadur \"%s\".\n"
 "Mae angen hwn i ganiatáu newid thema pwyntydd y llygoden."
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:96
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:96
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2674,37 +2674,37 @@ msgstr ""
 "Methu creu'r cyfeiriadur \"%s\".\n"
 "Mae angen hwn i ganiatáu newid cyrchwyr."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:208
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:208
 #, c-format
 msgid "Key Binding (%s) has its action defined multiple times\n"
 msgstr "Diffinnir gweithred y Rhwymiad Bysell (%s) sawl gwaith\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:221
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:221
 #, c-format
 msgid "Key Binding (%s) has its binding defined multiple times\n"
 msgstr "Diffinnir rhwymiad y Rhwymiad Bysell (%s) sawl gwaith\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:227
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:227
 #, c-format
 msgid "Key Binding (%s) is incomplete\n"
 msgstr "Mae'r Rhwymiad Bysell (%s) yn anghyflawn\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:255
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:255
 #, c-format
 msgid "Key Binding (%s) is invalid\n"
 msgstr "Mae'r Rhwymiad Bysell (%s) yn annilys\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:291
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:291
 #, c-format
 msgid "It seems that another application already has access to key '%u'."
 msgstr "Mae'n debyg fod gan raglen arall fynediad i'r fysell '%u' eisoes."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:360
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:360
 #, c-format
 msgid "Key Binding (%s) is already in use\n"
 msgstr "Defnyddir y Rhwymiad Bysell (%s) eisoes\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:435
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:435
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -2713,7 +2713,7 @@ msgstr ""
 "Gwall wrth geisio gweithredu (%s)\n"
 "sy'n rhwym i'r fysell (%s)"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:103
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:103
 #, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -2744,7 +2744,7 @@ msgstr ""
 "- Canlyniad <b>%s</b>\n"
 "- Canlyniad <b>%s</b>"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:117
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:117
 msgid ""
 "You are using XFree 4.3.0.\n"
 "There are known problems with complex XKB configurations.\n"
@@ -2756,11 +2756,11 @@ msgstr ""
 "Ceisiwch ddefnyddio cyfluniad symlach neu ddefnyddio fersiwn mwy diweddar o "
 "feddalwedd XFree"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:223
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:223
 msgid "Do _not show this warning again"
 msgstr "_Peidio â dangos y rhybudd yma eto"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:234
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:234
 msgid ""
 "The X system keyboard settings differ from your current GNOME keyboard "
 "settings.  Which set would you like to use?"
@@ -2768,15 +2768,15 @@ msgstr ""
 "Mae gosodiadau bysellfwrdd y system X yn wahanol i'ch gosodiadau bysellfwrdd "
 "GNOME cyfredol. Pa set hoffech ddefnyddio?"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:247
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:247
 msgid "Use X settings"
 msgstr "Defnyddio Gosodiadau X"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:249
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:249
 msgid "Use GNOME settings"
 msgstr "Defnyddio Gosodiadau GNOME"
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:129
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:129
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -2785,7 +2785,7 @@ msgstr ""
 "Methwyd gweithredu'r gorchymyn: %s\n"
 "Gwirio fod y gorchymyn yma'n bodoli."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:145
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:145
 msgid ""
 "Couldn't put the machine to sleep.\n"
 "Verify that the machine is correctly configured."
@@ -2793,7 +2793,7 @@ msgstr ""
 "Methwyd rhoi'r peiriant i gysgu.\n"
 "Gwirio fod y peiriant wedi ei gyflunio yn gywir."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:180
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:180
 msgid ""
 "Couldn't load the Glade file.\n"
 "Make sure that this daemon is properly installed."
@@ -2801,7 +2801,7 @@ msgstr ""
 "Methwyd llwytho ffeil Glade.\n"
 "Gwnewch yn siwr fod y daemon wedi ei osod yn gywir."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:110
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:110
 #, c-format
 msgid ""
 "There was an error starting up the screensaver:\n"
@@ -2816,50 +2816,50 @@ msgstr ""
 "\n"
 "Fydd arbed sgrin ddim yn gweithio yn ystod y sesiwn yma."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:120
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:120
 msgid "_Do not show this message again"
 msgstr "_Peidiwch â dangos y neges yma eto"
 
-#: ../gnome-settings-daemon/gnome-settings-sound.c:131
+#: ../cinnamon-settings-daemon/cinnamon-settings-sound.c:131
 #, c-format
 msgid "Couldn't load sound file %s as sample %s"
 msgstr "Methwyd llwytho ffeil sain %s fel sampl %s"
 
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:212
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:260
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:212
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:260
 msgid "Cannot determine user's home directory"
 msgstr "Methwyd canfod cyfeiriadur cartref y defnyddiwr"
 
-#: ../gnome-settings-daemon/gnome-settings-xsettings.c:212
+#: ../cinnamon-settings-daemon/cinnamon-settings-xsettings.c:212
 #, c-format
 msgid "GConf key %s set to type %s but its expected type was %s\n"
 msgstr "Gosodwyd yr allwedd GConf %s i fath %s ond disgwylid math %s\n"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:1
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:1
 msgid "A_vailable files:"
 msgstr "_Ffeiliau ar gael:"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:2
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:2
 msgid "Do _not show this warning again."
 msgstr "_Peidio â dangos y rhybudd yma eto."
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:3
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:3
 msgid "Load modmap files"
 msgstr "Llwytho ffeiliau modmap"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:4
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:4
 msgid "Would you like to load the modmap file(s)?"
 msgstr "Hoffech chi lwytho'r ffeil(iau) modmap?"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:5
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:5
 msgid "_Load"
 msgstr "_Llwytho"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:6
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:6
 msgid "_Loaded files:"
 msgstr "_Ffeiliau wedi'u llwytho:"
 
-#: ../gnome-settings-daemon/reaper.c:103
+#: ../cinnamon-settings-daemon/reaper.c:103
 msgid "Error creating signal pipe."
 msgstr "Gwall wrth greu piben signal."
 
@@ -2939,10 +2939,10 @@ msgstr "Seiniau heb eu gosod ar gyfer y digwyddiad hwn."
 #: ../libsounds/sound-view.c:140
 msgid ""
 "The sound file for this event does not exist.\n"
-"You may want to install the gnome-audio package for a set of default sounds."
+"You may want to install the cinnamon-audio package for a set of default sounds."
 msgstr ""
 "Nid yw'r ffeil sain ar gyfer y digwyddiad yma'n bodoli.\n"
-"Efallai yr hoffech chi sefydlu'r pecyn gnome-audio er mwyn gael set o "
+"Efallai yr hoffech chi sefydlu'r pecyn cinnamon-audio er mwyn gael set o "
 "seiniau rhagosodedig."
 
 #: ../libsounds/sound-view.c:151
@@ -2962,7 +2962,7 @@ msgstr "NId yw'r ffeil %s yn ffeil WAV ddilys"
 msgid "System Sounds"
 msgstr "Synau'r System"
 
-#: ../libwindow-settings/gnome-wm-manager.c:320
+#: ../libwindow-settings/cinnamon-wm-manager.c:320
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "Nid yw rheolwr ffenestri \"%s\" wedi cofrestru arf cyfluniad\n"
@@ -3449,7 +3449,7 @@ msgstr "A ddylid creu lluniau cryno o ffontiau TrueType"
 msgid "Whether to thumbnail Type1 fonts"
 msgstr "A ddylid creu lluniau cryno o ffontiau Type1"
 
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:1
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:1
 msgid "GNOME Font Viewer"
 msgstr "Gwelydd Ffontiau GNOME"
 

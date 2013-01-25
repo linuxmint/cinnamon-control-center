@@ -1,4 +1,4 @@
-/* gnome-region-panel-xkblt.c
+/* cinnamon-region-panel-xkblt.c
  * Copyright (C) 2003-2007 Sergey V. Udaltsov
  *
  * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -29,7 +29,7 @@
 #include <libgnomekbd/gkbd-desktop-config.h>
 #include <libgnomekbd/gkbd-keyboard-drawing.h>
 
-#include "gnome-region-panel-xkb.h"
+#include "cinnamon-region-panel-xkb.h"
 
 enum {
 	SEL_LAYOUT_TREE_COL_DESCRIPTION,

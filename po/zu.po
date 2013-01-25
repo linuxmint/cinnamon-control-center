@@ -49,345 +49,345 @@ msgstr ""
 msgid "Show more _details"
 msgstr "_Imniningwane yendikima"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 #, fuzzy
 msgid "About Me"
 msgstr "_Nge"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your personal information"
 msgstr "Uhlobo lolwazi MIME"
 
-#: ../capplets/about-me/gnome-about-me.c:554
+#: ../capplets/about-me/cinnamon-about-me.c:554
 #, fuzzy
 msgid "Select Image"
 msgstr "_Khetha"
 
-#: ../capplets/about-me/gnome-about-me.c:556
+#: ../capplets/about-me/cinnamon-about-me.c:556
 #, fuzzy
 msgid "No Image"
 msgstr "Izithombe"
 
-#: ../capplets/about-me/gnome-about-me.c:706
+#: ../capplets/about-me/cinnamon-about-me.c:706
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:727
+#: ../capplets/about-me/cinnamon-about-me.c:727
 msgid "Unable to open address book"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:739
+#: ../capplets/about-me/cinnamon-about-me.c:739
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:770
-#: ../capplets/about-me/gnome-about-me.c:772
+#: ../capplets/about-me/cinnamon-about-me.c:770
+#: ../capplets/about-me/cinnamon-about-me.c:772
 #, fuzzy, c-format
 msgid "About %s"
 msgstr "_Nge"
 
-#: ../capplets/about-me/gnome-about-me-password.c:101
-#: ../capplets/about-me/gnome-about-me-password.c:479
+#: ../capplets/about-me/cinnamon-about-me-password.c:101
+#: ../capplets/about-me/cinnamon-about-me-password.c:479
 msgid "Old password is incorrect, please retype it"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:112
+#: ../capplets/about-me/cinnamon-about-me-password.c:112
 msgid "System error has occurred"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:113
+#: ../capplets/about-me/cinnamon-about-me-password.c:113
 msgid "Could not run /usr/bin/passwd"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:114
+#: ../capplets/about-me/cinnamon-about-me-password.c:114
 msgid "Unable to launch backend"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:116
-#: ../capplets/about-me/gnome-about-me-password.c:117
+#: ../capplets/about-me/cinnamon-about-me-password.c:116
+#: ../capplets/about-me/cinnamon-about-me-password.c:117
 msgid "Unexpected error has occurred"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:315
+#: ../capplets/about-me/cinnamon-about-me-password.c:315
 msgid "Password is too short"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:318
-#: ../capplets/about-me/gnome-about-me-password.c:321
+#: ../capplets/about-me/cinnamon-about-me-password.c:318
+#: ../capplets/about-me/cinnamon-about-me-password.c:321
 msgid "Password is too simple"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:324
+#: ../capplets/about-me/cinnamon-about-me-password.c:324
 msgid "Old and new passwords are too similar"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:328
+#: ../capplets/about-me/cinnamon-about-me-password.c:328
 msgid "Old and new password are the same"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:406
+#: ../capplets/about-me/cinnamon-about-me-password.c:406
 #, fuzzy
 msgid "Please type the passwords."
 msgstr "_Igama lokungena:"
 
-#: ../capplets/about-me/gnome-about-me-password.c:414
+#: ../capplets/about-me/cinnamon-about-me-password.c:414
 msgid "Please type the password again, it is wrong."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:417
+#: ../capplets/about-me/cinnamon-about-me-password.c:417
 msgid "Click on Change Password to change the password."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 #: ../vfs-methods/themus/apply-font.glade.h:1
 msgid " "
 msgstr " "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:1
 #: ../capplets/font/font-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:1
 msgid "    "
 msgstr "    "
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 #, fuzzy
 msgid "<b>Email</b>"
 msgstr "<i>Ncanel</i>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 #, fuzzy
 msgid "<b>Home</b>"
 msgstr "<b>Ijubane</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 #, fuzzy
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>Ukutyelekana isiqwema</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 #, fuzzy
 msgid "<b>Job</b>"
 msgstr "<b>Sekela</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Please type the passwords.</b>"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 #, fuzzy
 msgid "<b>Telephone</b>"
 msgstr "<b>Izihlushulelo zokugqoka</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 #, fuzzy
 msgid "<b>Web</b>"
 msgstr "<b>Ijubane</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 #, fuzzy
 msgid "<b>Work</b>"
 msgstr "<b>Sekela</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_IM/iChat:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 #, fuzzy
 msgid "A_ddress:"
 msgstr "_Hlanganisa:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "A_ssistant:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 #, fuzzy
 msgid "Address"
 msgstr "_ipotshoziwe"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 #, fuzzy
 msgid "C_ity:"
 msgstr "_Inhlobo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 #, fuzzy
 msgid "C_ompany:"
 msgstr "Umy_alo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 #, fuzzy
 msgid "Cale_ndar:"
 msgstr "Uhla_ngothi..."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 #, fuzzy
 msgid "Change Passwo_rd..."
 msgstr "Shintsha uhlelo"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 #, fuzzy
 msgid "Change Password"
 msgstr "Shintsha uhlelo"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 #, fuzzy
 msgid "Ci_ty:"
 msgstr "_Inhlobo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 #, fuzzy
 msgid "Co_untry:"
 msgstr "Lawula"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 #, fuzzy
 msgid "Contact"
 msgstr "_Iziqikili"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 #, fuzzy
 msgid "Cou_ntry:"
 msgstr "Lawula"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Full Name"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 #, fuzzy
 msgid "Hom_e:"
 msgstr "_Igama:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "IC_Q:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "M_SN:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 #, fuzzy
 msgid "Old pa_ssword:"
 msgstr "_Igama lokungena:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "P.O. _box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "P._O. box:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
 #, fuzzy
 msgid "Personal Info"
 msgstr "_Isixhumi siqwema:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "State/Pro_vince:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 #, fuzzy
 msgid "User name:"
 msgstr "I_gamamsebemzi:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid "Web _log:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:36
+#: ../capplets/about-me/cinnamon-about-me.glade.h:36
 msgid "Wor_k:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:37
+#: ../capplets/about-me/cinnamon-about-me.glade.h:37
 msgid "Work _fax:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "Zip/_Postal code:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 #, fuzzy
 msgid "_Address:"
 msgstr "_Hlanganisa:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "_Department:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "_Groupwise:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 #, fuzzy
 msgid "_Home page:"
 msgstr "_Igama lendikimba:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 #, fuzzy
 msgid "_Home:"
 msgstr "_Igama:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Jabber:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 #, fuzzy
 msgid "_Manager:"
 msgstr "_Inkulisa"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 #, fuzzy
 msgid "_Mobile:"
 msgstr "_Ihele"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 #, fuzzy
 msgid "_New password:"
 msgstr "_Igama lokungena:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 #, fuzzy
 msgid "_Profession:"
 msgstr "Umlandiso:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 #, fuzzy
 msgid "_Retype new password:"
 msgstr "_Igama lokungena:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_State/Province:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 #, fuzzy
 msgid "_Title:"
 msgstr "_Inhlobo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_Work:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Yahoo:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_Zip/Postal code:"
 msgstr ""
 
@@ -498,7 +498,7 @@ msgid "_Import"
 msgstr "_Ngenisa okuvela ngaphandle"
 
 #: ../capplets/accessibility/keyboard/accessibility-keyboard.desktop.in.in.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 #: ../capplets/keyboard/keyboard.desktop.in.in.h:1
 msgid "Keyboard"
 msgstr "Indawo yokushaya uma ubhala"
@@ -507,7 +507,7 @@ msgstr "Indawo yokushaya uma ubhala"
 msgid "Set your keyboard accessibility preferences"
 msgstr "Hlela indawo yakho yokubhala ngezimvume ezithandekayo"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.c:59
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.c:59
 msgid ""
 "This system does not seem to have the XKB extension.  The keyboard "
 "accessibility features will not operate without it."
@@ -515,93 +515,93 @@ msgstr ""
 "Lomshini awutshengise njengonendawo yangaphandle ye XKB. Imininingwane "
 "yendawo yokushaya uma ubhala ngeke isebenze ngaphandle kwayo."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:2
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 #: ../capplets/theme-switcher/theme-install.glade.h:1
 #: ../capplets/theme-switcher/theme-properties.glade.h:1
 msgid "*"
 msgstr "*"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:3
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:3
 msgid "<b>Enable Bo_unce Keys</b>"
 msgstr "<b>Nika amandla Qha_sha Izihluthulelo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:4
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:4
 msgid "<b>Enable Slo_w Keys</b>"
 msgstr "<b>Nika amandla Kan_cane Izihluthulelo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:5
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:5
 msgid "<b>Enable _Mouse Keys</b>"
 msgstr "<b>Nika amandla _Ingoso Izihluthulelo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:6
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:6
 msgid "<b>Enable _Repeat Keys</b>"
 msgstr "<b>Nika amandla _Phinda Izihluthulelo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:7
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:7
 msgid "<b>Enable _Sticky Keys</b>"
 msgstr "<b>Nika amandla _Namathelayo Izihluthulelo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:8
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:8
 msgid "<b>Features</b>"
 msgstr "<b>Umumo</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:9
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:9
 msgid "<b>Toggle Keys</b>"
 msgstr "<b>Izihlushulelo zokugqoka</b>"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:10
 msgid "Basic"
 msgstr "Isisekelo"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:11
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:11
 msgid "Beep if key is re_jected"
 msgstr "Khala uma isihluthulelo sali_we"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:12
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:12
 msgid "Beep when _features turned on or off from keyboard"
 msgstr ""
 "Khala uma _umumo ucishiwe noma ukhanyisiwe kwindawo yokushaya uma ubhala"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:13
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:13
 msgid "Beep when _modifier is pressed"
 msgstr "Khala uma _isilungisi sipotshozwa"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:14
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:14
 msgid "Beep when an LED is turned on and two beeps when one is turned off."
 msgstr "Khala uma LED ikhanyisiwe futhi ikhale kabili uma enye icishiwe."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:15
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:15
 msgid "Beep when key is:"
 msgstr "Khala uma isihluthulelo siyi:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:16
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:16
 msgid "Del_ay:"
 msgstr "Chitha Isi_khathi:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:17
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:17
 msgid "Delay between keypress and pointer mo_vement:"
 msgstr ""
 "Chitha isikhathi phakathi kokupotshoza ikinombho nokuha_mba kwesikhombi:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:18
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:18
 msgid "Disa_ble if two keys pressed together"
 msgstr "Cis_ha uma amakinombho amabili epotshozwe kanye kanye"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:19
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:19
 msgid "E_nable Toggle Keys"
 msgstr "Nika ama_ndla amakinombho wokugqoka"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:20
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:20
 msgid "Filters"
 msgstr "Izisefo"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:21
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:21
 msgid "I_gnore duplicate keypresses within:"
 msgstr "Ungan_aki ukupotsozwa kabili kwangaphakathi:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:22
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:22
 msgid ""
 "Ignore all subsequent presses of the SAME key if they happen within a user "
 "selectable period of time."
@@ -609,23 +609,23 @@ msgstr ""
 "Unganaki ukupotsozwa kaningi kwekinombho ngokufanayo umakwenzeka "
 "mgomsebenzisi okukhethwa isikhala sesikhathi."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:23
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:23
 msgid "Keyboard Accessibility Preferences (AccessX)"
 msgstr "Ukuthandeka nemvume yendawo yokushaya ethandekayo (AccessX)"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:24
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:24
 msgid "Ma_ximum pointer speed:"
 msgstr "Ukushesha okuphele_le kokukhomba:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:25
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:25
 msgid "Mouse Keys"
 msgstr "Amakinombho engoso"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:26
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:26
 msgid "Mouse _Preferences..."
 msgstr "_Okuthandekayo kwengoso..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:27
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:27
 msgid ""
 "Only accept keys after they have been pressed and held for a user adjustable "
 "amount of time."
@@ -633,7 +633,7 @@ msgstr ""
 "Vumela amankinobho kuphela emuva kokupotshozwa abanjwa ukusebenziswa "
 "ngokuhlelwa kwesikhathi."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:28
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:28
 msgid ""
 "Perform multiple simultaneous key press operations by pressing modifier keys "
 "in sequence."
@@ -641,70 +641,70 @@ msgstr ""
 "Yenza ngokupotshoza amankonombho amaningi ukusebenzisa amankinobho "
 "okulungisa ngokohlelo."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:29
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
 msgid "S_peed:"
 msgstr "I_jubane:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:30
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:30
 msgid "Time to acce_lerate to maximum speed:"
 msgstr "Isikhakthi sokukhu_phula ijubane eliphezulu:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:31
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:31
 msgid "Turn the numeric keypad into a mouse control pad."
 msgstr "Khanyisela inkinombho lokubala phakathi kweqweqwe lokulawula lwengoso."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:32
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:32
 msgid "_Disable if unused for:"
 msgstr "_Cisha uma ingasebenzisiwe:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:33
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:33
 msgid "_Enable keyboard accessibility features"
 msgstr "_Nika amandla umumo wemvume yendawo yokushaya"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:34
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:34
 msgid "_Import Feature Settings..."
 msgstr "_Ngenisa okuvela ngaphandle kwehlelo lomumo..."
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:35
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:35
 msgid "_Only accept keys held for:"
 msgstr "_Vuma kuphela amankinombho abanjelwe lokhu:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:36
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "_Type to test settings:"
 msgstr "_Bhala ukuhlola uhelo:"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:37
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:37
 msgid "_accepted"
 msgstr "_yamukelekile"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:38
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:38
 msgid "_pressed"
 msgstr "_ipotshoziwe"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:39
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:39
 msgid "_rejected"
 msgstr "_yaliwe"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:40
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:40
 msgid "characters/second"
 msgstr "imibhalo/umzuzwana"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:41
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:41
 msgid "milliseconds"
 msgstr "imizuzwana"
 
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:42
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:42
 msgid "pixels/second"
 msgstr "amachaphaza/umzuzu"
 
 #. set the timeout value  label with correct value of timeout
-#: ../capplets/accessibility/keyboard/gnome-accessibility-keyboard-properties.glade.h:43
-#: ../capplets/mouse/gnome-mouse-properties.c:138
-#: ../capplets/mouse/gnome-mouse-properties.c:885
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/accessibility/keyboard/cinnamon-accessibility-keyboard-properties.glade.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.c:138
+#: ../capplets/mouse/cinnamon-mouse-properties.c:885
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "imizuzwana"
 
@@ -716,83 +716,83 @@ msgstr "Shintsha uhlelo lwesizinda sesiga-nyezi sakho"
 msgid "Desktop Background"
 msgstr "Isizinda sesiganyezi"
 
-#: ../capplets/background/gnome-background-properties.glade.h:1
+#: ../capplets/background/cinnamon-background-properties.glade.h:1
 msgid "<b>Desktop _Wallpaper</b>"
 msgstr "<b>_Iphepha elihlotsisiwe lwesizinda sesiga-nyezi</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:2
+#: ../capplets/background/cinnamon-background-properties.glade.h:2
 msgid "<b>_Desktop Colors</b>"
 msgstr "<b>Imibala yobuso be _Siga-nyezi</b>"
 
-#: ../capplets/background/gnome-background-properties.glade.h:3
+#: ../capplets/background/cinnamon-background-properties.glade.h:3
 msgid "Desktop Background Preferences"
 msgstr "Isizinda sesiga-nyezi esithandekayo"
 
-#: ../capplets/background/gnome-background-properties.glade.h:4
+#: ../capplets/background/cinnamon-background-properties.glade.h:4
 msgid "Open a dialog to specify the color"
 msgstr ""
 
-#: ../capplets/background/gnome-background-properties.glade.h:5
+#: ../capplets/background/cinnamon-background-properties.glade.h:5
 msgid "_Add Wallpaper"
 msgstr "_Faka iphepha elihlotshisiweyo"
 
-#: ../capplets/background/gnome-background-properties.glade.h:6
+#: ../capplets/background/cinnamon-background-properties.glade.h:6
 msgid "_Style:"
 msgstr "_Inhlobo:"
 
-#: ../capplets/background/gnome-wp-capplet.c:74
+#: ../capplets/background/cinnamon-wp-capplet.c:74
 #: ../capplets/common/capplet-util.c:340
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:333
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:333
 #, c-format
 msgid "There was an error displaying help: %s"
 msgstr "Kube khona iphutha elibonisa usizo: %s"
 
-#: ../capplets/background/gnome-wp-capplet.c:1042
-#: ../capplets/background/gnome-wp-capplet.c:1060
+#: ../capplets/background/cinnamon-wp-capplet.c:1042
+#: ../capplets/background/cinnamon-wp-capplet.c:1060
 msgid "Centered"
 msgstr "Ngaphakathi"
 
-#: ../capplets/background/gnome-wp-capplet.c:1068
-#: ../capplets/background/gnome-wp-capplet.c:1085
+#: ../capplets/background/cinnamon-wp-capplet.c:1068
+#: ../capplets/background/cinnamon-wp-capplet.c:1085
 msgid "Fill Screen"
 msgstr "Gcwalisa ubuso besiga-nyezi"
 
-#: ../capplets/background/gnome-wp-capplet.c:1093
-#: ../capplets/background/gnome-wp-capplet.c:1110
+#: ../capplets/background/cinnamon-wp-capplet.c:1093
+#: ../capplets/background/cinnamon-wp-capplet.c:1110
 msgid "Scaled"
 msgstr "Ilinganisiwe"
 
-#: ../capplets/background/gnome-wp-capplet.c:1118
-#: ../capplets/background/gnome-wp-capplet.c:1135
+#: ../capplets/background/cinnamon-wp-capplet.c:1118
+#: ../capplets/background/cinnamon-wp-capplet.c:1135
 msgid "Tiled"
 msgstr "Ihlotshisiwe"
 
-#: ../capplets/background/gnome-wp-capplet.c:1159
-#: ../capplets/background/gnome-wp-capplet.c:1168
+#: ../capplets/background/cinnamon-wp-capplet.c:1159
+#: ../capplets/background/cinnamon-wp-capplet.c:1168
 msgid "Solid Color"
 msgstr "Umbala ongenelele"
 
-#: ../capplets/background/gnome-wp-capplet.c:1176
-#: ../capplets/background/gnome-wp-capplet.c:1185
+#: ../capplets/background/cinnamon-wp-capplet.c:1176
+#: ../capplets/background/cinnamon-wp-capplet.c:1185
 msgid "Horizontal Gradient"
 msgstr "Ubukhulu bokukhuphuka obuqondile buthe ndindilizi"
 
-#: ../capplets/background/gnome-wp-capplet.c:1193
-#: ../capplets/background/gnome-wp-capplet.c:1202
+#: ../capplets/background/cinnamon-wp-capplet.c:1193
+#: ../capplets/background/cinnamon-wp-capplet.c:1202
 msgid "Vertical Gradient"
 msgstr "Ubukhulu bokukhuphuka obuqondile buthe ndindilizi obumile"
 
 #. Create the file chooser dialog stuff here
-#: ../capplets/background/gnome-wp-capplet.c:1251
+#: ../capplets/background/cinnamon-wp-capplet.c:1251
 msgid "Add Wallpaper"
 msgstr "Faka iphepha elihlotsisiwe"
 
-#: ../capplets/background/gnome-wp-info.c:57
+#: ../capplets/background/cinnamon-wp-info.c:57
 msgid "No Wallpaper"
 msgstr "Alikho iphepha elihlotshisiwe"
 
-#: ../capplets/background/gnome-wp-item.c:292
-#: ../capplets/background/gnome-wp-item.c:294
+#: ../capplets/background/cinnamon-wp-item.c:292
+#: ../capplets/background/cinnamon-wp-item.c:294
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -800,13 +800,13 @@ msgstr[1] ""
 
 #: ../capplets/common/activate-settings-daemon.c:18
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"Ihlulekile ukuqala umphathi hlelo 'gnome-settings-daemon'.\n"
+"Ihlulekile ukuqala umphathi hlelo 'cinnamon-settings-daemon'.\n"
 "Ngaphandle kohlelo lomphathi weGNOME esebenza, ezinye ezithandekayo ngekhe "
 "zisebenze. Lokhu kungaveza inkinga nge bonobo, noma i-GNOME engekho "
 "(isibonelo KDE) umphathi wohlelo angahle sekaya sebenza abuye aphikisane "
@@ -822,9 +822,9 @@ msgid "Just apply settings and quit"
 msgstr "Faka uhlelo uphume"
 
 #: ../capplets/common/capplet-util.c:243
-#: ../capplets/default-applications/gnome-default-applications-properties.c:765
-#: ../capplets/keyboard/gnome-keyboard-properties.c:225
-#: ../capplets/mouse/gnome-mouse-properties.c:1021
+#: ../capplets/default-applications/cinnamon-default-applications-properties.c:765
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:225
+#: ../capplets/mouse/cinnamon-mouse-properties.c:1021
 #: ../capplets/sound/sound-properties-capplet.c:244
 msgid "Retrieve and store legacy settings"
 msgstr "Buyisa futhi ugcine uhlelo lobucebi"
@@ -1009,7 +1009,7 @@ msgid "_Select"
 msgstr "_Khetha"
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Preferred Applications"
 msgstr "Izithobo ezithandekayo"
 
@@ -1017,205 +1017,205 @@ msgstr "Izithobo ezithandekayo"
 msgid "Select your default applications"
 msgstr "Khetha izithobo zakho ezinephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:9
 #, fuzzy
 msgid "Debian Sensible Browser"
 msgstr "Isiyaluzi solwembu esinephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:10
 msgid "Epiphany"
 msgstr "Epiphany"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:11
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:12
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:13
 #, fuzzy
 msgid "Firebird"
 msgstr "Firebird/FireFox"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:14
 msgid "Firefox"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:15
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:16
 #, fuzzy
 msgid "Mozilla"
 msgstr "Umyalezo we Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:17
 msgid "Netscape Communicator"
 msgstr "Umxhumanisi we Netscape"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:18
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:19
 msgid "W3M Text Browser"
 msgstr "W3M Isiyaluzi setekisi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:20
 msgid "Lynx Text Browser"
 msgstr "Lynx Isiyaluzi setekisi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:21
 msgid "Links Text Browser"
 msgstr "Links Isiyaluzi setekisi"
 
-#. The code in gnome-default-applications-properties.c makes sure
+#. The code in cinnamon-default-applications-properties.c makes sure
 #. * there is only one (the first entry in this list) Evolution entry
 #. * in the list shown to the user
 #.
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:36
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:37
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:38
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:39
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:40
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:41
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:36
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:37
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:38
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:39
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:40
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:41
 msgid "Evolution Mail Reader"
 msgstr "Umfundi miyalezo we-Evolution"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:42
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:42
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:43
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:43
 msgid "KMail"
 msgstr "Kmail"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:44
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:45
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:44
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:45
 msgid "Thunderbird"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:46
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:46
 msgid "Mozilla Mail"
 msgstr "Umyalezo we Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:47
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:47
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:58
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:58
 #, fuzzy
 msgid "Debian Terminal Emulator"
 msgstr "Isixhumanisi esinephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:59
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:59
 #, fuzzy
 msgid "GNOME Terminal"
 msgstr "Isixhumanisi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:60
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:60
 msgid "Standard XTerminal"
 msgstr "Isixhumi X esejwayekile"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:61
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:61
 msgid "NXterm"
 msgstr "Nxterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:62
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:62
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:63
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:63
 #, fuzzy
 msgid "aterm"
 msgstr "Nxterm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties-structs.c:64
+#: ../capplets/default-applications/cinnamon-default-applications-properties-structs.c:64
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.c:123
+#: ../capplets/default-applications/cinnamon-default-applications-properties.c:123
 msgid "Please specify a name and a command for this editor."
 msgstr "Sicela uchaze igama nomyalo walombhali."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "Add..."
 msgstr "Hlanganisa..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 #, fuzzy
 msgid "C_ustom"
 msgstr "Isiko"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 #, fuzzy
 msgid "C_ustom:"
 msgstr "Isiko"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "Can open _URIs"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 #, fuzzy
 msgid "Can open multiple _files"
 msgstr "Lesisithobo singavula ohele _abaningi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "Co_mmand:"
 msgstr "Umy_alo:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "Custom Editor Properties"
 msgstr "Izakhi zomhleli zesiko"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:9
 msgid "Default Mail Reader"
 msgstr "Umfundi miyalezo onephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 msgid "Default Terminal"
 msgstr "Isixhumanisi esinephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
 msgid "Default Text Editor"
 msgstr "Umhleli wetekisi onephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:12
 msgid "Default Web Browser"
 msgstr "Isiyaluzi solwembu esinephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 msgid "Default Window Manager"
 msgstr "Umphathi wefasitela onephutha"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "Delete"
 msgstr "Susa"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "E_xec Flag:"
 msgstr "E_exc iflagi:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "Edit..."
 msgstr "Hlela..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Mail Reader"
 msgstr "Umfundi milayezo"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 #, fuzzy
 msgid "Run in a _terminal"
 msgstr "Hambisa phakathi koku_xhuma"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 #, fuzzy
 msgid "Run in a t_erminal"
 msgstr "Hambisa phakathi koku_xhuma"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:21
 msgid ""
 "Select the window manager you want.  You will need to hit apply, wave the "
 "magic wand, and do a magic dance for it to work."
@@ -1223,44 +1223,44 @@ msgstr ""
 "Khetha umphathi wefasitela omfunayo. Kumele ushaye usebenzisa, uthinte "
 "iwandi elizenzekelayo, ubuye wenze umdanso ukuze isebenze."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:22
 msgid "Terminal"
 msgstr "Isixhumanisi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:23
 msgid "Text Editor"
 msgstr "Uhele wetekisi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:24
 msgid "Understands _Netscape Remote Control"
 msgstr "Yiqonda ukulawulwa ngongesi yi _Netscape"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:25
 msgid "Use this _editor to open text files in the file manager"
 msgstr "Sebenzisa lo_mhleli ukuvula ihele letekisi phakathi komphathi wehele"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:26
 msgid "Web Browser"
 msgstr "Isiyaluzi solwembu"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:27
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:27
 msgid "Window Manager"
 msgstr "Umphathi wefasitela"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:28
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:28
 #, fuzzy
 msgid "_Command:"
 msgstr "Umy_alo:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:29
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:29
 msgid "_Name:"
 msgstr "_Igama:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:30
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:30
 msgid "_Properties..."
 msgstr "_Izakhi..."
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:31
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:31
 #, fuzzy
 msgid "_Select:"
 msgstr "_Khetha"
@@ -1545,29 +1545,29 @@ msgid "The type of accelerator."
 msgstr "Uhlobo lwesigijimi."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:197
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:197
 #: ../libbackground/applier.c:624 ../typing-break/drwright.c:477
 msgid "Disabled"
 msgstr "Ayinamandla"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:545
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:545
 msgid "<Unknown Action>"
 msgstr "<Isenzo esingaziwa>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:566
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:566
 msgid "Desktop"
 msgstr "Isiga-nyezi"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:567
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:567
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "Umsindo"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:571
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:571
 msgid "Window Management"
 msgstr "Ukuphathwa kwefasitela"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:668
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:668
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for:\n"
@@ -1576,30 +1576,30 @@ msgstr ""
 "Indlela emfishane \"%s\" sele yisebenziselwe uku:\n"
 " \"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:700
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:700
 #, c-format
 msgid "Error setting new accelerator in configuration database: %s\n"
 msgstr "Iphutha lihlelela isigijimi esisha kumumo wokulonda: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:750
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:750
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s\n"
 msgstr "Iphutha alihleli isigijimi kumumo wokulonda: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:857
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:857
 msgid "Action"
 msgstr "Isenzo"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:881
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:881
 msgid "Shortcut"
 msgstr "Ukunqamula"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Izinqamulo zendawo yokushaya uma ubhala"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new "
 "accelerator, or press backspace to clear."
@@ -1611,11 +1611,11 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "Nikela iinkinombho kwimilayezo"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:84
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:84
 msgid "Unknown"
 msgstr "Ayaziwa"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:273
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:273
 msgid "Layout"
 msgstr "Ukubonakala ngaphandle"
 
@@ -1623,125 +1623,125 @@ msgstr "Ukubonakala ngaphandle"
 #. the below options are to be included in the selected list.
 #. This is a HIG-compliant alternative to allowing no
 #. selection in the group.
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:277
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:228
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:277
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:228
 #, fuzzy
 msgid "Default"
 msgstr "Isikhombi esinephutha"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:75
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:75
 msgid "Models"
 msgstr "Izifanekiso"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:106
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:106
 #, c-format
 msgid "There was an error launching the keyboard capplet : %s"
 msgstr ""
 "Kube khona iphutha uma kungeniswa i-capplet yendawo yokushaya uma ubhala: %s"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:202
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:202
 msgid "_Accessibility"
 msgstr "_Ukutholakala"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:221
-#: ../capplets/keyboard/gnome-keyboard-properties.c:223
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:221
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:223
 #: ../capplets/sound/sound-properties-capplet.c:240
 #: ../capplets/sound/sound-properties-capplet.c:242
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr "Sebenzisa uhlelo uphe (ingacinwa kuphela; manje iphethwe yi-daemon)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:227
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:227
 msgid "Start the page with the typing break settings showing"
 msgstr "Qala ikhasi ngokubhala ngokunqamula ukhombisa izinhlelo"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 msgid "..."
 msgstr "..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>Isikhombi siyajampajampa</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>Phinda amankinombho</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<b>_Lock screen to enforce typing break</b>"
 msgstr "<b>_Vala ubusos ukufaka ngenkani umbhalo onqamulayo</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>Shesha</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>Inde</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>Imfisha</i></ismall>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>Nwabuza</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "A_vailable layouts:"
 msgstr "Umphandle o_tholakalayo:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
 msgid "All_ow postponing of breaks"
 msgstr "V_umela ukubuyiselwa emuva kwezinqamuli"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Qaphela ukuba izinqamuli zivunyelwe ukuhlehliswa"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 #, fuzzy
 msgid "Choose A Keyboard Model"
 msgstr "Khetha isifanekiso sendawo yokushaya uma ubhala"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 #, fuzzy
 msgid "Choose A Layout"
 msgstr "Vala futhi _uphume"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 msgid "Cursor _blinks in text boxes and fields"
 msgstr "Isikhombi _sijampajampa phakathi kwebhokisi letekisi nemibhalo"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 msgid "Duration of the break when typing is disallowed"
 msgstr "Isikhathi sokunqamula uma ukubhala kungavumelekile"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 msgid "Duration of work before forcing a break"
 msgstr "Isikhathi somsebenzi phambi kokufaka isinqamuli ngenkani"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 msgid "Key presses _repeat when key is held down"
 msgstr "Inkinombho lipotshozwa _phinda uma lipotshozelwe phantsi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 msgid "Keyboard Preferences"
 msgstr "Okuthandekayo endaweni yokushaya uma ubhala"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 msgid "Keyboard _model:"
 msgstr "_Isifanekiso sendawo yokushaya uma ubhala:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 msgid "Layout Options"
 msgstr "Ukhetha umumo"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 msgid "Layouts"
 msgstr "Umumo"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -1749,63 +1749,63 @@ msgstr ""
 "Vala ubuso besiga-nyezi emuva kwesikhathi esithile ukusiza ukuvimba "
 "ukuziphinda ukusebenzisa izingozi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid "Microsoft Natural Keyboard"
 msgstr "Indawo yokushaya uma ubhala yendalo ye-Microsoft"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 #, fuzzy
 msgid "Preview:"
 msgstr "_Buka futhi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
 #, fuzzy
 msgid "Reset To De_faults"
 msgstr "Hlela kabusha emaphu_theni"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 msgid "Separate _group for each window"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "Typing Break"
 msgstr "Ukunqamula ukubhala"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "_Accessibility..."
 msgstr "_Ukungenisela..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
 #, fuzzy
 msgid "_Add..."
 msgstr "Hlanganisa..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "_Break interval lasts:"
 msgstr "_Umkhawulo wokugina wokunqamula:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 msgid "_Delay:"
 msgstr "_Bambezela:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 #, fuzzy
 msgid "_Models:"
 msgstr "_Izifanekiso"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 msgid "_Selected layouts:"
 msgstr "_Umumo okhethiwe:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "_Speed:"
 msgstr "_Ijubane:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "_Work interval lasts:"
 msgstr "_Umsebenzi womkhawulo ekugcineni:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid "minutes"
 msgstr "imizuzu"
 
@@ -1813,264 +1813,264 @@ msgstr "imizuzu"
 msgid "Set your keyboard preferences"
 msgstr "Hlela indawo zakho ozithandayo kwindawo yokushaya uma ubhala"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:559
+#: ../capplets/mouse/cinnamon-mouse-properties.c:559
 msgid "Unknown Cursor"
 msgstr "Isikhombisi esingaziwa"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:761
+#: ../capplets/mouse/cinnamon-mouse-properties.c:761
 msgid "Default Cursor"
 msgstr "Isikhombi esinephutha"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:762
+#: ../capplets/mouse/cinnamon-mouse-properties.c:762
 msgid "Default Cursor - Current"
 msgstr "Isikhombi esinephutha - Manje"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:763
+#: ../capplets/mouse/cinnamon-mouse-properties.c:763
 msgid "The default cursor that ships with X"
 msgstr "Isikhombi esinephutha esihambisana no-X"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:767
+#: ../capplets/mouse/cinnamon-mouse-properties.c:767
 msgid "White Cursor"
 msgstr "Isikhombi esimhlophe"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:768
+#: ../capplets/mouse/cinnamon-mouse-properties.c:768
 msgid "White Cursor - Current"
 msgstr "Isikhombi esimhlophe - okwamanje"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:769
+#: ../capplets/mouse/cinnamon-mouse-properties.c:769
 msgid "The default cursor inverted"
 msgstr "Isikhombi esinephuthat sifakiwe"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:773
+#: ../capplets/mouse/cinnamon-mouse-properties.c:773
 msgid "Large Cursor"
 msgstr "Isikhombi esikhulu"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:774
+#: ../capplets/mouse/cinnamon-mouse-properties.c:774
 msgid "Large Cursor - Current"
 msgstr "Isikhombi esikhulu - okwamanje"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:775
+#: ../capplets/mouse/cinnamon-mouse-properties.c:775
 msgid "Large version of normal cursor"
 msgstr "Umlandiso omkhulu wesikhombi esejwayelekile"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:779
+#: ../capplets/mouse/cinnamon-mouse-properties.c:779
 msgid "Large White Cursor - Current"
 msgstr "Isikhombi esimhlophe esikhulu - okwamanje"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:780
+#: ../capplets/mouse/cinnamon-mouse-properties.c:780
 msgid "Large White Cursor"
 msgstr "Isikhombi esimhlophe esikhulu"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:781
+#: ../capplets/mouse/cinnamon-mouse-properties.c:781
 msgid "Large version of white cursor"
 msgstr "Umlandisi omkhulu wesikhombi esimhlophe"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:975
+#: ../capplets/mouse/cinnamon-mouse-properties.c:975
 msgid "Cursor Theme"
 msgstr "Indikimba yesikhombi"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Double-Click Timeout </b>"
 msgstr "<b>Potshoza-kabili isikhathi siphelile </b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:3
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>Dontsa futhi uphontse</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>Beka isikhombisi endaweni</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>Ukuhanjiswa kwesingoso</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Speed</b>"
 msgstr "<b>Ijubane</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 msgid "<i>Fast</i>"
 msgstr "<i>Shesha</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<i>High</i>"
 msgstr "<i>Phezulu</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid "<i>Large</i>"
 msgstr "<i>Okukhulu</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:10
 msgid "<i>Low</i>"
 msgstr "<i>Okuphantsi</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid "<i>Slow</i>"
 msgstr "<i>Nwazayo</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:12
 msgid "<i>Small</i>"
 msgstr "<i>Ncanel</i>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "Buttons"
 msgstr "Amankinombho"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:14
 #, fuzzy
 msgid "Cursor Size:"
 msgstr "Isayizi yesikhombi"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 msgid "Cursors"
 msgstr "Izikhombi"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:16
 msgid "Highlight the _pointer when you press Ctrl"
 msgstr "Khanyisela _isikhombisi uma upotshoza Ctrl"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 #, fuzzy
 msgid "Large"
 msgstr "_Okukhulu"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:18
 #, fuzzy
 msgid "Medium"
 msgstr "_Iphakathi"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "Motion"
 msgstr "Intshukumo"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:20
 msgid "Mouse Preferences"
 msgstr "Okuthandekayo kwesingoso"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 #, fuzzy
 msgid "Small"
 msgstr "_Okuncane"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:22
 msgid "_Acceleration:"
 msgstr "_Ukusheshisa:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "_Left-handed mouse"
 msgstr "_Isingoso sesandla sasebunxele"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:24
 msgid "_Sensitivity:"
 msgstr "_Binyekile:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "_Threshold:"
 msgstr "_Umnyango:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:26
 msgid "_Timeout:"
 msgstr "_Isikhathi siphelile:"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Isingoso"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Hlela okuthandekayo kwesingoso"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Proxy yokuxhumana"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your network proxy preferences"
 msgstr "Okuthandekayo kwe-proxy yokuxhumana"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "      "
 msgstr "      "
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 #, fuzzy
 msgid "<b>D_irect internet connection</b>"
 msgstr "<b>_Ukuxhumana ngqo kolwembu</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>Ignore Host List</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>_Umumo wozenzakalelayo we-proxy</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>_Ukulungisa umumo we-proxy ngesandla</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Sebenzisa izifungo</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 #, fuzzy
 msgid "Advanced Configuration"
 msgstr "Ukulungisa ngokuzenzekela _URL:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "Autoconfiguration _URL:"
 msgstr "Ukulungisa ngokuzenzekela _URL:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "HTTP Proxy Details"
 msgstr "Imniningwane emileyo ye-HTTP"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "H_TTP proxy:"
 msgstr "H_TTP ezimele:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 #, fuzzy
 msgid "Network Proxy Preferences"
 msgstr "Okuthandekayo kwe-proxy yokuxhumana"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Port:"
 msgstr "Itheku:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 #, fuzzy
 msgid "Proxy Configuration"
 msgstr "Ukulingasa umumo wokuxhumana okuzimele"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "S_ocks host:"
 msgstr "Umhathi weso_kisi:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 msgid "U_sername:"
 msgstr "I_gamamsebemzi:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_Details"
 msgstr "_Imniningwane"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_FTP proxy:"
 msgstr "_FTP ezimele:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Password:"
 msgstr "_Igama lokungena:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Secure HTTP proxy:"
 msgstr "_Vikela i-HTTP ezimele:"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "Nika amandla umsindo futhi ujwayeze imisindo nemicimbi"
 
@@ -2115,99 +2115,99 @@ msgstr "_Umsindo wemicimbi"
 msgid "_Visual feedback:"
 msgstr "_Impendulo ebonakalayo:"
 
-#: ../capplets/theme-switcher/gnome-theme-details.c:347
+#: ../capplets/theme-switcher/cinnamon-theme-details.c:347
 msgid ""
 "No themes could be found on your system.  This probably means that your "
 "\"Theme Preferences\" dialog was improperly installed, or you haven't "
-"installed the \"gnome-themes\" package."
+"installed the \"cinnamon-themes\" package."
 msgstr ""
 "Azikho indikima ezitholakele kuhlelo lwakho. Mhalbe lokhu kuchaza ukuthi "
 "\"Indikima ezithandekayo\" ibhokisana lifakwe kabi, noma mhlambe awukalifaki "
-"\"gnome-themes\" umthwalo."
+"\"cinnamon-themes\" umthwalo."
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:227
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:227
 msgid "This theme is not in a supported format."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:244
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:244
 msgid "Failed to create temporary directory"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:264
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:264
 msgid ""
 "Can not install theme. \n"
 "The bzip2 utility is not installed."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:282
-#: ../capplets/theme-switcher/gnome-theme-installer.c:319
-#: ../capplets/theme-switcher/gnome-theme-installer.c:399
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:282
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:319
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:399
 #, fuzzy
 msgid "Installation Failed"
 msgstr "Ukufakwa kwendikima"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:302
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:302
 msgid ""
 "Can not install themes. \n"
 "The gzip utility is not installed."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:340
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:340
 #, c-format
 msgid ""
 "Icon Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:343
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:343
 #, c-format
 msgid "Gnome Theme %s correctly installed"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:346
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:346
 #, c-format
 msgid ""
 "Windows Border Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:349
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:349
 #, c-format
 msgid ""
 "Controls Theme %s correctly installed.\n"
 "You can select it in the theme details."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:357
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:357
 msgid "The theme is an engine. You need to compile the theme."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:374
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:374
 #, fuzzy
 msgid "The file format is invalid"
 msgstr "Ihele %s asiyilo ihele elifanele"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:468
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:468
 msgid "No theme file location specified to install"
 msgstr "Akukho ihele lendikima elinendawo elifakiwe"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:485
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:485
 msgid "The theme file location specified to install is invalid"
 msgstr "Indikima yehele echaziwe ukuthi ifakwe ayifanele"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:505
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:505
 #, c-format
 msgid ""
 "Insufficient permissions to install the theme in:\n"
 "%s"
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:526
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:526
 #, fuzzy
 msgid "The file format is invalid."
 msgstr "Ihele %s asiyilo ihele elifanele"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:553
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:553
 #, c-format
 msgid ""
 "%s is the path where the theme files will be installed. This can not be "
@@ -2216,21 +2216,21 @@ msgstr ""
 "%s yindlela lapho indikima zohele zizofakwa khona. Lokhu ngeke kukhethwe "
 "ngenje ndawo eyimvelo"
 
-#: ../capplets/theme-switcher/gnome-theme-installer.c:607
+#: ../capplets/theme-switcher/cinnamon-theme-installer.c:607
 msgid ""
 "Cannot install theme.\n"
 "The tar program is not installed on your system."
 msgstr ""
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:680
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:680
 msgid "Custom theme"
 msgstr "Indikima yesiko"
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:680
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:680
 msgid "You can save this theme by pressing the Save Theme button."
 msgstr "Ungahlenga lendikima ngokupotshoza inkinombho lokuhlenga eliyindikima."
 
-#: ../capplets/theme-switcher/gnome-theme-manager.c:1476
+#: ../capplets/theme-switcher/cinnamon-theme-manager.c:1476
 msgid ""
 "The default theme schemas could not be found on your system.  This means "
 "that you probably don't have metacity installed, or that your gconf is "
@@ -2239,11 +2239,11 @@ msgstr ""
 "Indikima eziyiphutha ezingamaqembu azitholakalanga phakathi kohlu. Lokhu "
 "kuchaza ukuthi awuna imetacity efakiwe, noma i-gconf yakho ifakwe kabi."
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:72
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:72
 msgid "Theme name must be present"
 msgstr "Igama lendikima kumele libe khona"
 
-#: ../capplets/theme-switcher/gnome-theme-save.c:104
+#: ../capplets/theme-switcher/cinnamon-theme-save.c:104
 msgid "The theme already exists. Would you like to replace it?"
 msgstr "Indikima sele yikhona. Ingabe uthanda ukufaka enye kunale?"
 
@@ -2366,113 +2366,113 @@ msgstr "_Igama lendikimba:"
 msgid "theme selection tree"
 msgstr "isihlahla sokukhetha indikimba"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:1
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:1
 msgid "Customize the appearance of toolbars and menubars in applications"
 msgstr ""
 "Hlela ngokwesiko ukubonakala kwehlu lwamathuluzi nohlu phakathi kwezithobo"
 
-#: ../capplets/ui-properties/gnome-ui-properties.desktop.in.in.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.desktop.in.in.h:2
 msgid "Menus & Toolbars"
 msgstr "Uhlu & amathuluzi"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:2
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:2
 msgid "<b>Behavior and Appearance</b>"
 msgstr "<b>Ukuziphatha nokubonakala</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:3
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:3
 msgid "<b>Preview</b>"
 msgstr "<b>Buka kuqala</b>"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:4
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:4
 msgid "C_ut"
 msgstr "S_ika"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:5
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:5
 msgid "Icons only"
 msgstr "Amaphawu wodwa"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:6
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:6
 msgid "Menu and Toolbar Preferences"
 msgstr "Uhlu namathuluzi athandekayo"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:7
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:7
 msgid "New File"
 msgstr "Ihele elisha"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:8
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:8
 msgid "Open File"
 msgstr "Vula ihele"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:9
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:9
 msgid "Save File"
 msgstr "Hlenga ihele"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:10
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:10
 msgid "Show _icons in menus"
 msgstr "Bonisa _amaphawu phakathi kohlu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:11
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:11
 msgid "Text below icons"
 msgstr "Itekisi ngaphantsi kwamaphawu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:12
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:12
 msgid "Text beside icons"
 msgstr "Itekisi eceleni namaphawu"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:13
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:13
 msgid "Text only"
 msgstr "Itekisi lodwa"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:14
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:14
 #, fuzzy
 msgid "Toolbar _button labels:"
 msgstr "Ilebhula _lekinombho lamathuluzi: "
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:15
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:15
 msgid "_Copy"
 msgstr "_Kopisha"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:16
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:16
 msgid "_Detachable toolbars"
 msgstr "_Amathulusi anganamatheli"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:17
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:17
 msgid "_Edit"
 msgstr "_Hlela"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:18
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:18
 msgid "_Editable menu accelerators"
 msgstr ""
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:19
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:19
 msgid "_File"
 msgstr "_Ihele"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:20
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:20
 msgid "_New"
 msgstr "_Okusha"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:21
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:21
 msgid "_Open"
 msgstr "_Vula"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:22
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:22
 msgid "_Paste"
 msgstr "_Namthelisa"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:23
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:23
 msgid "_Print"
 msgstr "_Bhala"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:24
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:24
 msgid "_Quit"
 msgstr "_Phuma"
 
-#: ../capplets/ui-properties/gnome-ui-properties.glade.h:25
+#: ../capplets/ui-properties/cinnamon-ui-properties.glade.h:25
 msgid "_Save"
 msgstr "_Hlenga"
 
-#: ../capplets/windows/gnome-window-properties.c:386
+#: ../capplets/windows/cinnamon-window-properties.c:386
 #, c-format
 msgid ""
 "<b>Cannot start the preferences application for your window manager</b>\n"
@@ -2483,61 +2483,61 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../capplets/windows/gnome-window-properties.c:644
+#: ../capplets/windows/cinnamon-window-properties.c:644
 msgid "Control"
 msgstr "Lawula"
 
-#: ../capplets/windows/gnome-window-properties.c:649
+#: ../capplets/windows/cinnamon-window-properties.c:649
 msgid "Alt"
 msgstr "Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:655
+#: ../capplets/windows/cinnamon-window-properties.c:655
 msgid "Hyper"
 msgstr "Isiqalo esiphathelene nokweqisa"
 
-#: ../capplets/windows/gnome-window-properties.c:662
+#: ../capplets/windows/cinnamon-window-properties.c:662
 msgid "Super (or \"Windows logo\")"
 msgstr "Phezulu (noma \"Windows yesihlokondaba\")"
 
-#: ../capplets/windows/gnome-window-properties.c:669
+#: ../capplets/windows/cinnamon-window-properties.c:669
 msgid "Meta"
 msgstr "Meta"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 msgid "<b>Movement Key</b>"
 msgstr "<b>Inkinombho lokuhamba</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>Isenzo sesihloko sohlu</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 msgid "<b>Window Selection</b>"
 msgstr "<b>Ukhetho Window</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To _move a window, press-and-hold this key then grab the window:"
 msgstr ""
 "Uku_hambisa ifasitela, potshoza-ubuye-ubambe lenkinombho uphinde ubambe "
 "ifasitela:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "Okuthadekayo kwe-Windows"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_Potshoza-kabili uhlu lwesihloko ukwenza lesisenzo:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "_Umkhathi phambi kokuphakama:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "_Phakamisa amafasitela akhethiwe emuva komkhawulo"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Khetha amafasitela uma isingoso sihamba phezu kwawo"
 
@@ -2564,23 +2564,23 @@ msgid "GNOME Control Center"
 msgstr "GNOME umlawuli ophakathi"
 
 #: ../control-center/gnomecc.desktop.in.in.h:2
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:2
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "The GNOME configuration tool"
 msgstr "Ithulusi lokumisa lwe-GNOME"
 
-#: ../gnome-settings-daemon/actions/acme.glade.h:1
+#: ../cinnamon-settings-daemon/actions/acme.glade.h:1
 msgid "Volume"
 msgstr "Ivolumu"
 
-#: ../gnome-settings-daemon/factory.c:36
+#: ../cinnamon-settings-daemon/factory.c:36
 msgid "Could not initialize Bonobo"
 msgstr "Ihlukile ukuqala u-Bonobo"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:397
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:397
 msgid "Slow Keys Alert"
 msgstr "Amankinombho angasheshi isexwayiso"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:398
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:398
 msgid ""
 "You just held down the Shift key for 8 seconds.  This is the shortcut for "
 "the Slow Keys feature, which affects the way your keyboard works."
@@ -2589,19 +2589,19 @@ msgstr ""
 "emfishane yemniningo engasheshi yamankinombho, leyo ethinta indlela indawo "
 "yokushaya uma ubhala esebenza ngayo."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:400
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:400
 msgid "Do you want to activate Slow Keys?"
 msgstr "Ingabe ufuna ukukhanyisa amankinombho angasheshi?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:401
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:401
 msgid "Do you want to deactivate Slow Keys?"
 msgstr "Ingabe ufuna ukucisha amankinombho angasheshi?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:410
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:410
 msgid "Sticky Keys Alert"
 msgstr "Ukwexwayiswa ngamankinombho angasheshi"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:411
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:411
 msgid ""
 "You just pressed the Shift key 5 times in a row.  This is the shortcut for "
 "the Sticky Keys feature, which affects the way your keyboard works."
@@ -2610,7 +2610,7 @@ msgstr ""
 "yemniningo yamankinombho anamathelayo, lawo athinta indlela indawo yakho "
 "yokushaya uma ubhala esebenza ngayo."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:413
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:413
 msgid ""
 "You just pressed two keys at once, or pressed the Shift key 5 times in a "
 "row.  This turns off the Sticky Keys feature, which affects the way your "
@@ -2621,15 +2621,15 @@ msgstr ""
 "anamathelayo, athintana nendlela indawo yakho yokushaya uma ubhala isebenza "
 "ngayo."
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:415
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:415
 msgid "Do you want to activate Sticky Keys?"
 msgstr "Ingabe ufuna ukukhanyisa amankinombho anamathelayo?"
 
-#: ../gnome-settings-daemon/gnome-settings-accessibility-keyboard.c:416
+#: ../cinnamon-settings-daemon/cinnamon-settings-accessibility-keyboard.c:416
 msgid "Do you want to deactivate Sticky Keys?"
 msgstr "Ingabe ufuna ukucisha amankinombho anmathelayo?"
 
-#: ../gnome-settings-daemon/gnome-settings-font.c:107
+#: ../cinnamon-settings-daemon/cinnamon-settings-font.c:107
 #, c-format
 msgid ""
 "Cannot create the directory \"%s\".\n"
@@ -2638,37 +2638,37 @@ msgstr ""
 "Ihlulekile ukudala indlela yamakheli \"%s\".\n"
 "Lokhu kuyadingeka ukuvumela izikhombi ezishintshayo."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:209
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:209
 #, c-format
 msgid "Key Binding (%s) has its action defined multiple times\n"
 msgstr "Ukuphetha inkinombho (%s) inesenzo sayo esichaziwe kaningi\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:222
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:222
 #, c-format
 msgid "Key Binding (%s) has its binding defined multiple times\n"
 msgstr "Ukuphetha inkinombho (%s) inokuphethao kwayo okuchaziwe kaningi\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:228
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:228
 #, c-format
 msgid "Key Binding (%s) is incomplete\n"
 msgstr "Ukuphetha inkinombho (%s) ayiphelele\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:256
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:256
 #, c-format
 msgid "Key Binding (%s) is invalid\n"
 msgstr "Ukuphetha inkinombho (%s) akufanele\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:292
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:292
 #, c-format
 msgid "It seems that another application already has access to key '%d'."
 msgstr "Ikhombisa sengathi esinye isithobo sinemvume vele kwinkinombho '%d'."
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:361
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:361
 #, c-format
 msgid "Key Binding (%s) is already in use\n"
 msgstr "Ukuphetha inkinombho (%s) iyasebenziswa\n"
 
-#: ../gnome-settings-daemon/gnome-settings-keybindings.c:436
+#: ../cinnamon-settings-daemon/cinnamon-settings-keybindings.c:436
 #, c-format
 msgid ""
 "Error while trying to run (%s)\n"
@@ -2677,7 +2677,7 @@ msgstr ""
 "Iphutha lenzekile uma usazama ukusebenza (%s)\n"
 "elixhunyanyiswe kwisihlushulelo (%s)"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:103
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:103
 #, fuzzy, c-format
 msgid ""
 "Error activating XKB configuration.\n"
@@ -2705,7 +2705,7 @@ msgstr ""
 "- Umphumela we <b>xprop -root | grep XKB</b>\n"
 "- Umphumela we <b>gconftool-2 -R /desktop/gnome/peripherals/keyboard/xkb</b>"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:117
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:117
 #, fuzzy
 msgid ""
 "You are using XFree 4.3.0.\n"
@@ -2718,12 +2718,12 @@ msgstr ""
 "Zama ukusebenzisa umumo olula noma thatha umhumusho wamanje wesoftware "
 "yeXFree."
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:227
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:227
 #, fuzzy
 msgid "Do _not show this warning again"
 msgstr "_Unga khombisi lomyalezo futhi"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:238
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:238
 msgid ""
 "The X system keyboard settings differ from your current GNOME keyboard "
 "settings.  Which set would you like to use?"
@@ -2731,15 +2731,15 @@ msgstr ""
 "Uhlelo X lwendawo yokushaya uma ubhala uhlelo luhlukile kule yamanje ye-"
 "GNOME. Ingabe ufuna ukusebenzisa uhlelo oluphi?"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:251
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:251
 msgid "Use X settings"
 msgstr "Sebenzisa uhlelo X"
 
-#: ../gnome-settings-daemon/gnome-settings-keyboard-xkb.c:253
+#: ../cinnamon-settings-daemon/cinnamon-settings-keyboard-xkb.c:253
 msgid "Use GNOME settings"
 msgstr "Sebenzisa uhleo GNOME"
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:129
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:129
 #, c-format
 msgid ""
 "Couldn't execute command: %s\n"
@@ -2748,7 +2748,7 @@ msgstr ""
 "Ihlulekile ukubhala umyalo: %s\n"
 "Qiniseka ukuba lomyalo usukhona."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:145
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:145
 msgid ""
 "Couldn't put the machine to sleep.\n"
 "Verify that the machine is correctly configured."
@@ -2756,12 +2756,12 @@ msgstr ""
 "Ihlulekile ukulalisa umashini.\n"
 "Bhekisisa ukuba umashini uhlelwe kahle."
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:155
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:155
 #, c-format
 msgid "Permissions on the file %s are broken\n"
 msgstr "Imvume phezu kwehele %s zinqamukile\n"
 
-#: ../gnome-settings-daemon/gnome-settings-multimedia-keys.c:200
+#: ../cinnamon-settings-daemon/cinnamon-settings-multimedia-keys.c:200
 msgid ""
 "Couldn't load the Glade file.\n"
 "Make sure that this daemon is properly installed."
@@ -2769,7 +2769,7 @@ msgstr ""
 "Ihlulekile ukufaka ihele le-Glade.\n"
 "Qiniseka ukuba le-daemon ifakwe ngokufanele."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:113
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:113
 #, c-format
 msgid ""
 "There was an error starting up the screensaver:\n"
@@ -2784,55 +2784,55 @@ msgstr ""
 "\n"
 "Ukusebenza kwesigcini sobuso besiga-nyezi ngekhe kusebenze kulesiqephu."
 
-#: ../gnome-settings-daemon/gnome-settings-screensaver.c:123
+#: ../cinnamon-settings-daemon/cinnamon-settings-screensaver.c:123
 msgid "_Do not show this message again"
 msgstr "_Unga khombisi lomyalezo futhi"
 
-#: ../gnome-settings-daemon/gnome-settings-sound.c:129
+#: ../cinnamon-settings-daemon/cinnamon-settings-sound.c:129
 #, c-format
 msgid "Couldn't load sound file %s as sample %s"
 msgstr "Ihlulekile ukufaka ihele lomsindo %s njenge sibonelo %s"
 
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:214
-#: ../gnome-settings-daemon/gnome-settings-xrdb.c:262
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:214
+#: ../cinnamon-settings-daemon/cinnamon-settings-xrdb.c:262
 msgid "Cannot determine user's home directory"
 msgstr "Ihlulekile ukuthola ikheli lomsebenzisi"
 
-#: ../gnome-settings-daemon/gnome-settings-xsettings.c:215
+#: ../cinnamon-settings-daemon/cinnamon-settings-xsettings.c:215
 #, c-format
 msgid "GConf key %s set to type %s but its expected type was %s\n"
 msgstr ""
 "Inkinombho GConf %s lihlelelwe ukubhala %s kepha ukubhala okulindelekile "
 "bekuyi %s\n"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:1
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:1
 #, fuzzy
 msgid "A_vailable files:"
 msgstr "Umphandle o_tholakalayo:"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:2
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:2
 #, fuzzy
 msgid "Do _not show this warning again."
 msgstr "_Unga khombisi lomyalezo futhi"
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:3
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:3
 msgid "Load modmap files"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:4
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:4
 msgid "Would you like to load the modmap file(s)?"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:5
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:5
 msgid "_Load"
 msgstr ""
 
-#: ../gnome-settings-daemon/modmap-dialog.glade.h:6
+#: ../cinnamon-settings-daemon/modmap-dialog.glade.h:6
 #, fuzzy
 msgid "_Loaded files:"
 msgstr "_Izifanekiso"
 
-#: ../gnome-settings-daemon/reaper.c:103
+#: ../cinnamon-settings-daemon/reaper.c:103
 msgid "Error creating signal pipe."
 msgstr "Iphutha lidala ithumbu lezimpawu."
 
@@ -2884,7 +2884,7 @@ msgstr "Ihele lomsindo lwalomcimbi alikho sanhlobo."
 #: ../libsounds/sound-view.c:149
 msgid ""
 "The sound file for this event does not exist.\n"
-"You may want to install the gnome-audio package\n"
+"You may want to install the cinnamon-audio package\n"
 "for a set of default sounds."
 msgstr ""
 "Ihele lomsindo lwalomcimbi alikho sanhlobo.\n"
@@ -2924,7 +2924,7 @@ msgstr "_Dlala"
 msgid "_Remove"
 msgstr "_Susa"
 
-#: ../libwindow-settings/gnome-wm-manager.c:320
+#: ../libwindow-settings/cinnamon-wm-manager.c:320
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "Umphathi wefasitela \"%s\" akabhalisile ithulusi lokulungisa umumo\n"
@@ -3413,7 +3413,7 @@ msgstr "Mhlambe ukugcizelela iziqwema ze-TrueType"
 msgid "Whether to thumbnail Type1 fonts"
 msgstr "Mhlambe ukugcizelela iziqwema ze-Type1"
 
-#: ../vfs-methods/fontilus/gnome-font-viewer.desktop.in.in.h:1
+#: ../vfs-methods/fontilus/cinnamon-font-viewer.desktop.in.in.h:1
 #, fuzzy
 msgid "GNOME Font Viewer"
 msgstr "GNOME umlawuli ophakathi"

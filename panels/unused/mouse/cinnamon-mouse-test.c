@@ -29,7 +29,7 @@
 #include <gnome-settings-daemon/gsd-enums.h>
 #include <math.h>
 
-#include "gnome-mouse-test.h"
+#include "cinnamon-mouse-test.h"
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -177,9 +177,9 @@ setup_scroll_image (GtkWidget *widget)
 	}
 
 	if (double_click_state == DOUBLE_CLICK_TEST_GEGL)
-		filename = GNOMECC_UI_DIR "/scroll-test-gegl.svg";
+		filename = CINNAMONCC_UI_DIR "/scroll-test-gegl.svg";
 	else
-		filename = GNOMECC_UI_DIR "/scroll-test.svg";
+		filename = CINNAMONCC_UI_DIR "/scroll-test.svg";
 	gtk_image_set_from_file (GTK_IMAGE (widget), filename);
 
 	if (double_click_state != DOUBLE_CLICK_TEST_GEGL)

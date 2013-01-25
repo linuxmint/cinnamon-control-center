@@ -12,12 +12,12 @@ autostart_in_files = cinnamon-sound-applet.desktop.in
 autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
 
 appsdir = $(datadir)/applications
-apps_in_files = gnome-sound-panel.desktop.in
+apps_in_files = cinnamon-sound-panel.desktop.in
 apps_DATA = $(apps_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST =					\
 	$(autostart_in_files)			\
-	gnome-sound-panel.desktop.in.in		\
+	cinnamon-sound-panel.desktop.in.in		\
 	$(NULL)
 
 
@@ -39,7 +39,7 @@ update-icon-cache:
 endif
 
 CLEANFILES =					\
-	gnome-sound-panel.desktop		\
+	cinnamon-sound-panel.desktop		\
 	$(NULL)
 
 DISTCLEANFILES =				\

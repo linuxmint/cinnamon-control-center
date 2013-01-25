@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2011-04-04 09:11+0000\n"
 "PO-Revision-Date: 2011-04-04 15:55+0600\n"
@@ -208,16 +208,16 @@ msgstr "অনুগ্রহপূর্বক একটি ছবি বেছ
 msgid "_Select"
 msgstr "নির্বাচন (_S)"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "পটভূমি"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "পটভূমির ছবি সংরক্ষণ"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "ওয়ালপেপার;স্ক্রীন;ডেস্কটপ;"
 
@@ -382,15 +382,15 @@ msgid "September"
 msgstr "সেপ্টেম্বর"
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Clock;Timezone;Location;"
 msgstr "ঘড়ি;টাইম জোন;অবস্থান;"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:3
 msgid "Date and Time"
 msgstr "তারিখ ও সময়"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Date and Time preferences panel"
 msgstr "তারিখ ও সময় পছন্দ করার প্যানেল"
 
@@ -440,16 +440,16 @@ msgstr "পর্দার অনুলিপি তৈরি করা হব�
 msgid "_Resolution:"
 msgstr "রেজল্যুশন (_R):"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Change resolution and position of monitors and projectors"
 msgstr "মনিটর এবং প্রজেক্টরের রেজল্যুশন ও অবস্থান পরিবর্তন"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Displays"
 msgstr "প্রদর্শন"
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "প্যানেল;প্রজেক্টর,xrandr;স্ক্রীন,রেজল্যুশন;রিফ্রেশ;"
 
@@ -628,16 +628,16 @@ msgstr "গ্রাফিক্স"
 msgid "Version %s"
 msgstr "সংস্করণ %s"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "System Info"
 msgstr "সিস্টেমের তথ্য"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "সিস্টেমের তথ্য"
 
 #. Translators: those are keywords for the System Information panel
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;"
@@ -823,7 +823,7 @@ msgid "Toggle screen reader"
 msgstr "লিনাক্স স্ক্রীণ রিডার"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:9
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:3
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:3
 msgid "Universal Access"
 msgstr "সর্বজনীনে প্রবেশ"
 
@@ -865,17 +865,17 @@ msgstr "এক্সিলেটর কী-এর ধরন।"
 msgid "Disabled"
 msgstr "নিষ্ক্রিয়"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
 msgid "Change keyboard settings"
 msgstr "কীবোর্ড সেটিং পরিবর্তন"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 msgid "Keyboard"
 msgstr "কীবোর্ড"
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr "শর্টকাট;পুনরাবৃত্ত করা;মিটিমিটি জ্বলা;"
 
@@ -936,87 +936,87 @@ msgstr "কাজ"
 msgid "Shortcut"
 msgstr "শর্টকাট"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "C_ommand:"
 msgstr "কমান্ড (_o): "
 
 # Translated by sadia
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "Cursor Blinking"
 msgstr "কার্সার জ্বলছে-নিভছে "
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "Cursor _blinks in text fields"
 msgstr "টেক্সট লেখার ক্ষেত্রে কার্সার ঝলকাবে (_b)"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 #: ../panels/universal-access/uap.ui.h:21
 msgid "Cursor blinks speed"
 msgstr "কার্সার জ্বলানেভার গতি"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Custom Shortcut"
 msgstr "স্বনির্ধারিত শর্ট-কাট"
 
 # Translated by sadia
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Fast"
 msgstr "দ্রুত"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "General"
 msgstr "সাধারণ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "Key presses _repeat when key is held down"
 msgstr "কী চেপে ধরে রাখলে অনবরত লেখা হবে (_r)"
 
 # Translated by sadia
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 #: ../panels/universal-access/uap.ui.h:39
 msgid "Long"
 msgstr "দীর্ঘ"
 
 # Translated by sadia
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat Keys"
 msgstr "পুনরাবৃত্তি কী "
 
 # FIXME
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 msgid "Repeat keys speed"
 msgstr "কী পুনরাবৃত্তির গতি"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
 msgid "S_peed:"
 msgstr "গতি (_p):"
 
 # Translated by sadia
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
-#: ../panels/mouse/gnome-mouse-properties.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:22
 #: ../panels/universal-access/uap.ui.h:54
 msgid "Short"
 msgstr "ছোট"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Shortcuts"
 msgstr "শর্টকাট"
 
 # Translated by sadia
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
-#: ../panels/mouse/gnome-mouse-properties.ui.h:24
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:24
 msgid "Slow"
 msgstr "ধীর"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
 "Backspace to clear."
@@ -1024,15 +1024,15 @@ msgstr ""
 "কোনো শর্ট-কাট কী-এর মান পরিবর্তনের জন্য সংশ্লিষ্ট সারির উপর ক্লিক করুন ও নতুন কী ধরে "
 "রাখুন অথবা চাপুন। অথবা ব্যাক-স্পেস চেপে মুছে ফেলুন।"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "_Delay:"
 msgstr "বিলম্ব (_D):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 msgid "_Name:"
 msgstr "নাম (_N):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "_Speed:"
 msgstr "গতি (_S):"
 
@@ -1121,64 +1121,64 @@ msgstr "চমৎকার ভিডিও সিডি"
 msgid "Video CD"
 msgstr "ভিডিও সিডি"
 
-#: ../panels/media/gnome-media-properties.ui.h:1
+#: ../panels/media/cinnamon-media-properties.ui.h:1
 msgid "Acti_on:"
 msgstr "কাজ (_o):"
 
-#: ../panels/media/gnome-media-properties.ui.h:2
+#: ../panels/media/cinnamon-media-properties.ui.h:2
 msgid "CD _audio:"
 msgstr "অডিও সিডি (_a):"
 
-#: ../panels/media/gnome-media-properties.ui.h:3
+#: ../panels/media/cinnamon-media-properties.ui.h:3
 msgid "Media and Autorun"
 msgstr "মিডিয়া এবং অটোরান"
 
-#: ../panels/media/gnome-media-properties.ui.h:4
+#: ../panels/media/cinnamon-media-properties.ui.h:4
 msgid "Select how media should be handled"
 msgstr "মিডিয়া কিভাবে চলবে তা নির্বাচন"
 
-#: ../panels/media/gnome-media-properties.ui.h:5
+#: ../panels/media/cinnamon-media-properties.ui.h:5
 msgid "Select how other media should be handled"
 msgstr "অন্যান্য মিডিয়া কিভাবে চলবে তা নির্বাচন"
 
-#: ../panels/media/gnome-media-properties.ui.h:6
+#: ../panels/media/cinnamon-media-properties.ui.h:6
 msgid "_DVD video:"
 msgstr "DVD ভিডিও (_D):"
 
-#: ../panels/media/gnome-media-properties.ui.h:7
+#: ../panels/media/cinnamon-media-properties.ui.h:7
 msgid "_Music player:"
 msgstr "মিউজিক প্লেয়ার (_M):"
 
-#: ../panels/media/gnome-media-properties.ui.h:8
+#: ../panels/media/cinnamon-media-properties.ui.h:8
 msgid "_Never prompt or start programs on media insertion"
 msgstr "মিডিয়া সন্নিবেশনে কখনই প্রোগ্রাম প্রম্পট অথবা আরম্ভ করা হবেনা (_N)"
 
-#: ../panels/media/gnome-media-properties.ui.h:9
+#: ../panels/media/cinnamon-media-properties.ui.h:9
 msgid "_Other Media..."
 msgstr "অন্যান্য মিডিয়া (_O)..."
 
-#: ../panels/media/gnome-media-properties.ui.h:10
+#: ../panels/media/cinnamon-media-properties.ui.h:10
 msgid "_Photos:"
 msgstr "ছবি (_P):"
 
-#: ../panels/media/gnome-media-properties.ui.h:11
+#: ../panels/media/cinnamon-media-properties.ui.h:11
 msgid "_Software:"
 msgstr "সফ্টওয়্যার (_S):"
 
-#: ../panels/media/gnome-media-properties.ui.h:12
+#: ../panels/media/cinnamon-media-properties.ui.h:12
 msgid "_Type:"
 msgstr "ধরন (_T):"
 
-#: ../panels/media/gnome-media-panel.desktop.in.in.h:1
+#: ../panels/media/cinnamon-media-panel.desktop.in.in.h:1
 msgid "Configure media and autorun preferences"
 msgstr "মিডিয়া এবং অটোরান পছন্দ কনফিগার"
 
-#: ../panels/media/gnome-media-panel.desktop.in.in.h:2
+#: ../panels/media/cinnamon-media-panel.desktop.in.in.h:2
 msgid "Removable Media"
 msgstr "অপসারণযোগ্য মিডিয়া"
 
 #. Translators: those are keywords for the media control-center panel
-#: ../panels/media/gnome-media-panel.desktop.in.in.h:4
+#: ../panels/media/cinnamon-media-panel.desktop.in.in.h:4
 msgid "cd;dvd;usb;audio;video;disc;"
 msgstr "সিডি;ডিভিডি;ইউএসবি;ভিডিও;ডিস্ক;"
 
@@ -1389,16 +1389,16 @@ msgstr "পরীক্ষামূলক পৃষ্ঠা"
 msgid "Could not load ui: %s"
 msgstr "ui লোড করা যাচ্ছেনা: %s"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Change printer settings"
 msgstr "মুদ্রণযন্ত্র সেটিং পরিবর্তন"
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:3
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:3
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "মুদ্রণযন্ত্র;সারি;মুদ্রণ;কাগজ;কালি;টোনার;"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printers"
 msgstr "মুদ্রণযন্ত্র"
 
@@ -1442,7 +1442,7 @@ msgstr "স্থানীয়"
 
 #. Translators: Network means network printers
 #: ../panels/printers/pp-new-printer-dialog.c:671
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 msgid "Network"
 msgstr "নেটওয়ার্ক"
 
@@ -1482,7 +1482,7 @@ msgstr "পূর্ববর্তী"
 
 #. Translators: This checkbox is checked when the default printer is selected.
 #: ../panels/printers/printers.ui.h:10
-#: ../panels/region/gnome-region-panel-xkbot.c:229
+#: ../panels/region/cinnamon-region-panel-xkbot.c:229
 #: ../panels/sound/gvc-sound-theme-chooser.c:586
 msgid "Default"
 msgstr "পূর্বনির্ধারিত"
@@ -1554,29 +1554,29 @@ msgid "Supply"
 msgstr "সরবরাহ"
 
 # Translated by sadia
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Allow different layouts for each window"
 msgstr "প্রতিটি উইন্ডোর জন্য পৃথক বহির্বিন্যাস"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Install languages..."
 msgstr "ভাষা ইনস্টল..."
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 #: ../panels/user-accounts/data/user-accounts-dialog.ui.h:7
 msgid "Language"
 msgstr "ভাষা"
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Layouts"
 msgstr "বিন্যাস"
 
-#: ../panels/region/gnome-region-panel.ui.h:5
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Region and Language"
 msgstr "অঞ্চল এবং ভাষা"
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
@@ -1585,191 +1585,191 @@ msgstr ""
 "পূর্বনির্ধারিত সেটিং এর সাহায্যে"
 
 # FIXME
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Reset to De_faults"
 msgstr "পূর্বনির্ধারিত মান পুনরায় স্থাপন করুন (_f)"
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr ""
 "প্রদর্শনের ভাষা নির্বাচন (পরবর্তী সময়ে আপনি লগইন করার সময় পরিবর্তন প্রয়োগ করা হবে)"
 
 # Translated by sadia
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Use default layout in new windows"
 msgstr "নতুন উইন্ডোর জন্য পূর্বনির্ধারিত বিন্যাস"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Use previous window's layout in new windows"
 msgstr "নতুন উইন্ডোতে পূর্ববর্তী উইন্ডোর বহির্বিন্যাস ব্যবহার"
 
 # Translated by sadia
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Use same layout in all windows"
 msgstr "সব উইন্ডোতে একই বহির্বিন্যাস ব্যবহার"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "View and edit keyboard layout options"
 msgstr "কীবোর্ডের লেআউট অপশন প্রদর্শন এবং সম্পাদন"
 
 # Translated by sadia
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 #: ../panels/network/network.ui.h:28
 msgid "_Options..."
 msgstr "অপশন (_O)... "
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:1
 msgid "Choose a Layout"
 msgstr "যে কোন একটি লে-আউট বেছে নিন"
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:2
 msgid "Preview"
 msgstr "প্রাকদর্শন"
 
-#: ../panels/region/gnome-region-panel-layout-chooser.ui.h:3
+#: ../panels/region/cinnamon-region-panel-layout-chooser.ui.h:3
 msgid "Select an input source to add"
 msgstr "ইনপুট উৎস যোগ করতে নির্বাচন"
 
-#: ../panels/region/gnome-region-panel-options-dialog.ui.h:1
+#: ../panels/region/cinnamon-region-panel-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr "কীবোর্ড বহির্বিন্যাস সংক্রান্ত অপশন"
 
-#: ../panels/region/gnome-region-panel-xkblt.c:222
+#: ../panels/region/cinnamon-region-panel-xkblt.c:222
 msgid "Layout"
 msgstr "বহির্বিন্যাস"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Change your region and language settings"
 msgstr "আপনার অঞ্চল এবং ভাষার সেটিং পরিবর্তন"
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:3
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:3
 msgid "Language;Layout;Keyboard;"
 msgstr "ভাষা;বহির্বিন্যাস;কীবোর্ড;"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Disable _touchpad while typing"
 msgstr "টাইপ করার সময় টাচপ্যাড নিস্ক্রিয় করুন (_t)"
 
 # Translated by sadia
-#: ../panels/mouse/gnome-mouse-properties.ui.h:3
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Double-Click Timeout"
 msgstr "ডবল ক্লিক-এর সময়উত্তীর্ণ"
 
 # Translated by sadia
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Drag and Drop"
 msgstr "টেনে এনে ছেড়ে দিন"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Enable _mouse clicks with touchpad"
 msgstr "টাচপ্যাডের মাধ্যমে মাউস ক্লিক সক্রিয় করুন (_m)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "Enable h_orizontal scrolling"
 msgstr "অনুভূমিক স্ক্রলিং সক্রিয় করুন (_o)"
 
 # Translated by sadia
 #. high sensitivity
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "High"
 msgstr "উঁচু"
 
 #. large threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 #: ../panels/universal-access/uap.ui.h:36
 msgid "Large"
 msgstr "বড়"
 
 # Translated by sadia
 #. low sensitivity
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Low"
 msgstr "নিচু"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Mouse"
 msgstr "মাউস"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "Mouse Preferences"
 msgstr "মাউস সম্পর্কিত পছন্দ"
 
 # Translated by sadia
-#: ../panels/mouse/gnome-mouse-properties.ui.h:19
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:19
 msgid "Pointer Speed"
 msgstr "পয়েন্টারের গতি"
 
 # Translated by sadia
-#: ../panels/mouse/gnome-mouse-properties.ui.h:20
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:20
 msgid "Scrolling"
 msgstr "স্ক্রল করা হচ্ছে"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:21
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:21
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr "কন্ট্রোল-কী চাপা হলে পয়েন্টারের অবস্থান প্রদর্শন করা হবে (_o)"
 
 #. small threshold
-#: ../panels/mouse/gnome-mouse-properties.ui.h:26
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:26
 #: ../panels/universal-access/uap.ui.h:58
 msgid "Small"
 msgstr "ছোট"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:27
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:27
 msgid "Thr_eshold:"
 msgstr "থ্রেসহোল্ড (_e):"
 
 # Translated by sadia
-#: ../panels/mouse/gnome-mouse-properties.ui.h:28
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:28
 msgid "To test your settings, try to double-click on the face."
 msgstr "সেটিং পরীক্ষার জন্য, ফেসের উপর ডবল ক্লিক করার চেষ্টা করুন।"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:29
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:29
 msgid "Touchpad"
 msgstr "টাচপ্যাড"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:30
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "Two-_finger scrolling"
 msgstr "দুই-আঙ্গুল স্ক্রলিং (_f)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:31
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:31
 msgid "_Acceleration:"
 msgstr "গতিবৃদ্ধি (_A):"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:32
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:32
 msgid "_Disabled"
 msgstr "নিষ্ক্রিয় (_D)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:33
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:33
 msgid "_Edge scrolling"
 msgstr "প্রান্ত স্ক্রলিং করুন (_E)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:34
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "_Left-handed"
 msgstr "বামহাতি (_L)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:35
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "_Right-handed"
 msgstr "ডান হাতি (_R)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:36
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "_Sensitivity:"
 msgstr "সংবেদনশীলতা (_S):"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:37
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Timeout:"
 msgstr "সময় শেষ (_T):"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse and Touchpad"
 msgstr "মাউস এবং টাচপ্যাড"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr "মাউস এবং টাচপ্যাড সম্পর্কিত আপনার পছন্দ নির্ধারণ"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr "ট্র্যাকপ্যাড;পয়েন্টার;ক্লিক;ট্যাপ;ডবল;বোতাম;ট্র্যাকবল;"
 
@@ -1847,12 +1847,12 @@ msgstr "%s VPN"
 msgid "The system network services are not compatible with this version."
 msgstr "এই সংস্করণের সাথে সিস্টেম নেটওয়ার্ক সার্ভিস সামঞ্জস্যপূর্ণ নয়।"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "নেটওয়ার্ক সেটিং"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;"
 msgstr "নেটওয়ার্ক;ওয়ারলেস;IP;LAN;"
 
@@ -2071,16 +2071,16 @@ msgstr "অজানা অবস্থা (অনুপস্থিত)"
 msgid "Not connected"
 msgstr "সংযুক্ত নয়"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "শক্তি"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr "শক্তি পরিচালনা সেটিং"
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr "Power;Sleep;Suspend;Hibernate;Battery;"
 
@@ -2214,16 +2214,16 @@ msgid "When the sleep button is pressed:"
 msgstr "যখন স্লীপ বোতাম চাপা দেওয়া থাকে:"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr "Brightness;Lock;Dim;Blank;Monitor;"
 
 # Translated by sadia
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:3
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:3
 msgid "Screen"
 msgstr "স্ক্রীন"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Screen brightness and lock settings"
 msgstr "স্ক্রীন উজ্জ্বলতা এবং লক সেটিং"
 
@@ -2527,39 +2527,39 @@ msgid "Volume Control"
 msgstr "ভলিউম কন্ট্রোল"
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;"
 msgstr "কার্ড;মাইক্রোফোন;ভলিউম;বিবর্ণ;ভারসাম্য;ব্লুটুথ;হেডসেট;"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:3
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:3
 msgid "Change sound volume and sound events"
 msgstr "শব্দের ভলিউম এবং শব্দের ইভেন্ট পরিবর্তন"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Sound"
 msgstr "শব্দ"
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr "ঘেউ ঘেউ "
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr "ফোঁটা ফোঁটা করে পড়া"
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr "কাঁচ"
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr "প্রতিফলিত শব্দ তরঙ্গ"
 
@@ -2570,11 +2570,11 @@ msgid "No shortcut set"
 msgstr "কোন শর্টকাট নির্ধারিত নেই"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Keyboard;Mouse;a11y;Accessibility;"
 msgstr "কীবোর্ড;মাউস;a11y;স্বাচ্ছন্দ্যকরণ;"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid "Universal Access Preferences"
 msgstr "সর্বজনীন প্রবেশের পছন্দ"
 
@@ -3310,16 +3310,16 @@ msgstr "আমার একাউন্ট"
 msgid "Other Accounts"
 msgstr "অন্যান্য একাউন্ট"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "Add or remove users"
 msgstr "ব্যবহারকারী যোগ অথবা অপসারণ"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:3
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:3
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "লগ ইন;নাম;ফিঙ্গারপ্রিন্ট;এভাটার;লোগো;ফেস;পাসওয়ার্ড;"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "User Accounts"
 msgstr "ব্যবহারকারীর একাউন্ট"
 
@@ -4297,7 +4297,7 @@ msgstr "সহায়তা সংক্রান্ত অপশন প্রদ
 
 # Translated by sadia
 #~ msgid ""
-#~ "Unable to start the settings manager 'gnome-settings-daemon'.\n"
+#~ "Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 #~ "Without the GNOME settings manager running, some preferences may not take "
 #~ "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. "
 #~ "KDE) settings manager may already be active and conflicting with the "

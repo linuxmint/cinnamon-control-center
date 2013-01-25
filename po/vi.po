@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cinnamon-control-center 2.25.90\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-11 11:28+0000\n"
 "PO-Revision-Date: 2012-09-11 21:03+0700\n"
@@ -102,16 +102,16 @@ msgstr "Không có ảnh nền"
 msgid "Current background"
 msgstr "Ảnh nền hiện tại"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "Ảnh nền"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "Đổi nền"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Wallpaper;Ảnh;nền;Anh;nen;Screen;Màn;hình;Man;hinh;Desktop;"
 
@@ -444,7 +444,7 @@ msgid "Webcam"
 msgstr "Webcam"
 
 #: ../panels/color/color.ui.h:3
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:1
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:1
 msgid "Color"
 msgstr "Màu sắc"
 
@@ -519,12 +519,12 @@ msgid ""
 "Image files can be dragged on this window to auto-complete the above fields."
 msgstr "Bạn có thể kéo thả tập tin ảnh để tự động điền nốt những ô trên."
 
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:2
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:2
 msgid "Color management settings"
 msgstr "Thiết lập quản lý màu sắc"
 
 #. Translators: those are keywords for the color control-center panel
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:4
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr ""
 "Color;Màu;Mau;ICC;Profile;Calibrate;Chinh;Printer;Máy;in;May;Display;Màn;"
@@ -715,16 +715,16 @@ msgstr "Tháng mười một"
 msgid "December"
 msgstr "Tháng mười hai"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:1
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:1
 msgid "Date & Time"
 msgstr "Ngày giờ"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Date and Time preferences panel"
 msgstr "Khung tuỳ thích ngày giờ"
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Clock;Timezone;Location;"
 msgstr "Clock;Đồng;hồ;Dong;ho;Timezone;Múi;giờ;Mui;gio;Location;Vị;trí;Vi;tri;"
 
@@ -756,7 +756,7 @@ msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr "180 độ"
 
-#. Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c
+#. Keep this string in sync with cinnamon-desktop/libcinnamon-desktop/cinnamon-rr-labeler.c
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external projector.  Here, "Mirrored" is being
 #. * used as an adjective.  For example, the Spanish translation could be
@@ -838,16 +838,16 @@ msgstr "Ghi chú: có thể giới hạn tuỳ chọn độ phân giải"
 msgid "_Detect Displays"
 msgstr "_Dò tìm thiết bị hiển thị"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Displays"
 msgstr "Thiết bị hiển thị"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Change resolution and position of monitors and projectors"
 msgstr "Thay đổi độ phân giải và vị trí màn hình/máy chiếu"
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr ""
 "Panel;Projector;Máy;chiếu;May;chieu;xrandr;Screen;Màn;hình;Man;hinh;"
@@ -1034,16 +1034,16 @@ msgstr "Hệ thống mới nhất"
 msgid "Checking for Updates"
 msgstr "Tìm bản cập nhật"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "Details"
 msgstr "Chi tiết"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "Thông tin hệ thống"
 
 #. sure that you use the same "translation" for those keywords
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1203,19 +1203,19 @@ msgid "Eject"
 msgstr "Đẩy ra"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 #: ../panels/keyboard/keyboard-shortcuts.c:858
 #: ../panels/universal-access/uap.ui.h:68
 msgid "Typing"
 msgstr "Nhập liệu"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:2
-#: ../panels/region/gnome-region-panel.ui.h:26
+#: ../panels/region/cinnamon-region-panel.ui.h:26
 msgid "Switch to next source"
 msgstr "Chuyển sang nguồn kế"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:3
-#: ../panels/region/gnome-region-panel.ui.h:24
+#: ../panels/region/cinnamon-region-panel.ui.h:24
 msgid "Switch to previous source"
 msgstr "Chuyển sang nguồn cũ"
 
@@ -1279,7 +1279,7 @@ msgid "Copy a screenshot of an area to clipboard"
 msgstr "Chụp một vùng màn hình vào bảng tạm"
 
 #: ../panels/keyboard/01-system.xml.in.h:1
-#: ../panels/region/gnome-region-panel.ui.h:39
+#: ../panels/region/cinnamon-region-panel.ui.h:39
 msgid "System"
 msgstr "Hệ thống"
 
@@ -1292,7 +1292,7 @@ msgid "Lock screen"
 msgstr "Khoá màn hình"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:1
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:1
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:1
 msgid "Universal Access"
 msgstr "Hỗ trợ truy cập"
 
@@ -1347,105 +1347,105 @@ msgstr "Phím ký tự thay thế"
 msgid "Compose Key"
 msgstr "Phím tổ hợp"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
 msgid "Keyboard"
 msgstr "Bàn phím"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
 msgid "Change keyboard settings"
 msgstr "Thay đổi thiết lập bàn phím"
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr "Shortcut;Phím;tắt;phim;tat;Repeat;Lặp;lap;Blink;Nháy;nhay;"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "Custom Shortcut"
 msgstr "Phím tắt tự chọn"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "_Name:"
 msgstr "Tê_n:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "C_ommand:"
 msgstr "Lện_h:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Repeat Keys"
 msgstr "Phím Lặp"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
 msgid "Key presses _repeat when key is held down"
 msgstr "Phím nhấn được _lặp lại khi được giữ nhấn xuống"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
 msgid "_Delay:"
 msgstr "Khoảng _trễ:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "_Speed:"
 msgstr "_Tốc độ:"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 #: ../panels/universal-access/uap.ui.h:49
 msgid "Short"
 msgstr "Ngắn"
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Slow"
 msgstr "Chậm"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat keys speed"
 msgstr "Tốc độ lặp"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 #: ../panels/universal-access/uap.ui.h:52
 msgid "Long"
 msgstr "Lâu"
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "Fast"
 msgstr "Nhanh"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
 msgid "Cursor Blinking"
 msgstr "Chớp nháy con trỏ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Cursor _blinks in text fields"
 msgstr "Chớp nháy con trỏ trong trường nhập _văn bản"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
 msgid "S_peed:"
 msgstr "_Tốc độ:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 msgid "Cursor blink speed"
 msgstr "Tốc độ chớp con trỏ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "Layout Settings"
 msgstr "Thiết lập bố trí"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "Add Shortcut"
 msgstr "Thêm phím tắt"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:21
 msgid "Remove Shortcut"
 msgstr "Bỏ phím tắt"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:22
 #: ../panels/wacom/button-mapping.ui.h:3
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
@@ -1454,8 +1454,8 @@ msgstr ""
 "Để sửa đổi phím tắt, nhấn vào hàng muốn sửa rồi ấn tổ hợp phím mới hoặc nhấn "
 "Backspace để xóa phím tắt."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
-#: ../panels/region/gnome-region-panel.ui.h:29
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:29
 msgid "Shortcuts"
 msgstr "Phím tắt"
 
@@ -1504,107 +1504,107 @@ msgstr "_Gán lại"
 msgid "_Test Your Settings"
 msgstr "_Kiểm tra thiết lập của bạn"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse & Touchpad"
 msgstr "Chuột và Touchpad"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr "Đặt tuỳ thích chuột và touchpad"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr ""
 "Trackpad;Pointer;Con;trỏ;tro;Click;Nhấn;Nhắp;Nhan;Nhap;Tap;Double;Dup;Button;"
 "Nút;Nut;Trackball;"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Mouse Preferences"
 msgstr "Tùy thích con trỏ chuột"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "General"
 msgstr "Chung"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Double-click timeout"
 msgstr "Thời hạn nhấp đúp"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "_Double-click"
 msgstr "Nhấn đô_i:"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Primary _button"
 msgstr "_Phím chính"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "_Left"
 msgstr "_Trái"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "_Right"
 msgstr "_Phải"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Mouse"
 msgstr "Chuột"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "_Pointer speed"
 msgstr "Tốc độ _con trỏ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "Disable while _typing"
 msgstr "_Tắt khi đang gõ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Tap to _click"
 msgstr "Nhấp để _nhấn"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Two _finger scroll"
 msgstr "Cuộn _hai ngón"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "C_ontent sticks to fingers"
 msgstr "_Nội dung dính vào ngón"
 
-#: ../panels/mouse/gnome-mouse-test.c:134
-#: ../panels/mouse/gnome-mouse-test.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-test.c:134
+#: ../panels/mouse/cinnamon-mouse-test.ui.h:1
 msgid "Try clicking, double clicking, scrolling"
 msgstr "Thử nhấn, nhấp đúp, cuộn"
 
-#: ../panels/mouse/gnome-mouse-test.c:139
+#: ../panels/mouse/cinnamon-mouse-test.c:139
 msgid "Five clicks, GEGL time!"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Double click, primary button"
 msgstr "Nhấp đúp, nút chính"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Single click, primary button"
 msgstr "Nhấp đơn, nút chính"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Double click, middle button"
 msgstr "Nhấp đúp, nút giữa"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Single click, middle button"
 msgstr "Nhấp đơn, nút giữa"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Double click, secondary button"
 msgstr "Nhấp đúp, nút phụ"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Single click, secondary button"
 msgstr "Nhấp đơn, nút phụ"
 
@@ -1628,17 +1628,17 @@ msgstr "Dịch vụ mạng hệ thống không tương thích với phiên bản
 msgid "Air_plane Mode"
 msgstr "Chế độ _máy bay"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 #: ../panels/network/network-mobile.ui.h:7
 msgid "Network"
 msgstr "Mạng"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "Thiết lập mạng"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;Proxy;"
 msgstr "Network;Mạng;Mang;Wireless;Không;dây;Khong;day;IP;LAN;Proxy;Uỷ;nhiệm"
 
@@ -2334,16 +2334,16 @@ msgstr "Hành động này không xóa tài khoản trên máy chủ."
 msgid "_Remove"
 msgstr "_Xóa"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:1
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:1
 msgid "Online Accounts"
 msgstr "Tài khoản trực tuyến"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:2
 msgid "Manage online accounts"
 msgstr "Quản lý tài khoản trực tuyến"
 
 #. Translators: those are keywords for the online-accounts control-center panel
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:4
 msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 msgstr ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Truc;tuyen;Chat;Calendar;Lịch;Lich;"
@@ -2553,16 +2553,16 @@ msgctxt "Battery power"
 msgid "Empty"
 msgstr "Rỗng"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "Năng lượng"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr "Thiết lập quản lý năng lượng"
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr ""
 "Power;Nguồn;Nguon;dien;Sleep;Ngủ;Ngu;Suspend;Ngưng;Ngung;Hibernate;Battery;"
@@ -2798,16 +2798,16 @@ msgstr "Trang thử"
 msgid "Could not load ui: %s"
 msgstr "Không thể nạp giao diện: %s"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Printers"
 msgstr "Máy in"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:2
 msgid "Change printer settings"
 msgstr "Thay đổi thiết lập máy in"
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "Printer;Máy;in;May;Queue;Print;In;Paper;Giấy;Giay;Ink;Mực;Muc;Toner;"
 
@@ -3197,38 +3197,38 @@ msgid ""
 "doesn't seem to be available."
 msgstr "Rất tiếc! Dịch vụ in hệ thống dường như không hoạt động."
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Region & Language"
 msgstr "Lãnh thổ và ngôn ngữ"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:2
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:2
 msgid "Change your region and language settings"
 msgstr "Thay đổi thiết lập lãnh thổ và ngôn ngữ"
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Language;Layout;Keyboard;"
 msgstr ""
 "Language;Ngôn;ngữ;Ngon;ngu;Layout;Bố;trí;Bo;tri;Keyboard;Bàn;phím;Ban;phim;"
 "Kieu;go;"
 
-#: ../panels/region/gnome-region-panel-formats.c:142
+#: ../panels/region/cinnamon-region-panel-formats.c:142
 msgid "Imperial"
 msgstr "Anh-Mỹ"
 
-#: ../panels/region/gnome-region-panel-formats.c:144
+#: ../panels/region/cinnamon-region-panel-formats.c:144
 msgid "Metric"
 msgstr "Mét"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:1
 msgid "Choose an input source"
 msgstr "Chọn nguồn nhập"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:2
 msgid "Select an input source to add"
 msgstr "Chọn nguồn nhập cần thêm"
 
-#: ../panels/region/gnome-region-panel-system.c:330
+#: ../panels/region/cinnamon-region-panel-system.c:330
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings."
@@ -3236,8 +3236,8 @@ msgstr ""
 "Màn hình đăng nhập, các tài khoản hệ thống và các tài khoản mới sẽ sử dụng "
 "thiết lập hệ thống \"Lãnh thổ và Ngôn ngữ\"."
 
-#: ../panels/region/gnome-region-panel-system.c:335
-#: ../panels/region/gnome-region-panel.ui.h:31
+#: ../panels/region/cinnamon-region-panel-system.c:335
+#: ../panels/region/cinnamon-region-panel.ui.h:31
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings. You may change the system settings to match "
@@ -3247,155 +3247,155 @@ msgstr ""
 "thiết lập hệ thống \"Lãnh thổ và Ngôn ngữ\". Bạn có thể sửa sao cho thiết "
 "lập hệ thống giống với thiết lập của bạn."
 
-#: ../panels/region/gnome-region-panel-system.c:338
+#: ../panels/region/cinnamon-region-panel-system.c:338
 msgid "Copy Settings"
 msgstr "Chép thiết lập"
 
-#: ../panels/region/gnome-region-panel-system.c:341
-#: ../panels/region/gnome-region-panel.ui.h:38
+#: ../panels/region/cinnamon-region-panel-system.c:341
+#: ../panels/region/cinnamon-region-panel.ui.h:38
 msgid "Copy Settings..."
 msgstr "Chép các thiết lập..."
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Region and Language"
 msgstr "Lãnh thổ và ngôn ngữ"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr "Chọn ngôn ngữ (áp dụng cho lần đăng nhập kế tiếp)"
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 msgid "Add Language"
 msgstr "Thêm ngôn ngữ"
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Remove Language"
 msgstr "Bỏ ngôn ngữ"
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "Install languages..."
 msgstr "Cài đặt ngôn ngữ..."
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 msgid "Select a region (change will be applied the next time you log in)"
 msgstr "Chọn vùng (áp dụng cho lần đăng nhập kế tiếp)"
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Add Region"
 msgstr "Thêm vùng"
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Remove Region"
 msgstr "Bỏ vùng"
 
 # Name: don't translate / Tên: đừng dịch
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Dates"
 msgstr "Ngày tháng"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Times"
 msgstr "Thời gian"
 
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Numbers"
 msgstr "Cách ghi số"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Currency"
 msgstr "Đơn vị tiền tệ"
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid "Measurement"
 msgstr "Hệ đo"
 
-#: ../panels/region/gnome-region-panel.ui.h:15
+#: ../panels/region/cinnamon-region-panel.ui.h:15
 msgid "Examples"
 msgstr "Ví dụ"
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 msgid "Formats"
 msgstr "Định dạng"
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 msgid "Select keyboards or other input sources"
 msgstr "Chọn bàn phím và nguồn nhập khác"
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 msgid "Add Input Source"
 msgstr "Thêm nguồn nhập"
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 msgid "Remove Input Source"
 msgstr "Bỏ nguồn nhập"
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 msgid "Move Input Source Up"
 msgstr "Chuyển nguồn nhập lên trên"
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 msgid "Move Input Source Down"
 msgstr "Chuyển nguồn nhập xuống dưới"
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 msgid "Input Source Settings"
 msgstr "Thiết lập nguồn nhập"
 
-#: ../panels/region/gnome-region-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:23
 msgid "Show Keyboard Layout"
 msgstr "Hiện bố trí bàn phím"
 
-#: ../panels/region/gnome-region-panel.ui.h:25
+#: ../panels/region/cinnamon-region-panel.ui.h:25
 msgid "Ctrl+Alt+Space"
 msgstr "Ctrl+Alt+<khoảng trắng>"
 
-#: ../panels/region/gnome-region-panel.ui.h:27
+#: ../panels/region/cinnamon-region-panel.ui.h:27
 msgid "Ctrl+Alt+Shift+Space"
 msgstr "Ctrl+Alt+Shift+<khoảng trắng>"
 
-#: ../panels/region/gnome-region-panel.ui.h:28
+#: ../panels/region/cinnamon-region-panel.ui.h:28
 msgid "Shortcut Settings"
 msgstr "Thiết lập phím tắt"
 
-#: ../panels/region/gnome-region-panel.ui.h:30
+#: ../panels/region/cinnamon-region-panel.ui.h:30
 msgid "Input Sources"
 msgstr "Thiết bị nhập"
 
 #. 'display' means 'output' here, as in 'translated messages that are displayed to the user'
-#: ../panels/region/gnome-region-panel.ui.h:33
+#: ../panels/region/cinnamon-region-panel.ui.h:33
 msgid "Display language:"
 msgstr "Ngôn ngữ hiển thị:"
 
-#: ../panels/region/gnome-region-panel.ui.h:34
+#: ../panels/region/cinnamon-region-panel.ui.h:34
 msgid "Input source:"
 msgstr "Thiết bị nhập:"
 
-#: ../panels/region/gnome-region-panel.ui.h:35
+#: ../panels/region/cinnamon-region-panel.ui.h:35
 msgid "Format:"
 msgstr "Định dạng:"
 
-#: ../panels/region/gnome-region-panel.ui.h:36
+#: ../panels/region/cinnamon-region-panel.ui.h:36
 msgid "Your settings"
 msgstr "Thiết lập của bạn"
 
-#: ../panels/region/gnome-region-panel.ui.h:37
+#: ../panels/region/cinnamon-region-panel.ui.h:37
 msgid "System settings"
 msgstr "Thiết lập hệ thống"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:1
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:1
 msgid "Brightness & Lock"
 msgstr "Khoá và độ sáng"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Screen brightness and lock settings"
 msgstr "Thiết lập khoá và độ sáng màn hình"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr ""
 "Brightness;Độ;sáng;Sang;Lock;Khoá;Khoa;Dim;Mờ;Blank;Trắng;Trang;Monitor;Màn;"
@@ -3474,16 +3474,16 @@ msgstr "Điều khiển âm lượng"
 msgid "Show desktop volume control"
 msgstr "Hiện điều khiển âm lượng"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:1
 msgid "Sound"
 msgstr "Âm thanh"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Change sound volume and sound events"
 msgstr "Thay đổi âm lượng và sự kiện âm thanh"
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgstr ""
 "Card;Cac;Microphone;Volume;Âm;lượng;Am;luong;thanh;Fade;Balance;Bluetooth;"
@@ -3491,25 +3491,25 @@ msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr "Chó sủa"
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr "Nước chảy"
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr "Thuỷ tinh"
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr "Sonar"
 
@@ -3732,12 +3732,12 @@ msgstr "Tự chọn"
 msgid "No shortcut set"
 msgstr "Chưa đặt phím tắt"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Universal Access Preferences"
 msgstr "Tuỳ thích hỗ trợ truy cập"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
@@ -4349,16 +4349,16 @@ msgstr ""
 "Vân tay của bạn đã được lưu. Sau đó thì bạn nên có khả năng đăng nhập dùng "
 "máy đọc vân tay."
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "User Accounts"
 msgstr "Tài khoản người dùng"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:2
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:2
 msgid "Add or remove users"
 msgstr "Thêm hoặc xoá người dùng"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr ""
 "Login;Đăng;nhập;Dang;nhap;Name;Tên;Ten;Fingerprint;Vân;tay;Van;Avatar;Logo;"
@@ -5013,65 +5013,65 @@ msgstr "Hành động"
 msgid "Display Mapping"
 msgstr "Hiện ánh xạ"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:1
-#: ../panels/wacom/gnome-wacom-properties.ui.h:7
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:7
 msgid "Wacom Tablet"
 msgstr "Tablet Wacom"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:2
 msgid "Set your Wacom tablet preferences"
 msgstr "Đặt tuỳ thích Tablet Wacom"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:4
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Tablet;Wacom;Stylus;Eraser;Mouse;Chuột;Chuot;"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
 msgstr "Tablet (tuyệt đối)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:2
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:2
 msgid "Touchpad (relative)"
 msgstr "Touchpad (tương đối)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:3
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:3
 msgid "Tablet Preferences"
 msgstr "Tuỳ thích Tablet"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:4
 msgid "No tablet detected"
 msgstr "Không tìm ra tablet"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:5
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:5
 msgid "Please plug in or turn on your Wacom tablet"
 msgstr "Vui lòng cắm vào và bật tablet Wacom"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:6
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:6
 msgid "Bluetooth Settings"
 msgstr "Thiết lập Bluetooth"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:8
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:8
 msgid "Map to Monitor..."
 msgstr "Ánh xạ sang màn hình..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:9
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:9
 msgid "Map Buttons..."
 msgstr "Ánh xạ nút..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:10
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:10
 msgid "Calibrate..."
 msgstr "Cân chỉnh..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:11
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:11
 msgid "Adjust display resolution"
 msgstr "Điều chỉnh độ phân giải"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:12
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:12
 msgid "Tracking Mode"
 msgstr "Chế độ rà"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:13
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:13
 msgid "Left-Handed Orientation"
 msgstr "Hướng chuột thuận tay trái"
 
@@ -6990,13 +6990,13 @@ msgstr "Tất cả thiết lập"
 #~ msgstr "Không thể cài đặt cơ chế sắc thái"
 
 #~ msgid ""
-#~ "Unable to start the settings manager 'gnome-settings-daemon'.\n"
+#~ "Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 #~ "Without the GNOME settings manager running, some preferences may not take "
 #~ "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. "
 #~ "KDE) settings manager may already be active and conflicting with the "
 #~ "GNOME settings manager."
 #~ msgstr ""
-#~ "Không thể khởi động trình quản lý thông số « gnome-settings-daemon ».\n"
+#~ "Không thể khởi động trình quản lý thông số « cinnamon-settings-daemon ».\n"
 #~ "Không có chương trình này, một vài tùy thích sẽ không có tác dụng. Có lẽ "
 #~ "do Bonobo hoặc một trình quản lý thông số ứng dụng phi GNOME (v.d. KDE) "
 #~ "đang hoạt động và gây xung đột với GNOME."
@@ -7642,10 +7642,10 @@ msgstr "Tất cả thiết lập"
 
 #~ msgid ""
 #~ "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;"
-#~ "default-applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+#~ "default-applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 #~ msgstr ""
 #~ "[Đổi sắc thái;gtk-theme-selector.desktop,Đặt các ứng dụng đã thích;"
-#~ "default-applications.desktop,Thêm máy in;gnome-cups-manager.desktop]"
+#~ "default-applications.desktop,Thêm máy in;cinnamon-cups-manager.desktop]"
 
 #~ msgid ""
 #~ "if true, the control-center will close when a \"Common Task\" is "

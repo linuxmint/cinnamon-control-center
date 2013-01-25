@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* run-passwd.c: this file is part of users-admin, a gnome-system-tools frontend
+/* run-passwd.c: this file is part of users-admin, a cinnamon-system-tools frontend
  * for user administration.
  *
  * Copyright (C) 2002 Diego Gonzalez
@@ -25,7 +25,7 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
  * 02111-1307, USA.
  *
- * Most of this code originally comes from gnome-about-me-password.c,
+ * Most of this code originally comes from cinnamon-about-me-password.c,
  * from cinnamon-control-center.
  */
 

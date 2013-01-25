@@ -433,7 +433,7 @@ load_backward_tz (TzDB *tz_db)
 
   tz_db->backward = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
-  if (g_file_get_contents (GNOMECC_DATA_DIR "/datetime/backward", &contents, NULL, &error) == FALSE)
+  if (g_file_get_contents (CINNAMONCC_DATA_DIR "/datetime/backward", &contents, NULL, &error) == FALSE)
     {
       g_warning ("Failed to load 'backward' file: %s", error->message);
       return;

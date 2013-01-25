@@ -298,7 +298,7 @@ cc_wacom_stylus_page_init (CcWacomStylusPage *self)
 	priv->builder = gtk_builder_new ();
 
 	gtk_builder_add_objects_from_file (priv->builder,
-					   GNOMECC_UI_DIR "/wacom-stylus-page.ui",
+					   CINNAMONCC_UI_DIR "/wacom-stylus-page.ui",
 					   objects,
 					   &error);
 	if (error != NULL) {
@@ -344,7 +344,7 @@ set_icon_name (CcWacomStylusPage *page,
 	priv = page->priv;
 
 	filename = g_strdup_printf ("%s.svg", icon_name);
-	path = g_build_filename (GNOMECC_UI_DIR, filename, NULL);
+	path = g_build_filename (CINNAMONCC_UI_DIR, filename, NULL);
 	g_free (filename);
 
 	gtk_image_set_from_file (GTK_IMAGE (WID (widget_name)), path);

@@ -197,286 +197,286 @@ msgstr "Jari anda tidak ditengahkan, sila lalukan sekali lagi jari anda"
 msgid "Remove your finger, and try swiping your finger again"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:716
+#: ../capplets/about-me/cinnamon-about-me.c:716
 msgid "Select Image"
 msgstr "Pilih Imej"
 
-#: ../capplets/about-me/gnome-about-me.c:718
+#: ../capplets/about-me/cinnamon-about-me.c:718
 msgid "No Image"
 msgstr "Tiada Imej"
 
-#: ../capplets/about-me/gnome-about-me.c:746
+#: ../capplets/about-me/cinnamon-about-me.c:746
 #: ../capplets/appearance/appearance-desktop.c:658
 msgid "Images"
 msgstr "Imej"
 
-#: ../capplets/about-me/gnome-about-me.c:750
+#: ../capplets/about-me/cinnamon-about-me.c:750
 #: ../capplets/appearance/theme-installer.c:766
 msgid "All Files"
 msgstr "Semua Fail"
 
-#: ../capplets/about-me/gnome-about-me.c:890
+#: ../capplets/about-me/cinnamon-about-me.c:890
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:911
+#: ../capplets/about-me/cinnamon-about-me.c:911
 msgid "Unable to open address book"
 msgstr "Tidak dapat membuka buku alamat"
 
-#: ../capplets/about-me/gnome-about-me.c:934
+#: ../capplets/about-me/cinnamon-about-me.c:934
 #, c-format
 msgid "About %s"
 msgstr "Perihal %s"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:1
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:2
 msgid "A_ddress:"
 msgstr "A_lamat:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:3
 msgid "A_ssistant:"
 msgstr "P_embantu"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:4
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
 msgid "About Me"
 msgstr "Perihal Saya"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:5
 msgid "Address"
 msgstr "Alamat"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:6
 msgid "C_ity:"
 msgstr "B_andar:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:7
 msgid "C_ompany:"
 msgstr "S_yarikat:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:8
 msgid "Cale_ndar:"
 msgstr "Kale_ndar"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:9
 msgid "Change Passwo_rd..."
 msgstr "Tukar Katalal_uan..."
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:10
 msgid "Ci_ty:"
 msgstr "Ban_dar:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:11
 msgid "Co_untry:"
 msgstr "Ne_gara:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:12
 msgid "Contact"
 msgstr "Hubungi"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:13
 msgid "Cou_ntry:"
 msgstr "Neg_ara:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:14
 msgid "Disable _Fingerprint Login..."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:15
 msgid "Email"
 msgstr "Emel"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:16
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:16
 msgid "Enable _Fingerprint Login..."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:17
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:17
 msgid "Full Name"
 msgstr "Nama Penuh"
 
 #. Home vs Work (phone)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:19
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:19
 msgid "Hom_e:"
 msgstr "Rum_ah:"
 
 #. Home vs Work (address)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:21
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:21
 #: ../libslab/bookmark-agent.c:1135
 msgid "Home"
 msgstr "Rumah"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:22
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:22
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:23
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:23
 msgid "Instant Messaging"
 msgstr "Mesej Instan"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:24
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:24
 msgid "Job"
 msgstr "Pekerjaan"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:25
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:25
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:26
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:26
 msgid "P.O. _box:"
 msgstr "P.O. _box:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:27
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:27
 msgid "P._O. box:"
 msgstr "P._O. box:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:28
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:28
 msgid "Personal Info"
 msgstr "Maklumat Peribadi"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:29
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:29
 msgid "Select your photo"
 msgstr "Pilih gambar anda"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:30
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:30
 msgid "State/Pro_vince:"
 msgstr "Negeri/Wilayah:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:31
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:31
 msgid "Telephone"
 msgstr "Telefon"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:32
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:32
 msgid "User name:"
 msgstr "Nama pengguna:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:33
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:33
 msgid "Web"
 msgstr "Laman Sesawang"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:34
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:34
 msgid "Web _log:"
 msgstr "Log _Laman Sesawang:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:35
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:35
 msgid "Wor_k:"
 msgstr "Ker_ja"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:36
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:36
 msgid "Work"
 msgstr "Kerja"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:37
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:37
 msgid "Work _fax:"
 msgstr "Faks _kerja:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:38
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:38
 msgid "ZIP/_Postal code:"
 msgstr "ZIP/_Poskod:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:39
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:39
 msgid "_Address:"
 msgstr "_Alamat"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:40
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:40
 msgid "_Department:"
 msgstr "_Jabatan"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:41
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:41
 msgid "_GroupWise:"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:42
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:42
 msgid "_Home page:"
 msgstr "_Laman Sesawang Rumah"
 
 #. Home vs Work (email)
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:44
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:44
 msgid "_Home:"
 msgstr "_Rumah:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:45
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:45
 msgid "_Manager:"
 msgstr "_Pengurus:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:46
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:46
 msgid "_Mobile:"
 msgstr "_Mobile:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:47
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:47
 msgid "_Profession:"
 msgstr "_Profession:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:48
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:48
 msgid "_State/Province:"
 msgstr "_Negeri/Wilayah:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:49
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:49
 msgid "_Title:"
 msgstr "_Tajuk:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:50
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:50
 msgid "_Work:"
 msgstr "_Kerja:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:51
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:51
 msgid "_XMPP:"
 msgstr "_XMPP:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:52
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:52
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:53
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:53
 msgid "_ZIP/Postal code:"
 msgstr "_ZIP/Poskod:"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "Tetapkan maklumat peribadi anda"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:97
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:97
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr ""
 "Tidak tidak dibenarkan akses pada peranti. Hubungi sistem pentadbir anda."
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:99
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:99
 msgid "The device is already in use."
 msgstr "Peranti tersebut sedang digunakan"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:101
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:101
 msgid "An internal error occured"
 msgstr "Ralat dalaman telah berlaku"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:218
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:218
 msgid "Delete registered fingerprints?"
 msgstr "Padam cap jari didaftarkan?"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:221
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:221
 msgid "_Delete Fingerprints"
 msgstr "_Padam Cap Jari"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:228
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:228
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:356
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:356
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:1
 msgid "Done!"
 msgstr "Dilakukan!"
 
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:402
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:424
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:402
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:424
 #, c-format
 msgid "Could not access '%s' device"
 msgstr "Tidak dapat akses peranti '%s'"
@@ -484,21 +484,21 @@ msgstr "Tidak dapat akses peranti '%s'"
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:473
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:473
 #, c-format
 msgid "Could not start finger capture on '%s' device"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:520
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:520
 msgid "Could not access any fingerprint readers"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:521
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:521
 msgid "Please contact your system administrator for help."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:551
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:551
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:2
 msgid "Enable Fingerprint Login"
 msgstr ""
 
@@ -506,90 +506,90 @@ msgstr ""
 #. * The variable is the name of the device, for example:
 #. * "To enable fingerprint login, you need to save one of your fingerprints, using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:581
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:581
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the '%s' device."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:590
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:590
 msgid "Swipe finger on reader"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:592
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:592
 msgid "Place finger on reader"
 msgstr "Letakkan jari pada pembaca"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:3
 msgid "Left index finger"
 msgstr "Jari penunjuk kiri"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:4
 msgid "Left little finger"
 msgstr "Jari anak kiri"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:5
 msgid "Left middle finger"
 msgstr "Jari tengah kiri"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:6
 msgid "Left ring finger"
 msgstr "Jari manis kiri"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:7
 msgid "Left thumb"
 msgstr "Ibu jari kiri"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:8
 msgid "Other finger: "
 msgstr "Jari lain:"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:9
 msgid "Right index finger"
 msgstr "Jari penunjuk kanan"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:10
 msgid "Right little finger"
 msgstr "Jari anak"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:11
 msgid "Right middle finger"
 msgstr "Jari tengah kanan"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:12
 msgid "Right ring finger"
 msgstr "Jari manis kanan"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:13
 msgid "Right thumb"
 msgstr "Ibu jari kanan"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:14
 msgid "Select finger"
 msgstr "Pilih jari"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:15
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:161
+#: ../capplets/about-me/cinnamon-about-me-password.c:161
 msgid "Child exited unexpectedly"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:296
+#: ../capplets/about-me/cinnamon-about-me-password.c:296
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:309
+#: ../capplets/about-me/cinnamon-about-me-password.c:309
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:408
+#: ../capplets/about-me/cinnamon-about-me-password.c:408
 msgid "Authenticated!"
 msgstr ""
 
@@ -599,103 +599,103 @@ msgstr ""
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:474
-#: ../capplets/about-me/gnome-about-me-password.c:554
+#: ../capplets/about-me/cinnamon-about-me-password.c:474
+#: ../capplets/about-me/cinnamon-about-me-password.c:554
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:476
+#: ../capplets/about-me/cinnamon-about-me-password.c:476
 msgid "That password was incorrect."
 msgstr "Katalaluan tersebut tidak betul."
 
-#: ../capplets/about-me/gnome-about-me-password.c:525
+#: ../capplets/about-me/cinnamon-about-me-password.c:525
 msgid "Your password has been changed."
 msgstr "Katalaluan anda telah ditukar"
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:535
+#: ../capplets/about-me/cinnamon-about-me-password.c:535
 #, c-format
 msgid "System error: %s."
 msgstr "Ralat sistem: %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:538
+#: ../capplets/about-me/cinnamon-about-me-password.c:538
 msgid "The password is too short."
 msgstr "Katalaluan terlalu pendek"
 
-#: ../capplets/about-me/gnome-about-me-password.c:542
+#: ../capplets/about-me/cinnamon-about-me-password.c:542
 msgid "The password is too simple."
 msgstr "Katalaluan terlalu mudah"
 
-#: ../capplets/about-me/gnome-about-me-password.c:546
+#: ../capplets/about-me/cinnamon-about-me-password.c:546
 msgid "The old and new passwords are too similar."
 msgstr "Katalaluan lama dan baru hampir sama"
 
-#: ../capplets/about-me/gnome-about-me-password.c:548
+#: ../capplets/about-me/cinnamon-about-me-password.c:548
 msgid "The new password must contain numeric or special character(s)."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:551
+#: ../capplets/about-me/cinnamon-about-me-password.c:551
 msgid "The old and new passwords are the same."
 msgstr "Katalaluan lama dan baru sama"
 
 #. translators: Unable to launch <program>: <error message>
-#: ../capplets/about-me/gnome-about-me-password.c:822
+#: ../capplets/about-me/cinnamon-about-me-password.c:822
 #, c-format
 msgid "Unable to launch %s: %s"
 msgstr "Tidak dapat lancarkan %s: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:826
+#: ../capplets/about-me/cinnamon-about-me-password.c:826
 msgid "Unable to launch backend"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:827
+#: ../capplets/about-me/cinnamon-about-me-password.c:827
 msgid "A system error has occurred"
 msgstr "Ralat sistem telah berlaku"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:847
+#: ../capplets/about-me/cinnamon-about-me-password.c:847
 msgid "Checking password..."
 msgstr "Menyemak katalaluan"
 
-#: ../capplets/about-me/gnome-about-me-password.c:934
+#: ../capplets/about-me/cinnamon-about-me-password.c:934
 msgid "Click <b>Change password</b> to change your password."
 msgstr "Kilik <b>Tukar katalaluan</b> untuk menukar katalaluan anda"
 
-#: ../capplets/about-me/gnome-about-me-password.c:937
+#: ../capplets/about-me/cinnamon-about-me-password.c:937
 msgid "Please type your password in the <b>New password</b> field."
 msgstr "Sila taip katalaluan dalam <b>Katalaluan baru</b> ruang."
 
-#: ../capplets/about-me/gnome-about-me-password.c:940
-#: ../capplets/about-me/gnome-about-me-password.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-password.c:940
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:5
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr ""
 "Sila taip katalaluan sekali lagi dalam <b>Taip semula katalaluan</b> ruang."
 
-#: ../capplets/about-me/gnome-about-me-password.c:943
+#: ../capplets/about-me/cinnamon-about-me-password.c:943
 msgid "The two passwords are not equal."
 msgstr "Kedua-dua katalaluan tidak sama"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:1
 msgid "Change pa_ssword"
 msgstr "Tukar ka_talaluan"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:2
 msgid "Change password"
 msgstr "Tukar katalaluan"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:3
 msgid "Change your password"
 msgstr "Tukar katalaluan anda"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:4
 msgid "Current _password:"
 msgstr "Katalaluan _sekarang:"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:6
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -703,15 +703,15 @@ msgid ""
 "verification and click <b>Change password</b>."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:8
 msgid "_Authenticate"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:9
 msgid "_New password:"
 msgstr "_Katalaluan baru:"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:10
 msgid "_Retype new password:"
 msgstr "_Taip semula katalaluan baru:"
 
@@ -852,8 +852,8 @@ msgid "Specify the name of the page to show (theme|background|fonts|interface)"
 msgstr ""
 
 #: ../capplets/appearance/appearance-main.c:144
-#: ../capplets/default-applications/gnome-da-capplet.c:960
-#: ../capplets/mouse/gnome-mouse-properties.c:591
+#: ../capplets/default-applications/cinnamon-da-capplet.c:960
+#: ../capplets/mouse/cinnamon-mouse-properties.c:591
 msgid "page"
 msgstr "laman"
 
@@ -862,8 +862,8 @@ msgid "[WALLPAPER...]"
 msgstr ""
 
 #: ../capplets/appearance/appearance-style.c:172
-#: ../capplets/common/gnome-theme-info.c:446
-#: ../capplets/common/gnome-theme-info.c:638
+#: ../capplets/common/cinnamon-theme-info.c:446
+#: ../capplets/common/cinnamon-theme-info.c:638
 #, fuzzy
 msgid "Default Pointer"
 msgstr "Kursor Default"
@@ -874,7 +874,7 @@ msgid "Install"
 msgstr "Pasang"
 
 #: ../capplets/appearance/appearance-style.c:256
-#: ../capplets/common/gnome-theme-info.c:1646
+#: ../capplets/common/cinnamon-theme-info.c:1646
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme engine "
@@ -931,7 +931,7 @@ msgid "The current theme suggests a font."
 msgstr "Tema ini mencadangkanfont:"
 
 #: ../capplets/appearance/appearance-themes.c:1046
-#: ../capplets/default-applications/gnome-da-capplet.c:691
+#: ../capplets/default-applications/cinnamon-da-capplet.c:691
 #, fuzzy
 msgid "Custom"
 msgstr "Tersendiri"
@@ -1030,7 +1030,7 @@ msgid "Icons only"
 msgstr "Ikon sahaja"
 
 #: ../capplets/appearance/data/appearance.ui.h:24
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Large"
 msgstr "Besar"
 
@@ -1075,7 +1075,7 @@ msgid "Scale"
 msgstr "Skala"
 
 #: ../capplets/appearance/data/appearance.ui.h:34
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:31
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:31
 msgid "Small"
 msgstr "Kecil"
 
@@ -1154,7 +1154,7 @@ msgid "Zoom"
 msgstr ""
 
 #: ../capplets/appearance/data/appearance.ui.h:54
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:45
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:45
 msgid "_Add..."
 msgstr "_Tambah..."
 
@@ -1201,7 +1201,7 @@ msgid "_Monochrome"
 msgstr "_Monokrom"
 
 #: ../capplets/appearance/data/appearance.ui.h:66
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:5
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:5
 msgid "_Name:"
 msgstr "_Nama:"
 
@@ -1257,51 +1257,51 @@ msgstr "_Tetingkap:"
 msgid "dots per inch"
 msgstr "dot per inci"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:1
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:2
 #, fuzzy
 msgid "Customize the look of the desktop"
 msgstr "Pilih tema bagi desktop"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:1
 msgid "Installs themes packages for various parts of the desktop"
 msgstr "Pilih pakej tema bagi pelbagai bahagian pada dekstop"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:2
 msgid "Theme Installer"
 msgstr "Pemasang Tema"
 
-#: ../capplets/appearance/data/gnome-theme-package.xml.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-package.xml.in.h:1
 msgid "Gnome Theme Package"
 msgstr "Pakej Tema GNOME"
 
-#: ../capplets/appearance/gnome-wp-info.c:50
+#: ../capplets/appearance/cinnamon-wp-info.c:50
 msgid "No Desktop Background"
 msgstr "Tiada Latar Belakang Desktop"
 
-#: ../capplets/appearance/gnome-wp-item.c:261
+#: ../capplets/appearance/cinnamon-wp-item.c:261
 msgid "Slide Show"
 msgstr ""
 
-#: ../capplets/appearance/gnome-wp-item.c:263
+#: ../capplets/appearance/cinnamon-wp-item.c:263
 msgid "Image"
 msgstr "Imej"
 
-#: ../capplets/appearance/gnome-wp-item.c:269
+#: ../capplets/appearance/cinnamon-wp-item.c:269
 msgid "multiple sizes"
 msgstr "pelbagai saiz"
 
 #. translators: x pixel(s) by y pixel(s)
-#: ../capplets/appearance/gnome-wp-item.c:272
+#: ../capplets/appearance/cinnamon-wp-item.c:272
 #, c-format
 msgid "%d %s by %d %s"
 msgstr "%d %s by %d %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:274
-#: ../capplets/appearance/gnome-wp-item.c:276
+#: ../capplets/appearance/cinnamon-wp-item.c:274
+#: ../capplets/appearance/cinnamon-wp-item.c:276
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -1311,7 +1311,7 @@ msgstr[1] ""
 #. * mime type, size
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:284
+#: ../capplets/appearance/cinnamon-wp-item.c:284
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1326,7 +1326,7 @@ msgstr ""
 #. * Image missing
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:296
+#: ../capplets/appearance/cinnamon-wp-item.c:296
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1337,7 +1337,7 @@ msgstr ""
 "%s\n"
 "Folder: %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:300
+#: ../capplets/appearance/cinnamon-wp-item.c:300
 msgid "Image missing"
 msgstr "Imej hilang"
 
@@ -1454,13 +1454,13 @@ msgstr "Tidak dapat pasang enjin tema"
 # lom
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"Gagal memulakan pengurus tetapan 'gnome-setting-daemon'.\n"
+"Gagal memulakan pengurus tetapan 'cinnamon-setting-daemon'.\n"
 "Tanpa pengurus tetapan GNOME terlaksana, setengah keutamaan tidakk dapat "
 "bertindak. Ini menunjukkan masalah dengan DBus, atau pengurus tetapan bukan-"
 "GNOME (ie. KDE) sudah tersedia aktif dan konflik dengan pengurus tetapan "
@@ -1660,56 +1660,56 @@ msgstr "Sila pilih satu imej."
 msgid "_Select"
 msgstr "_Pilih"
 
-#: ../capplets/common/gnome-theme-info.c:639
+#: ../capplets/common/cinnamon-theme-info.c:639
 #, fuzzy
 msgid "Default Pointer - Current"
 msgstr "Kursor Default - Semasa"
 
-#: ../capplets/common/gnome-theme-info.c:643
+#: ../capplets/common/cinnamon-theme-info.c:643
 #, fuzzy
 msgid "White Pointer"
 msgstr "Kursor Putih"
 
-#: ../capplets/common/gnome-theme-info.c:644
+#: ../capplets/common/cinnamon-theme-info.c:644
 #, fuzzy
 msgid "White Pointer - Current"
 msgstr "Kursor Putih - Semasa"
 
-#: ../capplets/common/gnome-theme-info.c:648
+#: ../capplets/common/cinnamon-theme-info.c:648
 #, fuzzy
 msgid "Large Pointer"
 msgstr "<b>Cari Pointer</b>"
 
-#: ../capplets/common/gnome-theme-info.c:649
+#: ../capplets/common/cinnamon-theme-info.c:649
 #, fuzzy
 msgid "Large Pointer - Current"
 msgstr "Kursor Besar - Semasa"
 
-#: ../capplets/common/gnome-theme-info.c:653
+#: ../capplets/common/cinnamon-theme-info.c:653
 #, fuzzy
 msgid "Large White Pointer - Current"
 msgstr "Kursor Putih Besar - Semasa"
 
-#: ../capplets/common/gnome-theme-info.c:654
+#: ../capplets/common/cinnamon-theme-info.c:654
 #, fuzzy
 msgid "Large White Pointer"
 msgstr "Kursor Putih Besar"
 
-#: ../capplets/common/gnome-theme-info.c:1622
+#: ../capplets/common/cinnamon-theme-info.c:1622
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme '%s' is "
 "not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1630
+#: ../capplets/common/cinnamon-theme-info.c:1630
 #, c-format
 msgid ""
 "This theme will not look as intended because the required window manager "
 "theme '%s' is not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1637
+#: ../capplets/common/cinnamon-theme-info.c:1637
 #, c-format
 msgid ""
 "This theme will not look as intended because the required icon theme '%s' is "
@@ -1717,7 +1717,7 @@ msgid ""
 msgstr ""
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:17
 msgid "Preferred Applications"
 msgstr "Aplikasi Digemari"
 
@@ -1725,45 +1725,45 @@ msgstr "Aplikasi Digemari"
 msgid "Select your default applications"
 msgstr "Pilih aplikasi default anda"
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:2
 msgid "Visual Assistance"
 msgstr "Pembantu Visual"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:98
-#: ../capplets/default-applications/gnome-da-capplet.c:362
-#: ../capplets/default-applications/gnome-da-capplet.c:383
+#: ../capplets/default-applications/cinnamon-da-capplet.c:98
+#: ../capplets/default-applications/cinnamon-da-capplet.c:362
+#: ../capplets/default-applications/cinnamon-da-capplet.c:383
 #, fuzzy, c-format
 msgid "Error saving configuration: %s"
 msgstr "Ralat membuang tetapan pemecut  pada pangkalandata konfigurasi: %s\n"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:722
+#: ../capplets/default-applications/cinnamon-da-capplet.c:722
 msgid "Could not load the main interface"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:724
+#: ../capplets/default-applications/cinnamon-da-capplet.c:724
 msgid "Please make sure that the applet is properly installed"
 msgstr ""
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/default-applications/gnome-da-capplet.c:959
+#: ../capplets/default-applications/cinnamon-da-capplet.c:959
 msgid "Specify the name of the page to show (internet|multimedia|system|a11y)"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:964
+#: ../capplets/default-applications/cinnamon-da-capplet.c:964
 msgid "- GNOME Default Applications"
 msgstr "- Aplikasi Default GNOME"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:1
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Accessibility"
 msgstr "Kebolehcapaikan"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:3
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr ""
@@ -1771,303 +1771,303 @@ msgstr ""
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:4
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:1
 msgid "C_ommand:"
 msgstr "A_rahan:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:5
 msgid "Co_mmand:"
 msgstr "_Arahan:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:6
 #, fuzzy
 msgid "E_xecute flag:"
 msgstr "Flag _Larian:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:7
 msgid "Image Viewer"
 msgstr "Penonton Imej"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:8
 msgid "Instant Messenger"
 msgstr "Mesej Instan"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:9
 msgid "Internet"
 msgstr "Internet"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:10
 msgid "Mail Reader"
 msgstr "Pembaca Mel"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:11
 msgid "Mobility"
 msgstr "Mobiliti"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:12
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:13
 msgid "Multimedia Player"
 msgstr "Pemain Multimedia"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:14
 msgid "Open link in new _tab"
 msgstr "Buka pautan pada _tab baru"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:15
 msgid "Open link in new _window"
 msgstr "Buka pautan pada tetingkap baru"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:16
 msgid "Open link with web browser _default"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:18
 msgid "Run at st_art"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:19
 msgid "Run in t_erminal"
 msgstr "Laksana di t_erminal"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:20
 msgid "System"
 msgstr "Sistem"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:21
 msgid "Terminal Emulator"
 msgstr "Terminal Emulator"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:22
 msgid "Text Editor"
 msgstr "Editor Teks"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:23
 msgid "Video Player"
 msgstr "Pemain Video"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:24
 msgid "Visual"
 msgstr "Visual"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:25
 msgid "Web Browser"
 msgstr "Pelayar Web"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:26
 msgid "_Run at start"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr "Pemain Muzik Banshee"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr "Mel Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 #, fuzzy
 msgid "Debian Sensible Browser"
 msgstr "Pelayar Web Derfault"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr "Terminal Debian Emulator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr "Pelayar Web Epiphany"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr "Pembaca Emel Evolution"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 #, fuzzy
 msgid "GNOME OnScreen Keyboard"
 msgstr "Papan kekunci pada-_skrin"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr "Terminal GNOME"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr "Gnopernicus"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr "Gnopernicus dengan Kanta Pembesar"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr "Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr "Mail Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr "Icedove"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr "Iceweasel"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr "Konsole"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr "Pembaca Skrin Linux"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Listen"
 msgstr "Dengar"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Midori"
 msgstr "Midori"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Mail"
 msgstr "Mel Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Muine Music Player"
 msgstr "Pemain Muzik Muine"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:37
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:38
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Netscape Communicator"
 msgstr "Netscape Communicator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:39
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Opera"
 msgstr "Opera"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:40
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca"
 msgstr "Orca"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:41
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "Orca with Magnifier"
 msgstr "Orca dengan Kaca Pembesar"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:42
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:43
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "Rhythmbox Music Player"
 msgstr "Pemain Muzik Rhythmbox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:44
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:45
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "SeaMonkey Mail"
 msgstr "Mail SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:46
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Standard XTerminal"
 msgstr "XTerminal Piawai"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:47
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:48
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:49
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Terminator"
 msgstr "Terminator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:50
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:51
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "Totem Movie Player"
 msgstr "Pemain Wayang Totem"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:52
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:52
 msgid "aterm"
 msgstr "aterm"
 
@@ -2260,26 +2260,26 @@ msgid "The type of accelerator."
 msgstr "Jenis pemecut ."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:119
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:119
 #: ../typing-break/drwright.c:498
 msgid "Disabled"
 msgstr "Dimatikan"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:200
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:200
 msgid "<Unknown Action>"
 msgstr "<Aksi Tidak diketahui>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:950
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1581
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:950
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1581
 #, fuzzy
 msgid "Custom Shortcuts"
 msgstr "Pintasan"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1092
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1092
 msgid "Error saving the new shortcut"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1171
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1171
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -2287,7 +2287,7 @@ msgid ""
 "Please try with a key such as Control, Alt or Shift at the same time."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1201
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1201
 #, fuzzy, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
@@ -2296,44 +2296,44 @@ msgstr ""
 "Pintasan  \"%s\" telah digunakan oleh:\n"
 "\"%s\"\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1207
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1207
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1215
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1215
 msgid "_Reassign"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1335
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1335
 #, fuzzy, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr "Ralat membuang tetapan pemecut  pada pangkalandata konfigurasi: %s\n"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1536
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1536
 #, fuzzy
 msgid "Too many custom shortcuts"
 msgstr "Pintasan bagi volum naik"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1832
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1832
 msgid "Action"
 msgstr "Aksi"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1854
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1854
 msgid "Shortcut"
 msgstr "Pintasan"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:2
 msgid "Custom Shortcut"
 msgstr "Pintasan Penyesuaian"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:3
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:3
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Kekunci"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:4
 #, fuzzy
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
@@ -2344,175 +2344,175 @@ msgstr "Taip pemecut baru, atau tekan Backspace untuk terangkan"
 msgid "Assign shortcut keys to commands"
 msgstr "Umpuk kekunci pintasan pada arahan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:205
-#: ../capplets/keyboard/gnome-keyboard-properties.c:210
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:205
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:210
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr ""
 "Hanya terapkan tetapan dan keluar (kompatibiliti sahaja; kini dikendali oleh "
 "deamon)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:215
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:215
 msgid "Start the page with the typing break settings showing"
 msgstr "Mulakan halaman dengan tetapan hentian taip dipaparkan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:220
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:220
 #, fuzzy
 msgid "Start the page with the accessibility settings showing"
 msgstr "Mulakan halaman dengan tetapan hentian taip dipaparkan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:226
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:226
 #, fuzzy
 msgid "- GNOME Keyboard Preferences"
 msgstr "Keutamaan Papan Kekunci"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:1
 msgid "Beep when _accessibility features are turned on or off"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:2
 #, fuzzy
 msgid "Beep when a _modifier key is pressed"
 msgstr "Beep bila _modifier ditekan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:3
 #, fuzzy
 msgid "Beep when a _toggle key is pressed"
 msgstr "Beep bila _modifier ditekan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:4
 #, fuzzy
 msgid "Beep when a key is pr_essed"
 msgstr "Beep bila _modifier ditekan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:5
 #, fuzzy
 msgid "Beep when a key is reje_cted"
 msgstr "Beep jika kekunci di_lepas"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:6
 #, fuzzy
 msgid "Beep when key is _accepted"
 msgstr "Beep bila kekunci:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:7
 #, fuzzy
 msgid "Beep when key is _rejected"
 msgstr "Beep jika kekunci di_lepas"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:8
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:4
 #, fuzzy
 msgid "Bounce Keys"
 msgstr "kekunci Tetikus"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:9
 msgid "Flash _window titlebar"
 msgstr "Flash bar tajuk _tetingkap"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:10
 #, fuzzy
 msgid "Flash entire _screen"
 msgstr "Flash _seluruh skrin"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:11
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:14
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "General"
 msgstr "Am"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:12
 #, fuzzy
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr "Keutamaan Kebolehcapaian Papan Kekunci (AccessX)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:13
 msgid "Show _visual feedback for the alert sound"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:14
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:39
 msgid "Slow Keys"
 msgstr "Kekunci Perlahan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:15
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:40
 msgid "Sticky Keys"
 msgstr "Kekunci Lekat"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:16
 msgid "Visual cues for sounds"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:2
 msgid "All_ow postponing of breaks"
 msgstr "_Izinkan tangguhan bagi hentian"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:3
 msgid "Audio _Feedback..."
 msgstr "Maklumbalas _Audio..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:5
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Semak jika hentian adalah diizinkan untuk ditangguh"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:6
 msgid "Cursor Blinking"
 msgstr "Kerdipan Kursor"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:7
 #, fuzzy
 msgid "Cursor _blinks in text fields"
 msgstr "_Kerdipan kursor pada kekotak dan medan teks"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:8
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Cursor blinks speed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:9
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "D_elay:"
 msgstr "P_enangguhan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:10
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:11
 msgid "Duration of the break when typing is disallowed"
 msgstr "Tempoh bagi hentian bila menaip tak diizinkan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:12
 msgid "Duration of work before forcing a break"
 msgstr "Tempoh bagi kerja untuk memaksa hentian"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:13
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Fast"
 msgstr "Laju"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:15
 msgid "Key presses _repeat when key is held down"
 msgstr "Tekanan kekunci ber_ulang apabila kekunci ditekan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:16
 msgid "Keyboard Preferences"
 msgstr "Keutamaan Papan Kekunci"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:17
 msgid "Keyboard _model:"
 msgstr "_Model papan kekunci:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:18
 msgid "Layouts"
 msgstr "Susunatur"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:19
 msgid "List of keyboard layouts selected for usage"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:20
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -2520,215 +2520,215 @@ msgstr ""
 "Kunci skrin selepas tempoh tertentu untuk membantu mencegah kemalangan papan "
 "kekunci berulang"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:21
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:19
 msgid "Long"
 msgstr "Panjang"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:22
 msgid "Mouse Keys"
 msgstr "kekunci Tetikus"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:23
 msgid "Move _Down"
 msgstr "Bergerak ke _Bawah"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:24
 msgid "Move _Up"
 msgstr "Bergerak ke _Atas"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:25
 msgid "Move the selected keyboard layout down in the list"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:26
 msgid "Move the selected keyboard layout up in the list"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:27
 msgid "New windows u_se active window's layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:28
 msgid "Print a diagram of the selected keyboard layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:29
 msgid "Remove the selected keyboard layout from the list"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:30
 msgid "Repeat Keys"
 msgstr "Kekunci Ulangan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:31
 msgid "Repeat keys speed"
 msgstr "Ulangan kelajuan kekunci"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:32
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:34
 #, fuzzy
 msgid "Reset to De_faults"
 msgstr "Ulangtetap ke de_fault"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:35
 msgid "S_peed:"
 msgstr "Ke_lajuan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:36
 msgid "Select a keyboard layout to be added to the list"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:37
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:37
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:27
 msgid "Short"
 msgstr "Pendek"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:38
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "Slow"
 msgstr "Lambat"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:41
 msgid "Typing Break"
 msgstr "Hentian Menaip"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:42
 msgid "View and edit keyboard layout options"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:43
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Acceleration:"
 msgstr "_Pemecutan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:44
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:44
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:46
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:46
 msgid "_Break interval lasts:"
 msgstr "_Selangmasa rehat bertahan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:47
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:38
 msgid "_Delay:"
 msgstr "_Lengahan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:48
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:48
 #, fuzzy
 msgid "_Ignore fast duplicate keypresses"
 msgstr "_Abaikan gandaan tekanan kekunci dalam tempoh:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:49
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:49
 #, fuzzy
 msgid "_Lock screen to enforce typing break"
 msgstr "<b>_Kunci skrin untuk menimplementasi hentian taip</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:50
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:50
 #, fuzzy
 msgid "_Only accept long keypresses"
 msgstr "_Hanya terima tekanan kekunci bagi:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:51
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:51
 msgid "_Options..."
 msgstr "_Opsyen..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:52
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:52
 msgid "_Pointer can be controlled using the keypad"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:53
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:53
 msgid "_Separate layout for each window"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:54
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:54
 msgid "_Simulate simultaneous keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:55
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:55
 msgid "_Speed:"
 msgstr "Ke_lajuan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:56
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:56
 msgid "_Type to test settings:"
 msgstr "_Taip untuk uji tetapan:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:57
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:57
 msgid "_Work interval lasts:"
 msgstr "_Selangmasa kerja bertahan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:58
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:58
 msgid "minutes"
 msgstr "minit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:1
 msgid "By _country"
 msgstr "Mengikut _negara"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:2
 msgid "By _language"
 msgstr "Mengikut _bahasa"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:3
 msgid "Choose a Layout"
 msgstr "Pilih Susunan"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:4
 msgid "Preview:"
 msgstr "Prebiu:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:5
 msgid "_Country:"
 msgstr "_Negara:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:6
 msgid "_Language:"
 msgstr "_Bahasa:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:7
 msgid "_Variants:"
 msgstr "_Variasi:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:1
 msgid "Choose a Keyboard Model"
 msgstr "Pilih Model Papan Kekunci"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:2
 msgid "_Models:"
 msgstr "_Model:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:3
 msgid "_Vendors:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-options-dialog.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr "Susunan Opsyen Papan Kekunci"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:82
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:82
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:241
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:241
 msgid "Layout"
 msgstr "Susunatur"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:168
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:168
 msgid "Vendors"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:234
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:234
 msgid "Models"
 msgstr "Model"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:235
-#: ../capplets/network/gnome-network-properties.c:581
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:235
+#: ../capplets/network/cinnamon-network-properties.c:581
 msgid "Default"
 msgstr "Default"
 
@@ -2742,324 +2742,324 @@ msgstr "Tetapkan keutamaan papan kekunci"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:89
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:89
 msgid "gesture|Move left"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:94
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:94
 msgid "gesture|Move right"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:99
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:99
 msgid "gesture|Move up"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:104
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:104
 msgid "gesture|Move down"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:109
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:109
 #, fuzzy
 msgid "gesture|Disabled"
 msgstr "Dimatikan"
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/mouse/gnome-mouse-properties.c:590
+#: ../capplets/mouse/cinnamon-mouse-properties.c:590
 msgid "Specify the name of the page to show (general|accessibility)"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.c:595
+#: ../capplets/mouse/cinnamon-mouse-properties.c:595
 #, fuzzy
 msgid "- GNOME Mouse Preferences"
 msgstr "Keutamaan Tetikus"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Choose type of click _beforehand"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Choose type of click with mo_use gestures"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "D_ouble click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "D_rag click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Disable _touchpad while typing"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:9
 #, fuzzy
 msgid "Double-Click Timeout"
 msgstr "<b>Hadmasa Dwi-Klik </b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:10
 #, fuzzy
 msgid "Drag and Drop"
 msgstr "<b>Heret dan Jatuh</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "Dwell Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Enable _mouse clicks with touchpad"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "Enable h_orizontal scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "High"
 msgstr "Tinggi"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:18
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:18
 #, fuzzy
 msgid "Locate Pointer"
 msgstr "<b>Cari Pointer</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:20
 msgid "Low"
 msgstr "Rendah"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:21
 #, fuzzy
 msgid "Mouse Orientation"
 msgstr "<b>Orientasi Tetikus</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:22
 msgid "Mouse Preferences"
 msgstr "Keutamaan Tetikus"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:23
 #, fuzzy
 msgid "Pointer Speed"
 msgstr "Kelajuan ma_ksima penuding:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:24
 msgid "Scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:25
 msgid "Seco_ndary click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:26
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:26
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:28
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:28
 msgid "Show click type _window"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:29
 msgid "Simulated Secondary Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:32
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:32
 #, fuzzy
 msgid "Thr_eshold:"
 msgstr "_Treshold:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:33
 msgid ""
 "To test your double-click settings, try to double-click on the light bulb."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:34
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:35
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "Two-_finger scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:36
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "You can also use the Dwell Click panel applet to choose the click type."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:39
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:39
 msgid "_Disabled"
 msgstr "_Dimatikan"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:40
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:40
 msgid "_Edge scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:41
 msgid "_Initiate click when stopping pointer movement"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:42
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:42
 msgid "_Left-handed"
 msgstr "_Tetikus-kidal"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:43
 #, fuzzy
 msgid "_Motion threshold:"
 msgstr "_Treshold:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:44
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:44
 msgid "_Right-handed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:45
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:45
 msgid "_Sensitivity:"
 msgstr "_Tahap sensitif:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:46
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:46
 msgid "_Single click:"
 msgstr "_Sekali klik:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:47
 msgid "_Timeout:"
 msgstr "_Hadmasa:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:48
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:48
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr ""
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Tetikus"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Tetapkan keutamaan tetikus"
 
-#: ../capplets/network/gnome-network-properties.c:699
-#: ../capplets/network/gnome-network-properties.c:850
+#: ../capplets/network/cinnamon-network-properties.c:699
+#: ../capplets/network/cinnamon-network-properties.c:850
 msgid "New Location..."
 msgstr "Lokasi Baru..."
 
-#: ../capplets/network/gnome-network-properties.c:816
+#: ../capplets/network/cinnamon-network-properties.c:816
 msgid "Location already exists"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Proksi Rangkaian"
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your network proxy preferences"
 msgstr "Keutamaan proksi rangkaian"
 
-#: ../capplets/network/gnome-network-properties.ui.h:1
+#: ../capplets/network/cinnamon-network-properties.ui.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>Sa_mbungan internet langsung</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:2
+#: ../capplets/network/cinnamon-network-properties.ui.h:2
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>Konfigurasi proksi _automatik</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:3
+#: ../capplets/network/cinnamon-network-properties.ui.h:3
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>Konfigurasi proksi _manual</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:4
+#: ../capplets/network/cinnamon-network-properties.ui.h:4
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Guna authentikasi</b>"
 
-#: ../capplets/network/gnome-network-properties.ui.h:5
+#: ../capplets/network/cinnamon-network-properties.ui.h:5
 msgid "Autoconfiguration _URL:"
 msgstr "_URL Autokonfigurasi:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:6
+#: ../capplets/network/cinnamon-network-properties.ui.h:6
 msgid "C_reate"
 msgstr "C_ipta"
 
-#: ../capplets/network/gnome-network-properties.ui.h:7
+#: ../capplets/network/cinnamon-network-properties.ui.h:7
 msgid "Create New Location"
 msgstr "Cipta Lokasi Baru"
 
-#: ../capplets/network/gnome-network-properties.ui.h:8
+#: ../capplets/network/cinnamon-network-properties.ui.h:8
 msgid "HTTP Proxy Details"
 msgstr "Perincian Proksi HTTP"
 
-#: ../capplets/network/gnome-network-properties.ui.h:9
+#: ../capplets/network/cinnamon-network-properties.ui.h:9
 msgid "H_TTP proxy:"
 msgstr "Proksi H_TTP:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:10
+#: ../capplets/network/cinnamon-network-properties.ui.h:10
 msgid "Ignore Host List"
 msgstr "Senarai Hos Abaian"
 
-#: ../capplets/network/gnome-network-properties.ui.h:11
+#: ../capplets/network/cinnamon-network-properties.ui.h:11
 msgid "Ignored Hosts"
 msgstr "Abaikan Hos"
 
-#: ../capplets/network/gnome-network-properties.ui.h:12
+#: ../capplets/network/cinnamon-network-properties.ui.h:12
 msgid "Location:"
 msgstr "Lokasi:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:13
+#: ../capplets/network/cinnamon-network-properties.ui.h:13
 msgid "Network Proxy Preferences"
 msgstr "Keutamaan Proksi Rangkaian"
 
-#: ../capplets/network/gnome-network-properties.ui.h:14
+#: ../capplets/network/cinnamon-network-properties.ui.h:14
 msgid "Port:"
 msgstr "Liang:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:15
+#: ../capplets/network/cinnamon-network-properties.ui.h:15
 msgid "Proxy Configuration"
 msgstr "Konfigurasi Proksi"
 
-#: ../capplets/network/gnome-network-properties.ui.h:16
+#: ../capplets/network/cinnamon-network-properties.ui.h:16
 msgid "S_ocks host:"
 msgstr "_Hos soket:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:17
+#: ../capplets/network/cinnamon-network-properties.ui.h:17
 msgid "The location already exists."
 msgstr "Lokasi tersebut sudah wujud."
 
-#: ../capplets/network/gnome-network-properties.ui.h:18
+#: ../capplets/network/cinnamon-network-properties.ui.h:18
 msgid "U_sername:"
 msgstr "Nama_pengguna:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:19
+#: ../capplets/network/cinnamon-network-properties.ui.h:19
 msgid "_Delete Location"
 msgstr "_Padam Lokasi:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:20
+#: ../capplets/network/cinnamon-network-properties.ui.h:20
 msgid "_Details"
 msgstr "_Perincian"
 
-#: ../capplets/network/gnome-network-properties.ui.h:21
+#: ../capplets/network/cinnamon-network-properties.ui.h:21
 msgid "_FTP proxy:"
 msgstr "Proksi _FTP:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:22
+#: ../capplets/network/cinnamon-network-properties.ui.h:22
 msgid "_Location name:"
 msgstr "_Nama Lokasi:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:23
+#: ../capplets/network/cinnamon-network-properties.ui.h:23
 msgid "_Password:"
 msgstr "_Katalaluan:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:24
+#: ../capplets/network/cinnamon-network-properties.ui.h:24
 msgid "_Secure HTTP proxy:"
 msgstr "Proksi HTTP _Selamat:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:25
+#: ../capplets/network/cinnamon-network-properties.ui.h:25
 msgid "_Use the same proxy for all protocols"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.c:344
+#: ../capplets/windows/cinnamon-window-properties.c:344
 #, fuzzy
 msgid "Cannot start the preferences application for your window manager"
 msgstr ""
@@ -3067,61 +3067,61 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../capplets/windows/gnome-window-properties.c:603
+#: ../capplets/windows/cinnamon-window-properties.c:603
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:609
+#: ../capplets/windows/cinnamon-window-properties.c:609
 msgid "H_yper"
 msgstr "H_iper"
 
-#: ../capplets/windows/gnome-window-properties.c:616
+#: ../capplets/windows/cinnamon-window-properties.c:616
 msgid "S_uper (or \"Windows logo\")"
 msgstr "S_uper (atau \"Logo Windows\")"
 
-#: ../capplets/windows/gnome-window-properties.c:623
+#: ../capplets/windows/cinnamon-window-properties.c:623
 msgid "_Meta"
 msgstr "_Meta"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:1
+#: ../capplets/windows/cinnamon-window-properties.ui.h:1
 msgid "Movement Key"
 msgstr "Kekunci Pergerakan"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:2
+#: ../capplets/windows/cinnamon-window-properties.ui.h:2
 msgid "Titlebar Action"
 msgstr "Aksi Bar Tajuk"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:3
+#: ../capplets/windows/cinnamon-window-properties.ui.h:3
 #, fuzzy
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr ""
 "Untuk meng_alih tetingkap, tekan-dan-pegang kekunci dan genggam tetingkap:"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:4
+#: ../capplets/windows/cinnamon-window-properties.ui.h:4
 msgid "Window Preferences"
 msgstr "Keutamaan Tetingkap"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:5
+#: ../capplets/windows/cinnamon-window-properties.ui.h:5
 msgid "Window Selection"
 msgstr "Pemilihan Tertingkap"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:6
+#: ../capplets/windows/cinnamon-window-properties.ui.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_Dwi-klik bar tajuk untuk melakukan aksi ini:"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:7
+#: ../capplets/windows/cinnamon-window-properties.ui.h:7
 msgid "_Interval before raising:"
 msgstr "_Selang masa sebelum angkat:"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:8
+#: ../capplets/windows/cinnamon-window-properties.ui.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "_Angkat tetingkap dipilih selepas satu selangmasa"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:9
+#: ../capplets/windows/cinnamon-window-properties.ui.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Pilih tetingkap bila tetikus di atasnya"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:10
+#: ../capplets/windows/cinnamon-window-properties.ui.h:10
 msgid "seconds"
 msgstr "saat"
 
@@ -3134,7 +3134,7 @@ msgstr "Ciri-ciri Tetingkap"
 msgid "Windows"
 msgstr "Tetingkap"
 
-#: ../libwindow-settings/gnome-wm-manager.c:316
+#: ../libwindow-settings/cinnamon-wm-manager.c:316
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr "Pengurus tetingkap \"%s\" tak mendaftarkan radas konfigurasi\n"
@@ -3244,7 +3244,7 @@ msgstr ""
 #: ../shell/control-center.schemas.in.h:13
 msgid ""
 "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;default-"
-"applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+"applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 msgstr ""
 
 #: ../shell/control-center.schemas.in.h:14
@@ -3447,12 +3447,12 @@ msgstr "penggunaan: %s fontfile\n"
 msgid "I_nstall Font"
 msgstr "_Pasang"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:1
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:1
 #, fuzzy
 msgid "Font Viewer"
 msgstr "Pusat Kawalan GNOME"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:2
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "Preview fonts"
 msgstr "Fon Prebiu"
 
@@ -4069,10 +4069,10 @@ msgstr ""
 #~ msgid ""
 #~ "No themes could be found on your system.  This probably means that your "
 #~ "\"Theme Preferences\" dialog was improperly installed, or you haven't "
-#~ "installed the \"gnome-themes\" package."
+#~ "installed the \"cinnamon-themes\" package."
 #~ msgstr ""
 #~ "Tiada tema dijumpai pada sistem anda. Ini bermakna dialog \"Keutamaan Tema"
-#~ "\"  anda tak dipasang dengan betul. atau anda tak memasang pakej \"gnome-"
+#~ "\"  anda tak dipasang dengan betul. atau anda tak memasang pakej \"cinnamon-"
 #~ "themes\""
 
 #, fuzzy
@@ -4342,11 +4342,11 @@ msgstr ""
 
 #~ msgid ""
 #~ "The sound file for this event does not exist.\n"
-#~ "You may want to install the gnome-audio package\n"
+#~ "You may want to install the cinnamon-audio package\n"
 #~ "for a set of default sounds."
 #~ msgstr ""
 #~ "Fail bunyi untuk acara ini tidak wujud.\n"
-#~ "Anda juga boleh pasang pakej gnome-audio\n"
+#~ "Anda juga boleh pasang pakej cinnamon-audio\n"
 #~ "untuk menetapkan bunyi default."
 
 #~ msgid "The file %s is not a valid wav file"

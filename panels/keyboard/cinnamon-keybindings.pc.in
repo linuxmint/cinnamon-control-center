@@ -4,7 +4,7 @@ datadir=@datadir@
 pkgdatadir=${datadir}/@PACKAGE@
 keysdir=${pkgdatadir}/keybindings
 
-Name: gnome-keybindings
+Name: cinnamon-keybindings
 Description: Keybindings configuration for GNOME applications
 Version: @VERSION@
 

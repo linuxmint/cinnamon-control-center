@@ -120,16 +120,16 @@ msgstr "பணிமேடை பின்னணி எதுவுமில்�
 msgid "Current background"
 msgstr "நடப்பு பின்னணி"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "பின்னணி"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "பின்னணி படத்தை மாற்று"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "சுவர்-காகிதங்கள் ;திரை;மேல்மேசை"
 
@@ -483,7 +483,7 @@ msgid "Calibrate…"
 msgstr "அளவிடு..."
 
 #: ../panels/color/color.ui.h:8
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:1
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:1
 msgid "Color"
 msgstr "நிறம்"
 
@@ -537,12 +537,12 @@ msgstr "இந்த வரியுருவை இந்த கணினிய
 msgid "View details"
 msgstr "விவரங்களை காண்"
 
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:2
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:2
 msgid "Color management settings"
 msgstr "நிற மேலாண்மை அமைப்பு"
 
 #. Translators: those are keywords for the color control-center panel
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:4
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "நிறம்;ஐசிசி;வரிவுரு;அளவீடுசெய்;அச்சுப்பொறி;தோற்றம்;"
 
@@ -732,15 +732,15 @@ msgid "_Region:"
 msgstr "_R வட்டாரம்:"
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Clock;Timezone;Location;"
 msgstr "கடிகாரம்;நேரமண்டலம்;இடம்;"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:3
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:3
 msgid "Date & Time"
 msgstr "தேதி மற்றும் நேரம்"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Date and Time preferences panel"
 msgstr "நாள் நேரம் விருப்பங்கள் பலகம்"
 
@@ -772,7 +772,7 @@ msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr "180 பாகைகள்"
 
-#. Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c
+#. Keep this string in sync with cinnamon-desktop/libcinnamon-desktop/cinnamon-rr-labeler.c
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external projector.  Here, "Mirrored" is being
 #. * used as an adjective.  For example, the Spanish translation could be
@@ -854,16 +854,16 @@ msgstr "பிரதிபலிக்கும்  திரைகள் (_M)"
 msgid "_Resolution"
 msgstr "தெளிவுத்திறன் (_R)"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Change resolution and position of monitors and projectors"
 msgstr "திரைகள் மற்றும் ஒளிவீசிகள் இவற்றின் இடத்தையும் தெளிதிறனையும் மாற்றுக"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Displays"
 msgstr "காட்டிகள்"
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "பலகம்;ஒளிப்படக்காட்டி;எக்ஸ்ரான்டர்;திரை;தெளிதிறன்;புதுப்பி"
 
@@ -1046,16 +1046,16 @@ msgstr "கணிணி தற்காலப்படுத்தப்பட�
 msgid "Checking for Updates"
 msgstr "மேம்பாடுகளுக்கு சோதிக்கிறது..."
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "Details"
 msgstr "விவரங்கள்"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "கணினி தகவல்"
 
 #. sure that you use the same "translation" for those keywords
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1210,17 +1210,17 @@ msgid "Volume up"
 msgstr "ஒலி அளவை உயர்த்து"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:1
-#: ../panels/region/gnome-region-panel.ui.h:33
+#: ../panels/region/cinnamon-region-panel.ui.h:33
 msgid "Switch to next source"
 msgstr "அடுத்த மூலத்துக்கு மாற்றவும்"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:2
-#: ../panels/region/gnome-region-panel.ui.h:34
+#: ../panels/region/cinnamon-region-panel.ui.h:34
 msgid "Switch to previous source"
 msgstr "முந்தைய மூலத்துக்கு மாற்றவும்"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:3
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 #: ../panels/universal-access/uap.ui.h:63
 msgid "Typing"
 msgstr "உள்ளிடல் "
@@ -1293,7 +1293,7 @@ msgid "Log out"
 msgstr "வெளியேறுக"
 
 #: ../panels/keyboard/01-system.xml.in.h:3
-#: ../panels/region/gnome-region-panel.ui.h:35
+#: ../panels/region/cinnamon-region-panel.ui.h:35
 msgid "System"
 msgstr "கணினி"
 
@@ -1322,7 +1322,7 @@ msgid "Turn zoom on or off"
 msgstr "அணுகி பார்த்தல் செயலில் அல்லது செயல்நீங்கி"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:7
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:3
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:3
 msgid "Universal Access"
 msgstr "உலகளாவிய அணுகல்"
 
@@ -1353,98 +1353,98 @@ msgstr "மாற்று எழுத்துருக்கள் விச�
 msgid "Compose Key"
 msgstr "உருவாக்க விசை"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
 msgid "Change keyboard settings"
 msgstr "விசைப்பலகை அமைப்புகள் ஐ மாற்றுக"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 msgid "Keyboard"
 msgstr "விசைப்பலகை"
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr "சுருக்குவழி;மீண்டும்நிகழ்த்து;கண்ணிமை;"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "Add Shortcut"
 msgstr "குறுக்கு வழியை சேர்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "C_ommand:"
 msgstr "(_o) கட்டளை:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "Cursor Blinking"
 msgstr "நிலைக்காட்டி சிமிட்டும்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
 msgid "Cursor _blinks in text fields"
 msgstr "(_b) நிலைக்காட்டி உரை  உள்ளே சிமிட்டும்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Cursor blink speed"
 msgstr "நிலைகாட்டி சிமிட்டும் வேகம்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
 msgid "Custom Shortcut"
 msgstr "தனிப்பயன் குறுக்குவழி"
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Fast"
 msgstr "விரைவு"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "Key presses _repeat when key is held down"
 msgstr "அமுக்கப்படும்போது விசை மறுபடியும் அச்சிடப்படும்."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
 msgid "Layout Settings"
 msgstr "இடவமைப்பு அமைப்புகள்"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 #: ../panels/universal-access/uap.ui.h:35
 msgid "Long"
 msgstr "நீண்டது"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 msgid "Remove Shortcut"
 msgstr "குறுக்கு வழியை நீக்கு"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
 msgid "Repeat Keys"
 msgstr "மறுசெயல் விசைகள்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
 msgid "Repeat keys speed"
 msgstr "தொடரும் விசைகளின் வேகம்"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "S_peed:"
 msgstr "(_p) வேகம்:"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
 #: ../panels/universal-access/uap.ui.h:50
 msgid "Short"
 msgstr "குறுகிய"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
-#: ../panels/region/gnome-region-panel.ui.h:31
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:31
 msgid "Shortcuts"
 msgstr "குறுக்கு வழிகள்"
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "Slow"
 msgstr "மெதுவாக"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 #: ../panels/wacom/button-mapping.ui.h:3
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
@@ -1453,15 +1453,15 @@ msgstr ""
 "குறுவழியை திருத்த பொருத்தமான வரியில் சொடுக்கு.  மற்றும் புதிய விசைகளை உள்ளிடு "
 "அல்லது  துப்புரவாக்க பின்னோக்கு  விசையை அழுத்துக ."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:21
 msgid "_Delay:"
 msgstr "(_D) தாமதம்:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:22
 msgid "_Name:"
 msgstr "(_N) பெயர்:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:23
 msgid "_Speed:"
 msgstr "(_S) வேகம்:"
 
@@ -1505,105 +1505,105 @@ msgstr "(_R) மறுஇருத்து "
 msgid "_Test Your Settings"
 msgstr "_T உங்களுடைய அமைவுகளை சோதிக்கவும்"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse & Touchpad"
 msgstr "சொடுக்கி மற்றும் தொடுதிட்டு"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr "உங்கள் சொடுக்கி மற்றும் தொடுதிட்டின் விருப்ப தேர்வுகளை அமைக்கவும்"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr "தொடர்திட்டு;சுட்டி;சொடுக்கு;தட்டு;இரட்டை;மென்மேடு;தொடர்பந்து"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "C_ontent sticks to fingers"
 msgstr "_o உள்ளடக்கம் விரலுக்கு ஒட்டும்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Disable while _typing"
 msgstr "(_t) தட்டச்சும்போது செயல்நீக்கு"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:3
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Double-click timeout"
 msgstr "இரட்டை சொடுக்கு நேரம் முடிந்தது"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:6
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "General"
 msgstr "பொது"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "Mouse"
 msgstr "சொடுக்கி"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Mouse Preferences"
 msgstr "சொடுக்கி பண்புகள்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Primary _button"
 msgstr "_b முதன்மை நிறம்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Tap to _click"
 msgstr "_c சொடுக்க தட்டவும்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "Touchpad"
 msgstr "தொடுதிட்டு"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Two _finger scroll"
 msgstr "(_f) இரு விரல்கள் உருளல்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "_Double-click"
 msgstr "(_D) இரட்டிப்பு சொடுக்கு:"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "_Left"
 msgstr "_L இடது"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "_Pointer speed"
 msgstr "_P இட சுட்டி வேகம்"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "_Right"
 msgstr "(_R) வலது"
 
-#: ../panels/mouse/gnome-mouse-test.c:134
-#: ../panels/mouse/gnome-mouse-test.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-test.c:134
+#: ../panels/mouse/cinnamon-mouse-test.ui.h:1
 msgid "Try clicking, double clicking, scrolling"
 msgstr "சொடுக்கல். இரட்டை சொடுக்கல், உருளல் ஆகியவற்றை முயற்சிக்கவும்"
 
-#: ../panels/mouse/gnome-mouse-test.c:139
+#: ../panels/mouse/cinnamon-mouse-test.c:139
 msgid "Five clicks, GEGL time!"
 msgstr "ஐந்து கிளிக்குகள், GEGL நேரம்!"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Double click, primary button"
 msgstr "இரட்டை சொடுக்கு, முதன்மை பொத்தான்"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Single click, primary button"
 msgstr "ஒற்றை சொடுக்கு, முதன்மை பொத்தான்"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Double click, middle button"
 msgstr "இரட்டை சொடுக்கு, நடு பொத்தான்"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Single click, middle button"
 msgstr "ஒற்றை சொடுக்கு, நடு பொத்தான்"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Double click, secondary button"
 msgstr "இரட்டை சொடுக்கு, இரண்டாம் பொத்தான்"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Single click, secondary button"
 msgstr "ஒற்றை சொடுக்கு, இரண்டாம் பொத்தான்"
 
@@ -1627,17 +1627,17 @@ msgstr "இந்த பதிப்புடன் கணினி வலைப
 msgid "Air_plane Mode"
 msgstr "_p விமானப்பாங்கு"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 #: ../panels/network/network-mobile.ui.h:6
 msgid "Network"
 msgstr "பிணையம்"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "பிணைய அமைவுகள்"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;Proxy;"
 msgstr "பிணையம்;ஒயர்லெஸ்;ஐபி;லான்;ப்ராக்ஸி;"
 
@@ -2339,15 +2339,15 @@ msgid "_Remove"
 msgstr "நீக்கு (_R)"
 
 #. Translators: those are keywords for the online-accounts control-center panel
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:2
 msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 msgstr "கூகுள்;பேஸ்புக்;ட்விட்டர்;யாஹூ;வலை;ஆன்லைன்;அரட்டை;அஞ்சல்;தொடர்பு;"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:3
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:3
 msgid "Manage online accounts"
 msgstr "ஆன் லைன் கணக்குகளை மேலாள்"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:4
 msgid "Online Accounts"
 msgstr "ஆன் லைன்  கணக்குகள்"
 
@@ -2564,16 +2564,16 @@ msgid "Tip: <a href=\"screen\">screen brightness</a> affects how much power is u
 msgstr ""
 "குறிப்பு: <a href=\"screen\">திரை வெளிச்சம்</a> எவ்வளவு சக்தி பயனாகிறது என்பதை பாதிக்கும்."
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "சக்தி"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr "சக்தி மேலாண்மை அமைப்பு"
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr "சக்தி;உறங்கு;செயல்நீக்கம்;இடைநிறுத்தம்;மின்கலம்"
 
@@ -2808,16 +2808,16 @@ msgstr "சோதனை பக்கம்"
 msgid "Could not load ui: %s"
 msgstr "ui ஏற்ற முடியவில்லை: %s"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Change printer settings"
 msgstr "அச்சடிப்பி அமைப்புகள் ஐ மாற்றுக"
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:3
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:3
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "அச்சுப்பொறி;வரிசை;அச்சடி;காகிதம்;மசி;டோனர்"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printers"
 msgstr "அச்சுப்பொறிகள்"
 
@@ -3208,36 +3208,36 @@ msgstr "பக்கம் 2"
 msgid "page 3"
 msgstr "பக்கம் 3"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Change your region and language settings"
 msgstr "உங்கள் வட்டாரத்தையும் மொழி அமைவையும் மாற்றி அமைக்க"
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:3
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:3
 msgid "Language;Layout;Keyboard;"
 msgstr "மொழி;இடஅமைவு;விசைப்பலகை"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Region & Language"
 msgstr " வட்டாரம் மற்றும் மொழி "
 
-#: ../panels/region/gnome-region-panel-formats.c:142
+#: ../panels/region/cinnamon-region-panel-formats.c:142
 msgid "Imperial"
 msgstr "இம்பீரியல்"
 
-#: ../panels/region/gnome-region-panel-formats.c:144
+#: ../panels/region/cinnamon-region-panel-formats.c:144
 msgid "Metric"
 msgstr "மெட்ரிக்"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:1
 msgid "Choose an input source"
 msgstr "உள்ளீட்டு மூலத்தை தேர்ந்தெடு"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:2
 msgid "Select an input source to add"
 msgstr "உள்ளீட்டு மூலத்தை சேர்க்க தேர்ந்தெடு"
 
-#: ../panels/region/gnome-region-panel-system.c:470
+#: ../panels/region/cinnamon-region-panel-system.c:470
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings."
@@ -3245,8 +3245,8 @@ msgstr ""
 "உள் நுழைவு திரை, கணினி கணக்குகள் மற்றும் புதிய பயனர் கணக்குகள் கணினியின் இடம் மற்றும் "
 "மொழி அமைப்புகளை பயன்படுத்துகின்றன."
 
-#: ../panels/region/gnome-region-panel-system.c:475
-#: ../panels/region/gnome-region-panel.ui.h:37
+#: ../panels/region/cinnamon-region-panel-system.c:475
+#: ../panels/region/cinnamon-region-panel.ui.h:37
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings. You may change the system settings to match "
@@ -3255,158 +3255,158 @@ msgstr ""
 "உள் நுழைவு திரை, கணினி கணக்குகள் மற்றும் புதிய பயனர் கணக்குகள் கணினியின் இடம் மற்றும் "
 "மொழி அமைப்புகளை பயன்படுத்துகின்றன. உங்களுடையதுடன் பொருந்தும் படி அவற்றை மாற்றலாம். ."
 
-#: ../panels/region/gnome-region-panel-system.c:478
+#: ../panels/region/cinnamon-region-panel-system.c:478
 msgid "Copy Settings"
 msgstr "அமைப்புகளை பிரதி எடு"
 
-#: ../panels/region/gnome-region-panel-system.c:481
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel-system.c:481
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Copy Settings..."
 msgstr "அமைப்புகளை பிரதி எடு..."
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Add Input Source"
 msgstr " உள்ளீட்டு மூலம் சேர்"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Add Language"
 msgstr "மொழியை சேர்"
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 msgid "Add Region"
 msgstr "வட்டாரத்தை சேர்"
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "Ctrl+Alt+Shift+Space"
 msgstr "கன்ட்ரோல்+ஆல்ட்+ ஷிப்ட்+ஸ்பேஸ் "
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid "Ctrl+Alt+Space"
 msgstr "கன்ட்ரோல்+ஆல்ட்+ஸ்பேஸ்"
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 msgid "Currency"
 msgstr "பணம்"
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Dates"
 msgstr "தேதிகள்"
 
 #. 'display' means 'output' here, as in 'translated messages that are displayed to the user'
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Display language:"
 msgstr "மொழியை காட்டு:"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Examples"
 msgstr "உதாரணங்கள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Format:"
 msgstr "வடிவம்:"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Formats"
 msgstr "ஒழுங்குகள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid "Input Source Settings"
 msgstr "உள்ளீட்டு மூலம் அமைப்புகள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:15
+#: ../panels/region/cinnamon-region-panel.ui.h:15
 msgid "Input Sources"
 msgstr " உள்ளீட்டு மூலங்கள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 msgid "Input source:"
 msgstr " உள்ளீட்டு மூலம்:"
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 msgid "Install languages..."
 msgstr "மொழிகள் நிறுவு... "
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 msgid "Language"
 msgstr "மொழி"
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 msgid "Measurement"
 msgstr "அளவு "
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 msgid "Move Input Source Down"
 msgstr " உள்ளீட்டு மூலத்தை கீழே நகர்த்து"
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 msgid "Move Input Source Up"
 msgstr " உள்ளீட்டு மூலத்தை மேலே நகர்த்து"
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 msgid "Numbers"
 msgstr "எண்கள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:23
 msgid "Region and Language"
 msgstr " வட்டாரம் மற்றும் மொழி "
 
-#: ../panels/region/gnome-region-panel.ui.h:24
+#: ../panels/region/cinnamon-region-panel.ui.h:24
 msgid "Remove Input Source"
 msgstr " உள்ளீட்டு மூலத்தை நீக்கு"
 
-#: ../panels/region/gnome-region-panel.ui.h:25
+#: ../panels/region/cinnamon-region-panel.ui.h:25
 msgid "Remove Language"
 msgstr "மொழி  நீக்கு"
 
-#: ../panels/region/gnome-region-panel.ui.h:26
+#: ../panels/region/cinnamon-region-panel.ui.h:26
 msgid "Remove Region"
 msgstr "வட்டாரத்தை நீக்கு"
 
-#: ../panels/region/gnome-region-panel.ui.h:27
+#: ../panels/region/cinnamon-region-panel.ui.h:27
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr ""
 "காட்டுவதற்கு மொழியைத் தேர்ந்தெடுக்கவும் (மாற்றங்கள் அடுத்த முறை நீங்கள் உள் நுழையும்போது "
 "செயலாகும்)"
 
-#: ../panels/region/gnome-region-panel.ui.h:28
+#: ../panels/region/cinnamon-region-panel.ui.h:28
 msgid "Select a region (change will be applied the next time you log in)"
 msgstr ""
 "காட்டுவதற்கு மண்டலத்தை தேர்ந்தெடுக்கவும் (மாற்றங்கள் அடுத்த முறை நீங்கள் உள் நுழையும்போது "
 "செயலாகும்)"
 
-#: ../panels/region/gnome-region-panel.ui.h:29
+#: ../panels/region/cinnamon-region-panel.ui.h:29
 msgid "Select keyboards or other input sources"
 msgstr "விசைப்பலகைகள் அல்லது மற்ற உள்ளீட்டு மூலங்களை தேர்ந்தெடு"
 
-#: ../panels/region/gnome-region-panel.ui.h:30
+#: ../panels/region/cinnamon-region-panel.ui.h:30
 msgid "Shortcut Settings"
 msgstr "குறுக்கு வழி  அமைப்புகள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:32
+#: ../panels/region/cinnamon-region-panel.ui.h:32
 msgid "Show Keyboard Layout"
 msgstr "விசைப்பலகை இடவமைவை காட்டுக"
 
-#: ../panels/region/gnome-region-panel.ui.h:36
+#: ../panels/region/cinnamon-region-panel.ui.h:36
 msgid "System settings"
 msgstr "கணினி அமைப்புகள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:38
+#: ../panels/region/cinnamon-region-panel.ui.h:38
 msgid "Times"
 msgstr "நேரங்கள்"
 
-#: ../panels/region/gnome-region-panel.ui.h:39
+#: ../panels/region/cinnamon-region-panel.ui.h:39
 msgid "Your settings"
 msgstr "உங்களுடைய அமைவுகள்"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:1
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:1
 msgid "Brightness & Lock"
 msgstr "வெளிச்சம் மற்றும் பூட்டு"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:3
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:3
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr "பிரகாசம்;பூட்டு;மங்கல்;வெற்று;திரை;"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Screen brightness and lock settings"
 msgstr "திரை பிரகாசம் மற்றும் பூட்டு அமைப்பு"
 
@@ -3484,39 +3484,39 @@ msgid "Volume Control"
 msgstr "ஒலிவளவு கட்டுப்பாடு"
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgstr "அட்டை;ஒலிவாங்கி;ஒலிஅளவு;மறைவுறு;சமனம்;ப்ளூடூத்;ஹெட்செட்;ஆடியோ"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:3
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:3
 msgid "Change sound volume and sound events"
 msgstr "ஒலியளவு மற்றும்  ஒலி நிகழ்வுகளை மாற்று"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Sound"
 msgstr "ஒலி"
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr "குரைப்பு"
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr "தண்ணீர் சொட்டு"
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr "க்ளாஸ்"
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr "சோனார்"
 
@@ -3741,7 +3741,7 @@ msgid "No shortcut set"
 msgstr "சுருக்கு வழி அமைக்கவில்லை"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
@@ -3749,7 +3749,7 @@ msgstr ""
 "விசைப்பலகை;சொடுக்கி;a11y;அணுகல்;மாறுபாடு;அணுகல்;திரைபடிப்பி;உரை;எழுத்துரு;அளாவு;"
 "அணுகல்x;ஒட்டுவிசைகள்;மெதுவிசைகள்;துள்ளுவிசைகள்;சொடுக்கிவிசைகள்;"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid "Universal Access Preferences"
 msgstr "உலகளாவிய அணுகல் தேர்வுகள்"
 
@@ -4355,16 +4355,16 @@ msgstr "_O மற்ற விரல்:"
 msgid "_Right index finger"
 msgstr "_R வலது சுட்டு விரல்"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "Add or remove users"
 msgstr "பயனர்களை சேர்அல்லது நீக்கு"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:3
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:3
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "உள்புகுகை;பெயர்;விரல்ரேகை;அவதாரம்;லோகோ;முகம்;கடவுச்சொல்;"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "User Accounts"
 msgstr "பயனர் கணக்குகள்"
 
@@ -5010,65 +5010,65 @@ msgstr "செயல்"
 msgid "Display Mapping"
 msgstr "வரைபடத்தை காட்டு"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:1
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:1
 msgid "Set your Wacom tablet preferences"
 msgstr "உங்கள் வாகாம் தொடுதட்டு விருப்பங்களை அமைக்கவும்"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:3
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:3
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "தொடுதட்டு;வாகாம்;எழுத்தாணி;துடைப்பி;சொடுக்கி;"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
-#: ../panels/wacom/gnome-wacom-properties.ui.h:13
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:13
 msgid "Wacom Tablet"
 msgstr "வாகாம் தொடுதட்டு"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:1
 msgid "Adjust display resolution"
 msgstr "திரைக்காட்சி தெளிதிறனை சரிசெய்யவும்"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:2
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:2
 msgid "Bluetooth Settings"
 msgstr "ப்ளூடூத் அமைப்புகள்"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:3
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:3
 msgid "Calibrate..."
 msgstr "அளவிடு..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:4
 msgid "Left-Handed Orientation"
 msgstr "இடது கைவாகு திசைவி"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:5
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:5
 msgid "Map Buttons..."
 msgstr "வரைபட பொத்தான்கள்..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:6
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:6
 msgid "Map to Monitor..."
 msgstr "வரை படத்திலிருந்து திரைக்கு..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:7
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:7
 msgid "No tablet detected"
 msgstr "தொடுபலகை ஏதும் கண்டுபிடிக்கப்படவில்லை"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:8
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:8
 msgid "Please plug in or turn on your Wacom tablet"
 msgstr "உங்கள் வாகாம் தொடுதட்டை சொருகவும் அல்லது சக்தியூட்டவும்."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:9
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:9
 msgid "Tablet (absolute)"
 msgstr "தொடுதட்டு (அப்சொலூட்)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:10
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:10
 msgid "Tablet Preferences"
 msgstr "தொடுதட்டு முன்னுரிமைகள்"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:11
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:11
 msgid "Touchpad (relative)"
 msgstr "தொடுதிட்டு (ரிலேடிவ்)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:12
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:12
 msgid "Tracking Mode"
 msgstr "நிலை தொடர்தல் பாங்கு"
 
@@ -6508,7 +6508,7 @@ msgstr "எல்லா அமைப்புகளும்"
 #~ "\n"
 #~ "This program installs a RANDR profile for multi-monitor setups into\n"
 #~ "a systemwide location.  The resulting profile will get used when\n"
-#~ "the RANDR plug-in gets run in gnome-settings-daemon.\n"
+#~ "the RANDR plug-in gets run in cinnamon-settings-daemon.\n"
 #~ "\n"
 #~ "SOURCE_FILE - a full pathname, typically /home/username/.config/monitors."
 #~ "xml\n"
@@ -6743,10 +6743,10 @@ msgstr "எல்லா அமைப்புகளும்"
 
 #~ msgid ""
 #~ "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;"
-#~ "default-applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+#~ "default-applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 #~ msgstr ""
 #~ "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;"
-#~ "default-applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+#~ "default-applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 
 #~ msgid ""
 #~ "if true, the control-center will close when a \"Common Task\" is "
@@ -7508,13 +7508,13 @@ msgstr "எல்லா அமைப்புகளும்"
 #~ msgstr "கருப்பொருள்  இயந்திரத்தை நிறுவ முடியவில்லை"
 
 #~ msgid ""
-#~ "Unable to start the settings manager 'gnome-settings-daemon'.\n"
+#~ "Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 #~ "Without the GNOME settings manager running, some preferences may not take "
 #~ "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. "
 #~ "KDE) settings manager may already be active and conflicting with the "
 #~ "GNOME settings manager."
 #~ msgstr ""
-#~ "'gnome-settings-daemon' அமைப்பு மேலாளரை துவங்க முடியவில்லை.\n"
+#~ "'cinnamon-settings-daemon' அமைப்பு மேலாளரை துவங்க முடியவில்லை.\n"
 #~ "க்னோம் அமைப்பு மேலாளர் இல்லாமல் சில விருப்பங்களை நிறைவு செய்ய முடியாது. இதனால் "
 #~ "போனபோவில் பிழை நேரலாம் அல்லது க்னோம் அல்லாத பயன்பாடு (உதாரணம் கேடியி) அமைப்பு "
 #~ "மேலாளர் ஏற்கெனவெ செயல்பாட்டில் இருக்கலாம் அல்லது க்னோமோடு சிக்கல் நிகழ்ந்திருக்கலாம்"

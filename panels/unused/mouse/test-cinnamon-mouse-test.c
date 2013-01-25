@@ -1,7 +1,7 @@
 #include <config.h>
 #include <gtk/gtk.h>
 
-#include "gnome-mouse-test.h"
+#include "cinnamon-mouse-test.h"
 
 static gboolean
 delete_event_cb (GtkWidget *widget, GdkEvent *event, gpointer user_data)
@@ -25,7 +25,7 @@ int main (int argc, char **argv)
 
   builder = gtk_builder_new ();
 
-  gtk_builder_add_from_file (builder, "gnome-mouse-test.ui", &error);
+  gtk_builder_add_from_file (builder, "cinnamon-mouse-test.ui", &error);
   if (error != NULL)
     {
       g_warning ("Error loading UI file: %s", error->message);

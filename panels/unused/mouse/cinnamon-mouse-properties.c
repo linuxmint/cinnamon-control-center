@@ -32,7 +32,7 @@
 #include <gnome-settings-daemon/gsd-enums.h>
 #include <math.h>
 
-#include "gnome-mouse-properties.h"
+#include "cinnamon-mouse-properties.h"
 #include "gsd-input-helper.h"
 
 #include <sys/types.h>

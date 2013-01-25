@@ -5,8 +5,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: cinnamon-control-center gnome-2-28\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Project-Id-Version: cinnamon-control-center cinnamon-2-28\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-"
 "control-center&component=general\n"
 "POT-Creation-Date: 2009-11-22 16:05+0000\n"
 "PO-Revision-Date: 2009-11-23 00:53+0100\n"
@@ -200,282 +200,282 @@ msgstr ""
 msgid "Remove your finger, and try swiping your finger again"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:716
+#: ../capplets/about-me/cinnamon-about-me.c:716
 msgid "Select Image"
 msgstr "Bill utwählen"
 
-#: ../capplets/about-me/gnome-about-me.c:718
+#: ../capplets/about-me/cinnamon-about-me.c:718
 msgid "No Image"
 msgstr "Keen Bill"
 
-#: ../capplets/about-me/gnome-about-me.c:746
+#: ../capplets/about-me/cinnamon-about-me.c:746
 #: ../capplets/appearance/appearance-desktop.c:654
 msgid "Images"
 msgstr "Billers"
 
-#: ../capplets/about-me/gnome-about-me.c:750
+#: ../capplets/about-me/cinnamon-about-me.c:750
 #: ../capplets/appearance/theme-installer.c:763
 msgid "All Files"
 msgstr "All Dateien"
 
-#: ../capplets/about-me/gnome-about-me.c:890
+#: ../capplets/about-me/cinnamon-about-me.c:890
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me.c:911
+#: ../capplets/about-me/cinnamon-about-me.c:911
 msgid "Unable to open address book"
 msgstr "Nich möglich, Anskrivtenbook optomaken"
 
-#: ../capplets/about-me/gnome-about-me.c:934
+#: ../capplets/about-me/cinnamon-about-me.c:934
 #, c-format
 msgid "About %s"
 msgstr "Över %s"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:1
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:2
 msgid "A_ddress:"
 msgstr "An_skrivt"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:3
 msgid "A_ssistant:"
 msgstr "H_ölper:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:4
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
 msgid "About Me"
 msgstr "Över mik"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:5
 msgid "Address"
 msgstr "Anskrivt"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:6
 msgid "C_ity:"
 msgstr "St_adt:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:7
 msgid "C_ompany:"
 msgstr "F_irma:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:8
 msgid "Cale_ndar:"
 msgstr "Kale_nner:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:9
 msgid "Change Passwo_rd..."
 msgstr "Passwoo_rd ännern..."
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:10
 msgid "Ci_ty:"
 msgstr "St_adt:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:11
 msgid "Co_untry:"
 msgstr "Lan_d:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:12
 msgid "Contact"
 msgstr "Kontakt"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:13
 msgid "Cou_ntry:"
 msgstr "_Land:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:14
 msgid "Disable _Fingerprint Login..."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:15
 msgid "Email"
 msgstr "E-Post"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:16
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:16
 msgid "Enable _Fingerprint Login..."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:17
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:17
 msgid "Full Name"
 msgstr "Vor- un Tonaam"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:18
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:18
 msgid "Hom_e:"
 msgstr "Heima_t:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:19
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:19
 #: ../libslab/bookmark-agent.c:1135
 msgid "Home"
 msgstr "Heimat"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:20
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:20
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:21
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:21
 msgid "Instant Messaging"
 msgstr "Foortsnahrichtendeenst"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:22
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:22
 msgid "Job"
 msgstr "Arbeid"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:23
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:23
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:24
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:24
 msgid "P.O. _box:"
 msgstr "P.O. _box:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:25
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:25
 msgid "P._O. box:"
 msgstr "P._O. box:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:26
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:26
 msgid "Personal Info"
 msgstr "Persönliche Informatschoonen"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:27
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:27
 msgid "Select your photo"
 msgstr "Wähl dien Bill ut"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:28
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:28
 msgid "State/Pro_vince:"
 msgstr "Land/Re_gion:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:29
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:29
 msgid "Telephone"
 msgstr "Klönkassen"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:30
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:30
 msgid "User name:"
 msgstr "Brukernaam:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:31
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:31
 msgid "Web"
 msgstr "Net"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:32
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:32
 msgid "Web _log:"
 msgstr "Dageboo_k:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:33
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:33
 msgid "Wor_k:"
 msgstr "Arbei_d:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:34
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:34
 msgid "Work"
 msgstr "Arbeid"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:35
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:35
 msgid "Work _fax:"
 msgstr "Arbeid _FAX:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:36
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:36
 msgid "Zip/_Postal code:"
 msgstr "Zip/_Postleittaal:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:37
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:37
 msgid "_Address:"
 msgstr "_Anskrivt:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:38
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:38
 msgid "_Department:"
 msgstr "_Kontor:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:39
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:39
 msgid "_Groupwise:"
 msgstr "_Groupwise:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:40
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:40
 msgid "_Home page:"
 msgstr "_Hemsiet:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:41
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:41
 msgid "_Home:"
 msgstr "_Heimat:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:42
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:42
 msgid "_Jabber:"
 msgstr "_Jabber:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:43
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:43
 msgid "_Manager:"
 msgstr "_Oppasser:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:44
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:44
 msgid "_Mobile:"
 msgstr "_Unnerwegs:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:45
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:45
 msgid "_Profession:"
 msgstr "_Beroop:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:46
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:46
 msgid "_State/Province:"
 msgstr "_Land/Region:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:47
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:47
 msgid "_Title:"
 msgstr "_Titel:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:48
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:48
 msgid "_Work:"
 msgstr "_Arbeid:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:49
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:49
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me-dialog.ui.h:50
+#: ../capplets/about-me/cinnamon-about-me-dialog.ui.h:50
 msgid "_Zip/Postal code:"
 msgstr "_Zip/Postleittaal:"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "Giv dien persönliche Informatschoonen in"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:97
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:97
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:99
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:99
 msgid "The device is already in use."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:101
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:101
 msgid "An internal error occured"
 msgstr "Een interner Fehler is optreten"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:218
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:218
 msgid "Delete registered fingerprints?"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:221
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:221
 msgid "_Delete Fingerprints"
 msgstr "Fingeravdrücken_s löschen"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:228
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:228
 msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:342
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:342
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:1
 msgid "Done!"
 msgstr "Fertig!"
 
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:388
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:410
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:388
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:410
 #, c-format
 msgid "Could not access '%s' device"
 msgstr ""
@@ -483,21 +483,21 @@ msgstr ""
 #. translators:
 #. * The variable is the name of the device, for example:
 #. * "Could you not access "Digital Persona U.are.U 4000/4000B" device
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:459
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:459
 #, c-format
 msgid "Could not start finger capture on '%s' device"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:506
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:506
 msgid "Could not access any fingerprint readers"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:507
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:507
 msgid "Please contact your system administrator for help."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:537
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:537
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:2
 msgid "Enable Fingerprint Login"
 msgstr ""
 
@@ -505,90 +505,90 @@ msgstr ""
 #. * The variable is the name of the device, for example:
 #. * "To enable fingerprint login, you need to save one of your fingerprints, using the
 #. * 'Digital Persona U.are.U 4000/4000B' device."
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:567
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:567
 #, c-format
 msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the '%s' device."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:576
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:576
 msgid "Swipe finger on reader"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.c:578
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.c:578
 msgid "Place finger on reader"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:3
 msgid "Left index finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:4
 msgid "Left little finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:5
 msgid "Left middle finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:6
 msgid "Left ring finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:7
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:7
 msgid "Left thumb"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:8
 msgid "Other finger: "
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:9
 msgid "Right index finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:10
 msgid "Right little finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:11
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:11
 msgid "Right middle finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:12
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:12
 msgid "Right ring finger"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:13
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:13
 msgid "Right thumb"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:14
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:14
 msgid "Select finger"
 msgstr "Finger wählen"
 
-#: ../capplets/about-me/gnome-about-me-fingerprint.ui.h:15
+#: ../capplets/about-me/cinnamon-about-me-fingerprint.ui.h:15
 msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:161
+#: ../capplets/about-me/cinnamon-about-me-password.c:161
 msgid "Child exited unexpectedly"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:296
+#: ../capplets/about-me/cinnamon-about-me-password.c:296
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:309
+#: ../capplets/about-me/cinnamon-about-me-password.c:309
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:408
+#: ../capplets/about-me/cinnamon-about-me-password.c:408
 msgid "Authenticated!"
 msgstr ""
 
@@ -598,102 +598,102 @@ msgstr ""
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:474
-#: ../capplets/about-me/gnome-about-me-password.c:550
+#: ../capplets/about-me/cinnamon-about-me-password.c:474
+#: ../capplets/about-me/cinnamon-about-me-password.c:550
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:476
+#: ../capplets/about-me/cinnamon-about-me-password.c:476
 msgid "That password was incorrect."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:523
+#: ../capplets/about-me/cinnamon-about-me-password.c:523
 msgid "Your password has been changed."
 msgstr ""
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:533
+#: ../capplets/about-me/cinnamon-about-me-password.c:533
 #, c-format
 msgid "System error: %s."
 msgstr "Systemfehler: %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:536
+#: ../capplets/about-me/cinnamon-about-me-password.c:536
 msgid "The password is too short."
 msgstr "Dat Passwoord is to kort."
 
-#: ../capplets/about-me/gnome-about-me-password.c:539
+#: ../capplets/about-me/cinnamon-about-me-password.c:539
 msgid "The password is too simple."
 msgstr "Dat Passwoord is to eenfach."
 
-#: ../capplets/about-me/gnome-about-me-password.c:542
+#: ../capplets/about-me/cinnamon-about-me-password.c:542
 msgid "The old and new passwords are too similar."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:544
+#: ../capplets/about-me/cinnamon-about-me-password.c:544
 msgid "The new password must contain numeric or special character(s)."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:547
+#: ../capplets/about-me/cinnamon-about-me-password.c:547
 msgid "The old and new passwords are the same."
 msgstr ""
 
 #. translators: Unable to launch <program>: <error message>
-#: ../capplets/about-me/gnome-about-me-password.c:818
+#: ../capplets/about-me/cinnamon-about-me-password.c:818
 #, c-format
 msgid "Unable to launch %s: %s"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:822
+#: ../capplets/about-me/cinnamon-about-me-password.c:822
 msgid "Unable to launch backend"
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:823
+#: ../capplets/about-me/cinnamon-about-me-password.c:823
 msgid "A system error has occurred"
 msgstr "Een Systemfehler is optreten"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:843
+#: ../capplets/about-me/cinnamon-about-me-password.c:843
 msgid "Checking password..."
 msgstr "Kiek mi dat Passwoord an..."
 
-#: ../capplets/about-me/gnome-about-me-password.c:930
+#: ../capplets/about-me/cinnamon-about-me-password.c:930
 msgid "Click <b>Change password</b> to change your password."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:933
+#: ../capplets/about-me/cinnamon-about-me-password.c:933
 msgid "Please type your password in the <b>New password</b> field."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:936
-#: ../capplets/about-me/gnome-about-me-password.ui.h:5
+#: ../capplets/about-me/cinnamon-about-me-password.c:936
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:5
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.c:939
+#: ../capplets/about-me/cinnamon-about-me-password.c:939
 msgid "The two passwords are not equal."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:1
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:1
 msgid "Change pa_ssword"
 msgstr "Pa_sswoord ännern"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:2
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:2
 msgid "Change password"
 msgstr "Passwoord ännern"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:3
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:3
 msgid "Change your password"
 msgstr "Dien Passwoord ännern"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:4
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:4
 msgid "Current _password:"
 msgstr "Aktuelles _Passwoord:"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:6
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:6
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -701,15 +701,15 @@ msgid ""
 "verification and click <b>Change password</b>."
 msgstr ""
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:8
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:8
 msgid "_Authenticate"
 msgstr "_Bewiesen, dat je du sülvst büst"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:9
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:9
 msgid "_New password:"
 msgstr "_Nejes Passwoord:"
 
-#: ../capplets/about-me/gnome-about-me-password.ui.h:10
+#: ../capplets/about-me/cinnamon-about-me-password.ui.h:10
 msgid "_Retype new password:"
 msgstr "_Nejes Passwoord ingeven:"
 
@@ -841,8 +841,8 @@ msgid "Specify the name of the page to show (theme|background|fonts|interface)"
 msgstr ""
 
 #: ../capplets/appearance/appearance-main.c:142
-#: ../capplets/default-applications/gnome-da-capplet.c:959
-#: ../capplets/mouse/gnome-mouse-properties.c:591
+#: ../capplets/default-applications/cinnamon-da-capplet.c:959
+#: ../capplets/mouse/cinnamon-mouse-properties.c:591
 msgid "page"
 msgstr "Siet"
 
@@ -851,8 +851,8 @@ msgid "[WALLPAPER...]"
 msgstr "[WALLPAPER...]"
 
 #: ../capplets/appearance/appearance-style.c:173
-#: ../capplets/common/gnome-theme-info.c:446
-#: ../capplets/common/gnome-theme-info.c:638
+#: ../capplets/common/cinnamon-theme-info.c:446
+#: ../capplets/common/cinnamon-theme-info.c:638
 msgid "Default Pointer"
 msgstr "Standardmuuswieser"
 
@@ -862,7 +862,7 @@ msgid "Install"
 msgstr "Installeren"
 
 #: ../capplets/appearance/appearance-style.c:255
-#: ../capplets/common/gnome-theme-info.c:1646
+#: ../capplets/common/cinnamon-theme-info.c:1646
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme engine "
@@ -916,7 +916,7 @@ msgid "The current theme suggests a font."
 msgstr ""
 
 #: ../capplets/appearance/appearance-themes.c:1045
-#: ../capplets/default-applications/gnome-da-capplet.c:690
+#: ../capplets/default-applications/cinnamon-da-capplet.c:690
 msgid "Custom"
 msgstr "Anpasst"
 
@@ -1010,7 +1010,7 @@ msgid "Icons only"
 msgstr "Just Symbole"
 
 #: ../capplets/appearance/data/appearance.ui.h:24
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:16
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Large"
 msgstr "Groot"
 
@@ -1051,7 +1051,7 @@ msgid "Scale"
 msgstr "Gröte ännern"
 
 #: ../capplets/appearance/data/appearance.ui.h:34
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:30
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:30
 msgid "Small"
 msgstr "Lüttj"
 
@@ -1125,7 +1125,7 @@ msgid "Zoom"
 msgstr "Gröte"
 
 #: ../capplets/appearance/data/appearance.ui.h:53
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:36
 msgid "_Add..."
 msgstr "_Hentofögen..."
 
@@ -1171,7 +1171,7 @@ msgid "_Monochrome"
 msgstr ""
 
 #: ../capplets/appearance/data/appearance.ui.h:65
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:5
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:5
 msgid "_Name:"
 msgstr "_Naam:"
 
@@ -1225,44 +1225,44 @@ msgstr "_Finsters:"
 msgid "dots per inch"
 msgstr "Punkt per Inch"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:1
 msgid "Appearance"
 msgstr "utsehn"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:2
 msgid "Customize the look of the desktop"
 msgstr "Schrievdiskutsehn anpassen"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:1
 msgid "Installs themes packages for various parts of the desktop"
 msgstr ""
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:2
 msgid "Theme Installer"
 msgstr "Themen installerer"
 
-#: ../capplets/appearance/data/gnome-theme-package.xml.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-package.xml.in.h:1
 msgid "Gnome Theme Package"
 msgstr "GNOME-Themen Pack"
 
-#: ../capplets/appearance/gnome-wp-info.c:50
+#: ../capplets/appearance/cinnamon-wp-info.c:50
 msgid "No Desktop Background"
 msgstr "Keen Schrievdiskachtergrund"
 
-#: ../capplets/appearance/gnome-wp-item.c:258
+#: ../capplets/appearance/cinnamon-wp-item.c:258
 msgid "Slide Show"
 msgstr ""
 
-#: ../capplets/appearance/gnome-wp-item.c:260
+#: ../capplets/appearance/cinnamon-wp-item.c:260
 msgid "Image"
 msgstr "Bill"
 
-#: ../capplets/appearance/gnome-wp-item.c:266
+#: ../capplets/appearance/cinnamon-wp-item.c:266
 msgid "multiple sizes"
 msgstr ""
 
-#: ../capplets/appearance/gnome-wp-item.c:271
-#: ../capplets/appearance/gnome-wp-item.c:273
+#: ../capplets/appearance/cinnamon-wp-item.c:271
+#: ../capplets/appearance/cinnamon-wp-item.c:273
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "Pixel"
@@ -1272,7 +1272,7 @@ msgstr[1] "Pixels"
 #. * mime type, size
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:279
+#: ../capplets/appearance/cinnamon-wp-item.c:279
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1392,7 +1392,7 @@ msgstr ""
 
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
@@ -1578,49 +1578,49 @@ msgstr "Bidde een Bill utwählen."
 msgid "_Select"
 msgstr "_utwählen"
 
-#: ../capplets/common/gnome-theme-info.c:639
+#: ../capplets/common/cinnamon-theme-info.c:639
 msgid "Default Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:643
+#: ../capplets/common/cinnamon-theme-info.c:643
 msgid "White Pointer"
 msgstr "Witter Muuswieser"
 
-#: ../capplets/common/gnome-theme-info.c:644
+#: ../capplets/common/cinnamon-theme-info.c:644
 msgid "White Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:648
+#: ../capplets/common/cinnamon-theme-info.c:648
 msgid "Large Pointer"
 msgstr "Groter Muuswieser"
 
-#: ../capplets/common/gnome-theme-info.c:649
+#: ../capplets/common/cinnamon-theme-info.c:649
 msgid "Large Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:653
+#: ../capplets/common/cinnamon-theme-info.c:653
 msgid "Large White Pointer - Current"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:654
+#: ../capplets/common/cinnamon-theme-info.c:654
 msgid "Large White Pointer"
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1622
+#: ../capplets/common/cinnamon-theme-info.c:1622
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme '%s' is "
 "not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1630
+#: ../capplets/common/cinnamon-theme-info.c:1630
 #, c-format
 msgid ""
 "This theme will not look as intended because the required window manager "
 "theme '%s' is not installed."
 msgstr ""
 
-#: ../capplets/common/gnome-theme-info.c:1637
+#: ../capplets/common/cinnamon-theme-info.c:1637
 #, c-format
 msgid ""
 "This theme will not look as intended because the required icon theme '%s' is "
@@ -1628,7 +1628,7 @@ msgid ""
 msgstr ""
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:17
 msgid "Preferred Applications"
 msgstr "Leevste Programme"
 
@@ -1636,45 +1636,45 @@ msgstr "Leevste Programme"
 msgid "Select your default applications"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:2
 msgid "Visual Assistance"
 msgstr "Visueller Hölper"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:98
-#: ../capplets/default-applications/gnome-da-capplet.c:362
-#: ../capplets/default-applications/gnome-da-capplet.c:383
+#: ../capplets/default-applications/cinnamon-da-capplet.c:98
+#: ../capplets/default-applications/cinnamon-da-capplet.c:362
+#: ../capplets/default-applications/cinnamon-da-capplet.c:383
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:721
+#: ../capplets/default-applications/cinnamon-da-capplet.c:721
 msgid "Could not load the main interface"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:723
+#: ../capplets/default-applications/cinnamon-da-capplet.c:723
 msgid "Please make sure that the applet is properly installed"
 msgstr ""
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/default-applications/gnome-da-capplet.c:958
+#: ../capplets/default-applications/cinnamon-da-capplet.c:958
 msgid "Specify the name of the page to show (internet|multimedia|system|a11y)"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-da-capplet.c:963
+#: ../capplets/default-applications/cinnamon-da-capplet.c:963
 msgid "- GNOME Default Applications"
 msgstr "- GNOME-Standardprogramme"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:1
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:1
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Accessibility"
 msgstr "Togangelikheit"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:3
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr ""
@@ -1682,300 +1682,300 @@ msgstr ""
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:4
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:1
 msgid "C_ommand:"
 msgstr "_Order:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:5
 msgid "Co_mmand:"
 msgstr "Or_der:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:6
 msgid "E_xecute flag:"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:7
 msgid "Image Viewer"
 msgstr "Billopwieser"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:8
 msgid "Instant Messenger"
 msgstr "Foortsnahrichtenschriever"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:9
 msgid "Internet"
 msgstr "Innernet"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:10
 msgid "Mail Reader"
 msgstr "Postleser"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:11
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:11
 msgid "Mobility"
 msgstr "Unnerwegs allens dorbi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:12
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:12
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:13
 msgid "Multimedia Player"
 msgstr "Multimediaspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:14
 msgid "Open link in new _tab"
 msgstr "Verknüppen in nejer _Registerkoort opmaken"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:15
 msgid "Open link in new _window"
 msgstr "Verknüppen in nejem _Finster opmaken"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:16
 msgid "Open link with web browser _default"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:18
 msgid "Run at st_art"
 msgstr "Bi'm Start lööpen laten"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:19
 msgid "Run in t_erminal"
 msgstr "Im T_erminal lööpen laten"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:20
 msgid "System"
 msgstr "System"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:21
 msgid "Terminal Emulator"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:22
 msgid "Text Editor"
 msgstr "Textbewarker"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:23
 msgid "Video Player"
 msgstr "Filmspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:24
 msgid "Visual"
 msgstr "Visuell"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:25
 msgid "Web Browser"
 msgstr "Netkieker"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.ui.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.ui.h:26
 msgid "_Run at start"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Balsa"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr "Banshee Tonspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr "Claws Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Debian Sensible Browser"
 msgstr "Debian Sensible Browser"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr "Debian Terminal Emulator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr "Debian Terminal Emulator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr "Encompass"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr "Epiphany Netkieker"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr "Evolution Postleser"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "GNOME OnScreen Keyboard"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr "GNOME Terminal"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr "Gnopernicus"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr "Gnopernicus mit Vergröterer"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr "Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr "Iceape Post"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr "Icedove"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr "Iceweasel"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr "Konsole"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr "Linux Billschirmleser"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr ""
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Listen"
 msgstr "Tohören"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Midori"
 msgstr "Midori"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Mail"
 msgstr "Mozilla Post"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Muine Music Player"
 msgstr "Muine Tonspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:37
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:38
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Netscape Communicator"
 msgstr "Netscape Kommunikator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:39
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Opera"
 msgstr "Opera"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:40
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca"
 msgstr "Orca"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:41
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "Orca with Magnifier"
 msgstr "Orca mit Vergröterer"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:42
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "RXVT"
 msgstr "RXVT"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:43
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox Tonspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:44
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:45
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "SeaMonkey Mail"
 msgstr "SeaMonkey Post"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:46
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Standard XTerminal"
 msgstr "Standard XTerminal"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:47
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:48
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:49
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Terminator"
 msgstr "Terminator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:50
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:51
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "Totem Movie Player"
 msgstr "Totem Filmspeeler"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:52
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:52
 msgid "aterm"
 msgstr "aterm"
 
@@ -2141,25 +2141,25 @@ msgid "The type of accelerator."
 msgstr ""
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:119
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:119
 #: ../typing-break/drwright.c:431
 msgid "Disabled"
 msgstr "Deaktivert"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:200
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:200
 msgid "<Unknown Action>"
 msgstr "<Unbekannte Aktschoon>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:950
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1581
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:950
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1581
 msgid "Custom Shortcuts"
 msgstr "Anpasste Kortsnieds"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1092
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1092
 msgid "Error saving the new shortcut"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1171
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1171
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -2167,50 +2167,50 @@ msgid ""
 "Please try with a key such as Control, Alt or Shift at the same time."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1201
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1201
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
 "\"%s\""
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1207
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1207
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1215
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1215
 msgid "_Reassign"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1335
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1335
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1536
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1536
 msgid "Too many custom shortcuts"
 msgstr ""
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1832
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1832
 msgid "Action"
 msgstr "Aktschoon"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1854
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1854
 msgid "Shortcut"
 msgstr "Kortsnied"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:2
 msgid "Custom Shortcut"
 msgstr "Anpasster Kortsnied"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:3
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:3
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Knöppboord Kortsnieds"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.ui.h:4
+#: ../capplets/keybindings/cinnamon-keybinding-properties.ui.h:4
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
 "combination, or press backspace to clear."
@@ -2220,337 +2220,337 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:205
-#: ../capplets/keyboard/gnome-keyboard-properties.c:210
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:205
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:210
 msgid ""
 "Just apply settings and quit (compatibility only; now handled by daemon)"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:215
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:215
 msgid "Start the page with the typing break settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:220
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:220
 msgid "Start the page with the accessibility settings showing"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:226
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:226
 msgid "- GNOME Keyboard Preferences"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:1
 msgid "Beep when _accessibility features are turned on or off"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:2
 msgid "Beep when a _modifier key is pressed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:3
 msgid "Beep when a _toggle key is pressed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:4
 msgid "Beep when a key is pr_essed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:5
 msgid "Beep when a key is reje_cted"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:6
 msgid "Beep when key is _accepted"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:7
 msgid "Beep when key is _rejected"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:8
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:8
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:4
 msgid "Bounce Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:9
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:9
 msgid "Flash _window titlebar"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:10
 msgid "Flash entire _screen"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:11
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:14
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:14
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "General"
 msgstr "Allgemeen"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:12
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:13
 msgid "Show _visual feedback for the alert sound"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:14
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:31
 msgid "Slow Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:15
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:32
 msgid "Sticky Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-a11y-notifications.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-a11y-notifications.ui.h:16
 msgid "Visual cues for sounds"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:2
 msgid "All_ow postponing of breaks"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:3
 msgid "Audio _Feedback..."
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:5
 msgid "Check if breaks are allowed to be postponed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:6
 msgid "Cursor Blinking"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:7
 msgid "Cursor _blinks in text fields"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:8
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Cursor blinks speed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:9
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "D_elay:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:10
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:10
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:11
 msgid "Duration of the break when typing is disallowed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:12
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:12
 msgid "Duration of work before forcing a break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:13
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:13
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "Fast"
 msgstr "Fix"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:15
 msgid "Key presses _repeat when key is held down"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:16
 msgid "Keyboard Preferences"
 msgstr "Knöppboordinstellens"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:17
 msgid "Keyboard _model:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:18
 msgid "Layouts"
 msgstr "Utsehn"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:19
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:20
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "Long"
 msgstr "lang"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:21
 msgid "Mouse Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:22
 msgid "Move _Down"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:23
 msgid "Move _Up"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:24
 msgid "New windows u_se active window's layout"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:25
 msgid "Repeat Keys"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:26
 msgid "Repeat keys speed"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:27
 msgid "Reset to De_faults"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:28
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:28
 msgid "S_peed:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:29
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:26
 msgid "Short"
 msgstr "Koort"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:30
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:29
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:30
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:29
 msgid "Slow"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:33
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:33
 msgid "Typing Break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:34
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:34
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:36
 msgid "_Acceleration:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:35
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:37
 msgid "_Break interval lasts:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:38
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:37
 msgid "_Delay:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:39
 msgid "_Ignore fast duplicate keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:40
 msgid "_Lock screen to enforce typing break"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:41
 msgid "_Only accept long keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:42
 msgid "_Options..."
 msgstr "_Optschoonen..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:43
 msgid "_Pointer can be controlled using the keypad"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:44
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:44
 msgid "_Separate layout for each window"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:45
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:45
 msgid "_Simulate simultaneous keypresses"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:46
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:46
 msgid "_Speed:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:47
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:47
 msgid "_Type to test settings:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:48
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:48
 msgid "_Work interval lasts:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-dialog.ui.h:49
+#: ../capplets/keyboard/cinnamon-keyboard-properties-dialog.ui.h:49
 msgid "minutes"
 msgstr "Minuuten"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:1
 msgid "By _country"
 msgstr "Nah _Land"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:2
 msgid "By _language"
 msgstr "Nah _Sprak"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:3
 msgid "Choose a Layout"
 msgstr "Utsehn wählen"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:4
 msgid "Preview:"
 msgstr "Utblick:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:5
 msgid "_Country:"
 msgstr "_Land:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:6
 msgid "_Language:"
 msgstr "_Sprak:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-layout-chooser.ui.h:7
+#: ../capplets/keyboard/cinnamon-keyboard-properties-layout-chooser.ui.h:7
 msgid "_Variants:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:1
 msgid "Choose a Keyboard Model"
 msgstr "Wähl een Knöppboordutsehn"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:2
 msgid "_Models:"
 msgstr "_Modelle:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-model-chooser.ui.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties-model-chooser.ui.h:3
 msgid "_Vendors:"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-options-dialog.ui.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties-options-dialog.ui.h:1
 msgid "Keyboard Layout Options"
 msgstr "Knöppboordutsehnoptschoonen"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:82
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:82
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:240
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:240
 msgid "Layout"
 msgstr "Utsehn"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:168
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:168
 msgid "Vendors"
 msgstr ""
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:234
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:234
 msgid "Models"
 msgstr "Modelle"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:234
-#: ../capplets/network/gnome-network-properties.c:583
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:234
+#: ../capplets/network/cinnamon-network-properties.c:583
 msgid "Default"
 msgstr "Standard"
 
@@ -2564,375 +2564,375 @@ msgstr "Knöppboordinstellens setten"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:89
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:89
 msgid "gesture|Move left"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:94
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:94
 msgid "gesture|Move right"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:99
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:99
 msgid "gesture|Move up"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:104
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:104
 msgid "gesture|Move down"
 msgstr ""
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:109
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:109
 msgid "gesture|Disabled"
 msgstr ""
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/mouse/gnome-mouse-properties.c:590
+#: ../capplets/mouse/cinnamon-mouse-properties.c:590
 msgid "Specify the name of the page to show (general|accessibility)"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.c:595
+#: ../capplets/mouse/cinnamon-mouse-properties.c:595
 msgid "- GNOME Mouse Preferences"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "Choose type of click _beforehand"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:3
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:3
 msgid "Choose type of click with mo_use gestures"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:6
 msgid "D_ouble click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "D_rag click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "Double-Click Timeout"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Drag and Drop"
 msgstr "Trecken un loslaten"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "Dwell Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "Enable _horizontal scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Enable mouse _clicks with touchpad"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "High"
 msgstr "Hoch"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Locate Pointer"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:19
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:19
 msgid "Low"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:20
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:20
 msgid "Mouse Orientation"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:21
 msgid "Mouse Preferences"
 msgstr "Muusinstellens"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:22
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:22
 msgid "Pointer Speed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:23
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:23
 msgid "Scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:24
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:24
 msgid "Seco_ndary click:"
 msgstr "Twe_jter Klick:"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:25
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:25
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:27
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:27
 msgid "Show click type _window"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:28
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:28
 msgid "Simulated Secondary Click"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:31
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:31
 msgid "Thr_eshold:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:32
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:32
 msgid ""
 "To test your double-click settings, try to double-click on the light bulb."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:33
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:34
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:34
 msgid "Two-_finger scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:35
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:35
 msgid "You can also use the Dwell Click panel applet to choose the click type."
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:38
 msgid "_Disable touchpad while typing"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:39
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:39
 msgid "_Disabled"
 msgstr "_Deaktivert"
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:40
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:40
 msgid "_Edge scrolling"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:41
 msgid "_Initiate click when stopping pointer movement"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:42
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:42
 msgid "_Left-handed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:43
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:43
 msgid "_Motion threshold:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:44
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:44
 msgid "_Right-handed"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:45
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:45
 msgid "_Sensitivity:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:46
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:46
 msgid "_Single click:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:47
 msgid "_Timeout:"
 msgstr ""
 
-#: ../capplets/mouse/gnome-mouse-properties.ui.h:48
+#: ../capplets/mouse/cinnamon-mouse-properties.ui.h:48
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr ""
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Muus"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.c:701
-#: ../capplets/network/gnome-network-properties.c:852
+#: ../capplets/network/cinnamon-network-properties.c:701
+#: ../capplets/network/cinnamon-network-properties.c:852
 msgid "New Location..."
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.c:818
+#: ../capplets/network/cinnamon-network-properties.c:818
 msgid "Location already exists"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Netwark-Proxy"
 
-#: ../capplets/network/gnome-network-properties.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-properties.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "Netwark-Proxy-Instellens setten"
 
-#: ../capplets/network/gnome-network-properties.ui.h:1
+#: ../capplets/network/cinnamon-network-properties.ui.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:2
+#: ../capplets/network/cinnamon-network-properties.ui.h:2
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:3
+#: ../capplets/network/cinnamon-network-properties.ui.h:3
 msgid "<b>_Manual proxy configuration</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:4
+#: ../capplets/network/cinnamon-network-properties.ui.h:4
 msgid "<b>_Use authentication</b>"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:5
+#: ../capplets/network/cinnamon-network-properties.ui.h:5
 msgid "Autoconfiguration _URL:"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:6
+#: ../capplets/network/cinnamon-network-properties.ui.h:6
 msgid "C_reate"
 msgstr "E_rstellen"
 
-#: ../capplets/network/gnome-network-properties.ui.h:7
+#: ../capplets/network/cinnamon-network-properties.ui.h:7
 msgid "Create New Location"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:8
+#: ../capplets/network/cinnamon-network-properties.ui.h:8
 msgid "HTTP Proxy Details"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:9
+#: ../capplets/network/cinnamon-network-properties.ui.h:9
 msgid "H_TTP proxy:"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:10
+#: ../capplets/network/cinnamon-network-properties.ui.h:10
 msgid "Ignore Host List"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:11
+#: ../capplets/network/cinnamon-network-properties.ui.h:11
 msgid "Ignored Hosts"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:12
+#: ../capplets/network/cinnamon-network-properties.ui.h:12
 msgid "Location:"
 msgstr "Ort:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:13
+#: ../capplets/network/cinnamon-network-properties.ui.h:13
 msgid "Network Proxy Preferences"
 msgstr "Netwark-Proxy-Instellens"
 
-#: ../capplets/network/gnome-network-properties.ui.h:14
+#: ../capplets/network/cinnamon-network-properties.ui.h:14
 msgid "Port:"
 msgstr "Port:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:15
+#: ../capplets/network/cinnamon-network-properties.ui.h:15
 msgid "Proxy Configuration"
 msgstr "Proxy-Konfiguratschoon"
 
-#: ../capplets/network/gnome-network-properties.ui.h:16
+#: ../capplets/network/cinnamon-network-properties.ui.h:16
 msgid "S_ocks host:"
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:17
+#: ../capplets/network/cinnamon-network-properties.ui.h:17
 msgid "The location already exists."
 msgstr ""
 
-#: ../capplets/network/gnome-network-properties.ui.h:18
+#: ../capplets/network/cinnamon-network-properties.ui.h:18
 msgid "U_sername:"
 msgstr "B_rukernaam:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:19
+#: ../capplets/network/cinnamon-network-properties.ui.h:19
 msgid "_Delete Location"
 msgstr "_Ort löschen"
 
-#: ../capplets/network/gnome-network-properties.ui.h:20
+#: ../capplets/network/cinnamon-network-properties.ui.h:20
 msgid "_Details"
 msgstr "_Details"
 
-#: ../capplets/network/gnome-network-properties.ui.h:21
+#: ../capplets/network/cinnamon-network-properties.ui.h:21
 msgid "_FTP proxy:"
 msgstr "_FTP Proxy:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:22
+#: ../capplets/network/cinnamon-network-properties.ui.h:22
 msgid "_Location name:"
 msgstr "_Ortnaam:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:23
+#: ../capplets/network/cinnamon-network-properties.ui.h:23
 msgid "_Password:"
 msgstr "_Passwoord:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:24
+#: ../capplets/network/cinnamon-network-properties.ui.h:24
 msgid "_Secure HTTP proxy:"
 msgstr "_Seker HTTP Proxy:"
 
-#: ../capplets/network/gnome-network-properties.ui.h:25
+#: ../capplets/network/cinnamon-network-properties.ui.h:25
 msgid "_Use the same proxy for all protocols"
 msgstr "_De sülvigen Proxy för all Protokolls bruken"
 
-#: ../capplets/windows/gnome-window-properties.c:344
+#: ../capplets/windows/cinnamon-window-properties.c:344
 msgid "Cannot start the preferences application for your window manager"
 msgstr ""
 
 #. translators: this is the Control key
-#: ../capplets/windows/gnome-window-properties.c:608
+#: ../capplets/windows/cinnamon-window-properties.c:608
 msgid "C_ontrol"
 msgstr "K_ontroll"
 
-#: ../capplets/windows/gnome-window-properties.c:613
+#: ../capplets/windows/cinnamon-window-properties.c:613
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:619
+#: ../capplets/windows/cinnamon-window-properties.c:619
 msgid "H_yper"
 msgstr "H_yper"
 
-#: ../capplets/windows/gnome-window-properties.c:626
+#: ../capplets/windows/cinnamon-window-properties.c:626
 msgid "S_uper (or \"Windows logo\")"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.c:633
+#: ../capplets/windows/cinnamon-window-properties.c:633
 msgid "_Meta"
 msgstr "_Meta"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:1
+#: ../capplets/windows/cinnamon-window-properties.ui.h:1
 msgid "Movement Key"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:2
+#: ../capplets/windows/cinnamon-window-properties.ui.h:2
 msgid "Titlebar Action"
 msgstr "Titelbalkenaktschoon"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:3
+#: ../capplets/windows/cinnamon-window-properties.ui.h:3
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:4
+#: ../capplets/windows/cinnamon-window-properties.ui.h:4
 msgid "Window Preferences"
 msgstr "Finsterinstellens"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:5
+#: ../capplets/windows/cinnamon-window-properties.ui.h:5
 msgid "Window Selection"
 msgstr "Finsterwähler"
 
-#: ../capplets/windows/gnome-window-properties.ui.h:6
+#: ../capplets/windows/cinnamon-window-properties.ui.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:7
+#: ../capplets/windows/cinnamon-window-properties.ui.h:7
 msgid "_Interval before raising:"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:8
+#: ../capplets/windows/cinnamon-window-properties.ui.h:8
 msgid "_Raise selected windows after an interval"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:9
+#: ../capplets/windows/cinnamon-window-properties.ui.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr ""
 
-#: ../capplets/windows/gnome-window-properties.ui.h:10
+#: ../capplets/windows/cinnamon-window-properties.ui.h:10
 msgid "seconds"
 msgstr "Sekunnen"
 
@@ -2944,7 +2944,7 @@ msgstr ""
 msgid "Windows"
 msgstr "Finsters"
 
-#: ../libwindow-settings/gnome-wm-manager.c:316
+#: ../libwindow-settings/cinnamon-wm-manager.c:316
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr ""
@@ -3054,7 +3054,7 @@ msgstr ""
 #: ../shell/control-center.schemas.in.h:13
 msgid ""
 "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;default-"
-"applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+"applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 msgstr ""
 
 #: ../shell/control-center.schemas.in.h:14
@@ -3244,11 +3244,11 @@ msgstr ""
 msgid "I_nstall Font"
 msgstr "Schriftart _installeren"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:1
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:1
 msgid "Font Viewer"
 msgstr "Schriftartwieser"
 
-#: ../font-viewer/gnome-font-viewer.desktop.in.in.h:2
+#: ../font-viewer/cinnamon-font-viewer.desktop.in.in.h:2
 msgid "Preview fonts"
 msgstr "Schriftartutblick"
 

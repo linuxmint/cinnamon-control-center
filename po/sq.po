@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2008-09-15 05:35+0000\n"
 "PO-Revision-Date: 2008-09-20 11:58+0200\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
-"Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"Language-Team: albanian <cinnamon-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,25 +46,25 @@ msgstr "Butonët e shfaqur në dialogun e paralajmërimit"
 msgid "Show more _details"
 msgstr "Shfaq më shumë _detaje"
 
-#: ../capplets/about-me/gnome-about-me.c:739
+#: ../capplets/about-me/cinnamon-about-me.c:739
 msgid "Select Image"
 msgstr "Zgjidh figurën"
 
-#: ../capplets/about-me/gnome-about-me.c:741
+#: ../capplets/about-me/cinnamon-about-me.c:741
 msgid "No Image"
 msgstr "Asnjë figurë"
 
-#: ../capplets/about-me/gnome-about-me.c:769
+#: ../capplets/about-me/cinnamon-about-me.c:769
 #: ../capplets/appearance/appearance-desktop.c:661
 msgid "Images"
 msgstr "Figura"
 
-#: ../capplets/about-me/gnome-about-me.c:773
+#: ../capplets/about-me/cinnamon-about-me.c:773
 #: ../capplets/appearance/theme-installer.c:696
 msgid "All Files"
 msgstr "Të gjithë file"
 
-#: ../capplets/about-me/gnome-about-me.c:911
+#: ../capplets/about-me/cinnamon-about-me.c:911
 msgid ""
 "There was an error while trying to get the addressbook information\n"
 "Evolution Data Server can't handle the protocol"
@@ -72,167 +72,167 @@ msgstr ""
 "U ndesh një gabim gjatë përpjekjes për marrje informacione mbi rubrikën\n"
 "Evolution Data Server nuk mund të trajtojë protokollin"
 
-#: ../capplets/about-me/gnome-about-me.c:932
+#: ../capplets/about-me/cinnamon-about-me.c:932
 msgid "Unable to open address book"
 msgstr "E pamundur hapja e rubrikës"
 
-#: ../capplets/about-me/gnome-about-me.c:946
+#: ../capplets/about-me/cinnamon-about-me.c:946
 msgid "Unknown login ID, the user database might be corrupted"
 msgstr ""
 "ID i panjohur hyrje, baza me të dhënat e përdoruesve mund të jetë korruptuar"
 
-#: ../capplets/about-me/gnome-about-me.c:976
-#: ../capplets/about-me/gnome-about-me.c:978
+#: ../capplets/about-me/cinnamon-about-me.c:976
+#: ../capplets/about-me/cinnamon-about-me.c:978
 #, c-format
 msgid "About %s"
 msgstr "Informacione mbi %s"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:1
-#: ../capplets/about-me/gnome-about-me.glade.h:12
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:12
 msgid "About Me"
 msgstr "Informacione përdoruesi"
 
-#: ../capplets/about-me/gnome-about-me.desktop.in.in.h:2
+#: ../capplets/about-me/cinnamon-about-me.desktop.in.in.h:2
 msgid "Set your personal information"
 msgstr "Përcakton të dhënat vetiake personale"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:1
+#: ../capplets/about-me/cinnamon-about-me.glade.h:1
 msgid "<b>Email</b>"
 msgstr "<b>Email</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:2
+#: ../capplets/about-me/cinnamon-about-me.glade.h:2
 msgid "<b>Home</b>"
 msgstr "<b>Shtëpi</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:3
+#: ../capplets/about-me/cinnamon-about-me.glade.h:3
 msgid "<b>Instant Messaging</b>"
 msgstr "<b>Mesazhe të menjëhershëm</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:4
+#: ../capplets/about-me/cinnamon-about-me.glade.h:4
 msgid "<b>Job</b>"
 msgstr "<b>Punë</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:5
+#: ../capplets/about-me/cinnamon-about-me.glade.h:5
 msgid "<b>Telephone</b>"
 msgstr "<b>Telefoni</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:6
+#: ../capplets/about-me/cinnamon-about-me.glade.h:6
 msgid "<b>Web</b>"
 msgstr "<b>Web</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:7
+#: ../capplets/about-me/cinnamon-about-me.glade.h:7
 msgid "<b>Work</b>"
 msgstr "<b>Punë</b>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:8
+#: ../capplets/about-me/cinnamon-about-me.glade.h:8
 msgid "<span size=\"larger\" weight=\"bold\">Change your password</span>"
 msgstr ""
 "<span size=\"larger\" weight=\"bold\">Ndryshimi i fjalëkalimit personal</"
 "span>"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:9
+#: ../capplets/about-me/cinnamon-about-me.glade.h:9
 msgid "A_IM/iChat:"
 msgstr "A_IM/iChat:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:10
+#: ../capplets/about-me/cinnamon-about-me.glade.h:10
 msgid "A_ddress:"
 msgstr "A_dresa:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:11
+#: ../capplets/about-me/cinnamon-about-me.glade.h:11
 msgid "A_ssistant:"
 msgstr "A_sistenti:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:13
+#: ../capplets/about-me/cinnamon-about-me.glade.h:13
 msgid "Address"
 msgstr "Adresa"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:14
+#: ../capplets/about-me/cinnamon-about-me.glade.h:14
 msgid "C_ity:"
 msgstr "Qytet_i:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:15
+#: ../capplets/about-me/cinnamon-about-me.glade.h:15
 msgid "C_ompany:"
 msgstr "K_ompania:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:16
+#: ../capplets/about-me/cinnamon-about-me.glade.h:16
 msgid "Cale_ndar:"
 msgstr "Kale_ndari:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:17
+#: ../capplets/about-me/cinnamon-about-me.glade.h:17
 msgid "Change Passwo_rd..."
 msgstr "Ndrysho fjalëka_limin..."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:18
+#: ../capplets/about-me/cinnamon-about-me.glade.h:18
 msgid "Change pa_ssword"
 msgstr "Ndrysho f_jalëkalimin"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:19
+#: ../capplets/about-me/cinnamon-about-me.glade.h:19
 msgid "Change password"
 msgstr "Ndrysho fjalëkalimin"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:20
+#: ../capplets/about-me/cinnamon-about-me.glade.h:20
 msgid "Ci_ty:"
 msgstr "Qy_teti:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:21
+#: ../capplets/about-me/cinnamon-about-me.glade.h:21
 msgid "Co_untry:"
 msgstr "Sh_teti:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:22
+#: ../capplets/about-me/cinnamon-about-me.glade.h:22
 msgid "Contact"
 msgstr "Kontakti"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:23
+#: ../capplets/about-me/cinnamon-about-me.glade.h:23
 msgid "Cou_ntry:"
 msgstr "Shte_ti:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:24
+#: ../capplets/about-me/cinnamon-about-me.glade.h:24
 msgid "Current _password:"
 msgstr "_Fjalëkalimi aktual:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:25
+#: ../capplets/about-me/cinnamon-about-me.glade.h:25
 msgid "Full Name"
 msgstr "Emri dhe mbiemri"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:26
+#: ../capplets/about-me/cinnamon-about-me.glade.h:26
 msgid "Hom_e:"
 msgstr "Shtë_pi:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:27
+#: ../capplets/about-me/cinnamon-about-me.glade.h:27
 msgid "IC_Q:"
 msgstr "IC_Q:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:28
+#: ../capplets/about-me/cinnamon-about-me.glade.h:28
 msgid "M_SN:"
 msgstr "M_SN:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:29
+#: ../capplets/about-me/cinnamon-about-me.glade.h:29
 msgid "P.O. _box:"
 msgstr "Kutia e po_stës:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:30
+#: ../capplets/about-me/cinnamon-about-me.glade.h:30
 msgid "P._O. box:"
 msgstr "Kutia e p_ostës:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:31
+#: ../capplets/about-me/cinnamon-about-me.glade.h:31
 msgid "Personal Info"
 msgstr "Të dhëna personale"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:32
-#: ../capplets/about-me/gnome-about-me-password.c:938
+#: ../capplets/about-me/cinnamon-about-me.glade.h:32
+#: ../capplets/about-me/cinnamon-about-me-password.c:938
 msgid ""
 "Please type your password again in the <b>Retype new password</b> field."
 msgstr "Rishkruaj fjalëkalimin në fushën e <b>Rishkruaj fjalëkalimin e ri</b>."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:33
+#: ../capplets/about-me/cinnamon-about-me.glade.h:33
 msgid "Select your photo"
 msgstr "Zgjidh fotografinë"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:34
+#: ../capplets/about-me/cinnamon-about-me.glade.h:34
 msgid "State/Pro_vince:"
 msgstr "Shteti/Rre_thi:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:35
+#: ../capplets/about-me/cinnamon-about-me.glade.h:35
 msgid ""
 "To change your password, enter your current password in the field below and "
 "click <b>Authenticate</b>.\n"
@@ -244,109 +244,109 @@ msgstr ""
 "Mbas autentikimit, shkruaj fjalëkalimin e ri, rishkruaje për verifikim dhe "
 "kliko tek <b>Ndrysho fjalëkalimin</b>."
 
-#: ../capplets/about-me/gnome-about-me.glade.h:37
+#: ../capplets/about-me/cinnamon-about-me.glade.h:37
 msgid "User name:"
 msgstr "Emri i përdoruesit:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:38
+#: ../capplets/about-me/cinnamon-about-me.glade.h:38
 msgid "Web _log:"
 msgstr "Di_tari në web:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:39
+#: ../capplets/about-me/cinnamon-about-me.glade.h:39
 msgid "Wor_k:"
 msgstr "Pun_a:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:40
+#: ../capplets/about-me/cinnamon-about-me.glade.h:40
 msgid "Work _fax:"
 msgstr "_Fax në punë:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:41
+#: ../capplets/about-me/cinnamon-about-me.glade.h:41
 msgid "Zip/_Postal code:"
 msgstr "Zip/Kodi i _postës:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:42
+#: ../capplets/about-me/cinnamon-about-me.glade.h:42
 msgid "_Address:"
 msgstr "_Adresa:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:43
+#: ../capplets/about-me/cinnamon-about-me.glade.h:43
 msgid "_Authenticate"
 msgstr "_Autentikimi"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:44
+#: ../capplets/about-me/cinnamon-about-me.glade.h:44
 msgid "_Department:"
 msgstr "_Dipartimenti:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:45
+#: ../capplets/about-me/cinnamon-about-me.glade.h:45
 msgid "_Groupwise:"
 msgstr "_Groupwise:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:46
+#: ../capplets/about-me/cinnamon-about-me.glade.h:46
 msgid "_Home page:"
 msgstr "Faqja në w_eb:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:47
+#: ../capplets/about-me/cinnamon-about-me.glade.h:47
 msgid "_Home:"
 msgstr "_Shtëpia:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:48
+#: ../capplets/about-me/cinnamon-about-me.glade.h:48
 msgid "_Jabber:"
 msgstr "_Jabber:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:49
+#: ../capplets/about-me/cinnamon-about-me.glade.h:49
 msgid "_Manager:"
 msgstr "_Manageri:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:50
+#: ../capplets/about-me/cinnamon-about-me.glade.h:50
 msgid "_Mobile:"
 msgstr "_Celulari:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:51
+#: ../capplets/about-me/cinnamon-about-me.glade.h:51
 msgid "_New password:"
 msgstr "Fjalëkalimi i _ri:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:52
+#: ../capplets/about-me/cinnamon-about-me.glade.h:52
 msgid "_Profession:"
 msgstr "_Profesioni:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:53
+#: ../capplets/about-me/cinnamon-about-me.glade.h:53
 msgid "_Retype new password:"
 msgstr "_Rishkruaj fjalëkalimin e ri:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:54
+#: ../capplets/about-me/cinnamon-about-me.glade.h:54
 msgid "_State/Province:"
 msgstr "_Shteti/Rrethi:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:55
+#: ../capplets/about-me/cinnamon-about-me.glade.h:55
 msgid "_Title:"
 msgstr "_Titulli:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:56
+#: ../capplets/about-me/cinnamon-about-me.glade.h:56
 msgid "_Work:"
 msgstr "_Puna:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:57
+#: ../capplets/about-me/cinnamon-about-me.glade.h:57
 msgid "_Yahoo:"
 msgstr "_Yahoo:"
 
-#: ../capplets/about-me/gnome-about-me.glade.h:58
+#: ../capplets/about-me/cinnamon-about-me.glade.h:58
 msgid "_Zip/Postal code:"
 msgstr "_Zip/Kodi i postës:"
 
-#: ../capplets/about-me/gnome-about-me-password.c:162
+#: ../capplets/about-me/cinnamon-about-me-password.c:162
 msgid "Child exited unexpectedly"
 msgstr "Biri doli në menyrë të papritur"
 
-#: ../capplets/about-me/gnome-about-me-password.c:297
+#: ../capplets/about-me/cinnamon-about-me-password.c:297
 #, c-format
 msgid "Could not shutdown backend_stdin IO channel: %s"
 msgstr "I pamundur ndalimi i kanalit të IO backend_stdin: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:310
+#: ../capplets/about-me/cinnamon-about-me-password.c:310
 #, c-format
 msgid "Could not shutdown backend_stdout IO channel: %s"
 msgstr "I pamundur ndalimi i kanalit të IO backend_stdout: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:409
+#: ../capplets/about-me/cinnamon-about-me-password.c:409
 msgid "Authenticated!"
 msgstr "Autentikuar!"
 
@@ -356,8 +356,8 @@ msgstr "Autentikuar!"
 #.
 #. Update status message and auth state
 #. Authentication failure
-#: ../capplets/about-me/gnome-about-me-password.c:475
-#: ../capplets/about-me/gnome-about-me-password.c:551
+#: ../capplets/about-me/cinnamon-about-me-password.c:475
+#: ../capplets/about-me/cinnamon-about-me-password.c:551
 msgid ""
 "Your password has been changed since you initially authenticated! Please re-"
 "authenticate."
@@ -365,69 +365,69 @@ msgstr ""
 "Fjalëkalimi është ndryshuar që nga autentikimi fillestar. Kryej përsëri "
 "autentikimin."
 
-#: ../capplets/about-me/gnome-about-me-password.c:477
+#: ../capplets/about-me/cinnamon-about-me-password.c:477
 msgid "That password was incorrect."
 msgstr "Fjalëkalimi nuk ishte i vlefshëm."
 
-#: ../capplets/about-me/gnome-about-me-password.c:524
+#: ../capplets/about-me/cinnamon-about-me-password.c:524
 msgid "Your password has been changed."
 msgstr "Fjalëkalimi juaj është ndryshuar."
 
 #. What does this indicate?
 #. * "Authentication information cannot be recovered?" from libpam?
-#: ../capplets/about-me/gnome-about-me-password.c:534
+#: ../capplets/about-me/cinnamon-about-me-password.c:534
 #, c-format
 msgid "System error: %s."
 msgstr "Gabim sistemi: %s."
 
-#: ../capplets/about-me/gnome-about-me-password.c:537
+#: ../capplets/about-me/cinnamon-about-me-password.c:537
 msgid "The password is too short."
 msgstr "Fjalëkalimi është tepër i shkurtër."
 
-#: ../capplets/about-me/gnome-about-me-password.c:540
+#: ../capplets/about-me/cinnamon-about-me-password.c:540
 msgid "The password is too simple."
 msgstr "Fjalëkalimi është tepër i thjeshtë."
 
-#: ../capplets/about-me/gnome-about-me-password.c:543
+#: ../capplets/about-me/cinnamon-about-me-password.c:543
 msgid "The old and new passwords are too similar."
 msgstr "Fjalëkalimi i ri është tepër i ngjashëm me të vjetrin."
 
-#: ../capplets/about-me/gnome-about-me-password.c:545
+#: ../capplets/about-me/cinnamon-about-me-password.c:545
 msgid "The new password must contain numeric or special character(s)."
 msgstr "Fjalëkalimi i ri mund të përmbajë simbole numerikë ose specialë."
 
-#: ../capplets/about-me/gnome-about-me-password.c:548
+#: ../capplets/about-me/cinnamon-about-me-password.c:548
 msgid "The old and new passwords are the same."
 msgstr "Fjalëkalimi i ri është njësoj me fjalëkalimin e vjetër."
 
 #. translators: Unable to launch <program>: <error message>
-#: ../capplets/about-me/gnome-about-me-password.c:820
+#: ../capplets/about-me/cinnamon-about-me-password.c:820
 #, c-format
 msgid "Unable to launch %s: %s"
 msgstr "E pamundur nisja e %s: %s"
 
-#: ../capplets/about-me/gnome-about-me-password.c:824
+#: ../capplets/about-me/cinnamon-about-me-password.c:824
 msgid "Unable to launch backend"
 msgstr "E pamundur nisja e backend"
 
-#: ../capplets/about-me/gnome-about-me-password.c:825
+#: ../capplets/about-me/cinnamon-about-me-password.c:825
 msgid "A system error has occurred"
 msgstr "U ndesh një gabim sistemi"
 
 #. Update status message
-#: ../capplets/about-me/gnome-about-me-password.c:845
+#: ../capplets/about-me/cinnamon-about-me-password.c:845
 msgid "Checking password..."
 msgstr "Kontrolli i fjalëkalimit..."
 
-#: ../capplets/about-me/gnome-about-me-password.c:932
+#: ../capplets/about-me/cinnamon-about-me-password.c:932
 msgid "Click <b>Change password</b> to change your password."
 msgstr "Kliko tek <b>Ndrysho fjalëkalimin</b> për të ndryshuar fjalëkalimin."
 
-#: ../capplets/about-me/gnome-about-me-password.c:935
+#: ../capplets/about-me/cinnamon-about-me-password.c:935
 msgid "Please type your password in the <b>New password</b> field."
 msgstr "Shkruaj fjalëkalimin tek fusha e <b>Fjalëkalimi i ri</b>."
 
-#: ../capplets/about-me/gnome-about-me-password.c:941
+#: ../capplets/about-me/cinnamon-about-me-password.c:941
 msgid "The two passwords are not equal."
 msgstr "Dy fjalëkalimet nuk përputhen."
 
@@ -572,8 +572,8 @@ msgstr ""
 "Specifiko emrin e faqes për tu shfaqur (theme|background|fonts|interface)"
 
 #: ../capplets/appearance/appearance-main.c:116
-#: ../capplets/default-applications/gnome-da-capplet.c:880
-#: ../capplets/mouse/gnome-mouse-properties.c:444
+#: ../capplets/default-applications/cinnamon-da-capplet.c:880
+#: ../capplets/mouse/cinnamon-mouse-properties.c:444
 msgid "page"
 msgstr "faqe"
 
@@ -582,8 +582,8 @@ msgid "[WALLPAPER...]"
 msgstr "[SFOND EKRANI...]"
 
 #: ../capplets/appearance/appearance-style.c:167
-#: ../capplets/common/gnome-theme-info.c:442
-#: ../capplets/common/gnome-theme-info.c:634
+#: ../capplets/common/cinnamon-theme-info.c:442
+#: ../capplets/common/cinnamon-theme-info.c:634
 msgid "Default Pointer"
 msgstr "Kursori i paracaktuar"
 
@@ -593,7 +593,7 @@ msgid "Install"
 msgstr "Instalo"
 
 #: ../capplets/appearance/appearance-style.c:249
-#: ../capplets/common/gnome-theme-info.c:1644
+#: ../capplets/common/cinnamon-theme-info.c:1644
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme engine "
@@ -655,7 +655,7 @@ msgid "The current theme suggests a font."
 msgstr "Tema aktuale propozon një lloj gërme."
 
 #: ../capplets/appearance/appearance-themes.c:1045
-#: ../capplets/default-applications/gnome-da-capplet.c:630
+#: ../capplets/default-applications/cinnamon-da-capplet.c:630
 #: ../capplets/sound/sound-properties-capplet.c:262
 #: ../capplets/sound/sound-theme.c:648 ../capplets/sound/sound-theme.c:720
 msgid "Custom"
@@ -892,7 +892,7 @@ msgid "Window Border"
 msgstr "Bordi i dritares"
 
 #: ../capplets/appearance/data/appearance.glade.h:62
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:50
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:50
 msgid "_Add..."
 msgstr "_Shto..."
 
@@ -929,19 +929,19 @@ msgstr "Kombinimi i tasteve për menutë e ndryshu_eshme"
 # (pofilter) unchanged: please translate
 # #-#-#-#-#  dasher.HEAD.sq.po (dasher HEAD)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gucharmap.HEAD.sq.po (gucharmap gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  gucharmap.HEAD.sq.po (gucharmap cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gnome-terminal.HEAD.sq.po (gnome-terminal.gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-terminal.HEAD.sq.po (cinnamon-terminal.cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  ekiga.gnome-2-22.sq.po (ekiga gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  ekiga.cinnamon-2-22.sq.po (ekiga cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gucharmap.gnome-2-22.sq.po (gucharmap gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  gucharmap.cinnamon-2-22.sq.po (gucharmap cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  libgnomeui.gnome-2-22.sq.po (libgnomeui HEAD)  #-#-#-#-#
+# #-#-#-#-#  libgnomeui.cinnamon-2-22.sq.po (libgnomeui HEAD)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  dasher.gnome-2-22.sq.po (dasher.HEAD)  #-#-#-#-#
+# #-#-#-#-#  dasher.cinnamon-2-22.sq.po (dasher.HEAD)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gnome-terminal.gnome-2-22.sq.po (gnome-terminal.gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-terminal.cinnamon-2-22.sq.po (cinnamon-terminal.cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
 #: ../capplets/appearance/data/appearance.glade.h:70
 msgid "_File"
@@ -1049,31 +1049,31 @@ msgstr "_Dritaret:"
 msgid "dots per inch"
 msgstr "pika për inç"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:1
 msgid "Appearance"
 msgstr "Paraqitja"
 
-#: ../capplets/appearance/data/gnome-appearance-properties.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-appearance-properties.desktop.in.in.h:2
 msgid "Customize the look of the desktop"
 msgstr "Personalizon paraqitjen e ambjentit grafik"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:1
 msgid "Installs themes packages for various parts of the desktop"
 msgstr "Instalon paketat e temave për pjesë të ndryshme të «desktop»"
 
-#: ../capplets/appearance/data/gnome-theme-installer.desktop.in.in.h:2
+#: ../capplets/appearance/data/cinnamon-theme-installer.desktop.in.in.h:2
 msgid "Theme Installer"
 msgstr "Instaluesi i temave"
 
-#: ../capplets/appearance/data/gnome-theme-package.xml.in.h:1
+#: ../capplets/appearance/data/cinnamon-theme-package.xml.in.h:1
 msgid "Gnome Theme Package"
 msgstr "Paketa «Tema e Gnome»"
 
-#: ../capplets/appearance/gnome-wp-info.c:50
+#: ../capplets/appearance/cinnamon-wp-info.c:50
 msgid "No Wallpaper"
 msgstr "Asnjë sfond ekrani"
 
-#: ../capplets/appearance/gnome-wp-item.c:209
+#: ../capplets/appearance/cinnamon-wp-item.c:209
 msgid "Slide Show"
 msgstr "Diapozitivë"
 
@@ -1081,7 +1081,7 @@ msgstr "Diapozitivë"
 #. * mime type, x pixel(s) by y pixel(s)
 #. * Folder: /path/to/file
 #.
-#: ../capplets/appearance/gnome-wp-item.c:217
+#: ../capplets/appearance/cinnamon-wp-item.c:217
 #, c-format
 msgid ""
 "<b>%s</b>\n"
@@ -1092,8 +1092,8 @@ msgstr ""
 "%s, %d %s nga %d %s\n"
 "Kartela: %s"
 
-#: ../capplets/appearance/gnome-wp-item.c:223
-#: ../capplets/appearance/gnome-wp-item.c:225
+#: ../capplets/appearance/cinnamon-wp-item.c:223
+#: ../capplets/appearance/cinnamon-wp-item.c:225
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
@@ -1215,13 +1215,13 @@ msgstr "I pamundur instalimi i motorit të temës"
 
 #: ../capplets/common/activate-settings-daemon.c:16
 msgid ""
-"Unable to start the settings manager 'gnome-settings-daemon'.\n"
+"Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 "Without the GNOME settings manager running, some preferences may not take "
 "effect. This could indicate a problem with Bonobo, or a non-GNOME (e.g. KDE) "
 "settings manager may already be active and conflicting with the GNOME "
 "settings manager."
 msgstr ""
-"E pamundur nisja e menazhuesit të rregullimeve 'gnome-settings-daemon'.\n"
+"E pamundur nisja e menazhuesit të rregullimeve 'cinnamon-settings-daemon'.\n"
 "Nëse menazhuesi i rregullimeve të GNOME nuk është duke punuar, disa nga "
 "zgjedhjet mund të mos kenë efekt. Kjo situatë tregon një problem të mundshëm "
 "Bonobo, ose që një menazhues rregullimesh tjetër jo i GNOME (p.sh. i KDE) "
@@ -1420,41 +1420,41 @@ msgstr "Zgjidh një figurë."
 
 # #-#-#-#-#  glade3.HEAD.sq.po (glade3 HEAD)  #-#-#-#-#
 # (pofilter) accelerators: accelerator _ is missing from translation
-# #-#-#-#-#  glade3.gnome-2-22.sq.po (glade3 gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  glade3.cinnamon-2-22.sq.po (glade3 cinnamon-2-22)  #-#-#-#-#
 # (pofilter) accelerators: accelerator _ is missing from translation
 #: ../capplets/common/gconf-property-editor.c:1561
 msgid "_Select"
 msgstr "_Zgjidh"
 
-#: ../capplets/common/gnome-theme-info.c:635
+#: ../capplets/common/cinnamon-theme-info.c:635
 msgid "Default Pointer - Current"
 msgstr "Kursori i paracaktuar - në përdorim"
 
-#: ../capplets/common/gnome-theme-info.c:639
+#: ../capplets/common/cinnamon-theme-info.c:639
 msgid "White Pointer"
 msgstr "Kursor i bardhë"
 
-#: ../capplets/common/gnome-theme-info.c:640
+#: ../capplets/common/cinnamon-theme-info.c:640
 msgid "White Pointer - Current"
 msgstr "Kursor i bardhë - në përdorim"
 
-#: ../capplets/common/gnome-theme-info.c:644
+#: ../capplets/common/cinnamon-theme-info.c:644
 msgid "Large Pointer"
 msgstr "Kursor i madh"
 
-#: ../capplets/common/gnome-theme-info.c:645
+#: ../capplets/common/cinnamon-theme-info.c:645
 msgid "Large Pointer - Current"
 msgstr "Kursor i madh - në përdorim"
 
-#: ../capplets/common/gnome-theme-info.c:649
+#: ../capplets/common/cinnamon-theme-info.c:649
 msgid "Large White Pointer - Current"
 msgstr "Kursor i bardhë i madh - në përdorim"
 
-#: ../capplets/common/gnome-theme-info.c:650
+#: ../capplets/common/cinnamon-theme-info.c:650
 msgid "Large White Pointer"
 msgstr "Kursor i bardhë i madh"
 
-#: ../capplets/common/gnome-theme-info.c:1620
+#: ../capplets/common/cinnamon-theme-info.c:1620
 #, c-format
 msgid ""
 "This theme will not look as intended because the required GTK+ theme '%s' is "
@@ -1463,7 +1463,7 @@ msgstr ""
 "Tema nuk do të shfaqet sikurse parashikuar pasi tema e kërkuar GTK+ '%s' nuk "
 "është instaluar."
 
-#: ../capplets/common/gnome-theme-info.c:1628
+#: ../capplets/common/cinnamon-theme-info.c:1628
 #, c-format
 msgid ""
 "This theme will not look as intended because the required window manager "
@@ -1472,7 +1472,7 @@ msgstr ""
 "Tema nuk do të shfaqet sikurse parashikuar pasi tema e kërkuar e menazhuesit "
 "të dritareve '%s' nuk është instaluar."
 
-#: ../capplets/common/gnome-theme-info.c:1635
+#: ../capplets/common/cinnamon-theme-info.c:1635
 #, c-format
 msgid ""
 "This theme will not look as intended because the required icon theme '%s' is "
@@ -1482,7 +1482,7 @@ msgstr ""
 "'%s' nuk është instaluar."
 
 #: ../capplets/default-applications/default-applications.desktop.in.in.h:1
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:22
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:22
 msgid "Preferred Applications"
 msgstr "Aplikativë të preferuar"
 
@@ -1490,360 +1490,360 @@ msgstr "Aplikativë të preferuar"
 msgid "Select your default applications"
 msgstr "Zgjidh apliaktivët e paracaktuar"
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:1
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:1
 msgid "Start the preferred visual assistive technology"
 msgstr "Nis teknollogjinë asistuese të preferuar për shikimin"
 
-#: ../capplets/default-applications/gnome-at-session.desktop.in.in.h:2
+#: ../capplets/default-applications/cinnamon-at-session.desktop.in.in.h:2
 msgid "Visual Assistance"
 msgstr "Asistenca vizive"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:94
-#: ../capplets/default-applications/gnome-da-capplet.c:345
-#: ../capplets/default-applications/gnome-da-capplet.c:366
+#: ../capplets/default-applications/cinnamon-da-capplet.c:94
+#: ../capplets/default-applications/cinnamon-da-capplet.c:345
+#: ../capplets/default-applications/cinnamon-da-capplet.c:366
 #, c-format
 msgid "Error saving configuration: %s"
 msgstr "Gabim gjatë ruajtjes së konfigurimit: %s"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:650
+#: ../capplets/default-applications/cinnamon-da-capplet.c:650
 msgid "Could not load the main interface"
 msgstr "I pamundur ngarkimi i interfaqes kryesore"
 
-#: ../capplets/default-applications/gnome-da-capplet.c:652
+#: ../capplets/default-applications/cinnamon-da-capplet.c:652
 msgid "Please make sure that the applet is properly installed"
 msgstr "Sigurohu që mini-aplikativi të jetë instaluar sikurse duhet"
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/default-applications/gnome-da-capplet.c:879
+#: ../capplets/default-applications/cinnamon-da-capplet.c:879
 msgid "Specify the name of the page to show (internet|multimedia|system|a11y)"
 msgstr ""
 "Specifiko emrin e faqes për tu shfaqur (internet|multimedia|system|a11y)"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:1
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:1
 msgid "<b>Image Viewer</b>"
 msgstr "<b>Shfaqës figurash</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:2
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:2
 msgid "<b>Instant Messenger</b>"
 msgstr "<b>Mesazhe të menjëhershëm</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:3
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:3
 msgid "<b>Mail Reader</b>"
 msgstr "<b>Klient i postës elektronike</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:4
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:4
 msgid "<b>Mobility</b>"
 msgstr "<b>Lëvizshmëri</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:5
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:5
 msgid "<b>Multimedia Player</b>"
 msgstr "<b>Riprodhues multimedial</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:6
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:6
 msgid "<b>Terminal Emulator</b>"
 msgstr "<b>Emulator terminali</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:7
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:7
 msgid "<b>Text Editor</b>"
 msgstr "<b>Editor teksti</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:8
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:8
 msgid "<b>Video Player</b>"
 msgstr "<b>Riprodhues video</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:9
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:9
 msgid "<b>Visual</b>"
 msgstr "<b>Shikimi</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:10
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:10
 msgid "<b>Web Browser</b>"
 msgstr "<b>Shfletues web</b>"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:11
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:12
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:28
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:12
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:28
 msgid "Accessibility"
 msgstr "Përdorshmëria"
 
 # Thjesht sensi.
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:13
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:13
 #, no-c-format
 msgid "All %s occurrences will be replaced with actual link"
 msgstr "Vlera %s zëvendësohet me lidhjen"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:14
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:14
 msgid "C_ommand:"
 msgstr "K_omanda:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:15
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:15
 msgid "Co_mmand:"
 msgstr "Ko_manda:"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:16
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:16
 msgid "E_xecute flag:"
 msgstr "Flag i e_kzekutimit:"
 
-# #-#-#-#-#  gnome-menus.HEAD.sq.po (gnome-menus gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-menus.HEAD.sq.po (cinnamon-menus cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gnome-menus.gnome-2-22.sq.po (gnome-menus gnome-2-22)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-menus.cinnamon-2-22.sq.po (cinnamon-menus cinnamon-2-22)  #-#-#-#-#
 # (pofilter) unchanged: please translate
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:17
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:17
 msgid "Internet"
 msgstr "Internet"
 
-# #-#-#-#-#  gnome-icon-theme.HEAD.sq.po (gnome-icon-theme.HEAD)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-icon-theme.HEAD.sq.po (cinnamon-icon-theme.HEAD)  #-#-#-#-#
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # (pofilter) unchanged: please translate
-# #-#-#-#-#  gnome-icon-theme.gnome-2-22.sq.po (gnome-icon-theme.HEAD)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-icon-theme.cinnamon-2-22.sq.po (cinnamon-icon-theme.HEAD)  #-#-#-#-#
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # 48x48/emblems/emblem-multimedia.icon.in.h:1
 # (pofilter) unchanged: please translate
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:18
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:18
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:19
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:19
 msgid "Open link in new _tab"
 msgstr "Hap lidhjet në një skedë _të re"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:20
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:20
 msgid "Open link in new _window"
 msgstr "Hap lidhjet në një _dritare të re"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:21
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:21
 msgid "Open link with web browser _default"
 msgstr "Hap lidhjet sipas _rregullimeve të shfletuesit web"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:23
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:23
 msgid "Run at st_art"
 msgstr "Ekzekuto në _nisje"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:24
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:24
 msgid "Run in t_erminal"
 msgstr "Ekzekuto në t_erminal"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:25
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:25
 msgid "System"
 msgstr "Sistemi"
 
-#: ../capplets/default-applications/gnome-default-applications-properties.glade.h:26
+#: ../capplets/default-applications/cinnamon-default-applications-properties.glade.h:26
 msgid "_Run at start"
 msgstr "_Ekzekuto në nisje"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:1
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:1
 msgid "Balsa"
 msgstr "Balsa"
 
 # Hiqet Music Player pasi shfaqet
 # në listën e music player
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:2
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:2
 msgid "Banshee Music Player"
 msgstr "Banshee"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:3
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:3
 msgid "Claws Mail"
 msgstr "Claws Mail"
 
 # (pofilter) unchanged: please translate
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:4
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:4
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:5
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:5
 msgid "Debian Sensible Browser"
 msgstr "Shfletues i përshtatshëm për Debian"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:6
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:6
 msgid "Debian Terminal Emulator"
 msgstr "Emulator terminali Debian"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:7
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:7
 msgid "ETerm"
 msgstr "ETerm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:8
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:8
 msgid "Encompass"
 msgstr "Encompass"
 
 # Hiqet web browser pasi rezulton
 # në listën e web browser
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:9
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:9
 msgid "Epiphany Web Browser"
 msgstr "Epiphany"
 
 # Hiqet mail reader pasi rezulton
 # në listën e klientëve mail
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:10
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:10
 msgid "Evolution Mail Reader"
 msgstr "Evolution"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:11
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:11
 msgid "Firebird"
 msgstr "Firebird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:12
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:12
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:13
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:13
 msgid "GNOME Magnifier without Screen Reader"
 msgstr "Zmadhuesi i GNOME pa lexues ekrani"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:14
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:14
 msgid "GNOME OnScreen Keyboard"
 msgstr "Tastierë në ekran e GNOME"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:15
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:15
 msgid "GNOME Terminal"
 msgstr "Terminali i GNOME"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:16
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:16
 msgid "Galeon"
 msgstr "Galeon"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:17
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:17
 msgid "Gnopernicus"
 msgstr "Gnopernicus"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:18
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:18
 msgid "Gnopernicus with Magnifier"
 msgstr "Gnopernicus me zmadhues"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:19
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:19
 msgid "Iceape"
 msgstr "Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:20
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:20
 msgid "Iceape Mail"
 msgstr "Posta Iceape"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:21
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:21
 msgid "Icedove"
 msgstr "Icedove"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:22
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:22
 msgid "Iceweasel"
 msgstr "Iceweasel"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:23
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:23
 msgid "KDE Magnifier without Screen Reader"
 msgstr "Zmadhuesi i KDE pa lexues ekrani"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:24
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:24
 msgid "KMail"
 msgstr "KMail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:25
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:25
 msgid "Konqueror"
 msgstr "Konqueror"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:26
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:26
 msgid "Konsole"
 msgstr "Konsole"
 
 # Emri i vetë aplikativit
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:27
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:27
 msgid "Linux Screen Reader"
 msgstr "Linux Screen Reader"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:28
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:28
 msgid "Linux Screen Reader with Magnifier"
 msgstr "Linux Screen Reader me zmadhues"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:29
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:29
 msgid "Midori"
 msgstr "Midori"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:30
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:30
 msgid "Mozilla"
 msgstr "Mozilla"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:31
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:31
 msgid "Mozilla 1.6"
 msgstr "Mozilla 1.6"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:32
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:32
 msgid "Mozilla Mail"
 msgstr "Mozilla Mail"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:33
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:33
 msgid "Mozilla Thunderbird"
 msgstr "Mozilla Thunderbird"
 
 # Hiqet music player
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:34
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:34
 msgid "Muine Music Player"
 msgstr "Muine"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:35
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:35
 msgid "Mutt"
 msgstr "Mutt"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:36
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:36
 msgid "NXterm"
 msgstr "NXterm"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:37
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:37
 msgid "Netscape Communicator"
 msgstr "Netscape Communicator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:38
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:38
 msgid "Opera"
 msgstr "Opera"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:39
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:39
 msgid "Orca"
 msgstr "Orca"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:40
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:40
 msgid "Orca with Magnifier"
 msgstr "Orca me zmadhues"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:41
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:41
 msgid "RXVT"
 msgstr "RXVT"
 
 # Hiqet music player
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:42
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:42
 msgid "Rhythmbox Music Player"
 msgstr "Rhythmbox"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:43
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:43
 msgid "SeaMonkey"
 msgstr "SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:44
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:44
 msgid "SeaMonkey Mail"
 msgstr "Posta SeaMonkey"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:45
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:45
 msgid "Standard XTerminal"
 msgstr "Terminal X standard"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:46
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:46
 msgid "Sylpheed"
 msgstr "Sylpheed"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:47
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:47
 msgid "Sylpheed-Claws"
 msgstr "Sylpheed-Claws"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:48
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:48
 msgid "Terminator"
 msgstr "Terminator"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:49
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:49
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:50
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:50
 msgid "Totem Movie Player"
 msgstr "Totem"
 
-#: ../capplets/default-applications/gnome-default-applications.xml.in.h:51
+#: ../capplets/default-applications/cinnamon-default-applications.xml.in.h:51
 msgid "aterm"
 msgstr "aterm"
 
@@ -1941,16 +1941,16 @@ msgstr "%d x %d"
 msgid "Off"
 msgstr "Çaktivizuar"
 
-# #-#-#-#-#  gnome-icon-theme.HEAD.sq.po (gnome-icon-theme.HEAD)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-icon-theme.HEAD.sq.po (cinnamon-icon-theme.HEAD)  #-#-#-#-#
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
-# #-#-#-#-#  gnome-icon-theme.gnome-2-22.sq.po (gnome-icon-theme.HEAD)  #-#-#-#-#
+# #-#-#-#-#  cinnamon-icon-theme.cinnamon-2-22.sq.po (cinnamon-icon-theme.HEAD)  #-#-#-#-#
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 # 48x48/emblems/emblem-sound.icon.in.h:1
 #: ../capplets/keybindings/00-multimedia-key.xml.in.h:1
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:2
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:2
 msgid "Sound"
 msgstr "Zëri"
 
@@ -1987,27 +1987,27 @@ msgid "The type of accelerator."
 msgstr "Lloji i përshpejtuesit."
 
 #: ../capplets/keybindings/eggcellrendererkeys.c:242
-#: ../capplets/keybindings/gnome-keybinding-properties.c:90
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:90
 #: ../capplets/sound/sound-theme.c:415 ../capplets/sound/sound-theme.c:433
 #: ../capplets/sound/sound-theme.c:543 ../capplets/sound/sound-theme.c:559
 #: ../typing-break/drwright.c:480
 msgid "Disabled"
 msgstr "Çaktivizuar"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:171
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:171
 msgid "<Unknown Action>"
 msgstr "<Aksion i panjohur>"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:804
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:804
 msgid "Custom Shortcuts"
 msgstr "Përshpejtime të personalizuara"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:938
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:938
 #, c-format
 msgid "Error saving the new shortcut: %s"
 msgstr "Gabim në ruajtjen e përshpejtuesit të ri: %s"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1016
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1016
 #, c-format
 msgid ""
 "The shortcut \"%s\" cannot be used because it will become impossible to type "
@@ -2019,7 +2019,7 @@ msgstr ""
 "Provo të përdorësh në kombinim njëkohësisht një pulsant si Ctrl, Alt apo "
 "Shift."
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1046
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1046
 #, c-format
 msgid ""
 "The shortcut \"%s\" is already used for\n"
@@ -2028,41 +2028,41 @@ msgstr ""
 "Përshpejtimi «%s» përdoret rregullisht për\n"
 "«%s»"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1052
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1052
 #, c-format
 msgid ""
 "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be disabled."
 msgstr ""
 "Nëse i ricaktohet përshpejtimi «%s», përshpejtimi «%s» do të çaktivizohet."
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1060
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1060
 msgid "_Reassign"
 msgstr "_Ricakto"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1180
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1180
 #, c-format
 msgid "Error unsetting accelerator in configuration database: %s"
 msgstr ""
 "Gabim gjatë heqjes së përshpejtuesit në bazën e të dhënave të konfigurimit: "
 "%s"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1362
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1362
 msgid "Action"
 msgstr "Veprimi"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.c:1384
+#: ../capplets/keybindings/cinnamon-keybinding-properties.c:1384
 msgid "Shortcut"
 msgstr "Kombinimi përshpejtues"
 
 #.
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:1
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:1
 #: ../capplets/keybindings/keybinding.desktop.in.in.h:2
 msgid "Keyboard Shortcuts"
 msgstr "Kombinime përshpejtuese nga tastiera"
 
-#: ../capplets/keybindings/gnome-keybinding-properties.glade.h:2
+#: ../capplets/keybindings/cinnamon-keybinding-properties.glade.h:2
 msgid ""
 "To edit a shortcut key, click on the corresponding row and type a new key "
 "combination, or press backspace to clear."
@@ -2074,8 +2074,8 @@ msgstr ""
 msgid "Assign shortcut keys to commands"
 msgstr "Cakton pulsante përshpejtues komandave"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:248
-#: ../capplets/keyboard/gnome-keyboard-properties.c:253
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:248
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:253
 #: ../capplets/sound/sound-properties-capplet.c:1185
 #: ../capplets/sound/sound-properties-capplet.c:1187
 msgid ""
@@ -2084,194 +2084,194 @@ msgstr ""
 "Aplikon rregullimet dhe del (vetëm kompatibilitet; tashmë kontrollohet nga "
 "demon)"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:256
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:256
 #: ../capplets/sound/sound-properties-capplet.c:1189
 msgid "Retrieve and store legacy settings"
 msgstr "Rikuperon dhe rivendos rregullimet legacy"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:260
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:260
 msgid "Start the page with the typing break settings showing"
 msgstr ""
 "Nis duke shfaqur faqen e pronësive të rregullimeve për pushimet gjatë "
 "shkrimit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:265
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:265
 msgid "Start the page with the accessibility settings showing"
 msgstr "Nis duke shfaqur faqen e pronësive të rregullimeve të açesibilitetit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.c:274
+#: ../capplets/keyboard/cinnamon-keyboard-properties.c:274
 msgid "- GNOME Keyboard Preferences"
 msgstr "- Preferimet e tastierës së GNOME"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:1
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:1
 msgid "<b>Bounce Keys</b>"
 msgstr "<b>Shtypja e përafërt e pulsantëve</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:2
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:2
 msgid "<b>Cursor Blinking</b>"
 msgstr "<b>Pulsimi i kursorit</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:3
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:3
 msgid "<b>General</b>"
 msgstr "<b>Të përgjithshme</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:4
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:4
 msgid "<b>Repeat Keys</b>"
 msgstr "<b>Përsëritja e pulsantëve</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:5
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:5
 msgid "<b>Slow Keys</b>"
 msgstr "<b>Ngadalsimi i pulsantëve</b>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:6
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:6
 msgid "<b>Sticky Keys</b>"
 msgstr "<b>Qëndrimi i pulsantëve</b>"
 
 #. fast acceleration
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:7
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:13
 msgid "<small><i>Fast</i></small>"
 msgstr "<small><i>Shpejt</i></small>"
 
 #. long delay
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:8
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:19
 msgid "<small><i>Long</i></small>"
 msgstr "<small><i>E gjatë</i></small>"
 
 #. short delay
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:9
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:23
 msgid "<small><i>Short</i></small>"
 msgstr "<small><i>E shkurtër</i></small>"
 
 #. slow acceleration
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:10
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:10
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:25
 msgid "<small><i>Slow</i></small>"
 msgstr "<small><i>Ngadalë</i></small>"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:11
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:11
 msgid "A_cceleration:"
 msgstr "P_ërshpejtimi:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:13
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:13
 msgid "All_ow postponing of breaks"
 msgstr "Lej_o shtyrjen e pushimeve"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:14
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:14
 msgid "Audio _Feedback..."
 msgstr "_Feedback audio..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:15
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:15
 msgid "Beep when _accessibility features are turned on or off"
 msgstr ""
 "Sinjal akustik kur aktivizohen apo çaktivizohen funksionet e _açesibilitetit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:16
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:16
 msgid "Beep when a _modifier key is pressed"
 msgstr "Sinjal akustik kur shtypet një _ndryshues"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:17
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:17
 msgid "Beep when a _toggle key is pressed"
 msgstr "Sinjal akustik kur shtypet një pulsant _shkëmbyes"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:18
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:18
 msgid "Beep when a key is pr_essed"
 msgstr "Sinjal akustik kur shtyp_et një pulsant"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:19
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:19
 msgid "Beep when a key is reje_cted"
 msgstr "Sinjal akustik kur refu_zohet një pulsant"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:20
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:20
 msgid "Beep when key is _accepted"
 msgstr "Sinjal akustik kur pr_anohet një pulsant"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:21
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:21
 msgid "Beep when key is _rejected"
 msgstr "Sinjal akustik kur pulsanti _refuzohet"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:22
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:22
 msgid "By _country"
 msgstr "Sipas sh_tetit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:23
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:23
 msgid "By _language"
 msgstr "Sipas _gjuhës"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:24
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:24
 msgid "Check if breaks are allowed to be postponed"
 msgstr "Kontrollon nëse lejohet shtyrja e pushimeve"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:25
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:25
 msgid "Choose a Keyboard Model"
 msgstr "Zgjedhja e një modeli tastiere"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:26
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:26
 msgid "Choose a Layout"
 msgstr "Zgjedhja e një planimetrie"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:27
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:27
 msgid "Cursor _blinks in text fields"
 msgstr "Kursor pulsues në fushat me tekst"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:28
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:28
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:31
 msgid "Cursor blinks speed"
 msgstr "Shpejtësia e pulsimit të kursorit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:29
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:32
 msgid "D_elay:"
 msgstr "Von_esa:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:30
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:30
 msgid "Disa_ble sticky keys if two keys are pressed together"
 msgstr "Çaktivizo qëndrimin e pulsantëve nëse shtypen dy pulsantë së bashku"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:31
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:31
 msgid "Duration of the break when typing is disallowed"
 msgstr "Kohëzgjatja e pushimit gjatë së cilës ndalohet shkrimi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:32
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:32
 msgid "Duration of work before forcing a break"
 msgstr "Kohëzgjatja e punës para se të detyrohet kryerja e një pushimi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:33
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:36
 msgid "General"
 msgstr "Të përgjithshme"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:34
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:34
 msgid "Key presses _repeat when key is held down"
 msgstr "Pë_rsërit gërmën përderisa pulsanti mbahet i shtypur"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:35
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:35
 msgid "Keyboard Accessibility Audio Feedback"
 msgstr "Feedback audio i açesibilitetit të tastierës"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:36
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:36
 msgid "Keyboard Layout Options"
 msgstr "Opsionet e planimetrisë së tastierës"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:37
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:37
 msgid "Keyboard Preferences"
 msgstr "Preferimet e tastierës"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:38
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:38
 msgid "Keyboard _model:"
 msgstr "_Modeli i tastierës:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:39
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:39
 msgid "Layout _Options..."
 msgstr "_Opsionet e planimetrisë..."
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:40
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:40
 msgid "Layouts"
 msgstr "Planimetritë"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:41
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:41
 msgid ""
 "Lock screen after a certain duration to help prevent repetitive keyboard use "
 "injuries"
@@ -2279,128 +2279,128 @@ msgstr ""
 "Mbas një intervali te caktuar kohe blloko ekranin për të parandaluar dëmet e "
 "shkaktuara nga përdorimi i gjatë i tastierës"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:42
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:42
 msgid "Mouse Keys"
 msgstr "Mouse nga tastiera"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:43
 msgid "Preview:"
 msgstr "Pamja e parë:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:44
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:44
 msgid "Repeat keys speed"
 msgstr "Shpejtësia e përsëritjes së pulsantëve"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:45
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:45
 msgid "Reset to De_faults"
 msgstr "Rivendos vlerat e para_caktuara"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:46
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:46
 msgid "S_peed:"
 msgstr "Sh_pejtësia:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:47
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:47
 msgid "Separate _layout for each window"
 msgstr "P_lanimetri e veçantë për çdo dritare"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:48
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:48
 msgid "Typing Break"
 msgstr "Pushim gjatë shkrimit"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:49
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:49
 msgid "_Accessibility features can be toggled with keyboard shortcuts"
 msgstr ""
 "Funksionet e _açesibilitetit mund të aktivizohen/çaktivizohen me kombinime "
 "përshpejtuese nga tastiera"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:51
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:51
 msgid "_Break interval lasts:"
 msgstr "Kohëzgjatja e _pushimit:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:52
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:52
 msgid "_Country:"
 msgstr "_Shteti:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:53
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:43
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:53
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:43
 msgid "_Delay:"
 msgstr "_Vonesa:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:54
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:54
 msgid "_Ignore fast duplicate keypresses"
 msgstr "Shpërf_ill shtypje të shpejta të njëpasnjëshme pulsantësh"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:55
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:55
 msgid "_Language:"
 msgstr "_Gjuha:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:56
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:56
 msgid "_Lock screen to enforce typing break"
 msgstr "B_lloko ekranin për të detyruar kryrjen e një pushimi"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:57
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:57
 msgid "_Models:"
 msgstr "_Modele:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:58
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:58
 msgid "_Only accept long keypresses"
 msgstr "Prano ve_tëm shtypje pulsanti me kohëzgjatje të gjatë"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:59
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:59
 msgid "_Pointer can be controlled using the keypad"
 msgstr "_Kursori mund të kontrollohet duke përdorur tastierën"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:60
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:60
 msgid "_Selected layouts:"
 msgstr "Planimetritë e _zgjedhura:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:61
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:61
 msgid "_Simulate simultaneous keypresses"
 msgstr "_Simulo shtypje të njëkohshme pulsantësh"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:62
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:62
 msgid "_Speed:"
 msgstr "_Shpejtësia:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:63
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:63
 msgid "_Type to test settings:"
 msgstr "_Shkruaj këtu për të verifikuar rregullimet:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:64
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:64
 msgid "_Variants:"
 msgstr "_Variante:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:65
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:65
 msgid "_Vendors:"
 msgstr "_Prodhues:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:66
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:66
 msgid "_Work interval lasts:"
 msgstr "Intervali i _punës:"
 
-#: ../capplets/keyboard/gnome-keyboard-properties.glade.h:67
+#: ../capplets/keyboard/cinnamon-keyboard-properties.glade.h:67
 msgid "minutes"
 msgstr "minuta"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkb.c:81
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkb.c:81
 msgid "Unknown"
 msgstr "Nuk njihet"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:305
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:305
 msgid "Layout"
 msgstr "Planimetria"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkblt.c:311
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbot.c:211
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkblt.c:311
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbot.c:211
 #: ../capplets/sound/sound-theme.c:419 ../capplets/sound/sound-theme.c:539
 msgid "Default"
 msgstr "E paracaktuar"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:169
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:169
 msgid "Vendors"
 msgstr "Prodhues"
 
-#: ../capplets/keyboard/gnome-keyboard-properties-xkbmc.c:235
+#: ../capplets/keyboard/cinnamon-keyboard-properties-xkbmc.c:235
 msgid "Models"
 msgstr "Modele"
 
@@ -2414,73 +2414,73 @@ msgstr "Përcakton preferimet e tastierës"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:89
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:89
 msgid "gesture|Move left"
 msgstr "Lëviz në të majtë"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:94
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:94
 msgid "gesture|Move right"
 msgstr "Lëviz në të djathtë"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:99
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:99
 msgid "gesture|Move up"
 msgstr "Lëviz sipër"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:104
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:104
 msgid "gesture|Move down"
 msgstr "Lëviz poshtë"
 
 #. Translators: this is the gesture to trigger/choose the click type.
 #. Don't include the prefix "gesture|" in the translation.
-#: ../capplets/mouse/gnome-mouse-accessibility.c:109
+#: ../capplets/mouse/cinnamon-mouse-accessibility.c:109
 msgid "gesture|Disabled"
 msgstr "Çaktivizuar"
 
 #. TRANSLATORS: don't translate the terms in brackets
-#: ../capplets/mouse/gnome-mouse-properties.c:443
+#: ../capplets/mouse/cinnamon-mouse-properties.c:443
 msgid "Specify the name of the page to show (general|accessibility)"
 msgstr "Specifiko emrin e faqes për tu shfaqur (general|accessibility)"
 
-#: ../capplets/mouse/gnome-mouse-properties.c:452
+#: ../capplets/mouse/cinnamon-mouse-properties.c:452
 msgid "- GNOME Mouse Preferences"
 msgstr "- Preferimet e mouse për GNOME"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:1
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:1
 msgid "<b>Double-Click Timeout</b>"
 msgstr "<b>Koha në dispozicion për dopio klik</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:2
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:2
 msgid "<b>Drag and Drop</b>"
 msgstr "<b>Zvarritja</b>"
 
 #. Dwell Click = Clicking without hardware buttons (by letting the pointer sit on the click target for a certain amount of time)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:4
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:4
 msgid "<b>Dwell Click</b>"
 msgstr "<b>Klikim automatik</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:5
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:5
 msgid "<b>Locate Pointer</b>"
 msgstr "<b>Gjetja e kursorit</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:6
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:6
 msgid "<b>Mouse Orientation</b>"
 msgstr "<b>Orientimi i mouse</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:7
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:7
 msgid "<b>Pointer Speed</b>"
 msgstr "<b>Shpejtësia e kursorit</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:8
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:8
 msgid "<b>Simulated Secondary Click</b>"
 msgstr "<b>Klik dytësor i simuluar</b>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:9
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:9
 msgid ""
 "<i>To test your double-click settings, try to double-click on the light bulb."
 "</i>"
@@ -2489,7 +2489,7 @@ msgstr ""
 "dopio klik tek llampa.</i>"
 
 #. Dwell Click = Clicking without hardware buttons (by letting the pointer sit on the click target for a certain amount of time)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:11
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:11
 msgid ""
 "<i>You can also use the Dwell Click panel applet to choose the click type.</"
 "i>"
@@ -2498,191 +2498,191 @@ msgstr ""
 "zgjedhur llojin e klikimit.</i>"
 
 #. high sensitivity
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:15
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:15
 msgid "<small><i>High</i></small>"
 msgstr "<small><i>E lartë</i></small>"
 
 #. large threshold
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:17
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:17
 msgid "<small><i>Large</i></small>"
 msgstr "<small><i>I madh</i></small>"
 
 #. low sensitivity
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:21
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:21
 msgid "<small><i>Low</i></small>"
 msgstr "<small><i>E ulët</i></small>"
 
 #. small threshold
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:27
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:27
 msgid "<small><i>Small</i></small>"
 msgstr "<small><i>I vogël</i></small>"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:29
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:29
 msgid "Choose type of click _beforehand"
 msgstr "Zgjidh llojin e klikimit të _parakohshëm"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:30
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:30
 msgid "Choose type of click with mo_use gestures"
 msgstr "Zgjidh llojin e klik me gjeste të mo_use"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:33
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:33
 msgid "D_ouble click:"
 msgstr "D_opio klik:"
 
 #. click to initiate drag-and-drop (like normally click and hold)
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:35
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:35
 msgid "D_rag click:"
 msgstr "Klik zva_rritje:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:37
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:37
 msgid "Mouse Preferences"
 msgstr "Preferimet e mouse"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:38
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:38
 msgid "Seco_ndary click:"
 msgstr "Klik dytësor:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:39
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:39
 msgid "Sh_ow position of pointer when the Control key is pressed"
 msgstr "Sh_faq pozicionin e kursorit kur shtypet pulsanti Control"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:40
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:40
 msgid "Show click type _window"
 msgstr "Shfaq _dritaren për llojin e klikimit"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:41
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:41
 msgid "Thr_eshold:"
 msgstr "Kuf_iri:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:42
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:42
 msgid "_Acceleration:"
 msgstr "_Përshpejtimi:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:44
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:44
 msgid "_Initiate click when stopping pointer movement"
 msgstr "F_illo klikimin kur ndalon lëvizja e kursorit"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:45
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:45
 msgid "_Left-handed"
 msgstr "Për dorën e _majtë"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:46
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:46
 msgid "_Motion threshold:"
 msgstr "Kufiri i lë_vizjes:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:47
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:47
 msgid "_Right-handed"
 msgstr "Për dorën e _djathtë"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:48
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:48
 msgid "_Sensitivity:"
 msgstr "_Ndjeshmëria:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:49
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:49
 msgid "_Single click:"
 msgstr "Klik i ve_tëm:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:50
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:50
 msgid "_Timeout:"
 msgstr "_Koha në dispozicion:"
 
-#: ../capplets/mouse/gnome-mouse-properties.glade.h:51
+#: ../capplets/mouse/cinnamon-mouse-properties.glade.h:51
 msgid "_Trigger secondary click by holding down the primary button"
 msgstr "_Nis klikimin dytësor duke mbajtur shtypur pulsantin kryesor"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:1
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:1
 msgid "Mouse"
 msgstr "Mouse"
 
-#: ../capplets/mouse/gnome-settings-mouse.desktop.in.in.h:2
+#: ../capplets/mouse/cinnamon-settings-mouse.desktop.in.in.h:2
 msgid "Set your mouse preferences"
 msgstr "Përcakton preferimet e mouse"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:1
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:1
 msgid "Network Proxy"
 msgstr "Proxy i rrjetit"
 
-#: ../capplets/network/gnome-network-preferences.desktop.in.in.h:2
+#: ../capplets/network/cinnamon-network-preferences.desktop.in.in.h:2
 msgid "Set your network proxy preferences"
 msgstr "Përcakton preferimet e proxy të rrjetit"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:1
+#: ../capplets/network/cinnamon-network-preferences.glade.h:1
 msgid "<b>Di_rect internet connection</b>"
 msgstr "<b>Lidhje di_rekte në internet</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:2
+#: ../capplets/network/cinnamon-network-preferences.glade.h:2
 msgid "<b>Ignore Host List</b>"
 msgstr "<b>Lista me host për tu shpërfillur</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:3
+#: ../capplets/network/cinnamon-network-preferences.glade.h:3
 msgid "<b>_Automatic proxy configuration</b>"
 msgstr "<b>_Konfigurim automaktik i proxy</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:4
+#: ../capplets/network/cinnamon-network-preferences.glade.h:4
 msgid "<b>_Manual proxy configuration</b>"
 msgstr "<b>_Konfigurim manual i proxy</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:5
+#: ../capplets/network/cinnamon-network-preferences.glade.h:5
 msgid "<b>_Use authentication</b>"
 msgstr "<b>_Përdor autentikim</b>"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:6
+#: ../capplets/network/cinnamon-network-preferences.glade.h:6
 msgid "Autoconfiguration _URL:"
 msgstr "_URL e autokonfigurimit:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:7
+#: ../capplets/network/cinnamon-network-preferences.glade.h:7
 msgid "HTTP Proxy Details"
 msgstr "Detaje Proxy HTTP"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:8
+#: ../capplets/network/cinnamon-network-preferences.glade.h:8
 msgid "H_TTP proxy:"
 msgstr "Proxy H_TTP:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:9
+#: ../capplets/network/cinnamon-network-preferences.glade.h:9
 msgid "Ignored Hosts"
 msgstr "Host-et e shpërfillur"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:10
+#: ../capplets/network/cinnamon-network-preferences.glade.h:10
 msgid "Network Proxy Preferences"
 msgstr "Preferimet e proxy të rrjetit"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:11
+#: ../capplets/network/cinnamon-network-preferences.glade.h:11
 msgid "Port:"
 msgstr "Porta:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:12
+#: ../capplets/network/cinnamon-network-preferences.glade.h:12
 msgid "Proxy Configuration"
 msgstr "Konfigurimi i proxy"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:13
+#: ../capplets/network/cinnamon-network-preferences.glade.h:13
 msgid "S_ocks host:"
 msgstr "Host S_ocks:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:14
+#: ../capplets/network/cinnamon-network-preferences.glade.h:14
 msgid "U_sername:"
 msgstr "Përdorue_si:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:15
+#: ../capplets/network/cinnamon-network-preferences.glade.h:15
 msgid "_Details"
 msgstr "_Detaje"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:16
+#: ../capplets/network/cinnamon-network-preferences.glade.h:16
 msgid "_FTP proxy:"
 msgstr "Proxy _FTP:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:17
+#: ../capplets/network/cinnamon-network-preferences.glade.h:17
 msgid "_Password:"
 msgstr "_Fjalëkalimi:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:18
+#: ../capplets/network/cinnamon-network-preferences.glade.h:18
 msgid "_Secure HTTP proxy:"
 msgstr "Proxy HTTP i _Sigurtë:"
 
-#: ../capplets/network/gnome-network-preferences.glade.h:19
+#: ../capplets/network/cinnamon-network-preferences.glade.h:19
 msgid "_Use the same proxy for all protocols"
 msgstr "_Përdor të njëjtin host për të gjithë protokollet"
 
-#: ../capplets/sound/gnome-settings-sound.desktop.in.in.h:1
+#: ../capplets/sound/cinnamon-settings-sound.desktop.in.in.h:1
 msgid "Enable sound and associate sounds with events"
 msgstr "Aktivizoo tingujt dhe shoqëro me tinguj eventet"
 
@@ -2957,70 +2957,70 @@ msgstr "File audio"
 msgid "Custom..."
 msgstr "Personalizimi..."
 
-#: ../capplets/windows/gnome-window-properties.c:344
+#: ../capplets/windows/cinnamon-window-properties.c:344
 msgid "Cannot start the preferences application for your window manager"
 msgstr ""
 "E pamundur nisja e aplikativit për preferimet e menazhuesit të dritareve"
 
 #. translators: this is the Control key
-#: ../capplets/windows/gnome-window-properties.c:602
+#: ../capplets/windows/cinnamon-window-properties.c:602
 msgid "C_ontrol"
 msgstr "C_ontrol"
 
-#: ../capplets/windows/gnome-window-properties.c:607
+#: ../capplets/windows/cinnamon-window-properties.c:607
 msgid "_Alt"
 msgstr "_Alt"
 
-#: ../capplets/windows/gnome-window-properties.c:613
+#: ../capplets/windows/cinnamon-window-properties.c:613
 msgid "H_yper"
 msgstr "H_yper"
 
-#: ../capplets/windows/gnome-window-properties.c:620
+#: ../capplets/windows/cinnamon-window-properties.c:620
 msgid "S_uper (or \"Windows logo\")"
 msgstr "S_uper (ose «Stema e Windows»)"
 
-#: ../capplets/windows/gnome-window-properties.c:627
+#: ../capplets/windows/cinnamon-window-properties.c:627
 msgid "_Meta"
 msgstr "_Meta"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:1
+#: ../capplets/windows/cinnamon-window-properties.glade.h:1
 msgid "<b>Movement Key</b>"
 msgstr "<b>Pulsanti i lëvizjes</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:2
+#: ../capplets/windows/cinnamon-window-properties.glade.h:2
 msgid "<b>Titlebar Action</b>"
 msgstr "<b>Veprimi për shtyllën e titullit</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:3
+#: ../capplets/windows/cinnamon-window-properties.glade.h:3
 msgid "<b>Window Selection</b>"
 msgstr "<b>Zgjedhja e dritares</b>"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:4
+#: ../capplets/windows/cinnamon-window-properties.glade.h:4
 msgid "To move a window, press-and-hold this key then grab the window:"
 msgstr ""
 "Për të lëvizur një dritare, shtyp-dhe-mbaj këtë tast pastaj kap dritaren:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:5
+#: ../capplets/windows/cinnamon-window-properties.glade.h:5
 msgid "Window Preferences"
 msgstr "Preferimet e dritareve"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:6
+#: ../capplets/windows/cinnamon-window-properties.glade.h:6
 msgid "_Double-click titlebar to perform this action:"
 msgstr "_Dopjo-klikim mbi titullin për të kryer këtë veprim:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:7
+#: ../capplets/windows/cinnamon-window-properties.glade.h:7
 msgid "_Interval before raising:"
 msgstr "_Intervali përpara ngritjes në plan të parë:"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:8
+#: ../capplets/windows/cinnamon-window-properties.glade.h:8
 msgid "_Raise selected windows after an interval"
 msgstr "_Sill në plan të parë dritaret e zgjedhura mbas një intervali"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:9
+#: ../capplets/windows/cinnamon-window-properties.glade.h:9
 msgid "_Select windows when the mouse moves over them"
 msgstr "_Zgjidh dritaret kur mouse kalon sipër tyre"
 
-#: ../capplets/windows/gnome-window-properties.glade.h:10
+#: ../capplets/windows/cinnamon-window-properties.glade.h:10
 msgid "seconds"
 msgstr "sekonda"
 
@@ -3211,7 +3211,7 @@ msgstr "<b>Hap %s</b>"
 msgid "Remove from System Items"
 msgstr "Hiq nga zërat e sistemit"
 
-#: ../libwindow-settings/gnome-wm-manager.c:318
+#: ../libwindow-settings/cinnamon-wm-manager.c:318
 #, c-format
 msgid "Window manager \"%s\" has not registered a configuration tool\n"
 msgstr ""
@@ -3324,10 +3324,10 @@ msgstr ""
 #: ../shell/control-center.schemas.in.h:13
 msgid ""
 "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;default-"
-"applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+"applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 msgstr ""
 "[Ndrysho temën;gtk-theme-selector.desktop,Përcakto aplikativët e preferuar;"
-"default-applications.desktop,Shto printues;gnome-cups-manager.desktop]"
+"default-applications.desktop,Shto printues;cinnamon-cups-manager.desktop]"
 
 #: ../shell/control-center.schemas.in.h:14
 msgid ""

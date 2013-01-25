@@ -102,16 +102,16 @@ msgstr "Gan Cúlra na Deisce"
 msgid "Current background"
 msgstr "Cúlra reatha"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "Cúlra"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "Athraigh an cúlra"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "Cúlbhrat;Scáileán;Deasc;"
 
@@ -461,7 +461,7 @@ msgid "Webcam"
 msgstr ""
 
 #: ../panels/color/color.ui.h:3
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:1
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:1
 msgid "Color"
 msgstr "Dath"
 
@@ -537,12 +537,12 @@ msgid ""
 "Image files can be dragged on this window to auto-complete the above fields."
 msgstr ""
 
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:2
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:2
 msgid "Color management settings"
 msgstr ""
 
 #. Translators: those are keywords for the color control-center panel
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:4
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr ""
 
@@ -731,16 +731,16 @@ msgstr "Samhain"
 msgid "December"
 msgstr "Nollaig"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:1
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:1
 msgid "Date & Time"
 msgstr "Dáta & Am"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Date and Time preferences panel"
 msgstr ""
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Clock;Timezone;Location;"
 msgstr "Clog;Crios Ama;Suíomh;"
 
@@ -772,7 +772,7 @@ msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr ""
 
-#. Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c
+#. Keep this string in sync with cinnamon-desktop/libcinnamon-desktop/cinnamon-rr-labeler.c
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external projector.  Here, "Mirrored" is being
 #. * used as an adjective.  For example, the Spanish translation could be
@@ -854,16 +854,16 @@ msgstr ""
 msgid "_Detect Displays"
 msgstr "_Braith Taispeáintí"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Displays"
 msgstr "Taispeáintí"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Change resolution and position of monitors and projectors"
 msgstr ""
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr ""
 
@@ -1054,16 +1054,16 @@ msgstr ""
 msgid "Checking for Updates"
 msgstr ""
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "Details"
 msgstr "Sonraí"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "Faisnéis Córais"
 
 #. sure that you use the same "translation" for those keywords
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1222,18 +1222,18 @@ msgid "Eject"
 msgstr ""
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 #: ../panels/universal-access/uap.ui.h:68
 msgid "Typing"
 msgstr "Clóscríobh"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:2
-#: ../panels/region/gnome-region-panel.ui.h:25
+#: ../panels/region/cinnamon-region-panel.ui.h:25
 msgid "Switch to next source"
 msgstr ""
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:3
-#: ../panels/region/gnome-region-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:23
 msgid "Switch to previous source"
 msgstr ""
 
@@ -1299,7 +1299,7 @@ msgid "Copy a screenshot of an area to clipboard"
 msgstr ""
 
 #: ../panels/keyboard/01-system.xml.in.h:1
-#: ../panels/region/gnome-region-panel.ui.h:38
+#: ../panels/region/cinnamon-region-panel.ui.h:38
 msgid "System"
 msgstr "Córas"
 
@@ -1313,7 +1313,7 @@ msgid "Lock screen"
 msgstr "Líon an scáileán"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:1
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:1
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:1
 msgid "Universal Access"
 msgstr "Rochtain Uilíoch"
 
@@ -1373,110 +1373,110 @@ msgstr ""
 msgid "Compose Key"
 msgstr "Cnaipe na Luiche"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
 msgid "Keyboard"
 msgstr "Méarchlár"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
 msgid "Change keyboard settings"
 msgstr ""
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr ""
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "Custom Shortcut"
 msgstr "Aicearra Saincheaptha"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "_Name:"
 msgstr "_Ainm:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "C_ommand:"
 msgstr "_Ordú:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Repeat Keys"
 msgstr "Athbhrú Eochracha"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
 msgid "Key presses _repeat when key is held down"
 msgstr "Déantar brú eochracha _arís nuair a choinníonn an eochair síos"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
 msgid "_Delay:"
 msgstr "_Moill:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "_Speed:"
 msgstr "_Luas:"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 #: ../panels/universal-access/uap.ui.h:49
 #, fuzzy
 msgid "Short"
 msgstr "Gearr"
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 #, fuzzy
 msgid "Slow"
 msgstr "Mall"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat keys speed"
 msgstr "Luas athbhrú eochracha"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 #: ../panels/universal-access/uap.ui.h:52
 #, fuzzy
 msgid "Long"
 msgstr "Fada"
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 #, fuzzy
 msgid "Fast"
 msgstr "Tapa"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
 msgid "Cursor Blinking"
 msgstr "Caochadh an Chúrsóra"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Cursor _blinks in text fields"
 msgstr "_Caochann an cúrsóir i réimsí téacs"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
 msgid "S_peed:"
 msgstr "L_uas:"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 #, fuzzy
 msgid "Cursor blink speed"
 msgstr "Luas caochadh an chúrsóra"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "Layout Settings"
 msgstr "Socruithe Leaganacha Amach"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "Add Shortcut"
 msgstr "Cuir Aicearra Leis"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:21
 msgid "Remove Shortcut"
 msgstr "Bain Aicearra"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:22
 #: ../panels/wacom/button-mapping.ui.h:3
 #, fuzzy
 msgid ""
@@ -1486,8 +1486,8 @@ msgstr ""
 "Chun eochair aicearra a chur in eagar, cliceáil ar an ró comhfhreagrach agus "
 "clóscríobh teaglaim eochracha nua, nó brúigh backspace chun glanta."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
-#: ../panels/region/gnome-region-panel.ui.h:28
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:28
 msgid "Shortcuts"
 msgstr "Aicearraí"
 
@@ -1530,116 +1530,116 @@ msgstr "_Athshann"
 msgid "_Test Your Settings"
 msgstr "Do shocruithe"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse & Touchpad"
 msgstr "Luch & Ceap Tadhaill"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your mouse and touchpad preferences"
 msgstr "Socraigh do chuid sainroghanna na luiche"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Mouse Preferences"
 msgstr "Sainroghanna na Luiche"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "General"
 msgstr "Ginearálta"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 #, fuzzy
 msgid "Double-click timeout"
 msgstr "Teorainn Am Déchliceála"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 #, fuzzy
 msgid "_Double-click"
 msgstr "Teorainn Am Déchliceála"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Primary _button"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:10
 #, fuzzy
 msgid "_Left"
 msgstr "Ar Chlé"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 #, fuzzy
 msgid "_Right"
 msgstr "Deis"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Mouse"
 msgstr "Luch"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 #, fuzzy
 msgid "_Pointer speed"
 msgstr "Luas an Phointeora"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Touchpad"
 msgstr "Ceap Tadhaill"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 #, fuzzy
 msgid "Disable while _typing"
 msgstr "Dí_chumasaigh ceap tadhaill agus ag clóscríobh"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Tap to _click"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 #, fuzzy
 msgid "Two _finger scroll"
 msgstr "Scrollú dhá-_mhéar"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "C_ontent sticks to fingers"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:134
-#: ../panels/mouse/gnome-mouse-test.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-test.c:134
+#: ../panels/mouse/cinnamon-mouse-test.ui.h:1
 msgid "Try clicking, double clicking, scrolling"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:139
+#: ../panels/mouse/cinnamon-mouse-test.c:139
 msgid "Five clicks, GEGL time!"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 #, fuzzy
 msgid "Double click, primary button"
 msgstr "Teorainn Am Déchliceála"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Single click, primary button"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 #, fuzzy
 msgid "Double click, middle button"
 msgstr "Teorainn Am Déchliceála"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Single click, middle button"
 msgstr ""
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 #, fuzzy
 msgid "Double click, secondary button"
 msgstr "Teorainn Am Déchliceála"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Single click, secondary button"
 msgstr ""
 
@@ -1663,17 +1663,17 @@ msgstr ""
 msgid "Air_plane Mode"
 msgstr ""
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 #: ../panels/network/network-mobile.ui.h:7
 msgid "Network"
 msgstr "Líonra"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "Socruithe an líonra"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;Proxy;"
 msgstr "Líonra;Gan Sreang;IP;LAN;Seachfhreastalaí;"
 
@@ -2411,16 +2411,16 @@ msgstr ""
 msgid "_Remove"
 msgstr "_Bain"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:1
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:1
 msgid "Online Accounts"
 msgstr "Cuntais ar Líne"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:2
 msgid "Manage online accounts"
 msgstr "Bainistigh cuntais ar líne"
 
 #. Translators: those are keywords for the online-accounts control-center panel
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:4
 msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 msgstr ""
 "Google;Facebook;Twitter;Yahoo;Gréasán;Ar Líne;Comhrá;Féilire;Post;Teagmháil;"
@@ -2657,16 +2657,16 @@ msgid ""
 "Tip: <a href=\"screen\">screen brightness</a> affects how much power is used"
 msgstr ""
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "Cumhacht"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr ""
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr ""
 
@@ -2908,16 +2908,16 @@ msgstr "LEATHANACH"
 msgid "Could not load ui: %s"
 msgstr "Níorbh fhéidir an príomhchomhéadan a luchtú"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Printers"
 msgstr "Printéirí"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:2
 msgid "Change printer settings"
 msgstr ""
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr ""
 
@@ -3328,209 +3328,209 @@ msgid ""
 "doesn't seem to be available."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Region & Language"
 msgstr "Réigiún & Teanga"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:2
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:2
 msgid "Change your region and language settings"
 msgstr ""
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Language;Layout;Keyboard;"
 msgstr "Teanga;Leagan Amach;Méarchlár;"
 
-#: ../panels/region/gnome-region-panel-formats.c:142
+#: ../panels/region/cinnamon-region-panel-formats.c:142
 msgid "Imperial"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-formats.c:144
+#: ../panels/region/cinnamon-region-panel-formats.c:144
 msgid "Metric"
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:1
 #, fuzzy
 msgid "Choose an input source"
 msgstr "Roghnaigh foinse ionchuir le cur leis"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:2
 msgid "Select an input source to add"
 msgstr "Roghnaigh foinse ionchuir le cur leis"
 
-#: ../panels/region/gnome-region-panel-system.c:465
+#: ../panels/region/cinnamon-region-panel-system.c:465
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-system.c:470
-#: ../panels/region/gnome-region-panel.ui.h:30
+#: ../panels/region/cinnamon-region-panel-system.c:470
+#: ../panels/region/cinnamon-region-panel.ui.h:30
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings. You may change the system settings to match "
 "yours."
 msgstr ""
 
-#: ../panels/region/gnome-region-panel-system.c:473
+#: ../panels/region/cinnamon-region-panel-system.c:473
 msgid "Copy Settings"
 msgstr "Socruithe Cóipeála"
 
-#: ../panels/region/gnome-region-panel-system.c:476
-#: ../panels/region/gnome-region-panel.ui.h:37
+#: ../panels/region/cinnamon-region-panel-system.c:476
+#: ../panels/region/cinnamon-region-panel.ui.h:37
 msgid "Copy Settings..."
 msgstr "Cóipeáil Socruithe..."
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Region and Language"
 msgstr "Réigiún agus Teanga"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr ""
 "Roghnaigh teanga taispeána (cuirfear an t-athrú i bhfeidhm nuair a logálann "
 "tú isteach arís)"
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 #, fuzzy
 msgid "Add Language"
 msgstr "Teanga"
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Install languages..."
 msgstr "Suiteáil teangacha..."
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "Language"
 msgstr "Teanga"
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 #, fuzzy
 msgid "Select a region (change will be applied the next time you log in)"
 msgstr ""
 "Roghnaigh teanga taispeána (cuirfear an t-athrú i bhfeidhm nuair a logálann "
 "tú isteach arís)"
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 #, fuzzy
 msgid "Add Region"
 msgstr "_Réigiún:"
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 #, fuzzy
 msgid "Remove Region"
 msgstr "Bain gléas"
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Dates"
 msgstr "Dátaí"
 
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Times"
 msgstr "Amanna"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Numbers"
 msgstr "Uimhreacha"
 
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Currency"
 msgstr "Airgeadra"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Measurement"
 msgstr "Tomhas"
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid "Examples"
 msgstr "Samplaí"
 
-#: ../panels/region/gnome-region-panel.ui.h:15
+#: ../panels/region/cinnamon-region-panel.ui.h:15
 msgid "Formats"
 msgstr "Formáidí"
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 #, fuzzy
 msgid "Select keyboards or other input sources"
 msgstr "Roghnaigh foinse ionchuir le cur leis"
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 #, fuzzy
 msgid "Add Input Source"
 msgstr "_Boscaí ionchurtha:"
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 #, fuzzy
 msgid "Remove Input Source"
 msgstr "_Boscaí ionchurtha:"
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 #, fuzzy
 msgid "Move Input Source Up"
 msgstr "_Boscaí ionchurtha:"
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 #, fuzzy
 msgid "Move Input Source Down"
 msgstr "_Boscaí ionchurtha:"
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 #, fuzzy
 msgid "Input Source Settings"
 msgstr "Socruithe Luiche"
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 #, fuzzy
 msgid "Show Keyboard Layout"
 msgstr "Roghanna Leaganacha Amach Méarchláir"
 
-#: ../panels/region/gnome-region-panel.ui.h:24
+#: ../panels/region/cinnamon-region-panel.ui.h:24
 msgid "Ctrl+Alt+Space"
 msgstr "Ctrl+Alt+Space"
 
-#: ../panels/region/gnome-region-panel.ui.h:26
+#: ../panels/region/cinnamon-region-panel.ui.h:26
 msgid "Ctrl+Alt+Shift+Space"
 msgstr "Ctrl+Alt+Shift+Space"
 
-#: ../panels/region/gnome-region-panel.ui.h:27
+#: ../panels/region/cinnamon-region-panel.ui.h:27
 msgid "Shortcut Settings"
 msgstr "Socruithe Aicearraí"
 
-#: ../panels/region/gnome-region-panel.ui.h:29
+#: ../panels/region/cinnamon-region-panel.ui.h:29
 msgid "Input Sources"
 msgstr "Foinsí Ionchurtha"
 
 #. 'display' means 'output' here, as in 'translated messages that are displayed to the user'
-#: ../panels/region/gnome-region-panel.ui.h:32
+#: ../panels/region/cinnamon-region-panel.ui.h:32
 msgid "Display language:"
 msgstr "Teanga taispeána:"
 
-#: ../panels/region/gnome-region-panel.ui.h:33
+#: ../panels/region/cinnamon-region-panel.ui.h:33
 msgid "Input source:"
 msgstr "Foinse ionchurtha:"
 
-#: ../panels/region/gnome-region-panel.ui.h:34
+#: ../panels/region/cinnamon-region-panel.ui.h:34
 msgid "Format:"
 msgstr "Formáid:"
 
-#: ../panels/region/gnome-region-panel.ui.h:35
+#: ../panels/region/cinnamon-region-panel.ui.h:35
 msgid "Your settings"
 msgstr "Do shocruithe"
 
-#: ../panels/region/gnome-region-panel.ui.h:36
+#: ../panels/region/cinnamon-region-panel.ui.h:36
 msgid "System settings"
 msgstr "Socruithe an chórais"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:1
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:1
 msgid "Brightness & Lock"
 msgstr "Gile & Glasáil"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Screen brightness and lock settings"
 msgstr "Gile an scáileáin agus socruithe glasála"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr "Gile;Glas;Maolaigh;Glan;Bánaigh;Scáileán;"
 
@@ -3608,40 +3608,40 @@ msgstr "Rialtán UI"
 msgid "Show desktop volume control"
 msgstr ""
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:1
 msgid "Sound"
 msgstr "Fuaim"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Change sound volume and sound events"
 msgstr ""
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr ""
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr ""
 
@@ -3881,12 +3881,12 @@ msgstr "Saincheaptha"
 msgid "No shortcut set"
 msgstr "Aicearra nua..."
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Universal Access Preferences"
 msgstr "Sainroghanna Rochtana Uilíche"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
@@ -4548,16 +4548,16 @@ msgstr ""
 "D'éirigh le sábháil do mhéarloirg. Ba chóir duit bheith in ann logáil "
 "isteach le do bhraiteoir méarloirg."
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "User Accounts"
 msgstr "Cuntais Úsáideora"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:2
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:2
 msgid "Add or remove users"
 msgstr "Cuir leis nó bain úsáideoirí"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr ""
 "Login;Name;Fingerprint;Avatar;Logo;Face;Password;Logáil Isteach;Ainm;"
@@ -5238,69 +5238,69 @@ msgstr "Gníomh"
 msgid "Display Mapping"
 msgstr "Taispeáint"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:1
-#: ../panels/wacom/gnome-wacom-properties.ui.h:7
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:7
 msgid "Wacom Tablet"
 msgstr "Táibléad Wacom"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:2
 #, fuzzy
 msgid "Set your Wacom tablet preferences"
 msgstr "Socraigh do chuid sainroghanna na luiche"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:4
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "Táibléad;Wacom;Stíleas;Scriosán;Luch;"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:2
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:2
 msgid "Touchpad (relative)"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:3
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:3
 #, fuzzy
 msgid "Tablet Preferences"
 msgstr "Sainroghanna na Luiche"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:4
 msgid "No tablet detected"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:5
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:5
 msgid "Please plug in or turn on your Wacom tablet"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:6
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:6
 msgid "Bluetooth Settings"
 msgstr "Socruithe Bluetooth"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:8
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:8
 msgid "Map to Monitor..."
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:9
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:9
 #, fuzzy
 msgid "Map Buttons..."
 msgstr "Roghanna..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:10
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:10
 #, fuzzy
 msgid "Calibrate..."
 msgstr "Cruthaigh..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:11
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:11
 msgid "Adjust display resolution"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:12
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:12
 msgid "Tracking Mode"
 msgstr ""
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:13
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:13
 msgid "Left-Handed Orientation"
 msgstr ""
 

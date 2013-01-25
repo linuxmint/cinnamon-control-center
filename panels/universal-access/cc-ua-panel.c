@@ -663,7 +663,7 @@ cc_ua_panel_init (CcUaPanel *self)
   priv->builder = gtk_builder_new ();
 
   gtk_builder_add_objects_from_file (priv->builder,
-                                     GNOMECC_UI_DIR "/uap.ui",
+                                     CINNAMONCC_UI_DIR "/uap.ui",
                                      objects,
                                      &err);
 

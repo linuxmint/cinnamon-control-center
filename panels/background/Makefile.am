@@ -15,7 +15,7 @@ INCLUDES =						\
 	$(PANEL_CFLAGS)					\
 	$(BACKGROUND_PANEL_CFLAGS)			\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DUIDIR="\"$(uidir)\""				\
 	-DDATADIR="\"$(datadir)\""			\
 	-DGNOME_DESKTOP_USE_UNSTABLE_API		\

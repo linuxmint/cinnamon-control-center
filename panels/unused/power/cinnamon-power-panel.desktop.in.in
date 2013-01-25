@@ -2,7 +2,7 @@
 _Name=Power
 _Comment=Power management settings
 Exec=cinnamon-control-center power
-Icon=gnome-power-manager
+Icon=cinnamon-power-manager
 Terminal=false
 Type=Application
 StartupNotify=true

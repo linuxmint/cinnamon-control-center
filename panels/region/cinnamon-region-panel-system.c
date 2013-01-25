@@ -32,8 +32,8 @@
 #include <libgnomekbd/gkbd-keyboard-config.h>
 #include "cc-common-language.h"
 #include "gdm-languages.h"
-#include "gnome-region-panel-system.h"
-#include "gnome-region-panel-xkb.h"
+#include "cinnamon-region-panel-system.h"
+#include "cinnamon-region-panel-xkb.h"
 
 static GSettings *locale_settings, *xkb_settings;
 static GDBusProxy *localed_proxy;

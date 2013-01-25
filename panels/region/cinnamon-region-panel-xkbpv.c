@@ -1,4 +1,4 @@
-/* gnome-region-panel-xkbpv.c
+/* cinnamon-region-panel-xkbpv.c
  * Copyright (C) 2003-2007 Sergey V. Udaltsov
  *
  * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -25,7 +25,7 @@
 
 #include <libgnomekbd/gkbd-keyboard-drawing.h>
 
-#include "gnome-region-panel-xkb.h"
+#include "cinnamon-region-panel-xkb.h"
 
 #ifdef HAVE_X11_EXTENSIONS_XKB_H
 #include "X11/XKBlib.h"

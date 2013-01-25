@@ -513,7 +513,7 @@ zoom_options_init (ZoomOptions *self)
 
   priv->builder = gtk_builder_new ();
   gtk_builder_add_from_file (priv->builder,
-                             GNOMECC_UI_DIR "/zoom-options.ui",
+                             CINNAMONCC_UI_DIR "/zoom-options.ui",
                              &err);
   if (err)
     {

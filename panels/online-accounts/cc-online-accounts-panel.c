@@ -144,7 +144,7 @@ goa_panel_init (GoaPanel *panel)
   panel->builder = gtk_builder_new ();
   error = NULL;
   if (gtk_builder_add_from_file (panel->builder,
-                                 GNOMECC_UI_DIR "/online-accounts.ui",
+                                 CINNAMONCC_UI_DIR "/online-accounts.ui",
                                  &error) == 0)
     {
       goa_warning ("Error loading UI file: %s (%s, %d)",

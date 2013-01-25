@@ -86,7 +86,7 @@ cc_keyboard_panel_constructor (GType                  gtype,
   GError *error = NULL;
   GtkWidget *widget;
 
-  const gchar *uifile = GNOMECC_UI_DIR "/gnome-keyboard-panel.ui";
+  const gchar *uifile = CINNAMONCC_UI_DIR "/cinnamon-keyboard-panel.ui";
 
   obj = G_OBJECT_CLASS (cc_keyboard_panel_parent_class)->constructor (gtype, n_properties, properties);
 

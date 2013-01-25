@@ -238,7 +238,7 @@ net_device_wired_init (NetDeviceWired *device_wired)
 
         device_wired->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_file (device_wired->priv->builder,
-                                   GNOMECC_UI_DIR "/network-wired.ui",
+                                   CINNAMONCC_UI_DIR "/network-wired.ui",
                                    &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

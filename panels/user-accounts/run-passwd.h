@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
-/* run-passwd.h: this file is part of users-admin, a gnome-system-tools frontend
+/* run-passwd.h: this file is part of users-admin, a cinnamon-system-tools frontend
  * for user administration.
  *
  * Copyright (C) 2010 Milan Bouchet-Valat

@@ -74,7 +74,7 @@ struct _CcBackgroundPanelPrivate
 static const char *
 cc_background_panel_get_help_uri (CcPanel *panel)
 {
-  return "help:gnome-help/look-background";
+  return "help:cinnamon-help/look-background";
 }
 
 static void

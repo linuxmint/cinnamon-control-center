@@ -1,7 +1,7 @@
-Index: b/panels/keyboard/gnome-keyboard-panel.desktop.in.in
+Index: b/panels/keyboard/cinnamon-keyboard-panel.desktop.in.in
 ===================================================================
---- a/panels/keyboard/gnome-keyboard-panel.desktop.in.in
-+++ b/panels/keyboard/gnome-keyboard-panel.desktop.in.in
+--- a/panels/keyboard/cinnamon-keyboard-panel.desktop.in.in
++++ b/panels/keyboard/cinnamon-keyboard-panel.desktop.in.in
 @@ -2,7 +2,7 @@
  _Name=Keyboard
  _Comment=Change keyboard settings

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cinnamon-control-center.master.kn\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-"
 "control-center&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2012-09-18 22:53+0000\n"
 "PO-Revision-Date: 2012-09-21 01:13+0530\n"
@@ -102,16 +102,16 @@ msgstr "ಯಾವುದೆ ಗಣಕತೆರೆ ಹಿನ್ನಲೆ ಚಿತ
 msgid "Current background"
 msgstr "ಈಗಿನ ಹಿನ್ನಲೆ ಚಿತ್ರ"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:1
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:1
 msgid "Background"
 msgstr "ಹಿನ್ನಲೆ ಚಿತ್ರ"
 
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:2
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:2
 msgid "Change the background"
 msgstr "ಹಿನ್ನಲೆ ಚಿತ್ರವನ್ನು ಬದಲಾಯಿಸಿ"
 
 #. Translators: those are keywords for the background control-center panel
-#: ../panels/background/gnome-background-panel.desktop.in.in.h:4
+#: ../panels/background/cinnamon-background-panel.desktop.in.in.h:4
 msgid "Wallpaper;Screen;Desktop;"
 msgstr "ವಾಲ್‌ಪೇಪರ್;ತೆರೆ;ಗಣಕತೆರೆ;"
 
@@ -449,7 +449,7 @@ msgid "Webcam"
 msgstr "ವೆಬ್‌ಕ್ಯಾಮ್"
 
 #: ../panels/color/color.ui.h:3
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:1
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:1
 msgid "Color"
 msgstr "ಬಣ್ಣ"
 
@@ -527,12 +527,12 @@ msgstr ""
 "ಮೇಲಿನ ಸ್ಥಳಗಳನ್ನು ಸ್ವಯಂ ಪೂರ್ಣಗೊಳ್ಳುವಂತೆ ಮಾಡಲು ಚಿತ್ರಗಳ ಕಡತಗಳನ್ನು ಈ ಕಿಟಕಿಗೆ "
 "ಸೇರಿಸಬಹುದು"
 
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:2
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:2
 msgid "Color management settings"
 msgstr "ಬಣ್ಣ ನಿರ್ವಹಣೆಯ ಸಿದ್ಧತೆಗಳು"
 
 #. Translators: those are keywords for the color control-center panel
-#: ../panels/color/gnome-color-panel.desktop.in.in.h:4
+#: ../panels/color/cinnamon-color-panel.desktop.in.in.h:4
 msgid "Color;ICC;Profile;Calibrate;Printer;Display;"
 msgstr "ಬಣ್ಣ;ICC;ಪ್ರೊಫೈಲ್;ಕ್ಯಾಲಿಬ್ರೇಟ್;ಮುದ್ರಕ;ಪ್ರದರ್ಶಕ;"
 
@@ -721,16 +721,16 @@ msgstr "ನವೆಂಬರ್"
 msgid "December"
 msgstr "ಡಿಸೆಂಬರ್"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:1
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:1
 msgid "Date & Time"
 msgstr "ದಿನಾಂಕ ಮತ್ತು ಸಮಯ"
 
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:2
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:2
 msgid "Date and Time preferences panel"
 msgstr "ದಿನಾಂಕ ಮತ್ತು ಸಮಯದ ಆದ್ಯತೆಗಳ ಫಲಕ"
 
 #. Translators: those are keywords for the date and time control-center panel
-#: ../panels/datetime/gnome-datetime-panel.desktop.in.in.h:4
+#: ../panels/datetime/cinnamon-datetime-panel.desktop.in.in.h:4
 msgid "Clock;Timezone;Location;"
 msgstr "ಗಡಿಯಾರ;ಕಾಲವಲಯ;ಸ್ಥಳ;"
 
@@ -762,7 +762,7 @@ msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr "180 ಡಿಗ್ರಿಗಳು"
 
-#. Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c
+#. Keep this string in sync with cinnamon-desktop/libcinnamon-desktop/cinnamon-rr-labeler.c
 #. Translators:  this is the feature where what you see on your laptop's
 #. * screen is the same as your external projector.  Here, "Mirrored" is being
 #. * used as an adjective.  For example, the Spanish translation could be
@@ -847,16 +847,16 @@ msgstr "ಸೂಚನೆ: ರೆಸಲ್ಯೂಶನ್ ಆಯ್ಕೆಗಳನ
 msgid "_Detect Displays"
 msgstr "ಪ್ರದರ್ಶಕಗಳನ್ನು ಪತ್ತೆ ಮಾಡು (_D)"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:1
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:1
 msgid "Displays"
 msgstr "ಪ್ರದರ್ಶಕಗಳು"
 
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:2
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:2
 msgid "Change resolution and position of monitors and projectors"
 msgstr "ಮಾನಿಟರುಗಳ ಹಾಗು ಪ್ರೊಜೆಕ್ಟರುಗಳ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಸ್ಥಾನವನ್ನು ಬದಲಾಯಿಸಿ"
 
 #. Translators: those are keywords for the display control-center panel
-#: ../panels/display/gnome-display-panel.desktop.in.in.h:4
+#: ../panels/display/cinnamon-display-panel.desktop.in.in.h:4
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgstr "ಪ್ಯಾನಲ್;ಪ್ರೊಜೆಕ್ಟರ್;xrandr;ತೆರೆ;ರೆಸಲ್ಯೂಶನ್;ಪುನಶ್ಚೇತನ;"
 
@@ -1042,16 +1042,16 @@ msgstr "ವ್ಯವಸ್ಥೆಯು ಅಪ್-ಟು-ಡೇಟ್ ಆಗಿ�
 msgid "Checking for Updates"
 msgstr "ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ ಪರೀಕ್ಷಿಸಲಾಗುತ್ತಿದೆ"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:1
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:1
 msgid "Details"
 msgstr "ವಿವರಗಳು"
 
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:2
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:2
 msgid "System Information"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಮಾಹಿತಿ"
 
 #. sure that you use the same "translation" for those keywords
-#: ../panels/info/gnome-info-panel.desktop.in.in.h:4
+#: ../panels/info/cinnamon-info-panel.desktop.in.in.h:4
 msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "fallback;preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
@@ -1206,18 +1206,18 @@ msgid "Eject"
 msgstr "ಹೊರತಳ್ಳು"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:19
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:19
 #: ../panels/universal-access/uap.ui.h:68
 msgid "Typing"
 msgstr "ಟೈಪಿಂಗ್"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:2
-#: ../panels/region/gnome-region-panel.ui.h:26
+#: ../panels/region/cinnamon-region-panel.ui.h:26
 msgid "Switch to next source"
 msgstr "ಮುಂದಿನ ಆಕರಕ್ಕೆ ಬದಲಾಯಿಸು"
 
 #: ../panels/keyboard/01-input-sources.xml.in.h:3
-#: ../panels/region/gnome-region-panel.ui.h:24
+#: ../panels/region/cinnamon-region-panel.ui.h:24
 msgid "Switch to previous source"
 msgstr "ಹಿಂದಿನ ಆಕರಕ್ಕೆ ಬದಲಾಯಿಸು"
 
@@ -1281,7 +1281,7 @@ msgid "Copy a screenshot of an area to clipboard"
 msgstr "ಒಂದು ಜಾಗದ ತೆರೆಚಿತ್ರವನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡಿಗೆ ಪ್ರತಿ ಮಾಡು"
 
 #: ../panels/keyboard/01-system.xml.in.h:1
-#: ../panels/region/gnome-region-panel.ui.h:39
+#: ../panels/region/cinnamon-region-panel.ui.h:39
 msgid "System"
 msgstr "ವ್ಯವಸ್ಥೆ"
 
@@ -1294,7 +1294,7 @@ msgid "Lock screen"
 msgstr "ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡಿ"
 
 #: ../panels/keyboard/50-accessibility.xml.in.h:1
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:1
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:1
 msgid "Universal Access"
 msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆ"
 
@@ -1349,105 +1349,105 @@ msgstr "ಪರ್ಯಾಯ ಅಕ್ಷರಗಳ ಕೀಲಿ"
 msgid "Compose Key"
 msgstr "ಕಂಪೋಸ್ ಕೀಲಿ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:1
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:4
 msgid "Keyboard"
 msgstr "ಕೀಲಿಮಣೆ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:2
 msgid "Change keyboard settings"
 msgstr "ಕೀಲಿಮಣೆ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸು"
 
 #. Translators: those are keywords for the keyboard control-center panel
-#: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.desktop.in.in.h:4
 msgid "Shortcut;Repeat;Blink;"
 msgstr "ಶಾರ್ಟ್-ಕಟ್;ಪುನರಾವರ್ತನೆ;ಮಿಟುಕಿಸು;"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:1
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:1
 msgid "Custom Shortcut"
 msgstr "ಇಚ್ಛೆಯ ಶಾರ್ಟ್-ಕಟ್"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:2
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:2
 msgid "_Name:"
 msgstr "ಹೆಸರು (_N):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:3
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:3
 msgid "C_ommand:"
 msgstr "ಆಜ್ಞೆ (_o):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:5
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:5
 msgid "Repeat Keys"
 msgstr "ಪುನರಾವರ್ತನಾ ಕೀಲಿಗಳು"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:6
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:6
 msgid "Key presses _repeat when key is held down"
 msgstr "ಕೀಲಿಯನ್ನು ಒತ್ತಿ ಹಿಡಿದಾಗ ಕೀಲಿಗಳ ಒತ್ತುವಿಕೆಯನ್ನು ಪುನರಾವರ್ತಿಸು (_r)"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:7
 msgid "_Delay:"
 msgstr "ವಿಳಂಬ (_D):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:8
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:8
 msgid "_Speed:"
 msgstr "ವೇಗ (_S):"
 
 #. short delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:9
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:9
 #: ../panels/universal-access/uap.ui.h:49
 msgid "Short"
 msgstr "ಸಣ್ಣ"
 
 #. slow acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:10
-#: ../panels/mouse/gnome-mouse-properties.ui.h:4
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:4
 msgid "Slow"
 msgstr "ನಿಧಾನ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:11
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:11
 msgid "Repeat keys speed"
 msgstr "ಪುನರಾವರ್ತನೆಯ ಕೀಲಿಗಳ ವೇಗ"
 
 #. long delay
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:12
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:12
 #: ../panels/universal-access/uap.ui.h:52
 msgid "Long"
 msgstr "ಉದ್ದ"
 
 #. fast acceleration
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:13
-#: ../panels/mouse/gnome-mouse-properties.ui.h:7
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:7
 msgid "Fast"
 msgstr "ವೇಗ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:14
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:14
 msgid "Cursor Blinking"
 msgstr "ತೆರೆಸೂಚಕದ ಮಿನುಗುವಿಕೆ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:15
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:15
 msgid "Cursor _blinks in text fields"
 msgstr "ತೆರೆಸೂಚಕವು ಪಠ್ಯ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಮಿನುಗುತ್ತದೆ (_b)"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:16
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:16
 msgid "S_peed:"
 msgstr "ವೇಗ (_p):"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:17
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:17
 msgid "Cursor blink speed"
 msgstr "ತೆರೆಸೂಚಕದ ಮಿನುಗುವ ವೇಗ"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:18
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:18
 msgid "Layout Settings"
 msgstr "ವಿನ್ಯಾಸದ ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:20
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:20
 msgid "Add Shortcut"
 msgstr "ಸುಲಭಆಯ್ಕೆಯನ್ನು ಸೇರಿಸು"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:21
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:21
 msgid "Remove Shortcut"
 msgstr "ಸುಲಭಆಯ್ಕೆಯನ್ನು ತೆಗೆದುಹಾಕು"
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:22
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:22
 #: ../panels/wacom/button-mapping.ui.h:3
 msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
@@ -1456,8 +1456,8 @@ msgstr ""
 "ಒಂದು ಶಾರ್ಟ್-ಕಟ್ ಕೀಲಿಯನ್ನು ಸಂಪಾದಿಸಲು, ಸಾಲಿನಲ್ಲಿ ಕ್ಲಿಕ್ಕಿಸಿ ಹಾಗು ಹೊಸ ಕೀಲಿಗಳನ್ನು "
 "ಒತ್ತಿಹಿಡಿಯಿರಿ ಅಥವ ಅಳಿಸಲು ಬ್ಯಾಕ್‍ಸ್ಪೇಸನ್ನು ಒತ್ತಿ."
 
-#: ../panels/keyboard/gnome-keyboard-panel.ui.h:23
-#: ../panels/region/gnome-region-panel.ui.h:29
+#: ../panels/keyboard/cinnamon-keyboard-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:29
 msgid "Shortcuts"
 msgstr "ಶಾರ್ಟ್-ಕಟ್‌ಗಳು"
 
@@ -1507,105 +1507,105 @@ msgstr "ಮರಳಿ ನಿಯೋಜಿಸು (_R)"
 msgid "_Test Your Settings"
 msgstr "ನಿಮ್ಮ ಸಿದ್ಧತೆಗಳನ್ನು ಪರೀಕ್ಷಿಸಿ (_T)"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:1
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:1
 msgid "Mouse & Touchpad"
 msgstr "ಮೌಸ್‌ ಹಾಗು ಟಚ್‌ಪ್ಯಾಡ್"
 
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:2
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:2
 msgid "Set your mouse and touchpad preferences"
 msgstr "ನಿಮ್ಮ ಮೌಸ್‌ ಹಾಗು ಟಚ್‌ಪ್ಯಾಡ್‌ನ ಆದ್ಯತೆಗಳನ್ನು ಹೊಂದಿಸಿ"
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
-#: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
+#: ../panels/mouse/cinnamon-mouse-panel.desktop.in.in.h:4
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgstr "ಟ್ರ್ಯಾಕ್‌ಪ್ಯಾಡ್;ಸೂಚಕ;ಕ್ಲಿಕ್;ಟ್ಯಾಪ್;ಜೋಡಿ;ಗುಂಡಿ;ಟ್ರ್ಯಾಕ್‌ಬಾಲ್;"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:1
 msgid "Mouse Preferences"
 msgstr "ಮೌಸ್ ಆದ್ಯತೆಗಳು"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:2
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:2
 msgid "General"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:5
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:5
 msgid "Double-click timeout"
 msgstr "ಎರಡು-ಬಾರಿ ಕ್ಲಿಕ್ಕಿಸುವ ಕಾಲಾವಧಿ ಮೀರಿಕೆ"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:8
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:8
 msgid "_Double-click"
 msgstr "ಜೋಡಿ ಕ್ಲಿಕ್ (_D)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:9
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:9
 msgid "Primary _button"
 msgstr "ಪ್ರಾಥಮಿಕ ಗುಂಡಿ (_b)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:10
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:10
 msgid "_Left"
 msgstr "ಎಡ (_L)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:11
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:11
 msgid "_Right"
 msgstr "ಬಲ (_R)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:12
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:12
 msgid "Mouse"
 msgstr "ಮೌಸ್"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:13
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:13
 msgid "_Pointer speed"
 msgstr "ಸೂಚಕದ ವೇಗ (_P)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:14
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:14
 msgid "Touchpad"
 msgstr "ಟಚ್‌ಪ್ಯಾಡ್"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:15
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:15
 msgid "Disable while _typing"
 msgstr "ಟೈಪಿಸುವಾಗ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು (_t)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:16
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:16
 msgid "Tap to _click"
 msgstr "ಕ್ಲಿಕ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ (_c)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:17
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:17
 msgid "Two _finger scroll"
 msgstr "ಎರಡು ಬೆರಳಿನ ಚಲನೆ (_f)"
 
-#: ../panels/mouse/gnome-mouse-properties.ui.h:18
+#: ../panels/mouse/cinnamon-mouse-properties.ui.h:18
 msgid "C_ontent sticks to fingers"
 msgstr "ವಿಷಯಗಳು ಬೆರಳಿಗೆ ಅಂಟಿಕೊಳ್ಳುತ್ತವೆ (_o)"
 
-#: ../panels/mouse/gnome-mouse-test.c:134
-#: ../panels/mouse/gnome-mouse-test.ui.h:1
+#: ../panels/mouse/cinnamon-mouse-test.c:134
+#: ../panels/mouse/cinnamon-mouse-test.ui.h:1
 msgid "Try clicking, double clicking, scrolling"
 msgstr "ಕ್ಲಿಕ್ ಮಾಡಲು, ಎರಡುಬಾರಿ ಕ್ಲಿಕ್ ಮಾಡಲು, ಚಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:139
+#: ../panels/mouse/cinnamon-mouse-test.c:139
 msgid "Five clicks, GEGL time!"
 msgstr "ಐದು ಕ್ಲಿಕ್‌ಗಳು, GEGL ಸಮಯ!"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Double click, primary button"
 msgstr "ಎರಡು-ಬಾರಿಯ ಕ್ಲಿಕ್, ಪ್ರಾಥಮಿಕ ಗುಂಡಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:144
+#: ../panels/mouse/cinnamon-mouse-test.c:144
 msgid "Single click, primary button"
 msgstr "ಒಂದೇ ಕ್ಲಿಕ್, ಪ್ರಾಥಮಿಕ ಗುಂಡಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Double click, middle button"
 msgstr "ಎರಡು-ಬಾರಿಯ ಕ್ಲಿಕ್, ಮಧ್ಯದ ಗುಂಡಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:147
+#: ../panels/mouse/cinnamon-mouse-test.c:147
 msgid "Single click, middle button"
 msgstr "ಒಂದೇ ಕ್ಲಿಕ್, ಪ್ರಾಥಮಿಕ ಗುಂಡಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Double click, secondary button"
 msgstr "ಎರಡು-ಬಾರಿಯ ಕ್ಲಿಕ್, ಎರಡನೆಯ ಗುಂಡಿ"
 
-#: ../panels/mouse/gnome-mouse-test.c:150
+#: ../panels/mouse/cinnamon-mouse-test.c:150
 msgid "Single click, secondary button"
 msgstr "ಒಂದೇ ಕ್ಲಿಕ್, ಎರಡನೆಯ ಗುಂಡಿ"
 
@@ -1629,17 +1629,17 @@ msgstr "ವ್ಯವಸ್ಥೆಯ ಜಾಲಬಂಧ ಸೇವೆಗಳು ಈ
 msgid "Air_plane Mode"
 msgstr "ವಿಮಾನದ ಸ್ಥಿತಿ (_p)"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:1
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:1
 #: ../panels/network/network-mobile.ui.h:7
 msgid "Network"
 msgstr "ಜಾಲಬಂಧ"
 
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:2
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:2
 msgid "Network settings"
 msgstr "ಜಾಲಬಂಧಧ ಸಿದ್ಧತೆಗಳು"
 
 #. Translators: those are keywords for the network control-center panel
-#: ../panels/network/gnome-network-panel.desktop.in.in.h:4
+#: ../panels/network/cinnamon-network-panel.desktop.in.in.h:4
 msgid "Network;Wireless;IP;LAN;Proxy;"
 msgstr "ಜಾಲಬಂಧ;ವೈರ್ಲೆಸ್;IP;LAN;ಪ್ರಾಕ್ಸಿ;"
 
@@ -2356,16 +2356,16 @@ msgstr "ಇದು ಪರಿಚಾರಕದಿಂದ ಖಾತೆಯನ್ನು 
 msgid "_Remove"
 msgstr "ತೆಗೆದು ಹಾಕು (_R)"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:1
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:1
 msgid "Online Accounts"
 msgstr "ಅಂತರಜಾಲದಲ್ಲಿನ ಖಾತೆಗಳು"
 
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:2
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:2
 msgid "Manage online accounts"
 msgstr "ಅಂತರಜಾಲದಲ್ಲಿನ ಖಾತೆಗಳನ್ನು ನಿರ್ವಹಿಸು"
 
 #. Translators: those are keywords for the online-accounts control-center panel
-#: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
+#: ../panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in.h:4
 msgid "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 msgstr "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
 
@@ -2585,16 +2585,16 @@ msgstr ""
 "ಸೂಚನೆ: <a href=\"screen\">ತೆರೆಯ ಪ್ರಕಾಶತೆ</a>ಯು ಎಷ್ಟು ವಿದ್ಯುಚ್ಛಕ್ತಿಯು "
 "ಬಳಸಲ್ಪಡುತ್ತದೆ ಎನ್ನುವುದರ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರುತ್ತದೆ"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:1
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:1
 msgid "Power"
 msgstr "ವಿದ್ಯುಚ್ಛಕ್ತಿ"
 
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:2
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:2
 msgid "Power management settings"
 msgstr "ವಿದ್ಯುಚ್ಛಕ್ತಿ ನಿರ್ವಹಣೆಯ ಸಿದ್ಧತೆಗಳು"
 
 #. Translators: those are keywords for the power control-center panel
-#: ../panels/power/gnome-power-panel.desktop.in.in.h:4
+#: ../panels/power/cinnamon-power-panel.desktop.in.in.h:4
 msgid "Power;Sleep;Suspend;Hibernate;Battery;"
 msgstr "ವಿದ್ಯುಚ್ಛಕ್ತಿ;ನಿದ್ರಿಸು;ವಿರಮಿಸು;ನೆನಪಿನೊಡನೆ ಮುಚ್ಚು;ಬ್ಯಾಟರಿ;"
 
@@ -2830,16 +2830,16 @@ msgstr "ಪ್ರಾಯೋಗಿಕ ಪುಟ"
 msgid "Could not load ui: %s"
 msgstr "ui ಅನ್ನುಲೋಡ್‌ ಮಾಡಲಾಗಲಿಲ್ಲ: %s"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:1
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:1
 msgid "Printers"
 msgstr "ಮುದ್ರಕಗಳು"
 
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:2
 msgid "Change printer settings"
 msgstr "ಮುದ್ರಕದ ಸಿದ್ಧತೆಗಳನ್ನು ಬದಲಾಯಿಸು"
 
 #. Translators: those are keywords for the printing control-center panel
-#: ../panels/printers/gnome-printers-panel.desktop.in.in.h:4
+#: ../panels/printers/cinnamon-printers-panel.desktop.in.in.h:4
 msgid "Printer;Queue;Print;Paper;Ink;Toner;"
 msgstr "ಮುದ್ರಕ;ಸರತಿ;ಮುದ್ರಣ;ಕಾಗದ;ಶಾಯಿ;ಟೋನರ್;"
 
@@ -3231,36 +3231,36 @@ msgstr ""
 "ಕ್ಷಮಿಸಿ! ವ್ಯವಸ್ಥೆಯ ಮುದ್ರಣ ಸೇವೆಯು\n"
 "ಲಭ್ಯವಿರುವಂತೆ ತೋರುತ್ತಿಲ್ಲ."
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:1
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:1
 msgid "Region & Language"
 msgstr "ಪ್ರದೇಶ ಹಾಗು ಭಾಷೆ"
 
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:2
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:2
 msgid "Change your region and language settings"
 msgstr "ನಿಮ್ಮ ಪ್ರದೇಶ ಹಾಗೆ ಭಾಷೆಯ ಸಿದ್ಧತೆಗಳನ್ನು ಆರಿಸಿ"
 
 #. Translators: those are keywords for the region control-center panel
-#: ../panels/region/gnome-region-panel.desktop.in.in.h:4
+#: ../panels/region/cinnamon-region-panel.desktop.in.in.h:4
 msgid "Language;Layout;Keyboard;"
 msgstr "ಭಾಷೆ;ವಿನ್ಯಾಸ;ಕೀಲಿಮಣೆ;"
 
-#: ../panels/region/gnome-region-panel-formats.c:142
+#: ../panels/region/cinnamon-region-panel-formats.c:142
 msgid "Imperial"
 msgstr "ಇಂಪೀರಿಯಲ್"
 
-#: ../panels/region/gnome-region-panel-formats.c:144
+#: ../panels/region/cinnamon-region-panel-formats.c:144
 msgid "Metric"
 msgstr "ಮೆಟ್ರಿಕ್"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:1
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:1
 msgid "Choose an input source"
 msgstr "ಇನ್‌ಪುಟ್ ಆಕರವನ್ನು ಆಯ್ಕೆ ಮಾಡು"
 
-#: ../panels/region/gnome-region-panel-input-chooser.ui.h:2
+#: ../panels/region/cinnamon-region-panel-input-chooser.ui.h:2
 msgid "Select an input source to add"
 msgstr "ಸೇರಿಸಲು ಇನ್‌ಪುಟ್ ಆಕರವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: ../panels/region/gnome-region-panel-system.c:470
+#: ../panels/region/cinnamon-region-panel-system.c:470
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings."
@@ -3269,8 +3269,8 @@ msgstr ""
 "ಮತ್ತು "
 "ಭಾಷೆಯ ಸಿದ್ಧತೆಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ."
 
-#: ../panels/region/gnome-region-panel-system.c:475
-#: ../panels/region/gnome-region-panel.ui.h:31
+#: ../panels/region/cinnamon-region-panel-system.c:475
+#: ../panels/region/cinnamon-region-panel.ui.h:31
 msgid ""
 "The login screen, system accounts and new user accounts use the system-wide "
 "Region and Language settings. You may change the system settings to match "
@@ -3282,159 +3282,159 @@ msgstr ""
 "ಹೊಂದಿಕೆಯಾಗುವಂತೆ "
 "ಬದಲಾಯಿಸಬಹುದು."
 
-#: ../panels/region/gnome-region-panel-system.c:478
+#: ../panels/region/cinnamon-region-panel-system.c:478
 msgid "Copy Settings"
 msgstr "ಸಿದ್ಧತೆಗಳನ್ನು ಪ್ರತಿಮಾಡು"
 
-#: ../panels/region/gnome-region-panel-system.c:481
-#: ../panels/region/gnome-region-panel.ui.h:38
+#: ../panels/region/cinnamon-region-panel-system.c:481
+#: ../panels/region/cinnamon-region-panel.ui.h:38
 msgid "Copy Settings..."
 msgstr "ಸಿದ್ಧತೆಗಳನ್ನು ಪ್ರತಿಮಾಡು..."
 
-#: ../panels/region/gnome-region-panel.ui.h:1
+#: ../panels/region/cinnamon-region-panel.ui.h:1
 msgid "Region and Language"
 msgstr "ಪ್ರದೇಶ ಹಾಗು ಭಾಷೆ"
 
-#: ../panels/region/gnome-region-panel.ui.h:2
+#: ../panels/region/cinnamon-region-panel.ui.h:2
 msgid "Select a display language (change will be applied next time you log in)"
 msgstr ""
 "ಒಂದು ಪ್ರದರ್ಶಕ ಭಾಷೆಯನ್ನು ಆರಿಸಿ (ಬದಲಾವಣೆಗಳು ನೀವು ಮುಂದಿನ ಬಾರಿ ಪ್ರವೇಶಿಸಿದಾಗ "
 "ಕಾರ್ಯಗತಗೊಳ್ಳುತ್ತವೆ)"
 
-#: ../panels/region/gnome-region-panel.ui.h:3
+#: ../panels/region/cinnamon-region-panel.ui.h:3
 msgid "Add Language"
 msgstr "ಭಾಷೆಯನ್ನು ಸೇರಿಸು"
 
-#: ../panels/region/gnome-region-panel.ui.h:4
+#: ../panels/region/cinnamon-region-panel.ui.h:4
 msgid "Remove Language"
 msgstr "ಭಾಷೆಯನ್ನು ತೆಗೆದುಹಾಕು"
 
-#: ../panels/region/gnome-region-panel.ui.h:5
+#: ../panels/region/cinnamon-region-panel.ui.h:5
 msgid "Install languages..."
 msgstr "ಭಾಷೆಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸು..."
 
-#: ../panels/region/gnome-region-panel.ui.h:6
+#: ../panels/region/cinnamon-region-panel.ui.h:6
 msgid "Language"
 msgstr "ಭಾಷೆ"
 
-#: ../panels/region/gnome-region-panel.ui.h:7
+#: ../panels/region/cinnamon-region-panel.ui.h:7
 msgid "Select a region (change will be applied the next time you log in)"
 msgstr ""
 "ಒಂದು ಪ್ರದೇಶವನ್ನು ಆರಿಸಿ (ಬದಲಾವಣೆಗಳು ನೀವು ಮುಂದಿನ ಬಾರಿ ಪ್ರವೇಶಿಸಿದಾಗ "
 "ಕಾರ್ಯಗತಗೊಳ್ಳುತ್ತವೆ)"
 
-#: ../panels/region/gnome-region-panel.ui.h:8
+#: ../panels/region/cinnamon-region-panel.ui.h:8
 msgid "Add Region"
 msgstr "ಪ್ರದೇಶವನ್ನು ಸೇರಿಸು"
 
-#: ../panels/region/gnome-region-panel.ui.h:9
+#: ../panels/region/cinnamon-region-panel.ui.h:9
 msgid "Remove Region"
 msgstr "ಪ್ರದೇಶವನ್ನು ತೆಗೆದುಹಾಕು"
 
-#: ../panels/region/gnome-region-panel.ui.h:10
+#: ../panels/region/cinnamon-region-panel.ui.h:10
 msgid "Dates"
 msgstr "ದಿನಾಂಕಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:11
+#: ../panels/region/cinnamon-region-panel.ui.h:11
 msgid "Times"
 msgstr "ಸಮಯಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:12
+#: ../panels/region/cinnamon-region-panel.ui.h:12
 msgid "Numbers"
 msgstr "ಸಂಖ್ಯೆಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:13
+#: ../panels/region/cinnamon-region-panel.ui.h:13
 msgid "Currency"
 msgstr "ಕರೆನ್ಸಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:14
+#: ../panels/region/cinnamon-region-panel.ui.h:14
 msgid "Measurement"
 msgstr "ಅಳತೆ"
 
-#: ../panels/region/gnome-region-panel.ui.h:15
+#: ../panels/region/cinnamon-region-panel.ui.h:15
 msgid "Examples"
 msgstr "ಉದಾಹರಣೆಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:16
+#: ../panels/region/cinnamon-region-panel.ui.h:16
 msgid "Formats"
 msgstr "ವಿನ್ಯಾಸಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:17
+#: ../panels/region/cinnamon-region-panel.ui.h:17
 msgid "Select keyboards or other input sources"
 msgstr "ಕೀಲಿಮಣೆಗಳು ಅಥವ ಇತರೆ ಇನ್‌ಪುಟ್ ಮೂಲಗಳನ್ನು ಆರಿಸಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:18
+#: ../panels/region/cinnamon-region-panel.ui.h:18
 msgid "Add Input Source"
 msgstr "ಇನ್‌ಪುಟ್‌ ಮೂಲವನ್ನು ಸೇರಿಸಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:19
+#: ../panels/region/cinnamon-region-panel.ui.h:19
 msgid "Remove Input Source"
 msgstr "ಇನ್‌ಪುಟ್‌ ಮೂಲವನ್ನು ತೆಗೆದುಹಾಕಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:20
+#: ../panels/region/cinnamon-region-panel.ui.h:20
 msgid "Move Input Source Up"
 msgstr "ಇನ್‌ಪುಟ್‌ ಮೂಲವನ್ನು ಮೇಲಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:21
+#: ../panels/region/cinnamon-region-panel.ui.h:21
 msgid "Move Input Source Down"
 msgstr "ಇನ್‌ಪುಟ್‌ ಮೂಲವನ್ನು ಕೆಳಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಿ"
 
-#: ../panels/region/gnome-region-panel.ui.h:22
+#: ../panels/region/cinnamon-region-panel.ui.h:22
 msgid "Input Source Settings"
 msgstr "ಇನ್‌ಪುಟ್‌ ಮೂಲದ ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:23
+#: ../panels/region/cinnamon-region-panel.ui.h:23
 msgid "Show Keyboard Layout"
 msgstr "ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸ ತೋರಿಸು"
 
-#: ../panels/region/gnome-region-panel.ui.h:25
+#: ../panels/region/cinnamon-region-panel.ui.h:25
 msgid "Ctrl+Alt+Space"
 msgstr "Ctrl+Alt+Space"
 
-#: ../panels/region/gnome-region-panel.ui.h:27
+#: ../panels/region/cinnamon-region-panel.ui.h:27
 msgid "Ctrl+Alt+Shift+Space"
 msgstr "Ctrl+Alt+Shift+Space"
 
-#: ../panels/region/gnome-region-panel.ui.h:28
+#: ../panels/region/cinnamon-region-panel.ui.h:28
 #| msgid "Sound Settings"
 msgid "Shortcut Settings"
 msgstr "ಸುಲಭ-ಆಯ್ಕೆಗಳ (ಶಾರ್ಟ್-ಕಟ್) ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:30
+#: ../panels/region/cinnamon-region-panel.ui.h:30
 msgid "Input Sources"
 msgstr "ಇನ್‌ಪುಟ್‌ ಆಕರಗಳು"
 
 #. 'display' means 'output' here, as in 'translated messages that are displayed to the user'
-#: ../panels/region/gnome-region-panel.ui.h:33
+#: ../panels/region/cinnamon-region-panel.ui.h:33
 msgid "Display language:"
 msgstr "ಭಾಷೆಯನ್ನು ತೋರಿಸು:"
 
-#: ../panels/region/gnome-region-panel.ui.h:34
+#: ../panels/region/cinnamon-region-panel.ui.h:34
 msgid "Input source:"
 msgstr "ಇನ್‌ಪುಟ್‌ ಆಕರ:"
 
-#: ../panels/region/gnome-region-panel.ui.h:35
+#: ../panels/region/cinnamon-region-panel.ui.h:35
 msgid "Format:"
 msgstr "ವಿನ್ಯಾಸ:"
 
-#: ../panels/region/gnome-region-panel.ui.h:36
+#: ../panels/region/cinnamon-region-panel.ui.h:36
 msgid "Your settings"
 msgstr "ನಿಮ್ಮ ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/region/gnome-region-panel.ui.h:37
+#: ../panels/region/cinnamon-region-panel.ui.h:37
 msgid "System settings"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:1
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:1
 msgid "Brightness & Lock"
 msgstr "ಪ್ರಕಾಶತೆ ಮತ್ತು ಲಾಕ್"
 
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:2
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:2
 msgid "Screen brightness and lock settings"
 msgstr "ತೆರೆಯ ಪ್ರಕಾಶತೆ ಮತ್ತು ಬಂಧಿಸುವ ಸಿದ್ಧತೆಗಳು"
 
 #. Translators: those are keywords for the brightness and lock control-center panel
-#: ../panels/screen/gnome-screen-panel.desktop.in.in.h:4
+#: ../panels/screen/cinnamon-screen-panel.desktop.in.in.h:4
 msgid "Brightness;Lock;Dim;Blank;Monitor;"
 msgstr "ಪ್ರಕಾಶತೆ;ಲಾಕ್;ಮಂದ;ಖಾಲಿ;ತೆರೆ;"
 
@@ -3511,40 +3511,40 @@ msgstr "ಧ್ವನಿ ನಿಯಂತ್ರಣ"
 msgid "Show desktop volume control"
 msgstr "ಗಣಕತೆರೆ ಧ್ವನಿ ನಿಯಂತ್ರಣವನ್ನು ತೋರಿಸಿ"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:1
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:1
 msgid "Sound"
 msgstr "ಧ್ವನಿ"
 
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:2
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:2
 msgid "Change sound volume and sound events"
 msgstr "ಧ್ವನಿಯ ಪ್ರಮಾಣವನ್ನು ಮತ್ತು ಧ್ವನಿಯ ಘಟನೆಗಳನ್ನು ಬದಲಾಯಿಸು"
 
 #. Translators: those are keywords for the sound control-center panel
-#: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
+#: ../panels/sound/data/cinnamon-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
 msgstr "ಕಾರ್ಡ್;ಧ್ವನಿವರ್ಧಕ;ಧ್ವನಿಪ್ರಮಾಣ;ಮಬ್ಬು;ಸಮತೋಲನ;ಬ್ಲೂಟೂತ್;ಹೆಡ್‌ಸೆಟ್;ಆಡಿಯೊ;"
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:3
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:3
 msgid "Bark"
 msgstr "ಬೊಗಳು"
 
 #. Translators: This is the name of an audio file that sounds like a water drip.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:6
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:6
 msgid "Drip"
 msgstr "ತೊಟ್ಟಿಕ್ಕು"
 
 #. Translators: This is the name of an audio file that sounds like tapping glass.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:9
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:9
 msgid "Glass"
 msgstr "ಗಾಜು"
 
 #. Translators: This is the name of an audio file that sounds sort of like a submarine sonar ping.
 #. You might want to translate it into the equivalent words of your language.
-#: ../panels/sound/data/sounds/gnome-sounds-default.xml.in.in.h:12
+#: ../panels/sound/data/sounds/cinnamon-sounds-default.xml.in.in.h:12
 msgid "Sonar"
 msgstr "ಸೋನಾರ್"
 
@@ -3768,12 +3768,12 @@ msgstr "ಇಚ್ಛೆಯ"
 msgid "No shortcut set"
 msgstr "ಯಾವುದೆ ಶಾರ್ಟ್-ಕಟ್‌ ಇಲ್ಲ"
 
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:2
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:2
 msgid "Universal Access Preferences"
 msgstr "ಜಾಗತಿಕ ನಿಲುಕಣೆಯ ಆದ್ಯತೆಗಳು"
 
 #. Translators: those are keywords for the universal access control-center panel
-#: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
+#: ../panels/universal-access/cinnamon-universal-access-panel.desktop.in.in.h:4
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;"
 "AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
@@ -4387,16 +4387,16 @@ msgstr ""
 "ಓದುಗನನ್ನು "
 "ಬಳಸಿಕೊಂಡು ಪ್ರವೇಶಿಸಬಹುದಾಗಿದೆ."
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:1
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:1
 msgid "User Accounts"
 msgstr "ಬಳಕೆದಾರ ಖಾತೆಗಳು"
 
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:2
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:2
 msgid "Add or remove users"
 msgstr "ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ ಅಥವ ತೆಗೆದುಹಾಕಿ"
 
 #. Translators: those are keywords for the user accounts control-center panel
-#: ../panels/user-accounts/data/gnome-user-accounts-panel.desktop.in.in.h:4
+#: ../panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in.in.h:4
 msgid "Login;Name;Fingerprint;Avatar;Logo;Face;Password;"
 msgstr "ಪ್ರವೇಶ;ಹೆಸರು;ಬೆರಳಗುರುತ;ಅವತಾರ;ಲಾಂಛನ;ಮುಖ;ಗುಪ್ತಪದ;"
 
@@ -5052,66 +5052,66 @@ msgstr "ಕಾರ್ಯ"
 msgid "Display Mapping"
 msgstr "ಪ್ರದರ್ಶಕ ಮ್ಯಾಪಿಂಗ್"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:1
-#: ../panels/wacom/gnome-wacom-properties.ui.h:7
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:7
 msgid "Wacom Tablet"
 msgstr "ವೇಕಾಮ್ ಕಿಸೆಗಣಕ (ಟ್ಯಾಬ್ಲೆಟ್)"
 
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:2
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:2
 msgid "Set your Wacom tablet preferences"
 msgstr "ನಿಮ್ಮ ವೇಕಾಮ್ ಗ್ರಾಫಿಕ್ಸ್ ಕಿಸೆಗಣಕ (ಟ್ಯಾಬ್ಲೆಟ್) ಆದ್ಯತೆಗಳನ್ನು ಹೊಂದಿಸಿ"
 
 #. Translators: those are keywords for the wacom tablet control-center panel
-#: ../panels/wacom/gnome-wacom-panel.desktop.in.in.h:4
+#: ../panels/wacom/cinnamon-wacom-panel.desktop.in.in.h:4
 msgid "Tablet;Wacom;Stylus;Eraser;Mouse;"
 msgstr "ಟ್ಯಾಬ್ಲೆಟ್;ವೇಕಾಮ್;ಸ್ಟೈಲಸ್;ಉಜ್ಜುಗ;ಮೌಸ್;"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:1
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:1
 msgid "Tablet (absolute)"
 msgstr "ಟ್ಯಾಬ್ಲೆಟ್ (ಪರಿಪೂರ್ಣ)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:2
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:2
 msgid "Touchpad (relative)"
 msgstr "ಟಚ್‌ಪ್ಯಾಡ್ (ತುಲನಾತ್ಮಕ)"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:3
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:3
 msgid "Tablet Preferences"
 msgstr "ಕಿಸಗಣಕದ ಆದ್ಯತೆಗಳು"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:4
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:4
 msgid "No tablet detected"
 msgstr "ಯಾವುದೆ ಕಿಸೆಗಣಕವು (ಟ್ಯಾಬ್ಲೆಟ್) ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:5
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:5
 msgid "Please plug in or turn on your Wacom tablet"
 msgstr ""
 "ನಿಮ್ಮ ವೇಕಾಮ್ ಕಿಸೆಗಣಕದೊಂದಿಗೆ (ಟ್ಯಾಬ್ಲೆಟ್) ಸಂಪರ್ಕಜೋಡಿಸಿ ಅಥವ ಅದನ್ನು ಚಾಲನೆಗೊಳಿಸಿ"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:6
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:6
 msgid "Bluetooth Settings"
 msgstr "ಬ್ಲೂಟೂತ್ ಸಿದ್ಧತೆಗಳು"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:8
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:8
 msgid "Map to Monitor..."
 msgstr "ತೆರೆಗೆ ಮ್ಯಾಪ್ ಮಾಡು..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:9
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:9
 msgid "Map Buttons..."
 msgstr "ಮ್ಯಾಪ್‌ ಗುಂಡಿಗಳು..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:10
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:10
 msgid "Calibrate..."
 msgstr "ಕ್ಯಾಲಿಬ್ರೇಟ್ ಮಾಡು..."
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:11
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:11
 msgid "Adjust display resolution"
 msgstr "ಪ್ರದರ್ಶಕದ ರೆಸಲ್ಯೂಶನ್ ಅನ್ನು ಸರಿಹೊಂದಿಸು"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:12
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:12
 msgid "Tracking Mode"
 msgstr "ಜಾಡು ಇರಿಸುವ ಕ್ರಮ"
 
-#: ../panels/wacom/gnome-wacom-properties.ui.h:13
+#: ../panels/wacom/cinnamon-wacom-properties.ui.h:13
 msgid "Left-Handed Orientation"
 msgstr "ಎಡ-ಭಾಗದ ವಾಲಿಕೆ"
 
@@ -6585,13 +6585,13 @@ msgstr "ಎಲ್ಲಾ ಸಿದ್ಧತೆಗಳು"
 #~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಎಂಜಿನ್‌ ಅನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಲಿಲ್ಲ"
 
 #~ msgid ""
-#~ "Unable to start the settings manager 'gnome-settings-daemon'.\n"
+#~ "Unable to start the settings manager 'cinnamon-settings-daemon'.\n"
 #~ "Without the GNOME settings manager running, some preferences may not take "
 #~ "effect. This could indicate a problem with DBus, or a non-GNOME (e.g. "
 #~ "KDE) settings manager may already be active and conflicting with the "
 #~ "GNOME settings manager."
 #~ msgstr ""
-#~ "ಸಿದ್ಧತಾ ವ್ಯವಸ್ಥಾಪಕ 'gnome-settings-daemon' ಅನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+#~ "ಸಿದ್ಧತಾ ವ್ಯವಸ್ಥಾಪಕ 'cinnamon-settings-daemon' ಅನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
 #~ "GNOME ಸಿದ್ಧತವಾ ವ್ಯವಸ್ಥಾಪಕವು ಚಲಾಯಿತಗೊಳ್ಳದೆ, ಕೆಲವು ಆದ್ಯತೆಗಳು ಕಾರ್ಯರೂಪಕ್ಕೆ "
 #~ "ಬರುವುದಿಲ್ಲ. ಇದು DBus ನಲ್ಲಿನ ಒಂದು ತೊಂದರೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ, ಅಥವ ಒಂದು GNOME "
 #~ "ನದಾಗಿರದ (ಉದಾ. KDE) ಒಂದು ಸಿದ್ಧತಾ ವ್ಯವಸ್ಥಾಪಕವು ಈಗಾಗಲೆ ಸಕ್ರಿಯವಾಗಿದ್ದು ಅದು GNOME ನ "
@@ -7220,10 +7220,10 @@ msgstr "ಎಲ್ಲಾ ಸಿದ್ಧತೆಗಳು"
 
 #~ msgid ""
 #~ "[Change Theme;gtk-theme-selector.desktop,Set Preferred Applications;"
-#~ "default-applications.desktop,Add Printer;gnome-cups-manager.desktop]"
+#~ "default-applications.desktop,Add Printer;cinnamon-cups-manager.desktop]"
 #~ msgstr ""
 #~ "[ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಬದಲಾಯಿಸು;gtk-theme-selector.desktop,ಇಚ್ಛೆಯ ಅನ್ವಯವನ್ನು "
-#~ "ಹೊಂದಿಸು;default-applications.desktop,ಮುದ್ರಕವನ್ನು ಸೇರಿಸು;gnome-cups-manager."
+#~ "ಹೊಂದಿಸು;default-applications.desktop,ಮುದ್ರಕವನ್ನು ಸೇರಿಸು;cinnamon-cups-manager."
 #~ "desktop]"
 
 #~ msgid ""

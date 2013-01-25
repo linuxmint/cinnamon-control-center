@@ -1,4 +1,4 @@
-/* gnome-region-panel-xkbot.c
+/* cinnamon-region-panel-xkbot.c
  * Copyright (C) 2003-2007 Sergey V. Udaltsov
  *
  * Written by: Sergey V. Udaltsov <svu@gnome.org>
@@ -27,7 +27,7 @@
 #include <glib/gi18n.h>
 #include <string.h>
 
-#include "gnome-region-panel-xkb.h"
+#include "cinnamon-region-panel-xkb.h"
 
 static GtkBuilder *chooser_dialog = NULL;
 static const char *current1st_level_id = NULL;
@@ -442,8 +442,8 @@ xkb_options_popup_dialog (GtkBuilder * dialog)
 	GtkWidget *chooser;
 
 	chooser_dialog = gtk_builder_new ();
-	gtk_builder_add_from_file (chooser_dialog, GNOMECC_UI_DIR
-				   "/gnome-region-panel-options-dialog.ui",
+	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
+				   "/cinnamon-region-panel-options-dialog.ui",
 				   NULL);
 
 	chooser = CWID ("xkb_options_dialog");

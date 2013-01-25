@@ -8,8 +8,8 @@ INCLUDES = 						\
 	$(WACOM_PANEL_CFLAGS)				\
 	-I$(srcdir)/calibrator				\
 	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	$(NULL)
 
 
@@ -72,20 +72,20 @@ pixmap_DATA =				\
 	wacom-tablet-pc.svg
 
 uidir   = $(pkgdatadir)/ui
-ui_DATA = gnome-wacom-properties.ui wacom-stylus-page.ui button-mapping.ui
+ui_DATA = cinnamon-wacom-properties.ui wacom-stylus-page.ui button-mapping.ui
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-wacom-panel.desktop.in
+desktop_in_files = cinnamon-wacom-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-WACOMDIR=$(top_srcdir)/../gnome-settings-daemon/plugins/wacom/
+WACOMDIR=$(top_srcdir)/../cinnamon-settings-daemon/plugins/wacom/
 WACOMFILES=gsd-wacom-device.c gsd-wacom-device.h
-COMMONDIR=$(top_srcdir)/../gnome-settings-daemon/plugins/common/
+COMMONDIR=$(top_srcdir)/../cinnamon-settings-daemon/plugins/common/
 COMMONFILES=gsd-input-helper.c gsd-input-helper.h
 update-from-gsd:
 	FILES="$(WACOMFILES)" DIR="$(WACOMDIR)" $(top_srcdir)/update-from-gsd.sh && changed=true ; \
 	FILES="$(COMMONFILES)" DIR="$(COMMONDIR)" $(top_srcdir)/update-from-gsd.sh && changed=true ; \
-	git commit -m "wacom: Update from gnome-settings-daemon" $(WACOMFILES) $(COMMONFILES)
+	git commit -m "wacom: Update from cinnamon-settings-daemon" $(WACOMFILES) $(COMMONFILES)
 
 CLEANFILES = $(Desktop_in_files) $(desktop_DATA)
 EXTRA_DIST = $(ui_DATA) $(pixmap_DATA)

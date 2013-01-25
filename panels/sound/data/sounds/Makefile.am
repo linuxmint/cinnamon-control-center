@@ -9,19 +9,19 @@ sound_DATA =			\
 	sonar.ogg		\
 	$(NULL)
 
-metadata_in_files = gnome-sounds-default.xml.in
+metadata_in_files = cinnamon-sounds-default.xml.in
 metadatadir = $(pkgdatadir)/sounds
 metadata_DATA = $(metadata_in_files:.xml.in=.xml)
 @INTLTOOL_XML_RULE@
 
-noinst_DATA = gnome-sounds-default.xml.in
-CLEANFILES = gnome-sounds-default.xml gnome-sounds-default.xml.in
+noinst_DATA = cinnamon-sounds-default.xml.in
+CLEANFILES = cinnamon-sounds-default.xml cinnamon-sounds-default.xml.in
 
-EXTRA_DIST = $(sound_DATA) gnome-sounds-default.xml.in.in
+EXTRA_DIST = $(sound_DATA) cinnamon-sounds-default.xml.in.in
 
-gnome-sounds-default.xml.in: gnome-sounds-default.xml.in.in Makefile
-	$(AM_V_GEN)sed -e 's^\@datadir\@^$(datadir)^g' < $(srcdir)/gnome-sounds-default.xml.in.in > gnome-sounds-default.xml.in.tmp \
-	&& mv gnome-sounds-default.xml.in.tmp gnome-sounds-default.xml.in
+cinnamon-sounds-default.xml.in: cinnamon-sounds-default.xml.in.in Makefile
+	$(AM_V_GEN)sed -e 's^\@datadir\@^$(datadir)^g' < $(srcdir)/cinnamon-sounds-default.xml.in.in > cinnamon-sounds-default.xml.in.tmp \
+	&& mv cinnamon-sounds-default.xml.in.tmp cinnamon-sounds-default.xml.in
 
 MAINTAINERCLEANFILES = \
 	Makefile.in
