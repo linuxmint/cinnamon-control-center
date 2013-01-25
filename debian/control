@@ -69,13 +69,12 @@ Depends: ${misc:Depends},
          apg,
          desktop-file-utils,
          gkbd-capplet (>= 3.5.90),
-         cinnamon-control-center-data (<< ${gnome:NextVersion}),
          cinnamon-control-center-data (>= ${source:Version}),
          gnome-desktop3-data,
          gnome-icon-theme (>= 2.24),
          gnome-icon-theme-symbolic,
          gnome-menus (>= 2.12.0),
-         gnome-settings-daemon (>= 3.5.2),
+         gnome-settings-daemon (>= 3.4.2),
          gsettings-desktop-schemas (>= 3.5.91),
          ubuntu-system-service (>= 0.1.10)
 Recommends: cups-pk-helper,
@@ -120,9 +119,9 @@ Architecture: all
 Section: gnome
 Depends: ${misc:Depends}
 Recommends: cinnamon-control-center (>= ${source:Version})
-Provides: capplets-data
-Conflicts: capplets-data
-Replaces: capplets-data,
+Provides: cinnamon-capplets-data
+Conflicts: cinnamon-capplets-data
+Replaces: cinnamon-capplets-data,
           gdm (<< 3.0),
           gdm3 (<< 3.0),
           gnome-media-common (<< 2.91),

@@ -23,8 +23,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += --disable-scrollkeeper \
 DEB_DH_MAKESHLIBS_ARGS_cinnamon-control-center = --no-act
 
 binary-post-install/cinnamon-control-center-data::
-	rm -rf debian/capplets-data/usr/share/applications/mimeinfo.cache
-	rm -rf debian/capplets-data/usr/share/pkgconfig
+	rm -rf debian/cinnamon-capplets-data/usr/share/applications/mimeinfo.cache
+	rm -rf debian/cinnamon-capplets-data/usr/share/pkgconfig
 	dh_installmime -p$(cdbs_curpkg)
 
 common-binary-post-install-arch:: list-missing

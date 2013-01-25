@@ -370,7 +370,7 @@ panels/common/Makefile
 panels/background/Makefile
 panels/background/cinnamon-background-panel.desktop.in
 panels/bluetooth/Makefile
-panels/bluetooth/bluetooth-properties.desktop.in
+panels/bluetooth/cinnamon-bluetooth-properties.desktop.in
 panels/datetime/Makefile
 panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
