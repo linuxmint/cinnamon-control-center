@@ -1,5 +1,5 @@
-libgnome-control-center.so.1 libgnome-control-center1 #MINVER#
-* Build-Depends-Package: libgnome-control-center-dev
+libcinnamon-control-center.so.1 libcinnamon-control-center1 #MINVER#
+* Build-Depends-Package: libcinnamon-control-center-dev
  cc_editable_entry_get_editable@Base 1:3.1.3
  cc_editable_entry_get_scale@Base 1:3.1.3
  cc_editable_entry_get_selectable@Base 1:3.1.4

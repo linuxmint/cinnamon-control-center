@@ -98,11 +98,11 @@ directory_DATA = $(directory_in_files:.directory.in=.directory)
 EXTRA_DIST =					\
 	$(ui_DATA)				\
 	cinnamon-control-center.desktop.in.in	\
-	gnomecc.directory.in			\
-	gnomecc.menu.in				\
+	cinnamoncc.directory.in			\
+	cinnamoncc.menu.in				\
 	libcinnamon-control-center.pc.in  \
 	cc-shell-marshal.list
 
-DISTCLEANFILES = cinnamon-control-center.desktop cinnamon-control-center.desktop.in gnomecc.directory gnomecc.menu
+DISTCLEANFILES = cinnamon-control-center.desktop cinnamon-control-center.desktop.in cinnamoncc.directory cinnamoncc.menu
 
 -include $(top_srcdir)/git.mk
