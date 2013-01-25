@@ -50,6 +50,9 @@ G_DEFINE_TYPE (CcWacomPage, cc_wacom_page, GTK_TYPE_BOX)
 #define CUSTOM_ACTION_KEY       "custom-action"
 #define KEY_CUSTOM_ELEVATOR_ACTION "custom-elevator-action"
 
+#define GSD_WACOM_ACTION_TYPE_SWITCH_MONITOR 2
+
+
 enum {
 	MAPPING_DESCRIPTION_COLUMN,
 	MAPPING_TYPE_COLUMN,

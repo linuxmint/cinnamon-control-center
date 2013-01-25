@@ -105,7 +105,7 @@ cc_shell_nav_bar_class_init (CcShellNavBarClass *klass)
                                         0,
                                         NULL,
                                         NULL,
-                                        cc_shell_marshal_VOID__VOID,
+                                        NULL,
                                         G_TYPE_NONE,
                                         0);
 }
