@@ -6,7 +6,7 @@ Icon=preferences-desktop-keyboard
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;
+Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;Unity;
 X-Cinnamon-Settings-Panel=cinnamon-keyboard
 # Translators: those are keywords for the keyboard control-center panel

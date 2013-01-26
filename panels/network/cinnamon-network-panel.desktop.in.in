@@ -6,7 +6,7 @@ Icon=network-workgroup
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;
+Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;Unity;
 X-Cinnamon-Settings-Panel=cinnamon-network
 # Translators: those are keywords for the network control-center panel

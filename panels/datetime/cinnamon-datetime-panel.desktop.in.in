@@ -6,7 +6,7 @@ Icon=preferences-system-time
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
+Categories=GNOME;GTK;Settings;X-cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=cinnamon-datetime
 # Translators: those are keywords for the date and time control-center panel

@@ -6,7 +6,7 @@ Icon=preferences-desktop-accessibility
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;X-GNOME-SystemSettings;X-GNOME-Settings-Panel;
+Categories=GTK;Settings;X-Cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;Unity;
 X-Cinnamon-Settings-Panel=cinnamon-universal-access
 # Translators: those are keywords for the universal access control-center panel

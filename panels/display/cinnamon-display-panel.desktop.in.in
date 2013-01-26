@@ -6,7 +6,7 @@ Icon=preferences-desktop-display
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;HardwareSettings;X-GNOME-Settings-Panel;
+Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;Unity;
 X-Cinnamon-Settings-Panel=cinnamon-display
 # Translators: those are keywords for the display control-center panel

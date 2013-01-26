@@ -6,7 +6,7 @@ Icon=goa-panel
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings;
+Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings;
 OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=cinnamon-online-accounts
 # Translators: those are keywords for the online-accounts control-center panel
