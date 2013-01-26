@@ -2875,6 +2875,7 @@ cc_printers_panel_init (CcPrintersPanel *self)
 
   GtkWidget *dummy = cc_editable_entry_new (); /* Needed before UI file is loaded, or else
                                                 * the custom widget fails to load. */
+  g_object_ref_sink (dummy);
 
   builder_result = gtk_builder_add_objects_from_file (priv->builder,
                                                       DATADIR"/printers.ui",
