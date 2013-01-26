@@ -54,7 +54,7 @@
 
 #include "cc-common-language.h"
 
-#define USER_ACCOUNTS_PERMISSION "org.gnome.controlcenter.user-accounts.administration"
+#define USER_ACCOUNTS_PERMISSION "org.cinnamon.controlcenter.user-accounts.administration"
 
 CC_PANEL_REGISTER (UmUserPanel, um_user_panel)
 
@@ -1316,6 +1316,10 @@ um_user_panel_init (UmUserPanel *self)
         d->builder = gtk_builder_new ();
         d->um = um_user_manager_ref_default ();
 
+        GtkWidget *dummy = cc_editable_entry_new (); /* Needed before UI file is loaded, or else
+                                                      * the custom widget fails to load. */
+        g_object_ref_sink (dummy);
+
         filename = UIDIR "/user-accounts-dialog.ui";
         if (!g_file_test (filename, G_FILE_TEST_EXISTS)) {
                 filename = "data/user-accounts-dialog.ui";
@@ -1338,6 +1342,8 @@ um_user_panel_init (UmUserPanel *self)
         gtk_style_context_set_junction_sides (context, GTK_JUNCTION_BOTTOM);
         context = gtk_widget_get_style_context (get_widget (d, "add-remove-toolbar"));
         gtk_style_context_set_junction_sides (context, GTK_JUNCTION_TOP);
+
+        g_object_unref (dummy);
 }
 
 static void
@@ -1408,5 +1414,5 @@ um_user_panel_register (GIOModule *module)
 {
         um_user_panel_register_type (G_TYPE_MODULE (module));
         g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
-                                        UM_TYPE_USER_PANEL, "user-accounts", 0);
+                                        UM_TYPE_USER_PANEL, "cinnamon-user-accounts", 0);
 }

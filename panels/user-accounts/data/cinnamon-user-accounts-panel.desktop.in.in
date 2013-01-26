@@ -8,6 +8,6 @@ Type=Application
 StartupNotify=true
 Categories=System;Settings;X-Cinnamon-Settings-Panel;X-Cinnamon-SystemSettings
 OnlyShowIn=GNOME;Unity;
-X-GNOME-Settings-Panel=cinnamon-user-accounts
+X-Cinnamon-Settings-Panel=cinnamon-user-accounts
 # Translators: those are keywords for the user accounts control-center panel
 _Keywords=Login;Name;Fingerprint;Avatar;Logo;Face;Password;
