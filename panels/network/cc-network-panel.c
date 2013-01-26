@@ -1211,8 +1211,10 @@ cc_network_panel_init (CcNetworkPanel *panel)
                                                      "vbox1"));
         gtk_widget_reparent (widget, (GtkWidget *) panel);
 
+
+        gtk_widget_show_all (GTK_WIDGET (panel));
         /* add kill switch widgets when dialog activated */
-        panel->priv->add_header_widgets_idle = g_idle_add (network_add_shell_header_widgets_cb, panel);
+   //    panel->priv->add_header_widgets_idle = g_idle_add (network_add_shell_header_widgets_cb, panel);
 }
 
 void

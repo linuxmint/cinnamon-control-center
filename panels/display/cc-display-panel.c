@@ -2699,7 +2699,7 @@ refresh_unity_launcher_placement (CcDisplayPanel *self)
   GtkTreeIter iter;
   GList *connected_outputs = NULL;
   GList *list;
-  gboolean launcher_on_all_monitors = unity_launcher_on_all_monitors (self->priv->unity_settings);
+  gboolean launcher_on_all_monitors = FALSE; //unity_launcher_on_all_monitors (self->priv->unity_settings);
   gint index_of_primary_screen = 0;
   gint i;
 
@@ -2899,9 +2899,12 @@ cc_display_panel_constructor (GType                  gtype,
   self->priv->clock_settings = g_settings_new (CLOCK_SCHEMA);
 
   shell = cc_panel_get_shell (CC_PANEL (self));
-  toplevel = cc_shell_get_toplevel (shell);
-  self->priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
+
+  if (shell != NULL) {
+    toplevel = cc_shell_get_toplevel (shell);
+    self->priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
                                            G_CALLBACK (dialog_toplevel_focus_changed), self);
+  }
 
   self->priv->panel = WID ("display-panel");
   g_signal_connect_after (self->priv->panel, "show",
