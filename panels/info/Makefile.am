@@ -36,7 +36,7 @@ libinfo_la_LIBADD = $(PANEL_LIBS) $(INFO_PANEL_LIBS)
 libinfo_la_LDFLAGS = $(PANEL_LDFLAGS)
 
 uidir = $(pkgdatadir)/ui
-dist_ui_DATA = info.ui GnomeLogoVerticalMedium.svg
+dist_ui_DATA = info.ui cinnamon.png
 
 @INTLTOOL_DESKTOP_RULE@
 
