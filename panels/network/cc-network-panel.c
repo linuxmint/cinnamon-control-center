@@ -1094,14 +1094,24 @@ network_add_shell_header_widgets_cb (gpointer user_data)
         /* TRANSLATORS: this is to disable the radio hardware in the
          * network panel */
         label = gtk_label_new_with_mnemonic (_("Air_plane Mode"));
-        gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX (box), label, TRUE, FALSE, 2);
         gtk_widget_set_visible (label, TRUE);
         widget = gtk_switch_new ();
         gtk_label_set_mnemonic_widget (GTK_LABEL (label), widget);
-        gtk_box_pack_start (GTK_BOX (box), widget, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX (box), widget, TRUE, FALSE, 2);
         gtk_widget_show_all (box);
         panel->priv->rfkill_switch = GTK_SWITCH (widget);
-        cc_shell_embed_widget_in_header (cc_panel_get_shell (CC_PANEL (panel)), box);
+
+        CcShell *shell = cc_panel_get_shell (CC_PANEL (panel));
+        if (shell == NULL) {
+            GtkWidget *widget = widget = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
+                                                     "vbox10"));
+            gtk_box_pack_start (GTK_BOX (widget), box, FALSE, FALSE, 6);
+            gtk_box_reorder_child (GTK_BOX (widget), box, 0);
+        } else {
+            cc_shell_embed_widget_in_header (shell, box);
+        }
+
         panel->priv->kill_switch_header = g_object_ref (box);
 
         panel->priv->killswitches = g_hash_table_new (g_direct_hash, g_direct_equal);
@@ -1127,6 +1137,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
         GtkTreeSelection *selection;
         GtkWidget *widget;
         GtkWidget *toplevel;
+
+        if (!gtk_icon_size_from_name ("cc-sidebar-list"))
+            gtk_icon_size_register ("cc-sidebar-list", 24, 24);
 
         panel->priv = NETWORK_PANEL_PRIVATE (panel);
 
@@ -1214,7 +1227,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
 
         gtk_widget_show_all (GTK_WIDGET (panel));
         /* add kill switch widgets when dialog activated */
-   //    panel->priv->add_header_widgets_idle = g_idle_add (network_add_shell_header_widgets_cb, panel);
+        panel->priv->add_header_widgets_idle = g_idle_add (network_add_shell_header_widgets_cb, panel);
 }
 
 void
