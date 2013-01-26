@@ -1,4 +1,4 @@
-SUBDIRS = icons
+SUBDIRS = icons faces
 
 uidir = $(pkgdatadir)/ui/user-accounts
 ui_DATA = \

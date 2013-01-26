@@ -1,5 +1,5 @@
 
-imagedir = $(datadir)/pixmaps/faces
+imagedir = $(datadir)/pixmaps/cinnamon/faces
 
 image_DATA = \
 	astronaut.jpg \

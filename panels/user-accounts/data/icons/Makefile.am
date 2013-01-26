@@ -1,7 +1,7 @@
 pixmapsdir = $(pkgdatadir)/pixmaps
 pixmaps_DATA =			\
-	cinnamon-about-me-lock.png	\
-	cinnamon-about-me-lock-open.png	\
+	about-me-lock.png	\
+	about-me-lock-open.png	\
 	left-index-finger.svg	\
 	left-little-finger.svg	\
 	left-middle-finger.svg	\
