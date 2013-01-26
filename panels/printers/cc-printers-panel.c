@@ -2873,6 +2873,9 @@ cc_printers_panel_init (CcPrintersPanel *self)
 
   priv->preferred_drivers = NULL;
 
+  GtkWidget *dummy = cc_editable_entry_new (); /* Needed before UI file is loaded, or else
+                                                * the custom widget fails to load. */
+
   builder_result = gtk_builder_add_objects_from_file (priv->builder,
                                                       DATADIR"/printers.ui",
                                                       objects, &error);
@@ -3002,6 +3005,8 @@ Please check your installation");
 
   gtk_container_add (GTK_CONTAINER (self), top_widget);
   gtk_widget_show_all (GTK_WIDGET (self));
+
+  g_object_unref (dummy);
 }
 
 void
