@@ -3,6 +3,7 @@ usr/share/cinnamon-control-center
 usr/share/desktop-directories
 usr/share/locale
 usr/share/icons
+usr/share/pixmaps/faces
 usr/share/polkit-1
 debian/source_cinnamon-control-center.py /usr/share/apport/package-hooks
 

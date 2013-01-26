@@ -410,6 +410,11 @@ panels/network/Makefile
 panels/network/cinnamon-network-panel.desktop.in
 panels/universal-access/Makefile
 panels/universal-access/cinnamon-universal-access-panel.desktop.in
+panels/user-accounts/data/faces/Makefile
+panels/user-accounts/Makefile
+panels/user-accounts/data/Makefile
+panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in
+panels/user-accounts/data/icons/Makefile
 po/Makefile.in
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
