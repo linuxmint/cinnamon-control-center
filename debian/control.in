@@ -1,9 +1,7 @@
 Source: cinnamon-control-center
 Section: gnome
 Priority: optional
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: @GNOME_TEAM@
+Maintainer: Linux Mint <root@linuxmint.com>
 Standards-Version: 3.9.3
 Build-Depends: autotools-dev,
                cdbs (>= 0.4.41),
@@ -54,7 +52,7 @@ Build-Depends: autotools-dev,
                shared-mime-info
 #               libclutter-1.0-dev (>= 1.11.3),
 #               libclutter-gtk-1.0-dev
-Vcs-Bzr: http://code.launchpad.net/~ubuntu-desktop/cinnamon-control-center/ubuntu
+Homepage: http://www.github.com/linuxmint/cinnamon-control-center
 
 Package: cinnamon-control-center
 Architecture: any
@@ -94,20 +92,17 @@ Suggests: gnome-screensaver | xscreensaver,
           gstreamer0.10-pulseaudio,
           libcanberra-gtk-module,
           x11-xserver-utils
-Description: utilities to configure the GNOME desktop
- This package contains configuration applets for the GNOME desktop,
+Description: utilities to configure the Cinnamon desktop
+ This package contains configuration applets for the Cinnamon desktop,
  allowing to set accessibility configuration, desktop fonts, keyboard
  and mouse properties, sound setup, desktop theme and background, user
- interface properties, screen resolution, and other GNOME parameters.
- .
- It also contains a front end to these applets, which can also be
- accessed with the GNOME panel or the Nautilus file manager.
+ interface properties, screen resolution, and other Cinnamon parameters.
 
 Package: cinnamon-control-center-dev
 Architecture: all
 Section: devel
 Depends: ${misc:Depends}
-Description: utilities to configure the GNOME desktop
+Description: utilities to configure the Cinnamon desktop
  This package contains the file required to get the keydirs location
 
 Package: cinnamon-control-center-data
@@ -127,7 +122,7 @@ Breaks: gdm (<< 3.0),
         gdm3 (<< 3.0),
         gnome-power-manager (<< 3.2),
         gnome-settings-daemon (<< 3.0)
-Description: configuration applets for GNOME - data files
+Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
 
@@ -136,7 +131,7 @@ Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
          libcinnamon-control-center1 (= ${binary:Version})
-Description: utilities to configure the GNOME desktop
+Description: utilities to configure the Cinnamon desktop
  This package contains the files needed to build Control Center panels
 
 Package: libcinnamon-control-center1
@@ -144,5 +139,5 @@ Architecture: any
 Section: libs
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Description: utilities to configure the GNOME desktop
+Description: utilities to configure the Cinnamon desktop
  This package contains the library used by Control Center panels

@@ -1,5 +1,5 @@
 cinnamon-control-center (1.0.0) nadia; urgency=low
 
-  * Initial port from cinnamon-control-center 3.6.3
+  * Initial port from gnome-control-center 3.6.3
     
  -- Michael Webster <miketwebster@gmail.com>  Fri, 25 Jan 2013 10:50:00 -0500
