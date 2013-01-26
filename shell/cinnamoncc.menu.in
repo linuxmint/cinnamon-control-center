@@ -3,7 +3,7 @@
 
 <Menu>
   <Name>Control Center</Name>
-  <Directory>gnomecc.directory</Directory>
+  <Directory>cinnamoncc.directory</Directory>
 
   <!-- Read standard .directory and .desktop file locations -->
   <AppDir>@applicationsdir@</AppDir>
@@ -27,10 +27,10 @@
       <Category>Settings</Category>
       <Not>
         <Or>
-          <Category>X-GNOME-PersonalSettings</Category>
+          <Category>X-Cinnamon-PersonalSettings</Category>
           <Category>DesktopSettings</Category>
           <Category>HardwareSettings</Category>
-          <Category>X-GNOME-SystemSettings</Category>
+          <Category>X-Cinnamon-SystemSettings</Category>
           <Category>System</Category>
         </Or>
       </Not>
@@ -49,8 +49,8 @@
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>X-GNOME-PersonalSettings</Category>
-        <Category>X-GNOME-Settings-Panel</Category>
+        <Category>X-Cinnamon-PersonalSettings</Category>
+        <Category>X-Cinnamon-Settings-Panel</Category>
       </And>
     </Include>
   </Menu> <!-- End Personal -->
@@ -63,7 +63,7 @@
       <And>
         <Category>Settings</Category>
         <Category>HardwareSettings</Category>
-        <Category>X-GNOME-Settings-Panel</Category>
+        <Category>X-Cinnamon-Settings-Panel</Category>
       </And>
     </Include>
   </Menu> <!-- End Hardware -->
@@ -75,8 +75,8 @@
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>X-GNOME-SystemSettings</Category>
-        <Category>X-GNOME-Settings-Panel</Category>
+        <Category>X-Cinnamon-SystemSettings</Category>
+        <Category>X-Cinnamon-Settings-Panel</Category>
       </And>
     </Include>
   </Menu> <!-- End System -->
@@ -84,15 +84,15 @@
   <!-- Other category -->
   <Menu>
     <Name>Other</Name>
-    <Directory>X-GNOME-Other.directory</Directory>
+    <Directory>X-Cinnamon-Other.directory</Directory>
     <Include>
       <And>
         <Category>Settings</Category>
-        <Category>X-GNOME-Settings-Panel</Category>
+        <Category>X-Cinnamon-Settings-Panel</Category>
         <Not>
           <Or>
-            <Category>X-GNOME-PersonalSettings</Category>
-            <Category>X-GNOME-SystemSettings</Category>
+            <Category>X-Cinnamon-PersonalSettings</Category>
+            <Category>X-Cinnamon-SystemSettings</Category>
             <Category>HardwareSettings</Category>
             <Filename>cinnamon-control-center.desktop</Filename>
           </Or>
