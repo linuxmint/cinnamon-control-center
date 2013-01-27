@@ -107,7 +107,7 @@ cc_sound_panel_init (CcSoundNuaPanel *self)
                                            ICON_DATA_DIR);
         gtk_window_set_default_icon_name ("multimedia-volume-control");
 
-        self->control = gvc_mixer_control_new ("GNOME Volume Control Dialog");
+        self->control = gvc_mixer_control_new ("Cinnamon Volume Control Dialog");
         gvc_mixer_control_open (self->control);
         self->dialog = gvc_mixer_dialog_new (self->control);
         gtk_container_add (GTK_CONTAINER (self), GTK_WIDGET (self->dialog));
@@ -120,7 +120,7 @@ cc_sound_panel_register (GIOModule *module)
         cc_sound_panel_register_type (G_TYPE_MODULE (module));
         g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
                                         CC_TYPE_SOUND_PANEL,
-                                        "sound-nua", 0);
+                                        "cinnamon-sound-nua", 0);
 }
 
 /* GIO extension stuff */

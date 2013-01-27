@@ -447,6 +447,9 @@ panels/sound/data/icons/scalable/Makefile
 panels/sound/data/icons/scalable/apps/Makefile
 panels/sound/data/icons/scalable/devices/Makefile
 panels/sound/data/sounds/Makefile
+panels/sound-nua/Makefile
+panels/sound-nua/data/Makefile
+panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in
 panels/power/Makefile
 panels/power/cinnamon-power-panel.desktop.in
 panels/power/icons/Makefile
