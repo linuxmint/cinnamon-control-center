@@ -84,6 +84,7 @@ struct _CcDisplayPanelPrivate
   GSettings      *unity2d_settings_launcher;
   GtkBuilder     *builder;
   guint           focus_id;
+  guint           focus_id_hide;
 
   GtkWidget      *panel;
   GtkWidget      *current_monitor_event_box;
@@ -194,6 +195,9 @@ cc_display_panel_finalize (GObject *object)
       if (toplevel != NULL)
         g_signal_handler_disconnect (G_OBJECT (toplevel),
                                      self->priv->focus_id);
+    } else {
+        g_signal_handler_disconnect (GTK_WIDGET (self), self->priv->focus_id);
+        g_signal_handler_disconnect (GTK_WIDGET (self), self->priv->focus_id_hide);
     }
 
   gnome_rr_labeler_hide (self->priv->labeler);
@@ -294,8 +298,11 @@ on_screen_changed (GnomeRRScreen *scr,
   }
 
   self->priv->labeler = gnome_rr_labeler_new (self->priv->current_configuration);
-  if (gtk_widget_has_focus (self->priv->panel))
-     gnome_rr_labeler_show (self->priv->labeler);
+
+  if (cc_panel_get_shell (CC_PANEL (self)) == NULL)
+    gnome_rr_labeler_hide (self->priv->labeler);
+  else
+    gnome_rr_labeler_show (self->priv->labeler);
 
   select_current_output_from_dialog_position (self);
 
@@ -2584,6 +2591,20 @@ dialog_toplevel_focus_changed (GtkWindow      *window,
 }
 
 static void
+widget_visible_changed (GtkWidget *widget,
+                        gpointer user_data)
+{
+    if (self->priv->labeler == NULL)
+        return;
+    if (gtk_widget_get_visible (widget)) {
+        gnome_rr_labeler_show (CC_DISPLAY_PANEL (widget)->priv->labeler);
+    } else {
+        gnome_rr_labeler_hide (CC_DISPLAY_PANEL (widget)->priv->labeler);
+    }
+}
+
+
+static void
 on_toplevel_realized (GtkWidget     *widget,
                       CcDisplayPanel *self)
 {
@@ -2904,6 +2925,11 @@ cc_display_panel_constructor (GType                  gtype,
     toplevel = cc_shell_get_toplevel (shell);
     self->priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
                                            G_CALLBACK (dialog_toplevel_focus_changed), self);
+  } else {
+    self->priv->focus_id = g_signal_connect (GTK_WIDGET (self), "show",
+                                             G_CALLBACK (widget_visible_changed), NULL);
+    self->priv->focus_id_hide = g_signal_connect (GTK_WIDGET (self), "hide",
+                                                  G_CALLBACK (widget_visible_changed), NULL);
   }
 
   self->priv->panel = WID ("display-panel");
