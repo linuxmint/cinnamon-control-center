@@ -545,8 +545,7 @@ cc_screen_panel_init (CcScreenPanel *self)
                    "show-notifications",
                    widget, "active",
                    G_SETTINGS_BIND_DEFAULT);
-  if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
-    gtk_widget_hide (widget);
+  gtk_widget_hide (widget);
 
   update_lock_screen_sensitivity (self);
 
