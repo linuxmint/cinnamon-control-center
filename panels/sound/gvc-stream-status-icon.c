@@ -222,7 +222,7 @@ on_menu_activate_open_volume_control (GtkMenuItem *item,
 
         error = NULL;
         context = gdk_app_launch_context_new ();
-        app = g_app_info_create_from_commandline ("cinnamon-control-center sound", "Sound preferences", 0, &error);
+        app = g_app_info_create_from_commandline ("cinnamon-control-center cinnamon-sound", "Sound preferences", 0, &error);
         if (app)
                 g_app_info_launch (app, NULL, G_APP_LAUNCH_CONTEXT (context), &error);
 
@@ -269,7 +269,7 @@ on_status_icon_popup_menu (GtkStatusIcon       *status_icon,
         gtk_menu_shell_append (GTK_MENU_SHELL (menu), item);
 
         item = gtk_image_menu_item_new_with_mnemonic (_("_Sound Preferences"));
-        image = gtk_image_new_from_icon_name ("multimedia-volume-control",
+        image = gtk_image_new_from_icon_name ("cin-multimedia-volume-control",
                                               GTK_ICON_SIZE_MENU);
         gtk_image_menu_item_set_image (GTK_IMAGE_MENU_ITEM (item), image);
         g_signal_connect (item,

@@ -422,7 +422,7 @@ create_monitor_stream_for_source (GvcMixerDialog *dialog,
         snprintf (t, sizeof (t), "%u", gvc_mixer_stream_get_index (stream));
 
         proplist = pa_proplist_new ();
-        pa_proplist_sets (proplist, PA_PROP_APPLICATION_ID, "org.gnome.VolumeControl");
+        pa_proplist_sets (proplist, PA_PROP_APPLICATION_ID, "org.cinnamon.VolumeControl");
         s = pa_stream_new_with_proplist (context, _("Peak detect"), &ss, NULL, proplist);
         pa_proplist_free (proplist);
         if (s == NULL) {
@@ -1056,7 +1056,7 @@ on_control_stream_added (GvcMixerControl *control,
             (GVC_IS_MIXER_SOURCE (stream) == FALSE &&
              GVC_IS_MIXER_SINK (stream) == FALSE &&
              gvc_mixer_stream_is_virtual (stream) == FALSE &&
-             g_strcmp0 (app_id, "org.gnome.VolumeControl") != 0 &&
+             g_strcmp0 (app_id, "org.cinnamon.VolumeControl") != 0 &&
              g_strcmp0 (app_id, "org.PulseAudio.pavucontrol") != 0)) {
                 GtkWidget      *bar;
 
@@ -1703,9 +1703,9 @@ gvc_mixer_dialog_constructor (GType                  type,
         gvc_channel_bar_set_name (GVC_CHANNEL_BAR (self->priv->input_bar),
                                   _("_Input volume:"));
         gvc_channel_bar_set_low_icon_name (GVC_CHANNEL_BAR (self->priv->input_bar),
-                                           "audio-input-microphone-low-symbolic");
+                                           "cin-audio-input-microphone-low-symbolic");
         gvc_channel_bar_set_high_icon_name (GVC_CHANNEL_BAR (self->priv->input_bar),
-                                            "audio-input-microphone-high-symbolic");
+                                            "cin-audio-input-microphone-high-symbolic");
         gtk_widget_set_sensitive (self->priv->input_bar, FALSE);
         alignment = gtk_alignment_new (0, 0, 1, 1);
         gtk_alignment_set_padding (GTK_ALIGNMENT (alignment), 6, 0, 0, 0);

@@ -41,18 +41,18 @@
 #define SCALE_SIZE 128
 
 static const char *output_icon_names[] = {
-        "audio-volume-muted-symbolic",
-        "audio-volume-low-symbolic",
-        "audio-volume-medium-symbolic",
-        "audio-volume-high-symbolic",
+        "cin-audio-volume-muted-symbolic",
+        "cin-audio-volume-low-symbolic",
+        "cin-audio-volume-medium-symbolic",
+        "cin-audio-volume-high-symbolic",
         NULL
 };
 
 static const char *input_icon_names[] = {
-        "audio-input-microphone-muted-symbolic",
-        "audio-input-microphone-low-symbolic",
-        "audio-input-microphone-medium-symbolic",
-        "audio-input-microphone-high-symbolic",
+        "cin-audio-input-microphone-muted-symbolic",
+        "cin-audio-input-microphone-low-symbolic",
+        "cin-audio-input-microphone-medium-symbolic",
+        "cin-audio-input-microphone-high-symbolic",
         NULL
 };
 
@@ -100,7 +100,7 @@ maybe_show_status_icons (GvcApplet *applet)
                                 break;
                         }
 
-                        if (!g_str_equal (id, "org.gnome.VolumeControl") &&
+                        if (!g_str_equal (id, "org.cinnamon.VolumeControl") &&
                             !g_str_equal (id, "org.PulseAudio.pavucontrol")) {
                                 show = TRUE;
                                 break;
@@ -220,7 +220,7 @@ gvc_applet_constructor (GType                  type,
 
         self = GVC_APPLET (object);
 
-        self->priv->control = gvc_mixer_control_new ("GNOME Volume Control Applet");
+        self->priv->control = gvc_mixer_control_new ("Cinnamon Volume Control Applet");
         g_signal_connect (self->priv->control,
                           "state-changed",
                           G_CALLBACK (on_control_state_changed),

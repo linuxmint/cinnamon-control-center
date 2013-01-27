@@ -2373,7 +2373,7 @@ update_event_role_stream (GvcMixerControl                  *control,
         max_volume = pa_cvolume_max (&info->volume);
 
         gvc_mixer_stream_set_name (stream, _("System Sounds"));
-        gvc_mixer_stream_set_icon_name (stream, "multimedia-volume-control");
+        gvc_mixer_stream_set_icon_name (stream, "cin-multimedia-volume-control");
         gvc_mixer_stream_set_volume (stream, (guint)max_volume);
         gvc_mixer_stream_set_is_muted (stream, info->mute);
 
@@ -2915,10 +2915,10 @@ gvc_mixer_new_pa_context (GvcMixerControl *self)
                           self->priv->name);
         pa_proplist_sets (proplist,
                           PA_PROP_APPLICATION_ID,
-                          "org.gnome.VolumeControl");
+                          "org.cinnamon.VolumeControl");
         pa_proplist_sets (proplist,
                           PA_PROP_APPLICATION_ICON_NAME,
-                          "multimedia-volume-control");
+                          "cin-multimedia-volume-control");
         pa_proplist_sets (proplist,
                           PA_PROP_APPLICATION_VERSION,
                           PACKAGE_VERSION);

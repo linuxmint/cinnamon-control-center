@@ -34,7 +34,7 @@
 #include "gvc-applet.h"
 #include "gvc-log.h"
 
-#define GVCA_DBUS_NAME "org.gnome.VolumeControlApplet"
+#define GVCA_DBUS_NAME "org.cinnamon.VolumeControlApplet"
 
 static gboolean show_version = FALSE;
 static gboolean debug = FALSE;
@@ -59,7 +59,7 @@ main (int argc, char **argv)
 
         error = NULL;
         gtk_init_with_args (&argc, &argv,
-                            (char *) _(" — GNOME Volume Control Applet"),
+                            (char *) _(" — Cinnamon Volume Control Applet"),
                             entries, GETTEXT_PACKAGE,
                             &error);
 

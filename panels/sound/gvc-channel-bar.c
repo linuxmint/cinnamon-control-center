@@ -409,7 +409,7 @@ on_scale_button_release_event (GtkWidget      *widget,
         ca_gtk_play_for_widget (GTK_WIDGET (bar), 0,
                                 CA_PROP_EVENT_ID, "audio-volume-change",
                                 CA_PROP_EVENT_DESCRIPTION, "foobar event happened",
-                                CA_PROP_APPLICATION_ID, "org.gnome.VolumeControl",
+                                CA_PROP_APPLICATION_ID, "org.cinnamon.VolumeControl",
                                 NULL);
 
         return FALSE;
@@ -840,14 +840,14 @@ gvc_channel_bar_class_init (GvcChannelBarClass *klass)
                                          g_param_spec_string ("low-icon-name",
                                                               "Icon Name",
                                                               "Name of icon to display for this stream",
-                                                              "audio-volume-low-symbolic",
+                                                              "cin-audio-volume-low-symbolic",
                                                               G_PARAM_READWRITE|G_PARAM_CONSTRUCT));
         g_object_class_install_property (object_class,
                                          PROP_HIGH_ICON_NAME,
                                          g_param_spec_string ("high-icon-name",
                                                               "Icon Name",
                                                               "Name of icon to display for this stream",
-                                                              "audio-volume-high-symbolic",
+                                                              "cin-audio-volume-high-symbolic",
                                                               G_PARAM_READWRITE|G_PARAM_CONSTRUCT));
         g_object_class_install_property (object_class,
                                          PROP_IS_AMPLIFIED,
@@ -884,8 +884,8 @@ gvc_channel_bar_init (GvcChannelBar *bar)
         bar->priv = GVC_CHANNEL_BAR_GET_PRIVATE (bar);
 
         bar->priv->base_volume = ADJUSTMENT_MAX_NORMAL;
-        bar->priv->low_icon_name = g_strdup ("audio-volume-low-symbolic");
-        bar->priv->high_icon_name = g_strdup ("audio-volume-high-symbolic");
+        bar->priv->low_icon_name = g_strdup ("cin-audio-volume-low-symbolic");
+        bar->priv->high_icon_name = g_strdup ("cin-audio-volume-high-symbolic");
 
         bar->priv->orientation = GTK_ORIENTATION_VERTICAL;
         bar->priv->adjustment = GTK_ADJUSTMENT (gtk_adjustment_new (0.0,
@@ -918,10 +918,10 @@ gvc_channel_bar_init (GvcChannelBar *bar)
         bar->priv->mute_box = gtk_alignment_new (0.5, 0.5, 0, 0);
         gtk_container_add (GTK_CONTAINER (bar->priv->mute_box), bar->priv->mute_switch);
 
-        bar->priv->low_image = gtk_image_new_from_icon_name ("audio-volume-low-symbolic",
+        bar->priv->low_image = gtk_image_new_from_icon_name ("cin-audio-volume-low-symbolic",
                                                              GTK_ICON_SIZE_MENU);
         gtk_widget_set_no_show_all (bar->priv->low_image, TRUE);
-        bar->priv->high_image = gtk_image_new_from_icon_name ("audio-volume-high-symbolic",
+        bar->priv->high_image = gtk_image_new_from_icon_name ("cin-audio-volume-high-symbolic",
                                                               GTK_ICON_SIZE_MENU);
         gtk_widget_set_no_show_all (bar->priv->high_image, TRUE);
 
