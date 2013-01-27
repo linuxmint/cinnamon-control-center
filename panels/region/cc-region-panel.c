@@ -21,6 +21,7 @@
 
 #include "cc-region-panel.h"
 #include <gtk/gtk.h>
+#include <glib/gi18n.h>
 
 #include "cinnamon-region-panel-xkb.h"
 #include "cinnamon-region-panel-lang.h"
@@ -46,6 +47,14 @@ enum {
 	LAYOUTS_PAGE,
 	SYSTEM_PAGE
 };
+
+
+static gboolean
+languages_link_cb (GtkButton *button, gpointer user_data)
+{
+    g_spawn_command_line_async ("gnome-language-selector", NULL);
+    return TRUE;
+}
 
 static void
 cc_region_panel_set_page (CcRegionPanel *panel,
@@ -166,6 +175,17 @@ cc_region_panel_init (CcRegionPanel * self)
 		setup_formats (priv->builder);
 		setup_system (priv->builder);
 	}
+
+        /* set screen link */
+
+    GtkWidget *widget = GTK_WIDGET (gtk_builder_get_object (self->priv->builder,
+                                                            "get_languages_button"));
+
+    gtk_button_set_label (GTK_BUTTON (widget), _("Get more languages..."));
+
+    g_signal_connect (widget, "clicked",
+                      G_CALLBACK (languages_link_cb),
+                      self);
 }
 
 void

@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Brightness & Lock
 _Comment=Screen brightness and lock settings
-Exec=cinnamon-control-center screen
+Exec=cinnamon-control-center cinnamon-screen
 Icon=system-lock-screen
 Terminal=false
 Type=Application

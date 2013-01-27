@@ -995,11 +995,15 @@ activate_link_cb (GtkLabel *label, gchar *uri, CcPowerPanel *self)
   GError *error = NULL;
 
   shell = cc_panel_get_shell (CC_PANEL (self));
-  if (cc_shell_set_active_panel_from_id (shell, uri, NULL, &error) == FALSE)
-    {
-      g_warning ("Failed to activate %s panel: %s", uri, error->message);
-      g_error_free (error);
-    }
+  if (shell != NULL) {
+      if (cc_shell_set_active_panel_from_id (shell, uri, NULL, &error) == FALSE)
+        {
+          g_warning ("Failed to activate %s panel: %s", uri, error->message);
+          g_error_free (error);
+        }
+  } else {
+    g_spawn_command_line_async ("cinnamon-settings cinnamon-screen", NULL);
+  }
   return TRUE;
 }
 
@@ -1088,7 +1092,7 @@ cc_power_panel_init (CcPowerPanel *self)
                                                "label_screen_settings"));
   /* TRANSLATORS: this is a link to the "Brightness and Lock" control center panel */
   text = g_strdup_printf ("<span size=\"small\">%s</span>",
-                          _("Tip: <a href=\"screen\">screen brightness</a> affects how much power is used"));
+                          _("Tip: <a href=\"cinnamon-screen\">screen brightness</a> affects how much power is used"));
   gtk_label_set_markup (GTK_LABEL (widget), text);
   g_free (text);
 
