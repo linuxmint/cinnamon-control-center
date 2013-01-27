@@ -422,7 +422,7 @@ create_monitor_stream_for_source (GvcMixerDialog *dialog,
         snprintf (t, sizeof (t), "%u", gvc_mixer_stream_get_index (stream));
 
         proplist = pa_proplist_new ();
-        pa_proplist_sets (proplist, PA_PROP_APPLICATION_ID, "org.cinnamon.VolumeControl");
+        pa_proplist_sets (proplist, PA_PROP_APPLICATION_ID, "org.gnome.VolumeControl");
         s = pa_stream_new_with_proplist (context, _("Peak detect"), &ss, NULL, proplist);
         pa_proplist_free (proplist);
         if (s == NULL) {
@@ -1056,7 +1056,7 @@ on_control_stream_added (GvcMixerControl *control,
             (GVC_IS_MIXER_SOURCE (stream) == FALSE &&
              GVC_IS_MIXER_SINK (stream) == FALSE &&
              gvc_mixer_stream_is_virtual (stream) == FALSE &&
-             g_strcmp0 (app_id, "org.cinnamon.VolumeControl") != 0 &&
+             g_strcmp0 (app_id, "org.gnome.VolumeControl") != 0 &&
              g_strcmp0 (app_id, "org.PulseAudio.pavucontrol") != 0)) {
                 GtkWidget      *bar;
 

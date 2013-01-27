@@ -100,7 +100,7 @@ maybe_show_status_icons (GvcApplet *applet)
                                 break;
                         }
 
-                        if (!g_str_equal (id, "org.cinnamon.VolumeControl") &&
+                        if (!g_str_equal (id, "org.gnome.VolumeControl") &&
                             !g_str_equal (id, "org.PulseAudio.pavucontrol")) {
                                 show = TRUE;
                                 break;

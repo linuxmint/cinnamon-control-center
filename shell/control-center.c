@@ -254,7 +254,7 @@ main (int argc, char **argv)
   shell = cinnamon_control_center_new ();
 
   /* enforce single instance of this application */
-  application = gtk_application_new ("org.gnome.ControlCenter", G_APPLICATION_HANDLES_COMMAND_LINE);
+  application = gtk_application_new ("org.cinnamon.ControlCenter", G_APPLICATION_HANDLES_COMMAND_LINE);
   g_signal_connect (application, "startup",
                     G_CALLBACK (application_startup_cb), shell);
   g_signal_connect (application, "command-line",

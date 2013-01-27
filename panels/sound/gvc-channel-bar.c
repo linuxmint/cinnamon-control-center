@@ -409,7 +409,7 @@ on_scale_button_release_event (GtkWidget      *widget,
         ca_gtk_play_for_widget (GTK_WIDGET (bar), 0,
                                 CA_PROP_EVENT_ID, "audio-volume-change",
                                 CA_PROP_EVENT_DESCRIPTION, "foobar event happened",
-                                CA_PROP_APPLICATION_ID, "org.cinnamon.VolumeControl",
+                                CA_PROP_APPLICATION_ID, "org.gnome.VolumeControl",
                                 NULL);
 
         return FALSE;
@@ -840,14 +840,14 @@ gvc_channel_bar_class_init (GvcChannelBarClass *klass)
                                          g_param_spec_string ("low-icon-name",
                                                               "Icon Name",
                                                               "Name of icon to display for this stream",
-                                                              "cin-audio-volume-low-symbolic",
+                                                              "audio-volume-low-symbolic",
                                                               G_PARAM_READWRITE|G_PARAM_CONSTRUCT));
         g_object_class_install_property (object_class,
                                          PROP_HIGH_ICON_NAME,
                                          g_param_spec_string ("high-icon-name",
                                                               "Icon Name",
                                                               "Name of icon to display for this stream",
-                                                              "cin-audio-volume-high-symbolic",
+                                                              "audio-volume-high-symbolic",
                                                               G_PARAM_READWRITE|G_PARAM_CONSTRUCT));
         g_object_class_install_property (object_class,
                                          PROP_IS_AMPLIFIED,

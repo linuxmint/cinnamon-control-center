@@ -2915,7 +2915,7 @@ gvc_mixer_new_pa_context (GvcMixerControl *self)
                           self->priv->name);
         pa_proplist_sets (proplist,
                           PA_PROP_APPLICATION_ID,
-                          "org.cinnamon.VolumeControl");
+                          "org.gnome.VolumeControl");
         pa_proplist_sets (proplist,
                           PA_PROP_APPLICATION_ICON_NAME,
                           "cin-multimedia-volume-control");

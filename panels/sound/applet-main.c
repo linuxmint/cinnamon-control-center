@@ -34,7 +34,7 @@
 #include "gvc-applet.h"
 #include "gvc-log.h"
 
-#define GVCA_DBUS_NAME "org.cinnamon.VolumeControlApplet"
+#define GVCA_DBUS_NAME "org.gnome.VolumeControlApplet"
 
 static gboolean show_version = FALSE;
 static gboolean debug = FALSE;
