@@ -2594,7 +2594,7 @@ static void
 widget_visible_changed (GtkWidget *widget,
                         gpointer user_data)
 {
-    if (self->priv->labeler == NULL)
+    if (CC_DISPLAY_PANEL(widget)->priv->labeler == NULL)
         return;
     if (gtk_widget_get_visible (widget)) {
         gnome_rr_labeler_show (CC_DISPLAY_PANEL (widget)->priv->labeler);

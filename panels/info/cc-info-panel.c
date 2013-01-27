@@ -1716,7 +1716,6 @@ static void
 info_panel_setup_overview (CcInfoPanel  *self)
 {
   GtkWidget  *widget;
-  gboolean    res;
   glibtop_mem mem;
   const glibtop_sysinfo *info;
   char       *text;
@@ -1726,18 +1725,12 @@ info_panel_setup_overview (CcInfoPanel  *self)
   /* Is hostnamed installed? */
     info_panel_setup_hostname (self, permission);
 
-  res = load_gnome_version (&self->priv->gnome_version,
-                            &self->priv->gnome_distributor,
-                            &self->priv->gnome_date);
-  if (res)
-    {
-      widget = WID ("version_label");
-      text = g_strdup_printf (_("Version %s"), self->priv->gnome_version);
-      gtk_label_set_text (GTK_LABEL (widget), text);
-      g_free (text);
-    }
+  widget = WID ("version_label");
+  text = g_strdup_printf (_("Version %s"), g_getenv ("CINNAMON_VERSION"));
+  gtk_label_set_text (GTK_LABEL (widget), text);
+  g_free (text);
 
-  gtk_widget_hide (WID ("version_label"));
+  gtk_widget_show (WID ("version_label"));
 
   glibtop_get_mem (&mem);
   text = g_format_size_full (mem.total, G_FORMAT_SIZE_IEC_UNITS);
