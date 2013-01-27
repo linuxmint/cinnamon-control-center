@@ -11,7 +11,7 @@ SUBDIRS= \
 	datetime \
 	user-accounts  \
 	power \
-	sound \
+	sound 
 
 if BUILD_PRINTERS
 SUBDIRS += printers
