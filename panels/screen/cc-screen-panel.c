@@ -27,6 +27,7 @@ CC_PANEL_REGISTER (CcScreenPanel, cc_screen_panel)
   (G_TYPE_INSTANCE_GET_PRIVATE ((o), CC_TYPE_SCREEN_PANEL, CcScreenPanelPrivate))
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->priv->builder, s))
+#define LS(s) GTK_LIST_STORE (gtk_builder_get_object (self->priv->builder, s))
 
 struct _CcScreenPanelPrivate
 {
@@ -515,6 +516,8 @@ cc_screen_panel_init (CcScreenPanel *self)
 
   /* display off time */
   widget = WID ("screen_brightness_combobox");
+  GtkListStore *store = LS ("screen_brightness_liststore");
+  gtk_combo_box_set_model (GTK_COMBO_BOX (widget), store);
   set_dpms_value_for_combo (GTK_COMBO_BOX (widget), self);
   g_signal_connect (widget, "changed",
                     G_CALLBACK (dpms_combo_changed_cb),
@@ -529,6 +532,8 @@ cc_screen_panel_init (CcScreenPanel *self)
 
   /* lock time */
   widget = WID ("screen_lock_combobox");
+  store = LS ("lock_liststore");
+  gtk_combo_box_set_model (GTK_COMBO_BOX (widget), store);
   set_lock_value_for_combo (GTK_COMBO_BOX (widget), self);
   g_signal_connect (widget, "changed",
                     G_CALLBACK (lock_combo_changed_cb),
