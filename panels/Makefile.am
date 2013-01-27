@@ -9,7 +9,9 @@ SUBDIRS= \
 	keyboard \
 	universal-access \
 	datetime \
-	user-accounts
+	user-accounts  \
+	power \
+	sound \
 
 if BUILD_PRINTERS
 SUBDIRS += printers
