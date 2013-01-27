@@ -545,13 +545,6 @@ cc_screen_panel_init (CcScreenPanel *self)
                    widget, "sensitive",
                    G_SETTINGS_BIND_GET);
 
-  widget = WID ("show_notifications_check");
-  g_settings_bind (self->priv->lock_settings,
-                   "show-notifications",
-                   widget, "active",
-                   G_SETTINGS_BIND_DEFAULT);
-  gtk_widget_hide (widget);
-
   update_lock_screen_sensitivity (self);
 
   /* bind the screen lock suspend checkbutton */
