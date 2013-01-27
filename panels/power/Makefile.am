@@ -1,4 +1,4 @@
-cappletname = power
+cappletname = cinnamon-power
 
 SUBDIRS = icons
 

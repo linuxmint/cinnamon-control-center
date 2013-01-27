@@ -145,6 +145,9 @@ PKG_CHECK_MODULES(USER_ACCOUNTS_PANEL, $COMMON_MODULES
                   pwquality
                   $SYSTEMD)
 
+PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
+                  gnome-settings-daemon >= 3.4.2)
+
 GDESKTOP_PREFIX=`$PKG_CONFIG --variable prefix gsettings-desktop-schemas`
 AC_SUBST(GDESKTOP_PREFIX)
 
@@ -444,6 +447,15 @@ panels/sound/data/icons/scalable/Makefile
 panels/sound/data/icons/scalable/apps/Makefile
 panels/sound/data/icons/scalable/devices/Makefile
 panels/sound/data/sounds/Makefile
+panels/power/Makefile
+panels/power/cinnamon-power-panel.desktop.in
+panels/power/icons/Makefile
+panels/power/icons/16x16/Makefile
+panels/power/icons/22x22/Makefile
+panels/power/icons/24x24/Makefile
+panels/power/icons/32x32/Makefile
+panels/power/icons/48x48/Makefile
+panels/power/icons/256x256/Makefile
 po/Makefile.in
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
