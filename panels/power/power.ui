@@ -416,25 +416,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="label_screen_settings">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_left">53</property>
-            <property name="margin_right">40</property>
-            <property name="xalign">0</property>
-            <property name="yalign">0.49000000953674316</property>
-            <property name="ypad">4</property>
-            <property name="label">Tip: &lt;a href="moo"&gt;Screen Settings&lt;/a&gt; affect how much power is used</property>
-            <property name="use_markup">True</property>
-            <property name="track_visited_links">False</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkBox" id="box_secondary">
             <property name="visible">True</property>
             <property name="can_focus">False</property>

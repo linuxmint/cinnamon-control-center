@@ -988,25 +988,6 @@ out:
   gtk_widget_set_visible (WID (priv->builder, "combobox_critical"), has_batteries);
 }
 
-static gboolean
-activate_link_cb (GtkLabel *label, gchar *uri, CcPowerPanel *self)
-{
-  CcShell *shell;
-  GError *error = NULL;
-
-  shell = cc_panel_get_shell (CC_PANEL (self));
-  if (shell != NULL) {
-      if (cc_shell_set_active_panel_from_id (shell, uri, NULL, &error) == FALSE)
-        {
-          g_warning ("Failed to activate %s panel: %s", uri, error->message);
-          g_error_free (error);
-        }
-  } else {
-    g_spawn_command_line_async ("cinnamon-settings cinnamon-screen", NULL);
-  }
-  return TRUE;
-}
-
 static void
 cc_power_panel_init (CcPowerPanel *self)
 {
@@ -1085,19 +1066,6 @@ cc_power_panel_init (CcPowerPanel *self)
   g_object_set_data (G_OBJECT(widget), "_gsettings_key", "critical-battery-action");
   g_signal_connect (widget, "changed",
                     G_CALLBACK (combo_enum_changed_cb),
-                    self);
-
-  /* set screen link */
-  widget = GTK_WIDGET (gtk_builder_get_object (self->priv->builder,
-                                               "label_screen_settings"));
-  /* TRANSLATORS: this is a link to the "Brightness and Lock" control center panel */
-  text = g_strdup_printf ("<span size=\"small\">%s</span>",
-                          _("Tip: <a href=\"cinnamon-screen\">screen brightness</a> affects how much power is used"));
-  gtk_label_set_markup (GTK_LABEL (widget), text);
-  g_free (text);
-
-  g_signal_connect (widget, "activate-link",
-                    G_CALLBACK (activate_link_cb),
                     self);
 
   value = g_settings_get_enum (self->priv->gsd_settings, "lid-close-ac-action");
