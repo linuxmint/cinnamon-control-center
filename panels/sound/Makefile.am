@@ -1,7 +1,7 @@
 SUBDIRS = data
 
 # This is used in PANEL_CFLAGS
-cappletname = cinnamon-sound
+cappletname = sound
 NULL =
 
 ccpanelsdir = $(PANELS_DIR)

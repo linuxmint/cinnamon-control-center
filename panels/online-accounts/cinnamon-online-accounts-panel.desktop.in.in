@@ -8,6 +8,6 @@ Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings;
 OnlyShowIn=GNOME;
-X-Cinnamon-Settings-Panel=cinnamon-online-accounts
+X-Cinnamon-Settings-Panel=online-accounts
 # Translators: those are keywords for the online-accounts control-center panel
 _Keywords=Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;

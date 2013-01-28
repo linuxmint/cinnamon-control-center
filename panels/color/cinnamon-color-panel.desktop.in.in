@@ -6,8 +6,8 @@ Icon=preferences-color
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings
-OnlyShowIn=GNOME;Unity;
-X-Cinnamon-Settings-Panel=cinnamon-color
+Categories=GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings
+OnlyShowIn=GNOME;
+X-Cinnamon-Settings-Panel=color
 # Translators: those are keywords for the color control-center panel
 _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;

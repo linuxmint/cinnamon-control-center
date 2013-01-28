@@ -1414,5 +1414,5 @@ um_user_panel_register (GIOModule *module)
 {
         um_user_panel_register_type (G_TYPE_MODULE (module));
         g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
-                                        UM_TYPE_USER_PANEL, "cinnamon-user-accounts", 0);
+                                        UM_TYPE_USER_PANEL, "user-accounts", 0);
 }

@@ -1,13 +1,14 @@
 [Desktop Entry]
 _Name=Sound
 _Comment=Change sound volume and sound events
-Exec=cinnamon-control-center cinnamon-sound
+Exec=cinnamon-control-center sound
 Icon=multimedia-volume-control
 Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=GNOME;
-X-Cinnamon-Settings-Panel=cinnamon-sound
+NoDisplay=true
+X-Cinnamon-Settings-Panel=sound
 # Translators: those are keywords for the sound control-center panel
 _Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;

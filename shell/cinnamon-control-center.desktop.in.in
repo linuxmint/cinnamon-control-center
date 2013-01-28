@@ -1,14 +1,11 @@
 [Desktop Entry]
-_Name=System Settings
+_Name=Cinnamon Control Center
 Icon=preferences-system
 Exec=cinnamon-control-center --overview
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;System;
-OnlyShowIn=GNOME;Unity;
-X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=cinnamon-control-center
-X-GNOME-Bugzilla-Component=shell
-X-GNOME-Bugzilla-Version=@VERSION@
+Categories=GTK;System;
+OnlyShowIn=GNOME;
+NoDisplay=true
 _Keywords=Preferences;Settings;

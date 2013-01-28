@@ -1,5 +1,5 @@
 # This is used in PANEL_CFLAGS
-cappletname = cinnamon-region
+cappletname = region
 
 INCLUDES =						\
 	$(PANEL_CFLAGS)					\

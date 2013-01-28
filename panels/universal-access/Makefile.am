@@ -1,4 +1,4 @@
-cappletname = cinnamon-universal-access
+cappletname = universal-access
 
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\

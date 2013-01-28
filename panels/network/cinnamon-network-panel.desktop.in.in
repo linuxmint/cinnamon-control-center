@@ -7,7 +7,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;Unity;
-X-Cinnamon-Settings-Panel=cinnamon-network
+OnlyShowIn=GNOME;
+X-Cinnamon-Settings-Panel=network
 # Translators: those are keywords for the network control-center panel
 _Keywords=Network;Wireless;IP;LAN;Proxy;

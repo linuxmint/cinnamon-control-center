@@ -905,7 +905,7 @@ cc_bluetooth_panel_register (GIOModule *module)
 	cc_bluetooth_panel_register_type (G_TYPE_MODULE (module));
 	g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
 					CC_TYPE_BLUETOOTH_PANEL,
-					"cinnamon-bluetooth", 0);
+					"bluetooth", 0);
 }
 
 /* GIO extension stuff */

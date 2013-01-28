@@ -1236,5 +1236,5 @@ cc_network_panel_register (GIOModule *module)
         cc_network_panel_register_type (G_TYPE_MODULE (module));
         g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
                                         CC_TYPE_NETWORK_PANEL,
-                                        "cinnamon-network", 0);
+                                        "network", 0);
 }

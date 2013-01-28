@@ -1,5 +1,5 @@
 # This is used in PANEL_CFLAGS
-cappletname = cinnamon-keyboard
+cappletname = keyboard
 
 ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libkeyboard.la

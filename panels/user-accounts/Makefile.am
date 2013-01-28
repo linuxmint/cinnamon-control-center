@@ -1,7 +1,7 @@
 SUBDIRS = data
 
 # This is used in PANEL_CFLAGS
-cappletname = cinnamon-user-accounts
+cappletname = user-accounts
 NULL =
 
 ccpanelsdir = $(PANELS_DIR)

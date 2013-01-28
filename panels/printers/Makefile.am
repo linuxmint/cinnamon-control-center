@@ -1,4 +1,4 @@
-cappletname = cinnamon-printers
+cappletname = printers
 
 uidir = $(pkgdatadir)/ui/printers
 dist_ui_DATA = \

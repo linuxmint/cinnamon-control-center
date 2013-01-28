@@ -1,13 +1,13 @@
 [Desktop Entry]
 _Name=Brightness & Lock
 _Comment=Screen brightness and lock settings
-Exec=cinnamon-control-center cinnamon-screen
+Exec=cinnamon-control-center screen
 Icon=system-lock-screen
 Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=GNOME;Unity;
-X-Cinnamon-Settings-Panel=cinnamon-screen
+OnlyShowIn=GNOME;
+X-Cinnamon-Settings-Panel=screen
 # Translators: those are keywords for the brightness and lock control-center panel
 _Keywords=Brightness;Lock;Dim;Blank;Monitor;

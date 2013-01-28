@@ -1,4 +1,4 @@
-cappletname = cinnamon-screen
+cappletname = screen
 
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
