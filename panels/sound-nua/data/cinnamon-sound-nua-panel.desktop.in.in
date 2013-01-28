@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=sound-nua
 # Translators: those are keywords for the sound control-center panel
 _Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
+NoDisplay=true

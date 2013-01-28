@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=printers
 # Translators: those are keywords for the printing control-center panel
 _Keywords=Printer;Queue;Print;Paper;Ink;Toner;
+NoDisplay=true

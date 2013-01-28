@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=keyboard
 # Translators: those are keywords for the keyboard control-center panel
 _Keywords=Shortcut;Repeat;Blink;
+NoDisplay=true

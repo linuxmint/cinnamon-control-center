@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=datetime
 # Translators: those are keywords for the date and time control-center panel
 _Keywords=Clock;Timezone;Location;
+NoDisplay=true

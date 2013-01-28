@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;
+NoDisplay=true

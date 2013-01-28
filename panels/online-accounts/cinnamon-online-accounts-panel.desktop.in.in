@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=online-accounts
 # Translators: those are keywords for the online-accounts control-center panel
 _Keywords=Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;
+NoDisplay=true

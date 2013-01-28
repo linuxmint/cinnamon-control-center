@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=power
 # Translators: those are keywords for the power control-center panel
 _Keywords=Power;Sleep;Suspend;Hibernate;Battery;
+NoDisplay=true

@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=screen
 # Translators: those are keywords for the brightness and lock control-center panel
 _Keywords=Brightness;Lock;Dim;Blank;Monitor;
+NoDisplay=true

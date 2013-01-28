@@ -9,3 +9,4 @@ Categories=GTK;Settings;X-Cinnamon-NetworkSettings;HardwareSettings;X-Cinnamon-S
 OnlyShowIn=GNOME;
 StartupNotify=true
 X-Cinnamon-Settings-Panel=bluetooth
+NoDisplay=true

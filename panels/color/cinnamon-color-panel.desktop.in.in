@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=color
 # Translators: those are keywords for the color control-center panel
 _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
+NoDisplay=true

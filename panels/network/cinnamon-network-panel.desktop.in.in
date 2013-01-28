@@ -11,3 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=network
 # Translators: those are keywords for the network control-center panel
 _Keywords=Network;Wireless;IP;LAN;Proxy;
+NoDisplay=true
