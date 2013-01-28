@@ -1277,6 +1277,11 @@ setup_main_window (UmUserPanelPrivate *d)
                 g_error_free (error);
         }
 
+        button = gtk_lock_button_new (d->permission);
+        GtkWidget *box = get_widget (d, "accounts-vbox");
+        gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 2);
+        gtk_widget_show (GTK_WIDGET (button));
+
         button = get_widget (d, "add-user-toolbutton");
         names[0] = "changes-allow-symbolic";
         names[1] = "changes-allow";
