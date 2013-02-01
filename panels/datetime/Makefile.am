@@ -110,7 +110,7 @@ dist_tzdata_DATA = backward
 AM_CPPFLAGS =						\
 	$(PANEL_CFLAGS)					\
 	$(DATETIME_PANEL_CFLAGS)			\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DDATADIR="\"$(uidir)\""			\
 	$(NULL)

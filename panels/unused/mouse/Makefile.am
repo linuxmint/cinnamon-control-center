@@ -4,7 +4,7 @@ cappletname = mouse
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(MOUSE_PANEL_CFLAGS)				\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	$(NULL)

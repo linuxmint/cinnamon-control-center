@@ -768,7 +768,7 @@ fingerprint_button_clicked (GtkWindow *parent,
                             GtkWidget *label2,
                             UmUser    *user)
 {
-        bindtextdomain ("fprintd", GNOMELOCALEDIR);
+        bindtextdomain ("fprintd", CINNAMONLOCALEDIR);
         bind_textdomain_codeset ("fprintd", "UTF-8");
 
         if (is_disable != FALSE) {

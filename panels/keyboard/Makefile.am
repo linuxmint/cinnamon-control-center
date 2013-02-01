@@ -40,7 +40,7 @@ pkgconfigdir = $(datadir)/pkgconfig
 pkgconfig_DATA = cinnamon-keybindings.pc
 
 INCLUDES = \
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\"" \
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\"" \
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\"" \
 	-DCINNAMONCC_KEYBINDINGS_DIR="\"$(pkgdatadir)/keybindings\""

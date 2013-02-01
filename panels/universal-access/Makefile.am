@@ -4,7 +4,7 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(UNIVERSAL_ACCESS_PANEL_CFLAGS)		\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-I$(top_srcdir)/panels/common/			\
 	$(NULL)

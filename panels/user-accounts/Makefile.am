@@ -11,7 +11,7 @@ AM_CPPFLAGS =						\
 	-DDATADIR=\""$(datadir)"\"			\
 	-DUIDIR=\""$(pkgdatadir)/ui/user-accounts"\"	\
 	-DLIBLOCALEDIR=\""$(prefix)/lib/locale"\"       \
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+	-DCINNAMONLOCALEDIR=\""$(datadir)/locale"\"        \
 	-DUM_PIXMAP_DIR=\""$(pkgdatadir)/pixmaps"\"	\
 	-DHAVE_LIBPWQUALITY				\
 	-I$(srcdir)/../common/				\

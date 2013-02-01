@@ -7,7 +7,7 @@ ccpanels_LTLIBRARIES = libbluetooth.la
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(BLUETOOTH_CFLAGS)				\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DPKGDATADIR="\"$(pkgdatadir)\""		\
 	$(NULL)
 

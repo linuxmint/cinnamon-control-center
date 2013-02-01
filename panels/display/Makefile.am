@@ -51,7 +51,7 @@ INCLUDES   = $(PANEL_CFLAGS) \
 	     $(DISPLAY_PANEL_CFLAGS) \
 	     -DSBINDIR="\"$(sbindir)\"" \
 	     -DUIDIR="\"$(uidir)\"" \
-	     -DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
+	     -DCINNAMONLOCALEDIR="\"$(datadir)/locale\"" \
 	     -DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""
 
 CLEANFILES = $(Desktop_in_files) $(desktop_DATA)

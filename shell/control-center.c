@@ -235,7 +235,7 @@ main (int argc, char **argv)
   GtkApplication *application;
   int status;
 
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 

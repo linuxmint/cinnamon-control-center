@@ -71,7 +71,7 @@ pkgconfigdir=$(libdir)/pkgconfig
 pkgconfig_DATA=libcinnamon-control-center.pc
 
 AM_CPPFLAGS =							\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""		\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""		\
 	-DUIDIR="\"$(uidir)\""					\
 	-DMENUDIR="\"$(menudir)\""				\
 	-DPANELS_DIR="\"$(PANELS_DIR)\""

@@ -28,7 +28,7 @@
 void
 g_io_module_load (GIOModule *module)
 {
-        bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+        bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
         /* register the panel */

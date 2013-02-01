@@ -5,7 +5,7 @@ INCLUDES = 						\
 	$(NETWORK_PANEL_CFLAGS)				\
 	$(NETWORK_MANAGER_CFLAGS)			\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	$(NULL)
 

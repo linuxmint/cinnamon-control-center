@@ -331,7 +331,7 @@ gdm_language_has_translations (const char *language_name)
         const char  *name;
         gboolean     has_translations;
 
-        path = g_build_filename (GNOMELOCALEDIR, language_name, "LC_MESSAGES", NULL);
+        path = g_build_filename (CINNAMONLOCALEDIR, language_name, "LC_MESSAGES", NULL);
 
         has_translations = FALSE;
         dir = g_dir_open (path, 0, NULL);

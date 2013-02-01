@@ -4,7 +4,7 @@ cappletname = wacom
 INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(WACOM_PANEL_CFLAGS)				\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
+	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DPIXMAP_DIR=\""$(datadir)/cinnamon-control-center/pixmaps"\"	\

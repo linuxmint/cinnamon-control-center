@@ -10,7 +10,7 @@ AM_CPPFLAGS =						\
 	-DDATADIR=\""$(datadir)"\"			\
 	-DUIDIR=\""$(pkgdatadir)/ui"\"			\
 	-DLIBLOCALEDIR=\""$(prefix)/lib/locale"\"       \
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+	-DCINNAMONLOCALEDIR=\""$(datadir)/locale"\"        \
 	-DUM_PIXMAP_DIR=\""$(pkgdatadir)/pixmaps"\"
 
 liblanguage_la_SOURCES =		\
