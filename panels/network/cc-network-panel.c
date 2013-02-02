@@ -130,11 +130,20 @@ cmdline_operation_from_string (const gchar *string)
 }
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
 reset_command_line_args (CcNetworkPanel *self)
 {
 	self->priv->arg_operation = OPERATION_NULL;
-	g_clear_pointer (&self->priv->arg_device, g_free);
-	g_clear_pointer (&self->priv->arg_access_point, g_free);
+	char_clear_pointer (self->priv->arg_device);
+	char_clear_pointer (self->priv->arg_access_point);
 }
 
 static gboolean
@@ -210,7 +219,10 @@ cc_network_panel_dispose (GObject *object)
         g_clear_object (&priv->remote_settings);
         g_clear_object (&priv->kill_switch_header);
         g_clear_object (&priv->rfkill);
-        g_clear_pointer (&priv->killswitches, g_hash_table_destroy);
+        if (priv->killswitches) {
+            g_hash_table_destroy (priv->killswitches);
+            priv->killswitches = NULL;
+        }
         priv->rfkill_switch = NULL;
 
         if (priv->refresh_idle != 0) {
