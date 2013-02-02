@@ -564,7 +564,7 @@ cc_common_language_get_initial_languages (void)
                 g_free (name);
         }
 
-        gchar  *command[] = { "/usr/share/language-tools/language-options", NULL };
+        gchar  *command[] = { "/usr/share/cinnamon-control-center/language-options", NULL };
         GError *error = NULL;
         gchar  *avail_languages;
 
