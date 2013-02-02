@@ -567,7 +567,7 @@ cc_screen_panel_init (CcScreenPanel *self)
                        widget, "active",
                        G_SETTINGS_BIND_DEFAULT);
   } else {
-    gtk_widget_hide (widget);
+    gtk_widget_destroy (widget);
   }
 
   widget = WID ("screen_vbox");
