@@ -549,10 +549,26 @@ cc_screen_panel_init (CcScreenPanel *self)
 
   /* bind the screen lock suspend checkbutton */
   widget = WID ("screen_lock_suspend_checkbutton");
-  g_settings_bind (self->priv->lock_settings,
-                   "ubuntu-lock-on-suspend",
-                   widget, "active",
-                   G_SETTINGS_BIND_DEFAULT);
+
+  gchar **keys = g_settings_list_keys (self->priv->lock_settings);
+  gboolean has_key = FALSE;
+  int i;
+  for (i = 0; i < g_strv_length(keys); i++) {
+    if (g_strcmp0(keys[i], "ubuntu-lock-on-suspend") == 0) {
+        has_key = TRUE;
+        break;
+    }
+  }
+  g_strfreev (keys);
+
+  if (has_key) {
+      g_settings_bind (self->priv->lock_settings,
+                       "ubuntu-lock-on-suspend",
+                       widget, "active",
+                       G_SETTINGS_BIND_DEFAULT);
+  } else {
+    gtk_widget_hide (widget);
+  }
 
   widget = WID ("screen_vbox");
   gtk_widget_reparent (widget, (GtkWidget *) self);
