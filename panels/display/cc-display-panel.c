@@ -669,7 +669,7 @@ static void
 rebuild_current_monitor_label (CcDisplayPanel *self)
 {
   char *str, *tmp;
-  GdkRGBA color;
+  GdkColor color;
   gboolean use_color;
 
   if (self->priv->current_output)
@@ -680,7 +680,7 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
         tmp = g_strdup (gnome_rr_output_info_get_display_name (self->priv->current_output));
 
       str = g_strdup_printf ("<b>%s</b>", tmp);
-      gnome_rr_labeler_get_rgba_for_output (self->priv->labeler, self->priv->current_output, &color);
+      gnome_rr_labeler_get_color_for_output (self->priv->labeler, self->priv->current_output, &color);
       use_color = TRUE;
       g_free (tmp);
     }
@@ -696,10 +696,16 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
   if (use_color)
     {
       GdkRGBA black = { 0, 0, 0, 1.0 };
+      GdkRGBA light;
+
+      light.red = color.red / 65535.0;
+      light.green = color.green / 65535.0;
+      light.blue = color.blue / 65535.0;
+      light.alpha = 1.0;
 
       gtk_widget_override_background_color (self->priv->current_monitor_event_box,
                                             gtk_widget_get_state_flags (self->priv->current_monitor_event_box),
-                                            &color);
+                                            &light);
 
       /* Make the label explicitly black.  We don't want it to follow the
        * theme's colors, since the label is always shown against a light
@@ -2012,7 +2018,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   PangoLayout *layout = get_display_name (self, output);
   PangoRectangle ink_extent, log_extent;
   GdkRectangle viewport;
-  GdkRGBA output_color;
+  GdkColor output_color;
   double r, g, b;
   double available_w;
   double factor;
@@ -2077,10 +2083,10 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_rectangle (cr, x, y, w * scale + 0.5, h * scale + 0.5);
   cairo_clip_preserve (cr);
 
-  gnome_rr_labeler_get_rgba_for_output (self->priv->labeler, output, &output_color);
-  r = output_color.red;
-  g = output_color.green;
-  b = output_color.blue;
+  gnome_rr_labeler_get_color_for_output (self->priv->labeler, output, &output_color);
+  r = output_color.red / 65535.0;
+  g = output_color.green / 65535.0;
+  b = output_color.blue / 65535.0;
 
   if (!gnome_rr_output_info_is_active (output))
     {
@@ -2685,13 +2691,13 @@ unity_launcher_on_all_monitors (GSettings *settings)
 static GdkPixbuf*
 get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
 {
-  GdkRGBA color;
+  GdkColor color;
   cairo_surface_t *cairo_surface;
   cairo_t *cr;
   int monitor_width = 30;
   int monitor_height = 15;
 
-  gnome_rr_labeler_get_rgba_for_output (self->priv->labeler, output, &color);
+  gnome_rr_labeler_get_color_for_output (self->priv->labeler, output, &color);
 
   cairo_surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24, monitor_width, monitor_height);
   cr = cairo_create (cairo_surface);
@@ -2700,7 +2706,7 @@ get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
   cairo_paint (cr);
 
   cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-  cairo_set_source_rgb (cr, color.red, color.green, color.blue);
+  cairo_set_source_rgb (cr, color.red / 65535.0, color.green / 65535.0, color.blue / 65535.0);
   cairo_rectangle (cr, 0.5, 0.5, monitor_width - 1, monitor_height - 1);
   cairo_fill (cr);
 
