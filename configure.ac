@@ -447,6 +447,7 @@ panels/power/icons/32x32/Makefile
 panels/power/icons/48x48/Makefile
 panels/power/icons/256x256/Makefile
 po/Makefile.in
+files/Makefile
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
 ])
