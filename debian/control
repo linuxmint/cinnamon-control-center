@@ -104,13 +104,6 @@ Description: utilities to configure the Cinnamon desktop
  and mouse properties, sound setup, desktop theme and background, user
  interface properties, screen resolution, and other Cinnamon parameters.
 
-Package: cinnamon-control-center-dev
-Architecture: all
-Section: devel
-Depends: ${misc:Depends}
-Description: utilities to configure the Cinnamon desktop
- This package contains the file required to get the keydirs location
-
 Package: cinnamon-control-center-data
 Architecture: all
 Section: gnome
