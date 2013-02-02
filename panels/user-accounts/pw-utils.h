@@ -28,4 +28,4 @@ gdouble  pw_strength   (const gchar  *password,
                         const gchar  *username,
                         const gchar **hint,
                         const gchar **long_hints,
-                        gint         *strength_level);
+                        gdouble      *strength_level);

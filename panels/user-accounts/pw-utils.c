@@ -80,7 +80,7 @@ pw_strength (const gchar  *password,
              const gchar  *username,
              const gchar **hint,
              const gchar **long_hint,
-             gint         *strength_level)
+             gdouble      *strength_level)
 {
         gint rv, level = 0;
         gdouble strength = 0.0;
@@ -104,16 +104,16 @@ pw_strength (const gchar  *password,
         strength = CLAMP (0.01 * rv, 0.0, 1.0);
 
         if (strength < 0.50) {
-                level = 1;
+                level = .25;
                 *hint = C_("Password strength", "Weak");
         } else if (strength < 0.75) {
-                level = 2;
+                level = .5;
                 *hint = C_("Password strength", "Fair");
         } else if (strength < 0.90) {
-                level = 3;
+                level = .75;
                 *hint = C_("Password strength", "Good");
         } else {
-                level = 4;
+                level = 1.0;
                 *hint = C_("Password strength", "Strong");
         }
 
