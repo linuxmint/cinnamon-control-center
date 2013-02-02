@@ -298,7 +298,11 @@ shell_show_overview_page (CinnamonControlCenter *center)
     notebook_remove_page (priv->notebook, priv->current_panel_box);
   priv->current_panel = NULL;
   priv->current_panel_box = NULL;
-  g_clear_pointer (&priv->current_panel_id, g_free);
+
+  if (priv->current_panel_id) {
+    g_free (priv->current_panel_id);
+    priv->current_panel_id = NULL;
+  }
 
   /* clear the search text */
   g_free (priv->filter_string);
@@ -998,7 +1002,10 @@ _shell_set_active_panel_from_id (CcShell      *shell,
       return TRUE;
     }
 
-  g_clear_pointer (&priv->current_panel_id, g_free);
+  if (priv->current_panel_id) {
+    g_free (priv->current_panel_id);
+    priv->current_panel_id = NULL;
+  }
 
   if (!g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") && 
       !g_strcmp0(start_id, "sound"))
