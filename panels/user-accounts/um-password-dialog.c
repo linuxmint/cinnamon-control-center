@@ -316,7 +316,7 @@ update_password_strength (UmPasswordDialog *um)
         const gchar *password;
         const gchar *old_password;
         const gchar *username;
-        gint strength_level;
+        gdouble strength_level;
         const gchar *hint;
         const gchar *long_hint;
 
@@ -324,9 +324,8 @@ update_password_strength (UmPasswordDialog *um)
         old_password = gtk_entry_get_text (GTK_ENTRY (um->old_password_entry));
         username = um_user_get_user_name (um->user);
 
-        pw_strength (password, old_password, username,
-                     &hint, &long_hint, &strength_level);
-
+        strength_level = pw_strength (password, old_password, username,
+                     &hint, &long_hint);
         gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (um->strength_indicator), strength_level);
         gtk_label_set_label (GTK_LABEL (um->strength_indicator_label), hint);
         gtk_widget_set_tooltip_text (um->strength_indicator, long_hint);
