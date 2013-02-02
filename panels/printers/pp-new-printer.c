@@ -84,6 +84,15 @@ enum {
 };
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
 pp_new_printer_finalize (GObject *object)
 {
   PpNewPrinterPrivate *priv;
@@ -93,16 +102,16 @@ pp_new_printer_finalize (GObject *object)
   if (priv->unlink_ppd_file && priv->ppd_file_name)
     g_unlink (priv->ppd_file_name);
 
-  g_clear_pointer (&priv->name, g_free);
-  g_clear_pointer (&priv->original_name, g_free);
-  g_clear_pointer (&priv->device_uri, g_free);
-  g_clear_pointer (&priv->device_id, g_free);
-  g_clear_pointer (&priv->ppd_name, g_free);
-  g_clear_pointer (&priv->ppd_file_name, g_free);
-  g_clear_pointer (&priv->info, g_free);
-  g_clear_pointer (&priv->location, g_free);
-  g_clear_pointer (&priv->make_and_model, g_free);
-  g_clear_pointer (&priv->host_name, g_free);
+  char_clear_pointer (priv->name);
+  char_clear_pointer (priv->original_name);
+  char_clear_pointer (priv->device_uri);
+  char_clear_pointer (priv->device_id);
+  char_clear_pointer (priv->ppd_name);
+  char_clear_pointer (priv->ppd_file_name);
+  char_clear_pointer (priv->info);
+  char_clear_pointer (priv->location);
+  char_clear_pointer (priv->make_and_model);
+  char_clear_pointer (priv->host_name);
 
   if (priv->res)
     g_object_unref (priv->res);
@@ -922,7 +931,7 @@ install_missing_executables_cb (IMEData *data)
   if (data->ppd_file_name)
     {
       g_unlink (data->ppd_file_name);
-      g_clear_pointer (&data->ppd_file_name, g_free);
+      char_clear_pointer (data->ppd_file_name);
     }
 
   if (data->executables)
@@ -1164,7 +1173,7 @@ DBus method \"MissingExecutables\" to find missing executables and filters.");
   if (data->ppd_file_name)
     {
       g_unlink (data->ppd_file_name);
-      g_clear_pointer (&data->ppd_file_name, g_free);
+      char_clear_pointer (data->ppd_file_name);
     }
 }
 
