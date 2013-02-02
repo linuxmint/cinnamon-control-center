@@ -97,7 +97,6 @@ LIBNOTIFY_REQUIRED_VERSION=0.7.3
 GNOME_DESKTOP_REQUIRED_VERSION=3.4.2
 SCHEMAS_REQUIRED_VERSION=3.4.2
 CLUTTER_REQUIRED_VERSION=1.11.3
-GOA_REQUIRED_VERSION=3.4.2
 GSD_REQUIRED_VERSION=3.4.2
 
 COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
@@ -125,7 +124,6 @@ PKG_CHECK_MODULES(KEYBOARD_PANEL, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
-PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0 goa-backend-1.0 >= $GOA_REQUIRED_VERSION)
 PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
                   gnome-settings-daemon >= $GSD_REQUIRED_VERSION)
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.8)
@@ -385,15 +383,6 @@ panels/keyboard/cinnamon-keybindings.pc
 panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
 panels/region/ubuntu-region-panel.desktop.in
-panels/online-accounts/Makefile
-panels/online-accounts/cinnamon-online-accounts-panel.desktop.in
-panels/online-accounts/icons/Makefile
-panels/online-accounts/icons/16x16/Makefile
-panels/online-accounts/icons/22x22/Makefile
-panels/online-accounts/icons/24x24/Makefile
-panels/online-accounts/icons/32x32/Makefile
-panels/online-accounts/icons/48x48/Makefile
-panels/online-accounts/icons/256x256/Makefile
 panels/screen/Makefile
 panels/screen/cinnamon-screen-panel.desktop.in
 panels/info/Makefile

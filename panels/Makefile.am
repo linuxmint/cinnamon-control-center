@@ -3,7 +3,6 @@ SUBDIRS= \
 	screen \
 	color \
 	display \
-	online-accounts \
 	region \
 	info \
 	keyboard \
