@@ -217,7 +217,7 @@ set_device_battery_primary (CcPowerPanel *panel, GVariant *device)
                  &time);
 
   /* set the percentage */
-  gtk_level_bar_set_value (GTK_LEVEL_BAR (priv->levelbar_primary),
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->levelbar_primary),
                            percentage / 100.0f);
 
   /* clear the warning */
@@ -330,7 +330,7 @@ set_device_ups_primary (CcPowerPanel *panel, GVariant *device)
                  &time);
 
   /* set the percentage */
-  gtk_level_bar_set_value (GTK_LEVEL_BAR (priv->levelbar_primary),
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->levelbar_primary),
                            percentage / 100.0f);
 
   /* always show the warning */
