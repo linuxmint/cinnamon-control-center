@@ -5,7 +5,6 @@ SUBDIRS= \
 	display \
 	region \
 	info \
-	keyboard \
 	universal-access \
 	datetime \
 	user-accounts  \

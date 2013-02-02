@@ -120,7 +120,6 @@ PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES gnome-desktop-3.0 >= 3.1.0)
 PKG_CHECK_MODULES(INFO_PANEL, $COMMON_MODULES libgtop-2.0
 		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
-PKG_CHECK_MODULES(KEYBOARD_PANEL, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
@@ -377,9 +376,6 @@ panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
 panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
-panels/keyboard/Makefile
-panels/keyboard/cinnamon-keyboard-panel.desktop.in
-panels/keyboard/cinnamon-keybindings.pc
 panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
 panels/region/ubuntu-region-panel.desktop.in
