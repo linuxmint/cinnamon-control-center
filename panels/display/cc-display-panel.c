@@ -680,7 +680,7 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
         tmp = g_strdup (gnome_rr_output_info_get_display_name (self->priv->current_output));
 
       str = g_strdup_printf ("<b>%s</b>", tmp);
-      gnome_rr_labeler_get_color_for_output (self->priv->labeler, self->priv->current_output, &color);
+      gdk_color_parse ("#FFAAAA", &color);
       use_color = TRUE;
       g_free (tmp);
     }
@@ -2083,7 +2083,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_rectangle (cr, x, y, w * scale + 0.5, h * scale + 0.5);
   cairo_clip_preserve (cr);
 
-  gnome_rr_labeler_get_color_for_output (self->priv->labeler, output, &output_color);
+  gdk_color_parse ("#FFAAAA", &output_color);
   r = output_color.red / 65535.0;
   g = output_color.green / 65535.0;
   b = output_color.blue / 65535.0;
@@ -2697,7 +2697,7 @@ get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
   int monitor_width = 30;
   int monitor_height = 15;
 
-  gnome_rr_labeler_get_color_for_output (self->priv->labeler, output, &color);
+  gdk_color_parse ("#FFAAAA", &color);
 
   cairo_surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24, monitor_width, monitor_height);
   cr = cairo_create (cairo_surface);
