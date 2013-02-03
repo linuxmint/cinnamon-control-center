@@ -377,7 +377,6 @@ panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
 panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
-panels/region/ubuntu-region-panel.desktop.in
 panels/screen/Makefile
 panels/screen/cinnamon-screen-panel.desktop.in
 panels/info/Makefile
