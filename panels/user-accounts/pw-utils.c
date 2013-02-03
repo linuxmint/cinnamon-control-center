@@ -26,54 +26,6 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 
-#include <pwquality.h>
-
-
-static pwquality_settings_t *
-get_pwq (void)
-{
-        static pwquality_settings_t *settings;
-
-        if (settings == NULL) {
-                gchar *err = NULL;
-                settings = pwquality_default_settings ();
-                if (pwquality_read_config (settings, NULL, (gpointer)&err) < 0) {
-                        g_error ("failed to read pwquality configuration: %s\n", err);
-                }
-        }
-
-        return settings;
-}
-
-gint
-pw_min_length (void)
-{
-        gint value = 0;
-
-        if (pwquality_get_int_value (get_pwq (), PWQ_SETTING_MIN_LENGTH, &value) < 0) {
-                g_error ("Failed to read pwquality setting\n" );
-        }
-
-        return value;
-}
-
-gchar *
-pw_generate (void)
-{
-        gchar *res;
-        gint rv;
-
-        rv = pwquality_generate (get_pwq (), 0, &res);
-
-        if (rv < 0) {
-                g_error ("Password generation failed: %s\n",
-                         pwquality_strerror (NULL, 0, rv, NULL));
-                return NULL;
-        }
-
-        return res;
-}
-
 gdouble
 pw_strength (const gchar  *password,
              const gchar  *old_password,
@@ -86,39 +38,22 @@ pw_strength (const gchar  *password,
         gdouble strength = 0.0;
         void *auxerror;
 
-        rv = pwquality_check (get_pwq (),
-                              password, old_password, username,
-                              &auxerror);
-        if (rv == PWQ_ERROR_MIN_LENGTH) {
-                *hint = C_("Password strength", "Too short");
-                *long_hint = pwquality_strerror (NULL, 0, rv, auxerror);
-                level=0.0;
-                goto out;
-        }
-        else if (rv < 0) {
-                *hint = C_("Password strength", "Not good enough");
-                *long_hint = pwquality_strerror (NULL, 0, rv, auxerror);
-                level=0.0;
-                goto out;
-        }
-
-        strength = CLAMP (0.01 * rv, 0.0, 1.0);
-        if (strength < 0.50) {
-                level = .25;
-                *hint = C_("Password strength", "Weak");
-        } else if (strength < 0.75) {
-                level = .5;
-                *hint = C_("Password strength", "Fair");
-        } else if (strength < 0.90) {
-                level = .75;
-                *hint = C_("Password strength", "Good");
+        if (g_strcmp0(password, old_password) == 0) {
+            *hint = C_("Password strength", "Duplicate");
+            *long_hint = _("Your new password is the same as the old one");
+            level=0.0;
+            goto out;
+        } else if (strlen (password) < MIN_PW_LENGTH) {
+            *hint = C_("Password strength", "Too short");
+            *long_hint = g_strdup_printf(_("Your new password needs to be at least %d characters long"), MIN_PW_LENGTH);
+            level=0.0;
+            goto out;
         } else {
-                level = 1.0;
-                *hint = C_("Password strength", "Strong");
+            level=1.0;
+            *hint = C_("Password strength", "OK");
+            *long_hint = NULL;
+            goto out;
         }
-
-        *long_hint = NULL;
-
- out:
+out:
         return level;
 }

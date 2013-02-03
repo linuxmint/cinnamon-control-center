@@ -68,14 +68,20 @@ static void
 generate_one_password (GtkWidget        *widget,
                        UmPasswordDialog *um)
 {
-        gchar *pwd;
+        gchar *key = g_strdup ("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-");
 
-        pwd = pw_generate ();
+        gint i;
+        GString *s = g_string_new("");
 
-        gtk_entry_set_text (GTK_ENTRY (um->password_entry), pwd);
+        for (i = 0; i < MIN_PW_LENGTH; i++) {
+            g_string_append_c (s, key[g_random_int_range (0, strlen(key) - 1)]);
+        }
+
+        gtk_entry_set_text (GTK_ENTRY (um->password_entry), s->str);
         gtk_entry_set_text (GTK_ENTRY (um->verify_entry), "");
 
-        g_free (pwd);
+        g_free (key);
+        g_string_free (s, FALSE);
 }
 
 static void
@@ -231,7 +237,7 @@ update_sensitivity (UmPasswordDialog *um)
         verify = gtk_entry_get_text (GTK_ENTRY (um->verify_entry));
         old_password = gtk_entry_get_text (GTK_ENTRY (um->old_password_entry));
 
-        if (strlen (password) < pw_min_length ()) {
+        if (strlen (password) < MIN_PW_LENGTH) {
                 can_change = FALSE;
                 if (password[0] == '\0') {
                         tooltip = _("You need to enter a new password");

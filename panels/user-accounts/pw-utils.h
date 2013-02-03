@@ -21,6 +21,8 @@
 
 #include <glib.h>
 
+#define MIN_PW_LENGTH 8
+
 gint     pw_min_length (void);
 gchar   *pw_generate   (void);
 gdouble  pw_strength   (const gchar  *password,
