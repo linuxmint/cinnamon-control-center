@@ -217,7 +217,7 @@ set_device_battery_primary (CcPowerPanel *panel, GVariant *device)
                  &time);
 
   /* set the percentage */
-  gtk_level_bar_set_value (GTK_LEVEL_BAR (priv->levelbar_primary),
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->levelbar_primary),
                            percentage / 100.0f);
 
   /* clear the warning */
@@ -330,7 +330,7 @@ set_device_ups_primary (CcPowerPanel *panel, GVariant *device)
                  &time);
 
   /* set the percentage */
-  gtk_level_bar_set_value (GTK_LEVEL_BAR (priv->levelbar_primary),
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (priv->levelbar_primary),
                            percentage / 100.0f);
 
   /* always show the warning */
@@ -610,10 +610,10 @@ add_device_secondary (CcPowerPanel *panel,
   gtk_misc_set_alignment (GTK_MISC (widget), 0.0f, 0.5f);
   gtk_label_set_markup (GTK_LABEL (widget), status->str);
   gtk_box_pack_start (GTK_BOX (vbox), widget, FALSE, FALSE, 0);
-  widget = gtk_level_bar_new ();
+  widget = gtk_progress_bar_new ();
   gtk_widget_set_margin_right (widget, 32);
   gtk_widget_set_margin_top (widget, 3);
-  gtk_level_bar_set_value (GTK_LEVEL_BAR (widget), percentage / 100.0f);
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (widget), percentage / 100.0f);
   gtk_box_pack_start (GTK_BOX (vbox), widget, TRUE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (hbox), vbox, TRUE, TRUE, 0);
 

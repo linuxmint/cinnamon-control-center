@@ -15,10 +15,11 @@ Build-Depends: autotools-dev,
                gnome-control-center (>= 3.4.2),
                gnome-settings-daemon,
                gnome-settings-daemon-dev,
-               gsettings-desktop-schemas-dev (>= 3.6),
+               gsettings-desktop-schemas-dev (>= 3.4.2),
                hardening-wrapper,
                intltool (>= 0.37.1),
                libcanberra-gtk3-dev,
+               gnome-settings-daemon-dev (>= 3.4.2),
 #               libcheese-gtk-dev (>= 2.91.91.1),
                libcolord-dev,
                libcups2-dev,
@@ -27,12 +28,11 @@ Build-Depends: autotools-dev,
                libgdk-pixbuf2.0-dev (>= 2.23.0),
                libglib2.0-dev (>= 2.31.0),
                libgnome-bluetooth-dev (>= 3.3.4),
-               libgnome-desktop-3-dev (>= 3.5.91),
+               libgnome-desktop-3-dev (>= 3.4.2),
                libgnome-menu-3-dev,
                libgnomekbd-dev,
-               libgoa-1.0-dev (>= 3.5.90),
                libgstreamer-plugins-base0.10-dev,
-               libgtk-3-dev (>= 3.5.13),
+               libgtk-3-dev (>= 3.4.2),
                libgtop2-dev,
 #               libibus-1.0-dev,
                libnm-glib-dev (>= 0.9) [linux-any],
@@ -40,8 +40,7 @@ Build-Depends: autotools-dev,
                libnm-util-dev (>= 0.9) [linux-any],
                libnotify-dev (>= 0.7.3),
                libpolkit-gobject-1-dev (>= 0.103),
-               libpulse-dev (>= 1:2.0),
-               libpwquality-dev,
+               libpulse-dev (>= 2.0),
 #               libsocialweb-client-dev,
                libupower-glib-dev (>= 0.9.1),
                libwacom-dev (>= 0.6),
@@ -65,15 +64,13 @@ Depends: ${misc:Depends},
          accountsservice,
          apg,
          desktop-file-utils,
-         gkbd-capplet (>= 3.5.90),
          cinnamon-control-center-data (>= ${source:Version}),
          gnome-desktop3-data,
          gnome-icon-theme (>= 2.24),
          gnome-icon-theme-symbolic,
          gnome-menus (>= 2.12.0),
          gnome-settings-daemon (>= 3.4.2),
-         gsettings-desktop-schemas (>= 3.5.91),
-         ubuntu-system-service (>= 0.1.10)
+         gsettings-desktop-schemas (>= 3.4.2)
 Recommends: cups-pk-helper,
             gnome-online-accounts,
             gnome-session-bin,
@@ -87,7 +84,6 @@ Breaks: gnome-power-manager (<< 3.0),
         gnome-session (<< 3.0),
         libglib2.0-0 (<< 2.28.6-2),
         gnome-bluetooth (<< 3.4.0),
-        compiz (<< 1:0.9.8+bzr330),
         metacity (<< 1:2.34.2),
         unity (<< 6.2-0ubuntu2~),
 Suggests: gnome-screensaver | xscreensaver,
@@ -100,13 +96,6 @@ Description: utilities to configure the Cinnamon desktop
  allowing to set accessibility configuration, desktop fonts, keyboard
  and mouse properties, sound setup, desktop theme and background, user
  interface properties, screen resolution, and other Cinnamon parameters.
-
-Package: cinnamon-control-center-dev
-Architecture: all
-Section: devel
-Depends: ${misc:Depends}
-Description: utilities to configure the Cinnamon desktop
- This package contains the file required to get the keydirs location
 
 Package: cinnamon-control-center-data
 Architecture: all

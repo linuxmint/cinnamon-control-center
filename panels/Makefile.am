@@ -3,10 +3,8 @@ SUBDIRS= \
 	screen \
 	color \
 	display \
-	online-accounts \
 	region \
 	info \
-	keyboard \
 	universal-access \
 	datetime \
 	user-accounts  \

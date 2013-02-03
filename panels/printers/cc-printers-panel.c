@@ -155,6 +155,15 @@ cc_printers_panel_set_property (GObject      *object,
 }
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
 cc_printers_panel_dispose (GObject *object)
 {
   CcPrintersPanelPrivate *priv = CC_PRINTERS_PANEL (object)->priv;
@@ -164,9 +173,9 @@ cc_printers_panel_dispose (GObject *object)
 
   free_dests (CC_PRINTERS_PANEL (object));
 
-  g_clear_pointer (&priv->new_printer_name, g_free);
-  g_clear_pointer (&priv->new_printer_location, g_free);
-  g_clear_pointer (&priv->new_printer_make_and_model, g_free);
+  char_clear_pointer (priv->new_printer_name);
+  char_clear_pointer (priv->new_printer_location);
+  char_clear_pointer (priv->new_printer_make_and_model);
 
   if (priv->builder)
     {
@@ -1718,9 +1727,9 @@ new_printer_dialog_response_cb (PpNewPrinterDialog *dialog,
   if (priv->pp_new_printer_dialog)
     g_clear_object (&priv->pp_new_printer_dialog);
 
-  g_clear_pointer (&priv->new_printer_name, g_free);
-  g_clear_pointer (&priv->new_printer_location, g_free);
-  g_clear_pointer (&priv->new_printer_make_and_model, g_free);
+  char_clear_pointer (priv->new_printer_name);
+  char_clear_pointer (priv->new_printer_location);
+  char_clear_pointer (priv->new_printer_make_and_model);
 
   if (response_id == GTK_RESPONSE_REJECT)
     {

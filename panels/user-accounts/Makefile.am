@@ -66,7 +66,6 @@ libuser_accounts_la_LIBADD = 		\
 	$(PANEL_LIBS)			\
 	$(USER_ACCOUNTS_PANEL_LIBS)	\
 	$(top_builddir)/panels/common/liblanguage.la \
-	-lpwquality			\
 	-lcrypt				\
 	-lm
 

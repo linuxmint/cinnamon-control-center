@@ -171,7 +171,10 @@ update_fonts (CcEditableEntry *e)
 
         label = gtk_bin_get_child (GTK_BIN (priv->button));
         gtk_label_set_attributes (GTK_LABEL (label), attrs);
-        gtk_entry_set_attributes (priv->entry, attrs);
+
+        g_object_set(priv->entry,
+                     "attributes", attrs,
+                     NULL);
 
         pango_attr_list_unref (attrs);
 }

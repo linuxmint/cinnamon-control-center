@@ -87,17 +87,17 @@ dnl Check that we meet the  dependencies
 dnl ==============================================
 
 GLIB_REQUIRED_VERSION=2.31.0
-GTK_REQUIRED_VERSION=3.5.13
+GTK_REQUIRED_VERSION=3.4.2
 PA_REQUIRED_VERSION=2.0
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
 NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
-GNOME_DESKTOP_REQUIRED_VERSION=3.5.91
-SCHEMAS_REQUIRED_VERSION=3.5.91
+GNOME_DESKTOP_REQUIRED_VERSION=3.4.2
+SCHEMAS_REQUIRED_VERSION=3.4.2
 CLUTTER_REQUIRED_VERSION=1.11.3
-GOA_REQUIRED_VERSION=3.5.90
+GSD_REQUIRED_VERSION=3.4.2
 
 COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  glib-2.0 >= $GLIB_REQUIRED_VERSION
@@ -120,12 +120,11 @@ PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES gnome-desktop-3.0 >= 3.1.0)
 PKG_CHECK_MODULES(INFO_PANEL, $COMMON_MODULES libgtop-2.0
 		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
-PKG_CHECK_MODULES(KEYBOARD_PANEL, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
-PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0 goa-backend-1.0 >= $GOA_REQUIRED_VERSION)
-
+PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
+                  gnome-settings-daemon >= $GSD_REQUIRED_VERSION)
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.8)
 PKG_CHECK_MODULES(PRINTERS_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
@@ -142,7 +141,6 @@ PKG_CHECK_MODULES(USER_ACCOUNTS_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   gnome-desktop-3.0
                   gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION
-                  pwquality
                   $SYSTEMD)
 
 PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
@@ -163,7 +161,7 @@ fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
 # Check for gnome-bluetooth
-PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.5.5,
+PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.2,
 		  [have_bluetooth=yes], have_bluetooth=no)
 AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
 
@@ -377,21 +375,9 @@ panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
 panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
-panels/keyboard/Makefile
-panels/keyboard/cinnamon-keyboard-panel.desktop.in
-panels/keyboard/cinnamon-keybindings.pc
 panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
 panels/region/ubuntu-region-panel.desktop.in
-panels/online-accounts/Makefile
-panels/online-accounts/cinnamon-online-accounts-panel.desktop.in
-panels/online-accounts/icons/Makefile
-panels/online-accounts/icons/16x16/Makefile
-panels/online-accounts/icons/22x22/Makefile
-panels/online-accounts/icons/24x24/Makefile
-panels/online-accounts/icons/32x32/Makefile
-panels/online-accounts/icons/48x48/Makefile
-panels/online-accounts/icons/256x256/Makefile
 panels/screen/Makefile
 panels/screen/cinnamon-screen-panel.desktop.in
 panels/info/Makefile
@@ -460,6 +446,7 @@ panels/power/icons/32x32/Makefile
 panels/power/icons/48x48/Makefile
 panels/power/icons/256x256/Makefile
 po/Makefile.in
+files/Makefile
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
 ])

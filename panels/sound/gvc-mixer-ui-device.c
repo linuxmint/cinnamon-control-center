@@ -187,6 +187,27 @@ gvc_mixer_ui_device_init (GvcMixerUIDevice *device)
 }
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
+list_clear_pointer (GList *pointer)
+{
+    if (pointer) {
+        g_list_free (pointer);
+        pointer = NULL;
+    }
+}
+
+
+
+
+static void
 gvc_mixer_ui_device_dispose (GObject *object)
 {
         GvcMixerUIDevice *device;
@@ -196,12 +217,12 @@ gvc_mixer_ui_device_dispose (GObject *object)
 
         device = GVC_MIXER_UI_DEVICE (object);
 
-        g_clear_pointer (&device->priv->port_name, g_free);
-        g_clear_pointer (&device->priv->first_line_desc, g_free);
-        g_clear_pointer (&device->priv->second_line_desc, g_free);
-        g_clear_pointer (&device->priv->profiles, g_list_free);
-        g_clear_pointer (&device->priv->supported_profiles, g_list_free);
-        g_clear_pointer (&device->priv->user_preferred_profile, g_free);
+        char_clear_pointer (device->priv->port_name);
+        char_clear_pointer (device->priv->first_line_desc);
+        char_clear_pointer (device->priv->second_line_desc);
+        list_clear_pointer (device->priv->profiles);
+        list_clear_pointer (device->priv->supported_profiles);
+        char_clear_pointer (device->priv->user_preferred_profile);
 
         G_OBJECT_CLASS (gvc_mixer_ui_device_parent_class)->dispose (object);
 }

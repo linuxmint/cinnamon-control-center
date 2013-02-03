@@ -212,8 +212,8 @@
                             <child>
                               <object class="CcEditableEntry" id="full-name-entry">
                                 <property name="visible">True</property>
-                                <property name="scale">1.2</property>
-                                <property name="weight">700</property>
+<!--                                <property name="scale">1.2</property>-->
+<!--                                <property name="weight">700</property>-->
                               </object>
                               <packing>
                                 <property name="expand">True</property>

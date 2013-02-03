@@ -398,7 +398,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLevelBar" id="levelbar_primary">
+              <object class="GtkProgressBar" id="levelbar_primary">
                 <property name="can_focus">False</property>
                 <property name="visible">True</property>
               </object>

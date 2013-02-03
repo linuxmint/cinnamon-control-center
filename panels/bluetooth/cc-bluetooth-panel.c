@@ -93,6 +93,15 @@ cc_bluetooth_panel_class_init (CcBluetoothPanelClass *klass)
 }
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
 cc_bluetooth_panel_finalize (GObject *object)
 {
 	CcBluetoothPanel *self;
@@ -104,8 +113,11 @@ cc_bluetooth_panel_finalize (GObject *object)
 	g_clear_object (&self->priv->killswitch);
 	g_clear_object (&self->priv->client);
 
-	g_clear_pointer (&self->priv->connecting_devices, g_hash_table_destroy);
-	g_clear_pointer (&self->priv->selected_bdaddr, g_free);
+    if (self->priv->connecting_devices != NULL) {
+        g_hash_table_destroy (self->priv->connecting_devices);
+        self->priv->connecting_devices = NULL;
+    }
+	char_clear_pointer (self->priv->selected_bdaddr);
 
 	G_OBJECT_CLASS (cc_bluetooth_panel_parent_class)->finalize (object);
 }
@@ -409,7 +421,7 @@ power_callback (GObject          *object,
 	state = gtk_switch_get_active (GTK_SWITCH (WID ("switch_bluetooth")));
 	g_debug ("Power switched to %s", state ? "off" : "on");
 	bluetooth_killswitch_set_state (self->priv->killswitch,
-					state ? BLUETOOTH_KILLSWITCH_STATE_UNBLOCKED : BLUETOOTH_KILLSWITCH_STATE_SOFT_BLOCKED);
+					state ? 1 : 0);
 }
 
 static void
@@ -431,7 +443,7 @@ cc_bluetooth_panel_update_treeview_message (CcBluetoothPanel *self,
 static void
 cc_bluetooth_panel_update_power (CcBluetoothPanel *self)
 {
-	BluetoothKillswitchState state;
+	gint state;
 	char *path;
 	gboolean powered, sensitive;
 
@@ -448,12 +460,12 @@ cc_bluetooth_panel_update_power (CcBluetoothPanel *self)
 
 	if (path == NULL &&
 	    bluetooth_killswitch_has_killswitches (self->priv->killswitch) &&
-	    state != BLUETOOTH_KILLSWITCH_STATE_HARD_BLOCKED) {
+	    state != 2) {
 		g_debug ("Default adapter is unpowered, but should be available");
 		sensitive = TRUE;
 		cc_bluetooth_panel_update_treeview_message (self, _("Bluetooth is disabled"));
 	} else if (path == NULL &&
-		   state == BLUETOOTH_KILLSWITCH_STATE_HARD_BLOCKED) {
+		   state == 2) {
 		g_debug ("Bluetooth is Hard blocked");
 		sensitive = FALSE;
 		cc_bluetooth_panel_update_treeview_message (self, _("Bluetooth is disabled by hardware switch"));
@@ -780,7 +792,7 @@ default_adapter_changed (BluetoothClient  *client,
 
 static void
 killswitch_changed (BluetoothKillswitch      *killswitch,
-		    BluetoothKillswitchState  state,
+		                            int       state,
 		    CcBluetoothPanel         *self)
 {
 	g_debug ("Killswitch changed to state '%s' (%d)", bluetooth_killswitch_state_to_string (state) , state);

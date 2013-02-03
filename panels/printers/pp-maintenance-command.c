@@ -52,6 +52,16 @@ enum {
   PROP_TITLE
 };
 
+
+static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
 static void
 pp_maintenance_command_finalize (GObject *object)
 {
@@ -59,9 +69,9 @@ pp_maintenance_command_finalize (GObject *object)
 
   priv = PP_MAINTENANCE_COMMAND (object)->priv;
 
-  g_clear_pointer (&priv->printer_name, g_free);
-  g_clear_pointer (&priv->command, g_free);
-  g_clear_pointer (&priv->title, g_free);
+  char_clear_pointer (priv->printer_name);
+  char_clear_pointer (priv->command);
+  char_clear_pointer (priv->title);
 
   G_OBJECT_CLASS (pp_maintenance_command_parent_class)->finalize (object);
 }

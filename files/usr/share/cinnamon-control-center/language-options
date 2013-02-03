@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $langtoolsdir = '/usr/share/language-tools';
+
+# get the locales available on the system
+my @avail_locales = map { chomp; s/\.utf8//; $_ } qx( locale -a | grep -F .utf8 );
+
+# add items without country code to facilitate lookups
+my %extended_localelist;
+for my $loc (@avail_locales) {
+    ( my $lang = $loc ) =~ s/_[A-Z]+//;
+    @extended_localelist{$loc, $lang} = (1, 1);
+}
+
+# get the union of /usr/share/locale-langpack and /usr/share/locale
+my %translation_dirs;
+for my $dir ('/usr/share/locale-langpack', '/usr/share/locale') {
+    if ( opendir my ($dh), $dir ) {
+        $translation_dirs{$_} = 1 for readdir $dh;
+    }
+}
+
+# get the intersection of available translation_dirs and the extended locale list
+my %intersection;
+for ( keys %extended_localelist ) {
+    $intersection{$_} = 1 if $translation_dirs{$_};
+}
+
+# adjustments
+if ( open my $fh, '<', "$langtoolsdir/main-countries" ) {
+    # If country code items in a language exist:
+    # - Remove the item without country code, since gettext won't find a
+    #   translation under e.g. 'de_DE' if the first item in LANGUAGE is 'de'
+    #   (see https://launchpad.net/bugs/700213). 'en' is kept, though, since
+    #   it's always the last item in LANGUAGE per design.
+    # - Make sure that the main dialect of the language is represented among
+    #   the country code items (see https://launchpad.net/bugs/710148).
+    my %main;
+    while ( <$fh> ) {
+        next if /^\s*(?:#|$)/;
+        my ($k, $v) = split;
+        $main{$k} = $v;
+    }
+    my %count;
+    for ( keys %intersection ) {
+        next if /^en[^a-z]/;
+        ( my $not_country = $_ ) =~ s/_[A-Z]+//;
+        $count{$not_country} ++;
+    }
+    for my $langcode ( keys %count ) {
+        if ( $count{$langcode} > 1 ) {
+            delete $intersection{$langcode};
+            $intersection{ $main{$langcode} } = 1 if $main{$langcode};
+        }
+    }
+} else {
+    # not access to the language-to-main-dialect map
+    # => stick with a minimum of list manipulation
+    delete $intersection{'zh'};
+}
+
+# print the resulting list of language options
+print join("\n", sort keys %intersection) || 'en';
+

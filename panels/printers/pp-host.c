@@ -36,13 +36,22 @@ enum {
 };
 
 static void
+char_clear_pointer (gchar *pointer)
+{
+    if (pointer) {
+        g_free (pointer);
+        pointer = NULL;
+    }
+}
+
+static void
 pp_host_finalize (GObject *object)
 {
   PpHostPrivate *priv;
 
   priv = PP_HOST (object)->priv;
 
-  g_clear_pointer (&priv->hostname, g_free);
+  char_clear_pointer (priv->hostname);
 
   G_OBJECT_CLASS (pp_host_parent_class)->finalize (object);
 }
