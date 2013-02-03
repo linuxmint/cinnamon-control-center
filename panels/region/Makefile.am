@@ -43,7 +43,7 @@ ui_DATA = \
 	cinnamon-region-panel-options-dialog.ui
 
 desktopdir = $(datadir)/applications
-Desktop_in_files = cinnamon-region-panel.desktop.in ubuntu-region-panel.desktop.in
+Desktop_in_files = cinnamon-region-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(Desktop_in_files) $(desktop_DATA)
