@@ -307,8 +307,6 @@ shell_show_overview_page (CinnamonControlCenter *center)
   /* clear the search text */
   g_free (priv->filter_string);
   priv->filter_string = g_strdup ("");
-  gtk_entry_set_text (GTK_ENTRY (priv->search_entry), "");
-  gtk_widget_grab_focus (priv->search_entry);
 
   gtk_lock_button_set_permission (GTK_LOCK_BUTTON (priv->lock_button), NULL);
 
@@ -732,17 +730,6 @@ setup_search (CinnamonControlCenter *shell)
                     G_CALLBACK (on_search_selection_changed),
                     shell);
 
-  /* setup the search entry widget */
-  widget = (GtkWidget*) gtk_builder_get_object (priv->builder, "search-entry");
-  priv->search_entry = widget;
-  priv->filter_string = g_strdup ("");
-
-  g_signal_connect (widget, "changed", G_CALLBACK (search_entry_changed_cb),
-                    shell);
-  g_signal_connect (widget, "key-press-event",
-                    G_CALLBACK (search_entry_key_press_event_cb), priv);
-
-  gtk_widget_show (priv->search_view);
 }
 
 static void
@@ -930,7 +917,6 @@ notebook_page_notify_cb (GtkNotebook              *notebook,
 
   if (child == priv->scrolled_window || child == priv->search_scrolled)
     {
-      gtk_widget_show (W (priv->builder, "search-entry"));
       gtk_widget_hide (W (priv->builder, "lock-button"));
 
       if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
@@ -944,7 +930,6 @@ notebook_page_notify_cb (GtkNotebook              *notebook,
     }
   else
     {
-      gtk_widget_hide (W (priv->builder, "search-entry"));
       /* set the scrolled window small so that it doesn't force
          the window to be larger than this panel */
       if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity")) {
@@ -1239,11 +1224,7 @@ window_key_press_event (GtkWidget          *win,
           case GDK_KEY_S:
           case GDK_KEY_f:
           case GDK_KEY_F:
-            if (gtk_widget_get_visible (self->priv->search_entry))
-              {
-                gtk_widget_grab_focus (self->priv->search_entry);
-                retval = TRUE;
-              }
+            retval = TRUE;
             break;
           case GDK_KEY_Q:
           case GDK_KEY_q:
