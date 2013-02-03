@@ -23,55 +23,6 @@
       </row>
     </data>
   </object>
-  <object class="GtkListStore" id="liststore_indicator">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-      <!-- column-name value -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">When battery is present</col>
-        <col id="1">present</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">When battery is charging/in use</col>
-        <col id="1">charge</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Never</col>
-        <col id="1">never</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="liststore_lid">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-      <!-- column-name value -->
-      <column type="gint"/>
-      <!-- column-name sensitive -->
-      <column type="gboolean"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Suspend</col>
-        <col id="1">1</col>
-        <col id="2">True</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Hibernate</col>
-        <col id="1">3</col>
-        <col id="2">True</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Do nothing</col>
-        <col id="1">5</col>
-        <col id="2">True</col>
-      </row>
-    </data>
-  </object>
   <object class="GtkListStore" id="liststore_time">
     <columns>
       <!-- column-name name -->
@@ -102,6 +53,55 @@
       </row>
     </data>
   </object>
+  <object class="GtkListStore" id="liststore_lid">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="gint"/>
+      <!-- column-name sensitive -->
+      <column type="gboolean"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Suspend</col>
+        <col id="1">1</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Hibernate</col>
+        <col id="1">3</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Do nothing</col>
+        <col id="1">5</col>
+        <col id="2">True</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore_indicator">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">When battery is present</col>
+        <col id="1">present</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">When battery is charging/in use</col>
+        <col id="1">charge</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Never</col>
+        <col id="1">never</col>
+      </row>
+    </data>
+  </object>
   <object class="GtkWindow" id="window_power">
     <property name="can_focus">False</property>
     <property name="resizable">False</property>
@@ -125,8 +125,8 @@
               <object class="GtkLabel" id="label_header_battery">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="halign">center</property>
                 <property name="label" translatable="yes">On battery power</property>
+                <property name="halign">center</property>
                 <attributes>
                   <attribute name="scale" value="0.82999999999999996"/>
                 </attributes>
@@ -134,16 +134,14 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label_header_ac">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="halign">center</property>
                 <property name="label" translatable="yes">When plugged in</property>
+                <property name="halign">center</property>
                 <attributes>
                   <attribute name="scale" value="0.82999999999999996"/>
                 </attributes>
@@ -151,8 +149,6 @@
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -165,14 +161,13 @@
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">1</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkComboBoxText" id="combobox_sleep_battery">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="model">liststore_time</property>
                 <property name="hexpand">True</property>
                 <accessibility>
                   <relation type="labelled-by" target="label_header_battery"/>
@@ -182,8 +177,6 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">1</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -191,6 +184,7 @@
                 <property name="width_request">150</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="model">liststore_time</property>
                 <property name="hexpand">True</property>
                 <accessibility>
                   <relation type="labelled-by" target="label_header_ac"/>
@@ -200,8 +194,6 @@
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">1</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -216,8 +208,6 @@
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">2</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -229,8 +219,6 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">2</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -243,16 +231,14 @@
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">3</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkComboBox" id="combobox_lid_battery">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
                 <property name="model">liststore_lid</property>
+                <property name="hexpand">True</property>
                 <accessibility>
                   <relation type="labelled-by" target="label_header_battery"/>
                   <relation type="labelled-by" target="label_lid_action"/>
@@ -261,16 +247,14 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">3</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkComboBox" id="combobox_lid_ac">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
                 <property name="model">liststore_lid</property>
+                <property name="hexpand">True</property>
                 <accessibility>
                   <relation type="labelled-by" target="label_header_ac"/>
                   <relation type="labelled-by" target="label_lid_action"/>
@@ -279,8 +263,6 @@
               <packing>
                 <property name="left_attach">2</property>
                 <property name="top_attach">3</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
@@ -306,14 +288,13 @@
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">5</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkComboBoxText" id="combobox_indicator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="model">liststore_indicator</property>
                 <property name="hexpand">True</property>
                 <accessibility>
                   <relation type="labelled-by" target="label_indicator"/>
@@ -325,27 +306,6 @@
                 <property name="width">2</property>
                 <property name="height">1</property>
               </packing>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <placeholder/>
             </child>
           </object>
           <packing>
@@ -439,8 +399,8 @@
             </child>
             <child>
               <object class="GtkProgressBar" id="levelbar_primary">
-                <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="visible">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -489,27 +449,6 @@
                 <child>
                   <placeholder/>
                 </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -530,7 +469,7 @@
   <object class="GtkSizeGroup" id="sizegroup_combos">
     <widgets>
       <widget name="combobox_lid_battery"/>
-      <widget name="combobox_lid_ac"/>
+      <widget name="combobox_lid_ac"/>    
       <widget name="combobox_critical"/>
       <widget name="combobox_sleep_battery"/>
       <widget name="combobox_sleep_ac"/>
