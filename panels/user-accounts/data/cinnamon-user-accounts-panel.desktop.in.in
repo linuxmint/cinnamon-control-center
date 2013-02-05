@@ -11,4 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=user-accounts
 # Translators: those are keywords for the user accounts control-center panel
 _Keywords=Login;Name;Fingerprint;Avatar;Logo;Face;Password;
-NoDisplay=true
+NoDisplay=false
