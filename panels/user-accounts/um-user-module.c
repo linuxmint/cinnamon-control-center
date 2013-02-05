@@ -34,10 +34,6 @@ g_io_module_load (GIOModule *module)
   bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
-#ifdef HAVE_CHEESE
-  cheese_gtk_init (NULL, NULL);
-#endif
-
   /* register the panel */
   um_user_panel_register (module);
 }
