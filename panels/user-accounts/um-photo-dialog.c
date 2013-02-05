@@ -236,7 +236,7 @@ um_photo_dialog_select_file (UmPhotoDialog *um)
         gtk_window_set_modal (GTK_WINDOW (chooser), TRUE);
 
         preview = gtk_image_new ();
-        gtk_widget_set_size_request (preview, 128, -1);
+        gtk_widget_set_size_request (preview, 256, -1);
         gtk_file_chooser_set_preview_widget (GTK_FILE_CHOOSER (chooser), preview);
         gtk_file_chooser_set_use_preview_label (GTK_FILE_CHOOSER (chooser), FALSE);
         gtk_widget_show (preview);
@@ -569,7 +569,7 @@ um_photo_dialog_new (GtkWidget *button)
 
         um = g_new0 (UmPhotoDialog, 1);
 
-        um->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_NORMAL);
+        um->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
 
         /* Set up the popup */
         um->popup_button = button;
