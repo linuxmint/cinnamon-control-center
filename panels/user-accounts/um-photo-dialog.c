@@ -162,8 +162,13 @@ update_preview (GtkFileChooser               *chooser,
         uri = gtk_file_chooser_get_preview_uri (chooser);
 
         if (uri) {
+            gchar *filename = g_filename_from_uri (uri, NULL, NULL);
+            gboolean is_dir = g_file_test (filename, G_FILE_TEST_IS_DIR);
+            g_free (filename);
+
+            if (!is_dir) {
                 GdkPixbuf *pixbuf = NULL;
-                const gchar *mime_type = NULL;
+                gchar *mime_type = NULL;
                 GFile *file;
                 GFileInfo *file_info;
                 GtkWidget *preview;
@@ -178,15 +183,16 @@ update_preview (GtkFileChooser               *chooser,
                 g_object_unref (file);
 
                 if (file_info != NULL) {
-                        mime_type = g_file_info_get_content_type (file_info);
+                        mime_type = g_strdup (g_file_info_get_content_type (file_info));
                         g_object_unref (file_info);
                 }
 
-                if (mime_type) {
+                if (mime_type && g_str_has_prefix (mime_type, "image/")) {
                         pixbuf = gnome_desktop_thumbnail_factory_generate_thumbnail (thumb_factory,
                                                                                      uri,
                                                                                      mime_type);
                 }
+                g_free (mime_type);
 
                 gtk_dialog_set_response_sensitive (GTK_DIALOG (chooser),
                                                    GTK_RESPONSE_ACCEPT,
@@ -201,8 +207,13 @@ update_preview (GtkFileChooser               *chooser,
                                                   GTK_STOCK_DIALOG_QUESTION,
                                                   GTK_ICON_SIZE_DIALOG);
                 }
-
-                g_free (uri);
+            } else {
+                GtkWidget *preview = gtk_file_chooser_get_preview_widget (chooser);
+                gtk_image_set_from_stock (GTK_IMAGE (preview),
+                                          GTK_STOCK_DIRECTORY,
+                                          GTK_ICON_SIZE_DIALOG);
+            }
+            g_free (uri);
         }
 
         gtk_file_chooser_set_preview_widget_active (chooser, TRUE);
