@@ -758,7 +758,7 @@ um_photo_dialog_update_face_image (UmPhotoDialog *um)
         gtk_image_set_from_icon_name (GTK_IMAGE (um->face_image), "avatar-default", GTK_ICON_SIZE_DIALOG);
     }
 
-    if (um->user && um_user_is_logged_in (um->user))
+    if (um->user && um_user_is_logged_in (um->user) && um->num_cameras > 0)
         gtk_widget_set_sensitive (um->take_photo_menuitem, TRUE);
     else
         gtk_widget_set_sensitive (um->take_photo_menuitem, FALSE);
