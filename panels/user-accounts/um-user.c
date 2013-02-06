@@ -64,6 +64,7 @@ typedef struct {
         gboolean        automatic_login;
         gboolean        system_account;
         gboolean        local_account;
+        gchar          *home_dir;
 } UserProperties;
 
 static void
@@ -159,7 +160,7 @@ user_properties_get (GDBusConnection *bus,
                         g_variant_get (value, "s", &props->password_hint);
                 }
                 else if (strcmp (key, "HomeDirectory") == 0) {
-                        /* ignore */
+                        g_variant_get (value, "s", &props->home_dir);
                 }
                 else if (strcmp (key, "Shell") == 0) {
                         /* ignore */
@@ -571,6 +572,14 @@ um_user_get_object_path (UmUser *user)
         return user->object_path;
 }
 
+const gchar *
+um_user_get_home_directory (UmUser *user)
+{
+        g_return_val_if_fail (UM_IS_USER (user), NULL);
+    g_printerr ("homedir is %s\n", user->props->home_dir);
+        return user->props->home_dir;
+}
+
 static gboolean
 update_info (UmUser *user)
 {
@@ -747,7 +756,7 @@ um_user_set_icon_data (UmUser    *user,
         GOutputStream *stream;
         GError *error;
 
-        gchar *face_path = g_build_filename (g_get_home_dir(), ".face", NULL);
+        gchar *face_path = g_build_filename (user->props->home_dir, ".face", NULL);
         GFile *face_file = g_file_new_for_path (face_path);
 
         if (g_file_query_exists (face_file, NULL)) {

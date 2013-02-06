@@ -33,7 +33,7 @@ UmPhotoDialog *um_photo_dialog_new      (GtkWidget     *button);
 void           um_photo_dialog_free     (UmPhotoDialog *dialog);
 void           um_photo_dialog_set_user (UmPhotoDialog *dialog,
                                          UmUser        *user);
-
+void           um_photo_dialog_update_face_image (UmPhotoDialog *um);
 G_END_DECLS
 
 #endif
