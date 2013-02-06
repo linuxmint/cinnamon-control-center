@@ -744,6 +744,9 @@ um_photo_dialog_set_user (UmPhotoDialog *um,
 void
 um_photo_dialog_update_face_image (UmPhotoDialog *um)
 {
+    if (!UM_IS_USER (um->user))
+        return;
+
     gchar *face_path = g_build_filename (um_user_get_home_directory (um->user), ".face", NULL);
     GFile *face_file = g_file_new_for_path (face_path);
     if (g_file_query_exists (face_file, NULL)) {
@@ -763,4 +766,9 @@ um_photo_dialog_update_face_image (UmPhotoDialog *um)
     } else {
         gtk_image_set_from_icon_name (GTK_IMAGE (um->face_image), "avatar-default", GTK_ICON_SIZE_DIALOG);
     }
+
+    if (um->user && um_user_is_logged_in (um->user))
+        gtk_widget_set_sensitive (um->take_photo_menuitem, TRUE);
+    else
+        gtk_widget_set_sensitive (um->take_photo_menuitem, FALSE);
 }

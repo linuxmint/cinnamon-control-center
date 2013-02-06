@@ -576,7 +576,7 @@ const gchar *
 um_user_get_home_directory (UmUser *user)
 {
         g_return_val_if_fail (UM_IS_USER (user), NULL);
-    g_printerr ("homedir is %s\n", user->props->home_dir);
+
         return user->props->home_dir;
 }
 
