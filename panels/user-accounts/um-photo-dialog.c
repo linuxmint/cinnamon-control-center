@@ -56,6 +56,7 @@ struct _UmPhotoDialog {
         GnomeDesktopThumbnailFactory *thumb_factory;
 
         UmUser *user;
+        gchar *home_face_path;
 };
 
 static void
@@ -262,6 +263,13 @@ none_icon_selected (GtkMenuItem   *menuitem,
 }
 
 static void
+home_face_icon_selected (GtkMenuItem   *menuitem,
+                    UmPhotoDialog *um)
+{
+        um_user_set_icon_file (um->user, um->home_face_path);
+}
+
+static void
 file_icon_selected (GtkMenuItem   *menuitem,
                     UmPhotoDialog *um)
 {
@@ -437,14 +445,23 @@ setup_photo_popup (UmPhotoDialog *um)
         if (!added_faces)
                 goto skip_faces;
 
-        image = gtk_image_new_from_icon_name ("avatar-default", GTK_ICON_SIZE_DIALOG);
+        if (um->home_face_path != NULL) {
+            gint w, h;
+            gtk_icon_size_lookup (GTK_ICON_SIZE_DIALOG, &w, &h);
+            GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file_at_size (um->home_face_path, w, h, NULL);
+            image = gtk_image_new_from_pixbuf (pixbuf);
+            g_object_unref (pixbuf);
+        } else {
+            image = gtk_image_new_from_icon_name ("avatar-default", GTK_ICON_SIZE_DIALOG);
+        }
+
         menuitem = gtk_menu_item_new ();
         gtk_container_add (GTK_CONTAINER (menuitem), image);
         gtk_widget_show_all (menuitem);
         gtk_menu_attach (GTK_MENU (menu), GTK_WIDGET (menuitem),
                          x, x + 1, y, y + 1);
         g_signal_connect (G_OBJECT (menuitem), "activate",
-                          G_CALLBACK (none_icon_selected), um);
+                          G_CALLBACK (home_face_icon_selected), um);
         gtk_widget_show (menuitem);
         none_item_shown = TRUE;
         y++;
@@ -570,6 +587,16 @@ um_photo_dialog_new (GtkWidget *button)
         um = g_new0 (UmPhotoDialog, 1);
 
         um->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
+
+        gchar *face_path = g_build_filename (g_get_home_dir(), ".face", NULL);
+        GFile *face_file = g_file_new_for_path (face_path);
+        if (g_file_query_exists (face_file, NULL)) {
+            um->home_face_path = face_path;
+        } else {
+            um->home_face_path = NULL;
+            g_free (face_path);
+        }
+        g_object_unref (face_file);
 
         /* Set up the popup */
         um->popup_button = button;
