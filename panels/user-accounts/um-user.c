@@ -743,17 +743,23 @@ void
 um_user_set_icon_data (UmUser    *user,
                        GdkPixbuf *pixbuf)
 {
-        gchar *path;
         gint fd;
         GOutputStream *stream;
         GError *error;
 
-        path = g_build_filename (g_get_tmp_dir (), "usericonXXXXXX", NULL);
-        fd = g_mkstemp (path);
+        gchar *face_path = g_build_filename (g_get_home_dir(), ".face", NULL);
+        GFile *face_file = g_file_new_for_path (face_path);
+
+        if (g_file_query_exists (face_file, NULL)) {
+            g_remove (face_path);
+        }
+        g_object_unref (face_file);
+
+        fd = g_creat (face_path, S_IRUSR | S_IWUSR | S_IROTH | S_IRGRP);
 
         if (fd == -1) {
-                g_warning ("failed to create temporary file for image data");
-                g_free (path);
+                g_warning ("failed to create ~/.face file for image data");
+                g_free (face_path);
                 return;
         }
 
@@ -769,14 +775,9 @@ um_user_set_icon_data (UmUser    *user,
 
         g_object_unref (stream);
 
-        um_user_set_icon_file (user, path);
+        um_user_set_icon_file (user, face_path);
 
-        /* if we ever make the dbus call async, the g_remove call needs
-         * to wait for its completion
-         */
-        g_remove (path);
-
-        g_free (path);
+        g_free (face_path);
 }
 
 void
