@@ -33,10 +33,6 @@
 #include <gtk/gtk.h>
 #include <polkit/polkit.h>
 
-#ifdef HAVE_CHEESE
-#include <gst/gst.h>
-#endif /* HAVE_CHEESE */
-
 #include "shell/cc-editable-entry.h"
 
 #include "um-user.h"

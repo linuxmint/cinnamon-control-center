@@ -24,9 +24,6 @@
 #include "um-user-panel.h"
 
 #include <glib/gi18n.h>
-#ifdef HAVE_CHEESE
-#include <cheese-gtk.h>
-#endif
 
 void
 g_io_module_load (GIOModule *module)

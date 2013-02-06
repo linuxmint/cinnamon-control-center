@@ -20,7 +20,7 @@ Build-Depends: autotools-dev,
                intltool (>= 0.37.1),
                libcanberra-gtk3-dev,
                gnome-settings-daemon-dev (>= 3.4.2),
-#               libcheese-gtk-dev (>= 2.91.91.1),
+               libcheese-gtk-dev (>= 2.91.91.1),
                libcolord-dev,
                libcups2-dev,
                libdbus-1-dev (>= 0.32),
@@ -51,9 +51,9 @@ Build-Depends: autotools-dev,
                libxml2-dev,
                locales,
                network-manager-dev (>= 0.9) [linux-any],
-               shared-mime-info
+               shared-mime-info,
 #               libclutter-1.0-dev (>= 1.11.3),
-#               libclutter-gtk-1.0-dev
+               libclutter-gtk-1.0-dev
 Homepage: http://www.github.com/linuxmint/cinnamon-control-center
 
 Package: cinnamon-control-center
