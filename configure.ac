@@ -199,7 +199,7 @@ fi
 
 AM_CONDITIONAL(BUILD_PRINTERS, [test x"$enable_cups" = x"yes"])
 
-PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.3 cheese clutter-gtk-1.0)
+PKG_CHECK_MODULES(CHEESE, cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0)
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
