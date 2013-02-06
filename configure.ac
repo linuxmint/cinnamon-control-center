@@ -24,7 +24,7 @@ LIBCINNAMONCONTROLCENTER_CURRENT=1
 LIBCINNAMONCONTROLCENTER_REVISION=0
 LIBCINNAMONCONTROLCENTER_AGE=0
 AC_SUBST(LIBCINNAMONCONTROLCENTER_CURRENT)
-AC_SUBST(LIBCINNAMONCONTROLCENTER_REVISION)
+AC_SUBST(LIBCINNAMONCONTROLCENTER_REVISION)h
 AC_SUBST(LIBCINNAMONCONTROLCENTER_AGE)
 
 # Internationalization support
@@ -199,15 +199,7 @@ fi
 
 AM_CONDITIONAL(BUILD_PRINTERS, [test x"$enable_cups" = x"yes"])
 
-PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.3 cheese clutter-gtk-1.0, [have_cheese=yes], [have_cheese=no])
-if test x${have_cheese} = xyes; then
- AC_DEFINE(HAVE_CHEESE, 1, [Define to 1 to enable cheese webcam support])
-fi
-if test x${with_cheese} = xyes && test x${have_cheese} = xno; then
- AC_MSG_ERROR([Cheese configured but not found])
-fi
-
-AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
+PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.3 cheese clutter-gtk-1.0)
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
