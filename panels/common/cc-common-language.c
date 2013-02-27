@@ -530,7 +530,6 @@ cc_common_language_get_initial_languages (void)
         ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
         /* Add some common languages first */
-/*
         g_hash_table_insert (ht, g_strdup ("en_US.utf8"), g_strdup (_("English")));
         if (gdm_language_has_translations ("en_GB"))
                 g_hash_table_insert (ht, g_strdup ("en_GB.utf8"), g_strdup (_("British English")));
@@ -551,9 +550,9 @@ cc_common_language_get_initial_languages (void)
         if (gdm_language_has_translations ("ar") ||
             gdm_language_has_translations ("ar_EG"))
                 g_hash_table_insert (ht, g_strdup ("ar_EG.utf8"), g_strdup (_("Arabic")));
-*/
+
         /* Add the languages used by other users on the system */
-//        add_other_users_language (ht);
+        add_other_users_language (ht);
 
         /* Add current locale */
         name = cc_common_language_get_current_language ();
@@ -563,35 +562,6 @@ cc_common_language_get_initial_languages (void)
         } else {
                 g_free (name);
         }
-
-        gchar  *command[] = { "/usr/share/cinnamon-control-center/language-options", NULL };
-        GError *error = NULL;
-        gchar  *avail_languages;
-
-        if (!g_spawn_sync ( NULL,
-                            command,
-                            NULL,
-                            G_SPAWN_STDERR_TO_DEV_NULL,
-                            NULL,
-                            NULL,
-                            &avail_languages,
-                            NULL,
-                            NULL,
-                            &error )) {
-                g_debug ("Couldn't get available languages: %s", error->message);
-                g_error_free (error);
-                return;
-        }
-
-        name = strtok (avail_languages, "\n");
-        while (name != NULL) {
-                language = gdm_get_language_from_name (name, NULL);
-                g_hash_table_insert (ht, g_strdup (name), g_strdup (language));
-                name = strtok (NULL, "\n");
-        }
-        g_free (avail_languages);
-        g_free (name);
-        g_free (language);
 
         return ht;
 }
