@@ -406,7 +406,7 @@ setup_photo_popup (UmPhotoDialog *um)
         for (i = 0; dirs[i] != NULL; i++) {
                 char *path;
 
-                path = g_build_filename (dirs[i], "pixmaps", "faces", NULL);
+                path = g_build_filename (dirs[i], "pixmaps", "cinnamon", "faces", NULL);
                 dir = g_dir_open (path, 0, NULL);
                 if (dir == NULL) {
                         g_free (path);
