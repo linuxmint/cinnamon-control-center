@@ -1091,25 +1091,11 @@ cc_power_panel_init (CcPowerPanel *self)
   widget = WID (self->priv->builder, "vbox_power");
   gtk_widget_reparent (widget, (GtkWidget *) self);
 
-  /* Set up Unity-specific controls */
-  /* References:
-   *  https://wiki.ubuntu.com/Power
-   *  https://docs.google.com/document/d/1ILTJDiDCd25Npt2AmgzF8aOnZZECxTfM0hvsbWT2BxA/edit?pli=1#heading=h.i5lg1g344bsb
-   */
-  if (g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") == 0)
-    {
-      widget = GTK_WIDGET (gtk_builder_get_object (self->priv->builder,
-                                                   "combobox_indicator"));
-      self->priv->power_settings = g_settings_new ("com.canonical.indicator.power");
-      g_settings_bind (self->priv->power_settings, "icon-policy",
-                       widget, "active-id", G_SETTINGS_BIND_DEFAULT);
-    }
-  else
-    {
-      gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "separator_indicator")));
-      gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "label_indicator")));
-      gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "combobox_indicator")));
-    }
+
+  gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "separator_indicator")));
+  gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "label_indicator")));
+  gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "combobox_indicator")));
+
 }
 
 void

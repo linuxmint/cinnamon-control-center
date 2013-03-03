@@ -157,24 +157,18 @@ cc_region_panel_init (CcRegionPanel * self)
 		return;
 	}
 
-	if (!g_strcmp0 (desktop, "GNOME")) {
-		prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
-								     "region_notebook");
-	} else {
-		prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
-								     "vbox1");
-	}
+    prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
+                                                         "region_notebook");
 
 	gtk_widget_set_size_request (GTK_WIDGET (prefs_widget), -1, 400);
 
 	gtk_widget_reparent (prefs_widget, GTK_WIDGET (self));
 
-	setup_xkb_tabs (priv->builder);
-	if (!g_strcmp0 (desktop, "GNOME")) {
-		setup_language (priv->builder);
-		setup_formats (priv->builder);
-		setup_system (priv->builder);
-	}
+    setup_xkb_tabs (priv->builder);
+
+    setup_language (priv->builder);
+    setup_formats (priv->builder);
+    setup_system (priv->builder);
 
         /* set screen link */
 

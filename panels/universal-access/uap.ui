@@ -32,7 +32,7 @@
       <row>
         <col id="0" translatable="yes" context="universal access, contrast">Normal</col>
         <col id="1">1.25</col>
-        <col id="2"></col>
+        <col id="2"/>
       </row>
       <row>
         <col id="0" translatable="yes" context="universal access, contrast">High</col>
@@ -210,7 +210,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="seeing_contrast_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -244,7 +243,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="seeing_toggle_keys_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -266,7 +264,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="seeing_reader_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -279,7 +276,6 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="seeing_reader_preferences_button">
-                            <property name="use_action_appearance">False</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -603,7 +599,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="seeing_zoom_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -616,7 +611,6 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="seeing_zoom_preferences_button">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -695,7 +689,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="seeing_large_text_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -805,7 +798,6 @@
                             <child>
                               <object class="GtkRadioButton" id="hearing_flash_window_title_button">
                                 <property name="label" translatable="yes">Flash the window title</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can_focus">True</property>
@@ -824,7 +816,6 @@
                             <child>
                               <object class="GtkRadioButton" id="hearing_flash_screen_button">
                                 <property name="label" translatable="yes">Flash the entire screen</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can_focus">True</property>
@@ -933,7 +924,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="hearing_captions_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
                         <property name="valign">start</property>
@@ -954,7 +944,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="hearing_visual_alerts_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -970,7 +959,6 @@
                         <child>
                           <object class="GtkButton" id="hearing_test_flash_button">
                             <property name="label" translatable="yes">_Test flash</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
@@ -1001,33 +989,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="hbox5">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="halign">end</property>
-                    <child>
-                      <object class="GtkLinkButton" id="hearing_sound_preferences_link">
-                        <property name="label" translatable="yes">Sound Settings</property>
-                        <property name="use_action_appearance">False</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="has_tooltip">False</property>
-                        <property name="relief">none</property>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="pack_type">end</property>
-                    <property name="position">1</property>
-                  </packing>
+                  <placeholder/>
                 </child>
               </object>
               <packing>
@@ -1137,7 +1099,6 @@
                             <child>
                               <object class="GtkCheckButton" id="typing_sticky_keys_disable_two_keys_checkbutton">
                                 <property name="label" translatable="yes">_Disable if two keys are pressed together</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can_focus">True</property>
@@ -1156,7 +1117,6 @@
                             <child>
                               <object class="GtkCheckButton" id="typing_sticky_keys_beep_modifier_checkbutton">
                                 <property name="label" translatable="yes">Beep when a _modifer key is pressed</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can_focus">True</property>
@@ -1355,7 +1315,6 @@
                                 <child>
                                   <object class="GtkCheckButton" id="typing_slow_keys_beep_pressed_checkbutton">
                                     <property name="label" translatable="yes" comments="This completes the sentence &quot;Beep when a key is&quot;">pressed</property>
-                                    <property name="use_action_appearance">False</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1372,7 +1331,6 @@
                                 <child>
                                   <object class="GtkCheckButton" id="typing_slow_keys_beep_accepted_checkbutton">
                                     <property name="label" translatable="yes" comments="This completes the sentence &quot;Beep when a key is&quot;">accepted</property>
-                                    <property name="use_action_appearance">False</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1389,7 +1347,6 @@
                                 <child>
                                   <object class="GtkCheckButton" id="typing_slow_keys_beep_rejected_checkbutton">
                                     <property name="label" translatable="yes" comments="This completes the sentence &quot;Beep when a key is&quot;">rejected</property>
-                                    <property name="use_action_appearance">False</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="receives_default">False</property>
@@ -1574,7 +1531,6 @@
                             <child>
                               <object class="GtkCheckButton" id="typing_bounce_keys_beep_rejected_checkbutton">
                                 <property name="label" translatable="yes">Beep when a key is _rejected</property>
-                                <property name="use_action_appearance">False</property>
                                 <property name="visible">True</property>
                                 <property name="sensitive">False</property>
                                 <property name="can_focus">True</property>
@@ -1649,7 +1605,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="typing_assistant_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -1664,7 +1619,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="typing_sticky_keys_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -1680,7 +1634,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="typing_slow_keys_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -1696,7 +1649,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="typing_bounce_keys_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -1712,7 +1664,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="typing_keyboard_toggle_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -1847,7 +1798,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="pointing_mouse_keys_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -1863,7 +1813,6 @@
                         <child>
                           <object class="GtkButton" id="pointing_mouse_keys_settings_button">
                             <property name="label" translatable="yes">Options...</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
@@ -2385,7 +2334,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="pointing_hover_click_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -2401,7 +2349,6 @@
                         <child>
                           <object class="GtkButton" id="pointing_hover_click_settings_button">
                             <property name="label" translatable="yes">Options...</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
                             <property name="halign">end</property>
@@ -2424,7 +2371,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="pointing_second_click_switch">
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
@@ -2445,7 +2391,6 @@
                         <property name="spacing">6</property>
                         <child>
                           <object class="GtkSwitch" id="pointing_video_mouse_switch">
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="halign">end</property>
@@ -2460,7 +2405,6 @@
                         <child>
                           <object class="GtkButton" id="pointing_video_mouse_settings_button">
                             <property name="label" translatable="yes">Options...</property>
-                            <property name="use_action_appearance">False</property>
                             <property name="visible">True</property>
                             <property name="sensitive">False</property>
                             <property name="can_focus">True</property>
@@ -2497,11 +2441,9 @@
                     <child>
                       <object class="GtkLinkButton" id="pointing_mouse_preferences_link">
                         <property name="label" translatable="yes">Mouse Settings</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
-                        <property name="has_tooltip">False</property>
                         <property name="relief">none</property>
                       </object>
                       <packing>
