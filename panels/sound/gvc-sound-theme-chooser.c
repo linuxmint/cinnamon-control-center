@@ -67,7 +67,7 @@ G_DEFINE_TYPE (GvcSoundThemeChooser, gvc_sound_theme_chooser, GTK_TYPE_VBOX)
 #define DEFAULT_ALERT_ID        "__default"
 #define CUSTOM_THEME_NAME       "__custom"
 #define NO_SOUNDS_THEME_NAME    "__no_sounds"
-#define DEFAULT_THEME           "ubuntu"
+#define DEFAULT_THEME           "freedesktop"
 
 enum {
         THEME_DISPLAY_COL,
