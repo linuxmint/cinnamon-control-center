@@ -54,7 +54,6 @@ struct _UmPhotoDialog {
 
         UmUser *user;
         gchar *home_face_path;
-        GtkWidget *face_image;
 };
 
 static void
@@ -80,8 +79,6 @@ crop_dialog_response (GtkWidget     *dialog,
 
         um->crop_area = NULL;
         gtk_widget_destroy (dialog);
-
-        um_photo_dialog_update_face_image (um);
 }
 
 static void
@@ -267,8 +264,6 @@ home_face_icon_selected (GtkMenuItem   *menuitem,
                     UmPhotoDialog *um)
 {
         um_user_set_icon_file (um->user, um->home_face_path);
-
-        um_photo_dialog_update_face_image (um);
 }
 
 static void
@@ -387,7 +382,7 @@ menu_item_for_filename (UmPhotoDialog *um,
 static void
 setup_photo_popup (UmPhotoDialog *um)
 {
-        GtkWidget *menu, *menuitem;
+        GtkWidget *menu, *menuitem, *image;
         guint x, y;
         const gchar * const * dirs;
         guint i;
@@ -444,10 +439,18 @@ setup_photo_popup (UmPhotoDialog *um)
         if (!added_faces)
                 goto skip_faces;
 
-        um->face_image = gtk_image_new();
+        if (um->home_face_path != NULL) {
+            gint w, h;
+            gtk_icon_size_lookup (GTK_ICON_SIZE_DIALOG, &w, &h);
+            GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file_at_size (um->home_face_path, w, h, NULL);
+            image = gtk_image_new_from_pixbuf (pixbuf);
+            g_object_unref (pixbuf);
+        } else {
+            image = gtk_image_new_from_icon_name ("avatar-default", GTK_ICON_SIZE_DIALOG);
+        }
+
         menuitem = gtk_menu_item_new ();
-        gtk_container_add (GTK_CONTAINER (menuitem), um->face_image);
-        um_photo_dialog_update_face_image (um);
+        gtk_container_add (GTK_CONTAINER (menuitem), image);
         gtk_widget_show_all (menuitem);
         gtk_menu_attach (GTK_MENU (menu), GTK_WIDGET (menuitem),
                          x, x + 1, y, y + 1);
@@ -578,6 +581,16 @@ um_photo_dialog_new (GtkWidget *button)
 
         um->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
 
+        gchar *face_path = g_build_filename (g_get_home_dir(), ".face", NULL);
+        GFile *face_file = g_file_new_for_path (face_path);
+        if (g_file_query_exists (face_file, NULL)) {
+            um->home_face_path = face_path;
+        } else {
+            um->home_face_path = NULL;
+            g_free (face_path);
+        }
+        g_object_unref (face_file);
+
         /* Set up the popup */
         um->popup_button = button;
         setup_photo_popup (um);
@@ -676,6 +689,7 @@ um_photo_dialog_set_user (UmPhotoDialog *um,
         GIcon *icon;
         GEmblem *emblem;
         GList *children, *c;
+
         g_return_if_fail (um != NULL);
 
         if (um->user) {
@@ -727,34 +741,5 @@ um_photo_dialog_set_user (UmPhotoDialog *um,
                 g_slist_free (list);
 
                 g_object_unref (emblem);
-
-                um_photo_dialog_update_face_image (um);
         }
-}
-
-void
-um_photo_dialog_update_face_image (UmPhotoDialog *um)
-{
-    if (!UM_IS_USER (um->user))
-        return;
-
-    gchar *face_path = um_user_get_icon_file (um->user);
-    GFile *face_file = g_file_new_for_path (face_path);
-    if (g_file_query_exists (face_file, NULL)) {
-        um->home_face_path = face_path;
-    } else {
-        um->home_face_path = NULL;
-        g_free (face_path);
-    }
-    g_object_unref (face_file);
-
-    if (um->home_face_path != NULL) {
-        gint w, h;
-        gtk_icon_size_lookup (GTK_ICON_SIZE_DIALOG, &w, &h);
-        GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file_at_size (um->home_face_path, w, h, NULL);
-        gtk_image_set_from_pixbuf (GTK_IMAGE (um->face_image), pixbuf);
-        g_object_unref (pixbuf);
-    } else {
-        gtk_image_set_from_icon_name (GTK_IMAGE (um->face_image), "avatar-default", GTK_ICON_SIZE_DIALOG);
-    }
 }
