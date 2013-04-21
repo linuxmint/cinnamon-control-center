@@ -64,6 +64,7 @@ typedef struct {
         gboolean        automatic_login;
         gboolean        system_account;
         gboolean        local_account;
+        gchar          *home_dir;
 } UserProperties;
 
 static void
@@ -159,7 +160,7 @@ user_properties_get (GDBusConnection *bus,
                         g_variant_get (value, "s", &props->password_hint);
                 }
                 else if (strcmp (key, "HomeDirectory") == 0) {
-                        /* ignore */
+                        g_variant_get (value, "s", &props->home_dir);
                 }
                 else if (strcmp (key, "Shell") == 0) {
                         /* ignore */
