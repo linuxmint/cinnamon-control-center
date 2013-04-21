@@ -746,6 +746,28 @@ um_user_set_icon_file (UmUser      *user,
                 return;
         }
         g_variant_unref (result);
+
+        if (um_user_is_logged_in (user)) {
+            gchar *target = g_build_filename (user->props->home_dir, ".face", NULL);
+            GFile *face_file = g_file_new_for_path (target);
+            g_file_delete (face_file, NULL, NULL);
+            if (icon_file != NULL) {
+                GFile *source_file = g_file_new_for_path (icon_file);
+                if (!g_file_copy (source_file,
+                                  face_file,
+                                  G_FILE_COPY_TARGET_DEFAULT_PERMS | G_FILE_COPY_OVERWRITE,
+                                  NULL,
+                                  NULL,
+                                  NULL,
+                                  &error)) {
+                    g_warning ("failed to copy account pic to .face file: %s", error->message);
+                    g_error_free (error);
+                }
+                g_object_unref (source_file);
+            }
+            g_free (target);
+            g_object_unref (face_file);
+        }
 }
 
 void
@@ -757,28 +779,11 @@ um_user_set_icon_data (UmUser    *user,
         GError *error;
         gchar *path;
 
-        if (um_user_is_logged_in (user)) {
-            path = g_build_filename (user->props->home_dir, ".face", NULL);
-            GFile *face_file = g_file_new_for_path (path);
-
-            if (g_file_query_exists (face_file, NULL)) {
-                g_remove (path);
-            }
-            g_object_unref (face_file);
-
-            fd = g_creat (path, S_IRUSR | S_IWUSR | S_IROTH | S_IRGRP);
-            if (fd == -1) {
-                    g_warning ("failed to create ~/.face file for image data");
-                    g_free (path);
-                    return;
-            }
-        } else {
-            path = g_build_filename (g_get_tmp_dir (), "usericonXXXXXX", NULL);
-            fd = g_mkstemp (path);
-            if (fd == -1) {
-                g_warning ("failed to create temporary file for image data");
-                g_free (path);
-            }
+        path = g_build_filename (g_get_tmp_dir (), "usericonXXXXXX", NULL);
+        fd = g_mkstemp (path);
+        if (fd == -1) {
+            g_warning ("failed to create temporary file for image data");
+            g_free (path);
         }
 
         stream = g_unix_output_stream_new (fd, TRUE);
