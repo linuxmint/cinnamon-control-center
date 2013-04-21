@@ -4,7 +4,6 @@ SUBDIRS= \
 	color \
 	display \
 	region \
-	info \
 	universal-access \
 	datetime \
 	user-accounts  \

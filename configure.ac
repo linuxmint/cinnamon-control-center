@@ -118,8 +118,6 @@ PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION)
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES gnome-desktop-3.0 >= 3.1.0)
-PKG_CHECK_MODULES(INFO_PANEL, $COMMON_MODULES libgtop-2.0
-		  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
@@ -363,8 +361,6 @@ panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
 panels/screen/Makefile
 panels/screen/cinnamon-screen-panel.desktop.in
-panels/info/Makefile
-panels/info/cinnamon-info-panel.desktop.in
 panels/color/Makefile
 panels/color/cinnamon-color-panel.desktop.in
 panels/color/icons/Makefile
