@@ -113,10 +113,6 @@ PKG_CHECK_MODULES(LIBSHORTCUTS, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(SHELL, $COMMON_MODULES libgnome-menu-3.0 gio-unix-2.0 x11)
 PKG_CHECK_MODULES(BACKGROUND_PANEL, $COMMON_MODULES libxml-2.0 gnome-desktop-3.0
                   gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION)
-PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
-                  gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION
-                  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
-                  gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION)
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES gnome-desktop-3.0 >= 3.1.0)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
@@ -124,8 +120,6 @@ PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
 PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
                   gnome-settings-daemon >= $GSD_REQUIRED_VERSION)
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.8)
-PKG_CHECK_MODULES(PRINTERS_PANEL, $COMMON_MODULES
-                  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
@@ -194,8 +188,6 @@ if test x"$enable_cups" != x"no" ; then
   AC_SUBST(CUPS_CFLAGS)
   AC_SUBST(CUPS_LIBS)
 fi
-
-AM_CONDITIONAL(BUILD_PRINTERS, [test x"$enable_cups" = x"yes"])
 
 PKG_CHECK_MODULES(CHEESE, cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0)
 
@@ -352,9 +344,6 @@ panels/Makefile
 panels/common/Makefile
 panels/bluetooth/Makefile
 panels/bluetooth/cinnamon-bluetooth-properties.desktop.in
-panels/datetime/Makefile
-panels/datetime/cinnamon-datetime-panel.desktop.in
-panels/datetime/po-timezones/Makefile
 panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
 panels/region/Makefile
@@ -372,8 +361,6 @@ panels/color/icons/48x48/Makefile
 panels/color/icons/64x64/Makefile
 panels/color/icons/256x256/Makefile
 panels/color/icons/scalable/Makefile
-panels/printers/Makefile
-panels/printers/cinnamon-printers-panel.desktop.in
 panels/network/Makefile
 panels/network/cinnamon-network-panel.desktop.in
 panels/universal-access/Makefile
@@ -440,11 +427,6 @@ if test "x$have_bluetooth" = "xyes"; then
 	AC_MSG_NOTICE([** gnome-bluetooth (Bluetooth panel)])
 else
 	AC_MSG_NOTICE([   Bluetooth panel disabled])
-fi
-if test "x$enable_cups" = "xyes"; then
-	AC_MSG_NOTICE([** CUPS (Printers panel)])
-else
-	AC_MSG_NOTICE([   Printers panel disabled])
 fi
 if test "x$have_cheese" = "xyes"; then
 	AC_MSG_NOTICE([** Cheese (Users panel webcam support)])

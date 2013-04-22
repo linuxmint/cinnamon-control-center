@@ -5,15 +5,10 @@ SUBDIRS= \
 	display \
 	region \
 	universal-access \
-	datetime \
 	user-accounts  \
 	power \
 	sound \
 	sound-nua
-
-if BUILD_PRINTERS
-SUBDIRS += printers
-endif
 
 if BUILD_NETWORK
 SUBDIRS += network
