@@ -4,9 +4,6 @@ SUBDIRS = data
 cappletname = sound
 NULL =
 
-ccpanelsdir = $(PANELS_DIR)
-ccpanels_LTLIBRARIES = libsound.la
-
 bin_PROGRAMS =					\
 	cinnamon-sound-applet			\
 	$(NULL)
@@ -22,7 +19,8 @@ AM_CPPFLAGS =					\
 	-DICON_DATA_DIR="\"$(pkgdatadir)/icons\"" \
 	$(NULL)
 
-noinst_LTLIBRARIES = libcinnamonvolumecontrol.la
+noinst_LTLIBRARIES = libcinnamonvolumecontrol.la \
+                     libsound.la
 libcinnamonvolumecontrol_la_SOURCES =		\
 	gvc-mixer-card.h			\
 	gvc-mixer-card.c			\
