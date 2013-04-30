@@ -6,7 +6,7 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(COLOR_PANEL_CFLAGS)				\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
-	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
+	-DLOCALE_DIR="\"$(datadir)/locale\""	\
 	-DBINDIR="\"$(bindir)\""			\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	$(NULL)

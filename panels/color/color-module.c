@@ -29,9 +29,6 @@
 void
 g_io_module_load (GIOModule *module)
 {
-  bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
-  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
   /* register the panel */
   cc_color_panel_register (module);
 }

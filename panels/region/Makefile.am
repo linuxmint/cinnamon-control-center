@@ -4,7 +4,7 @@ cappletname = region
 INCLUDES =						\
 	$(PANEL_CFLAGS)					\
 	$(REGION_PANEL_CFLAGS)				\
-	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
+	-DLOCALE_DIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-I$(srcdir)/../common/				\

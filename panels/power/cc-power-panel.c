@@ -1101,6 +1101,9 @@ cc_power_panel_init (CcPowerPanel *self)
 void
 cc_power_panel_register (GIOModule *module)
 {
+  bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
   cc_power_panel_register_type (G_TYPE_MODULE (module));
   g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
                                   CC_TYPE_POWER_PANEL,

@@ -6,7 +6,7 @@ INCLUDES = 						\
 	$(PANEL_CFLAGS)					\
 	$(POWER_PANEL_CFLAGS)				\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
-	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
+	-DLOCALE_DIR="\"$(datadir)/locale\""	\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
 	-I$(srcdir)/../../shell/			\
 	$(NULL)
