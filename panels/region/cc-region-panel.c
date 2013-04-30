@@ -18,7 +18,7 @@
  * Author: Sergey Udaltsov <svu@gnome.org>
  *
  */
-
+#include "config.h"
 #include "cc-region-panel.h"
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
