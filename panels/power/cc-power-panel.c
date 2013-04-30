@@ -999,7 +999,7 @@ cc_power_panel_init (CcPowerPanel *self)
   self->priv = POWER_PANEL_PRIVATE (self);
 
   self->priv->builder = gtk_builder_new ();
-
+  gtk_builder_set_translation_domain (self->priv->builder, GETTEXT_PACKAGE);
   error = NULL;
   gtk_builder_add_from_file (self->priv->builder,
                              CINNAMONCC_UI_DIR "/power.ui",

@@ -692,6 +692,7 @@ enroll_fingerprints (GtkWindow *parent,
         }
 
         dialog = gtk_builder_new ();
+        gtk_builder_set_translation_domain (dialog, GETTEXT_PACKAGE);
         filename = UIDIR "/account-fingerprint.ui";
         if (!g_file_test (filename, G_FILE_TEST_EXISTS))
                 filename = "data/account-fingerprint.ui";

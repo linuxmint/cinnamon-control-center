@@ -512,6 +512,7 @@ zoom_options_init (ZoomOptions *self)
   priv = self->priv = G_TYPE_INSTANCE_GET_PRIVATE (self, ZOOM_TYPE_OPTIONS, ZoomOptionsPrivate);
 
   priv->builder = gtk_builder_new ();
+  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
   gtk_builder_add_from_file (priv->builder,
                              CINNAMONCC_UI_DIR "/zoom-options.ui",
                              &err);

@@ -2907,7 +2907,7 @@ cc_display_panel_constructor (GType                  gtype,
 
   error = NULL;
   self->priv->builder = builder = gtk_builder_new ();
-
+  gtk_builder_set_translation_domain (self->priv->builder, GETTEXT_PACKAGE);
   if (!gtk_builder_add_objects_from_file (builder, UIDIR "/display-capplet.ui", objects, &error))
     {
       g_warning ("Could not parse UI definition: %s", error->message);

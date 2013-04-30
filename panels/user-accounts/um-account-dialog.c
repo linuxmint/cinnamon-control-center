@@ -1031,7 +1031,7 @@ um_account_dialog_init (UmAccountDialog *self)
         GtkWidget *box;
 
         builder = gtk_builder_new ();
-
+        gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
         filename = UIDIR "/account-dialog.ui";
         if (!g_file_test (filename, G_FILE_TEST_EXISTS))
                 filename = "data/account-dialog.ui";

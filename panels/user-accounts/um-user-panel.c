@@ -1316,6 +1316,7 @@ um_user_panel_init (UmUserPanel *self)
         gtk_widget_set_size_request (GTK_WIDGET (self), -1, 350);
 
         d->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (d->builder, GETTEXT_PACKAGE);
         d->um = um_user_manager_ref_default ();
 
         GtkWidget *dummy = cc_editable_entry_new (); /* Needed before UI file is loaded, or else

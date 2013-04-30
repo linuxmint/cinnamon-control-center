@@ -2496,6 +2496,8 @@ cc_color_panel_init (CcColorPanel *prefs)
   priv = prefs->priv = COLOR_PANEL_PRIVATE (prefs);
 
   priv->builder = gtk_builder_new ();
+  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+
   gtk_builder_add_from_file (priv->builder,
                              CINNAMONCC_UI_DIR "/color.ui",
                              &error);

@@ -522,7 +522,7 @@ um_password_dialog_new (void)
         gint len;
 
         builder = gtk_builder_new ();
-
+        gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
         error = NULL;
         filename = UIDIR "/password-dialog.ui";
         if (!g_file_test (filename, G_FILE_TEST_EXISTS))
