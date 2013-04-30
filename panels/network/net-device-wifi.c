@@ -1997,6 +1997,7 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
         device_wifi->priv = NET_DEVICE_WIFI_GET_PRIVATE (device_wifi);
 
         device_wifi->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (device_wifi->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_file (device_wifi->priv->builder,
                                    CINNAMONCC_UI_DIR "/network-wifi.ui",
                                    &error);

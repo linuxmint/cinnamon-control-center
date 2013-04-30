@@ -237,6 +237,7 @@ net_device_wired_init (NetDeviceWired *device_wired)
         device_wired->priv = NET_DEVICE_WIRED_GET_PRIVATE (device_wired);
 
         device_wired->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (device_wired->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_file (device_wired->priv->builder,
                                    CINNAMONCC_UI_DIR "/network-wired.ui",
                                    &error);

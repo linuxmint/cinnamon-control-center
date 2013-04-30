@@ -497,6 +497,7 @@ net_vpn_init (NetVpn *vpn)
         vpn->priv = NET_VPN_GET_PRIVATE (vpn);
 
         vpn->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (vpn->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_file (vpn->priv->builder,
                                    CINNAMONCC_UI_DIR "/network-vpn.ui",
                                    &error);
