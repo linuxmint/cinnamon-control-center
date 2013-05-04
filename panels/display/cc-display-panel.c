@@ -35,6 +35,7 @@
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gdesktop-enums.h>
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)

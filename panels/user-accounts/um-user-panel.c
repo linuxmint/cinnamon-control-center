@@ -30,6 +30,7 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 #include <polkit/polkit.h>
 
@@ -1415,7 +1416,9 @@ um_user_panel_class_init (UmUserPanelClass *klass)
 void
 um_user_panel_register (GIOModule *module)
 {
-        um_user_panel_register_type (G_TYPE_MODULE (module));
-        g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
-                                        UM_TYPE_USER_PANEL, "user-accounts", 0);
+    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+    bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+    um_user_panel_register_type (G_TYPE_MODULE (module));
+    g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
+                                    UM_TYPE_USER_PANEL, "user-accounts", 0);
 }

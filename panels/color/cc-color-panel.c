@@ -26,7 +26,7 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gio/gio.h>
-
+#include <glib/gi18n-lib.h>
 #include "cc-color-panel.h"
 
 #define WID(b, w) (GtkWidget *) gtk_builder_get_object (b, w)

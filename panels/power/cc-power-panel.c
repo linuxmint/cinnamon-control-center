@@ -24,6 +24,7 @@
 
 #include <libupower-glib/upower.h>
 #include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gnome-settings-daemon/gsd-enums.h>
 
 #include "cc-power-panel.h"
