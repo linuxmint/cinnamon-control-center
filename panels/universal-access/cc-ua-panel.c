@@ -576,12 +576,13 @@ static gboolean
 pointing_mouse_preferences_clicked_cb (GtkButton  *button,
                                        CcUaPanel  *panel)
 {
-  CcShell *shell;
+    gchar *argv[3];
+    argv[0] = "cinnamon-settings";
+    argv[1] = "mouse";
+    argv[3] = NULL;
+    g_spawn_async(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
 
-  shell = cc_panel_get_shell (CC_PANEL (panel));
-  cc_shell_set_active_panel_from_id (shell, "mouse", NULL, NULL);
-
-  return TRUE;
+    return TRUE;
 }
 
 static void
