@@ -24,7 +24,7 @@
 #include "pw-utils.h"
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 gdouble
 pw_strength (const gchar  *password,

@@ -27,7 +27,7 @@
 
 #include <polkit/polkit.h>
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <libgnomekbd/gkbd-keyboard-config.h>
 #include "cc-common-language.h"

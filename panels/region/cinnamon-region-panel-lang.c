@@ -24,7 +24,7 @@
 #endif
 
 #include <string.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include "cinnamon-region-panel-lang.h"
 #include "cinnamon-region-panel-formats.h"

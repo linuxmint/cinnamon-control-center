@@ -21,7 +21,7 @@
 #include "zoom-options.h"
 #include <gdk/gdk.h>
 #include "config.h"
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <string.h>
 
 #define WID(w) (GtkWidget *) gtk_builder_get_object (priv->builder, w)

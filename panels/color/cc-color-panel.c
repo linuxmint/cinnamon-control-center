@@ -21,7 +21,6 @@
 
 #include <config.h>
 
-#include <glib/gi18n.h>
 #include <colord.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>

@@ -24,7 +24,7 @@
 #  include <config.h>
 #endif
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <string.h>
 
 #include "cinnamon-region-panel-xkb.h"

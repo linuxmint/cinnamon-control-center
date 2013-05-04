@@ -1,7 +1,7 @@
 #include "config.h"
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <locale.h>
 #include <glib-object.h>
 #include "gdm-languages.h"

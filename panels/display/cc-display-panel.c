@@ -34,7 +34,6 @@
 #include <libgnome-desktop/gnome-rr-labeler.h>
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
-#include <glib/gi18n.h>
 #include <glib/gi18n-lib.h>
 #include <gdesktop-enums.h>
 
