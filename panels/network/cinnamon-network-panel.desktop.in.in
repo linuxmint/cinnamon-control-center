@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Network
 _Comment=Network settings
-Exec=cinnamon-control-center network
+Exec=cinnamon-settings network
 Icon=network-workgroup
 Terminal=false
 Type=Application
@@ -11,4 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=network
 # Translators: those are keywords for the network control-center panel
 _Keywords=Network;Wireless;IP;LAN;Proxy;
-NoDisplay=true
+

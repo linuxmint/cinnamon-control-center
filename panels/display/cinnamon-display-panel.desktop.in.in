@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Displays
 _Comment=Change resolution and position of monitors and projectors
-Exec=cinnamon-control-center display
+Exec=cinnamon-settings display
 Icon=preferences-desktop-display
 Terminal=false
 Type=Application
@@ -11,4 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=display
 # Translators: those are keywords for the display control-center panel
 _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
-NoDisplay=true
+

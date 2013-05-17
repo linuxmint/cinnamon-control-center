@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Power
 _Comment=Power management settings
-Exec=cinnamon-control-center power
+Exec=cinnamon-settings power
 Icon=cinnamon-power-manager
 Terminal=false
 Type=Application
@@ -11,4 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=power
 # Translators: those are keywords for the power control-center panel
 _Keywords=Power;Sleep;Suspend;Hibernate;Battery;
-NoDisplay=true
+

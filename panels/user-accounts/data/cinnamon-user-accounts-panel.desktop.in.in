@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=User Accounts
 _Comment=Add or remove users
-Exec=cinnamon-control-center user-accounts
+Exec=cinnamon-settings user-accounts
 Icon=system-users
 Terminal=false
 Type=Application
@@ -11,4 +11,4 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=user-accounts
 # Translators: those are keywords for the user accounts control-center panel
 _Keywords=Login;Name;Fingerprint;Avatar;Logo;Face;Password;
-NoDisplay=true
+

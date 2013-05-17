@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Color
 _Comment=Color management settings
-Exec=cinnamon-control-center color
+Exec=cinnamon-settings color
 Icon=preferences-color
 Terminal=false
 Type=Application
@@ -11,4 +11,3 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=color
 # Translators: those are keywords for the color control-center panel
 _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
-NoDisplay=true
