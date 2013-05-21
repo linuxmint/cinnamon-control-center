@@ -31,13 +31,13 @@
 
 #include "gvc-level-bar.h"
 
-#define NUM_BOXES 30
+#define NUM_BOXES 24
 
 #define GVC_LEVEL_BAR_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GVC_TYPE_LEVEL_BAR, GvcLevelBarPrivate))
 
 #define MIN_HORIZONTAL_BAR_WIDTH   150
-#define HORIZONTAL_BAR_HEIGHT      6
-#define VERTICAL_BAR_WIDTH         6
+#define HORIZONTAL_BAR_HEIGHT      20
+#define VERTICAL_BAR_WIDTH         20
 #define MIN_VERTICAL_BAR_HEIGHT    400
 
 typedef struct {
@@ -194,7 +194,7 @@ bar_calc_layout (GvcLevelBar *bar)
                 bar->priv->layout.delta = bar->priv->layout.area.height / NUM_BOXES;
                 bar->priv->layout.area.x = 0;
                 bar->priv->layout.area.y = 0;
-                bar->priv->layout.box_height = bar->priv->layout.delta / 2;
+                bar->priv->layout.box_height = bar->priv->layout.delta / 1.05;
                 bar->priv->layout.box_width = bar->priv->layout.area.width;
                 bar->priv->layout.box_radius = bar->priv->layout.box_width / 2;
         } else {
@@ -204,7 +204,7 @@ bar_calc_layout (GvcLevelBar *bar)
                 bar->priv->layout.delta = bar->priv->layout.area.width / NUM_BOXES;
                 bar->priv->layout.area.x = 0;
                 bar->priv->layout.area.y = 0;
-                bar->priv->layout.box_width = bar->priv->layout.delta / 2;
+                bar->priv->layout.box_width = bar->priv->layout.delta / 1.05;
                 bar->priv->layout.box_height = bar->priv->layout.area.height;
                 bar->priv->layout.box_radius = bar->priv->layout.box_height / 2;
         }
