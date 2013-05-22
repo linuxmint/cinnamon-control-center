@@ -491,6 +491,9 @@ cc_network_panel_connect_to_3g_network (CcNetworkPanel   *panel,
                                         NMDevice         *device)
 {
         GtkWidget *toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)));
+        if (toplevel == NULL) {
+            toplevel = GTK_WIDGET (panel);
+        }
         MobileDialogClosure *closure;
         NMAMobileWizard *wizard;
 	NMDeviceModemCapabilities caps;
