@@ -175,9 +175,9 @@ bar_calc_layout (GvcLevelBar *bar)
 
         style = gtk_widget_get_style (GTK_WIDGET (bar));
         color = style->bg [GTK_STATE_NORMAL];
-        bar->priv->layout.bg_r = (float)color.red / 65535.0;
-        bar->priv->layout.bg_g = (float)color.green / 65535.0;
-        bar->priv->layout.bg_b = (float)color.blue / 65535.0;
+        bar->priv->layout.bg_r = 1.0;
+        bar->priv->layout.bg_g = 1.0;
+        bar->priv->layout.bg_b = 1.0;
         color = style->dark [GTK_STATE_NORMAL];
         bar->priv->layout.bdr_r = (float)color.red / 65535.0;
         bar->priv->layout.bdr_g = (float)color.green / 65535.0;
@@ -606,7 +606,7 @@ gvc_level_bar_draw (GtkWidget *widget,
                                 cairo_set_source_rgb (cr, bar->priv->layout.bg_r, bar->priv->layout.bg_g, bar->priv->layout.bg_b);
                                 cairo_fill_preserve (cr);
                                 /* fill foreground */
-                                cairo_set_source_rgba (cr, bar->priv->layout.fl_r, bar->priv->layout.fl_g, bar->priv->layout.fl_b, 0.5);
+                                cairo_set_source_rgba (cr, bar->priv->layout.fl_r, bar->priv->layout.fl_g, bar->priv->layout.fl_b, 0.7);
                                 cairo_fill_preserve (cr);
                         } else {
                                 /* fill background */
@@ -647,7 +647,7 @@ gvc_level_bar_draw (GtkWidget *widget,
                                 cairo_set_source_rgb (cr, bar->priv->layout.bg_r, bar->priv->layout.bg_g, bar->priv->layout.bg_b);
                                 cairo_fill_preserve (cr);
                                 /* fill foreground */
-                                cairo_set_source_rgba (cr, bar->priv->layout.fl_r, bar->priv->layout.fl_g, bar->priv->layout.fl_b, 0.5);
+                                cairo_set_source_rgba (cr, bar->priv->layout.fl_r, bar->priv->layout.fl_g, bar->priv->layout.fl_b, 0.7);
                                 cairo_fill_preserve (cr);
                         } else {
                                 /* fill background */
