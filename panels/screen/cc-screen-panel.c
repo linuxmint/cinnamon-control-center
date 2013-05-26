@@ -33,7 +33,7 @@ CC_PANEL_REGISTER (CcScreenPanel, cc_screen_panel)
 struct _CcScreenPanelPrivate
 {
   GSettings     *lock_settings;
-  GSettings     *gsd_settings;
+  GSettings     *csd_settings;
   GSettings     *session_settings;
   GSettings     *lockdown_settings;
   GCancellable  *cancellable;
@@ -79,10 +79,10 @@ cc_screen_panel_dispose (GObject *object)
       g_object_unref (priv->lock_settings);
       priv->lock_settings = NULL;
     }
-  if (priv->gsd_settings)
+  if (priv->csd_settings)
     {
-      g_object_unref (priv->gsd_settings);
-      priv->gsd_settings = NULL;
+      g_object_unref (priv->csd_settings);
+      priv->csd_settings = NULL;
     }
   if (priv->session_settings)
     {
@@ -353,8 +353,8 @@ dpms_combo_changed_cb (GtkWidget *widget, CcScreenPanel *self)
                       -1);
 
   /* set both battery and ac keys */
-  g_settings_set_int (self->priv->gsd_settings, "sleep-display-ac", value);
-  g_settings_set_int (self->priv->gsd_settings, "sleep-display-battery", value);
+  g_settings_set_int (self->priv->csd_settings, "sleep-display-ac", value);
+  g_settings_set_int (self->priv->csd_settings, "sleep-display-battery", value);
 
   set_idle_delay_from_dpms (self, value);
 }
@@ -400,7 +400,7 @@ set_dpms_value_for_combo (GtkComboBox *combo_box, CcScreenPanel *self)
   i = 0;
 
   /* try to make the UI match the AC setting */
-  value = g_settings_get_int (self->priv->gsd_settings, "sleep-display-ac");
+  value = g_settings_get_int (self->priv->csd_settings, "sleep-display-ac");
   do
     {
       gtk_tree_model_get (model, &iter,
@@ -488,9 +488,9 @@ cc_screen_panel_init (CcScreenPanel *self)
   g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                             G_DBUS_PROXY_FLAGS_NONE,
                             NULL,
-                            "org.gnome.SettingsDaemon",
-                            "/org/gnome/SettingsDaemon/Power",
-                            "org.gnome.SettingsDaemon.Power.Screen",
+                            "org.cinnamon.SettingsDaemon",
+                            "/org/cinnamon/SettingsDaemon/Power",
+                            "org.cinnamon.SettingsDaemon.Power.Screen",
                             self->priv->cancellable,
                             got_power_proxy_cb,
                             self);
@@ -500,7 +500,7 @@ cc_screen_panel_init (CcScreenPanel *self)
                     "changed",
                     G_CALLBACK (on_lock_settings_changed),
                     self);
-  self->priv->gsd_settings = g_settings_new ("org.gnome.settings-daemon.plugins.power");
+  self->priv->csd_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.power");
   self->priv->session_settings = g_settings_new ("org.gnome.desktop.session");
   self->priv->lockdown_settings = g_settings_new ("org.gnome.desktop.lockdown");
   g_signal_connect (self->priv->lockdown_settings,
@@ -510,7 +510,7 @@ cc_screen_panel_init (CcScreenPanel *self)
 
   /* bind the auto dim checkbox */
   widget = WID ("screen_auto_reduce_checkbutton");
-  g_settings_bind (self->priv->gsd_settings,
+  g_settings_bind (self->priv->csd_settings,
                    "idle-dim-battery",
                    widget, "active",
                    G_SETTINGS_BIND_DEFAULT);

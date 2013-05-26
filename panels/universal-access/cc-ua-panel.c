@@ -665,7 +665,7 @@ cc_ua_panel_init (CcUaPanel *self)
   priv->kb_settings = g_settings_new ("org.gnome.desktop.a11y.keyboard");
   priv->mouse_settings = g_settings_new ("org.gnome.desktop.a11y.mouse");
   priv->application_settings = g_settings_new ("org.gnome.desktop.a11y.applications");
-  priv->mediakeys_settings = g_settings_new ("org.gnome.settings-daemon.plugins.media-keys");
+  priv->mediakeys_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.media-keys");
 
   cc_ua_panel_init_keyboard (self);
   cc_ua_panel_init_mouse (self);
