@@ -29,7 +29,7 @@
 #include <string.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
-#include <gnome-settings-daemon/gsd-enums.h>
+#include <cinnamon-settings-daemon/gsd-enums.h>
 #include <math.h>
 
 #include "cinnamon-mouse-properties.h"
@@ -267,8 +267,8 @@ device_changed (GdkDeviceManager *device_manager,
 GtkWidget *
 gnome_mouse_properties_init (GtkBuilder *dialog)
 {
-	mouse_settings = g_settings_new ("org.gnome.settings-daemon.peripherals.mouse");
-	touchpad_settings = g_settings_new ("org.gnome.settings-daemon.peripherals.touchpad");
+	mouse_settings = g_settings_new ("org.cinnamon.settings-daemon.peripherals.mouse");
+	touchpad_settings = g_settings_new ("org.cinnamon.settings-daemon.peripherals.touchpad");
 
 	device_manager = gdk_display_get_device_manager (gdk_display_get_default ());
 	device_added_id = g_signal_connect (device_manager, "device-added",

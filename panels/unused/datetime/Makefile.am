@@ -140,7 +140,7 @@ ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libdate_time.la
 
 # FIXME add a way to regenerate the dtm.[ch]
-# gdbus-codegen --generate-c-code dtm  --interface-prefix org.gnome.SettingsDaemon  /path/to/gnome-settings-daemon/plugins/datetime/gsd-datetime-mechanism.xml
+# gdbus-codegen --generate-c-code dtm  --interface-prefix org.gnome.SettingsDaemon  /path/to/cinnamon-settings-daemon/plugins/datetime/gsd-datetime-mechanism.xml
 # See also:
 # https://bugzilla.gnome.org/show_bug.cgi?id=650875
 # https://bugzilla.gnome.org/show_bug.cgi?id=650874

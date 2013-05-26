@@ -26,7 +26,7 @@
 #include <string.h>
 #include <gdk/gdk.h>
 #include <gdk/gdkx.h>
-#include <gnome-settings-daemon/gsd-enums.h>
+#include <cinnamon-settings-daemon/gsd-enums.h>
 #include <math.h>
 
 #include "cinnamon-mouse-test.h"
@@ -338,7 +338,7 @@ setup_dialog (GtkBuilder *dialog)
 GtkWidget *
 gnome_mouse_test_init (GtkBuilder *dialog)
 {
-	mouse_settings = g_settings_new ("org.gnome.settings-daemon.peripherals.mouse");
+	mouse_settings = g_settings_new ("org.cinnamon.settings-daemon.peripherals.mouse");
 
 	setup_dialog (dialog);
 

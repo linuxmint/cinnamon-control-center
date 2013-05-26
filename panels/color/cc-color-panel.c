@@ -75,7 +75,7 @@ typedef enum {
   GCM_PREFS_ENTRY_TYPE_IMPORT
 } GcmPrefsEntryType;
 
-#define GCM_SETTINGS_SCHEMA                             "org.gnome.settings-daemon.plugins.color"
+#define GCM_SETTINGS_SCHEMA                             "org.cinnamon.settings-daemon.plugins.color"
 #define GCM_SETTINGS_RECALIBRATE_PRINTER_THRESHOLD      "recalibrate-printer-threshold"
 #define GCM_SETTINGS_RECALIBRATE_DISPLAY_THRESHOLD      "recalibrate-display-threshold"
 
