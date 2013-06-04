@@ -44,8 +44,6 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->priv->builder, s))
 
-#define TOP_BAR_HEIGHT 10
-
 /* The minimum supported size for the panel, see:
  * http://live.gnome.org/Design/SystemSettings */
 #define MINIMUM_WIDTH 675
@@ -88,7 +86,6 @@ struct _CcDisplayPanelPrivate
 
   GtkWidget      *area;
   gboolean        ignore_gui_changes;
-  gboolean        dragging_top_bar;
 
   /* These are used while we are waiting for the ApplyConfiguration method to be executed over D-bus */
   GDBusProxy *proxy;
@@ -1659,64 +1656,6 @@ set_cursor (GtkWidget *widget, GdkCursorType type)
 }
 
 static void
-set_top_bar_tooltip (CcDisplayPanel *self, gboolean is_dragging)
-{
-  const char *text;
-
-  if (is_dragging)
-    text = NULL;
-  else
-    text = _("Drag to change primary display.");
-
-  gtk_widget_set_tooltip_text (self->priv->area, text);
-}
-
-static void
-on_top_bar_event (FooScrollArea *area,
-                  FooScrollAreaEvent *event,
-                  CcDisplayPanel *self)
-{
-  /* Ignore drops */
-  if (event->type == FOO_DROP)
-    return;
-
-  /* If the mouse is inside the top bar, set the cursor to "you can move me".  See
-   * on_canvas_event() for where we reset the cursor to the default if it
-   * exits the outputs' area.
-   */
-  if (!gnome_rr_config_get_clone (self->priv->current_configuration) && get_n_connected (self) > 1)
-    set_cursor (GTK_WIDGET (area), GDK_HAND1);
-
-  if (event->type == FOO_BUTTON_PRESS)
-    {
-      rebuild_gui (self);
-      set_top_bar_tooltip (self, TRUE);
-
-      if (!gnome_rr_config_get_clone (self->priv->current_configuration) && get_n_connected (self) > 1)
-        {
-          self->priv->dragging_top_bar = TRUE;
-          foo_scroll_area_begin_grab (area, (FooScrollAreaEventFunc) on_top_bar_event, self);
-        }
-
-      foo_scroll_area_invalidate (area);
-    }
-  else
-    {
-      if (foo_scroll_area_is_grabbed (area))
-        {
-          if (event->type == FOO_BUTTON_RELEASE)
-            {
-              foo_scroll_area_end_grab (area, event);
-              self->priv->dragging_top_bar = FALSE;
-              set_top_bar_tooltip (self, FALSE);
-            }
-
-          foo_scroll_area_invalidate (area);
-        }
-    }
-}
-
-static void
 set_monitors_tooltip (CcDisplayPanel *self, gboolean is_dragging)
 {
   const char *text;
@@ -1753,8 +1692,6 @@ on_output_event (FooScrollArea *area,
 
   if (event->type == FOO_DRAG_HOVER)
     {
-      if (gnome_rr_output_info_is_active (output) && self->priv->dragging_top_bar)
-        set_primary_output (self, output);
       return;
     }
   if (event->type == FOO_DROP)
