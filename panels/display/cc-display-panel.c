@@ -74,6 +74,7 @@ struct _CcDisplayPanelPrivate
   GtkWidget      *current_monitor_event_box;
   GtkWidget      *current_monitor_label;
   GtkWidget      *monitor_switch;
+  GtkWidget      *primary_button;
   GtkListStore   *resolution_store;
   GtkWidget      *resolution_combo;
   GtkWidget      *rotation_combo;
@@ -104,6 +105,7 @@ static void on_clone_changed (GtkWidget *box, gpointer data);
 static gboolean output_overlaps (GnomeRROutputInfo *output, GnomeRRConfig *config);
 static void select_current_output_from_dialog_position (CcDisplayPanel *self);
 static void monitor_switch_active_cb (GObject *object, GParamSpec *pspec, gpointer data);
+static void primary_button_clicked_cb (GObject *object, gpointer data);
 static void get_geometry (GnomeRROutputInfo *output, int *w, int *h);
 static void apply_configuration_returned_cb (GObject *proxy, GAsyncResult *res, gpointer data);
 static gboolean get_clone_size (GnomeRRScreen *screen, int *width, int *height);
@@ -1679,7 +1681,19 @@ set_primary_output (CcDisplayPanel *self,
   for (i = 0; outputs[i] != NULL; ++i)
     gnome_rr_output_info_set_primary (outputs[i], outputs[i] == output);
 
-  gtk_widget_queue_draw (WID ("self->priv->area"));
+  gtk_widget_queue_draw (self->priv->area);
+}
+
+static void
+primary_button_clicked_cb (GObject    *object,
+                           gpointer    data)
+{
+  CcDisplayPanel *self = data;
+
+  if (!self->priv->current_output)
+    return;
+
+  set_primary_output (self, self->priv->current_output);
 }
 
 static void
@@ -2619,6 +2633,10 @@ cc_display_panel_constructor (GType                  gtype,
   g_signal_connect (self->priv->monitor_switch, "notify::active",
                     G_CALLBACK (monitor_switch_active_cb), self);
 
+  self->priv->primary_button = WID ("primary_button");
+  g_signal_connect(self->priv->primary_button, "clicked",
+                    G_CALLBACK (primary_button_clicked_cb), self);
+
   self->priv->resolution_combo = WID ("resolution_combo");
   g_signal_connect (self->priv->resolution_combo, "changed",
                     G_CALLBACK (on_resolution_changed), self);
@@ -2679,3 +2697,4 @@ cc_display_panel_register (GIOModule *module)
                                   CC_TYPE_DISPLAY_PANEL,
                                   "display", 0);
 }
+
