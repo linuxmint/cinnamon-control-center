@@ -46,9 +46,6 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 #define TOP_BAR_HEIGHT 10
 
-#define CLOCK_SCHEMA "org.gnome.desktop.interface"
-#define CLOCK_FORMAT_KEY "clock-format"
-
 /* The minimum supported size for the panel, see:
  * http://live.gnome.org/Design/SystemSettings */
 #define MINIMUM_WIDTH 675
@@ -71,7 +68,6 @@ struct _CcDisplayPanelPrivate
   GnomeRRLabeler *labeler;
   GnomeRROutputInfo         *current_output;
 
-  GSettings      *clock_settings;
   GtkBuilder     *builder;
   guint           focus_id;
   guint           focus_id_hide;
@@ -165,9 +161,6 @@ cc_display_panel_finalize (GObject *object)
   g_signal_handlers_disconnect_by_func (self->priv->screen, on_screen_changed, self);
   g_object_unref (self->priv->screen);
   g_object_unref (self->priv->builder);
-
-  if (self->priv->clock_settings != NULL)
-    g_object_unref (self->priv->clock_settings);
 
   shell = cc_panel_get_shell (CC_PANEL (self));
   if (shell != NULL)
@@ -2099,61 +2092,6 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   g_object_unref (layout);
   cairo_restore (cr);
 
-  /* Only display a launcher on all or primary monitor */
-  if (gnome_rr_output_info_get_primary (output))
-    {
-      const char *clock_format;
-      char *text;
-      gboolean use_24;
-      GDateTime *dt;
-      GDesktopClockFormat value;
-
-      /* top bar */
-      cairo_rectangle (cr, x, y, w * scale + 0.5, TOP_BAR_HEIGHT);
-      cairo_set_source_rgb (cr, 0, 0, 0);
-      foo_scroll_area_add_input_from_fill (FOO_SCROLL_AREA (self->priv->area),
-                                           cr,
-                                           (FooScrollAreaEventFunc) on_top_bar_event,
-                                           self);
-
-      cairo_fill (cr);
-
-      /* clock */
-      value = g_settings_get_enum (self->priv->clock_settings, CLOCK_FORMAT_KEY);
-      use_24 = value == G_DESKTOP_CLOCK_FORMAT_24H;
-      if (use_24)
-        clock_format = _("%a %R");
-      else
-        clock_format = _("%a %l:%M %p");
-
-      dt = g_date_time_new_now_local ();
-      text = g_date_time_format (dt, clock_format);
-      g_date_time_unref (dt);
-
-      layout = gtk_widget_create_pango_layout (GTK_WIDGET (self->priv->area), text);
-      g_free (text);
-      pango_layout_set_alignment (layout, PANGO_ALIGN_CENTER);
-
-      layout_set_font (layout, "Sans 4");
-      pango_layout_get_pixel_extents (layout, &ink_extent, &log_extent);
-
-      if (available_w < ink_extent.width)
-        factor = available_w / ink_extent.width;
-      else
-        factor = 1.0;
-
-      cairo_move_to (cr,
-                     x + ((w * scale + 0.5) - factor * log_extent.width) / 2,
-                     y + (TOP_BAR_HEIGHT - factor * log_extent.height) / 2);
-
-      cairo_scale (cr, factor, factor);
-
-      cairo_set_source_rgb (cr, 1.0, 1.0, 1.0);
-
-      pango_cairo_show_layout (cr, layout);
-      g_object_unref (layout);
-    }
-
   cairo_restore (cr);
 }
 
@@ -2712,8 +2650,6 @@ cc_display_panel_constructor (GType                  gtype,
       g_object_unref (builder);
       return obj;
     }
-
-  self->priv->clock_settings = g_settings_new (CLOCK_SCHEMA);
 
   shell = cc_panel_get_shell (CC_PANEL (self));
 
