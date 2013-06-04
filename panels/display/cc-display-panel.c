@@ -2522,49 +2522,6 @@ get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
   return gdk_pixbuf_get_from_surface (cairo_get_target (cr), 0, 0, monitor_width, monitor_height);
 }
 
-static gboolean
-switcher_set_to_launcher_on_all_monitors (CcDisplayPanel *self)
-{
-  GtkComboBox *combo = GTK_COMBO_BOX (WID ("launcher_placement_combo"));
-  gint active = gtk_combo_box_get_active (combo);
-  gint number_items = gtk_tree_model_iter_n_children (gtk_combo_box_get_model (combo),
-                                                      NULL);
-  return (active == number_items - 1);
-}
-
-static void
-on_launcher_placement_combo_changed (GtkComboBox *combo, CcDisplayPanel *self)
-{
-  gint active = gtk_combo_box_get_active (combo);
-  gint i;
-  gint index_on_combo = 0;
-
-  if (active < 0)
-    return;
-  gint value = 0;
-  gboolean on_all_monitors = switcher_set_to_launcher_on_all_monitors (self);
-
-  if (!on_all_monitors) {
-    value = 1;
-    // set the primary output if needed
-    GnomeRROutputInfo **outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
-
-    for (i = 0; outputs[i] != NULL; ++i)
-      {
-        GnomeRROutputInfo *output = outputs[i];
-        if (!gnome_rr_output_info_is_active (output))
-          continue;
-
-        if ((active == index_on_combo) && !gnome_rr_output_info_get_primary (output))
-          {
-            set_primary_output (self, output);
-            break;
-          }
-        index_on_combo++;
-      }
-  }
-}
-
 static void
 cc_display_panel_init (CcDisplayPanel *self)
 {
