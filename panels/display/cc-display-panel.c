@@ -2006,7 +2006,14 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
 
   cairo_save (cr);
 
-  layout_set_font (layout, "Sans 10");
+  if (gnome_rr_output_info_get_primary (output))
+    {
+      layout_set_font (layout, "Sans bold 10");
+    }
+  else
+    {
+      layout_set_font (layout, "Sans 10");
+    }
   pango_layout_get_pixel_extents (layout, &ink_extent, &log_extent);
 
   available_w = w * scale + 0.5 - 6; /* Same as the inner rectangle's width, minus 1 pixel of padding on each side */
