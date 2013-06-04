@@ -54,13 +54,6 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_WIDTH 675
 #define MINIMUM_HEIGHT 530
 
-#define UNITY_GSETTINGS_SCHEMA "org.compiz.unityshell"
-#define UNITY_GSETTINGS_PATH "/org/compiz/profiles/unity/plugins/unityshell/"
-#define UNITY_LAUNCHER_ALL_MONITORS_KEY "num-launchers"
-#define UNITY_STICKY_EDGE_KEY "launcher-capture-mouse"
-#define UNITY2D_GSETTINGS_MAIN "com.canonical.Unity2d"
-#define UNITY2D_GSETTINGS_LAUNCHER "com.canonical.Unity2d.Launcher"
-
 enum {
   TEXT_COL,
   WIDTH_COL,
@@ -79,9 +72,6 @@ struct _CcDisplayPanelPrivate
   GnomeRROutputInfo         *current_output;
 
   GSettings      *clock_settings;
-  GSettings      *unity_settings;
-  GSettings      *unity2d_settings_main;
-  GSettings      *unity2d_settings_launcher;
   GtkBuilder     *builder;
   guint           focus_id;
   guint           focus_id_hide;
@@ -130,8 +120,6 @@ static GObject *cc_display_panel_constructor (GType                  gtype,
 					      guint                  n_properties,
 					      GObjectConstructParam *properties);
 static void on_screen_changed (GnomeRRScreen *scr, gpointer data);
-static void refresh_unity_launcher_placement (CcDisplayPanel *self);
-static gboolean unity_launcher_on_all_monitors (GSettings *settings);
 
 static void
 cc_display_panel_get_property (GObject    *object,
@@ -181,13 +169,6 @@ cc_display_panel_finalize (GObject *object)
   if (self->priv->clock_settings != NULL)
     g_object_unref (self->priv->clock_settings);
 
-  if (self->priv->unity2d_settings_main != NULL)
-    g_object_unref (self->priv->unity2d_settings_main);
-  if (self->priv->unity2d_settings_launcher != NULL)
-    g_object_unref (self->priv->unity2d_settings_launcher);
-  if (self->priv->unity_settings != NULL)
-    g_object_unref (self->priv->unity_settings);
-
   shell = cc_panel_get_shell (CC_PANEL (self));
   if (shell != NULL)
     {
@@ -209,9 +190,6 @@ cc_display_panel_finalize (GObject *object)
 static const char *
 cc_display_panel_get_help_uri (CcPanel *panel)
 {
-  if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
-    return "help:ubuntu-help/prefs-display";
-  else
     return "help:gnome-help/prefs-display";
 }
 
@@ -254,12 +232,6 @@ error_message (CcDisplayPanel *self, const char *primary_text, const char *secon
 
   gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_destroy (dialog);
-}
-
-static gboolean
-is_unity_session (void)
-{
-  return (g_strcmp0 (g_getenv("XDG_CURRENT_DESKTOP"), "Unity") == 0);
 }
 
 static gboolean
@@ -306,8 +278,6 @@ on_screen_changed (GnomeRRScreen *scr,
 
   select_current_output_from_dialog_position (self);
 
-  if (is_unity_session ())
-    refresh_unity_launcher_placement (self);
 }
 
 static void
@@ -645,10 +615,6 @@ rebuild_mirror_screens (CcDisplayPanel *self)
   gtk_widget_set_sensitive (self->priv->clone_checkbox, mirror_is_supported);
   gtk_widget_set_sensitive (self->priv->clone_label, mirror_is_supported);
 
-  /* set inactive the launcher placement choice */
-  gtk_widget_set_sensitive (WID ("launcher_placement_combo"), !mirror_is_active);
-  gtk_widget_set_sensitive (WID ("stickyedge_switch"), !mirror_is_active);
-
   g_signal_handlers_unblock_by_func (self->priv->clone_checkbox, G_CALLBACK (on_clone_changed), self);
 }
 
@@ -896,7 +862,6 @@ rebuild_gui (CcDisplayPanel *self)
   rebuild_on_off_radios (self);
   rebuild_resolution_combo (self);
   rebuild_rotation_combo (self);
-  refresh_unity_launcher_placement (self);
 
   self->priv->ignore_gui_changes = FALSE;
 }
@@ -1783,8 +1748,6 @@ set_primary_output (CcDisplayPanel *self,
     gnome_rr_output_info_set_primary (outputs[i], outputs[i] == output);
 
   gtk_widget_queue_draw (WID ("self->priv->area"));
-  /* refresh the combobox */
-  refresh_unity_launcher_placement (self);
 }
 
 static void
@@ -2137,29 +2100,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_restore (cr);
 
   /* Only display a launcher on all or primary monitor */
-  if (is_unity_session ())
-    {
-      if (gnome_rr_output_info_is_active (output) && (unity_launcher_on_all_monitors (self->priv->unity_settings) || gnome_rr_output_info_get_primary (output)))
-        {
-          cairo_rectangle (cr, x, y, 10, h * scale + 0.5);
-          cairo_set_source_rgb (cr, 0, 0, 0);
-          foo_scroll_area_add_input_from_fill (FOO_SCROLL_AREA (self->priv->area),
-                                               cr,
-                                               (FooScrollAreaEventFunc) on_top_bar_event,
-                                               self);
-          cairo_fill (cr);
-
-          cairo_set_source_rgb (cr, 0.25, 0.25, 0.25);
-          cairo_rectangle (cr, x + 1, y + 6, 8, 8);
-          cairo_rectangle (cr, x + 1, y + 16, 8, 8);
-          cairo_rectangle (cr, x + 1, y + 26, 8, 8);
-          cairo_rectangle (cr, x + 1, y + 36, 8, 8);
-          cairo_rectangle (cr, x + 1, y + h * scale + 0.5 - 10, 8, 8);
-          cairo_fill (cr);
-        }
-    }
-
-  if (gnome_rr_output_info_get_primary (output) && !is_unity_session ())
+  if (gnome_rr_output_info_get_primary (output))
     {
       const char *clock_format;
       char *text;
@@ -2655,42 +2596,6 @@ dialog_map_event_cb (GtkWidget *widget, GdkEventAny *event, gpointer data)
   return FALSE;
 }
 
-static void
-stickyedge_widget_refresh (GtkSwitch *switcher, GSettings *settings)
-{
-  gboolean stickyedge_enabled = g_settings_get_boolean (settings, UNITY_STICKY_EDGE_KEY);
-
-  gtk_switch_set_active (switcher, stickyedge_enabled);
-}
-
-static void
-ext_stickyedge_changed_callback (GSettings* settings,
-                                 guint key,
-                                 gpointer user_data)
-{
-  stickyedge_widget_refresh (GTK_SWITCH (user_data), settings);
-}
-
-static void
-on_stickyedge_changed (GtkSwitch *switcher, GParamSpec *pspec, gpointer user_data)
-{
-  CcDisplayPanel *self = CC_DISPLAY_PANEL (user_data);
-  gboolean enabled = gtk_switch_get_active (GTK_SWITCH (switcher));
-
-  /* 3d */
-  g_settings_set_boolean (self->priv->unity_settings, UNITY_STICKY_EDGE_KEY, enabled);
-  /* 2d */
-  if (self->priv->unity2d_settings_main)
-    g_settings_set_boolean (self->priv->unity2d_settings_main, "sticky-edges", enabled);
-}
-
-static gboolean
-unity_launcher_on_all_monitors (GSettings *settings)
-{
-  gint value = g_settings_get_int (settings, UNITY_LAUNCHER_ALL_MONITORS_KEY);
-  return (value == 0);
-}
-
 static GdkPixbuf*
 get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
 {
@@ -2721,56 +2626,6 @@ get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
   return gdk_pixbuf_get_from_surface (cairo_get_target (cr), 0, 0, monitor_width, monitor_height);
 }
 
-static void
-refresh_unity_launcher_placement (CcDisplayPanel *self)
-{
-  GtkWidget *launcher_placement_combo = WID ("launcher_placement_combo");
-  GtkListStore *liststore;
-  GtkTreeIter iter;
-  GList *connected_outputs = NULL;
-  GList *list;
-  gboolean launcher_on_all_monitors = FALSE; //unity_launcher_on_all_monitors (self->priv->unity_settings);
-  gint index_of_primary_screen = 0;
-  gint i;
-
-  liststore = (GtkListStore *) gtk_builder_get_object (self->priv->builder, "available_launcher_placement_store");
-  gtk_list_store_clear (liststore);
-
-  connected_outputs = list_connected_outputs (self, NULL, NULL);
-  for (list = connected_outputs, i = 0; list != NULL; list = list->next)
-    {
-      char *monitor_name;
-      GdkPixbuf *monitor_pixbuf;
-      GnomeRROutputInfo *output = list->data;
-
-      if (!gnome_rr_output_info_is_active (output))
-        continue;
-
-      gtk_list_store_append (liststore, &iter);
-      monitor_name = g_strdup (gnome_rr_output_info_get_display_name (output));
-      monitor_pixbuf = get_monitor_pixbuf (self, output);
-
-      gtk_list_store_set (liststore, &iter, 0, monitor_pixbuf, 1, monitor_name, -1);
-
-      /* select it if primary and only one launcher */
-      if (gnome_rr_output_info_get_primary (output) && (!launcher_on_all_monitors))
-        index_of_primary_screen = i;
-      i++;
-
-      g_object_unref (monitor_pixbuf);
-      g_free (monitor_name);
-    }
-
-   // FIXME: check autosort?
-   gtk_list_store_append (liststore, &iter);
-   gtk_list_store_set (liststore, &iter, 0, NULL, 1, _("All displays"), -1);
-
-   if (launcher_on_all_monitors)
-     index_of_primary_screen = i;
-
-   gtk_combo_box_set_active (GTK_COMBO_BOX (launcher_placement_combo), index_of_primary_screen);
-}
-
 static gboolean
 switcher_set_to_launcher_on_all_monitors (CcDisplayPanel *self)
 {
@@ -2779,23 +2634,6 @@ switcher_set_to_launcher_on_all_monitors (CcDisplayPanel *self)
   gint number_items = gtk_tree_model_iter_n_children (gtk_combo_box_get_model (combo),
                                                       NULL);
   return (active == number_items - 1);
-}
-
-static void
-ext_launcher_placement_changed_callback (GSettings* settings,
-                                         guint key,
-                                         gpointer user_data)
-{
-  // add some crazyness as 2d/3d are not using the same keys
-  CcDisplayPanel *self = CC_DISPLAY_PANEL (user_data);
-  gint launcher_unity_value = 0;
-
-  // two options support: all monitors (0)i or just primary desktop (hence set to 1, not any other number)
-  if (! switcher_set_to_launcher_on_all_monitors (self))
-    launcher_unity_value = 1;
-
-  if (g_settings_get_int (settings, UNITY_LAUNCHER_ALL_MONITORS_KEY) != launcher_unity_value)
-    refresh_unity_launcher_placement (self);
 }
 
 static void
@@ -2829,57 +2667,6 @@ on_launcher_placement_combo_changed (GtkComboBox *combo, CcDisplayPanel *self)
         index_on_combo++;
       }
   }
-
-  /* 3d */
-  if (self->priv->unity_settings)
-    g_settings_set_int (self->priv->unity_settings, UNITY_LAUNCHER_ALL_MONITORS_KEY, value);
-  /* 2d */
-  if (self->priv->unity2d_settings_launcher)
-    g_settings_set_boolean (self->priv->unity2d_settings_launcher, "only-one-launcher", !on_all_monitors);
-}
-
-static void
-setup_unity_settings (CcDisplayPanel *self)
-{
-  const gchar * const *schemas;
-
-  /* Only use the unity-2d schema if it's installed */
-  schemas = g_settings_list_schemas ();
-  while (*schemas != NULL)
-    {
-      if (g_strcmp0 (*schemas, UNITY2D_GSETTINGS_LAUNCHER) == 0)
-        {
-          self->priv->unity2d_settings_main = g_settings_new (UNITY2D_GSETTINGS_MAIN);
-          self->priv->unity2d_settings_launcher = g_settings_new (UNITY2D_GSETTINGS_LAUNCHER);
-          break;
-        }
-      schemas++;
-    }
-  schemas = g_settings_list_relocatable_schemas ();
-  while (*schemas != NULL)
-    {
-      if (g_strcmp0 (*schemas, UNITY_GSETTINGS_SCHEMA) == 0)
-        {
-          self->priv->unity_settings = g_settings_new_with_path (UNITY_GSETTINGS_SCHEMA, UNITY_GSETTINGS_PATH);
-          break;
-        }
-      schemas++;
-    }
-
-  if (!self->priv->unity_settings)
-    return;
-
-  GtkWidget *sticky_edge_switch = WID ("stickyedge_switch");
-  g_signal_connect (sticky_edge_switch, "notify::active",
-                    G_CALLBACK (on_stickyedge_changed), self);
-  g_signal_connect (self->priv->unity_settings, "changed::" UNITY_STICKY_EDGE_KEY,
-                    G_CALLBACK (ext_stickyedge_changed_callback), sticky_edge_switch);
-  stickyedge_widget_refresh (GTK_SWITCH (sticky_edge_switch), self->priv->unity_settings);
-
-  g_signal_connect (G_OBJECT (WID ("launcher_placement_combo")), "changed",
-              G_CALLBACK (on_launcher_placement_combo_changed), self);
-  g_signal_connect (self->priv->unity_settings, "changed::" UNITY_LAUNCHER_ALL_MONITORS_KEY,
-                    G_CALLBACK (ext_launcher_placement_changed_callback), self);
 }
 
 static void
@@ -2995,18 +2782,6 @@ cc_display_panel_constructor (GType                  gtype,
 
   g_signal_connect_swapped (WID ("apply_button"),
                             "clicked", G_CALLBACK (apply), self);
-
-  /* Unity settings */
-  if (is_unity_session ())
-    setup_unity_settings (self);
-  else
-    {
-      gtk_widget_hide (WID ("unity_launcher_placement_sep"));
-      gtk_widget_hide (WID ("launcher_placement_label"));
-      gtk_widget_hide (WID ("sticky_edge_label"));
-      gtk_widget_hide (WID ("launcher_placement_combo"));
-      gtk_widget_hide (WID ("stickyedge_switch"));
-    }
 
   gtk_widget_show (self->priv->panel);
   gtk_container_add (GTK_CONTAINER (self), self->priv->panel);
