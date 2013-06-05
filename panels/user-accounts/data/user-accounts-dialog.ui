@@ -229,23 +229,6 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="login-options-label">
-                            <property name="visible">True</property>
-                            <property name="xalign">1</property>
-                            <property name="ypad">5</property>
-                            <property name="label" translatable="yes">Login Options</property>
-                            <attributes>
-                              <attribute name="weight" value="bold"/>
-                            </attributes>
-                          </object>
-                          <packing>
-                            <property name="top_attach">3</property>
-                            <property name="bottom_attach">4</property>
-                            <property name="x_options">GTK_FILL</property>
-                            <property name="y_options">0</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkLabel" id="password-label">
                             <property name="visible">True</property>
                             <property name="xalign">1</property>
@@ -272,49 +255,6 @@
                             <property name="right_attach">2</property>
                             <property name="top_attach">4</property>
                             <property name="bottom_attach">5</property>
-                            <property name="y_options">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="autologin-label">
-                            <property name="visible">True</property>
-                            <property name="xalign">1</property>
-                            <property name="label" translatable="yes">A_utomatic Login</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">autologin-switch</property>
-                            <style>
-                              <class name="dim-label"/>
-                            </style>
-                          </object>
-                          <packing>
-                            <property name="top_attach">5</property>
-                            <property name="bottom_attach">6</property>
-                            <property name="x_options">GTK_FILL</property>
-                            <property name="y_options">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkHBox" id="hbox30">
-                            <property name="visible">True</property>
-                            <child>
-                              <object class="GtkSwitch" id="autologin-switch">
-                                <property name="visible">True</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">False</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <placeholder/>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="left_attach">1</property>
-                            <property name="right_attach">2</property>
-                            <property name="top_attach">5</property>
-                            <property name="bottom_attach">6</property>
                             <property name="y_options">0</property>
                           </packing>
                         </child>
@@ -469,7 +409,6 @@
       <widget name="account-fingerprint-label"/>
       <widget name="language-label"/>
       <widget name="password-label"/>
-      <widget name="login-options-label"/>
       <widget name="account-type-label"/>
     </widgets>
   </object>
