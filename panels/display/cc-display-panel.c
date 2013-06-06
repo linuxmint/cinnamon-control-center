@@ -31,11 +31,12 @@
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 #include <libgnome-desktop/gnome-rr.h>
 #include <libgnome-desktop/gnome-rr-config.h>
-#include <libgnome-desktop/gnome-rr-labeler.h>
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <glib/gi18n-lib.h>
 #include <gdesktop-enums.h>
+
+#include "cc-rr-labeler.h"
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
@@ -75,7 +76,7 @@ struct _CcDisplayPanelPrivate
 {
   GnomeRRScreen       *screen;
   GnomeRRConfig  *current_configuration;
-  GnomeRRLabeler *labeler;
+  CcRRLabeler *labeler;
   GnomeRROutputInfo         *current_output;
 
   GSettings      *clock_settings;
@@ -200,7 +201,7 @@ cc_display_panel_finalize (GObject *object)
         g_signal_handler_disconnect (GTK_WIDGET (self), self->priv->focus_id_hide);
     }
 
-  gnome_rr_labeler_hide (self->priv->labeler);
+  cc_rr_labeler_hide (self->priv->labeler);
   g_object_unref (self->priv->labeler);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->finalize (object);
@@ -293,16 +294,16 @@ on_screen_changed (GnomeRRScreen *scr,
   self->priv->current_output = NULL;
 
   if (self->priv->labeler) {
-    gnome_rr_labeler_hide (self->priv->labeler);
+    cc_rr_labeler_hide (self->priv->labeler);
     g_object_unref (self->priv->labeler);
   }
 
-  self->priv->labeler = gnome_rr_labeler_new (self->priv->current_configuration);
+  self->priv->labeler = cc_rr_labeler_new (self->priv->current_configuration);
 
   if (cc_panel_get_shell (CC_PANEL (self)) == NULL)
-    gnome_rr_labeler_hide (self->priv->labeler);
+    cc_rr_labeler_hide (self->priv->labeler);
   else
-    gnome_rr_labeler_show (self->priv->labeler);
+    cc_rr_labeler_show (self->priv->labeler);
 
   select_current_output_from_dialog_position (self);
 
@@ -2594,9 +2595,9 @@ dialog_toplevel_focus_changed (GtkWindow      *window,
   if (self->priv->labeler == NULL)
     return;
   if (gtk_window_has_toplevel_focus (window))
-    gnome_rr_labeler_show (self->priv->labeler);
+    cc_rr_labeler_show (self->priv->labeler);
   else
-    gnome_rr_labeler_hide (self->priv->labeler);
+    cc_rr_labeler_hide (self->priv->labeler);
 }
 
 static void
@@ -2606,9 +2607,9 @@ widget_visible_changed (GtkWidget *widget,
     if (CC_DISPLAY_PANEL(widget)->priv->labeler == NULL)
         return;
     if (gtk_widget_get_visible (widget)) {
-        gnome_rr_labeler_show (CC_DISPLAY_PANEL (widget)->priv->labeler);
+        cc_rr_labeler_show (CC_DISPLAY_PANEL (widget)->priv->labeler);
     } else {
-        gnome_rr_labeler_hide (CC_DISPLAY_PANEL (widget)->priv->labeler);
+        cc_rr_labeler_hide (CC_DISPLAY_PANEL (widget)->priv->labeler);
     }
 }
 
