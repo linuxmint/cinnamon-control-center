@@ -1204,6 +1204,7 @@ setup_main_window (UmUserPanelPrivate *d)
                               G_CALLBACK (activate_link_cb), d);
             gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 2);
             gtk_widget_show (GTK_WIDGET (button));
+            gtk_widget_set_has_tooltip (GTK_WIDGET (button), FALSE);
         }
 
         button = get_widget (d, "add-user-toolbutton");
