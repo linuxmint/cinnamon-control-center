@@ -1054,6 +1054,22 @@ match_user (GtkTreeModel *model,
 }
 
 static void
+login_options_cb (GtkWidget *widget, UmUserPanelPrivate *private)
+{
+    gchar *argv[3];
+    argv[0] = "gksu";
+    argv[1] = "/usr/sbin/mdmsetup";
+    argv[3] = NULL;
+    g_spawn_async(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
+}
+
+static gboolean
+activate_link_cb (GtkLinkButton *button, gpointer user_data)
+{
+    return TRUE;
+}
+
+static void
 setup_main_window (UmUserPanelPrivate *d)
 {
         GtkWidget *userlist;
@@ -1164,18 +1180,30 @@ setup_main_window (UmUserPanelPrivate *d)
         g_signal_connect (button, "clicked",
                           G_CALLBACK (change_fingerprint), d);
 
+        GtkWidget *box = get_widget (d, "accounts-vbox");
         d->permission = (GPermission *)polkit_permission_new_sync (USER_ACCOUNTS_PERMISSION, NULL, NULL, &error);
         if (d->permission != NULL) {
                 g_signal_connect (d->permission, "notify",
                                   G_CALLBACK (on_permission_changed), d);
                 on_permission_changed (d->permission, NULL, d);
                 button = gtk_lock_button_new (d->permission);
-                GtkWidget *box = get_widget (d, "accounts-vbox");
                 gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 2);
                 gtk_widget_show (GTK_WIDGET (button));
         } else {
                 g_warning ("Cannot create '%s' permission: %s", USER_ACCOUNTS_PERMISSION, error->message);
                 g_error_free (error);
+        }
+
+        gchar *path = g_find_program_in_path ("mdmsetup");
+        if (path != NULL) {
+            g_free (path);
+            button = gtk_link_button_new_with_label ("", _("Login Options"));
+            g_signal_connect (GTK_LINK_BUTTON (button), "clicked",
+                              G_CALLBACK (login_options_cb), d);
+            g_signal_connect (GTK_LINK_BUTTON (button), "activate-link",
+                              G_CALLBACK (activate_link_cb), d);
+            gtk_box_pack_start (GTK_BOX (box), button, FALSE, FALSE, 2);
+            gtk_widget_show (GTK_WIDGET (button));
         }
 
         button = get_widget (d, "add-user-toolbutton");
