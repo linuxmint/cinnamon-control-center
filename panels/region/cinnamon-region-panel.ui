@@ -958,7 +958,7 @@ default settings</property>
                   <object class="GtkLabel" id="label46">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Layouts</property>
+                    <property name="label" translatable="yes">Keyboard Layouts</property>
                   </object>
                   <packing>
                     <property name="position">2</property>
