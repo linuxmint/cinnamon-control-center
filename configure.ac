@@ -88,14 +88,14 @@ dnl ==============================================
 
 GLIB_REQUIRED_VERSION=2.31.0
 GTK_REQUIRED_VERSION=3.4.2
-PA_REQUIRED_VERSION=2.0
+PA_REQUIRED_VERSION=1.1
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
 NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 GNOME_DESKTOP_REQUIRED_VERSION=3.4.2
-SCHEMAS_REQUIRED_VERSION=3.4.2
+SCHEMAS_REQUIRED_VERSION=3.4.1
 CLUTTER_REQUIRED_VERSION=1.11.3
 CSD_REQUIRED_VERSION=1.0.0
 
@@ -150,7 +150,7 @@ fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
 # Check for gnome-bluetooth
-PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.2,
+PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.3.4,
 		  [have_bluetooth=yes], have_bluetooth=no)
 AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
 
@@ -186,7 +186,23 @@ if test x"$enable_cups" != x"no" ; then
   AC_SUBST(CUPS_LIBS)
 fi
 
-PKG_CHECK_MODULES(CHEESE, cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0)
+# Optional dependency for the user accounts panel
+AC_ARG_WITH([cheese],
+            AS_HELP_STRING([--with-cheese], [enable cheese webcam support]),,
+            with_cheese=auto)
+
+if test x"$with_cheese" != x"no" ; then
+   PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0, [have_cheese=yes], [have_cheese=no])
+   if test x${have_cheese} = xyes; then
+     AC_DEFINE(HAVE_CHEESE, 1, [Define to 1 to enable cheese webcam support])
+   fi
+   if test x${with_cheese} = xyes && test x${have_cheese} = xno; then
+     AC_MSG_ERROR([Cheese configured but not found])
+   fi
+else
+   have_cheese=no
+fi
+AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
@@ -440,7 +456,11 @@ if test "x$with_systemd" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
 fi
-
+if test "x$have_cheese" = "xyes"; then
+    AC_MSG_NOTICE([** Cheese (Users panel webcam support)])
+else
+    AC_MSG_NOTICE([   Users panel webcam support disabled])
+fi
 if test "x$enable_ibus" == "xyes"; then
 	AC_MSG_NOTICE([** IBus (Region panel IBus support)])
 else

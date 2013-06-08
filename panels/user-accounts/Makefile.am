@@ -17,8 +17,11 @@ AM_CPPFLAGS =						\
 	-I$(srcdir)/../common/				\
 	-I$(srcdir)/../../shell/			\
 	$(PANEL_CFLAGS)					\
-	$(USER_ACCOUNTS_PANEL_CFLAGS) \
-    $(CHEESE_CFLAGS)
+	$(USER_ACCOUNTS_PANEL_CFLAGS)
+
+if BUILD_CHEESE
+AM_CPPFLAGS += $(CHEESE_CFLAGS)
+endif
 
 BUILT_SOURCES = \
        um-realm-generated.c \
@@ -64,8 +67,11 @@ libuser_accounts_la_LIBADD = 		\
 	$(USER_ACCOUNTS_PANEL_LIBS)	\
 	$(top_builddir)/panels/common/liblanguage.la \
 	-lcrypt				\
-	-lm \
-    $(CHEESE_LIBS)
+	-lm
+
+if BUILD_CHEESE
+libuser_accounts_la_LIBADD += $(CHEESE_LIBS)
+endif
 
 libuser_accounts_la_LDFLAGS = $(PANEL_LDFLAGS)
 

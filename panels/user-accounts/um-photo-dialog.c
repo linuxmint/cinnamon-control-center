@@ -29,9 +29,11 @@
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 #include <libgnome-desktop/gnome-desktop-thumbnail.h>
 
+#ifdef HAVE_CHEESE
 #include <cheese-avatar-chooser.h>
 #include <cheese-camera-device.h>
 #include <cheese-camera-device-monitor.h>
+#endif
 
 #include "um-photo-dialog.h"
 #include "um-user-manager.h"
@@ -45,10 +47,11 @@ struct _UmPhotoDialog {
         GtkWidget *popup_button;
         GtkWidget *crop_area;
 
+#ifdef HAVE_CHEESE
         CheeseCameraDeviceMonitor *monitor;
         GtkWidget *take_photo_menuitem;
         guint num_cameras;
-
+#endif
 
         GnomeDesktopThumbnailFactory *thumb_factory;
 
@@ -265,6 +268,8 @@ file_icon_selected (GtkMenuItem   *menuitem,
         um_photo_dialog_select_file (um);
 }
 
+#ifdef HAVE_CHEESE
+
 static gboolean
 destroy_chooser (GtkWidget *chooser)
 {
@@ -334,6 +339,7 @@ device_removed (CheeseCameraDeviceMonitor *monitor,
         um->num_cameras--;
         update_photo_menu_status (um);
 }
+#endif
 
 static void
 stock_icon_selected (GtkMenuItem   *menuitem,
@@ -462,7 +468,7 @@ skip_faces:
 
         y++;
 
-
+#ifdef HAVE_CHEESE
         um->take_photo_menuitem = gtk_menu_item_new_with_label (_("Take a photo..."));
         gtk_menu_attach (GTK_MENU (menu), GTK_WIDGET (um->take_photo_menuitem),
                          0, ROW_SPAN - 1, y, y + 1);
@@ -477,8 +483,8 @@ skip_faces:
         g_signal_connect (G_OBJECT (um->monitor), "removed",
                           G_CALLBACK (device_removed), um);
         cheese_camera_device_monitor_coldplug (um->monitor);
-
         y++;
+#endif
 
         menuitem = gtk_menu_item_new_with_label (_("Browse for more pictures..."));
         gtk_menu_attach (GTK_MENU (menu), GTK_WIDGET (menuitem),
@@ -589,8 +595,10 @@ um_photo_dialog_free (UmPhotoDialog *um)
 
         if (um->thumb_factory)
                 g_object_unref (um->thumb_factory);
+#ifdef HAVE_CHEESE
         if (um->monitor)
                 g_object_unref (um->monitor);
+#endif
         if (um->user)
                 g_object_unref (um->user);
 

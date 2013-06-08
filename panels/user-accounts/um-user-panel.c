@@ -47,7 +47,12 @@
 #include "um-photo-dialog.h"
 #include "um-fingerprint-dialog.h"
 #include "um-utils.h"
+
+
+#ifdef HAVE_CHEESE
 #include <cheese/cheese-gtk.h>
+#endif /* HAVE_CHEESE */
+
 #include "cc-common-language.h"
 
 #define USER_ACCOUNTS_PERMISSION "org.cinnamon.controlcenter.user-accounts.administration"
@@ -1234,7 +1239,9 @@ um_user_panel_init (UmUserPanel *self)
         GtkWidget *button;
         GtkStyleContext *context;
 
+#ifdef HAVE_CHEESE
         cheese_gtk_init (NULL, NULL);
+#endif
 
         d = self->priv = UM_USER_PANEL_PRIVATE (self);
 
