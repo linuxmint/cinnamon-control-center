@@ -150,7 +150,7 @@ fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
 # Check for gnome-bluetooth
-PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.3.4,
+PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES cinnamon-bluetooth-1.0 >= 1.9.0,
 		  [have_bluetooth=yes], have_bluetooth=no)
 AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
 
@@ -437,7 +437,7 @@ else
 	AC_MSG_NOTICE([   Network panel disabled])
 fi
 if test "x$have_bluetooth" = "xyes"; then
-	AC_MSG_NOTICE([** gnome-bluetooth (Bluetooth panel)])
+	AC_MSG_NOTICE([** cinnamon-bluetooth (Bluetooth panel)])
 else
 	AC_MSG_NOTICE([   Bluetooth panel disabled])
 fi
