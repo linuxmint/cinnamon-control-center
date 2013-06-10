@@ -80,6 +80,48 @@
       </row>
     </data>
   </object>
+ <object class="GtkListStore" id="liststore_powerbutton">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="gint"/>
+      <!-- column-name sensitive -->
+      <column type="gboolean"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Lock Screen</col>
+        <col id="1">0</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Suspend</col>
+        <col id="1">1</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Shutdown</col>
+        <col id="1">2</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Hibernate</col>
+        <col id="1">3</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Ask</col>
+        <col id="1">4</col>
+        <col id="2">True</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Do nothing</col>
+        <col id="1">5</col>
+        <col id="2">True</col>
+      </row>
+    </data>
+  </object>
   <object class="GtkListStore" id="liststore_indicator">
     <columns>
       <!-- column-name name -->
@@ -305,6 +347,30 @@
                 <property name="top_attach">5</property>
                 <property name="width">2</property>
                 <property name="height">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_powerbutton">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">end</property>
+                <property name="label" translatable="yes">Power button action</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBox" id="combobox_power_button">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="model">liststore_powerbutton</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">6</property>
               </packing>
             </child>
           </object>

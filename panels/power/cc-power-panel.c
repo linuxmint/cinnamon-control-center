@@ -1092,10 +1092,18 @@ cc_power_panel_init (CcPowerPanel *self)
   gtk_widget_reparent (widget, (GtkWidget *) self);
 
 
-  gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "separator_indicator")));
+
   gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "label_indicator")));
   gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (self->priv->builder, "combobox_indicator")));
 
+  value = g_settings_get_enum (self->priv->csd_settings, "button-power");
+  widget = WID (self->priv->builder, "combobox_power_button");
+  disable_unavailable_combo_items (self, GTK_COMBO_BOX (widget));
+  set_value_for_combo (GTK_COMBO_BOX (widget), value);
+  g_object_set_data (G_OBJECT (widget), "_gsettings_key", "button-power");
+  g_signal_connect (widget, "changed",
+                    G_CALLBACK (combo_enum_changed_cb),
+                    self);
 }
 
 void
