@@ -149,7 +149,7 @@ if test "x$have_networkmanager" = xno ; then
 fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
-# Check for gnome-bluetooth
+# Check for cinnamon-bluetooth
 PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES cinnamon-bluetooth-1.0 >= 1.9.0,
 		  [have_bluetooth=yes], have_bluetooth=no)
 AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
@@ -187,21 +187,12 @@ if test x"$enable_cups" != x"no" ; then
 fi
 
 # Optional dependency for the user accounts panel
-AC_ARG_WITH([cheese],
-            AS_HELP_STRING([--with-cheese], [enable cheese webcam support]),,
-            with_cheese=auto)
 
-if test x"$with_cheese" != x"no" ; then
-   PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0, [have_cheese=yes], [have_cheese=no])
-   if test x${have_cheese} = xyes; then
-     AC_DEFINE(HAVE_CHEESE, 1, [Define to 1 to enable cheese webcam support])
-   fi
-   if test x${with_cheese} = xyes && test x${have_cheese} = xno; then
-     AC_MSG_ERROR([Cheese configured but not found])
-   fi
-else
-   have_cheese=no
+PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0, [have_cheese=yes], [have_cheese=no])
+if test x${have_cheese} = xyes; then
+  AC_DEFINE(HAVE_CHEESE, 1, [Define to 1 to enable cheese webcam support])
 fi
+
 AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
 
 # This is a hard-dependency for the region and user-accounts panels
