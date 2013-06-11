@@ -149,12 +149,35 @@ if test "x$have_networkmanager" = xno ; then
 fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
-# Check for cinnamon-bluetooth
-PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.1,
-		  [have_bluetooth=yes], have_bluetooth=no)
-AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
 
+# Check for bluetooth, requires explicit turn on
+# ----------------------------------------------
+AC_ARG_ENABLE(bluetooth,
+              AS_HELP_STRING([--enable-bluetooth],
+                             [Build bluetooth module support (no)]),
+              enable_bluetooth=$enableval,
+              enable_bluetooth=no)
+
+if test "x$enable_bluetooth" = "xno" ; then
+  HAVE_BLUETOOTH=no
+else
+  HAVE_BLUETOOTH=no
+  PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.1,
+          HAVE_BLUETOOTH=yes, HAVE_BLUETOOTH=no)
+  if test "x$enable_bluetooth" = "xyes" -a "x$HAVE_BLUETOOTH" = "xno" ; then
+    AC_MSG_ERROR(Bluetooth module build explicity enabled but not available)
+  fi
+
+  if test "x$HAVE_BLUETOOTH" = "xyes" ; then
+    AC_DEFINE(BUILD_BLUETOOTH, 1, [Defined if Bluetooth module is enabled])
+  fi
+fi
+AM_CONDITIONAL(BUILD_BLUETOOTH, test "x$BUILD_BLUETOOTH" = "xyes")
+
+
+# -----------------------------------------------
 # Check for CUPS 1.4 or newer
+
 AC_ARG_ENABLE([cups],
               AS_HELP_STRING([--disable-cups], [disable CUPS support (default: enabled)]),,
               [enable_cups=yes])
@@ -427,11 +450,6 @@ if test "x$have_networkmanager" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Network panel disabled])
 fi
-if test "x$have_bluetooth" = "xyes"; then
-	AC_MSG_NOTICE([** cinnamon-bluetooth (Bluetooth panel)])
-else
-	AC_MSG_NOTICE([   Bluetooth panel disabled])
-fi
 if test "x$have_cheese" = "xyes"; then
 	AC_MSG_NOTICE([** Cheese (Users panel webcam support)])
 else
@@ -458,3 +476,10 @@ else
 	AC_MSG_NOTICE([   Region panel IBus support disabled])
 fi
 AC_MSG_NOTICE([End options])
+echo "
+
+                 optional modules
+        ==================================
+        Bluetooth:       ${HAVE_BLUETOOTH}
+
+"
