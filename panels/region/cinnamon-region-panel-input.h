@@ -1,4 +1,4 @@
-/* gnome-region-panel-input.h
+/* cinnamon-region-panel-input.h
  * Copyright (C) 2011 Red Hat, Inc.
  *
  * Written by Matthias Clasen
@@ -19,8 +19,8 @@
  * 02111-1307, USA.
  */
 
-#ifndef __GNOME_KEYBOARD_PROPERTY_INPUT_H
-#define __GNOME_KEYBOARD_PROPERTY_INPUT_H
+#ifndef __CINNAMON_KEYBOARD_PROPERTY_INPUT_H
+#define __CINNAMON_KEYBOARD_PROPERTY_INPUT_H
 
 #include <gtk/gtk.h>
 
@@ -33,4 +33,4 @@ void setup_input_tabs (GtkBuilder    *builder,
 
 G_END_DECLS
 
-#endif  /* __GNOME_KEYBOARD_PROPERTY_INPUT_H */
+#endif  /* __CINNAMON_KEYBOARD_PROPERTY_INPUT_H */

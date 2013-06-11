@@ -26,9 +26,9 @@
 #include <string.h>
 #include <glib/gi18n.h>
 
-#include "gnome-region-panel-lang.h"
-#include "gnome-region-panel-formats.h"
-#include "gnome-region-panel-system.h"
+#include "cinnamon-region-panel-lang.h"
+#include "cinnamon-region-panel-formats.h"
+#include "cinnamon-region-panel-system.h"
 #include "cc-common-language.h"
 #include "cc-language-chooser.h"
 #include "gdm-languages.h"

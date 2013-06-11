@@ -30,7 +30,7 @@
 #include "cc-common-language.h"
 #include "cc-language-chooser.h"
 #include "gdm-languages.h"
-#include "gnome-region-panel-formats.h"
+#include "cinnamon-region-panel-formats.h"
 
 static void
 display_date (GtkLabel *label, GDateTime *dt, const gchar *format)

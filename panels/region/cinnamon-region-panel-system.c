@@ -34,7 +34,7 @@
 
 #include "cc-common-language.h"
 #include "gdm-languages.h"
-#include "gnome-region-panel-system.h"
+#include "cinnamon-region-panel-system.h"
 
 #define WID(s) GTK_WIDGET(gtk_builder_get_object (dialog, s))
 

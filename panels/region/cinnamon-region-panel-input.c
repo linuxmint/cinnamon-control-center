@@ -35,7 +35,7 @@
 #endif
 
 #include "gdm-languages.h"
-#include "gnome-region-panel-input.h"
+#include "cinnamon-region-panel-input.h"
 
 #define WID(s) GTK_WIDGET(gtk_builder_get_object (builder, s))
 
@@ -1146,18 +1146,12 @@ static gboolean
 go_to_shortcuts (GtkLinkButton *button,
                  CcRegionPanel *panel)
 {
-  CcShell *shell;
-  const gchar *argv[] = { "shortcuts", "Typing", NULL };
-  GError *error = NULL;
-
-  shell = cc_panel_get_shell (CC_PANEL (panel));
-  if (!cc_shell_set_active_panel_from_id (shell, "keyboard", argv, &error))
-    {
-      g_warning ("Failed to activate Keyboard panel: %s", error->message);
-      g_error_free (error);
-    }
-
-  return TRUE;
+    gchar *argv[3];
+    argv[0] = "cinnamon-settings";
+    argv[1] = "keyboard";
+    argv[3] = NULL;
+    g_spawn_async(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
+    return TRUE;
 }
 
 static void
@@ -1488,8 +1482,9 @@ input_chooser_new (GtkWindow    *main_window,
   GtkTreeIter iter;
 
   builder = gtk_builder_new ();
+  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
   gtk_builder_add_from_file (builder,
-                             GNOMECC_UI_DIR "/gnome-region-panel-input-chooser.ui",
+                             CINNAMONCC_UI_DIR "/cinnamon-region-panel-input-chooser.ui",
                              NULL);
   chooser = WID ("input_source_chooser");
   input_chooser = chooser;

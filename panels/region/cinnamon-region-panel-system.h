@@ -19,8 +19,8 @@
  * 02111-1307, USA.
  */
 
-#ifndef __GNOME_REGION_PANEL_SYSTEM_H
-#define __GNOME_REGION_PANEL_SYSTEM_H
+#ifndef __CINNAMON_REGION_PANEL_SYSTEM_H
+#define __CINNAMON_REGION_PANEL_SYSTEM_H
 
 #include <gtk/gtk.h>
 

@@ -19,8 +19,8 @@
  * 02111-1307, USA.
  */
 
-#ifndef __GNOME_KEYBOARD_PROPERTY_LANG_H
-#define __GNOME_KEYBOARD_PROPERTY_LANG_H
+#ifndef __CINNAMON_KEYBOARD_PROPERTY_LANG_H
+#define __CINNAMON_KEYBOARD_PROPERTY_LANG_H
 
 #include <gtk/gtk.h>
 
@@ -29,4 +29,4 @@ G_BEGIN_DECLS
 void setup_language (GtkBuilder *builder);
 
 G_END_DECLS
-#endif /* __GNOME_KEYBOARD_PROPERTY_LANG_H */
+#endif /* __CINNAMON_KEYBOARD_PROPERTY_LANG_H */

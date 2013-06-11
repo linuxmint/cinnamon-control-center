@@ -22,10 +22,10 @@
 #include "cc-region-panel.h"
 #include <gtk/gtk.h>
 
-#include "gnome-region-panel-input.h"
-#include "gnome-region-panel-lang.h"
-#include "gnome-region-panel-formats.h"
-#include "gnome-region-panel-system.h"
+#include "cinnamon-region-panel-input.h"
+#include "cinnamon-region-panel-lang.h"
+#include "cinnamon-region-panel-formats.h"
+#include "cinnamon-region-panel-system.h"
 
 CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
 
@@ -139,9 +139,9 @@ cc_region_panel_init (CcRegionPanel * self)
 	priv = self->priv = REGION_PANEL_PRIVATE (self);
 
 	priv->builder = gtk_builder_new ();
-
+        gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_from_file (priv->builder,
-				   GNOMECC_UI_DIR "/gnome-region-panel.ui",
+				   CINNAMONCC_UI_DIR "/cinnamon-region-panel.ui",
 				   &error);
 	if (error != NULL) {
 		g_warning ("Error loading UI file: %s", error->message);
