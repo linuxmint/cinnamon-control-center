@@ -82,6 +82,22 @@ else
   SYSTEMD=
 fi
 
+# IBus support
+IBUS_REQUIRED_VERSION=1.4.99
+
+AC_ARG_ENABLE(ibus,
+        AS_HELP_STRING([--disable-ibus],
+                       [Disable IBus support]),
+        enable_ibus=$enableval,
+        enable_ibus=yes)
+
+if test "x$enable_ibus" = "xyes" ; then
+        IBUS_MODULE="ibus-1.0 >= $IBUS_REQUIRED_VERSION"
+        AC_DEFINE(HAVE_IBUS, 1, [Defined if IBus support is enabled])
+else
+        IBUS_MODULE=
+fi
+
 dnl ==============================================
 dnl Check that we meet the  dependencies
 dnl ==============================================
@@ -119,9 +135,10 @@ PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES)
 PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
                   cinnamon-settings-daemon >= $CSD_REQUIRED_VERSION)
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.8)
-PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
+PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
-                  libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
+                  gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION
+                  $IBUS_MODULE)
 PKG_CHECK_MODULES(SCREEN_PANEL, $COMMON_MODULES)
 PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libcanberra-gtk3 >= $CANBERRA_REQUIRED_VERSION
