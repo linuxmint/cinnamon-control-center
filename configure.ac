@@ -150,7 +150,7 @@ fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
 # Check for cinnamon-bluetooth
-PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES cinnamon-bluetooth-1.0 >= 1.9.0,
+PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.1,
 		  [have_bluetooth=yes], have_bluetooth=no)
 AM_CONDITIONAL(BUILD_BLUETOOTH, [test x$have_bluetooth = xyes])
 
