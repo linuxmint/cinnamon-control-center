@@ -158,21 +158,22 @@ AC_ARG_ENABLE(bluetooth,
               enable_bluetooth=$enableval,
               enable_bluetooth=no)
 
+build_bluetooth=no
 if test "x$enable_bluetooth" = "xno" ; then
-  HAVE_BLUETOOTH=no
+  have_bluetooth=no
 else
-  HAVE_BLUETOOTH=no
+  have_bluetooth=no
   PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.1,
-          HAVE_BLUETOOTH=yes, HAVE_BLUETOOTH=no)
-  if test "x$enable_bluetooth" = "xyes" -a "x$HAVE_BLUETOOTH" = "xno" ; then
+          have_bluetooth=yes, have_bluetooth=no)
+  if test "x$enable_bluetooth" = "xyes" -a "x$have_bluetooth" = "xno" ; then
     AC_MSG_ERROR(Bluetooth module build explicity enabled but not available)
   fi
 
-  if test "x$HAVE_BLUETOOTH" = "xyes" ; then
-    AC_DEFINE(BUILD_BLUETOOTH, 1, [Defined if Bluetooth module is enabled])
+  if test "x$have_bluetooth" = "xyes" ; then
+    build_bluetooth=yes
   fi
 fi
-AM_CONDITIONAL(BUILD_BLUETOOTH, test "x$BUILD_BLUETOOTH" = "xyes")
+AM_CONDITIONAL(BUILD_BLUETOOTH, test "x$build_bluetooth" = "xyes")
 
 
 # -----------------------------------------------
@@ -480,6 +481,6 @@ echo "
 
                  optional modules
         ==================================
-        Bluetooth:       ${HAVE_BLUETOOTH}
+        Bluetooth:       ${build_bluetooth}
 
 "
