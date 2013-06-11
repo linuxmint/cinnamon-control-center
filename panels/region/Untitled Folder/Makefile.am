@@ -4,9 +4,9 @@ cappletname = region
 INCLUDES =						\
 	$(PANEL_CFLAGS)					\
 	$(REGION_PANEL_CFLAGS)				\
-	-DGNOMELOCALEDIR="\"$(datadir)/locale\""	\
-	-DGNOMECC_DATA_DIR="\"$(pkgdatadir)\""		\
-	-DGNOMECC_UI_DIR="\"$(uidir)\""			\
+	-DLOCALE_DIR="\"$(datadir)/locale\""	\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-I$(srcdir)/../common/				\
 	$(NULL)
 
@@ -17,15 +17,18 @@ libregion_la_SOURCES =	\
 	region-module.c \
 	cc-region-panel.c \
 	cc-region-panel.h \
-	gnome-region-panel-formats.c \
-	gnome-region-panel-formats.h \
-	gnome-region-panel-lang.c \
-	gnome-region-panel-lang.h \
-	gnome-region-panel-system.c \
-	gnome-region-panel-system.h \
-	gnome-region-panel-input.c \
-	gnome-region-panel-input.h \
-	$(NULL)
+	cinnamon-region-panel-formats.c \
+	cinnamon-region-panel-formats.h \
+	cinnamon-region-panel-lang.c \
+	cinnamon-region-panel-lang.h \
+	cinnamon-region-panel-system.c \
+	cinnamon-region-panel-system.h \
+	cinnamon-region-panel-xkb.c \
+	cinnamon-region-panel-xkblt.c \
+	cinnamon-region-panel-xkbltadd.c \
+	cinnamon-region-panel-xkbot.c \
+	cinnamon-region-panel-xkbpv.c \
+	cinnamon-region-panel-xkb.h
 
 libregion_la_LIBADD = $(PANEL_LIBS) $(REGION_PANEL_LIBS) $(builddir)/../common/liblanguage.la
 
@@ -35,12 +38,12 @@ libregion_la_LDFLAGS = $(PANEL_LDFLAGS)
 
 uidir   = $(pkgdatadir)/ui
 ui_DATA = \
-	gnome-region-panel.ui \
-	gnome-region-panel-input-chooser.ui \
-	$(NULL)
+	cinnamon-region-panel.ui \
+	cinnamon-region-panel-layout-chooser.ui \
+	cinnamon-region-panel-options-dialog.ui
 
 desktopdir = $(datadir)/applications
-Desktop_in_files = gnome-region-panel.desktop.in
+Desktop_in_files = cinnamon-region-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(Desktop_in_files) $(desktop_DATA)

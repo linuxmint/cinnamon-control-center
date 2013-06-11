@@ -13,21 +13,22 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
  * Author: Sergey Udaltsov <svu@gnome.org>
  *
  */
-
+#include "config.h"
 #include "cc-region-panel.h"
 #include <gtk/gtk.h>
+#include <glib/gi18n-lib.h>
 
-#include "gnome-region-panel-input.h"
-#include "gnome-region-panel-lang.h"
-#include "gnome-region-panel-formats.h"
-#include "gnome-region-panel-system.h"
+#include "cinnamon-region-panel-xkb.h"
+#include "cinnamon-region-panel-lang.h"
+#include "cinnamon-region-panel-formats.h"
+#include "cinnamon-region-panel-system.h"
 
-CC_PANEL_REGISTER (CcRegionPanel, cc_region_panel)
+G_DEFINE_DYNAMIC_TYPE (CcRegionPanel, cc_region_panel, CC_TYPE_PANEL)
 
 #define REGION_PANEL_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), CC_TYPE_REGION_PANEL, CcRegionPanelPrivate))
 
@@ -46,6 +47,14 @@ enum {
 	LAYOUTS_PAGE,
 	SYSTEM_PAGE
 };
+
+
+static gboolean
+languages_link_cb (GtkButton *button, gpointer user_data)
+{
+    g_spawn_command_line_async ("gnome-language-selector", NULL);
+    return TRUE;
+}
 
 static void
 cc_region_panel_set_page (CcRegionPanel *panel,
@@ -107,21 +116,12 @@ cc_region_panel_finalize (GObject * object)
 	G_OBJECT_CLASS (cc_region_panel_parent_class)->finalize (object);
 }
 
-static const char *
-cc_region_panel_get_help_uri (CcPanel *panel)
-{
-  return "help:gnome-help/prefs-language";
-}
-
 static void
 cc_region_panel_class_init (CcRegionPanelClass * klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	CcPanelClass * panel_class = CC_PANEL_CLASS (klass);
 
 	g_type_class_add_private (klass, sizeof (CcRegionPanelPrivate));
-
-	panel_class->get_help_uri = cc_region_panel_get_help_uri;
 
 	object_class->set_property = cc_region_panel_set_property;
 	object_class->finalize = cc_region_panel_finalize;
@@ -130,18 +130,26 @@ cc_region_panel_class_init (CcRegionPanelClass * klass)
 }
 
 static void
+cc_region_panel_class_finalize (CcRegionPanelClass * klass)
+{
+}
+
+static void
 cc_region_panel_init (CcRegionPanel * self)
 {
 	CcRegionPanelPrivate *priv;
 	GtkWidget *prefs_widget;
+	const char *desktop;
 	GError *error = NULL;
 
 	priv = self->priv = REGION_PANEL_PRIVATE (self);
 
-	priv->builder = gtk_builder_new ();
+	desktop = g_getenv ("XDG_CURRENT_DESKTOP");
 
+	priv->builder = gtk_builder_new ();
+    gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_from_file (priv->builder,
-				   GNOMECC_UI_DIR "/gnome-region-panel.ui",
+				   CINNAMONCC_UI_DIR "/cinnamon-region-panel.ui",
 				   &error);
 	if (error != NULL) {
 		g_warning ("Error loading UI file: %s", error->message);
@@ -149,24 +157,36 @@ cc_region_panel_init (CcRegionPanel * self)
 		return;
 	}
 
-	prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
-							     "region_notebook");
+    prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
+                                                         "region_notebook");
+
 	gtk_widget_set_size_request (GTK_WIDGET (prefs_widget), -1, 400);
 
 	gtk_widget_reparent (prefs_widget, GTK_WIDGET (self));
 
-        setup_input_tabs (priv->builder, self);
-	setup_language (priv->builder);
-	setup_formats (priv->builder);
-	setup_system (priv->builder);
+    setup_xkb_tabs (priv->builder);
+
+    setup_language (priv->builder);
+    setup_formats (priv->builder);
+    setup_system (priv->builder);
+
+        /* set screen link */
+
+    GtkWidget *widget = GTK_WIDGET (gtk_builder_get_object (self->priv->builder,
+                                                            "get_languages_button"));
+
+    gtk_button_set_label (GTK_BUTTON (widget), _("Get more languages..."));
+
+    g_signal_connect (widget, "clicked",
+                      G_CALLBACK (languages_link_cb),
+                      self);
 }
 
 void
 cc_region_panel_register (GIOModule * module)
 {
-    bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
 	cc_region_panel_register_type (G_TYPE_MODULE (module));
 	g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
 					CC_TYPE_REGION_PANEL,
