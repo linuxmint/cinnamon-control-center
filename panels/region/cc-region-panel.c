@@ -20,7 +20,9 @@
  */
 
 #include "cc-region-panel.h"
+#include <config.h>
 #include <gtk/gtk.h>
+#include <glib/gi18n-lib.h>
 
 #include "cinnamon-region-panel-input.h"
 #include "cinnamon-region-panel-lang.h"
@@ -139,7 +141,7 @@ cc_region_panel_init (CcRegionPanel * self)
 	priv = self->priv = REGION_PANEL_PRIVATE (self);
 
 	priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+    gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_from_file (priv->builder,
 				   CINNAMONCC_UI_DIR "/cinnamon-region-panel.ui",
 				   &error);

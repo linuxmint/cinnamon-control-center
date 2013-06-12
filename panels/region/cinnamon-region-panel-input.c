@@ -1216,7 +1216,7 @@ update_shortcuts (GtkBuilder *builder)
   char *previous, *next;
   GSettings *settings;
 
-  settings = g_settings_new ("org.gnome.settings-daemon.plugins.media-keys");
+  settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.media-keys");
 
   previous = g_settings_get_string (settings, "switch-input-source-backward");
   next = g_settings_get_string (settings, "switch-input-source");
@@ -1282,7 +1282,7 @@ setup_input_tabs (GtkBuilder    *builder,
 #ifdef HAVE_IBUS
   ibus_init ();
   shell_name_watch_id = g_bus_watch_name (G_BUS_TYPE_SESSION,
-                                          "org.gnome.Shell",
+                                          "org.Cinnamon",
                                           G_BUS_NAME_WATCHER_FLAGS_NONE,
                                           on_shell_appeared,
                                           NULL,
@@ -1482,7 +1482,7 @@ input_chooser_new (GtkWindow    *main_window,
   GtkTreeIter iter;
 
   builder = gtk_builder_new ();
-  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+  gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
   gtk_builder_add_from_file (builder,
                              CINNAMONCC_UI_DIR "/cinnamon-region-panel-input-chooser.ui",
                              NULL);
