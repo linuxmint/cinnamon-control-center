@@ -497,7 +497,7 @@ on_shell_appeared (GDBusConnection *connection,
 
   if (!ibus)
     {
-      ibus = ibus_bus_new_async ();
+      ibus = ibus_bus_new ();
       if (ibus_bus_is_connected (ibus))
         fetch_ibus_engines (builder);
       else

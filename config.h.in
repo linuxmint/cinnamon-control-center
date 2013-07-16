@@ -6,6 +6,9 @@
 /* Enable additional debugging at the expense of performance and size */
 #undef GNOME_ENABLE_DEBUG
 
+/* Define to 1 to enable cheese webcam support */
+#undef HAVE_CHEESE
+
 /* Define to 1 if you have the <cups/cups.h> header file. */
 #undef HAVE_CUPS_CUPS_H
 
@@ -20,6 +23,9 @@
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #undef HAVE_DLFCN_H
+
+/* Defined if IBus support is enabled */
+#undef HAVE_IBUS
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H

@@ -85,18 +85,18 @@ fi
 # IBus support
 IBUS_REQUIRED_VERSION=1.4.2
 
-AC_ARG_ENABLE(ibus,
-        AS_HELP_STRING([--disable-ibus],
-                       [Disable IBus support]),
-        enable_ibus=$enableval,
-        enable_ibus=yes)
-
-if test "x$enable_ibus" = "xyes" ; then
-        IBUS_MODULE="ibus-1.0 >= $IBUS_REQUIRED_VERSION"
-        AC_DEFINE(HAVE_IBUS, 1, [Defined if IBus support is enabled])
-else
-        IBUS_MODULE=
-fi
+#AC_ARG_ENABLE(ibus,
+#        AS_HELP_STRING([--disable-ibus],
+#                       [Disable IBus support]),
+#        enable_ibus=$enableval,
+#        enable_ibus=yes)
+enable_ibus=yes
+#if test "x$enable_ibus" = "xyes" ; then
+IBUS_MODULE="ibus-1.0 >= $IBUS_REQUIRED_VERSION"
+AC_DEFINE(HAVE_IBUS, 1, [Defined if IBus support is enabled])
+#else
+#        IBUS_MODULE=
+#fi
 
 dnl ==============================================
 dnl Check that we meet the  dependencies
