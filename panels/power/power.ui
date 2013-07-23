@@ -101,7 +101,7 @@
         <col id="2">True</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Shutdown</col>
+        <col id="0" translatable="yes">Shutdown Immediately</col>
         <col id="1">2</col>
         <col id="2">True</col>
       </row>
