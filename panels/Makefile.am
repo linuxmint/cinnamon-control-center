@@ -5,7 +5,6 @@ SUBDIRS= \
 	display \
 	region \
 	universal-access \
-	user-accounts  \
 	power \
 	sound \
 	sound-nua

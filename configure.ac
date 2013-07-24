@@ -129,11 +129,6 @@ PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libpulse >= $PA_REQUIRED_VERSION
                   libpulse-mainloop-glib >= $PA_REQUIRED_VERSION)
 PKG_CHECK_MODULES(UNIVERSAL_ACCESS_PANEL, $COMMON_MODULES)
-PKG_CHECK_MODULES(USER_ACCOUNTS_PANEL, $COMMON_MODULES
-                  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
-                  gnome-desktop-3.0
-                  gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION
-                  $SYSTEMD)
 
 GDESKTOP_PREFIX=`$PKG_CONFIG --variable prefix gsettings-desktop-schemas`
 AC_SUBST(GDESKTOP_PREFIX)
@@ -210,15 +205,6 @@ if test x"$enable_cups" != x"no" ; then
   AC_SUBST(CUPS_LIBS)
 fi
 
-# Optional dependency for the user accounts panel
-
-PKG_CHECK_MODULES(CHEESE, gstreamer-1.0 cheese-gtk >= 3.4.2 cheese clutter-gtk-1.0, [have_cheese=yes], [have_cheese=no])
-if test x${have_cheese} = xyes; then
-  AC_DEFINE(HAVE_CHEESE, 1, [Define to 1 to enable cheese webcam support])
-fi
-
-AM_CONDITIONAL(BUILD_CHEESE, test x${have_cheese} = xyes)
-
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
 
@@ -238,9 +224,6 @@ AC_MSG_RESULT($KRB5_CFLAGS $KRB5_LIBS)
 
 AC_SUBST(KRB5_CFLAGS)
 AC_SUBST(KRB5_LIBS)
-
-USER_ACCOUNTS_PANEL_CFLAGS="$USER_ACCOUNTS_PANEL_CFLAGS $KRB5_CFLAGS"
-USER_ACCOUNTS_PANEL_LIBS="$USER_ACCOUNTS_PANEL_LIBS $KRB5_LIBS"
 
 dnl ==============================================
 dnl End: Check that we meet the  dependencies
@@ -393,11 +376,6 @@ panels/network/Makefile
 panels/network/cinnamon-network-panel.desktop.in
 panels/universal-access/Makefile
 panels/universal-access/cinnamon-universal-access-panel.desktop.in
-panels/user-accounts/data/faces/Makefile
-panels/user-accounts/Makefile
-panels/user-accounts/data/Makefile
-panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in
-panels/user-accounts/data/icons/Makefile
 panels/sound/Makefile
 panels/sound/data/Makefile
 panels/sound/data/cinnamon-sound-panel.desktop.in
