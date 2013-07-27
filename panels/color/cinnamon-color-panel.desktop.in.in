@@ -2,7 +2,7 @@
 _Name=Color
 _Comment=Color management settings
 Exec=cinnamon-settings color
-Icon=preferences-color
+Icon=cinnamon-preferences-color
 Terminal=false
 Type=Application
 StartupNotify=true
