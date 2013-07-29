@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Bluetooth
 _Comment=Configure Bluetooth settings
-Icon=cinnamon-bluetooth
+Icon=bluetooth
 Exec=cinnamon-settings bluetooth
 Terminal=false
 Type=Application
