@@ -332,6 +332,7 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 		BluetoothType type;
 		gboolean connected;
 		GValue value = { 0 };
+		GHashTable *services;
 
 		if (self->priv->debug)
 			bluetooth_chooser_dump_selected_device (BLUETOOTH_CHOOSER (self->priv->chooser));
