@@ -42,6 +42,9 @@ CC_PANEL_REGISTER (CcBluetoothPanel, cc_bluetooth_panel)
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->priv->builder, s))
 
+#define BLUEZ_SERVICE    	"org.bluez"
+#define ADAPTER_IFACE   	"org.bluez.Adapter1"
+
 #define KEYBOARD_PREFS		"keyboard"
 #define MOUSE_PREFS		"mouse"
 #define SOUND_PREFS		"sound"
@@ -352,13 +355,6 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 				    g_value_get_boolean (&value) ? _("Yes") : _("No"));
 		g_value_unset (&value);
 
-		/* Connection */
-		bluetooth_chooser_get_selected_device_info (BLUETOOTH_CHOOSER (self->priv->chooser),
-							    "services", &value);
-		services = g_value_get_boxed (&value);
-		gtk_widget_set_sensitive (GTK_WIDGET (button), (services != NULL));
-		g_value_unset (&value);
-
 		/* UUIDs */
 		if (bluetooth_chooser_get_selected_device_info (BLUETOOTH_CHOOSER (self->priv->chooser),
 								"uuids", &value)) {
@@ -366,13 +362,19 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 			guint i;
 
 			uuids = (const char **) g_value_get_boxed (&value);
-			for (i = 0; uuids && uuids[i] != NULL; i++) {
-				if (g_str_equal (uuids[i], "OBEXObjectPush"))
-					gtk_widget_show (WID ("send_box"));
-				else if (g_str_equal (uuids[i], "OBEXFileTransfer"))
-					gtk_widget_show (WID ("browse_box"));
-			}
-			g_value_unset (&value);
+
+			gtk_widget_set_sensitive (GTK_WIDGET(button),
+						  bluetooth_client_get_connectable (uuids));
+			
+ 			for (i = 0; uuids && uuids[i] != NULL; i++) {
+ 				if (g_str_equal (uuids[i], "OBEXObjectPush")) {
+ 					gtk_widget_show (WID ("send_box"));
+ 					break;
+ 				}
+
+ 			}
+
+ 			g_value_unset (&value);
 		}
 
 		/* Type */
@@ -685,9 +687,9 @@ remove_selected_device (CcBluetoothPanel *self)
 	adapter_proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
 						       G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES | G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START,
 						       NULL,
-						       "org.bluez",
+						       BLUEZ_SERVICE,
 						       adapter,
-						       "org.bluez.Adapter",
+						       ADAPTER_IFACE,
 						       NULL,
 						       &error);
 	g_free (adapter);
