@@ -332,7 +332,6 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 		BluetoothType type;
 		gboolean connected;
 		GValue value = { 0 };
-		GHashTable *services;
 
 		if (self->priv->debug)
 			bluetooth_chooser_dump_selected_device (BLUETOOTH_CHOOSER (self->priv->chooser));
@@ -355,13 +354,6 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 				    g_value_get_boolean (&value) ? _("Yes") : _("No"));
 		g_value_unset (&value);
 
-		/* Connection */
-		bluetooth_chooser_get_selected_device_info (BLUETOOTH_CHOOSER (self->priv->chooser),
-							    "services", &value);
-		services = g_value_get_boxed (&value);
-		gtk_widget_set_sensitive (GTK_WIDGET (button), (services != NULL));
-		g_value_unset (&value);
-
 		/* UUIDs */
 		if (bluetooth_chooser_get_selected_device_info (BLUETOOTH_CHOOSER (self->priv->chooser),
 								"uuids", &value)) {
@@ -369,13 +361,19 @@ cc_bluetooth_panel_update_properties (CcBluetoothPanel *self)
 			guint i;
 
 			uuids = (const char **) g_value_get_boxed (&value);
-			for (i = 0; uuids && uuids[i] != NULL; i++) {
-				if (g_str_equal (uuids[i], "OBEXObjectPush"))
-					gtk_widget_show (WID ("send_box"));
-				else if (g_str_equal (uuids[i], "OBEXFileTransfer"))
-					gtk_widget_show (WID ("browse_box"));
-			}
-			g_value_unset (&value);
+
+			gtk_widget_set_sensitive (GTK_WIDGET(button),
+						  bluetooth_client_get_connectable (uuids));
+			
+ 			for (i = 0; uuids && uuids[i] != NULL; i++) {
+ 				if (g_str_equal (uuids[i], "OBEXObjectPush")) {
+ 					gtk_widget_show (WID ("send_box"));
+ 					break;
+ 				}
+
+ 			}
+
+ 			g_value_unset (&value);
 		}
 
 		/* Type */
