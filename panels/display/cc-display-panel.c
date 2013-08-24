@@ -29,8 +29,8 @@
 #include <gtk/gtk.h>
 #include "scrollarea.h"
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-rr.h>
-#include <libgnome-desktop/gnome-rr-config.h>
+#include <libcinnamon-desktop/gnome-rr.h>
+#include <libcinnamon-desktop/gnome-rr-config.h>
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <glib/gi18n-lib.h>
@@ -47,7 +47,7 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 #define TOP_BAR_HEIGHT 10
 
-#define CLOCK_SCHEMA "org.gnome.desktop.interface"
+#define CLOCK_SCHEMA "org.cinnamon.desktop.interface"
 #define CLOCK_FORMAT_KEY "clock-format"
 
 /* The minimum supported size for the panel, see:
@@ -656,7 +656,7 @@ rebuild_mirror_screens (CcDisplayPanel *self)
 static char *
 mirror_monitor_name (void)
 {
-  /* Keep this string in sync with gnome-desktop/libgnome-desktop/gnome-rr-labeler.c */
+  /* Keep this string in sync with gnome-desktop/libcinnamon-desktop/gnome-rr-labeler.c */
 
   /* Translators:  this is the feature where what you see on your laptop's
    * screen is the same as your external projector.  Here, "Mirrored" is being

@@ -56,12 +56,12 @@ static void     gvc_sound_theme_chooser_finalize   (GObject            *object);
 
 G_DEFINE_TYPE (GvcSoundThemeChooser, gvc_sound_theme_chooser, GTK_TYPE_VBOX)
 
-#define KEY_SOUNDS_SCHEMA          "org.gnome.desktop.sound"
+#define KEY_SOUNDS_SCHEMA          "org.cinnamon.desktop.sound"
 #define EVENT_SOUNDS_KEY           "event-sounds"
 #define INPUT_SOUNDS_KEY           "input-feedback-sounds"
 #define SOUND_THEME_KEY            "theme-name"
 
-#define WM_SCHEMA                  "org.gnome.desktop.wm.preferences"
+#define WM_SCHEMA                  "org.cinnamon.desktop.wm.preferences"
 #define AUDIO_BELL_KEY             "audible-bell"
 
 #define DEFAULT_ALERT_ID        "__default"

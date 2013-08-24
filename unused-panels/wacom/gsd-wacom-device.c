@@ -28,7 +28,7 @@
 #include <gdk/gdkx.h>
 #include <X11/Xatom.h>
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-rr.h>
+#include <libcinnamon-desktop/gnome-rr.h>
 
 #include <libwacom/libwacom.h>
 #include <X11/extensions/XInput.h>

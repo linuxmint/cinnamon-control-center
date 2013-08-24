@@ -27,7 +27,7 @@
 #define CC_RR_LABELER_H
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-rr-config.h>
+#include <libcinnamon-desktop/gnome-rr-config.h>
 
 #define GNOME_TYPE_RR_LABELER            (cc_rr_labeler_get_type ())
 #define CC_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNOME_TYPE_RR_LABELER, CcRRLabeler))

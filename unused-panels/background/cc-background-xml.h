@@ -21,7 +21,7 @@
 #ifndef _CC_BACKGROUND_XML_H_
 #define _CC_BACKGROUND_XML_H_
 
-#include <libgnome-desktop/gnome-desktop-thumbnail.h>
+#include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
 #include <gtk/gtk.h>
 #include <gio/gio.h>
 

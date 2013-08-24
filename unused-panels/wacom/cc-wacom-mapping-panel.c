@@ -24,8 +24,8 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-rr.h>
-#include <libgnome-desktop/gnome-rr-config.h>
+#include <libcinnamon-desktop/gnome-rr.h>
+#include <libcinnamon-desktop/gnome-rr-config.h>
 
 #include <string.h>
 

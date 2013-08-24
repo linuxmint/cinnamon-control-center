@@ -26,7 +26,7 @@
 #include "cc-background-item.h"
 #include "cc-background-xml.h"
 
-#include <libgnome-desktop/gnome-desktop-thumbnail.h>
+#include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
 #include <gio/gio.h>
 
 G_DEFINE_TYPE (BgWallpapersSource, bg_wallpapers_source, BG_TYPE_SOURCE)

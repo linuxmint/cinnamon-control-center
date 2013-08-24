@@ -26,7 +26,7 @@
 
 #include <string.h>
 #include <gio/gio.h>
-#include <libgnome-desktop/gnome-desktop-thumbnail.h>
+#include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
 #include <gdesktop-enums.h>
 
 G_DEFINE_TYPE (BgPicturesSource, bg_pictures_source, BG_TYPE_SOURCE)

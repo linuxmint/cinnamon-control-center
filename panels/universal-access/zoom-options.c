@@ -528,8 +528,8 @@ zoom_options_init (ZoomOptions *self)
       return;
     }
 
-  priv->settings = g_settings_new ("org.gnome.desktop.a11y.magnifier");
-  priv->application_settings = g_settings_new ("org.gnome.desktop.a11y.applications");
+  priv->settings = g_settings_new ("org.cinnamon.desktop.a11y.magnifier");
+  priv->application_settings = g_settings_new ("org.cinnamon.desktop.a11y.applications");
 
   pango_attrs = pango_attr_list_new ();
   attr = pango_attr_scale_new (FONT_SCALE);

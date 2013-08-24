@@ -33,7 +33,7 @@
 #include <stdlib.h>
 #include <libintl.h>
 
-#include <libgnome-desktop/gnome-wall-clock.h>
+#include <libcinnamon-desktop/gnome-wall-clock.h>
 #include <polkit/polkit.h>
 
 /* FIXME: This should be "Etc/GMT" instead */
@@ -62,7 +62,7 @@ enum {
 
 #define W(x) (GtkWidget*) gtk_builder_get_object (priv->builder, x)
 
-#define CLOCK_SCHEMA "org.gnome.desktop.interface"
+#define CLOCK_SCHEMA "org.cinnamon.desktop.interface"
 #define CLOCK_FORMAT_KEY "clock-format"
 
 struct _CcDateTimePanelPrivate

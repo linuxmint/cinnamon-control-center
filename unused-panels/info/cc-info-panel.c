@@ -49,10 +49,10 @@
 #define CUSTOM_ITEM_DO_NOTHING "cc-item-do-nothing"
 #define CUSTOM_ITEM_OPEN_FOLDER "cc-item-open-folder"
 
-#define MEDIA_HANDLING_SCHEMA "org.gnome.desktop.media-handling"
+#define MEDIA_HANDLING_SCHEMA "org.cinnamon.desktop.media-handling"
 
 /* Session */
-#define GNOME_SESSION_MANAGER_SCHEMA        "org.gnome.desktop.session"
+#define GNOME_SESSION_MANAGER_SCHEMA        "org.cinnamon.desktop.session"
 #define KEY_SESSION_NAME          "session-name"
 
 #define WID(w) (GtkWidget *) gtk_builder_get_object (self->priv->builder, w)

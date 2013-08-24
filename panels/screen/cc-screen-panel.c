@@ -495,14 +495,14 @@ cc_screen_panel_init (CcScreenPanel *self)
                             got_power_proxy_cb,
                             self);
 
-  self->priv->lock_settings = g_settings_new ("org.gnome.desktop.screensaver");
+  self->priv->lock_settings = g_settings_new ("org.cinnamon.desktop.screensaver");
   g_signal_connect (self->priv->lock_settings,
                     "changed",
                     G_CALLBACK (on_lock_settings_changed),
                     self);
   self->priv->csd_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.power");
-  self->priv->session_settings = g_settings_new ("org.gnome.desktop.session");
-  self->priv->lockdown_settings = g_settings_new ("org.gnome.desktop.lockdown");
+  self->priv->session_settings = g_settings_new ("org.cinnamon.desktop.session");
+  self->priv->lockdown_settings = g_settings_new ("org.cinnamon.desktop.lockdown");
   g_signal_connect (self->priv->lockdown_settings,
                     "changed",
                     G_CALLBACK (on_lockdown_settings_changed),

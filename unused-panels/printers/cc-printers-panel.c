@@ -2947,7 +2947,7 @@ cc_printers_panel_init (CcPrintersPanel *self)
     gtk_builder_get_object (priv->builder, "printer-location-label");
   g_signal_connect (widget, "editing-done", G_CALLBACK (printer_location_edit_cb), self);
 
-  priv->lockdown_settings = g_settings_new ("org.gnome.desktop.lockdown");
+  priv->lockdown_settings = g_settings_new ("org.cinnamon.desktop.lockdown");
   if (priv->lockdown_settings)
     g_signal_connect (priv->lockdown_settings,
                       "changed",

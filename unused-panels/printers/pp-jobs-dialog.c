@@ -37,7 +37,7 @@
 
 #define EMPTY_TEXT "\xe2\x80\x94"
 
-#define CLOCK_SCHEMA "org.gnome.desktop.interface"
+#define CLOCK_SCHEMA "org.cinnamon.desktop.interface"
 #define CLOCK_FORMAT_KEY "clock-format"
 
 static void pp_jobs_dialog_hide (PpJobsDialog *dialog);

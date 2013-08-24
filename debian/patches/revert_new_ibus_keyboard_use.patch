@@ -77,7 +77,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/keyboard/cc
 -#include <glib/gi18n.h>
 -
 -#define GNOME_DESKTOP_USE_UNSTABLE_API
--#include <libgnome-desktop/gnome-xkb-info.h>
+-#include <libcinnamon-desktop/gnome-xkb-info.h>
 -
 -#include "cc-keyboard-option.h"
 -
@@ -88,7 +88,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/keyboard/cc
 -#define CC_IS_KEYBOARD_OPTION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  CC_TYPE_KEYBOARD_OPTION))
 -#define CC_KEYBOARD_OPTION_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  CC_TYPE_KEYBOARD_OPTION, CcKeyboardOptionClass))
 -
--#define INPUT_SOURCES_SCHEMA "org.gnome.desktop.input-sources"
+-#define INPUT_SOURCES_SCHEMA "org.cinnamon.desktop.input-sources"
 -#define XKB_OPTIONS_KEY "xkb-options"
 -
 -#define XKB_OPTION_GROUP_LVL3 "lv3"
@@ -1837,7 +1837,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -#include <gio/gdesktopappinfo.h>
 -
 -#define GNOME_DESKTOP_USE_UNSTABLE_API
--#include <libgnome-desktop/gnome-xkb-info.h>
+-#include <libcinnamon-desktop/gnome-xkb-info.h>
 -
 -#ifdef HAVE_IBUS
 -#include <ibus.h>
@@ -1848,7 +1848,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -
 -#define WID(s) GTK_WIDGET(gtk_builder_get_object (builder, s))
 -
--#define GNOME_DESKTOP_INPUT_SOURCES_DIR "org.gnome.desktop.input-sources"
+-#define GNOME_DESKTOP_INPUT_SOURCES_DIR "org.cinnamon.desktop.input-sources"
 -
 -#define KEY_CURRENT_INPUT_SOURCE "current"
 -#define KEY_INPUT_SOURCES        "sources"
@@ -3851,7 +3851,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
  #include <glib/gi18n.h>
  
 -#define GNOME_DESKTOP_USE_UNSTABLE_API
--#include <libgnome-desktop/gnome-xkb-info.h>
+-#include <libcinnamon-desktop/gnome-xkb-info.h>
 -
 +#include <libgnomekbd/gkbd-keyboard-config.h>
  #include "cc-common-language.h"
@@ -4120,7 +4120,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
                            G_CALLBACK (locale_settings_changed), dialog);
          g_object_weak_ref (G_OBJECT (dialog), (GWeakNotify) g_object_unref, locale_settings);
  
--        input_sources_settings = g_settings_new ("org.gnome.desktop.input-sources");
+-        input_sources_settings = g_settings_new ("org.cinnamon.desktop.input-sources");
 -        g_signal_connect (input_sources_settings, "changed::sources",
 -                          G_CALLBACK (input_sources_changed), dialog);
 -        g_object_weak_ref (G_OBJECT (dialog), (GWeakNotify) g_object_unref, input_sources_settings);

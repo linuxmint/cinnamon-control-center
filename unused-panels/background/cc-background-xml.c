@@ -23,7 +23,7 @@
 #include <gio/gio.h>
 #include <string.h>
 #include <libxml/parser.h>
-#include <libgnome-desktop/gnome-bg.h>
+#include <libcinnamon-desktop/gnome-bg.h>
 #include <gdesktop-enums.h>
 
 #include "gdesktop-enums-types.h"
