@@ -1,2 +1,4 @@
 #!/bin/bash
-xgettext --language=C --from-code=UTF-8 --keyword=_ --keyword=N_ --output=cinnamon-control-center.pot panels/*.c shell/*.c
+intltool-extract --type=gettext/glade panels/*/*.ui
+xgettext --language=C --from-code=UTF-8 --keyword=_ --keyword=N_ --output=cinnamon-control-center.pot panels/*/*.c shell/*.c panels/*/*.ui.h
+rm -f panels/*/*.ui.h
