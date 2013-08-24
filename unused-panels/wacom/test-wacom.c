@@ -65,7 +65,7 @@ int main (int argc, char **argv)
 	GtkWidget *window, *notebook;
 	GList *devices;
 
-	bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
+	bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 

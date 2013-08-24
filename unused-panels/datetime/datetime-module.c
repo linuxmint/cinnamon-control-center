@@ -30,10 +30,10 @@
 void
 g_io_module_load (GIOModule *module)
 {
-  bindtextdomain (GETTEXT_PACKAGE, CINNAMONLOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
-  bindtextdomain (GETTEXT_PACKAGE_TIMEZONES, CINNAMONLOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE_TIMEZONES, "/usr/share/cinnamon/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE_TIMEZONES, "UTF-8");
 
   /* register the panel */

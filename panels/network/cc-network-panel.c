@@ -1246,7 +1246,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
 void
 cc_network_panel_register (GIOModule *module)
 {
-    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+    bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
     cc_network_panel_register_type (G_TYPE_MODULE (module));
     g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,

@@ -1109,7 +1109,7 @@ cc_power_panel_init (CcPowerPanel *self)
 void
 cc_power_panel_register (GIOModule *module)
 {
-  bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
+  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
   cc_power_panel_register_type (G_TYPE_MODULE (module));
