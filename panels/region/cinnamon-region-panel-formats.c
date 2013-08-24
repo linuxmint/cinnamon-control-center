@@ -330,7 +330,7 @@ setup_formats (GtkBuilder *builder)
         GSettings *locale_settings;
         GtkTreeSelection *selection;
 
-	locale_settings = g_settings_new ("org.gnome.system.locale");
+	locale_settings = g_settings_new ("org.cinnamon.system.locale");
 
         /* Setup junction between toolbar and treeview */
         widget = (GtkWidget *)gtk_builder_get_object (builder, "region-swindow");
