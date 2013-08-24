@@ -18,8 +18,8 @@ Index: b/panels/background/bg-pictures-source.c
 --- a/panels/background/bg-pictures-source.c
 +++ b/panels/background/bg-pictures-source.c
 @@ -335,7 +335,7 @@
- 		"shading", G_DESKTOP_BACKGROUND_SHADING_SOLID,
- 		"placement", G_DESKTOP_BACKGROUND_STYLE_ZOOM,
+ 		"shading", C_DESKTOP_BACKGROUND_SHADING_SOLID,
+ 		"placement", C_DESKTOP_BACKGROUND_STYLE_ZOOM,
  		NULL);
 -  if (source_uri != NULL)
 +  if (source_uri != NULL && !g_file_is_native (file))

@@ -27,7 +27,7 @@
 #include <string.h>
 #include <gio/gio.h>
 #include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 
 G_DEFINE_TYPE (BgPicturesSource, bg_pictures_source, BG_TYPE_SOURCE)
 
@@ -332,8 +332,8 @@ add_single_file (BgPicturesSource *bg_source,
   g_free (uri);
   g_object_set (G_OBJECT (item),
 		"flags", CC_BACKGROUND_ITEM_HAS_URI | CC_BACKGROUND_ITEM_HAS_SHADING,
-		"shading", G_DESKTOP_BACKGROUND_SHADING_SOLID,
-		"placement", G_DESKTOP_BACKGROUND_STYLE_ZOOM,
+		"shading", C_DESKTOP_BACKGROUND_SHADING_SOLID,
+		"placement", C_DESKTOP_BACKGROUND_STYLE_ZOOM,
 		NULL);
   if (source_uri != NULL && !g_file_is_native (file))
     g_object_set (G_OBJECT (item), "source-url", source_uri, NULL);

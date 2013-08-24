@@ -24,7 +24,7 @@
 #include <string.h>
 #include <libxml/parser.h>
 #include <libcinnamon-desktop/gnome-bg.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 
 #include "gdesktop-enums-types.h"
 #include "cc-background-item.h"
@@ -83,8 +83,8 @@ static struct {
 	int value;
 	const char *string;
 } lookups[] = {
-	{ G_DESKTOP_BACKGROUND_SHADING_HORIZONTAL, "horizontal-gradient" },
-	{ G_DESKTOP_BACKGROUND_SHADING_VERTICAL, "vertical-gradient" },
+	{ C_DESKTOP_BACKGROUND_SHADING_HORIZONTAL, "horizontal-gradient" },
+	{ C_DESKTOP_BACKGROUND_SHADING_VERTICAL, "vertical-gradient" },
 };
 
 static int
@@ -240,14 +240,14 @@ cc_background_xml_load_xml_internal (CcBackgroundXml *xml,
 	} else if (!strcmp ((gchar *)wpa->name, "options")) {
 	  if (wpa->last != NULL) {
 	    g_object_set (G_OBJECT (item), "placement",
-			  enum_string_to_value (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE,
+			  enum_string_to_value (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE,
 						g_strstrip ((gchar *)wpa->last->content)), NULL);
 	    SET_FLAG(CC_BACKGROUND_ITEM_HAS_PLACEMENT);
 	  }
 	} else if (!strcmp ((gchar *)wpa->name, "shade_type")) {
 	  if (wpa->last != NULL) {
 	    g_object_set (G_OBJECT (item), "shading",
-			  enum_string_to_value (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING,
+			  enum_string_to_value (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING,
 						g_strstrip ((gchar *)wpa->last->content)), NULL);
 	    SET_FLAG(CC_BACKGROUND_ITEM_HAS_SHADING);
 	  }
@@ -547,8 +547,8 @@ cc_background_xml_save (CcBackgroundItem *item,
   const char *placement_str, *shading_str;
   char *name, *pcolor, *scolor, *uri, *source_url;
   CcBackgroundItemFlags flags;
-  GDesktopBackgroundStyle placement;
-  GDesktopBackgroundShading shading;
+  CDesktopBackgroundStyle placement;
+  CDesktopBackgroundShading shading;
 
   xmlKeepBlanksDefault (0);
 
@@ -568,8 +568,8 @@ cc_background_xml_save (CcBackgroundItem *item,
 		"flags", &flags,
 		NULL);
 
-  placement_str = enum_to_str (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE, placement);
-  shading_str = enum_to_str (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING, shading);
+  placement_str = enum_to_str (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE, placement);
+  shading_str = enum_to_str (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING, shading);
 
   wallpaper = xmlNewChild (root, NULL, (xmlChar *)"wallpaper", NULL);
   xml_item = xmlNewTextChild (wallpaper, NULL, (xmlChar *)"name", (xmlChar *)name);

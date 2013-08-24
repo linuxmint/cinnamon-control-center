@@ -24,7 +24,7 @@
 #include <glib-object.h>
 
 #include <libcinnamon-desktop/gnome-desktop-thumbnail.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 #include <libcinnamon-desktop/gnome-bg.h>
 
 G_BEGIN_DECLS
@@ -82,8 +82,8 @@ GIcon     *        cc_background_item_get_frame_thumbnail (CcBackgroundItem     
                                                            int                           frame,
                                                            gboolean                      force_size);
 
-GDesktopBackgroundStyle   cc_background_item_get_placement  (CcBackgroundItem *item);
-GDesktopBackgroundShading cc_background_item_get_shading    (CcBackgroundItem *item);
+CDesktopBackgroundStyle   cc_background_item_get_placement  (CcBackgroundItem *item);
+CDesktopBackgroundShading cc_background_item_get_shading    (CcBackgroundItem *item);
 const char *              cc_background_item_get_uri        (CcBackgroundItem *item);
 const char *              cc_background_item_get_source_url (CcBackgroundItem *item);
 const char *              cc_background_item_get_source_xml (CcBackgroundItem *item);

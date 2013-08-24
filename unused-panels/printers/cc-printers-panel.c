@@ -25,7 +25,7 @@
 #include <glib/gi18n-lib.h>
 #include <glib/gstdio.h>
 #include <polkit/polkit.h>
-#include <gdesktop-enums.h>
+#include <cdesktop-enums.hs>
 
 #include <cups/cups.h>
 

@@ -1,23 +1,23 @@
 
 
 
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 #include "gdesktop-enums-types.h"
 #include "cc-background-item.h"
 
-/* enumerations from "/usr/include/gsettings-desktop-schemas/gdesktop-enums.h" */
+/* enumerations from "/usr/include/gsettings-desktop-schemas/libcinnamon-desktop/cdesktop-enums.hs" */
 GType
 g_desktop_proxy_mode_get_type (void)
 {
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_PROXY_MODE_NONE, "G_DESKTOP_PROXY_MODE_NONE", "none" },
-      { G_DESKTOP_PROXY_MODE_MANUAL, "G_DESKTOP_PROXY_MODE_MANUAL", "manual" },
-      { G_DESKTOP_PROXY_MODE_AUTO, "G_DESKTOP_PROXY_MODE_AUTO", "auto" },
+      { C_DESKTOP_PROXY_MODE_NONE, "C_DESKTOP_PROXY_MODE_NONE", "none" },
+      { C_DESKTOP_PROXY_MODE_MANUAL, "C_DESKTOP_PROXY_MODE_MANUAL", "manual" },
+      { C_DESKTOP_PROXY_MODE_AUTO, "C_DESKTOP_PROXY_MODE_AUTO", "auto" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopProxyMode", values);
+    etype = g_enum_register_static ("CDesktopProxyMode", values);
   }
   return etype;
 }
@@ -27,13 +27,13 @@ g_desktop_toolbar_style_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_TOOLBAR_STYLE_BOTH, "G_DESKTOP_TOOLBAR_STYLE_BOTH", "both" },
-      { G_DESKTOP_TOOLBAR_STYLE_BOTH_HORIZ, "G_DESKTOP_TOOLBAR_STYLE_BOTH_HORIZ", "both-horiz" },
-      { G_DESKTOP_TOOLBAR_STYLE_ICONS, "G_DESKTOP_TOOLBAR_STYLE_ICONS", "icons" },
-      { G_DESKTOP_TOOLBAR_STYLE_TEXT, "G_DESKTOP_TOOLBAR_STYLE_TEXT", "text" },
+      { C_DESKTOP_TOOLBAR_STYLE_BOTH, "C_DESKTOP_TOOLBAR_STYLE_BOTH", "both" },
+      { C_DESKTOP_TOOLBAR_STYLE_BOTH_HORIZ, "C_DESKTOP_TOOLBAR_STYLE_BOTH_HORIZ", "both-horiz" },
+      { C_DESKTOP_TOOLBAR_STYLE_ICONS, "C_DESKTOP_TOOLBAR_STYLE_ICONS", "icons" },
+      { C_DESKTOP_TOOLBAR_STYLE_TEXT, "C_DESKTOP_TOOLBAR_STYLE_TEXT", "text" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopToolbarStyle", values);
+    etype = g_enum_register_static ("CDesktopToolbarStyle", values);
   }
   return etype;
 }
@@ -43,11 +43,11 @@ g_desktop_toolbar_icon_size_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_TOOLBAR_ICON_SIZE_SMALL, "G_DESKTOP_TOOLBAR_ICON_SIZE_SMALL", "small" },
-      { G_DESKTOP_TOOLBAR_ICON_SIZE_LARGE, "G_DESKTOP_TOOLBAR_ICON_SIZE_LARGE", "large" },
+      { C_DESKTOP_TOOLBAR_ICON_SIZE_SMALL, "C_DESKTOP_TOOLBAR_ICON_SIZE_SMALL", "small" },
+      { C_DESKTOP_TOOLBAR_ICON_SIZE_LARGE, "C_DESKTOP_TOOLBAR_ICON_SIZE_LARGE", "large" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopToolbarIconSize", values);
+    etype = g_enum_register_static ("CDesktopToolbarIconSize", values);
   }
   return etype;
 }
@@ -57,16 +57,16 @@ g_desktop_background_style_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_BACKGROUND_STYLE_NONE, "G_DESKTOP_BACKGROUND_STYLE_NONE", "none" },
-      { G_DESKTOP_BACKGROUND_STYLE_WALLPAPER, "G_DESKTOP_BACKGROUND_STYLE_WALLPAPER", "wallpaper" },
-      { G_DESKTOP_BACKGROUND_STYLE_CENTERED, "G_DESKTOP_BACKGROUND_STYLE_CENTERED", "centered" },
-      { G_DESKTOP_BACKGROUND_STYLE_SCALED, "G_DESKTOP_BACKGROUND_STYLE_SCALED", "scaled" },
-      { G_DESKTOP_BACKGROUND_STYLE_STRETCHED, "G_DESKTOP_BACKGROUND_STYLE_STRETCHED", "stretched" },
-      { G_DESKTOP_BACKGROUND_STYLE_ZOOM, "G_DESKTOP_BACKGROUND_STYLE_ZOOM", "zoom" },
-      { G_DESKTOP_BACKGROUND_STYLE_SPANNED, "G_DESKTOP_BACKGROUND_STYLE_SPANNED", "spanned" },
+      { C_DESKTOP_BACKGROUND_STYLE_NONE, "C_DESKTOP_BACKGROUND_STYLE_NONE", "none" },
+      { C_DESKTOP_BACKGROUND_STYLE_WALLPAPER, "C_DESKTOP_BACKGROUND_STYLE_WALLPAPER", "wallpaper" },
+      { C_DESKTOP_BACKGROUND_STYLE_CENTERED, "C_DESKTOP_BACKGROUND_STYLE_CENTERED", "centered" },
+      { C_DESKTOP_BACKGROUND_STYLE_SCALED, "C_DESKTOP_BACKGROUND_STYLE_SCALED", "scaled" },
+      { C_DESKTOP_BACKGROUND_STYLE_STRETCHED, "C_DESKTOP_BACKGROUND_STYLE_STRETCHED", "stretched" },
+      { C_DESKTOP_BACKGROUND_STYLE_ZOOM, "C_DESKTOP_BACKGROUND_STYLE_ZOOM", "zoom" },
+      { C_DESKTOP_BACKGROUND_STYLE_SPANNED, "C_DESKTOP_BACKGROUND_STYLE_SPANNED", "spanned" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopBackgroundStyle", values);
+    etype = g_enum_register_static ("CDesktopBackgroundStyle", values);
   }
   return etype;
 }
@@ -76,12 +76,12 @@ g_desktop_background_shading_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_BACKGROUND_SHADING_SOLID, "G_DESKTOP_BACKGROUND_SHADING_SOLID", "solid" },
-      { G_DESKTOP_BACKGROUND_SHADING_VERTICAL, "G_DESKTOP_BACKGROUND_SHADING_VERTICAL", "vertical" },
-      { G_DESKTOP_BACKGROUND_SHADING_HORIZONTAL, "G_DESKTOP_BACKGROUND_SHADING_HORIZONTAL", "horizontal" },
+      { C_DESKTOP_BACKGROUND_SHADING_SOLID, "C_DESKTOP_BACKGROUND_SHADING_SOLID", "solid" },
+      { C_DESKTOP_BACKGROUND_SHADING_VERTICAL, "C_DESKTOP_BACKGROUND_SHADING_VERTICAL", "vertical" },
+      { C_DESKTOP_BACKGROUND_SHADING_HORIZONTAL, "C_DESKTOP_BACKGROUND_SHADING_HORIZONTAL", "horizontal" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopBackgroundShading", values);
+    etype = g_enum_register_static ("CDesktopBackgroundShading", values);
   }
   return etype;
 }
@@ -91,11 +91,11 @@ g_desktop_mouse_dwell_mode_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_MOUSE_DWELL_MODE_WINDOW, "G_DESKTOP_MOUSE_DWELL_MODE_WINDOW", "window" },
-      { G_DESKTOP_MOUSE_DWELL_MODE_GESTURE, "G_DESKTOP_MOUSE_DWELL_MODE_GESTURE", "gesture" },
+      { C_DESKTOP_MOUSE_DWELL_MODE_WINDOW, "C_DESKTOP_MOUSE_DWELL_MODE_WINDOW", "window" },
+      { C_DESKTOP_MOUSE_DWELL_MODE_GESTURE, "C_DESKTOP_MOUSE_DWELL_MODE_GESTURE", "gesture" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopMouseDwellMode", values);
+    etype = g_enum_register_static ("CDesktopMouseDwellMode", values);
   }
   return etype;
 }
@@ -105,13 +105,13 @@ g_desktop_mouse_dwell_direction_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_MOUSE_DWELL_DIRECTION_LEFT, "G_DESKTOP_MOUSE_DWELL_DIRECTION_LEFT", "left" },
-      { G_DESKTOP_MOUSE_DWELL_DIRECTION_RIGHT, "G_DESKTOP_MOUSE_DWELL_DIRECTION_RIGHT", "right" },
-      { G_DESKTOP_MOUSE_DWELL_DIRECTION_UP, "G_DESKTOP_MOUSE_DWELL_DIRECTION_UP", "up" },
-      { G_DESKTOP_MOUSE_DWELL_DIRECTION_DOWN, "G_DESKTOP_MOUSE_DWELL_DIRECTION_DOWN", "down" },
+      { C_DESKTOP_MOUSE_DWELL_DIRECTION_LEFT, "C_DESKTOP_MOUSE_DWELL_DIRECTION_LEFT", "left" },
+      { C_DESKTOP_MOUSE_DWELL_DIRECTION_RIGHT, "C_DESKTOP_MOUSE_DWELL_DIRECTION_RIGHT", "right" },
+      { C_DESKTOP_MOUSE_DWELL_DIRECTION_UP, "C_DESKTOP_MOUSE_DWELL_DIRECTION_UP", "up" },
+      { C_DESKTOP_MOUSE_DWELL_DIRECTION_DOWN, "C_DESKTOP_MOUSE_DWELL_DIRECTION_DOWN", "down" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopMouseDwellDirection", values);
+    etype = g_enum_register_static ("CDesktopMouseDwellDirection", values);
   }
   return etype;
 }
@@ -121,11 +121,11 @@ g_desktop_clock_format_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_CLOCK_FORMAT_24H, "G_DESKTOP_CLOCK_FORMAT_24H", "24h" },
-      { G_DESKTOP_CLOCK_FORMAT_12H, "G_DESKTOP_CLOCK_FORMAT_12H", "12h" },
+      { C_DESKTOP_CLOCK_FORMAT_24H, "C_DESKTOP_CLOCK_FORMAT_24H", "24h" },
+      { C_DESKTOP_CLOCK_FORMAT_12H, "C_DESKTOP_CLOCK_FORMAT_12H", "12h" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopClockFormat", values);
+    etype = g_enum_register_static ("CDesktopClockFormat", values);
   }
   return etype;
 }
@@ -135,12 +135,12 @@ g_desktop_screensaver_mode_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_SCREENSAVER_MODE_BLANK_ONLY, "G_DESKTOP_SCREENSAVER_MODE_BLANK_ONLY", "blank-only" },
-      { G_DESKTOP_SCREENSAVER_MODE_RANDOM, "G_DESKTOP_SCREENSAVER_MODE_RANDOM", "random" },
-      { G_DESKTOP_SCREENSAVER_MODE_SINGLE, "G_DESKTOP_SCREENSAVER_MODE_SINGLE", "single" },
+      { C_DESKTOP_SCREENSAVER_MODE_BLANK_ONLY, "C_DESKTOP_SCREENSAVER_MODE_BLANK_ONLY", "blank-only" },
+      { C_DESKTOP_SCREENSAVER_MODE_RANDOM, "C_DESKTOP_SCREENSAVER_MODE_RANDOM", "random" },
+      { C_DESKTOP_SCREENSAVER_MODE_SINGLE, "C_DESKTOP_SCREENSAVER_MODE_SINGLE", "single" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopScreensaverMode", values);
+    etype = g_enum_register_static ("CDesktopScreensaverMode", values);
   }
   return etype;
 }
@@ -150,13 +150,13 @@ g_desktop_magnifier_mouse_tracking_mode_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_NONE, "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_NONE", "none" },
-      { G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_CENTERED, "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_CENTERED", "centered" },
-      { G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PROPORTIONAL, "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PROPORTIONAL", "proportional" },
-      { G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PUSH, "G_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PUSH", "push" },
+      { C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_NONE, "C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_NONE", "none" },
+      { C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_CENTERED, "C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_CENTERED", "centered" },
+      { C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PROPORTIONAL, "C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PROPORTIONAL", "proportional" },
+      { C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PUSH, "C_DESKTOP_MAGNIFIER_MOUSE_TRACKING_MODE_PUSH", "push" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopMagnifierMouseTrackingMode", values);
+    etype = g_enum_register_static ("CDesktopMagnifierMouseTrackingMode", values);
   }
   return etype;
 }
@@ -166,15 +166,15 @@ g_desktop_magnifier_screen_position_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_NONE, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_NONE", "none" },
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_FULL_SCREEN, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_FULL_SCREEN", "full-screen" },
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_TOP_HALF, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_TOP_HALF", "top-half" },
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_BOTTOM_HALF, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_BOTTOM_HALF", "bottom-half" },
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_LEFT_HALF, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_LEFT_HALF", "left-half" },
-      { G_DESKTOP_MAGNIFIER_SCREEN_POSITION_RIGHT_HALF, "G_DESKTOP_MAGNIFIER_SCREEN_POSITION_RIGHT_HALF", "right-half" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_NONE, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_NONE", "none" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_FULL_SCREEN, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_FULL_SCREEN", "full-screen" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_TOP_HALF, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_TOP_HALF", "top-half" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_BOTTOM_HALF, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_BOTTOM_HALF", "bottom-half" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_LEFT_HALF, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_LEFT_HALF", "left-half" },
+      { C_DESKTOP_MAGNIFIER_SCREEN_POSITION_RIGHT_HALF, "C_DESKTOP_MAGNIFIER_SCREEN_POSITION_RIGHT_HALF", "right-half" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopMagnifierScreenPosition", values);
+    etype = g_enum_register_static ("CDesktopMagnifierScreenPosition", values);
   }
   return etype;
 }
@@ -184,17 +184,17 @@ g_desktop_titlebar_action_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_TITLEBAR_ACTION_TOGGLE_SHADE, "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_SHADE", "toggle-shade" },
-      { G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE, "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE", "toggle-maximize" },
-      { G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_HORIZONTALLY, "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_HORIZONTALLY", "toggle-maximize-horizontally" },
-      { G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_VERTICALLY, "G_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_VERTICALLY", "toggle-maximize-vertically" },
-      { G_DESKTOP_TITLEBAR_ACTION_MINIMIZE, "G_DESKTOP_TITLEBAR_ACTION_MINIMIZE", "minimize" },
-      { G_DESKTOP_TITLEBAR_ACTION_NONE, "G_DESKTOP_TITLEBAR_ACTION_NONE", "none" },
-      { G_DESKTOP_TITLEBAR_ACTION_LOWER, "G_DESKTOP_TITLEBAR_ACTION_LOWER", "lower" },
-      { G_DESKTOP_TITLEBAR_ACTION_MENU, "G_DESKTOP_TITLEBAR_ACTION_MENU", "menu" },
+      { C_DESKTOP_TITLEBAR_ACTION_TOGGLE_SHADE, "C_DESKTOP_TITLEBAR_ACTION_TOGGLE_SHADE", "toggle-shade" },
+      { C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE, "C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE", "toggle-maximize" },
+      { C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_HORIZONTALLY, "C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_HORIZONTALLY", "toggle-maximize-horizontally" },
+      { C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_VERTICALLY, "C_DESKTOP_TITLEBAR_ACTION_TOGGLE_MAXIMIZE_VERTICALLY", "toggle-maximize-vertically" },
+      { C_DESKTOP_TITLEBAR_ACTION_MINIMIZE, "C_DESKTOP_TITLEBAR_ACTION_MINIMIZE", "minimize" },
+      { C_DESKTOP_TITLEBAR_ACTION_NONE, "C_DESKTOP_TITLEBAR_ACTION_NONE", "none" },
+      { C_DESKTOP_TITLEBAR_ACTION_LOWER, "C_DESKTOP_TITLEBAR_ACTION_LOWER", "lower" },
+      { C_DESKTOP_TITLEBAR_ACTION_MENU, "C_DESKTOP_TITLEBAR_ACTION_MENU", "menu" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopTitlebarAction", values);
+    etype = g_enum_register_static ("CDesktopTitlebarAction", values);
   }
   return etype;
 }
@@ -204,12 +204,12 @@ g_desktop_focus_mode_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_FOCUS_MODE_CLICK, "G_DESKTOP_FOCUS_MODE_CLICK", "click" },
-      { G_DESKTOP_FOCUS_MODE_SLOPPY, "G_DESKTOP_FOCUS_MODE_SLOPPY", "sloppy" },
-      { G_DESKTOP_FOCUS_MODE_MOUSE, "G_DESKTOP_FOCUS_MODE_MOUSE", "mouse" },
+      { C_DESKTOP_FOCUS_MODE_CLICK, "C_DESKTOP_FOCUS_MODE_CLICK", "click" },
+      { C_DESKTOP_FOCUS_MODE_SLOPPY, "C_DESKTOP_FOCUS_MODE_SLOPPY", "sloppy" },
+      { C_DESKTOP_FOCUS_MODE_MOUSE, "C_DESKTOP_FOCUS_MODE_MOUSE", "mouse" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopFocusMode", values);
+    etype = g_enum_register_static ("CDesktopFocusMode", values);
   }
   return etype;
 }
@@ -219,11 +219,11 @@ g_desktop_focus_new_windows_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_FOCUS_NEW_WINDOWS_SMART, "G_DESKTOP_FOCUS_NEW_WINDOWS_SMART", "smart" },
-      { G_DESKTOP_FOCUS_NEW_WINDOWS_STRICT, "G_DESKTOP_FOCUS_NEW_WINDOWS_STRICT", "strict" },
+      { C_DESKTOP_FOCUS_NEW_WINDOWS_SMART, "C_DESKTOP_FOCUS_NEW_WINDOWS_SMART", "smart" },
+      { C_DESKTOP_FOCUS_NEW_WINDOWS_STRICT, "C_DESKTOP_FOCUS_NEW_WINDOWS_STRICT", "strict" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopFocusNewWindows", values);
+    etype = g_enum_register_static ("CDesktopFocusNewWindows", values);
   }
   return etype;
 }
@@ -233,11 +233,11 @@ g_desktop_visual_bell_type_get_type (void)
   static GType etype = 0;
   if (etype == 0) {
     static const GEnumValue values[] = {
-      { G_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH, "G_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH", "fullscreen-flash" },
-      { G_DESKTOP_VISUAL_BELL_FRAME_FLASH, "G_DESKTOP_VISUAL_BELL_FRAME_FLASH", "frame-flash" },
+      { C_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH, "C_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH", "fullscreen-flash" },
+      { C_DESKTOP_VISUAL_BELL_FRAME_FLASH, "C_DESKTOP_VISUAL_BELL_FRAME_FLASH", "frame-flash" },
       { 0, NULL, NULL }
     };
-    etype = g_enum_register_static ("GDesktopVisualBellType", values);
+    etype = g_enum_register_static ("CDesktopVisualBellType", values);
   }
   return etype;
 }

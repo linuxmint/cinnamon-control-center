@@ -28,7 +28,7 @@
 #include "date-endian.h"
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 
-#include <gdesktop-enums.h>
+#include <cdesktop-enums.hs>
 #include <string.h>
 #include <stdlib.h>
 #include <libintl.h>
@@ -78,7 +78,7 @@ struct _CcDateTimePanelPrivate
   GDateTime *date;
 
   GSettings *settings;
-  GDesktopClockFormat clock_format;
+  CDesktopClockFormat clock_format;
 
   GnomeWallClock *clock_tracker;
 
@@ -210,15 +210,15 @@ change_clock_settings (GObject         *gobject,
                        CcDateTimePanel *panel)
 {
   CcDateTimePanelPrivate *priv = panel->priv;
-  GDesktopClockFormat value;
+  CDesktopClockFormat value;
 
   g_signal_handlers_block_by_func (priv->settings, clock_settings_changed_cb,
                                    panel);
 
   if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (W ("24h_button"))))
-    value = G_DESKTOP_CLOCK_FORMAT_24H;
+    value = C_DESKTOP_CLOCK_FORMAT_24H;
   else
-    value = G_DESKTOP_CLOCK_FORMAT_12H;
+    value = C_DESKTOP_CLOCK_FORMAT_12H;
 
   g_settings_set_enum (priv->settings, CLOCK_FORMAT_KEY, value);
   priv->clock_format = value;
@@ -237,7 +237,7 @@ clock_settings_changed_cb (GSettings       *settings,
   CcDateTimePanelPrivate *priv = panel->priv;
   GtkWidget *button24h;
   GtkWidget *button12h;
-  GDesktopClockFormat value;
+  CDesktopClockFormat value;
 
   value = g_settings_get_enum (settings, CLOCK_FORMAT_KEY);
   priv->clock_format = value;
@@ -247,7 +247,7 @@ clock_settings_changed_cb (GSettings       *settings,
 
   g_signal_handlers_block_by_func (button24h, change_clock_settings, panel);
 
-  if (value == G_DESKTOP_CLOCK_FORMAT_24H)
+  if (value == C_DESKTOP_CLOCK_FORMAT_24H)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button24h), TRUE);
   else
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button12h), TRUE);
@@ -265,7 +265,7 @@ update_time (CcDateTimePanel *self)
   char *am_pm_widgets[] = {"ampm_up_button", "ampm_down_button", "ampm_label" };
   guint i;
 
-  if (priv->clock_format == G_DESKTOP_CLOCK_FORMAT_24H)
+  if (priv->clock_format == C_DESKTOP_CLOCK_FORMAT_24H)
     {
       /* Update the hours label */
       label = g_date_time_format (priv->date, "%H");
@@ -287,7 +287,7 @@ update_time (CcDateTimePanel *self)
 
   for (i = 0; i < G_N_ELEMENTS (am_pm_widgets); i++)
     gtk_widget_set_visible (W(am_pm_widgets[i]),
-                            priv->clock_format == G_DESKTOP_CLOCK_FORMAT_12H);
+                            priv->clock_format == C_DESKTOP_CLOCK_FORMAT_12H);
 
   /* Update the minutes label */
   label = g_date_time_format (priv->date, "%M");

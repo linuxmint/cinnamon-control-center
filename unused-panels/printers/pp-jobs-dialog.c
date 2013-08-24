@@ -28,7 +28,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 #include <gtk/gtk.h>
-#include <gdesktop-enums.h>
+#include <cdesktop-enums.hs>
 
 #include <cups/cups.h>
 
@@ -112,7 +112,7 @@ update_jobs_list_cb (cups_job_t *jobs,
 
   for (i = 0; i < dialog->num_jobs; i++)
     {
-      GDesktopClockFormat  value;
+      CDesktopClockFormat  value;
       GDateTime           *time;
       struct tm *ts;
       gchar     *time_string;
@@ -129,7 +129,7 @@ update_jobs_list_cb (cups_job_t *jobs,
       settings = g_settings_new (CLOCK_SCHEMA);
       value = g_settings_get_enum (settings, CLOCK_FORMAT_KEY);
 
-      if (value == G_DESKTOP_CLOCK_FORMAT_24H)
+      if (value == C_DESKTOP_CLOCK_FORMAT_24H)
         time_string = g_date_time_format (time, "%k:%M");
       else
         time_string = g_date_time_format (time, "%l:%M %p");

@@ -27,7 +27,7 @@
 #include <libsocialweb-client/sw-client-service.h>
 
 #include "cc-background-item.h"
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 
 G_DEFINE_TYPE (BgFlickrSource, bg_flickr_source, BG_TYPE_SOURCE)
 
@@ -97,11 +97,11 @@ _view_items_added_cb (SwClientItemView *item_view,
       item = cc_background_item_new (NULL);
 
       g_object_set (G_OBJECT (item),
-		    "placement", G_DESKTOP_BACKGROUND_STYLE_ZOOM,
+		    "placement", C_DESKTOP_BACKGROUND_STYLE_ZOOM,
 		    "name", sw_item_get_value (sw_item, "title"),
 		    "primary-color", "#000000000000",
 		    "seconday-color", "#000000000000",
-		    "shading", G_DESKTOP_BACKGROUND_SHADING_SOLID,
+		    "shading", C_DESKTOP_BACKGROUND_SHADING_SOLID,
 		    "source-url", sw_item_get_value (sw_item, "x-flickr-photo-url"),
 		    NULL);
 

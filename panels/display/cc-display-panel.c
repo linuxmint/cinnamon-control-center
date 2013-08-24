@@ -34,7 +34,7 @@
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <glib/gi18n-lib.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.h>
 
 #include "cc-rr-labeler.h"
 
@@ -2166,7 +2166,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
       char *text;
       gboolean use_24;
       GDateTime *dt;
-      GDesktopClockFormat value;
+      CDesktopClockFormat value;
 
       /* top bar */
       cairo_rectangle (cr, x, y, w * scale + 0.5, TOP_BAR_HEIGHT);
@@ -2180,7 +2180,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
 
       /* clock */
       value = g_settings_get_enum (self->priv->clock_settings, CLOCK_FORMAT_KEY);
-      use_24 = value == G_DESKTOP_CLOCK_FORMAT_24H;
+      use_24 = value == C_DESKTOP_CLOCK_FORMAT_24H;
       if (use_24)
         clock_format = _("%a %R");
       else

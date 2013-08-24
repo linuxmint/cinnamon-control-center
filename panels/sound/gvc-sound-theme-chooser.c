@@ -33,7 +33,7 @@
 #include <canberra-gtk.h>
 #include <libxml/tree.h>
 
-#include <gsettings-desktop-schemas/gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.h>
 
 #include "gvc-sound-theme-chooser.h"
 #include "sound-theme-file-utils.h"

@@ -26,7 +26,7 @@
 #include <glib/gi18n-lib.h>
 #include <glib/gstdio.h>
 
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 
 #include "cc-background-panel.h"
 
@@ -421,7 +421,7 @@ reload_current_bg (CcBackgroundPanel *self)
       CcBackgroundItemFlags flags;
       flags = cc_background_item_get_flags (saved);
       /* Special case for colours */
-      if (cc_background_item_get_placement (saved) == G_DESKTOP_BACKGROUND_STYLE_NONE)
+      if (cc_background_item_get_placement (saved) == C_DESKTOP_BACKGROUND_STYLE_NONE)
         flags &=~ (CC_BACKGROUND_ITEM_HAS_PCOLOR | CC_BACKGROUND_ITEM_HAS_SCOLOR);
       g_object_set (G_OBJECT (configured),
 		    "name", cc_background_item_get_name (saved),
@@ -513,7 +513,7 @@ set_background (CcBackgroundPanel *panel,
                 CcBackgroundItem  *item)
 {
   CcBackgroundPanelPrivate *priv = panel->priv;
-  GDesktopBackgroundStyle style;
+  CDesktopBackgroundStyle style;
   gboolean save_settings = TRUE;
   const char *uri;
   CcBackgroundItemFlags flags;
@@ -527,7 +527,7 @@ set_background (CcBackgroundPanel *panel,
 
   if ((flags & CC_BACKGROUND_ITEM_HAS_URI) && uri == NULL)
     {
-      g_settings_set_enum (priv->settings, WP_OPTIONS_KEY, G_DESKTOP_BACKGROUND_STYLE_NONE);
+      g_settings_set_enum (priv->settings, WP_OPTIONS_KEY, C_DESKTOP_BACKGROUND_STYLE_NONE);
       g_settings_set_string (priv->settings, WP_URI_KEY, "");
     }
   else if (cc_background_item_get_source_url (item) != NULL &&
@@ -618,7 +618,7 @@ set_background (CcBackgroundPanel *panel,
   else if (uri != NULL)
     {
       style = g_settings_get_enum (priv->settings, WP_OPTIONS_KEY);
-      if (style == G_DESKTOP_BACKGROUND_STYLE_NONE)
+      if (style == C_DESKTOP_BACKGROUND_STYLE_NONE)
         g_settings_set_enum (priv->settings, WP_OPTIONS_KEY, cc_background_item_get_placement (item));
     }
 

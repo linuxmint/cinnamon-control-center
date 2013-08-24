@@ -28,7 +28,7 @@
 #include <glib/gi18n-lib.h>
 
 #include <libcinnamon-desktop/gnome-bg.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.hs>
 
 #include "cc-background-item.h"
 #include "gdesktop-enums-types.h"
@@ -41,8 +41,8 @@ struct CcBackgroundItemPrivate
         char            *name;
         char            *uri;
         char            *size;
-        GDesktopBackgroundStyle placement;
-        GDesktopBackgroundShading shading;
+        CDesktopBackgroundStyle placement;
+        CDesktopBackgroundShading shading;
         char            *primary_color;
         char            *secondary_color;
         char            *source_url; /* Used by the Flickr source */
@@ -366,14 +366,14 @@ cc_background_item_get_uri (CcBackgroundItem *item)
 
 static void
 _set_placement (CcBackgroundItem        *item,
-                GDesktopBackgroundStyle  value)
+                CDesktopBackgroundStyle  value)
 {
         item->priv->placement = value;
 }
 
 static void
 _set_shading (CcBackgroundItem          *item,
-              GDesktopBackgroundShading  value)
+              CDesktopBackgroundShading  value)
 {
         item->priv->shading = value;
 }
@@ -410,18 +410,18 @@ cc_background_item_get_scolor (CcBackgroundItem *item)
 	return item->priv->secondary_color;
 }
 
-GDesktopBackgroundStyle
+CDesktopBackgroundStyle
 cc_background_item_get_placement (CcBackgroundItem *item)
 {
-	g_return_val_if_fail (CC_IS_BACKGROUND_ITEM (item), G_DESKTOP_BACKGROUND_STYLE_SCALED);
+	g_return_val_if_fail (CC_IS_BACKGROUND_ITEM (item), C_DESKTOP_BACKGROUND_STYLE_SCALED);
 
 	return item->priv->placement;
 }
 
-GDesktopBackgroundShading
+CDesktopBackgroundShading
 cc_background_item_get_shading (CcBackgroundItem *item)
 {
-	g_return_val_if_fail (CC_IS_BACKGROUND_ITEM (item), G_DESKTOP_BACKGROUND_SHADING_SOLID);
+	g_return_val_if_fail (CC_IS_BACKGROUND_ITEM (item), C_DESKTOP_BACKGROUND_SHADING_SOLID);
 
 	return item->priv->shading;
 }
@@ -649,8 +649,8 @@ cc_background_item_class_init (CcBackgroundItemClass *klass)
 					 g_param_spec_enum ("placement",
 							    "placement",
 							    "placement",
-							    G_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE,
-							    G_DESKTOP_BACKGROUND_STYLE_SCALED,
+							    C_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE,
+							    C_DESKTOP_BACKGROUND_STYLE_SCALED,
 							    G_PARAM_READWRITE));
 
         g_object_class_install_property (object_class,
@@ -658,8 +658,8 @@ cc_background_item_class_init (CcBackgroundItemClass *klass)
                                          g_param_spec_enum ("shading",
 							    "shading",
 							    "shading",
-							    G_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING,
-							    G_DESKTOP_BACKGROUND_SHADING_SOLID,
+							    C_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING,
+							    C_DESKTOP_BACKGROUND_SHADING_SOLID,
 							    G_PARAM_READWRITE));
         g_object_class_install_property (object_class,
                                          PROP_PRIMARY_COLOR,
@@ -705,7 +705,7 @@ cc_background_item_class_init (CcBackgroundItemClass *klass)
 					 g_param_spec_flags ("flags",
 							     "flags",
 							     "flags",
-							     G_DESKTOP_TYPE_BACKGROUND_ITEM_FLAGS,
+							     C_DESKTOP_TYPE_BACKGROUND_ITEM_FLAGS,
 							     0,
 							     G_PARAM_READWRITE));
 
@@ -736,8 +736,8 @@ cc_background_item_init (CcBackgroundItem *item)
 
         item->priv->bg = gnome_bg_new ();
 
-        item->priv->shading = G_DESKTOP_BACKGROUND_SHADING_SOLID;
-        item->priv->placement = G_DESKTOP_BACKGROUND_STYLE_SCALED;
+        item->priv->shading = C_DESKTOP_BACKGROUND_SHADING_SOLID;
+        item->priv->placement = C_DESKTOP_BACKGROUND_STYLE_SCALED;
         item->priv->primary_color = g_strdup ("#000000000000");
         item->priv->secondary_color = g_strdup ("#000000000000");
         item->priv->needs_download = TRUE;
@@ -808,7 +808,7 @@ flags_to_str (CcBackgroundItemFlags flag)
 	GFlagsClass *fclass;
 	GFlagsValue *value;
 
-	fclass = G_FLAGS_CLASS (g_type_class_peek (G_DESKTOP_TYPE_BACKGROUND_ITEM_FLAGS));
+	fclass = G_FLAGS_CLASS (g_type_class_peek (C_DESKTOP_TYPE_BACKGROUND_ITEM_FLAGS));
 	value = g_flags_get_first_value (fclass, flag);
 
 	g_assert (value);
@@ -861,8 +861,8 @@ cc_background_item_dump (CcBackgroundItem *item)
 		g_debug ("pcolor:\t\t%s", priv->primary_color);
 	if (priv->secondary_color)
 		g_debug ("scolor:\t\t%s", priv->secondary_color);
-	g_debug ("placement:\t\t%s", enum_to_str (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE, priv->placement));
-	g_debug ("shading:\t\t%s", enum_to_str (G_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING, priv->shading));
+	g_debug ("placement:\t\t%s", enum_to_str (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_STYLE, priv->placement));
+	g_debug ("shading:\t\t%s", enum_to_str (C_DESKTOP_TYPE_DESKTOP_BACKGROUND_SHADING, priv->shading));
 	if (priv->source_url)
 		g_debug ("source URL:\t\t%s", priv->source_url);
 	if (priv->source_xml)

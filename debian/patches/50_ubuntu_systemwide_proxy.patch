@@ -9,7 +9,7 @@ Index: b/panels/network/cc-network-panel.c
 +#include <grp.h>
 +#include <unistd.h>
 +#include <gio/gio.h>
-+#include <gdesktop-enums.h>
++#include <cdesktop-enums.hs>
  
  #include "cc-network-panel.h"
  
@@ -104,7 +104,7 @@ Index: b/panels/network/cc-network-panel.c
 +        GDBusConnection *bus;
 +        GDBusProxy *proxy;
 +        GError *error;
-+        GDesktopProxyMode proxy_mode;
++        CDesktopProxyMode proxy_mode;
 +        CcNetworkPanel *panel = CC_NETWORK_PANEL (user_data);
 +
 +        error = NULL;
@@ -132,13 +132,13 @@ Index: b/panels/network/cc-network-panel.c
 +        /* Retrieve the current settings */
 +        proxy_mode = g_settings_get_enum (panel->priv->proxy_settings, "mode");
 +        switch (proxy_mode) {
-+        case G_DESKTOP_PROXY_MODE_NONE:
++        case C_DESKTOP_PROXY_MODE_NONE:
 +                reset_system_proxy (proxy, "http");
 +                reset_system_proxy (proxy, "https");
 +                reset_system_proxy (proxy, "ftp");
 +                reset_system_proxy (proxy, "socks");
 +                break;
-+        case G_DESKTOP_PROXY_MODE_MANUAL:
++        case C_DESKTOP_PROXY_MODE_MANUAL:
 +                set_proxy_for_protocol (proxy, "http", g_settings_get_child (panel->priv->proxy_settings, "http"));
 +                set_proxy_for_protocol (proxy, "https", g_settings_get_child (panel->priv->proxy_settings, "https"));
 +                set_proxy_for_protocol (proxy, "ftp", g_settings_get_child (panel->priv->proxy_settings, "ftp"));

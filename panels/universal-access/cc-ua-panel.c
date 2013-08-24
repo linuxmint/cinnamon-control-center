@@ -26,7 +26,7 @@
 
 #include <math.h>
 #include <glib/gi18n-lib.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.h>
 #include "cc-ua-panel.h"
 
 #include "zoom-options.h"
@@ -462,11 +462,11 @@ visual_bell_type_notify_cb (GSettings   *settings,
                             CcUaPanel   *panel)
 {
   GtkWidget *widget;
-  GDesktopVisualBellType type;
+  CDesktopVisualBellType type;
 
   type = g_settings_get_enum (panel->priv->wm_settings, "visual-bell-type");
 
-  if (type == G_DESKTOP_VISUAL_BELL_FRAME_FLASH)
+  if (type == C_DESKTOP_VISUAL_BELL_FRAME_FLASH)
     widget = WID (panel->priv->builder, "hearing_flash_window_title_button");
   else
     widget = WID (panel->priv->builder, "hearing_flash_screen_button");
@@ -479,14 +479,14 @@ visual_bell_type_toggle_cb (GtkWidget *button,
                             CcUaPanel *panel)
 {
   gboolean frame_flash;
-  GDesktopVisualBellType type;
+  CDesktopVisualBellType type;
 
   frame_flash = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (button));
 
   if (frame_flash)
-    type = G_DESKTOP_VISUAL_BELL_FRAME_FLASH;
+    type = C_DESKTOP_VISUAL_BELL_FRAME_FLASH;
   else
-    type = G_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH;
+    type = C_DESKTOP_VISUAL_BELL_FULLSCREEN_FLASH;
   g_settings_set_enum (panel->priv->wm_settings, "visual-bell-type", type);
 }
 

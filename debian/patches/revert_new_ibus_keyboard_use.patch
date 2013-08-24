@@ -2141,10 +2141,10 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -  return display_name;
 -}
 -
--static GDesktopAppInfo *
+-static CDesktopAppInfo *
 -setup_app_info_for_id (const gchar *id)
 -{
--  GDesktopAppInfo *app_info;
+-  CDesktopAppInfo *app_info;
 -  gchar *desktop_file_name;
 -  gchar **strv;
 -
@@ -2197,7 +2197,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -      if (g_str_equal (type, INPUT_SOURCE_TYPE_IBUS))
 -        {
 -          IBusEngineDesc *engine_desc = NULL;
--          GDesktopAppInfo *app_info = NULL;
+-          CDesktopAppInfo *app_info = NULL;
 -          gchar *display_name = NULL;
 -
 -          engine_desc = g_hash_table_lookup (ibus_engines, id);
@@ -2424,7 +2424,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -  const gchar *type;
 -  const gchar *id;
 -  gchar *display_name;
--  GDesktopAppInfo *app_info;
+-  CDesktopAppInfo *app_info;
 -  GtkTreeIter tree_iter;
 -
 -  sources = g_settings_get_value (input_sources_settings, KEY_INPUT_SOURCES);
@@ -2587,7 +2587,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -  gint n_active;
 -  gint index;
 -  gboolean settings_sensitive;
--  GDesktopAppInfo *app_info;
+-  CDesktopAppInfo *app_info;
 -
 -  remove_button = WID("input_source_remove");
 -  show_button = WID("input_source_show");
@@ -2660,7 +2660,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -          gchar *name;
 -          gchar *type;
 -          gchar *id;
--          GDesktopAppInfo *app_info = NULL;
+-          CDesktopAppInfo *app_info = NULL;
 -
 -          gtk_tree_model_get (model, &iter,
 -                              NAME_COLUMN, &name,
@@ -2918,7 +2918,7 @@ diff -Nur --exclude Makefile.in cinnamon-control-center-3.6.3/panels/region/cinn
 -  GtkTreeModel *model;
 -  GtkTreeIter iter;
 -  GdkAppLaunchContext *ctx;
--  GDesktopAppInfo *app_info;
+-  CDesktopAppInfo *app_info;
 -  gchar *id;
 -  GError *error = NULL;
 -

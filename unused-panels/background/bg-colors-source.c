@@ -26,7 +26,7 @@
 #include "cc-background-item.h"
 
 #include <glib/gi18n-lib.h>
-#include <gdesktop-enums.h>
+#include <libcinnamon-desktop/cdesktop-enums.h>
 
 G_DEFINE_TYPE (BgColorsSource, bg_colors_source, BG_TYPE_SOURCE)
 
@@ -39,25 +39,25 @@ bg_colors_source_class_init (BgColorsSourceClass *klass)
 }
 
 struct {
-  GDesktopBackgroundShading type;
+  CDesktopBackgroundShading type;
   int orientation;
   const char *pcolor;
 } items[] = {
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#db5d33" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#008094" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#5d479d" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ab2876" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#fad166" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#437740" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#d272c4" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ed9116" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ff89a9" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#7a8aa2" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#888888" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#475b52" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#425265" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#7a634b" },
-  { G_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#000000" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#db5d33" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#008094" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#5d479d" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ab2876" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#fad166" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#437740" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#d272c4" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ed9116" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#ff89a9" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#7a8aa2" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#888888" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#475b52" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#425265" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#7a634b" },
+  { C_DESKTOP_BACKGROUND_SHADING_SOLID, -1, "#000000" },
 };
 
 static void
@@ -90,7 +90,7 @@ bg_colors_source_init (BgColorsSource *self)
 		    "primary-color", items[i].pcolor,
 		    "secondary-color", items[i].pcolor,
 		    "shading", items[i].type,
-		    "placement", G_DESKTOP_BACKGROUND_STYLE_WALLPAPER,
+		    "placement", C_DESKTOP_BACKGROUND_STYLE_WALLPAPER,
 		    "flags", flags,
 		    NULL);
       cc_background_item_load (item, NULL);
