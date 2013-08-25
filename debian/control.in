@@ -28,7 +28,6 @@ Build-Depends: autotools-dev,
                libglib2.0-dev (>= 2.31.0),
 #               libgnome-bluetooth-dev,
                libcinnamon-desktop-dev (>= 1.0.0),
-
                libgnome-menu-3-dev,
                libgnomekbd-dev,
                libgstreamer-plugins-base0.10-dev,

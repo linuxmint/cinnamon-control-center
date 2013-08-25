@@ -30,7 +30,7 @@
 #include <glib/gi18n.h>
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-xkb-info.h>
+#include <libcinnamon-desktop/gnome-xkb-info.h>
 
 #include "cc-common-language.h"
 #include "gdm-languages.h"
@@ -513,7 +513,7 @@ setup_system (GtkBuilder *dialog)
                           G_CALLBACK (locale_settings_changed), dialog);
         g_object_weak_ref (G_OBJECT (dialog), (GWeakNotify) g_object_unref, locale_settings);
 
-        input_sources_settings = g_settings_new ("org.gnome.desktop.input-sources");
+        input_sources_settings = g_settings_new ("org.cinnamon.desktop.input-sources");
         g_signal_connect (input_sources_settings, "changed::sources",
                           G_CALLBACK (input_sources_changed), dialog);
         g_object_weak_ref (G_OBJECT (dialog), (GWeakNotify) g_object_unref, input_sources_settings);

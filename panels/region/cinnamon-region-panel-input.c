@@ -28,7 +28,7 @@
 #include <gio/gdesktopappinfo.h>
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-xkb-info.h>
+#include <libcinnamon-desktop/gnome-xkb-info.h>
 
 #ifdef HAVE_IBUS
 #include <ibus.h>
@@ -39,7 +39,7 @@
 
 #define WID(s) GTK_WIDGET(gtk_builder_get_object (builder, s))
 
-#define GNOME_DESKTOP_INPUT_SOURCES_DIR "org.gnome.desktop.input-sources"
+#define GNOME_DESKTOP_INPUT_SOURCES_DIR "org.cinnamon.desktop.input-sources"
 
 #define KEY_CURRENT_INPUT_SOURCE "current"
 #define KEY_INPUT_SOURCES        "sources"
