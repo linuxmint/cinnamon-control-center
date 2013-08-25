@@ -463,7 +463,7 @@ setup_system (GtkBuilder *dialog)
                           G_CALLBACK (copy_settings), dialog);
 
 
-        locale_settings = g_settings_new ("org.gnome.system.locale");
+        locale_settings = g_settings_new ("org.cinnamon.system.locale");
         g_signal_connect (locale_settings, "changed::region",
                           G_CALLBACK (locale_settings_changed), dialog);
         g_object_weak_ref (G_OBJECT (dialog), (GWeakNotify) g_object_unref, locale_settings);
