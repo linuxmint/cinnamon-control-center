@@ -1,6 +1,4 @@
 [Desktop Entry]
-_Name=Region & Language
-_Comment=Change your region and language settings
 Exec=cinnamon-settings region
 Icon=preferences-desktop-locale
 Terminal=false
@@ -11,4 +9,5 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;
-
+Name=Region & Language
+Comment=Change your region and language settings

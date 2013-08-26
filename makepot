@@ -1,4 +1,4 @@
 #!/bin/bash
 intltool-extract --type=gettext/glade panels/*/*.ui
-xgettext --language=C --from-code=UTF-8 --keyword=_ --keyword=N_ --output=cinnamon-control-center.pot panels/*/*.c shell/*.c panels/*/*.ui.h
+xgettext --language=C --from-code=UTF-8 --keyword=_ --keyword=N_ --output=cinnamon-control-center.pot panels/*/*.c shell/*.c panels/*/*.ui.h generate_additional_files.py
 rm -f panels/*/*.ui.h

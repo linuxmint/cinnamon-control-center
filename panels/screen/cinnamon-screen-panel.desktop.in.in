@@ -1,6 +1,4 @@
 [Desktop Entry]
-_Name=Brightness & Lock
-_Comment=Screen brightness and lock settings
 Exec=cinnamon-control-center screen
 Icon=system-lock-screen
 Terminal=false
@@ -12,3 +10,5 @@ X-Cinnamon-Settings-Panel=screen
 # Translators: those are keywords for the brightness and lock control-center panel
 _Keywords=Brightness;Lock;Dim;Blank;Monitor;
 NoDisplay=true
+Name=Brightness & Lock
+Comment=Screen brightness and lock settings

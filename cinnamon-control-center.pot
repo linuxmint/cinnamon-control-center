@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-24 11:03+0100\n"
+"POT-Creation-Date: 2013-08-26 13:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -465,7 +465,7 @@ msgstr ""
 msgid "Mobile broadband"
 msgstr ""
 
-#: panels/network/panel-common.c:102
+#: panels/network/panel-common.c:102 generate_additional_files.py:50
 msgid "Bluetooth"
 msgstr ""
 
@@ -1203,4 +1203,80 @@ msgstr ""
 
 #: panels/bluetooth/bluetooth.ui.h:13
 msgid "Browse Files..."
+msgstr ""
+
+#: generate_additional_files.py:50
+msgid "Configure Bluetooth settings"
+msgstr ""
+
+#: generate_additional_files.py:66
+msgid "Brightness & Lock"
+msgstr ""
+
+#: generate_additional_files.py:66
+msgid "Screen brightness and lock settings"
+msgstr ""
+
+#: generate_additional_files.py:81 generate_additional_files.py:112
+msgid "Sound"
+msgstr ""
+
+#: generate_additional_files.py:81 generate_additional_files.py:112
+msgid "Change sound volume and sound events"
+msgstr ""
+
+#: generate_additional_files.py:96
+msgid "Color"
+msgstr ""
+
+#: generate_additional_files.py:96
+msgid "Color management settings"
+msgstr ""
+
+#: generate_additional_files.py:126
+msgid "Volume Control"
+msgstr ""
+
+#: generate_additional_files.py:126
+msgid "Show desktop volume control"
+msgstr ""
+
+#: generate_additional_files.py:141
+msgid "Power"
+msgstr ""
+
+#: generate_additional_files.py:141
+msgid "Power management settings"
+msgstr ""
+
+#: generate_additional_files.py:156
+msgid "Region & Language"
+msgstr ""
+
+#: generate_additional_files.py:156
+msgid "Change your region and language settings"
+msgstr ""
+
+#: generate_additional_files.py:171
+msgid "Displays"
+msgstr ""
+
+#: generate_additional_files.py:171
+msgid "Change resolution and position of monitors and projectors"
+msgstr ""
+
+#: generate_additional_files.py:186
+msgid "Network"
+msgstr ""
+
+#: generate_additional_files.py:186
+msgid "Network settings"
+msgstr ""
+
+#: generate_additional_files.py:201
+msgid "Universal Access"
+msgstr ""
+
+#: generate_additional_files.py:201
+msgid "Universal Access Preferences"
 msgstr ""

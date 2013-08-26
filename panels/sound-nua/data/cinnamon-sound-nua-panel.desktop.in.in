@@ -1,6 +1,4 @@
 [Desktop Entry]
-_Name=Sound
-_Comment=Change sound volume and sound events
 Exec=cinnamon-settings sound
 Icon=multimedia-volume-control
 Terminal=false
@@ -11,4 +9,5 @@ OnlyShowIn=GNOME;
 X-Cinnamon-Settings-Panel=sound-nua
 # Translators: those are keywords for the sound control-center panel
 _Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
-
+Name=Sound
+Comment=Change sound volume and sound events

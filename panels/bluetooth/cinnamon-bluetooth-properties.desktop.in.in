@@ -1,6 +1,4 @@
 [Desktop Entry]
-_Name=Bluetooth
-_Comment=Configure Bluetooth settings
 Icon=cinnamon-bluetooth
 Exec=cinnamon-settings bluetooth
 Terminal=false
@@ -9,4 +7,5 @@ Categories=GTK;Settings;X-Cinnamon-NetworkSettings;HardwareSettings;X-Cinnamon-S
 OnlyShowIn=GNOME;
 StartupNotify=true
 X-Cinnamon-Settings-Panel=bluetooth
-
+Name=Bluetooth
+Comment=Configure Bluetooth settings
