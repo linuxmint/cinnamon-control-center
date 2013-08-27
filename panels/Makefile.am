@@ -13,8 +13,4 @@ if BUILD_NETWORK
 SUBDIRS += network
 endif
 
-if BUILD_BLUETOOTH
-SUBDIRS += bluetooth
-endif
-
 -include $(top_srcdir)/git.mk

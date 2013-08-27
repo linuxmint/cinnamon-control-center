@@ -37,19 +37,6 @@ os.environ['LANG'] = "en"
 gettext.install(DOMAIN, PATH)
 
 prefix = """[Desktop Entry]
-Icon=cinnamon-bluetooth
-Exec=cinnamon-settings bluetooth
-Terminal=false
-Type=Application
-Categories=GTK;Settings;X-Cinnamon-NetworkSettings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
-StartupNotify=true
-X-Cinnamon-Settings-Panel=bluetooth
-"""
-
-generate("./panels/bluetooth/cinnamon-bluetooth-properties.desktop.in.in", prefix, _("Bluetooth"), _("Configure Bluetooth settings"), "")
-
-prefix = """[Desktop Entry]
 Exec=cinnamon-control-center screen
 Icon=system-lock-screen
 Terminal=false

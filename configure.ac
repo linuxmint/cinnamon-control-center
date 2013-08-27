@@ -141,32 +141,6 @@ fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
 
-# Check for bluetooth, requires explicit turn on
-# ----------------------------------------------
-AC_ARG_ENABLE(bluetooth,
-              AS_HELP_STRING([--enable-bluetooth],
-                             [Build bluetooth module support (no)]),
-              enable_bluetooth=$enableval,
-              enable_bluetooth=no)
-
-build_bluetooth=no
-if test "x$enable_bluetooth" = "xno" ; then
-  have_bluetooth=no
-else
-  have_bluetooth=no
-  PKG_CHECK_MODULES(BLUETOOTH, $COMMON_MODULES gnome-bluetooth-1.0 >= 3.4.1,
-          have_bluetooth=yes, have_bluetooth=no)
-  if test "x$enable_bluetooth" = "xyes" -a "x$have_bluetooth" = "xno" ; then
-    AC_MSG_ERROR(Bluetooth module build explicity enabled but not available)
-  fi
-
-  if test "x$have_bluetooth" = "xyes" ; then
-    build_bluetooth=yes
-  fi
-fi
-AM_CONDITIONAL(BUILD_BLUETOOTH, test "x$build_bluetooth" = "xyes")
-
-
 # -----------------------------------------------
 # Check for CUPS 1.4 or newer
 
@@ -349,8 +323,6 @@ Makefile
 shell/libcinnamon-control-center.pc
 panels/Makefile
 panels/common/Makefile
-panels/bluetooth/Makefile
-panels/bluetooth/cinnamon-bluetooth-properties.desktop.in
 panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
 panels/region/Makefile
@@ -451,10 +423,3 @@ else
 	AC_MSG_NOTICE([   Region panel IBus support disabled])
 fi
 AC_MSG_NOTICE([End options])
-echo "
-
-                 optional modules
-        ==================================
-        Bluetooth:       ${build_bluetooth}
-
-"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 13:46+0100\n"
+"POT-Creation-Date: 2013-08-27 21:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,45 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: panels/bluetooth/cc-bluetooth-panel.c:352
-msgid "Yes"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:352
-msgid "No"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:466
-msgid "Bluetooth is disabled"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:471
-msgid "Bluetooth is disabled by hardware switch"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:475
-msgid "No Bluetooth adapters found"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:602
-msgid "Visibility"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:606
-#, c-format
-msgid "Visibility of “%s”"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:650
-#, c-format
-msgid "Remove '%s' from the list of devices?"
-msgstr ""
-
-#: panels/bluetooth/cc-bluetooth-panel.c:652
-msgid ""
-"If you remove the device, you will have to set it up again before next use."
-msgstr ""
 
 #: panels/color/cc-color-panel.c:106
 msgid "Other profile…"
@@ -73,7 +34,7 @@ msgstr ""
 msgid "Test profile: "
 msgstr ""
 
-#: panels/color/cc-color-panel.c:185
+#: panels/color/cc-color-panel.c:185 panels/color/color.ui.h:11
 msgid "Set for all users"
 msgstr ""
 
@@ -117,7 +78,7 @@ msgstr ""
 msgid "Available Profiles for Webcams"
 msgstr ""
 
-#: panels/color/cc-color-panel.c:659
+#: panels/color/cc-color-panel.c:659 panels/color/color.ui.h:2
 msgid "Available Profiles"
 msgstr ""
 
@@ -465,7 +426,7 @@ msgstr ""
 msgid "Mobile broadband"
 msgstr ""
 
-#: panels/network/panel-common.c:102 generate_additional_files.py:50
+#: panels/network/panel-common.c:102
 msgid "Bluetooth"
 msgstr ""
 
@@ -1153,130 +1114,143 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: panels/bluetooth/bluetooth.ui.h:1
-msgid "Set Up New Device"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:2
-msgid "Remove Device"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:3
-msgid "Connection"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:4
-msgid "page 1"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:5
-msgid "page 2"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:6
-msgid "Paired"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:7
-msgid "Type"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:8
-msgid "Address"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:9
-msgid "Mouse and Touchpad Settings"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:10
-msgid "Sound Settings"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:11
-msgid "Keyboard Settings"
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:12
-msgid "Send Files..."
-msgstr ""
-
-#: panels/bluetooth/bluetooth.ui.h:13
-msgid "Browse Files..."
-msgstr ""
-
-#: generate_additional_files.py:50
-msgid "Configure Bluetooth settings"
-msgstr ""
-
-#: generate_additional_files.py:66
-msgid "Brightness & Lock"
-msgstr ""
-
-#: generate_additional_files.py:66
-msgid "Screen brightness and lock settings"
-msgstr ""
-
-#: generate_additional_files.py:81 generate_additional_files.py:112
-msgid "Sound"
-msgstr ""
-
-#: generate_additional_files.py:81 generate_additional_files.py:112
-msgid "Change sound volume and sound events"
-msgstr ""
-
-#: generate_additional_files.py:96
+#: panels/color/color.ui.h:3 generate_additional_files.py:83
 msgid "Color"
 msgstr ""
 
-#: generate_additional_files.py:96
+#: panels/color/color.ui.h:4
+msgid "Each device needs an up to date color profile to be color managed."
+msgstr ""
+
+#: panels/color/color.ui.h:5
+msgid "Learn more"
+msgstr ""
+
+#: panels/color/color.ui.h:6
+msgid "Learn more about color management"
+msgstr ""
+
+#: panels/color/color.ui.h:7
+msgid "Add device"
+msgstr ""
+
+#: panels/color/color.ui.h:8
+msgid "Add a virtual device"
+msgstr ""
+
+#: panels/color/color.ui.h:9
+msgid "Delete device"
+msgstr ""
+
+#: panels/color/color.ui.h:10
+msgid "Remove a device"
+msgstr ""
+
+#: panels/color/color.ui.h:12
+msgid "Set this profile for all users on this computer"
+msgstr ""
+
+#: panels/color/color.ui.h:13
+msgid "Add profile"
+msgstr ""
+
+#: panels/color/color.ui.h:14
+msgid "Calibrate…"
+msgstr ""
+
+#: panels/color/color.ui.h:15
+msgid "Calibrate the device"
+msgstr ""
+
+#: panels/color/color.ui.h:16
+msgid "Remove profile"
+msgstr ""
+
+#: panels/color/color.ui.h:17
+msgid "View details"
+msgstr ""
+
+#: panels/color/color.ui.h:18
+msgid "Device type:"
+msgstr ""
+
+#: panels/color/color.ui.h:19
+msgid "Manufacturer:"
+msgstr ""
+
+#: panels/color/color.ui.h:20
+msgid "Model:"
+msgstr ""
+
+#: panels/color/color.ui.h:21
+msgid ""
+"Image files can be dragged on this window to auto-complete the above fields."
+msgstr ""
+
+#: generate_additional_files.py:53
+msgid "Brightness & Lock"
+msgstr ""
+
+#: generate_additional_files.py:53
+msgid "Screen brightness and lock settings"
+msgstr ""
+
+#: generate_additional_files.py:68 generate_additional_files.py:99
+msgid "Sound"
+msgstr ""
+
+#: generate_additional_files.py:68 generate_additional_files.py:99
+msgid "Change sound volume and sound events"
+msgstr ""
+
+#: generate_additional_files.py:83
 msgid "Color management settings"
 msgstr ""
 
-#: generate_additional_files.py:126
+#: generate_additional_files.py:113
 msgid "Volume Control"
 msgstr ""
 
-#: generate_additional_files.py:126
+#: generate_additional_files.py:113
 msgid "Show desktop volume control"
 msgstr ""
 
-#: generate_additional_files.py:141
+#: generate_additional_files.py:128
 msgid "Power"
 msgstr ""
 
-#: generate_additional_files.py:141
+#: generate_additional_files.py:128
 msgid "Power management settings"
 msgstr ""
 
-#: generate_additional_files.py:156
+#: generate_additional_files.py:143
 msgid "Region & Language"
 msgstr ""
 
-#: generate_additional_files.py:156
+#: generate_additional_files.py:143
 msgid "Change your region and language settings"
 msgstr ""
 
-#: generate_additional_files.py:171
+#: generate_additional_files.py:158
 msgid "Displays"
 msgstr ""
 
-#: generate_additional_files.py:171
+#: generate_additional_files.py:158
 msgid "Change resolution and position of monitors and projectors"
 msgstr ""
 
-#: generate_additional_files.py:186
+#: generate_additional_files.py:173
 msgid "Network"
 msgstr ""
 
-#: generate_additional_files.py:186
+#: generate_additional_files.py:173
 msgid "Network settings"
 msgstr ""
 
-#: generate_additional_files.py:201
+#: generate_additional_files.py:188
 msgid "Universal Access"
 msgstr ""
 
-#: generate_additional_files.py:201
+#: generate_additional_files.py:188
 msgid "Universal Access Preferences"
 msgstr ""

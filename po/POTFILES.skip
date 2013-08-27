@@ -1,5 +1,4 @@
 panels/background/cinnamon-background-panel.desktop.in
-panels/bluetooth/bluetooth-properties.desktop.in
 panels/color/cinnamon-color-panel.desktop.in
 panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/display/cinnamon-display-panel.desktop.in
