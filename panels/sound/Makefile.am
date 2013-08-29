@@ -13,9 +13,7 @@ AM_CPPFLAGS =					\
 	$(SOUND_PANEL_CFLAGS)			\
 	-DLOCALE_DIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\"$(libexecdir)\"		\
-	-DGLADEDIR=\""$(pkgdatadir)"\"		\
-        -DSOUND_DATA_DIR="\"$(datadir)/sounds\""	\
-        -DSOUND_SET_DIR="\"$(pkgdatadir)/sounds\""	\
+	-DGLADEDIR=\""$(pkgdatadir)"\"		\     
 	-DICON_DATA_DIR="\"$(pkgdatadir)/icons\"" \
 	$(NULL)
 
@@ -89,10 +87,6 @@ libsound_la_SOURCES =				\
 	gvc-combo-box.c				\
 	gvc-speaker-test.h			\
 	gvc-speaker-test.c			\
-	gvc-sound-theme-chooser.c		\
-	gvc-sound-theme-chooser.h		\
-	sound-theme-file-utils.c		\
-	sound-theme-file-utils.h		\
 	cc-sound-panel.c			\
 	cc-sound-panel.h			\
 	$(NULL)

@@ -41,10 +41,6 @@ libsoundnua_la_SOURCES =			\
 	../sound/gvc-combo-box.c		\
 	../sound/gvc-speaker-test.h		\
 	../sound/gvc-speaker-test.c		\
-	../sound/gvc-sound-theme-chooser.c	\
-	../sound/gvc-sound-theme-chooser.h	\
-	../sound/sound-theme-file-utils.c	\
-	../sound/sound-theme-file-utils.h	\
 	cc-sound-panel.c			\
 	cc-sound-panel.h			\
 	$(NULL)

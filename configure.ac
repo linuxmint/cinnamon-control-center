@@ -372,7 +372,6 @@ panels/sound/data/icons/48x48/devices/Makefile
 panels/sound/data/icons/scalable/Makefile
 panels/sound/data/icons/scalable/apps/Makefile
 panels/sound/data/icons/scalable/devices/Makefile
-panels/sound/data/sounds/Makefile
 panels/sound-nua/Makefile
 panels/sound-nua/data/Makefile
 panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in

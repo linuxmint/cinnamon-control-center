@@ -40,7 +40,6 @@
 #include "gvc-mixer-source.h"
 #include "gvc-mixer-source-output.h"
 #include "gvc-mixer-dialog.h"
-#include "gvc-sound-theme-chooser.h"
 #include "gvc-level-bar.h"
 #include "gvc-speaker-test.h"
 #include "gvc-mixer-control-private.h"
@@ -73,7 +72,6 @@ struct GvcMixerDialogPrivate
         GtkWidget       *input_treeview;
         GtkWidget       *input_profile_combo;
         GtkWidget       *input_settings_box;
-        GtkWidget       *sound_theme_chooser;
         GtkWidget       *click_feedback_button;
         GtkWidget       *audible_bell_button;
         GtkSizeGroup    *size_group;
@@ -1789,12 +1787,7 @@ gvc_mixer_dialog_constructor (GType                  type,
                                   _("_Alert volume:"));
         gtk_widget_set_sensitive (self->priv->effects_bar, FALSE);
         gtk_box_pack_start (GTK_BOX (self->priv->sound_effects_box),
-                            self->priv->effects_bar, FALSE, FALSE, 0);
-
-        self->priv->sound_theme_chooser = gvc_sound_theme_chooser_new ();
-        gtk_box_pack_start (GTK_BOX (self->priv->sound_effects_box),
-                            self->priv->sound_theme_chooser,
-                            TRUE, TRUE, 6);
+                            self->priv->effects_bar, FALSE, FALSE, 0);      
 
         /* Applications */
         self->priv->applications_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);

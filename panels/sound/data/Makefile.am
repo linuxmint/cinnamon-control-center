@@ -3,7 +3,6 @@ NULL =
 SUBDIRS =			\
 	icons			\
 	symbolic-icons		\
-	sounds			\
 	$(NULL)
 
 @INTLTOOL_DESKTOP_RULE@
