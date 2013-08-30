@@ -2050,6 +2050,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   pango_cairo_show_layout (cr, layout);
   g_object_unref (layout);
   cairo_restore (cr);
+  cairo_restore (cr);
 }
 
 static void
