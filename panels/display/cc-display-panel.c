@@ -50,6 +50,8 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_WIDTH 675
 #define MINIMUM_HEIGHT 530
 
+#define SCREEN_COLOR "#e9f3db"
+
 enum {
   TEXT_COL,
   WIDTH_COL,
@@ -639,7 +641,7 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
         tmp = g_strdup (gnome_rr_output_info_get_display_name (self->priv->current_output));
 
       str = g_strdup_printf ("<b>%s</b>", tmp);
-      gdk_color_parse ("#FFAAAA", &color);
+      gdk_color_parse (SCREEN_COLOR, &color);
       use_color = TRUE;
       g_free (tmp);
     }
@@ -1994,7 +1996,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_rectangle (cr, x, y, w * scale + 0.5, h * scale + 0.5);
   cairo_clip_preserve (cr);
 
-  gdk_color_parse ("#FFAAAA", &output_color);
+  gdk_color_parse (SCREEN_COLOR, &output_color);
   r = output_color.red / 65535.0;
   g = output_color.green / 65535.0;
   b = output_color.blue / 65535.0;
@@ -2501,7 +2503,7 @@ get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
   int monitor_width = 30;
   int monitor_height = 15;
 
-  gdk_color_parse ("#FFAAAA", &color);
+  gdk_color_parse (SCREEN_COLOR, &color);
 
   cairo_surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24, monitor_width, monitor_height);
   cr = cairo_create (cairo_surface);
