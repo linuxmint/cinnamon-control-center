@@ -2040,7 +2040,7 @@ gvc_mixer_dialog_constructor (GType                  type,
 
         GtkWidget * sounds_grid = gtk_grid_new ();
         gtk_grid_set_column_spacing (sounds_grid, 6);
-        gtk_grid_set_column_spacing (sounds_grid, 6);
+        gtk_grid_set_row_spacing (sounds_grid, 3);
 
         add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);       
         add_sound_effect_selector (sounds_grid, 1, _("Switching workspace:"), sound_settings, "switch-file", "switch-enabled", self);       
