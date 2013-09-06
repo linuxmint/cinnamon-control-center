@@ -85,7 +85,8 @@ struct GvcMixerDialogPrivate
         GtkWidget       *selected_output_label;
         GtkWidget       *selected_input_label;
         GtkWidget       *test_output_button;
-        GSettings       *indicator_settings;
+
+        GSettings       *sound_settings;
 
         gdouble          last_input_peak;
         guint            num_apps;
@@ -1696,6 +1697,49 @@ on_test_speakers_clicked (GtkButton *widget,
         gtk_widget_destroy (d);
 }
 
+static void
+change_sound_file (GtkFileChooserButton *widget,
+                    gpointer              user_data)
+{
+    GSettings * settings = user_data;
+    char * filename = gtk_file_chooser_get_filename(widget);
+    g_settings_set_string(settings, g_object_get_data (G_OBJECT (widget), "gsetting_key"), filename);
+    g_free(filename);
+}
+
+
+static void
+toggle_sound_file (GtkToggleButton *widget,
+                    gpointer              user_data)
+{
+    GSettings *settings = user_data;
+    gboolean active = gtk_toggle_button_get_active (widget);
+    g_settings_set_boolean(settings, g_object_get_data (G_OBJECT (widget), "gsetting_key"), active);
+    gtk_widget_set_sensitive(g_object_get_data (G_OBJECT (widget), "widget"), active);
+}
+
+static void
+add_sound_effect_selector (GtkWidget * grid, int row, char * label, GSettings * settings, char * file_key, char * enabled_key, GvcMixerDialog  * dialog)
+{
+        GtkWidget * file_chooser = gtk_file_chooser_button_new(_("Choose an audio file"), GTK_FILE_CHOOSER_ACTION_OPEN);
+        g_object_set_data (G_OBJECT (file_chooser), "gsetting_key", file_key);
+
+        gtk_file_chooser_set_filename(file_chooser, g_settings_get_string(settings, file_key));
+        gtk_widget_set_sensitive(file_chooser, g_settings_get_boolean(settings, enabled_key));
+        g_signal_connect (file_chooser, "file-set", G_CALLBACK (change_sound_file), settings);
+        
+        GtkWidget * checkbox = gtk_check_button_new_with_label(label);
+        g_object_set_data (G_OBJECT (checkbox), "widget", file_chooser);
+        g_object_set_data (G_OBJECT (checkbox), "gsetting_key", enabled_key);        
+        gtk_toggle_button_set_active(checkbox, g_settings_get_boolean(settings, enabled_key));
+        g_signal_connect (checkbox, "toggled", G_CALLBACK (toggle_sound_file), settings);
+
+        gtk_grid_attach(grid, checkbox, 0, row, 1, 1);        
+        gtk_grid_attach(grid, file_chooser, 1, row, 1, 1);       
+}
+
+
+
 static GObject *
 gvc_mixer_dialog_constructor (GType                  type,
                               guint                  n_construct_properties,
@@ -1717,7 +1761,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         GSList           *l;
         GvcMixerStream   *stream;
         GvcMixerCard     *card;
-        GtkTreeSelection *selection;
+        GtkTreeSelection *selection;        
 
         object = G_OBJECT_CLASS (gvc_mixer_dialog_parent_class)->constructor (type, n_construct_properties, construct_params);
 
@@ -1726,7 +1770,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         main_vbox = GTK_WIDGET (self);
         gtk_box_set_spacing (GTK_BOX (main_vbox), 2);
 
-        gtk_container_set_border_width (GTK_CONTAINER (self), 3);
+        gtk_container_set_border_width (GTK_CONTAINER (self), 3);        
 
         self->priv->output_stream_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
         alignment = gtk_alignment_new (0, 0, 1, 1);
@@ -1870,7 +1914,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         gtk_widget_show (test_sound_box);
 
         //gtk_container_add (GTK_CONTAINER (box), self->priv->output_settings_box);
-	g_signal_connect (self->priv->test_output_button,
+	    g_signal_connect (self->priv->test_output_button,
                           "released",
                            G_CALLBACK (on_test_speakers_clicked),
                            self);
@@ -1990,6 +2034,27 @@ gvc_mixer_dialog_constructor (GType                  type,
         gtk_widget_set_sensitive (self->priv->effects_bar, FALSE);
         gtk_box_pack_start (GTK_BOX (self->priv->sound_effects_box),
                             self->priv->effects_bar, FALSE, FALSE, 0);
+
+        GSettings * sound_settings = g_settings_new("org.cinnamon.sounds");
+        GSettings * desktop_sound_settings = g_settings_new("org.cinnamon.desktop.sound");
+
+        GtkWidget * sounds_grid = gtk_grid_new ();
+        gtk_grid_set_column_spacing (sounds_grid, 6);
+        gtk_grid_set_column_spacing (sounds_grid, 6);
+
+        add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 1, _("Switching workspace:"), sound_settings, "switch-file", "switch-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 2, _("Mapping windows:"), sound_settings, "map-file", "map-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 3, _("Closing windows:"), sound_settings, "close-file", "close-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 4, _("Minimizing windows:"), sound_settings, "minimize-file", "minimize-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 5, _("Maximizing windows:"), sound_settings, "maximize-file", "maximize-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 6, _("Unmaximizing windows:"), sound_settings, "unmaximize-file", "unmaximize-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 7, _("Tiling and snapping windows:"), sound_settings, "tile-file", "tile-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 8, _("Inserting a device:"), sound_settings, "plug-file", "plug-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 9, _("Removing a device:"), sound_settings, "unplug-file", "unplug-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 10, _("Changing the sound volume:"), desktop_sound_settings, "volume-sound-file", "volume-sound-enabled", self);
+
+        gtk_box_pack_start (GTK_BOX (self->priv->sound_effects_box), sounds_grid, FALSE, FALSE, 0);
       
         /* Applications */
         self->priv->applications_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
@@ -2049,12 +2114,14 @@ gvc_mixer_dialog_constructor (GType                  type,
         return object;
 }
 
+
+
 static void
 gvc_mixer_dialog_dispose (GObject *object)
 {
         GvcMixerDialog *dialog = GVC_MIXER_DIALOG (object);
-
-        g_clear_object (&dialog->priv->indicator_settings);
+        
+        g_clear_object (&dialog->priv->sound_settings);
 
         if (dialog->priv->mixer_control != NULL) {
                 g_signal_handlers_disconnect_by_func (dialog->priv->mixer_control,
