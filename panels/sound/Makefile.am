@@ -13,7 +13,7 @@ AM_CPPFLAGS =					\
 	$(SOUND_PANEL_CFLAGS)			\
 	-DLOCALE_DIR=\""$(datadir)/locale"\"	\
 	-DLIBEXECDIR=\"$(libexecdir)\"		\
-	-DGLADEDIR=\""$(pkgdatadir)"\"		\     
+	-DGLADEDIR=\""$(pkgdatadir)"\"		\
 	-DICON_DATA_DIR="\"$(pkgdatadir)/icons\"" \
 	$(NULL)
 
