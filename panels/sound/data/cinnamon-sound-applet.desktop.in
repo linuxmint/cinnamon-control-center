@@ -7,6 +7,6 @@ Categories=
 NoDisplay=true
 X-GNOME-Autostart-Notify=true
 AutostartCondition=GNOME3 if-session gnome-fallback
-OnlyShowIn=;
+OnlyShowIn=GNOME;
 Name=Volume Control
 Comment=Show desktop volume control
