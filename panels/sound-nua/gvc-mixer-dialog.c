@@ -32,6 +32,7 @@
 #include <gtk/gtk.h>
 #include <pulse/pulseaudio.h>
 
+#include <canberra.h>
 
 #include "gvc-channel-bar.h"
 #include "gvc-balance-bar.h"
@@ -90,6 +91,8 @@ struct GvcMixerDialogPrivate
 
         gdouble          last_input_peak;
         guint            num_apps;
+
+        ca_context      *sound_context;
 };
 
 enum {
@@ -1719,6 +1722,15 @@ toggle_sound_file (GtkToggleButton *widget,
 }
 
 static void
+test_sound_file (GtkButton *widget,
+                          gpointer  user_data)
+{
+    GvcMixerDialog      *dialog = GVC_MIXER_DIALOG (user_data);
+    char * filename = gtk_file_chooser_get_filename(g_object_get_data (G_OBJECT (widget), "widget"));    
+    ca_context_play (dialog->priv->sound_context, 0, CA_PROP_MEDIA_FILENAME, filename, NULL);
+}
+
+static void
 add_sound_effect_selector (GtkWidget * grid, int row, char * label, GSettings * settings, char * file_key, char * enabled_key, GvcMixerDialog  * dialog)
 {
         GtkWidget * file_chooser = gtk_file_chooser_button_new(_("Choose an audio file"), GTK_FILE_CHOOSER_ACTION_OPEN);
@@ -1734,8 +1746,16 @@ add_sound_effect_selector (GtkWidget * grid, int row, char * label, GSettings * 
         gtk_toggle_button_set_active(checkbox, g_settings_get_boolean(settings, enabled_key));
         g_signal_connect (checkbox, "toggled", G_CALLBACK (toggle_sound_file), settings);
 
+        GtkWidget * button = gtk_button_new();        
+        GtkWidget * image = gtk_image_new_from_stock(GTK_STOCK_MEDIA_PLAY, GTK_ICON_SIZE_MENU);
+        gtk_button_set_image(button, image);
+        gtk_button_set_always_show_image(button, TRUE);
+        g_object_set_data (G_OBJECT (button), "widget", file_chooser);
+        g_signal_connect (button, "released", G_CALLBACK (test_sound_file), dialog);
+
         gtk_grid_attach(grid, checkbox, 0, row, 1, 1);        
         gtk_grid_attach(grid, file_chooser, 1, row, 1, 1);       
+        gtk_grid_attach(grid, button, 2, row, 1, 1);
 }
 
 
@@ -2019,7 +2039,12 @@ gvc_mixer_dialog_constructor (GType                  type,
         gtk_box_pack_start (GTK_BOX (input_level_box),
                             self->priv->input_level_bar,
                             TRUE, TRUE, 0);        
-        	
+        
+        /* Sound context */
+        ca_context_create (&self->priv->sound_context);
+        ca_context_change_props (self->priv->sound_context, CA_PROP_APPLICATION_NAME, "cinnamon", CA_PROP_APPLICATION_ID, "org.Cinnamon", NULL);
+        ca_context_open (self->priv->sound_context);
+
         /* Effects page */
         self->priv->sound_effects_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
         gtk_container_set_border_width (GTK_CONTAINER (self->priv->sound_effects_box), 12);
