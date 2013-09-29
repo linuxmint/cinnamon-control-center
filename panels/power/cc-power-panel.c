@@ -862,6 +862,42 @@ combo_enum_changed_cb (GtkWidget *widget, CcPowerPanel *self)
   g_settings_set_enum (self->priv->csd_settings, key, value);
 }
 
+static gboolean
+cc_login1 (const gchar *method)
+{
+        GVariant *result;
+        GDBusConnection *connection;
+        gboolean can;
+        gchar *rv;
+
+        can=FALSE;
+
+        connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, NULL);
+        result = g_dbus_connection_call_sync (connection,
+                                              "org.freedesktop.login1",
+                                              "/org/freedesktop/login1",
+                                              "org.freedesktop.login1.Manager",
+                                              method,
+                                              NULL,
+                                              NULL,
+                                              G_DBUS_CALL_FLAGS_NONE,
+                                             -1,
+                                             NULL,
+                                             NULL);
+        g_object_unref (connection);
+
+        if (result)
+        {
+                g_variant_get(result, "(s)", &rv);
+                g_variant_unref(result);
+                can = g_strcmp0 (rv, "yes") == 0 || g_strcmp0 (rv, "challenge") == 0;
+        }
+
+        g_free (rv);
+
+        return can;
+}
+
 static void
 disable_unavailable_combo_items (CcPowerPanel *self,
                                  GtkComboBox *combo_box)
@@ -895,10 +931,10 @@ disable_unavailable_combo_items (CcPowerPanel *self,
                           -1);
       switch (value_tmp) {
       case CSD_POWER_ACTION_SUSPEND:
-        enabled = up_client_get_can_suspend (self->priv->up_client);
+        enabled = cc_login1("CanSuspend") || up_client_get_can_suspend (self->priv->up_client);
         break;
       case CSD_POWER_ACTION_HIBERNATE:
-        enabled = up_client_get_can_hibernate (self->priv->up_client);
+        enabled = cc_login1("CanHibernate") || up_client_get_can_hibernate (self->priv->up_client);
         break;
       default:
         enabled = TRUE;
