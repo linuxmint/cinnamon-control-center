@@ -1,4 +1,4 @@
-m4_define([cinnamon_control_center_version], 1.8.2)
+m4_define([cinnamon_control_center_version], 1.9.1)
 AC_INIT([cinnamon-control-center], [cinnamon_control_center_version],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center])
 
