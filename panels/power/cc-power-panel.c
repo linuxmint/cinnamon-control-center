@@ -891,9 +891,9 @@ cc_login1 (const gchar *method)
                 g_variant_get(result, "(s)", &rv);
                 g_variant_unref(result);
                 can = g_strcmp0 (rv, "yes") == 0 || g_strcmp0 (rv, "challenge") == 0;
+        g_free (rv);
         }
 
-        g_free (rv);
 
         return can;
 }
