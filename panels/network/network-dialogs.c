@@ -30,7 +30,8 @@
 #include <nm-device-wifi.h>
 
 #include "network-dialogs.h"
-#ifdef NETWORK_MANAGER_1
+#include <config.h>
+#ifdef LIBNM_GTK
 #include "nm-wifi-dialog.h"
 #else
 #include "nm-wireless-dialog.h"
@@ -112,7 +113,7 @@ nag_dialog_response_cb (GtkDialog *nag_dialog,
                         gint response,
                         gpointer user_data)
 {
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
 	NMAWifiDialog *wireless_dialog = NMA_WIFI_DIALOG (user_data);
 
 	if (response == GTK_RESPONSE_NO) {  /* user opted not to correct the warning */
@@ -133,7 +134,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
                              gint response,
                              gpointer user_data)
 {
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
 	NMAWifiDialog *dialog = NMA_WIFI_DIALOG (foo);
 #else
 	NMAWirelessDialog *dialog = NMA_WIRELESS_DIALOG (foo);
@@ -147,7 +148,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
 	if (response != GTK_RESPONSE_OK)
 		goto done;
 
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
 	if (!nma_wifi_dialog_get_nag_ignored (dialog)) {
 		GtkWidget *nag_dialog;
 
@@ -173,7 +174,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		}
 	}
 
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
 	/* nma_wifi_dialog_get_connection() returns a connection with the
 	 * refcount incremented, so the caller must remember to unref it.
 	 */
@@ -234,7 +235,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		                                       NULL);
 	}
 
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
 	/* Balance nma_wifi_dialog_get_connection() */
 #else
 	/* Balance nma_wireless_dialog_get_connection() */
@@ -274,7 +275,7 @@ cc_network_panel_create_wifi_network (CcNetworkPanel   *panel,
 {
   if (wifi_can_create_wifi_network (client)) {
           show_wireless_dialog (panel, client, settings,
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
                                 nma_wifi_dialog_new_for_create (client, settings));
 #else
                                 nma_wireless_dialog_new_for_create (client, settings));
@@ -289,7 +290,7 @@ cc_network_panel_connect_to_hidden_network (CcNetworkPanel   *panel,
 {
         g_debug ("connect to hidden wifi");
         show_wireless_dialog (panel, client, settings,
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
                               nma_wifi_dialog_new_for_other (client, settings));
 #else
                               nma_wireless_dialog_new_for_other (client, settings));
@@ -357,7 +358,7 @@ cc_network_panel_connect_to_8021x_network (CcNetworkPanel   *panel,
         g_object_set (s_8021x, NM_SETTING_802_1X_PHASE2_AUTH, "mschapv2", NULL);
         nm_connection_add_setting (connection, NM_SETTING (s_8021x));
 
-#ifdef NETWORK_MANAGER_1
+#ifdef LIBNM_GTK
         dialog = nma_wifi_dialog_new (client, settings, connection, device, ap, FALSE);
 #else
         dialog = nma_wireless_dialog_new (client, settings, connection, device, ap, FALSE);
