@@ -30,7 +30,11 @@
 #include <nm-device-wifi.h>
 
 #include "network-dialogs.h"
+#ifdef NETWORK_MANAGER_1
+#include "nm-wifi-dialog.h"
+#else
 #include "nm-wireless-dialog.h"
+#endif 
 #include "nm-mobile-wizard.h"
 
 typedef struct {
@@ -108,11 +112,19 @@ nag_dialog_response_cb (GtkDialog *nag_dialog,
                         gint response,
                         gpointer user_data)
 {
+#ifdef NETWORK_MANAGER_1
+	NMAWifiDialog *wireless_dialog = NMA_WIFI_DIALOG (user_data);
+
+	if (response == GTK_RESPONSE_NO) {  /* user opted not to correct the warning */
+		nma_wifi_dialog_set_nag_ignored (wireless_dialog, TRUE);
+		gtk_dialog_response (GTK_DIALOG (wireless_dialog), GTK_RESPONSE_OK);
+#else
 	NMAWirelessDialog *wireless_dialog = NMA_WIRELESS_DIALOG (user_data);
 
 	if (response == GTK_RESPONSE_NO) {  /* user opted not to correct the warning */
 		nma_wireless_dialog_set_nag_ignored (wireless_dialog, TRUE);
 		gtk_dialog_response (GTK_DIALOG (wireless_dialog), GTK_RESPONSE_OK);
+#endif
 	}
 }
 
@@ -121,7 +133,11 @@ wireless_dialog_response_cb (GtkDialog *foo,
                              gint response,
                              gpointer user_data)
 {
+#ifdef NETWORK_MANAGER_1
+	NMAWifiDialog *dialog = NMA_WIFI_DIALOG (foo);
+#else
 	NMAWirelessDialog *dialog = NMA_WIRELESS_DIALOG (foo);
+#endif
 	WirelessDialogClosure *closure = user_data;
 	NMConnection *connection, *fuzzy_match = NULL;
 	NMDevice *device;
@@ -131,6 +147,15 @@ wireless_dialog_response_cb (GtkDialog *foo,
 	if (response != GTK_RESPONSE_OK)
 		goto done;
 
+#ifdef NETWORK_MANAGER_1
+	if (!nma_wifi_dialog_get_nag_ignored (dialog)) {
+		GtkWidget *nag_dialog;
+
+		/* Nag the user about certificates or whatever.  Only destroy the dialog
+		 * if no nagging was done.
+		 */
+		nag_dialog = nma_wifi_dialog_nag_user (dialog);
+#else
 	if (!nma_wireless_dialog_get_nag_ignored (dialog)) {
 		GtkWidget *nag_dialog;
 
@@ -138,6 +163,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		 * if no nagging was done.
 		 */
 		nag_dialog = nma_wireless_dialog_nag_user (dialog);
+#endif
 		if (nag_dialog) {
 			gtk_window_set_transient_for (GTK_WINDOW (nag_dialog), GTK_WINDOW (dialog));
 			g_signal_connect (nag_dialog, "response",
@@ -147,10 +173,17 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		}
 	}
 
+#ifdef NETWORK_MANAGER_1
+	/* nma_wifi_dialog_get_connection() returns a connection with the
+	 * refcount incremented, so the caller must remember to unref it.
+	 */
+	connection = nma_wifi_dialog_get_connection (dialog, &device, &ap);
+#else
 	/* nma_wireless_dialog_get_connection() returns a connection with the
 	 * refcount incremented, so the caller must remember to unref it.
 	 */
 	connection = nma_wireless_dialog_get_connection (dialog, &device, &ap);
+#endif
 	g_assert (connection);
 	g_assert (device);
 
@@ -201,7 +234,11 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		                                       NULL);
 	}
 
+#ifdef NETWORK_MANAGER_1
+	/* Balance nma_wifi_dialog_get_connection() */
+#else
 	/* Balance nma_wireless_dialog_get_connection() */
+#endif
 	g_object_unref (connection);
 
 done:
@@ -237,7 +274,11 @@ cc_network_panel_create_wifi_network (CcNetworkPanel   *panel,
 {
   if (wifi_can_create_wifi_network (client)) {
           show_wireless_dialog (panel, client, settings,
+#ifdef NETWORK_MANAGER_1
+                                nma_wifi_dialog_new_for_create (client, settings));
+#else
                                 nma_wireless_dialog_new_for_create (client, settings));
+#endif
   }
 }
 
@@ -248,7 +289,11 @@ cc_network_panel_connect_to_hidden_network (CcNetworkPanel   *panel,
 {
         g_debug ("connect to hidden wifi");
         show_wireless_dialog (panel, client, settings,
+#ifdef NETWORK_MANAGER_1
+                              nma_wifi_dialog_new_for_other (client, settings));
+#else
                               nma_wireless_dialog_new_for_other (client, settings));
+#endif
 }
 
 void
@@ -312,7 +357,11 @@ cc_network_panel_connect_to_8021x_network (CcNetworkPanel   *panel,
         g_object_set (s_8021x, NM_SETTING_802_1X_PHASE2_AUTH, "mschapv2", NULL);
         nm_connection_add_setting (connection, NM_SETTING (s_8021x));
 
+#ifdef NETWORK_MANAGER_1
+        dialog = nma_wifi_dialog_new (client, settings, connection, device, ap, FALSE);
+#else
         dialog = nma_wireless_dialog_new (client, settings, connection, device, ap, FALSE);
+#endif
         show_wireless_dialog (panel, client, settings, dialog);
 }
 
