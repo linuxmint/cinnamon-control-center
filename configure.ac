@@ -93,6 +93,7 @@ CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
 NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
+LIBNM_GTK_REQUIRED_VERSION=0.9.9.0
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 CINNAMON_DESKTOP_REQUIRED_VERSION=1.0.0
 CLUTTER_REQUIRED_VERSION=1.11.3
@@ -139,6 +140,14 @@ if test "x$have_networkmanager" = xno ; then
         AC_MSG_WARN(*** Network panel will not be built (NetworkManager ~0.9 or newer not found) ***)
 fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
+
+# Check for libnm-gtk + 0.9.9.0
+PKG_CHECK_MODULES(LIBNM_GTK_COMPAT, libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION
+		  libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION,
+                  [have_libnmgtk=yes], have_libnmgtk=no)
+if test "x$have_libnmgtk" = xyes ; then
+  AC_DEFINE(LIBNM_GTK, 1, [Defined if we meet the minimum libnm-gtk version])
+fi
 
 
 # -----------------------------------------------
