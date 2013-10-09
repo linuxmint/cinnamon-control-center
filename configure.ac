@@ -141,7 +141,7 @@ if test "x$have_networkmanager" = xno ; then
 fi
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
 
-# Check for libnm-gtk + 0.9.8.0
+# Check for libnm-gtk + 0.9.9.0
 PKG_CHECK_MODULES(LIBNM_GTK_COMPAT, libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION
 		  libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION,
                   [have_libnmgtk=yes], have_libnmgtk=no)
