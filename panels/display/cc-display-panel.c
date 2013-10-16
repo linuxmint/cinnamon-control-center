@@ -50,8 +50,6 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_WIDTH 675
 #define MINIMUM_HEIGHT 530
 
-#define SCREEN_COLOR "#e9f3db"
-
 enum {
   TEXT_COL,
   WIDTH_COL,
@@ -630,7 +628,7 @@ static void
 rebuild_current_monitor_label (CcDisplayPanel *self)
 {
   char *str, *tmp;
-  GdkColor color;
+  GdkRGBA color;
   gboolean use_color;
 
   if (self->priv->current_output)
@@ -641,7 +639,7 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
         tmp = g_strdup (gnome_rr_output_info_get_display_name (self->priv->current_output));
 
       str = g_strdup_printf ("<b>%s</b>", tmp);
-      gdk_color_parse (SCREEN_COLOR, &color);
+      cc_rr_labeler_get_rgba_for_output (self->priv->labeler, self->priv->current_output, &color);
       use_color = TRUE;
       g_free (tmp);
     }
@@ -657,16 +655,10 @@ rebuild_current_monitor_label (CcDisplayPanel *self)
   if (use_color)
     {
       GdkRGBA black = { 0, 0, 0, 1.0 };
-      GdkRGBA light;
-
-      light.red = color.red / 65535.0;
-      light.green = color.green / 65535.0;
-      light.blue = color.blue / 65535.0;
-      light.alpha = 1.0;
 
       gtk_widget_override_background_color (self->priv->current_monitor_event_box,
                                             gtk_widget_get_state_flags (self->priv->current_monitor_event_box),
-                                            &light);
+                                            &color);
 
       /* Make the label explicitly black.  We don't want it to follow the
        * theme's colors, since the label is always shown against a light
@@ -1931,7 +1923,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   PangoLayout *layout = get_display_name (self, output);
   PangoRectangle ink_extent, log_extent;
   GdkRectangle viewport;
-  GdkColor output_color;
+  GdkRGBA output_color;
   double r, g, b;
   double available_w;
   double factor;
@@ -1996,10 +1988,10 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_rectangle (cr, x, y, w * scale + 0.5, h * scale + 0.5);
   cairo_clip_preserve (cr);
 
-  gdk_color_parse (SCREEN_COLOR, &output_color);
-  r = output_color.red / 65535.0;
-  g = output_color.green / 65535.0;
-  b = output_color.blue / 65535.0;
+  cc_rr_labeler_get_rgba_for_output (self->priv->labeler, output, &output_color);
+  r = output_color.red;
+  g = output_color.green;
+  b = output_color.blue;
 
   if (!gnome_rr_output_info_is_active (output))
     {
@@ -2492,36 +2484,6 @@ dialog_map_event_cb (GtkWidget *widget, GdkEventAny *event, gpointer data)
 
   select_current_output_from_dialog_position (self);
   return FALSE;
-}
-
-static GdkPixbuf*
-get_monitor_pixbuf (CcDisplayPanel *self, GnomeRROutputInfo *output)
-{
-  GdkColor color;
-  cairo_surface_t *cairo_surface;
-  cairo_t *cr;
-  int monitor_width = 30;
-  int monitor_height = 15;
-
-  gdk_color_parse (SCREEN_COLOR, &color);
-
-  cairo_surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24, monitor_width, monitor_height);
-  cr = cairo_create (cairo_surface);
-  cairo_surface_destroy (cairo_surface);
-  cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
-  cairo_paint (cr);
-
-  cairo_set_operator (cr, CAIRO_OPERATOR_OVER);
-  cairo_set_source_rgb (cr, color.red / 65535.0, color.green / 65535.0, color.blue / 65535.0);
-  cairo_rectangle (cr, 0.5, 0.5, monitor_width - 1, monitor_height - 1);
-  cairo_fill (cr);
-
-  cairo_set_line_width (cr, 1);
-  cairo_set_source_rgba (cr, 0, 0, 0, 1.0);
-  cairo_rectangle (cr, 0.5, 0.5, monitor_width - 1, monitor_height - 1);
-  cairo_stroke (cr);
-
-  return gdk_pixbuf_get_from_surface (cairo_get_target (cr), 0, 0, monitor_width, monitor_height);
 }
 
 static void

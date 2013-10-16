@@ -200,16 +200,16 @@ make_palette (CcRRLabeler *labeler)
 
 	labeler->priv->palette = g_new (GdkRGBA, labeler->priv->num_outputs);
 
-	start_hue = 0.0; /* red */
-	end_hue   = 2.0/3; /* blue */
+	start_hue = 1.0/4; /* mint green */
+	end_hue   = 1.0; /* red */
 
 	for (i = 0; i < labeler->priv->num_outputs; i++) {
 		double h, s, v;
 		double r, g, b;
 
 		h = start_hue + (end_hue - start_hue) / labeler->priv->num_outputs * i;
-		s = 1.0 / 3;
-		v = 1.0;
+		s = 0.327;
+		v = 0.804;
 
 		gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
 
