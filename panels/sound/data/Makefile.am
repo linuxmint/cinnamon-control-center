@@ -6,7 +6,7 @@ SUBDIRS =			\
 	$(NULL)
 
 @INTLTOOL_DESKTOP_RULE@
-autostartdir = $(sysconfdir)/xdg/autostart
+autostartdir = $(datadir)/applications
 autostart_in_files = cinnamon-sound-applet.desktop.in
 autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
 
