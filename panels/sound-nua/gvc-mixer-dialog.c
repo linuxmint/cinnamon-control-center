@@ -1749,7 +1749,6 @@ add_sound_effect_selector (GtkWidget * grid, int row, char * label, GSettings * 
         GtkWidget * button = gtk_button_new();        
         GtkWidget * image = gtk_image_new_from_stock(GTK_STOCK_MEDIA_PLAY, GTK_ICON_SIZE_MENU);
         gtk_button_set_image(button, image);
-        gtk_button_set_always_show_image(button, TRUE);
         g_object_set_data (G_OBJECT (button), "widget", file_chooser);
         g_signal_connect (button, "released", G_CALLBACK (test_sound_file), dialog);
 
