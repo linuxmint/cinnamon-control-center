@@ -77,11 +77,7 @@ Recommends: cups-pk-helper,
             mesa-utils,
             mousetweaks,
             policykit-1-gnome
-Breaks: gnome-power-manager (<< 3.0),
-        gnome-session (<< 3.0),
-        libglib2.0-0 (<< 2.28.6-2),
-        metacity (<< 1:2.34.1),
-        unity (<< 6.2-0ubuntu2~),
+Breaks: gnome-power-manager (<< 3.0)
 Suggests: gstreamer0.10-pulseaudio,
           libcanberra-gtk-module,
           x11-xserver-utils
@@ -102,12 +98,8 @@ Replaces: cinnamon-capplets-data,
           gdm (<< 3.0),
           gdm3 (<< 3.0),
           gnome-media-common (<< 2.91),
-          gnome-power-manager (<< 3.2),
-          gnome-settings-daemon (<< 3.0)
-Breaks: gdm (<< 3.0),
-        gdm3 (<< 3.0),
-        gnome-power-manager (<< 3.2),
-        gnome-settings-daemon (<< 3.0)
+          gnome-power-manager (<< 3.2)
+Breaks: gnome-power-manager (<< 3.2)
 Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
