@@ -1,3 +1,9 @@
+cinnamon-control-center (2.0.6) petra; urgency=low
+
+  * 2.0.6
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 29 Oct 2013 10:39:11 +0000
+
 cinnamon-control-center (2.0.5) petra; urgency=low
 
   * 2.0.5
