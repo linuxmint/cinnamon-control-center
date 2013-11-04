@@ -850,6 +850,9 @@ rebuild_gui (CcDisplayPanel *self)
   rebuild_resolution_combo (self);
   rebuild_rotation_combo (self);
 
+  gtk_widget_set_sensitive (self->priv->primary_button,
+                            !gnome_rr_output_info_get_primary (self->priv->current_output));
+
   self->priv->ignore_gui_changes = FALSE;
 }
 
