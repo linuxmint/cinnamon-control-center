@@ -1679,6 +1679,9 @@ set_primary_output (CcDisplayPanel *self,
   for (i = 0; outputs[i] != NULL; ++i)
     gnome_rr_output_info_set_primary (outputs[i], outputs[i] == output);
 
+  gtk_widget_set_sensitive (self->priv->primary_button,
+                            !gnome_rr_output_info_get_primary (self->priv->current_output));
+
   gtk_widget_queue_draw (self->priv->area);
 }
 
