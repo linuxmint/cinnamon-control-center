@@ -16,8 +16,9 @@ def generate(filename, prefix, name, comment, suffix):
         if os.path.isdir(os.path.join(PATH, directory)):
             try:
                 language = gettext.translation(DOMAIN, PATH, languages=[directory])
-                language.install()          
-                desktopFile.writelines("Name[%s]=%s\n" % (directory, _(name)))
+                language.install()
+                if (_(name) != name):
+                    desktopFile.writelines("Name[%s]=%s\n" % (directory, _(name)))
             except:
                 pass
 
@@ -26,8 +27,9 @@ def generate(filename, prefix, name, comment, suffix):
         if os.path.isdir(os.path.join(PATH, directory)):
             try:
                 language = gettext.translation(DOMAIN, PATH, languages=[directory])
-                language.install()                      
-                desktopFile.writelines("Comment[%s]=%s\n" % (directory, _(comment)))
+                language.install()
+                if (_(comment) != comment):
+                    desktopFile.writelines("Comment[%s]=%s\n" % (directory, _(comment)))
             except:
                 pass
 
@@ -69,7 +71,7 @@ generate("./panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in.in", prefi
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings color
-Icon=preferences-color
+Icon=cinnamon-preferences-color
 Terminal=false
 Type=Application
 StartupNotify=true
@@ -107,7 +109,7 @@ Categories=
 NoDisplay=true
 X-GNOME-Autostart-Notify=true
 AutostartCondition=GNOME3 if-session gnome-fallback
-OnlyShowIn=;
+OnlyShowIn=GNOME;
 """
 
 generate("./panels/sound/data/cinnamon-sound-applet.desktop.in", prefix, _("Volume Control"), _("Show desktop volume control"), "")
