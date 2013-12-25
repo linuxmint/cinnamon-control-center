@@ -317,7 +317,7 @@ gsd_wacom_tablet_button_copy (CsdWacomTabletButton *button)
  * Tablet-wide settings: applied to each tool on the tablet. e.g. rotation
  * Tool-specific settings: applied to one tool only.
  */
-#define SETTINGS_WACOM_DIR         "org.gnome.settings-daemon.peripherals.wacom"
+#define SETTINGS_WACOM_DIR         "org.cinnamon.settings-daemon.peripherals.wacom"
 #define SETTINGS_STYLUS_DIR        "stylus"
 #define SETTINGS_ERASER_DIR        "eraser"
 
