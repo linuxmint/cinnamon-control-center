@@ -1029,7 +1029,7 @@ static gboolean
 display_clicked_cb (GtkButton   *button,
 		    CcWacomPage *page)
 {
-	cc_wacom_panel_switch_to_panel (page->priv->panel, "display");
+    g_spawn_command_line_async ("cinnamon-settings display", NULL);
 	return TRUE;
 }
 
