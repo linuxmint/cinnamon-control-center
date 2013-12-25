@@ -176,14 +176,14 @@ update_current_page (CcWacomPanel *self)
 		CsdWacomDevice *device;
 
 		device = l->data;
-		tablet = g_hash_table_lookup (ht, gsd_wacom_device_get_name (device));
+		tablet = g_hash_table_lookup (ht, csd_wacom_device_get_name (device));
 		if (tablet == NULL) {
 			tablet = g_new0 (Tablet, 1);
-			tablet->name = gsd_wacom_device_get_name (device);
+			tablet->name = csd_wacom_device_get_name (device);
 			g_hash_table_insert (ht, (gpointer) tablet->name, tablet);
 		}
 
-		switch (gsd_wacom_device_get_device_type (device)) {
+		switch (csd_wacom_device_get_device_type (device)) {
 		case WACOM_TYPE_STYLUS:
 			tablet->stylus = device;
 			break;
@@ -255,14 +255,14 @@ add_known_device (CcWacomPanel *self,
 
 	priv = self->priv;
 
-	device = gsd_wacom_device_new (gdk_device);
-	if (gsd_wacom_device_get_device_type (device) == WACOM_TYPE_INVALID) {
+	device = csd_wacom_device_new (gdk_device);
+	if (csd_wacom_device_get_device_type (device) == WACOM_TYPE_INVALID) {
 		g_object_unref (device);
 		return;
 	}
 	g_debug ("Adding device '%s' (type: '%s') to known devices list",
-		 gsd_wacom_device_get_tool_name (device),
-		 gsd_wacom_device_type_to_string (gsd_wacom_device_get_device_type (device)));
+		 csd_wacom_device_get_tool_name (device),
+		 csd_wacom_device_type_to_string (csd_wacom_device_get_device_type (device)));
 	g_hash_table_insert (priv->devices, (gpointer) gdk_device, device);
 }
 

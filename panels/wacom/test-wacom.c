@@ -27,7 +27,7 @@ add_page (GList *devices,
 
 	stylus = eraser = pad = NULL;
 	for (l = devices; l ; l = l->next) {
-		switch (gsd_wacom_device_get_device_type (l->data)) {
+		switch (csd_wacom_device_get_device_type (l->data)) {
 		case WACOM_TYPE_ERASER:
 			eraser = l->data;
 			break;
@@ -83,16 +83,16 @@ int main (int argc, char **argv)
 	gtk_container_add (GTK_CONTAINER (window), notebook);
 	gtk_widget_show (notebook);
 
-	devices = gsd_wacom_device_create_fake_intuos4 ();
+	devices = csd_wacom_device_create_fake_intuos4 ();
 	add_page (devices, notebook);
 
-	devices = gsd_wacom_device_create_fake_cintiq ();
+	devices = csd_wacom_device_create_fake_cintiq ();
 	add_page (devices, notebook);
 
-	devices = gsd_wacom_device_create_fake_bt ();
+	devices = csd_wacom_device_create_fake_bt ();
 	add_page (devices, notebook);
 
-	devices = gsd_wacom_device_create_fake_x201 ();
+	devices = csd_wacom_device_create_fake_x201 ();
 	add_page (devices, notebook);
 
 	gtk_widget_show (window);

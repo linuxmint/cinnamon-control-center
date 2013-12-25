@@ -438,17 +438,17 @@ cc_wacom_stylus_page_new (CsdWacomStylus *stylus,
 	priv->eraser = eraser;
 
 	/* Icon */
-	set_icon_name (page, "image-stylus", gsd_wacom_stylus_get_icon_name (stylus));
+	set_icon_name (page, "image-stylus", csd_wacom_stylus_get_icon_name (stylus));
 
 	/* Settings */
-	priv->stylus_settings = gsd_wacom_stylus_get_settings (stylus);
+	priv->stylus_settings = csd_wacom_stylus_get_settings (stylus);
 	if (eraser != NULL)
-		priv->eraser_settings = gsd_wacom_stylus_get_settings (eraser);
+		priv->eraser_settings = csd_wacom_stylus_get_settings (eraser);
 
 	/* Stylus name */
-	gtk_label_set_text (GTK_LABEL (WID ("label-stylus")), gsd_wacom_stylus_get_name (stylus));
+	gtk_label_set_text (GTK_LABEL (WID ("label-stylus")), csd_wacom_stylus_get_name (stylus));
 
-	num_buttons = gsd_wacom_stylus_get_num_buttons (stylus);
+	num_buttons = csd_wacom_stylus_get_num_buttons (stylus);
 	if (num_buttons == 0 && eraser == NULL)
 		layout = LAYOUT_INKING;
 	else if (num_buttons == 2 && eraser != NULL)

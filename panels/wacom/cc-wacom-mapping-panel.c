@@ -107,8 +107,8 @@ update_monitor_chooser (CcWacomMappingPanel *self)
 		return;
 	}
 
-	settings = gsd_wacom_device_get_settings (self->priv->device);
-	monitor = gsd_wacom_device_get_display_monitor (self->priv->device);
+	settings = csd_wacom_device_get_settings (self->priv->device);
+	monitor = csd_wacom_device_get_display_monitor (self->priv->device);
 	single_mon = (monitor != CSD_WACOM_SET_ALL_MONITORS);
 
 	g_signal_handlers_block_by_func (G_OBJECT (self->priv->checkbutton), checkbutton_toggled_cb, self);
@@ -171,7 +171,7 @@ update_ui (CcWacomMappingPanel *self)
 	} else {
 		gboolean is_screen_tablet;
 
-		is_screen_tablet = gsd_wacom_device_is_screen_tablet (self->priv->device);
+		is_screen_tablet = csd_wacom_device_is_screen_tablet (self->priv->device);
 		gtk_widget_set_sensitive (GTK_WIDGET(self->priv->checkbutton), !is_screen_tablet);
 		gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON(self->priv->checkbutton), FALSE);
 	}
@@ -198,17 +198,17 @@ update_mapping (CcWacomMappingPanel *self)
 		gtk_tree_model_get (model, &iter, MONITOR_NAME_COLUMN, &name, MONITOR_NUM_COLUMN, &monitor, -1);
 	}
 
-	gsd_wacom_device_set_display (self->priv->device, monitor);
+	csd_wacom_device_set_display (self->priv->device, monitor);
 
 	if (monitor >= 0) {
 		CsdWacomRotation rotation;
 		GSettings *settings;
 
-		rotation = gsd_wacom_device_get_display_rotation (self->priv->device);
-		settings = gsd_wacom_device_get_settings (self->priv->device);
+		rotation = csd_wacom_device_get_display_rotation (self->priv->device);
+		settings = csd_wacom_device_get_settings (self->priv->device);
 		g_settings_set_string (settings,
 				       "rotation",
-				       gsd_wacom_device_rotation_type_to_name (rotation));
+				       csd_wacom_device_rotation_type_to_name (rotation));
 	}
 }
 
@@ -240,7 +240,7 @@ aspectswitch_toggled_cb (GtkWidget           *widget,
 {
 	GSettings *settings;
 
-	settings = gsd_wacom_device_get_settings (self->priv->device);
+	settings = csd_wacom_device_get_settings (self->priv->device);
 	g_settings_set_boolean (settings,
 				"keep-aspect",
 				gtk_switch_get_active (GTK_SWITCH (widget)));

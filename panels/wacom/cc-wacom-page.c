@@ -132,9 +132,9 @@ get_layout_type (CsdWacomDevice *device)
 {
 	int layout;
 
-	if (gsd_wacom_device_is_screen_tablet (device))
+	if (csd_wacom_device_is_screen_tablet (device))
 		layout = LAYOUT_SCREEN;
-	else if (gsd_wacom_device_reversible (device))
+	else if (csd_wacom_device_reversible (device))
 		layout = LAYOUT_REVERSIBLE;
 	else
 		layout = LAYOUT_NORMAL;
@@ -241,7 +241,7 @@ calibrate_button_clicked_cb (GtkButton   *button,
 	gsize ncal;
 	gint monitor;
 
-	monitor = gsd_wacom_device_get_display_monitor (page->priv->stylus);
+	monitor = csd_wacom_device_get_display_monitor (page->priv->stylus);
 	if (monitor < 0) {
 		/* The display the tablet should be mapped to could not be located.
 		 * This shouldn't happen if the EDID data is good...
@@ -267,7 +267,7 @@ calibrate_button_clicked_cb (GtkButton   *button,
 	    calibration[2] == -1 &&
 	    calibration[3] == -1) {
 		gint *device_cal;
-		device_cal = gsd_wacom_device_get_area (page->priv->stylus);
+		device_cal = csd_wacom_device_get_area (page->priv->stylus);
 		for (i = 0; i < 4; i++)
 			calibration[i] = device_cal[i];
 		g_free (device_cal);
@@ -763,12 +763,12 @@ setup_mapping_treeview (CcWacomPage *page)
 	for (i = 0; i < G_N_ELEMENTS (action_table); i++) {
 		/* Screen tablets cannot switch monitors (as the monitor is the tablet) */
 		if (action_table[i].action_type == CSD_WACOM_ACTION_TYPE_SWITCH_MONITOR &&
-		    gsd_wacom_device_is_screen_tablet (priv->stylus))
+		    csd_wacom_device_is_screen_tablet (priv->stylus))
 			continue;
 
 		/* Do not list on-screen help if libwacom do no provide a layout */
 		if (action_table[i].action_type == CSD_WACOM_ACTION_TYPE_HELP &&
-		    gsd_wacom_device_get_layout_path (priv->stylus) == NULL)
+		    csd_wacom_device_get_layout_path (priv->stylus) == NULL)
 			continue;
 
 		gtk_list_store_append (priv->action_store, &iter);
@@ -818,7 +818,7 @@ setup_mapping_treeview (CcWacomPage *page)
 	gtk_tree_view_set_model (treeview, GTK_TREE_MODEL (model));
 
 	/* Fill it up! */
-	list = gsd_wacom_device_get_buttons (priv->pad);
+	list = csd_wacom_device_get_buttons (priv->pad);
 	for (l = list; l != NULL; l = l->next) {
 		CsdWacomTabletButton *button = l->data;
 		CsdWacomActionType type = CSD_WACOM_ACTION_TYPE_NONE;
@@ -980,8 +980,8 @@ left_handed_toggled_cb (GtkSwitch *sw, GParamSpec *pspec, gpointer *user_data)
 	CsdWacomRotation 	display_rotation;
 	const gchar*		rotation;
 
-	display_rotation = gsd_wacom_device_get_display_rotation (device);
-	rotation = gsd_wacom_device_rotation_type_to_name (display_rotation);
+	display_rotation = csd_wacom_device_get_display_rotation (device);
+	rotation = csd_wacom_device_rotation_type_to_name (display_rotation);
 	if (gtk_switch_get_active (sw))
 		rotation = opposite_rotation (rotation);
 
@@ -996,9 +996,9 @@ set_left_handed_from_gsettings (CcWacomPage *page)
 	CsdWacomRotation 	display_rotation;
 	const gchar*		rotation;
 
-	display_rotation = gsd_wacom_device_get_display_rotation (device);
+	display_rotation = csd_wacom_device_get_display_rotation (device);
 	rotation = g_settings_get_string (priv->wacom_settings, "rotation");
-	if (strcmp (rotation, gsd_wacom_device_rotation_type_to_name (display_rotation)) != 0)
+	if (strcmp (rotation, csd_wacom_device_rotation_type_to_name (display_rotation)) != 0)
 		gtk_switch_set_active (GTK_SWITCH (WID ("switch-left-handed")), TRUE);
 }
 
@@ -1195,7 +1195,7 @@ add_styli (CcWacomPage *page)
 
 	priv = page->priv;
 
-	styli = gsd_wacom_device_list_styli (priv->stylus);
+	styli = csd_wacom_device_list_styli (priv->stylus);
 
 	for (l = styli; l; l = l->next) {
 		CsdWacomStylus *stylus, *eraser;
@@ -1203,13 +1203,13 @@ add_styli (CcWacomPage *page)
 
 		stylus = l->data;
 
-		if (gsd_wacom_stylus_get_stylus_type (stylus) == WACOM_STYLUS_TYPE_PUCK)
+		if (csd_wacom_stylus_get_stylus_type (stylus) == WACOM_STYLUS_TYPE_PUCK)
 			continue;
 
-		if (gsd_wacom_stylus_get_has_eraser (stylus)) {
+		if (csd_wacom_stylus_get_has_eraser (stylus)) {
 			CsdWacomDeviceType type;
-			type = gsd_wacom_stylus_get_stylus_type (stylus);
-			eraser = gsd_wacom_device_get_stylus_for_type (priv->eraser, type);
+			type = csd_wacom_stylus_get_stylus_type (stylus);
+			eraser = csd_wacom_device_get_stylus_for_type (priv->eraser, type);
 		} else {
 			eraser = NULL;
 		}
@@ -1251,7 +1251,7 @@ stylus_changed (CsdWacomDevice *device,
 	}
 
 	g_warning ("Failed to find the page for stylus '%s'",
-		   gsd_wacom_stylus_get_name (stylus));
+		   csd_wacom_stylus_get_name (stylus));
 }
 
 static void
@@ -1299,7 +1299,7 @@ update_tablet_ui (CcWacomPage *page,
 		gtk_widget_destroy (WID ("display-mapping-button"));
 
 		gtk_widget_show (WID ("button-calibrate"));
-		if (gsd_wacom_device_get_display_monitor (priv->stylus) >= 0)
+		if (csd_wacom_device_get_display_monitor (priv->stylus) >= 0)
 			has_monitor = TRUE;
 		gtk_widget_set_sensitive (WID ("button-calibrate"), has_monitor);
 		gtk_widget_show (WID ("display-link"));
@@ -1353,13 +1353,13 @@ cc_wacom_page_new (CcWacomPanel   *panel,
 	CcWacomPagePrivate *priv;
 
 	g_return_val_if_fail (CSD_IS_WACOM_DEVICE (stylus), NULL);
-	g_return_val_if_fail (gsd_wacom_device_get_device_type (stylus) == WACOM_TYPE_STYLUS, NULL);
+	g_return_val_if_fail (csd_wacom_device_get_device_type (stylus) == WACOM_TYPE_STYLUS, NULL);
 
 	g_return_val_if_fail (CSD_IS_WACOM_DEVICE (eraser), NULL);
-	g_return_val_if_fail (gsd_wacom_device_get_device_type (eraser) == WACOM_TYPE_ERASER, NULL);
+	g_return_val_if_fail (csd_wacom_device_get_device_type (eraser) == WACOM_TYPE_ERASER, NULL);
 
 	if (pad != NULL)
-		g_return_val_if_fail (gsd_wacom_device_get_device_type (pad) == WACOM_TYPE_PAD, NULL);
+		g_return_val_if_fail (csd_wacom_device_get_device_type (pad) == WACOM_TYPE_PAD, NULL);
 
 	page = g_object_new (CC_TYPE_WACOM_PAGE, NULL);
 
@@ -1369,18 +1369,18 @@ cc_wacom_page_new (CcWacomPanel   *panel,
 	cc_wacom_page_update_tools (page, stylus, eraser, pad);
 
 	/* FIXME move this to construct */
-	priv->wacom_settings  = gsd_wacom_device_get_settings (stylus);
+	priv->wacom_settings  = csd_wacom_device_get_settings (stylus);
 	set_mode_from_gsettings (GTK_COMBO_BOX (WID ("combo-tabletmode")), page);
 
 	/* Tablet name */
-	gtk_label_set_text (GTK_LABEL (WID ("label-tabletmodel")), gsd_wacom_device_get_name (stylus));
+	gtk_label_set_text (GTK_LABEL (WID ("label-tabletmodel")), csd_wacom_device_get_name (stylus));
 
 	/* Left-handedness */
-	if (gsd_wacom_device_reversible (stylus))
+	if (csd_wacom_device_reversible (stylus))
 		set_left_handed_from_gsettings (page);
 
 	/* Tablet icon */
-	set_icon_name (page, "image-tablet", gsd_wacom_device_get_icon_name (stylus));
+	set_icon_name (page, "image-tablet", csd_wacom_device_get_icon_name (stylus));
 
 	/* Add styli */
 	add_styli (page);
