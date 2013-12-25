@@ -268,8 +268,9 @@ calibrate_button_clicked_cb (GtkButton   *button,
 	    calibration[3] == -1) {
 		gint *device_cal;
 		device_cal = csd_wacom_device_get_area (page->priv->stylus);
-		for (i = 0; i < 4; i++)
+		for (i = 0; i < 4 && device_cal; i++) {
 			calibration[i] = device_cal[i];
+        }
 		g_free (device_cal);
 	}
 
