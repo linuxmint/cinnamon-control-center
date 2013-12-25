@@ -130,16 +130,10 @@ PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libpulse-mainloop-glib >= $PA_REQUIRED_VERSION)
 PKG_CHECK_MODULES(UNIVERSAL_ACCESS_PANEL, $COMMON_MODULES)
 
-# Check for NetworkManager ~0.9
 PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
                   libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
                   libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-		  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION,
-                  [have_networkmanager=yes], have_networkmanager=no)
-if test "x$have_networkmanager" = xno ; then
-        AC_MSG_WARN(*** Network panel will not be built (NetworkManager ~0.9 or newer not found) ***)
-fi
-AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
+		  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION)
 
 # Check for libnm-gtk + 0.9.9.0
 PKG_CHECK_MODULES(LIBNM_GTK_COMPAT, libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION
@@ -183,6 +177,11 @@ if test x"$enable_cups" != x"no" ; then
   AC_SUBST(CUPS_CFLAGS)
   AC_SUBST(CUPS_LIBS)
 fi
+
+PKG_CHECK_MODULES(WACOM_PANEL, $COMMON_MODULES
+                  cinnamon-settings-daemon >= $CSD_REQUIRED_VERSION
+                  xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
+                  cinnamon-desktop)
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
@@ -393,6 +392,9 @@ panels/power/icons/24x24/Makefile
 panels/power/icons/32x32/Makefile
 panels/power/icons/48x48/Makefile
 panels/power/icons/256x256/Makefile
+panels/wacom/Makefile
+panels/wacom/calibrator/Makefile
+panels/wacom/cinnamon-wacom-panel.desktop.in
 po/Makefile.in
 files/Makefile
 shell/Makefile

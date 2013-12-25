@@ -7,10 +7,8 @@ SUBDIRS= \
 	universal-access \
 	power \
 	sound \
-	sound-nua
-
-if BUILD_NETWORK
-SUBDIRS += network
-endif
+	sound-nua \
+	wacom \
+	network
 
 -include $(top_srcdir)/git.mk

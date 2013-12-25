@@ -1,0 +1,13 @@
+[Desktop Entry]
+_Name=Digitizer Tablet
+_Comment=Set button mappings and adjust stylus sensitivity for graphics tablets
+Exec=cinnamon-settings wacom
+Icon=input-tablet
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+X-Cinnamon-Settings-Panel=wacom
+OnlyShowIn=GNOME;
+# Translators: those are keywords for the wacom tablet control-center panel
+_Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
