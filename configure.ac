@@ -178,10 +178,15 @@ if test x"$enable_cups" != x"no" ; then
   AC_SUBST(CUPS_LIBS)
 fi
 
-PKG_CHECK_MODULES(WACOM_PANEL, $COMMON_MODULES
+build_wacom=false
+PKG_CHECK_MODULES(WACOM_PANEL, [$COMMON_MODULES
                   cinnamon-settings-daemon >= $CSD_REQUIRED_VERSION
                   xi >= 1.2 x11 libwacom >= $LIBWACOM_REQUIRED_VERSION
-                  cinnamon-desktop)
+                  cinnamon-desktop
+                  gtk+-3.0 >= 3.8.0],
+                  [build_wacom="true" AC_DEFINE(HAVE_WACOM, 1, [Define if wacom is being build])], [build_wacom="false"])
+
+AM_CONDITIONAL(BUILD_WACOM, test "x$build_wacom" = "xtrue")
 
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)

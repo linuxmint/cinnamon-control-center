@@ -1,4 +1,6 @@
-SUBDIRS= \
+NULL =
+
+enabled_panels = \
 	common \
 	screen \
 	color \
@@ -8,7 +10,17 @@ SUBDIRS= \
 	power \
 	sound \
 	sound-nua \
-	wacom \
 	network
+
+disabled_panels = $(NULL)
+
+if BUILD_WACOM
+enabled_panels += wacom
+else
+disabled_panels += wacom
+endif
+
+SUBDIRS = common $(enabled_panels)
+DIST_SUBDIRS = $(SUBDIRS) $(disabled_panels)
 
 -include $(top_srcdir)/git.mk
