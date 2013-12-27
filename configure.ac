@@ -427,6 +427,9 @@ if test "x$with_systemd" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
 fi
+
+AC_MSG_NOTICE([   Wacom support:  $build_wacom])
+
 if test "x$have_cheese" = "xyes"; then
     AC_MSG_NOTICE([** Cheese (Users panel webcam support)])
 else
