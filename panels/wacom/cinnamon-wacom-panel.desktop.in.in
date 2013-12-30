@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=Digitizer Tablet
+_Name=Graphics Tablet
 _Comment=Set button mappings and adjust stylus sensitivity for graphics tablets
 Exec=cinnamon-settings wacom
 Icon=input-tablet
