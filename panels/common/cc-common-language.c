@@ -576,14 +576,12 @@ cc_common_language_get_initial_regions (const gchar *lang)
 
         ht = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
 
-#if 0
         /* Add some common regions */
         g_hash_table_insert (ht, g_strdup ("en_US.utf8"), g_strdup (_("United States")));
         g_hash_table_insert (ht, g_strdup ("de_DE.utf8"), g_strdup (_("Germany")));
         g_hash_table_insert (ht, g_strdup ("fr_FR.utf8"), g_strdup (_("France")));
         g_hash_table_insert (ht, g_strdup ("es_ES.utf8"), g_strdup (_("Spain")));
         g_hash_table_insert (ht, g_strdup ("zh_CN.utf8"), g_strdup (_("China")));
-#endif
 
         gdm_parse_language_name (lang, &language, NULL, NULL, NULL);
         langs = gdm_get_all_language_names ();
