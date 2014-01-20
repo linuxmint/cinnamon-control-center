@@ -5,7 +5,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 NoDisplay=true
 X-Cinnamon-Settings-Panel=sound
 # Translators: those are keywords for the sound control-center panel

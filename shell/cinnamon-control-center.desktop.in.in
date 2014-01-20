@@ -6,6 +6,6 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;System;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 NoDisplay=true
 _Keywords=Preferences;Settings;

@@ -5,7 +5,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;X-Cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=universal-access
 # Translators: those are keywords for the universal access control-center panel
 _Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;

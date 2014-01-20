@@ -5,7 +5,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=display
 # Translators: those are keywords for the display control-center panel
 _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;

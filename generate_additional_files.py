@@ -45,7 +45,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=screen
 # Translators: those are keywords for the brightness and lock control-center panel
 _Keywords=Brightness;Lock;Dim;Blank;Monitor;
@@ -61,7 +61,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=sound-nua
 # Translators: those are keywords for the sound control-center panel
 _Keywords=Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;
@@ -76,7 +76,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=color
 # Translators: those are keywords for the color control-center panel
 _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
@@ -91,7 +91,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 NoDisplay=true
 X-Cinnamon-Settings-Panel=sound
 # Translators: those are keywords for the sound control-center panel
@@ -109,7 +109,7 @@ Categories=
 NoDisplay=true
 X-GNOME-Autostart-Notify=true
 AutostartCondition=GNOME3 if-session gnome-fallback
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 """
 
 generate("./panels/sound/data/cinnamon-sound-applet.desktop.in", prefix, _("Volume Control"), _("Show desktop volume control"), "")
@@ -121,7 +121,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;HardwareSettings
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=power
 # Translators: those are keywords for the power control-center panel
 _Keywords=Power;Sleep;Suspend;Hibernate;Battery;
@@ -136,7 +136,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;
@@ -151,7 +151,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=display
 # Translators: those are keywords for the display control-center panel
 _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
@@ -166,7 +166,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=network
 # Translators: those are keywords for the network control-center panel
 _Keywords=Network;Wireless;IP;LAN;Proxy;
@@ -181,7 +181,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;X-Cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=universal-access
 # Translators: those are keywords for the universal access control-center panel
 _Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;

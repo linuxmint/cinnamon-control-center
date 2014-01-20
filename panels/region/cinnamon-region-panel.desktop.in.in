@@ -5,7 +5,7 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;

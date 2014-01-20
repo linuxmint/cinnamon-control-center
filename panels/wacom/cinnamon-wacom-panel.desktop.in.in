@@ -8,6 +8,6 @@ Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 X-Cinnamon-Settings-Panel=wacom
-OnlyShowIn=GNOME;
+OnlyShowIn=X-Cinnamon;
 # Translators: those are keywords for the wacom tablet control-center panel
 _Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
