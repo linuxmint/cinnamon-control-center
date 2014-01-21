@@ -412,11 +412,6 @@ if test "x$have_networkmanager" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Network panel disabled])
 fi
-if test "x$have_cheese" = "xyes"; then
-	AC_MSG_NOTICE([** Cheese (Users panel webcam support)])
-else
-	AC_MSG_NOTICE([   Users panel webcam support disabled])
-fi
 if test "x$with_libsocialweb" = "xyes"; then
 	AC_MSG_NOTICE([** libsocialweb (Background panel Flickr support)])
 else
@@ -430,11 +425,6 @@ fi
 
 AC_MSG_NOTICE([   Wacom support:  $build_wacom])
 
-if test "x$have_cheese" = "xyes"; then
-    AC_MSG_NOTICE([** Cheese (Users panel webcam support)])
-else
-    AC_MSG_NOTICE([   Users panel webcam support disabled])
-fi
 if test "x$enable_ibus" == "xyes"; then
 	AC_MSG_NOTICE([** IBus (Region panel IBus support)])
 else

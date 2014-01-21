@@ -17,7 +17,6 @@ LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 DEB_CONFIGURE_EXTRA_FLAGS += --disable-scrollkeeper \
                              --disable-ibus \
                              --disable-update-mimedb \
-                             --without-cheese \
                              --with-clutter
 
 DEB_DH_MAKESHLIBS_ARGS_cinnamon-control-center = --no-act

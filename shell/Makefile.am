@@ -1,7 +1,6 @@
 INCLUDES =					\
 	-I$(top_srcdir)				\
-	$(SHELL_CFLAGS)				\
-	$(CHEESE_CFLAGS)
+	$(SHELL_CFLAGS)
 
 bin_PROGRAMS = cinnamon-control-center
 
@@ -32,8 +31,7 @@ cinnamon_control_center_SOURCES =			\
 
 cinnamon_control_center_LDADD =			\
 	libcinnamon-control-center.la		\
-	$(SHELL_LIBS)				\
-	$(CHEESE_LIBS)
+	$(SHELL_LIBS)
 
 cinnamon_control_center_LDFLAGS = -export-dynamic
 
