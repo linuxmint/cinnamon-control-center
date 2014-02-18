@@ -24,9 +24,6 @@
 #include <glib/gi18n-lib.h>
 
 #include "cinnamon-region-panel-xkb.h"
-#include "cinnamon-region-panel-lang.h"
-#include "cinnamon-region-panel-formats.h"
-#include "cinnamon-region-panel-system.h"
 
 G_DEFINE_DYNAMIC_TYPE (CcRegionPanel, cc_region_panel, CC_TYPE_PANEL)
 
@@ -40,41 +37,6 @@ enum {
 	PROP_0,
 	PROP_ARGV
 };
-
-enum {
-	LANGUAGE_PAGE,
-	FORMATS_PAGE,
-	LAYOUTS_PAGE,
-	SYSTEM_PAGE
-};
-
-
-static gboolean
-languages_link_cb (GtkButton *button, gpointer user_data)
-{
-    g_spawn_command_line_async ("gnome-language-selector", NULL);
-    return TRUE;
-}
-
-static void
-cc_region_panel_set_page (CcRegionPanel *panel,
-			  const char    *page)
-{
-	GtkWidget *notebook;
-	int page_num;
-
-	if (g_strcmp0 (page, "formats") == 0)
-		page_num = FORMATS_PAGE;
-	else if (g_strcmp0 (page, "layouts") == 0)
-		page_num = LAYOUTS_PAGE;
-	else if (g_strcmp0 (page, "system") == 0)
-		page_num = SYSTEM_PAGE;
-	else
-		page_num = LANGUAGE_PAGE;
-
-	notebook = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder, "region_notebook"));
-	gtk_notebook_set_current_page (GTK_NOTEBOOK (notebook), page_num);
-}
 
 static void
 cc_region_panel_set_property (GObject * object,
@@ -91,10 +53,6 @@ cc_region_panel_set_property (GObject * object,
                 gchar **args;
 
                 args = g_value_get_boxed (value);
-
-                if (args && args[0]) {
-                        cc_region_panel_set_page (self, args[0]);
-                }
                 break;
         }
 	default:
@@ -157,29 +115,14 @@ cc_region_panel_init (CcRegionPanel * self)
 		return;
 	}
 
-    prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder,
-                                                         "region_notebook");
+    prefs_widget = (GtkWidget *) gtk_builder_get_object (priv->builder, "vbox1");
 
 	gtk_widget_set_size_request (GTK_WIDGET (prefs_widget), -1, 400);
 
 	gtk_widget_reparent (prefs_widget, GTK_WIDGET (self));
 
     setup_xkb_tabs (priv->builder);
-
-    setup_language (priv->builder);
-    setup_formats (priv->builder);
-    setup_system (priv->builder);
-
-        /* set screen link */
-
-    GtkWidget *widget = GTK_WIDGET (gtk_builder_get_object (self->priv->builder,
-                                                            "get_languages_button"));
-
-    gtk_button_set_label (GTK_BUTTON (widget), _("Get more languages..."));
-
-    g_signal_connect (widget, "clicked",
-                      G_CALLBACK (languages_link_cb),
-                      self);
+        
 }
 
 void

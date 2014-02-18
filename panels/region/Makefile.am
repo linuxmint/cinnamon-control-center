@@ -16,13 +16,7 @@ ccpanels_LTLIBRARIES = libregion.la
 libregion_la_SOURCES =	\
 	region-module.c \
 	cc-region-panel.c \
-	cc-region-panel.h \
-	cinnamon-region-panel-formats.c \
-	cinnamon-region-panel-formats.h \
-	cinnamon-region-panel-lang.c \
-	cinnamon-region-panel-lang.h \
-	cinnamon-region-panel-system.c \
-	cinnamon-region-panel-system.h \
+	cc-region-panel.h \	
 	cinnamon-region-panel-xkb.c \
 	cinnamon-region-panel-xkblt.c \
 	cinnamon-region-panel-xkbltadd.c \
