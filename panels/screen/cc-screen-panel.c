@@ -32,10 +32,6 @@ CC_PANEL_REGISTER (CcScreenPanel, cc_screen_panel)
 
 struct _CcScreenPanelPrivate
 {
-  GSettings     *lock_settings;
-  GSettings     *csd_settings;
-  GSettings     *session_settings;
-  GSettings     *lockdown_settings;
   GCancellable  *cancellable;
   GtkBuilder    *builder;
   GDBusProxy    *proxy;
@@ -74,26 +70,6 @@ cc_screen_panel_dispose (GObject *object)
 {
   CcScreenPanelPrivate *priv = CC_SCREEN_PANEL (object)->priv;
 
-  if (priv->lock_settings)
-    {
-      g_object_unref (priv->lock_settings);
-      priv->lock_settings = NULL;
-    }
-  if (priv->csd_settings)
-    {
-      g_object_unref (priv->csd_settings);
-      priv->csd_settings = NULL;
-    }
-  if (priv->session_settings)
-    {
-      g_object_unref (priv->session_settings);
-      priv->session_settings = NULL;
-    }
-  if (priv->lockdown_settings)
-    {
-      g_object_unref (priv->lockdown_settings);
-      priv->lockdown_settings = NULL;
-    }
   if (priv->cancellable != NULL)
     {
       g_cancellable_cancel (priv->cancellable);
@@ -112,37 +88,6 @@ cc_screen_panel_dispose (GObject *object)
     }
 
   G_OBJECT_CLASS (cc_screen_panel_parent_class)->dispose (object);
-}
-
-static void
-on_lock_settings_changed (GSettings     *settings,
-                          const char    *key,
-                          CcScreenPanel *panel)
-{
-  if (g_str_equal (key, "lock-delay") == FALSE)
-    return;
-}
-
-static void
-update_lock_screen_sensitivity (CcScreenPanel *self)
-{
-  GtkWidget *widget;
-  gboolean   locked;
-
-  widget = WID ("screen_lock_main_box");
-  locked = g_settings_get_boolean (self->priv->lockdown_settings, "disable-lock-screen");
-  gtk_widget_set_sensitive (widget, !locked);
-}
-
-static void
-on_lockdown_settings_changed (GSettings     *settings,
-                              const char    *key,
-                              CcScreenPanel *panel)
-{
-  if (g_str_equal (key, "disable-lock-screen") == FALSE)
-    return;
-
-  update_lock_screen_sensitivity (panel);
 }
 
 static const char *
@@ -233,14 +178,12 @@ get_brightness_cb (GObject *source_object, GAsyncResult *res, gpointer user_data
 	}
 
       gtk_widget_hide (WID ("screen_brightness_hscale"));
-      gtk_widget_hide (WID ("screen_auto_reduce_checkbutton"));
       gtk_widget_hide (WID ("brightness-frame"));
-      g_object_set (G_OBJECT (WID ("turn-off-alignment")), "left-padding", 0, NULL);
 
       if (error->message &&
       	  strstr (error->message, "No backlight devices present") == NULL)
         {
-          g_warning ("Error getting brightness: %s", error->message);
+          g_warning ("No backlight devices present: %s", error->message);
         }
       g_error_free (error);
       return;
@@ -320,147 +263,6 @@ got_power_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_dat
 }
 
 static void
-set_idle_delay_from_dpms (CcScreenPanel *self,
-                          int            value)
-{
-  guint off_delay;
-
-  off_delay = 0;
-
-  if (value > 0)
-    off_delay = (guint) value;
-
-  g_settings_set (self->priv->session_settings, "idle-delay", "u", off_delay);
-}
-
-static void
-dpms_combo_changed_cb (GtkWidget *widget, CcScreenPanel *self)
-{
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  gint value;
-  gboolean ret;
-
-  /* no selection */
-  ret = gtk_combo_box_get_active_iter (GTK_COMBO_BOX(widget), &iter);
-  if (!ret)
-    return;
-
-  /* get entry */
-  model = gtk_combo_box_get_model (GTK_COMBO_BOX(widget));
-  gtk_tree_model_get (model, &iter,
-                      1, &value,
-                      -1);
-
-  /* set both battery and ac keys */
-  g_settings_set_int (self->priv->csd_settings, "sleep-display-ac", value);
-  g_settings_set_int (self->priv->csd_settings, "sleep-display-battery", value);
-
-  set_idle_delay_from_dpms (self, value);
-}
-
-static void
-lock_combo_changed_cb (GtkWidget *widget, CcScreenPanel *self)
-{
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  guint delay;
-  gboolean ret;
-
-  /* no selection */
-  ret = gtk_combo_box_get_active_iter (GTK_COMBO_BOX(widget), &iter);
-  if (!ret)
-    return;
-
-  /* get entry */
-  model = gtk_combo_box_get_model (GTK_COMBO_BOX(widget));
-  gtk_tree_model_get (model, &iter,
-                      1, &delay,
-                      -1);
-  g_settings_set (self->priv->lock_settings, "lock-delay", "u", delay);
-}
-
-static void
-set_dpms_value_for_combo (GtkComboBox *combo_box, CcScreenPanel *self)
-{
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  gint value;
-  gint value_tmp, value_prev;
-  gboolean ret;
-  guint i;
-
-  /* get entry */
-  model = gtk_combo_box_get_model (combo_box);
-  ret = gtk_tree_model_get_iter_first (model, &iter);
-  if (!ret)
-    return;
-
-  value_prev = 0;
-  i = 0;
-
-  /* try to make the UI match the AC setting */
-  value = g_settings_get_int (self->priv->csd_settings, "sleep-display-ac");
-  do
-    {
-      gtk_tree_model_get (model, &iter,
-                          1, &value_tmp,
-                          -1);
-      if (value == value_tmp)
-        {
-          gtk_combo_box_set_active_iter (combo_box, &iter);
-          return;
-        }
-      value_prev = value_tmp;
-      i++;
-    } while (gtk_tree_model_iter_next (model, &iter));
-
-  /* If we didn't find the setting in the list */
-  gtk_combo_box_set_active (combo_box, i - 1);
-}
-
-static void
-set_lock_value_for_combo (GtkComboBox *combo_box, CcScreenPanel *self)
-{
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  guint value;
-  gint value_tmp, value_prev;
-  gboolean ret;
-  guint i;
-
-  /* get entry */
-  model = gtk_combo_box_get_model (combo_box);
-  ret = gtk_tree_model_get_iter_first (model, &iter);
-  if (!ret)
-    return;
-
-  value_prev = 0;
-  i = 0;
-
-  /* try to make the UI match the lock setting */
-  g_settings_get (self->priv->lock_settings, "lock-delay", "u", &value);
-
-  do
-    {
-      gtk_tree_model_get (model, &iter,
-                          1, &value_tmp,
-                          -1);
-      if (value == value_tmp ||
-          (value_tmp > value_prev && value < value_tmp))
-        {
-          gtk_combo_box_set_active_iter (combo_box, &iter);
-          return;
-        }
-      value_prev = value_tmp;
-      i++;
-    } while (gtk_tree_model_iter_next (model, &iter));
-
-  /* If we didn't find the setting in the list */
-  gtk_combo_box_set_active (combo_box, i - 1);
-}
-
-static void
 cc_screen_panel_init (CcScreenPanel *self)
 {
   GError     *error;
@@ -494,66 +296,6 @@ cc_screen_panel_init (CcScreenPanel *self)
                             self->priv->cancellable,
                             got_power_proxy_cb,
                             self);
-
-  self->priv->lock_settings = g_settings_new ("org.cinnamon.desktop.screensaver");
-  g_signal_connect (self->priv->lock_settings,
-                    "changed",
-                    G_CALLBACK (on_lock_settings_changed),
-                    self);
-  self->priv->csd_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.power");
-  self->priv->session_settings = g_settings_new ("org.cinnamon.desktop.session");
-  self->priv->lockdown_settings = g_settings_new ("org.cinnamon.desktop.lockdown");
-  g_signal_connect (self->priv->lockdown_settings,
-                    "changed",
-                    G_CALLBACK (on_lockdown_settings_changed),
-                    self);
-
-  /* bind the auto dim checkbox */
-  widget = WID ("screen_auto_reduce_checkbutton");
-  g_settings_bind (self->priv->csd_settings,
-                   "idle-dim-battery",
-                   widget, "active",
-                   G_SETTINGS_BIND_DEFAULT);
-
-  /* display off time */
-  widget = WID ("screen_brightness_combobox");
-  GtkListStore *store = LS ("screen_brightness_liststore");
-  gtk_combo_box_set_model (GTK_COMBO_BOX (widget), store);
-  set_dpms_value_for_combo (GTK_COMBO_BOX (widget), self);
-  g_signal_connect (widget, "changed",
-                    G_CALLBACK (dpms_combo_changed_cb),
-                    self);
-
-  /* bind the screen lock checkbox */
-  widget = WID ("screen_lock_on_switch");
-  g_settings_bind (self->priv->lock_settings,
-                   "lock-enabled",
-                   widget, "active",
-                   G_SETTINGS_BIND_DEFAULT);
-
-  /* lock time */
-  widget = WID ("screen_lock_combobox");
-  store = LS ("lock_liststore");
-  gtk_combo_box_set_model (GTK_COMBO_BOX (widget), store);
-  set_lock_value_for_combo (GTK_COMBO_BOX (widget), self);
-  g_signal_connect (widget, "changed",
-                    G_CALLBACK (lock_combo_changed_cb),
-                    self);
-
-  widget = WID ("screen_lock_hbox");
-  g_settings_bind (self->priv->lock_settings,
-                   "lock-enabled",
-                   widget, "sensitive",
-                   G_SETTINGS_BIND_GET);
-
-  update_lock_screen_sensitivity (self);
-
-  /* bind the screen lock suspend checkbutton */
-  widget = WID ("screen_lock_suspend_checkbutton");
-  g_settings_bind (self->priv->csd_settings,
-                   "lock-on-suspend",
-                   widget, "active",
-                   G_SETTINGS_BIND_DEFAULT);
 
   widget = WID ("screen_vbox");
   gtk_widget_reparent (widget, (GtkWidget *) self);
