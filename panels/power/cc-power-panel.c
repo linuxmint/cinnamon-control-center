@@ -1013,15 +1013,44 @@ set_ac_battery_ui_mode (CcPowerPanel *self)
 
   has_lid = up_client_get_lid_is_present (self->priv->up_client);
 
-out:
-  gtk_widget_set_visible (WID (priv->builder, "combobox_lid_ac"), has_lid);
-  gtk_widget_set_visible (WID (priv->builder, "label_lid_action"), has_lid);
-  gtk_widget_set_visible (WID (priv->builder, "combobox_lid_battery"), has_batteries && has_lid);    
-  gtk_widget_set_visible (WID (priv->builder, "label_header_battery"), has_batteries);
-  gtk_widget_set_visible (WID (priv->builder, "label_header_ac"), has_batteries);
-  gtk_widget_set_visible (WID (priv->builder, "combobox_sleep_battery"), has_batteries);
-  gtk_widget_set_visible (WID (priv->builder, "label_critical"), has_batteries);
-  gtk_widget_set_visible (WID (priv->builder, "combobox_critical"), has_batteries);
+out:	  
+  if (has_lid) { 
+  	printf ("Showing stuff\n");
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object (priv->builder, "combobox_lid_ac")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_lid_action")));
+  }
+  else {
+  	printf ("Hiding stuff\n");
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_lid_ac")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_lid_action")));
+  }
+
+  if (has_batteries) {
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_header_battery")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_header_ac")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_sleep_battery")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_display_battery")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_critical")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_critical")));
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "separator_indicator")));
+  }
+  else {
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_header_battery")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_header_ac")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_sleep_battery")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_display_battery")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "label_critical")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_critical")));
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "separator_indicator")));
+  }
+
+  if (has_lid && has_batteries) {
+  	gtk_widget_show (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_lid_battery")));
+  }
+  else {
+  	gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object  (priv->builder, "combobox_lid_battery")));	
+  }
+	  
 }
 
 static void
