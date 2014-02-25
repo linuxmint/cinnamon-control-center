@@ -507,7 +507,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFrame" id="frame2">
+          <object class="GtkFrame" id="frame_battery">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">6</property>

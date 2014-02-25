@@ -2,6 +2,7 @@
 # 
 # Modifications should be made to debian/control.in instead.
 # This file is regenerated automatically in the clean target.
+
 Source: cinnamon-control-center
 Section: gnome
 Priority: optional

@@ -1018,6 +1018,7 @@ out:
   	gtk_widget_show (WID("label_critical"));
   	gtk_widget_show (WID("combobox_critical"));
   	gtk_widget_show (WID("separator_indicator"));
+    gtk_widget_show (WID("frame_battery"));
   }
   else {
   	gtk_widget_hide (WID("label_header_battery"));
@@ -1027,6 +1028,7 @@ out:
   	gtk_widget_hide (WID("label_critical"));
   	gtk_widget_hide (WID("combobox_critical"));
   	gtk_widget_hide (WID("separator_indicator"));
+    gtk_widget_hide (WID("frame_battery"));
   }
 
   if (has_lid && has_batteries) {
