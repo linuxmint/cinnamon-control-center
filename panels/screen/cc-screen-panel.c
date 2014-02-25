@@ -178,7 +178,6 @@ get_brightness_cb (GObject *source_object, GAsyncResult *res, gpointer user_data
 	}
 
       gtk_widget_hide (WID ("screen_brightness_hscale"));
-      gtk_widget_hide (WID ("brightness-frame"));
 
       if (error->message &&
       	  strstr (error->message, "No backlight devices present") == NULL)
