@@ -48,7 +48,7 @@
         <col id="1">3600</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Don't turn off the screen</col>
+        <col id="0" translatable="yes">Never</col>
         <col id="1">0</col>
       </row>
     </data>
@@ -144,6 +144,36 @@
       </row>
     </data>
   </object>
+  <object class="GtkListStore" id="liststore_session">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="guint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">5 minutes</col>
+        <col id="1">300</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">10 minutes</col>
+        <col id="1">600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">30 minutes</col>
+        <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">1 hour</col>
+        <col id="1">3600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Never</col>
+        <col id="1">0</col>
+      </row>
+    </data>
+  </object>
   <object class="GtkListStore" id="liststore_suspend">
     <columns>
       <!-- column-name name -->
@@ -169,7 +199,7 @@
         <col id="1">3600</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Don't suspend</col>
+        <col id="0" translatable="yes">Never</col>
         <col id="1">0</col>
       </row>
     </data>
@@ -479,6 +509,41 @@
                         </child>
                         <child>
                           <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label4">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="label" translatable="yes">Start the screensaver when inactive for</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">7</property>
+                            <property name="width">1</property>
+                            <property name="height">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="combobox_session_idle">
+                            <property name="width_request">150</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="hexpand">True</property>
+                            <property name="entry_text_column">0</property>
+                            <property name="id_column">1</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">7</property>
+                            <property name="width">1</property>
+                            <property name="height">1</property>
+                          </packing>
                         </child>
                       </object>
                       <packing>

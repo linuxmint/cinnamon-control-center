@@ -39,9 +39,8 @@ CC_PANEL_REGISTER (CcPowerPanel, cc_power_panel)
 
 struct _CcPowerPanelPrivate
 {
-  GSettings     *lock_settings;
   GSettings     *csd_settings;
-  GSettings     *power_settings;
+  GSettings     *session_settings;
   GCancellable  *cancellable;
   GtkBuilder    *builder;
   GDBusProxy    *proxy;
@@ -92,10 +91,10 @@ cc_power_panel_dispose (GObject *object)
       g_object_unref (priv->csd_settings);
       priv->csd_settings = NULL;
     }
-  if (priv->power_settings)
+  if (priv->session_settings)
     {
-      g_object_unref (priv->power_settings);
-      priv->power_settings = NULL;
+      g_object_unref (priv->session_settings);
+      priv->session_settings = NULL;
     }
   if (priv->cancellable != NULL)
     {
@@ -120,13 +119,6 @@ cc_power_panel_dispose (GObject *object)
     }
 
   G_OBJECT_CLASS (cc_power_panel_parent_class)->dispose (object);
-}
-
-static void
-on_lock_settings_changed (GSettings     *settings,
-                          const char    *key,
-                          CcPowerPanel *panel)
-{
 }
 
 static const char *
@@ -826,6 +818,30 @@ combo_time_changed_cb (GtkWidget *widget, CcPowerPanel *self)
 }
 
 static void
+combo_session_time_changed_cb (GtkWidget *widget, CcPowerPanel *self)
+{
+  GtkTreeIter iter;
+  GtkTreeModel *model;
+  guint value;
+  gboolean ret;
+  const gchar *key = (const gchar *)g_object_get_data (G_OBJECT(widget), "_gsettings_key");
+
+  /* no selection */
+  ret = gtk_combo_box_get_active_iter (GTK_COMBO_BOX(widget), &iter);
+  if (!ret)
+    return;
+
+  /* get entry */
+  model = gtk_combo_box_get_model (GTK_COMBO_BOX(widget));
+  gtk_tree_model_get (model, &iter,
+                      1, &value,
+                      -1);
+
+  /* set both keys */
+  g_settings_set_uint (self->priv->session_settings, key, value);
+}
+
+static void
 combo_enum_changed_cb (GtkWidget *widget, CcPowerPanel *self)
 {
   GtkTreeIter iter;
@@ -1069,6 +1085,7 @@ cc_power_panel_init (CcPowerPanel *self)
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_display_battery")), LS("liststore_display"));
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_sleep_ac")), LS("liststore_suspend"));
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_sleep_battery")), LS("liststore_suspend"));
+  gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_session_idle")), LS("liststore_session"));
 
   /* add levelbar */
   self->priv->levelbar_primary = SWID("levelbar_primary");
@@ -1091,10 +1108,15 @@ cc_power_panel_init (CcPowerPanel *self)
   set_ac_battery_ui_mode (self);
 
   self->priv->csd_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.power");
-  g_signal_connect (self->priv->csd_settings,
-                    "changed",
-                    G_CALLBACK (on_lock_settings_changed),
-                    self);
+  self->priv->session_settings = g_settings_new ("org.cinnamon.desktop.session");
+
+
+  /* Session idle time */
+  value = g_settings_get_uint (self->priv->session_settings, "idle-delay");
+  widget = SWID("combobox_session_idle");
+  set_value_for_combo (GTK_COMBO_BOX (widget), value);
+  g_object_set_data (G_OBJECT(widget), "_gsettings_key", "idle-delay");
+  g_signal_connect (widget, "changed", G_CALLBACK (combo_session_time_changed_cb), self);
 
   /* auto-display-off time */
   value = g_settings_get_int (self->priv->csd_settings, "sleep-display-ac");
