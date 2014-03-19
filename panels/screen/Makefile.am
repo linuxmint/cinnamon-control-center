@@ -22,12 +22,4 @@ libscreen_la_LDFLAGS = $(PANEL_LDFLAGS)
 uidir = $(pkgdatadir)/ui
 dist_ui_DATA = screen.ui
 
-@INTLTOOL_DESKTOP_RULE@
-
-desktopdir = $(datadir)/applications
-desktop_in_files = cinnamon-screen-panel.desktop.in
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-
-CLEANFILES = $(desktop_in_files) $(desktop_DATA)
-
 -include $(top_srcdir)/git.mk
