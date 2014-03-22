@@ -761,7 +761,8 @@ gvc_level_bar_finalize (GObject *object)
         bar = GVC_LEVEL_BAR (object);
 
         if (bar->priv->max_peak_id > 0) {
-                g_source_remove (bar->priv->max_peak_id);
+            g_source_remove (bar->priv->max_peak_id);
+            bar->priv->max_peak_id = 0;
         }
 
         g_return_if_fail (bar->priv != NULL);

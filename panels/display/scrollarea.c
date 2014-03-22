@@ -1410,7 +1410,10 @@ stop_scrolling (FooScrollArea *area)
 #endif
   if (area->priv->auto_scroll_info)
     {
-      g_source_remove (area->priv->auto_scroll_info->timeout_id);
+      if (area->priv->auto_scroll_info->timeout_id) {
+        g_source_remove (area->priv->auto_scroll_info->timeout_id);
+        area->priv->auto_scroll_info->timeout_id = 0;
+      }
       g_timer_destroy (area->priv->auto_scroll_info->timer);
       g_free (area->priv->auto_scroll_info);
 

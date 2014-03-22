@@ -133,15 +133,18 @@ remove_timeout (gpointer data,
 		GObject *where_the_object_was)
 {
 	guint timeout = GPOINTER_TO_UINT (data);
-	g_source_remove (timeout);
+    if (timeout){
+	   g_source_remove (timeout);       
+    }
 }
 
 static void
 remove_async (gpointer data)
 {
-  guint async_id = GPOINTER_TO_UINT (data);
-
-  g_source_remove (async_id);
+    guint async_id = GPOINTER_TO_UINT (data);
+    if (async_id) {
+        g_source_remove (async_id);
+    }
 }
 
 static void
