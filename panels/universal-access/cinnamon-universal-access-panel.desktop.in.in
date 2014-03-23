@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-settings universal-access
-Icon=preferences-desktop-accessibility
+Icon=cs-universal-access
 Terminal=false
 Type=Application
 StartupNotify=true

@@ -2,7 +2,7 @@
 _Name=Graphics Tablet
 _Comment=Set button mappings and adjust stylus sensitivity for graphics tablets
 Exec=cinnamon-settings wacom
-Icon=input-tablet
+Icon=cs-tablet
 Terminal=false
 Type=Application
 StartupNotify=true

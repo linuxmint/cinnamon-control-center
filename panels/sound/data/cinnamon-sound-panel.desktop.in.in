@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-control-center sound
-Icon=multimedia-volume-control
+Icon=cs-sound
 Terminal=false
 Type=Application
 StartupNotify=true

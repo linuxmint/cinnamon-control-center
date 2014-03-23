@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-settings color
-Icon=cinnamon-preferences-color
+Icon=cs-color
 Terminal=false
 Type=Application
 StartupNotify=true
