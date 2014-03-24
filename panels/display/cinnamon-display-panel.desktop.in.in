@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-settings display
-Icon=preferences-desktop-display
+Icon=cs-display
 Terminal=false
 Type=Application
 StartupNotify=true

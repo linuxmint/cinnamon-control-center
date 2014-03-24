@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-control-center screen
-Icon=system-lock-screen
+Icon=cs-screensaver
 Terminal=false
 Type=Application
 StartupNotify=true

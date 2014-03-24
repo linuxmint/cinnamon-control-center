@@ -1,5 +1,5 @@
 [Desktop Entry]
-Icon=multimedia-volume-control
+Icon=cs-sound
 Exec=cinnamon-sound-applet
 Terminal=false
 Type=Application

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-settings region
-Icon=preferences-desktop-locale
+Icon=cs-language
 Terminal=false
 Type=Application
 StartupNotify=true

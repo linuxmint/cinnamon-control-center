@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=cinnamon-settings power
-Icon=cinnamon-power-manager
+Icon=cs-power
 Terminal=false
 Type=Application
 StartupNotify=true
