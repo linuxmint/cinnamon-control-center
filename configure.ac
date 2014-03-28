@@ -114,6 +114,9 @@ PKG_CHECK_MODULES(LIBSHORTCUTS, $COMMON_MODULES x11)
 PKG_CHECK_MODULES(SHELL, $COMMON_MODULES libgnome-menu-3.0 gio-unix-2.0 x11)
 PKG_CHECK_MODULES(BACKGROUND_PANEL, $COMMON_MODULES libxml-2.0 cinnamon-desktop
                   gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION)
+PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
+                  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
+                  gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED_VERSION)
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES cinnamon-desktop x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
@@ -401,6 +404,9 @@ panels/power/icons/256x256/Makefile
 panels/wacom/Makefile
 panels/wacom/calibrator/Makefile
 panels/wacom/cinnamon-wacom-panel.desktop.in
+panels/datetime/Makefile
+panels/datetime/cinnamon-datetime-panel.desktop.in
+panels/datetime/po-timezones/Makefile
 po/Makefile.in
 files/Makefile
 shell/Makefile

@@ -138,19 +138,19 @@ _g_value_equal (const GValue *a, const GValue *b)
 }
 
 /* ------------------------------------------------------------------------
- * Code for interface org.gnome.SettingsDaemon.DateTimeMechanism
+ * Code for interface org.cinnamon.SettingsDaemon.DateTimeMechanism
  * ------------------------------------------------------------------------
  */
 
 /**
  * SECTION:DateTimeMechanism
  * @title: DateTimeMechanism
- * @short_description: Generated C code for the org.gnome.SettingsDaemon.DateTimeMechanism D-Bus interface
+ * @short_description: Generated C code for the org.cinnamon.SettingsDaemon.DateTimeMechanism D-Bus interface
  *
- * This section contains code for working with the <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link> D-Bus interface in C.
+ * This section contains code for working with the <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link> D-Bus interface in C.
  */
 
-/* ---- Introspection data for org.gnome.SettingsDaemon.DateTimeMechanism ---- */
+/* ---- Introspection data for org.cinnamon.SettingsDaemon.DateTimeMechanism ---- */
 
 static const _ExtendedGDBusArgInfo _date_time_mechanism_method_info_set_timezone_IN_ARG_tz =
 {
@@ -725,7 +725,7 @@ static const _ExtendedGDBusInterfaceInfo _date_time_mechanism_interface_info =
 {
   {
     -1,
-    "org.gnome.SettingsDaemon.DateTimeMechanism",
+    "org.cinnamon.SettingsDaemon.DateTimeMechanism",
     (GDBusMethodInfo **) &_date_time_mechanism_method_info_pointers,
     NULL,
     NULL,
@@ -738,7 +738,7 @@ static const _ExtendedGDBusInterfaceInfo _date_time_mechanism_interface_info =
 /**
  * date_time_mechanism_interface_info:
  *
- * Gets a machine-readable description of the <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link> D-Bus interface.
+ * Gets a machine-readable description of the <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
  */
@@ -753,7 +753,7 @@ date_time_mechanism_interface_info (void)
 /**
  * DateTimeMechanism:
  *
- * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link>.
+ * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link>.
  */
 
 /**
@@ -772,7 +772,7 @@ date_time_mechanism_interface_info (void)
  * @handle_set_timezone: Handler for the #DateTimeMechanism::handle-set-timezone signal.
  * @handle_set_using_ntp: Handler for the #DateTimeMechanism::handle-set-using-ntp signal.
  *
- * Virtual table for the D-Bus interface <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link>.
+ * Virtual table for the D-Bus interface <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link>.
  */
 
 static void
@@ -785,7 +785,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @invocation: A #GDBusMethodInvocation.
    * @tz: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_set_timezone() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -807,7 +807,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_get_timezone() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -829,7 +829,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_can_set_timezone() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -854,7 +854,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @month: Argument passed by remote caller.
    * @year: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_set_date() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -877,7 +877,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @invocation: A #GDBusMethodInvocation.
    * @seconds_since_epoch: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_set_time() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -899,7 +899,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_can_set_time() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -922,7 +922,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @invocation: A #GDBusMethodInvocation.
    * @seconds_to_add: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_adjust_time() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -944,7 +944,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_get_hardware_clock_using_utc() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -967,7 +967,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @invocation: A #GDBusMethodInvocation.
    * @is_using_utc: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_set_hardware_clock_using_utc() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -989,7 +989,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_get_using_ntp() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -1012,7 +1012,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @invocation: A #GDBusMethodInvocation.
    * @is_using_ntp: Argument passed by remote caller.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_set_using_ntp() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -1034,7 +1034,7 @@ date_time_mechanism_default_init (DateTimeMechanismIface *iface)
    * @object: A #DateTimeMechanism.
    * @invocation: A #GDBusMethodInvocation.
    *
-   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method.
+   * Signal emitted when a remote caller is invoking the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method.
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call date_time_mechanism_complete_can_set_using_ntp() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
@@ -1064,7 +1064,7 @@ G_DEFINE_INTERFACE (DateTimeMechanism, date_time_mechanism, G_TYPE_OBJECT);
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_set_timezone_finish() to get the result of the operation.
  *
@@ -1123,7 +1123,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_set_timezone() for the asynchronous version of this method.
  *
@@ -1161,7 +1161,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_get_timezone_finish() to get the result of the operation.
  *
@@ -1221,7 +1221,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_get_timezone() for the asynchronous version of this method.
  *
@@ -1259,7 +1259,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_can_set_timezone_finish() to get the result of the operation.
  *
@@ -1319,7 +1319,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_can_set_timezone() for the asynchronous version of this method.
  *
@@ -1360,7 +1360,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_set_date_finish() to get the result of the operation.
  *
@@ -1425,7 +1425,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_set_date() for the asynchronous version of this method.
  *
@@ -1468,7 +1468,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_set_time_finish() to get the result of the operation.
  *
@@ -1527,7 +1527,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_set_time() for the asynchronous version of this method.
  *
@@ -1565,7 +1565,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_can_set_time_finish() to get the result of the operation.
  *
@@ -1625,7 +1625,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_can_set_time() for the asynchronous version of this method.
  *
@@ -1664,7 +1664,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_adjust_time_finish() to get the result of the operation.
  *
@@ -1723,7 +1723,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_adjust_time() for the asynchronous version of this method.
  *
@@ -1761,7 +1761,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_get_hardware_clock_using_utc_finish() to get the result of the operation.
  *
@@ -1821,7 +1821,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_get_hardware_clock_using_utc() for the asynchronous version of this method.
  *
@@ -1860,7 +1860,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_set_hardware_clock_using_utc_finish() to get the result of the operation.
  *
@@ -1919,7 +1919,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_set_hardware_clock_using_utc() for the asynchronous version of this method.
  *
@@ -1957,7 +1957,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_get_using_ntp_finish() to get the result of the operation.
  *
@@ -2021,7 +2021,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_get_using_ntp() for the asynchronous version of this method.
  *
@@ -2062,7 +2062,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_set_using_ntp_finish() to get the result of the operation.
  *
@@ -2121,7 +2121,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_set_using_ntp() for the asynchronous version of this method.
  *
@@ -2159,7 +2159,7 @@ _out:
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied or %NULL.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method on @proxy.
+ * Asynchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method on @proxy.
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_call_can_set_using_ntp_finish() to get the result of the operation.
  *
@@ -2219,7 +2219,7 @@ _out:
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL.
  *
- * Synchronously invokes the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
+ * Synchronously invokes the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method on @proxy. The calling thread is blocked until a reply is received.
  *
  * See date_time_mechanism_call_can_set_using_ntp() for the asynchronous version of this method.
  *
@@ -2255,7 +2255,7 @@ _out:
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTimezone">SetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2274,7 +2274,7 @@ date_time_mechanism_complete_set_timezone (
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @timezone: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetTimezone">GetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2295,7 +2295,7 @@ date_time_mechanism_complete_get_timezone (
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @value: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTimezone">CanSetTimezone()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2315,7 +2315,7 @@ date_time_mechanism_complete_can_set_timezone (
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetDate">SetDate()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2333,7 +2333,7 @@ date_time_mechanism_complete_set_date (
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetTime">SetTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2352,7 +2352,7 @@ date_time_mechanism_complete_set_time (
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @value: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetTime">CanSetTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2372,7 +2372,7 @@ date_time_mechanism_complete_can_set_time (
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.AdjustTime">AdjustTime()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2391,7 +2391,7 @@ date_time_mechanism_complete_adjust_time (
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @is_using_utc: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetHardwareClockUsingUtc">GetHardwareClockUsingUtc()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2411,7 +2411,7 @@ date_time_mechanism_complete_get_hardware_clock_using_utc (
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetHardwareClockUsingUtc">SetHardwareClockUsingUtc()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2431,7 +2431,7 @@ date_time_mechanism_complete_set_hardware_clock_using_utc (
  * @can_use_ntp: Parameter to return.
  * @is_using_ntp: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.GetUsingNtp">GetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2453,7 +2453,7 @@ date_time_mechanism_complete_get_using_ntp (
  * @object: A #DateTimeMechanism.
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.SetUsingNtp">SetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2472,7 +2472,7 @@ date_time_mechanism_complete_set_using_ntp (
  * @invocation: (transfer full): A #GDBusMethodInvocation.
  * @value: Parameter to return.
  *
- * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org-gnome-SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
+ * Helper function used in service implementations to finish handling invocations of the <link linkend="gdbus-method-org.cinnamon.SettingsDaemon-DateTimeMechanism.CanSetUsingNtp">CanSetUsingNtp()</link> D-Bus method. If you instead want to finish handling an invocation by returning an error, use g_dbus_method_invocation_return_error() or similar.
  *
  * This method will free @invocation, you cannot use it afterwards.
  */
@@ -2627,7 +2627,7 @@ date_time_mechanism_proxy_class_init (DateTimeMechanismProxyClass *klass)
  * @callback: A #GAsyncReadyCallback to call when the request is satisfied.
  * @user_data: User data to pass to @callback.
  *
- * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link>. See g_dbus_proxy_new() for more details.
+ * Asynchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link>. See g_dbus_proxy_new() for more details.
  *
  * When the operation is finished, @callback will be invoked in the <link linkend="g-main-context-push-thread-default">thread-default main loop</link> of the thread you are calling this method from.
  * You can then call date_time_mechanism_proxy_new_finish() to get the result of the operation.
@@ -2644,7 +2644,7 @@ date_time_mechanism_proxy_new (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (TYPE_DATE_TIME_MECHANISM_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gnome.SettingsDaemon.DateTimeMechanism", NULL);
+  g_async_initable_new_async (TYPE_DATE_TIME_MECHANISM_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.cinnamon.SettingsDaemon.DateTimeMechanism", NULL);
 }
 
 /**
@@ -2681,7 +2681,7 @@ date_time_mechanism_proxy_new_finish (
  * @cancellable: (allow-none): A #GCancellable or %NULL.
  * @error: Return location for error or %NULL
  *
- * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link>. See g_dbus_proxy_new_sync() for more details.
+ * Synchronously creates a proxy for the D-Bus interface <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link>. See g_dbus_proxy_new_sync() for more details.
  *
  * The calling thread is blocked until a reply is received.
  *
@@ -2699,7 +2699,7 @@ date_time_mechanism_proxy_new_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (TYPE_DATE_TIME_MECHANISM_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.gnome.SettingsDaemon.DateTimeMechanism", NULL);
+  ret = g_initable_new (TYPE_DATE_TIME_MECHANISM_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-connection", connection, "g-object-path", object_path, "g-interface-name", "org.cinnamon.SettingsDaemon.DateTimeMechanism", NULL);
   if (ret != NULL)
     return DATE_TIME_MECHANISM (ret);
   else
@@ -2734,7 +2734,7 @@ date_time_mechanism_proxy_new_for_bus (
     GAsyncReadyCallback  callback,
     gpointer             user_data)
 {
-  g_async_initable_new_async (TYPE_DATE_TIME_MECHANISM_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gnome.SettingsDaemon.DateTimeMechanism", NULL);
+  g_async_initable_new_async (TYPE_DATE_TIME_MECHANISM_PROXY, G_PRIORITY_DEFAULT, cancellable, callback, user_data, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.cinnamon.SettingsDaemon.DateTimeMechanism", NULL);
 }
 
 /**
@@ -2789,7 +2789,7 @@ date_time_mechanism_proxy_new_for_bus_sync (
     GError             **error)
 {
   GInitable *ret;
-  ret = g_initable_new (TYPE_DATE_TIME_MECHANISM_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.gnome.SettingsDaemon.DateTimeMechanism", NULL);
+  ret = g_initable_new (TYPE_DATE_TIME_MECHANISM_PROXY, cancellable, error, "g-flags", flags, "g-name", name, "g-bus-type", bus_type, "g-object-path", object_path, "g-interface-name", "org.cinnamon.SettingsDaemon.DateTimeMechanism", NULL);
   if (ret != NULL)
     return DATE_TIME_MECHANISM (ret);
   else
@@ -2980,7 +2980,7 @@ date_time_mechanism_skeleton_dbus_interface_get_properties (GDBusInterfaceSkelet
       if (info->flags & G_DBUS_PROPERTY_INFO_FLAGS_READABLE)
         {
           GVariant *value;
-          value = _date_time_mechanism_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "org.gnome.SettingsDaemon.DateTimeMechanism", info->name, NULL, skeleton);
+          value = _date_time_mechanism_skeleton_handle_get_property (g_dbus_interface_skeleton_get_connection (G_DBUS_INTERFACE_SKELETON (skeleton)), NULL, g_dbus_interface_skeleton_get_object_path (G_DBUS_INTERFACE_SKELETON (skeleton)), "org.cinnamon.SettingsDaemon.DateTimeMechanism", info->name, NULL, skeleton);
           if (value != NULL)
             {
               if (g_variant_is_floating (value))
@@ -3054,7 +3054,7 @@ date_time_mechanism_skeleton_class_init (DateTimeMechanismSkeletonClass *klass)
 /**
  * date_time_mechanism_skeleton_new:
  *
- * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-org-gnome-SettingsDaemon-DateTimeMechanism.top_of_page">org.gnome.SettingsDaemon.DateTimeMechanism</link>.
+ * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-org.cinnamon.SettingsDaemon-DateTimeMechanism.top_of_page">org.cinnamon.SettingsDaemon.DateTimeMechanism</link>.
  *
  * Returns: (transfer full) (type DateTimeMechanismSkeleton): The skeleton object.
  */

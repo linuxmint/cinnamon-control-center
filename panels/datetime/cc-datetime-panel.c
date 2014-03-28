@@ -28,7 +28,7 @@
 #include "date-endian.h"
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 
-#include <cdesktop-enums.hs>
+#include <libcinnamon-desktop/cdesktop-enums.h>
 #include <string.h>
 #include <stdlib.h>
 #include <libintl.h>
@@ -63,22 +63,23 @@ enum {
 #define W(x) (GtkWidget*) gtk_builder_get_object (priv->builder, x)
 
 #define CLOCK_SCHEMA "org.cinnamon.desktop.interface"
-#define CLOCK_FORMAT_KEY "clock-format"
+#define CLOCK_USE_24H "clock-use-24h"
 
 struct _CcDateTimePanelPrivate
 {
   GtkBuilder *builder;
   GtkWidget *map;
+  GtkWidget *lock_button;
 
   TzLocation *current_location;
 
   GtkTreeModel *locations;
-  GtkTreeModelFilter *city_filter;
+  GtkTreeModelFilter *city_filter;  
 
   GDateTime *date;
 
   GSettings *settings;
-  CDesktopClockFormat clock_format;
+  gboolean clock_use_24h;
 
   GnomeWallClock *clock_tracker;
 
@@ -210,23 +211,11 @@ change_clock_settings (GObject         *gobject,
                        CcDateTimePanel *panel)
 {
   CcDateTimePanelPrivate *priv = panel->priv;
-  CDesktopClockFormat value;
+  gboolean value;
 
-  g_signal_handlers_block_by_func (priv->settings, clock_settings_changed_cb,
-                                   panel);
-
-  if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (W ("24h_button"))))
-    value = C_DESKTOP_CLOCK_FORMAT_24H;
-  else
-    value = C_DESKTOP_CLOCK_FORMAT_12H;
-
-  g_settings_set_enum (priv->settings, CLOCK_FORMAT_KEY, value);
-  priv->clock_format = value;
-
+  g_signal_handlers_block_by_func (priv->settings, clock_settings_changed_cb, panel);
   update_time (panel);
-
-  g_signal_handlers_unblock_by_func (priv->settings, clock_settings_changed_cb,
-                                     panel);
+  g_signal_handlers_unblock_by_func (priv->settings, clock_settings_changed_cb, panel);
 }
 
 static void
@@ -234,27 +223,17 @@ clock_settings_changed_cb (GSettings       *settings,
                            gchar           *key,
                            CcDateTimePanel *panel)
 {
-  CcDateTimePanelPrivate *priv = panel->priv;
-  GtkWidget *button24h;
-  GtkWidget *button12h;
-  CDesktopClockFormat value;
+  CcDateTimePanelPrivate *priv = panel->priv;  
+  gboolean value;
 
-  value = g_settings_get_enum (settings, CLOCK_FORMAT_KEY);
-  priv->clock_format = value;
+  value = g_settings_get_boolean (settings, CLOCK_USE_24H);
+  priv->clock_use_24h = value;
 
-  button24h = W ("24h_button");
-  button12h = W ("12h_button");
-
-  g_signal_handlers_block_by_func (button24h, change_clock_settings, panel);
-
-  if (value == C_DESKTOP_CLOCK_FORMAT_24H)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button24h), TRUE);
-  else
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button12h), TRUE);
-
+  g_signal_handlers_block_by_func (NULL, change_clock_settings, panel);
+  
   update_time (panel);
 
-  g_signal_handlers_unblock_by_func (button24h, change_clock_settings, panel);
+  g_signal_handlers_unblock_by_func (NULL, change_clock_settings, panel);
 }
 
 static void
@@ -262,10 +241,9 @@ update_time (CcDateTimePanel *self)
 {
   CcDateTimePanelPrivate *priv = self->priv;
   char *label;
-  char *am_pm_widgets[] = {"ampm_up_button", "ampm_down_button", "ampm_label" };
   guint i;
 
-  if (priv->clock_format == C_DESKTOP_CLOCK_FORMAT_24H)
+  if (priv->clock_use_24h)
     {
       /* Update the hours label */
       label = g_date_time_format (priv->date, "%H");
@@ -277,17 +255,8 @@ update_time (CcDateTimePanel *self)
       /* Update the hours label */
       label = g_date_time_format (priv->date, "%I");
       gtk_label_set_text (GTK_LABEL (W("hours_label")), label);
-      g_free (label);
-
-      /* Set AM/PM */
-      label = g_date_time_format (priv->date, "%p");
-      gtk_label_set_text (GTK_LABEL (W("ampm_label")), label);
-      g_free (label);
-    }
-
-  for (i = 0; i < G_N_ELEMENTS (am_pm_widgets); i++)
-    gtk_widget_set_visible (W(am_pm_widgets[i]),
-                            priv->clock_format == C_DESKTOP_CLOCK_FORMAT_12H);
+      g_free (label);      
+    }  
 
   /* Update the minutes label */
   label = g_date_time_format (priv->date, "%M");
@@ -882,7 +851,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   gchar *objects[] = { "datetime-panel", "region-liststore", "city-liststore",
       "month-liststore", "city-modelfilter", "city-modelsort", NULL };
   char *buttons[] = { "hour_up_button", "hour_down_button", "min_up_button",
-          "min_down_button", "ampm_up_button", "ampm_down_button" };
+          "min_down_button"};
   GtkWidget *widget;
   GtkAdjustment *adjustment;
   GError *err = NULL;
@@ -901,7 +870,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   error = NULL;
   priv->dtm = date_time_mechanism_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
                                                           G_DBUS_PROXY_FLAGS_NONE,
-                                                          "org.gnome.SettingsDaemon.DateTimeMechanism",
+                                                          "org.cinnamon.SettingsDaemon.DateTimeMechanism",
                                                           "/",
                                                           priv->cancellable,
                                                           &error);
@@ -997,13 +966,10 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   g_signal_connect (priv->clock_tracker, "notify::clock", G_CALLBACK (on_clock_changed), self);
 
   priv->settings = g_settings_new (CLOCK_SCHEMA);
-  clock_settings_changed_cb (priv->settings, CLOCK_FORMAT_KEY, self);
-  g_signal_connect (priv->settings, "changed::" CLOCK_FORMAT_KEY,
+  clock_settings_changed_cb (priv->settings, CLOCK_USE_24H, self);
+  g_signal_connect (priv->settings, "changed::" CLOCK_USE_24H,
                     G_CALLBACK (clock_settings_changed_cb), self);
-
-  g_signal_connect (W("24h_button"), "notify::active",
-                    G_CALLBACK (change_clock_settings), self);
-
+  
   update_time (self);
 
   priv->locations = (GtkTreeModel*) gtk_builder_get_object (priv->builder,
@@ -1034,16 +1000,19 @@ cc_date_time_panel_init (CcDateTimePanel *self)
                                          self);
 
   /* add the lock button */
-  priv->permission = polkit_permission_new_sync ("org.gnome.settingsdaemon.datetimemechanism.configure", NULL, NULL, NULL);
+  priv->permission = polkit_permission_new_sync ("org.cinnamon.settingsdaemon.datetimemechanism.configure", NULL, NULL, NULL);
   if (priv->permission == NULL)
     {
       g_warning ("Your system does not have the '%s' PolicyKit files installed. Please check your installation",
-                 "org.gnome.settingsdaemon.datetimemechanism.configure");
+                 "org.cinnamon.settingsdaemon.datetimemechanism.configure");
       return;
     }
 
-  g_signal_connect (priv->permission, "notify",
-                    G_CALLBACK (on_permission_changed), self);
+  priv->lock_button = widget = (GtkWidget *) W("lock_button");
+  gtk_lock_button_set_permission ( GTK_LOCK_BUTTON (priv->lock_button), priv->permission );
+  gtk_widget_show (widget);
+
+  g_signal_connect (priv->permission, "notify", G_CALLBACK (on_permission_changed), self);
   on_permission_changed (priv->permission, NULL, self);
 }
 

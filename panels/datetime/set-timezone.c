@@ -84,9 +84,9 @@ refresh_can_do (const gchar *action, CanDoFunc callback)
                 return;
 
 	proxy = dbus_g_proxy_new_for_name (bus,
-					   "org.gnome.SettingsDaemon.DateTimeMechanism",
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism",
 					   "/",
-					   "org.gnome.SettingsDaemon.DateTimeMechanism");
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism");
 
 	dbus_g_proxy_begin_call_with_timeout (proxy,
 					      action,
@@ -243,9 +243,9 @@ set_time_async (SetTimeCallbackData *data)
 	}
 
 	proxy = dbus_g_proxy_new_for_name (bus,
-					   "org.gnome.SettingsDaemon.DateTimeMechanism",
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism",
 					   "/",
-					   "org.gnome.SettingsDaemon.DateTimeMechanism");
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism");
 
 	data->ref_count++;
 	if (strcmp (data->call, "SetTime") == 0)
@@ -403,9 +403,9 @@ get_system_timezone_async (GetTimezoneFunc callback,
 	data->callback = callback;
 
 	proxy = dbus_g_proxy_new_for_name (bus,
-					   "org.gnome.SettingsDaemon.DateTimeMechanism",
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism",
 					   "/",
-					   "org.gnome.SettingsDaemon.DateTimeMechanism");
+					   "org.cinnamon.SettingsDaemon.DateTimeMechanism");
 
 	dbus_g_proxy_begin_call (proxy,
 				 "GetTimezone",
@@ -437,9 +437,9 @@ get_using_ntp (void)
 			return FALSE;
 
 		proxy = dbus_g_proxy_new_for_name (bus,
-						   "org.gnome.SettingsDaemon.DateTimeMechanism",
+						   "org.cinnamon.SettingsDaemon.DateTimeMechanism",
 						   "/",
-						   "org.gnome.SettingsDaemon.DateTimeMechanism");
+						   "org.cinnamon.SettingsDaemon.DateTimeMechanism");
 
 
 		if (dbus_g_proxy_call (proxy,

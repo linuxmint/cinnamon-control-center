@@ -13,7 +13,7 @@ G_BEGIN_DECLS
 
 
 /* ------------------------------------------------------------------------ */
-/* Declarations for org.gnome.SettingsDaemon.DateTimeMechanism */
+/* Declarations for org.cinnamon.SettingsDaemon.DateTimeMechanism */
 
 #define TYPE_DATE_TIME_MECHANISM (date_time_mechanism_get_type ())
 #define DATE_TIME_MECHANISM(o) (G_TYPE_CHECK_INSTANCE_CAST ((o), TYPE_DATE_TIME_MECHANISM, DateTimeMechanism))

@@ -10,7 +10,8 @@ enabled_panels = \
 	power \
 	sound \
 	sound-nua \
-	network
+	network \
+	datetime
 
 disabled_panels = $(NULL)
 
