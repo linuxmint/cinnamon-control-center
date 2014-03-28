@@ -188,3 +188,18 @@ _Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;fon
 """
 
 generate("./panels/universal-access/cinnamon-universal-access-panel.desktop.in.in", prefix, _("Universal Access"), _("Universal Access Preferences"), "")
+
+prefix = """[Desktop Entry]
+Exec=cinnamon-control-center datetime
+Icon=preferences-system-time
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Settings;X-cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
+OnlyShowIn=X-Cinnamon;
+X-Cinnamon-Settings-Panel=datetime
+# Translators: those are keywords for the date and time control-center panel
+_Keywords=Clock;Timezone;Location;
+"""
+
+generate("./panels/datetime/cinnamon-datetime-panel.desktop.in", prefix, _("Date & Time"), _("Date and Time preferences"), "")

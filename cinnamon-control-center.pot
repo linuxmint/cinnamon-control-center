@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-26 11:06+0000\n"
+"POT-Creation-Date: 2014-03-28 22:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,7 +225,7 @@ msgstr ""
 msgid "China"
 msgstr ""
 
-#: panels/common/cc-language-chooser.c:301
+#: panels/common/cc-language-chooser.c:304
 msgid "Select a region"
 msgstr ""
 
@@ -1285,6 +1285,98 @@ msgstr ""
 msgid "_Select"
 msgstr ""
 
+#: panels/datetime/datetime.ui.h:1
+msgid "_Region:"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:2
+msgid "_City:"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:3
+msgid "_Network Time"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:5
+msgid ":"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:6
+msgid "Set the time one hour ahead."
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:7
+msgid "Set the time one hour back."
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:8
+msgid "Set the time one minute ahead."
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:9
+msgid "Set the time one minute back."
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:10
+msgid "Month"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:11
+msgid "Day"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:12
+msgid "Year"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:13
+msgid "January"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:14
+msgid "February"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:15
+msgid "March"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:16
+msgid "April"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:17
+msgid "May"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:18
+msgid "June"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:19
+msgid "July"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:20
+msgid "August"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:21
+msgid "September"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:22
+msgid "October"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:23
+msgid "November"
+msgstr ""
+
+#: panels/datetime/datetime.ui.h:24
+msgid "December"
+msgstr ""
+
 #: panels/display/display-capplet.ui.h:2
 msgid "Set as Primary"
 msgstr ""
@@ -2218,4 +2310,12 @@ msgstr ""
 
 #: generate_additional_files.py:190
 msgid "Universal Access Preferences"
+msgstr ""
+
+#: generate_additional_files.py:205
+msgid "Date & Time"
+msgstr ""
+
+#: generate_additional_files.py:205
+msgid "Date and Time preferences"
 msgstr ""
