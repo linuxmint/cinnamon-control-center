@@ -2066,7 +2066,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         gtk_grid_set_column_spacing (sounds_grid, 6);
         gtk_grid_set_row_spacing (sounds_grid, 3);
 
-        add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);
         add_sound_effect_selector (sounds_grid, 1, _("Switching workspace:"), sound_settings, "switch-file", "switch-enabled", self);       
         add_sound_effect_selector (sounds_grid, 2, _("Mapping windows:"), sound_settings, "map-file", "map-enabled", self);       
         add_sound_effect_selector (sounds_grid, 3, _("Closing windows:"), sound_settings, "close-file", "close-enabled", self);       
@@ -2077,6 +2077,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         add_sound_effect_selector (sounds_grid, 8, _("Inserting a device:"), sound_settings, "plug-file", "plug-enabled", self);       
         add_sound_effect_selector (sounds_grid, 9, _("Removing a device:"), sound_settings, "unplug-file", "unplug-enabled", self);       
         add_sound_effect_selector (sounds_grid, 10, _("Changing the sound volume:"), desktop_sound_settings, "volume-sound-file", "volume-sound-enabled", self);
+        add_sound_effect_selector (sounds_grid, 11, _("Leaving Cinnamon:"), sound_settings, "logout-file", "logout-enabled", self);
 
         gtk_box_pack_start (GTK_BOX (self->priv->sound_effects_box), sounds_grid, FALSE, FALSE, 0);
       

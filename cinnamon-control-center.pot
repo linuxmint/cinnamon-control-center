@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-28 22:22+0000\n"
+"POT-Creation-Date: 2014-03-29 10:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -886,7 +886,7 @@ msgid "Speaker Testing for %s"
 msgstr ""
 
 #: panels/sound/gvc-mixer-dialog.c:1640
-#: panels/sound-nua/gvc-mixer-dialog.c:2105
+#: panels/sound-nua/gvc-mixer-dialog.c:2106
 msgid "_Output volume:"
 msgstr ""
 
@@ -923,12 +923,12 @@ msgid "_Alert volume:"
 msgstr ""
 
 #: panels/sound/gvc-mixer-dialog.c:1795
-#: panels/sound-nua/gvc-mixer-dialog.c:2086
+#: panels/sound-nua/gvc-mixer-dialog.c:2087
 msgid "Applications"
 msgstr ""
 
 #: panels/sound/gvc-mixer-dialog.c:1799
-#: panels/sound-nua/gvc-mixer-dialog.c:2090
+#: panels/sound-nua/gvc-mixer-dialog.c:2091
 msgid "No application is currently playing or recording audio."
 msgstr ""
 
@@ -1039,6 +1039,10 @@ msgstr ""
 
 #: panels/sound-nua/gvc-mixer-dialog.c:2079
 msgid "Changing the sound volume:"
+msgstr ""
+
+#: panels/sound-nua/gvc-mixer-dialog.c:2080
+msgid "Leaving Cinnamon:"
 msgstr ""
 
 #: panels/universal-access/cc-ua-panel.c:289
