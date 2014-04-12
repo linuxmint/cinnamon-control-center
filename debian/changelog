@@ -1,3 +1,9 @@
+cinnamon-control-center (2.2.1) qiana; urgency=medium
+
+  * 2.2.1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 12 Apr 2014 13:11:30 +0100
+
 cinnamon-control-center (2.2.0) qiana; urgency=medium
 
   * 2.2.0
