@@ -63,7 +63,6 @@ Depends: ${misc:Depends},
          cinnamon-desktop-data,
          gnome-icon-theme (>= 2.24),
          gnome-icon-theme-symbolic,
-         cinnamon-menus (>= 2.12.0),
          cinnamon-settings-daemon,
          cinnamon-translations,
          libcanberra-pulse
