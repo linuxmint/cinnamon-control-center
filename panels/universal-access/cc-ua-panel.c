@@ -430,7 +430,7 @@ cc_ua_panel_init_seeing (CcUaPanel *self)
                    G_SETTINGS_BIND_DEFAULT);
 
   priv->shell_watch_id = g_bus_watch_name (G_BUS_TYPE_SESSION,
-					   "org.gnome.Shell",
+					   "org.Cinnamon",
 					   G_BUS_NAME_WATCHER_FLAGS_NONE,
 					   (GBusNameAppearedCallback) shell_appeared_cb,
 					   (GBusNameVanishedCallback) shell_vanished_cb,
