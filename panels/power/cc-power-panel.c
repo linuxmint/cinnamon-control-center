@@ -981,14 +981,17 @@ set_ac_battery_ui_mode (CcPowerPanel *self)
 {
   gboolean has_batteries = FALSE;
   gboolean has_lid = FALSE;
+#if ! UP_CHECK_VERSION(0,99,0)
   gboolean ret;
   GError *error = NULL;
+#endif
   GPtrArray *devices;
   guint i;
   UpDevice *device;
   UpDeviceKind kind;
   CcPowerPanelPrivate *priv = self->priv;
 
+#if ! UP_CHECK_VERSION(0,99,0)
   /* this is sync, but it's cached in the daemon and so quick */
   ret = up_client_enumerate_devices_sync (self->priv->up_client, NULL, &error);
   if (!ret)
@@ -997,6 +1000,7 @@ set_ac_battery_ui_mode (CcPowerPanel *self)
       g_error_free (error);
       goto out;
     }
+#endif
 
   devices = up_client_get_devices (self->priv->up_client);
   for (i=0; i<devices->len; i++)
@@ -1016,7 +1020,9 @@ set_ac_battery_ui_mode (CcPowerPanel *self)
 
   has_lid = up_client_get_lid_is_present (self->priv->up_client);
 
-out:	  
+#if ! UP_CHECK_VERSION(0,99,0)
+out:
+#endif	  
   if (has_lid) { 
   	gtk_widget_show(WID("combobox_lid_ac"));
   	gtk_widget_show(WID("label_lid_action"));
