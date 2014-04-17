@@ -160,9 +160,6 @@ setup_xkb_tabs (GtkBuilder * dialog)
 	xkb_layouts_register_conf_listener (dialog);
 	xkb_options_register_conf_listener (dialog);
 
-	g_object_weak_ref (G_OBJECT (WID ("region_notebook")),
-			   (GWeakNotify) cleanup_xkb_tabs, dialog);
-
 	enable_disable_restoring (dialog);
 
 	/* Setup junction between toolbar and treeview */
