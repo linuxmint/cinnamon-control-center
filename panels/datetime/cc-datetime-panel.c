@@ -206,19 +206,6 @@ static void clock_settings_changed_cb (GSettings       *settings,
                                        CcDateTimePanel *panel);
 
 static void
-change_clock_settings (GObject         *gobject,
-                       GParamSpec      *pspec,
-                       CcDateTimePanel *panel)
-{
-  CcDateTimePanelPrivate *priv = panel->priv;
-  gboolean value;
-
-  g_signal_handlers_block_by_func (priv->settings, clock_settings_changed_cb, panel);
-  update_time (panel);
-  g_signal_handlers_unblock_by_func (priv->settings, clock_settings_changed_cb, panel);
-}
-
-static void
 clock_settings_changed_cb (GSettings       *settings,
                            gchar           *key,
                            CcDateTimePanel *panel)
@@ -229,11 +216,11 @@ clock_settings_changed_cb (GSettings       *settings,
   value = g_settings_get_boolean (settings, CLOCK_USE_24H);
   priv->clock_use_24h = value;
 
-  g_signal_handlers_block_by_func (NULL, change_clock_settings, panel);
+  g_signal_handlers_block_by_func (settings, clock_settings_changed_cb, panel);
   
   update_time (panel);
 
-  g_signal_handlers_unblock_by_func (NULL, change_clock_settings, panel);
+  g_signal_handlers_unblock_by_func (settings, clock_settings_changed_cb, panel);
 }
 
 static void
@@ -966,11 +953,10 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   g_signal_connect (priv->clock_tracker, "notify::clock", G_CALLBACK (on_clock_changed), self);
 
   priv->settings = g_settings_new (CLOCK_SCHEMA);
-  clock_settings_changed_cb (priv->settings, CLOCK_USE_24H, self);
+
   g_signal_connect (priv->settings, "changed::" CLOCK_USE_24H,
                     G_CALLBACK (clock_settings_changed_cb), self);
-  
-  update_time (self);
+  clock_settings_changed_cb (priv->settings, CLOCK_USE_24H, self);
 
   priv->locations = (GtkTreeModel*) gtk_builder_get_object (priv->builder,
                                                             "region-liststore");
