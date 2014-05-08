@@ -113,6 +113,7 @@ OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;
+NoDisplay=true
 """
 
 additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop.in.in", prefix, _("Region & Language"), _("Change your region and language settings"), "")
