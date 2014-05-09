@@ -9,6 +9,7 @@ OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=region
 # Translators: those are keywords for the region control-center panel
 _Keywords=Language;Layout;Keyboard;
+NoDisplay=true
 Name=Region & Language
 Name[am]=አካባቢ & ቋንቋ
 Name[bg]=Регион и език
