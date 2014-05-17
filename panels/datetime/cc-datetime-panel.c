@@ -87,6 +87,8 @@ struct _CcDateTimePanelPrivate
   GCancellable *cancellable;
 
   GPermission *permission;
+
+  guint set_date_time_delay_id;
 };
 
 static void update_time (CcDateTimePanel *self);
@@ -312,19 +314,35 @@ set_using_ntp_cb (GObject      *source,
     }
 }
 
+static gboolean
+set_date_time_cb (CcDateTimePanel *panel)
+{
+    gint64 unixtime;
+    CcDateTimePanelPrivate *priv = panel->priv;
+
+    unixtime = g_date_time_to_unix (priv->date);
+
+    date_time_mechanism_call_set_time (priv->dtm,
+                                     unixtime,
+                                     priv->cancellable,
+                                     set_time_cb,
+                                     panel);
+
+    priv->set_date_time_delay_id = 0;
+    return FALSE;
+}
+
 static void
 queue_set_datetime (CcDateTimePanel *self)
 {
-  gint64 unixtime;
+  CcDateTimePanelPrivate *priv = self->priv;
 
-  /* for now just do it */
-  unixtime = g_date_time_to_unix (self->priv->date);
+  if (priv->set_date_time_delay_id > 0) {
+    g_source_remove (priv->set_date_time_delay_id);
+    priv->set_date_time_delay_id = 0;
+  }
 
-  date_time_mechanism_call_set_time (self->priv->dtm,
-                                     unixtime,
-                                     self->priv->cancellable,
-                                     set_time_cb,
-                                     self);
+  priv->set_date_time_delay_id = g_timeout_add (1000, (GSourceFunc)set_date_time_cb, self);
 }
 
 static void
@@ -852,6 +870,8 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   GError *error;
 
   priv = self->priv = DATE_TIME_PANEL_PRIVATE (self);
+
+  priv->set_date_time_delay_id = 0;
 
   priv->cancellable = g_cancellable_new ();
   error = NULL;

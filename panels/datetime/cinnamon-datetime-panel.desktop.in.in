@@ -2,7 +2,7 @@
 _Name=Date & Time
 _Comment=Date and Time preferences panel
 Exec=cinnamon-control-center datetime
-Icon=preferences-system-time
+Icon=cs-date-time
 Terminal=false
 Type=Application
 StartupNotify=true
