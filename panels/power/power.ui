@@ -40,8 +40,16 @@
         <col id="1">600</col>
       </row>
       <row>
+        <col id="0" translatable="yes">15 minutes</col>
+        <col id="1">900</col>
+      </row>
+      <row>
         <col id="0" translatable="yes">30 minutes</col>
         <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">45 minutes</col>
+        <col id="1">2700</col>
       </row>
       <row>
         <col id="0" translatable="yes">1 hour</col>
@@ -161,8 +169,16 @@
         <col id="1">600</col>
       </row>
       <row>
+        <col id="0" translatable="yes">15 minutes</col>
+        <col id="1">900</col>
+      </row>
+      <row>
         <col id="0" translatable="yes">30 minutes</col>
         <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">45 minutes</col>
+        <col id="1">2700</col>
       </row>
       <row>
         <col id="0" translatable="yes">1 hour</col>
@@ -191,8 +207,16 @@
         <col id="1">600</col>
       </row>
       <row>
+        <col id="0" translatable="yes">15 minutes</col>
+        <col id="1">900</col>
+      </row>
+      <row>
         <col id="0" translatable="yes">30 minutes</col>
         <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">45 minutes</col>
+        <col id="1">2700</col>
       </row>
       <row>
         <col id="0" translatable="yes">1 hour</col>
