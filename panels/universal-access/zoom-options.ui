@@ -472,7 +472,7 @@
             </child>
             <child>
               <object class="GtkVBox" id="vbox1">
-                <property name="visible">True</property>
+                <property name="visible">False</property>
                 <property name="can_focus">False</property>
                 <property name="margin_left">18</property>
                 <property name="margin_right">24</property>
@@ -801,7 +801,7 @@
             </child>
             <child>
               <object class="GtkVBox" id="vbox2">
-                <property name="visible">True</property>
+                <property name="visible">False</property>
                 <property name="can_focus">False</property>
                 <property name="margin_left">18</property>
                 <property name="margin_right">24</property>
