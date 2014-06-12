@@ -78,6 +78,8 @@ struct _CcDateTimePanelPrivate
 
   GDateTime *date;
 
+  gboolean clock_blocked;
+
   GSettings *settings;
   gboolean clock_use_24h;
 
@@ -92,6 +94,10 @@ struct _CcDateTimePanelPrivate
 };
 
 static void update_time (CcDateTimePanel *self);
+
+static void on_clock_changed (GnomeWallClock  *clock,
+                              GParamSpec      *pspec,
+                              CcDateTimePanel *panel);
 
 static void
 cc_date_time_panel_get_property (GObject    *object,
@@ -328,6 +334,11 @@ set_date_time_cb (CcDateTimePanel *panel)
                                      set_time_cb,
                                      panel);
 
+    if (priv->clock_blocked) {
+        g_signal_handlers_unblock_by_func (priv->clock_tracker, on_clock_changed, panel);
+        priv->clock_blocked = FALSE;
+    }
+
     priv->set_date_time_delay_id = 0;
     return FALSE;
 }
@@ -340,6 +351,11 @@ queue_set_datetime (CcDateTimePanel *self)
   if (priv->set_date_time_delay_id > 0) {
     g_source_remove (priv->set_date_time_delay_id);
     priv->set_date_time_delay_id = 0;
+  }
+
+  if (!priv->clock_blocked) {
+    g_signal_handlers_block_by_func (priv->clock_tracker, on_clock_changed, self);
+    priv->clock_blocked = TRUE;
   }
 
   priv->set_date_time_delay_id = g_timeout_add (1000, (GSourceFunc)set_date_time_cb, self);
@@ -872,6 +888,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   priv = self->priv = DATE_TIME_PANEL_PRIVATE (self);
 
   priv->set_date_time_delay_id = 0;
+  priv->clock_blocked = FALSE;
 
   priv->cancellable = g_cancellable_new ();
   error = NULL;
