@@ -1070,7 +1070,7 @@ add_stream (GvcMixerDialog *dialog,
 
                         g_signal_handlers_disconnect_by_func (old_stream, on_stream_is_muted_notify, dialog);
                         g_signal_handlers_disconnect_by_func (old_stream, on_stream_volume_notify, dialog);
-                        g_print ("\n in add stream \n");
+
                         g_hash_table_remove (dialog->priv->bars, GUINT_TO_POINTER (gvc_mixer_stream_get_id (old_stream)));
                 }
                 save_bar_for_stream (dialog, stream, bar);
@@ -1115,7 +1115,8 @@ on_control_stream_added (GvcMixerControl *control,
                 !GVC_IS_MIXER_SINK (stream)
                 && !gvc_mixer_stream_is_virtual (stream)
                 && g_strcmp0 (app_id, "org.gnome.VolumeControl") != 0
-                && g_strcmp0 (app_id, "org.PulseAudio.pavucontrol") != 0)) {
+                && g_strcmp0 (app_id, "org.PulseAudio.pavucontrol") != 0)
+                && g_strcmp0 (app_id, "org.Cinnamon") != 0) {
 
                 GtkWidget      *bar;
 
