@@ -21,6 +21,11 @@
 
 #include "config.h"
 
+#include <grp.h>
+#include <unistd.h>
+
+#include <libcinnamon-desktop/cdesktop-enums.h>
+
 #include <glib-object.h>
 #include <glib/gi18n-lib.h>
 #include <gio/gio.h>
@@ -250,6 +255,147 @@ net_proxy_class_init (NetProxyClass *klass)
         g_type_class_add_private (klass, sizeof (NetProxyPrivate));
 }
 
+static gboolean
+is_in_admin_group (int id_group)
+{
+    gid_t groups [1024];
+    int i, ngroups;
+
+    ngroups = getgroups (1024, groups);
+    if (ngroups < 0) {
+        perror ("getgroups");
+        return FALSE;
+    }
+
+    for (i = 0; i < ngroups; ++i) {
+        if (groups[i] == id_group)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+static gboolean
+is_admin ()
+{
+    struct group *admin_group;
+
+    admin_group = getgrnam ("admin");
+    if (admin_group != NULL && is_in_admin_group (admin_group->gr_gid))
+        return TRUE;
+
+    admin_group = getgrnam ("sudo");
+    if (admin_group != NULL && is_in_admin_group (admin_group->gr_gid))
+        return TRUE;
+
+    return FALSE;
+}
+
+static void
+reset_system_proxy (GDBusProxy *proxy, const gchar *protocol)
+{
+    GVariant *result;
+    GError *error = NULL;
+
+    result = g_dbus_proxy_call_sync (proxy, "set_proxy",
+                                     g_variant_new ("(ss)", protocol, ""),
+                                     G_DBUS_CALL_FLAGS_NONE,
+                                     -1, NULL, &error);
+    if (result)
+        g_variant_unref (result);
+    else {
+        g_warning ("Error while calling set_proxy for %s protocol: %s", protocol, error->message);
+        g_error_free (error);
+    }
+}
+
+static void
+set_proxy_for_protocol (GDBusProxy *proxy, const gchar *protocol, GSettings *settings)
+{
+    GVariant *result;
+    gchar *proxy_str, *host;
+    GError *error = NULL;
+    gint port;
+
+    host = g_settings_get_string (settings, "host");
+    port = g_settings_get_int (settings, "port");
+
+    if (host && *host == '\0') {
+        reset_system_proxy (proxy, protocol);
+    } else {
+        proxy_str = g_strdup_printf ("%s://%s:%i/", protocol, host, port);
+
+        result = g_dbus_proxy_call_sync (proxy, "set_proxy",
+                                         g_variant_new ("(ss)", protocol, proxy_str),
+                                         G_DBUS_CALL_FLAGS_NONE,
+                                         -1, NULL, &error);
+        if (result)
+            g_variant_unref (result);
+        else {
+            g_warning ("Error while calling set_proxy for %s protocol: %s", protocol, error->message);
+            g_error_free (error);
+        }
+        g_free (proxy_str);
+    }
+
+    /* Free memory */
+    g_free (host);
+    g_object_unref (settings);
+}
+
+static void
+on_proxy_apply_system_settings (GtkButton *button, gpointer user_data)
+{
+    GDBusConnection *bus;
+    GDBusProxy *dbus_proxy;
+    GError *error;
+    CDesktopProxyMode proxy_mode;
+    NetProxy *proxy = NET_PROXY (user_data);
+
+    error = NULL;
+    bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
+    if (!bus) {
+        g_warning ("Could not retrieve system bus: %s", error->message);
+        g_error_free (error);
+
+        return;
+    }
+
+    dbus_proxy = g_dbus_proxy_new_sync (bus, 0, NULL,
+                                        "com.ubuntu.SystemService",
+                                        "/",
+                                        "com.ubuntu.SystemService",
+                                        NULL,
+                                        &error);
+    if (!dbus_proxy) {
+        g_warning ("Could not retrieve bus object: %s", error->message);
+        g_error_free (error);
+
+        return;
+    }
+
+    /* Retrieve the current settings */
+    proxy_mode = g_settings_get_enum (proxy->priv->settings, "mode");
+    switch (proxy_mode) {
+        case C_DESKTOP_PROXY_MODE_AUTO:
+        case C_DESKTOP_PROXY_MODE_NONE:
+            reset_system_proxy (dbus_proxy, "http");
+            reset_system_proxy (dbus_proxy, "https");
+            reset_system_proxy (dbus_proxy, "ftp");
+            reset_system_proxy (dbus_proxy, "socks");
+            break;
+        case C_DESKTOP_PROXY_MODE_MANUAL:
+            set_proxy_for_protocol (dbus_proxy, "http", g_settings_get_child (proxy->priv->settings, "http"));
+            set_proxy_for_protocol (dbus_proxy, "https", g_settings_get_child (proxy->priv->settings, "https"));
+            set_proxy_for_protocol (dbus_proxy, "ftp", g_settings_get_child (proxy->priv->settings, "ftp"));
+            set_proxy_for_protocol (dbus_proxy, "socks", g_settings_get_child (proxy->priv->settings, "socks"));
+            break;
+    }
+
+    /* Free memory */
+    g_object_unref (dbus_proxy);
+}
+
 static void
 net_proxy_init (NetProxy *proxy)
 {
@@ -369,6 +515,13 @@ net_proxy_init (NetProxy *proxy)
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "label_proxy_status"));
         gtk_label_set_label (GTK_LABEL (widget), "");
+
+        /* Button for system proxy settings */
+        if (is_admin ()) {
+            g_signal_connect (G_OBJECT (gtk_builder_get_object (proxy->priv->builder, "system_proxy_button")), "clicked",
+                              G_CALLBACK (on_proxy_apply_system_settings), proxy);
+        } else
+            gtk_widget_hide (GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder, "system_proxy_button")));
 
         /* hide the switch until we get some more detail in the mockup */
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
