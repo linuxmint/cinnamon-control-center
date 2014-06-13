@@ -375,6 +375,8 @@ net_proxy_init (NetProxy *proxy)
                                                      "device_proxy_off_switch"));
         if (widget != NULL)
                 gtk_widget_hide (widget);
+
+        gtk_widget_destroy (widget);
 }
 
 NetProxy *
