@@ -1,3 +1,12 @@
+cinnamon-control-center (2.2.10) qiana; urgency=medium
+
+  * Hide the zoom enable shortcut label (it doesn't use a shortcut anymore) and hide some tabs in the zoom prefs that don't appear to do anything currently. (TODO: why not?)
+  * date-time: Fix https://bugs.launchpad.net/linuxmint/+bug/1328075
+  * sound panel:  Ignore streams from org.Cinnamon app ids.
+  * network panel: never show the proxy switch - it doesn't actually do anything right now, except confuse people.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 27 Jun 2014 14:38:54 +0100
+
 cinnamon-control-center (2.2.9) qiana; urgency=medium
 
   * 2.2.9
