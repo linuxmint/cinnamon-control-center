@@ -934,15 +934,17 @@ disable_unavailable_combo_items (CcPowerPanel *self,
                           -1);
       switch (value_tmp) {
       case CSD_POWER_ACTION_SUSPEND:
+#if UP_CHECK_VERSION(0,99,0)
         enabled = cc_login1("CanSuspend");
-#if ! UP_CHECK_VERSION(0,99,0)
-        enabled = enabled || up_client_get_can_suspend (self->priv->up_client);
+#else
+        enabled = cc_login1("CanSuspend") || up_client_get_can_suspend (self->priv->up_client);
 #endif
         break;
       case CSD_POWER_ACTION_HIBERNATE:
+#if UP_CHECK_VERSION(0,99,0)
         enabled = cc_login1("CanHibernate");
-#if ! UP_CHECK_VERSION(0,99,0)
-        enabled = enabled || up_client_get_can_hibernate (self->priv->up_client);
+#else
+        enabled = cc_login1("CanHibernate") || up_client_get_can_hibernate (self->priv->up_client);
 #endif
         break;
       default:
