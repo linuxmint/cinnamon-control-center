@@ -1116,7 +1116,8 @@ on_control_stream_added (GvcMixerControl *control,
                 && !gvc_mixer_stream_is_virtual (stream)
                 && g_strcmp0 (app_id, "org.gnome.VolumeControl") != 0
                 && g_strcmp0 (app_id, "org.PulseAudio.pavucontrol") != 0)
-                && g_strcmp0 (app_id, "org.Cinnamon") != 0) {
+                && g_strcmp0 (app_id, "org.Cinnamon") != 0 /* FIXME: org.Cinnamon.xx.xx should be unified */
+                && g_strcmp0 (app_id, "org.cinnamon") != 0) {
 
                 GtkWidget      *bar;
 
