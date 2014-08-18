@@ -56,6 +56,7 @@ struct _CcUaPanelPrivate
   GSettings *mouse_settings;
   GSettings *application_settings;
   GSettings *mediakeys_settings;
+  GSettings *keybindings_settings;
 
   ZoomOptions *zoom_options;
   guint shell_watch_id;
@@ -139,6 +140,12 @@ cc_ua_panel_dispose (GObject *object)
     {
       g_object_unref (priv->mediakeys_settings);
       priv->mediakeys_settings = NULL;
+    }
+
+  if (priv->keybindings_settings)
+    {
+      g_object_unref (priv->keybindings_settings);
+      priv->keybindings_settings = NULL;
     }
 
   if (priv->zoom_options)
@@ -274,35 +281,56 @@ settings_on_off_editor_new (CcUaPanelPrivate  *priv,
 static void
 cc_ua_panel_set_shortcut_label (CcUaPanel  *self,
 				const char *label,
+                GSettings  *settings,
 				const char *key)
 {
 	GtkWidget *widget;
-	char *value;
-	char *text;
-	guint accel_key, *keycode;
-	GdkModifierType mods;
+    gchar **kbs;
 
 	widget = WID (self->priv->builder, label);
-	value = g_settings_get_string (self->priv->mediakeys_settings, key);
+    kbs = g_settings_get_strv (settings, key);
 
-	if (value == NULL || *value == '\0') {
-		gtk_label_set_text (GTK_LABEL (widget), _("No shortcut set"));
-		g_free (value);
-		return;
-	}
-	gtk_accelerator_parse_with_keycode (value, &accel_key, &keycode, &mods);
-	if (accel_key == 0 && keycode == NULL && mods == 0) {
-		gtk_label_set_text (GTK_LABEL (widget), _("No shortcut set"));
-		g_free (value);
-		g_warning ("Failed to parse keyboard shortcut: '%s'", value);
-		return;
-	}
-	g_free (value);
+    if (g_strv_length (kbs) == 0 || 
+        (g_strv_length (kbs) == 1 && g_strcmp0 (kbs[0], "") == 0)) {
+        gtk_label_set_text (GTK_LABEL (widget), _("No shortcut set"));
+        g_strfreev (kbs);
+        return;
+    }
 
-	text = gtk_accelerator_get_label_with_keycode (gtk_widget_get_display (widget), accel_key, *keycode, mods);
-	g_free (keycode);
-	gtk_label_set_text (GTK_LABEL (widget), text);
-	g_free (text);
+    gint i;
+    gboolean once = FALSE;
+    GString *final = g_string_new ("");
+
+    for (i = 0; i < g_strv_length (kbs); i++) {
+        char *value;
+        char *text;
+        guint accel_key, *keycode;
+        GdkModifierType mods;
+
+        value = kbs[i];
+
+        gtk_accelerator_parse_with_keycode (value, &accel_key, &keycode, &mods);
+        if (accel_key == 0 && keycode == NULL && mods == 0) {
+            g_warning ("Failed to parse keyboard shortcut: '%s'", value);
+            continue;
+        }
+
+        text = gtk_accelerator_get_label_with_keycode (gtk_widget_get_display (widget), accel_key, *keycode, mods);
+        g_free (keycode);
+
+        if (once)
+            g_string_append (final, ", ");
+
+        g_string_append (final, text);
+
+        g_free (text);
+
+        once = TRUE;
+    }
+
+    gtk_label_set_text (GTK_LABEL (widget), final->str);
+    g_string_free (final, TRUE);
+    g_strfreev (kbs);
 }
 
 static void
@@ -448,10 +476,18 @@ cc_ua_panel_init_seeing (CcUaPanel *self)
                               WID (priv->builder, "seeing_reader_switch"),
                               NULL);
 
-  cc_ua_panel_set_shortcut_label (self, "seeing_zoom_enable_keybinding_label", "magnifier");
-  cc_ua_panel_set_shortcut_label (self, "seeing_zoom_in_keybinding_label", "magnifier-zoom-in");
-  cc_ua_panel_set_shortcut_label (self, "seeing_zoom_out_keybinding_label", "magnifier-zoom-out");
-  cc_ua_panel_set_shortcut_label (self, "seeing_reader_enable_keybinding_label", "screenreader");
+  cc_ua_panel_set_shortcut_label (self,
+                                  "seeing_zoom_in_keybinding_label",
+                                  priv->keybindings_settings,
+                                  "magnifier-zoom-in");
+  cc_ua_panel_set_shortcut_label (self,
+                                  "seeing_zoom_out_keybinding_label",
+                                  priv->keybindings_settings,
+                                  "magnifier-zoom-out");
+  cc_ua_panel_set_shortcut_label (self,
+                                  "seeing_reader_enable_keybinding_label",
+                                  priv->mediakeys_settings,
+                                  "screenreader");
 }
 
 
@@ -665,7 +701,8 @@ cc_ua_panel_init (CcUaPanel *self)
   priv->kb_settings = g_settings_new ("org.cinnamon.desktop.a11y.keyboard");
   priv->mouse_settings = g_settings_new ("org.cinnamon.desktop.a11y.mouse");
   priv->application_settings = g_settings_new ("org.cinnamon.desktop.a11y.applications");
-  priv->mediakeys_settings = g_settings_new ("org.cinnamon.desktop.keybindings");
+  priv->mediakeys_settings = g_settings_new ("org.cinnamon.desktop.keybindings.media-keys");
+  priv->keybindings_settings = g_settings_new ("org.cinnamon.desktop.keybindings");
 
   cc_ua_panel_init_keyboard (self);
   cc_ua_panel_init_mouse (self);
