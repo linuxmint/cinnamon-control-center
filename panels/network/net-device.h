@@ -49,12 +49,16 @@ struct _NetDevice
 struct _NetDeviceClass
 {
         NetObjectClass               parent_class;
+
+        NMConnection * (*get_find_connection) (NetDevice *device);
 };
 
 GType            net_device_get_type                    (void);
 NetDevice       *net_device_new                         (void);
 NMDevice        *net_device_get_nm_device               (NetDevice      *device);
 NMConnection    *net_device_get_find_connection         (NetDevice      *device);
+
+GSList          *net_device_get_valid_connections       (NetDevice      *device);
 
 G_END_DECLS
 

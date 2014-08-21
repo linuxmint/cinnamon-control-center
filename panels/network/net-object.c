@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #include "net-object.h"
 
@@ -87,7 +87,9 @@ void
 net_object_set_id (NetObject *object, const gchar *id)
 {
         g_return_if_fail (NET_IS_OBJECT (object));
+        g_clear_pointer (&object->priv->id, g_free);
         object->priv->id = g_strdup (id);
+        g_object_notify (G_OBJECT (object), "id");
 }
 
 gboolean
@@ -108,7 +110,9 @@ void
 net_object_set_title (NetObject *object, const gchar *title)
 {
         g_return_if_fail (NET_IS_OBJECT (object));
+        g_clear_pointer (&object->priv->title, g_free);
         object->priv->title = g_strdup (title);
+        g_object_notify (G_OBJECT (object), "title");
 }
 
 NMClient *
@@ -301,7 +305,7 @@ net_object_class_init (NetObjectClass *klass)
 
         pspec = g_param_spec_string ("title", NULL, NULL,
                                      NULL,
-                                     G_PARAM_READWRITE);
+                                     G_PARAM_READWRITE | G_PARAM_CONSTRUCT);
         g_object_class_install_property (object_class, PROP_TITLE, pspec);
 
         pspec = g_param_spec_boolean ("removable", NULL, NULL,

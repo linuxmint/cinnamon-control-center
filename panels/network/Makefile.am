@@ -1,18 +1,24 @@
+SUBDIRS = wireless-security connection-editor
+
 cappletname = network
 
-INCLUDES = 						\
+AM_CPPFLAGS = 						\
 	$(PANEL_CFLAGS)					\
 	$(NETWORK_PANEL_CFLAGS)				\
 	$(NETWORK_MANAGER_CFLAGS)			\
-	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
 	-DLOCALE_DIR="\"$(datadir)/locale\""	\
-	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-I$(srcdir)/wireless-security			\
 	$(NULL)
 
 ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libnetwork.la
 
+BUILT_SOURCES =			\
+	cc-network-resources.c	\
+	cc-network-resources.h
+
 libnetwork_la_SOURCES =					\
+	$(BUILT_SOURCES)				\
 	network-module.c				\
 	panel-common.c					\
 	panel-common.h					\
@@ -22,45 +28,44 @@ libnetwork_la_SOURCES =					\
 	net-device.h					\
 	net-device-wifi.c				\
 	net-device-wifi.h				\
-	net-device-wired.c				\
-	net-device-wired.h				\
+	net-device-simple.c				\
+	net-device-simple.h				\
+	net-device-ethernet.c				\
+	net-device-ethernet.h				\
 	net-device-mobile.c				\
 	net-device-mobile.h				\
+	net-device-bond.c				\
+	net-device-bond.h				\
+	net-device-bridge.c				\
+	net-device-bridge.h				\
+	net-virtual-device.c				\
+	net-virtual-device.h				\
 	net-vpn.c					\
 	net-vpn.h					\
 	net-proxy.c					\
 	net-proxy.h					\
-	panel-cell-renderer-mode.c			\
-	panel-cell-renderer-mode.h			\
-	panel-cell-renderer-security.c			\
-	panel-cell-renderer-security.h			\
-	panel-cell-renderer-signal.c			\
-	panel-cell-renderer-signal.h			\
-	panel-cell-renderer-separator.c			\
-	panel-cell-renderer-separator.h			\
-	panel-cell-renderer-text.c			\
-	panel-cell-renderer-text.h			\
-	panel-cell-renderer-pixbuf.c			\
-	panel-cell-renderer-pixbuf.h			\
 	network-dialogs.c				\
 	network-dialogs.h				\
+	list-box-helper.h			\
+	list-box-helper.c			\
 	cc-network-panel.c				\
-	cc-network-panel.h				\
-	rfkill-glib.c					\
-	rfkill-glib.h					\
-	rfkill.h
+	cc-network-panel.h
 
-libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS)
+TEAM_FILES = net-device-team.c net-device-team.h
+EXTRA_DIST = $(TEAM_FILES)
+if HAVE_NM_UNSTABLE
+libnetwork_la_SOURCES += $(TEAM_FILES)
+endif
+
+libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la
+
 libnetwork_la_LDFLAGS = $(PANEL_LDFLAGS)
 
-uidir = $(pkgdatadir)/ui
-dist_ui_DATA =						\
-	network-proxy.ui				\
-	network-vpn.ui					\
-	network-wifi.ui					\
-	network-wired.ui				\
-	network-mobile.ui				\
-	network.ui
+resource_files = $(shell glib-compile-resources --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/network.gresource.xml)
+cc-network-resources.c: network.gresource.xml $(resource_files)
+	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-source --c-name cc_network $<
+cc-network-resources.h: network.gresource.xml $(resource_files)
+	$(AM_V_GEN) glib-compile-resources --target=$@ --sourcedir=$(srcdir) --generate-header --c-name cc_network $<
 
 @INTLTOOL_DESKTOP_RULE@
 
@@ -68,6 +73,7 @@ desktopdir = $(datadir)/applications
 desktop_in_files = cinnamon-network-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
-CLEANFILES = $(desktop_in_files) $(desktop_DATA)
+CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)
+EXTRA_DIST += $(resource_files) network.gresource.xml
 
 -include $(top_srcdir)/git.mk
