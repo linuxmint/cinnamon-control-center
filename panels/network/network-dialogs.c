@@ -20,7 +20,6 @@
  * Copyright 2008 - 2011 Red Hat, Inc. 
  */
 
-#include <shell/cc-shell.h>
 #include <nm-utils.h>
 #include <nm-connection.h>
 #include <nm-setting-gsm.h>
@@ -30,12 +29,7 @@
 #include <nm-device-wifi.h>
 
 #include "network-dialogs.h"
-#include <config.h>
-#ifdef LIBNM_GTK
 #include "nm-wifi-dialog.h"
-#else
-#include "nm-wireless-dialog.h"
-#endif 
 #include "nm-mobile-wizard.h"
 
 typedef struct {
@@ -113,19 +107,11 @@ nag_dialog_response_cb (GtkDialog *nag_dialog,
                         gint response,
                         gpointer user_data)
 {
-#ifdef LIBNM_GTK
 	NMAWifiDialog *wireless_dialog = NMA_WIFI_DIALOG (user_data);
 
 	if (response == GTK_RESPONSE_NO) {  /* user opted not to correct the warning */
 		nma_wifi_dialog_set_nag_ignored (wireless_dialog, TRUE);
 		gtk_dialog_response (GTK_DIALOG (wireless_dialog), GTK_RESPONSE_OK);
-#else
-	NMAWirelessDialog *wireless_dialog = NMA_WIRELESS_DIALOG (user_data);
-
-	if (response == GTK_RESPONSE_NO) {  /* user opted not to correct the warning */
-		nma_wireless_dialog_set_nag_ignored (wireless_dialog, TRUE);
-		gtk_dialog_response (GTK_DIALOG (wireless_dialog), GTK_RESPONSE_OK);
-#endif
 	}
 }
 
@@ -134,11 +120,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
                              gint response,
                              gpointer user_data)
 {
-#ifdef LIBNM_GTK
 	NMAWifiDialog *dialog = NMA_WIFI_DIALOG (foo);
-#else
-	NMAWirelessDialog *dialog = NMA_WIRELESS_DIALOG (foo);
-#endif
 	WirelessDialogClosure *closure = user_data;
 	NMConnection *connection, *fuzzy_match = NULL;
 	NMDevice *device;
@@ -148,7 +130,6 @@ wireless_dialog_response_cb (GtkDialog *foo,
 	if (response != GTK_RESPONSE_OK)
 		goto done;
 
-#ifdef LIBNM_GTK
 	if (!nma_wifi_dialog_get_nag_ignored (dialog)) {
 		GtkWidget *nag_dialog;
 
@@ -156,15 +137,6 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		 * if no nagging was done.
 		 */
 		nag_dialog = nma_wifi_dialog_nag_user (dialog);
-#else
-	if (!nma_wireless_dialog_get_nag_ignored (dialog)) {
-		GtkWidget *nag_dialog;
-
-		/* Nag the user about certificates or whatever.  Only destroy the dialog
-		 * if no nagging was done.
-		 */
-		nag_dialog = nma_wireless_dialog_nag_user (dialog);
-#endif
 		if (nag_dialog) {
 			gtk_window_set_transient_for (GTK_WINDOW (nag_dialog), GTK_WINDOW (dialog));
 			g_signal_connect (nag_dialog, "response",
@@ -174,17 +146,10 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		}
 	}
 
-#ifdef LIBNM_GTK
 	/* nma_wifi_dialog_get_connection() returns a connection with the
 	 * refcount incremented, so the caller must remember to unref it.
 	 */
 	connection = nma_wifi_dialog_get_connection (dialog, &device, &ap);
-#else
-	/* nma_wireless_dialog_get_connection() returns a connection with the
-	 * refcount incremented, so the caller must remember to unref it.
-	 */
-	connection = nma_wireless_dialog_get_connection (dialog, &device, &ap);
-#endif
 	g_assert (connection);
 	g_assert (device);
 
@@ -235,11 +200,7 @@ wireless_dialog_response_cb (GtkDialog *foo,
 		                                       NULL);
 	}
 
-#ifdef LIBNM_GTK
 	/* Balance nma_wifi_dialog_get_connection() */
-#else
-	/* Balance nma_wireless_dialog_get_connection() */
-#endif
 	g_object_unref (connection);
 
 done:
@@ -248,15 +209,19 @@ done:
 }
 
 static void
-show_wireless_dialog (CcNetworkPanel   *panel,
+show_wireless_dialog (GtkWidget        *toplevel,
 		      NMClient         *client,
 		      NMRemoteSettings *settings,
 		      GtkWidget        *dialog)
 {
         WirelessDialogClosure *closure;
 
+        g_debug ("About to parent and show a network dialog");
+
+        g_assert (gtk_widget_is_toplevel (toplevel));
         g_object_set (G_OBJECT (dialog),
                       "modal", TRUE,
+                      "transient-for", toplevel,
                       NULL);
 
         closure = g_slice_new (WirelessDialogClosure);
@@ -265,40 +230,35 @@ show_wireless_dialog (CcNetworkPanel   *panel,
         g_signal_connect_data (dialog, "response",
                                G_CALLBACK (wireless_dialog_response_cb),
                                closure, wireless_dialog_closure_closure_notify, 0);
-        gtk_widget_show (dialog);
+
+        g_object_bind_property (G_OBJECT (toplevel), "visible",
+                                G_OBJECT (dialog), "visible",
+                                G_BINDING_SYNC_CREATE);
 }
 
 void
-cc_network_panel_create_wifi_network (CcNetworkPanel   *panel,
+cc_network_panel_create_wifi_network (GtkWidget        *toplevel,
 				      NMClient         *client,
 				      NMRemoteSettings *settings)
 {
   if (wifi_can_create_wifi_network (client)) {
-          show_wireless_dialog (panel, client, settings,
-#ifdef LIBNM_GTK
+          show_wireless_dialog (toplevel, client, settings,
                                 nma_wifi_dialog_new_for_create (client, settings));
-#else
-                                nma_wireless_dialog_new_for_create (client, settings));
-#endif
   }
 }
 
 void
-cc_network_panel_connect_to_hidden_network (CcNetworkPanel   *panel,
+cc_network_panel_connect_to_hidden_network (GtkWidget        *toplevel,
                                             NMClient         *client,
                                             NMRemoteSettings *settings)
 {
         g_debug ("connect to hidden wifi");
-        show_wireless_dialog (panel, client, settings,
-#ifdef LIBNM_GTK
+        show_wireless_dialog (toplevel, client, settings,
                               nma_wifi_dialog_new_for_other (client, settings));
-#else
-                              nma_wireless_dialog_new_for_other (client, settings));
-#endif
 }
 
 void
-cc_network_panel_connect_to_8021x_network (CcNetworkPanel   *panel,
+cc_network_panel_connect_to_8021x_network (GtkWidget        *toplevel,
                                            NMClient         *client,
                                            NMRemoteSettings *settings,
                                            NMDevice         *device,
@@ -358,12 +318,8 @@ cc_network_panel_connect_to_8021x_network (CcNetworkPanel   *panel,
         g_object_set (s_8021x, NM_SETTING_802_1X_PHASE2_AUTH, "mschapv2", NULL);
         nm_connection_add_setting (connection, NM_SETTING (s_8021x));
 
-#ifdef LIBNM_GTK
         dialog = nma_wifi_dialog_new (client, settings, connection, device, ap, FALSE);
-#else
-        dialog = nma_wireless_dialog_new (client, settings, connection, device, ap, FALSE);
-#endif
-        show_wireless_dialog (panel, client, settings, dialog);
+        show_wireless_dialog (toplevel, client, settings, dialog);
 }
 
 static void
@@ -535,15 +491,11 @@ show_wizard_idle_cb (NMAMobileWizard *wizard)
 }
 
 void
-cc_network_panel_connect_to_3g_network (CcNetworkPanel   *panel,
+cc_network_panel_connect_to_3g_network (GtkWidget        *toplevel,
                                         NMClient         *client,
                                         NMRemoteSettings *settings,
                                         NMDevice         *device)
 {
-        GtkWidget *toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)));
-        if (toplevel == NULL) {
-            toplevel = GTK_WIDGET (panel);
-        }
         MobileDialogClosure *closure;
         NMAMobileWizard *wizard;
 	NMDeviceModemCapabilities caps;

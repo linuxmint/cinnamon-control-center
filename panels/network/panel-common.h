@@ -30,13 +30,15 @@
 
 G_BEGIN_DECLS
 
-const gchar     *panel_device_to_icon_name                     (NMDevice *device);
-const gchar     *panel_device_to_localized_string              (NMDevice *device);
+const gchar     *panel_device_to_icon_name                     (NMDevice *device,
+                                                                gboolean  symbolic);
 const gchar     *panel_device_to_sortable_string               (NMDevice *device);
 const gchar     *panel_ap_mode_to_localized_string             (NM80211Mode mode);
-const gchar     *panel_device_state_to_localized_string        (NMDevice *device);
 const gchar     *panel_vpn_state_to_localized_string           (NMVPNConnectionState type);
-const gchar     *panel_device_state_reason_to_localized_string (NMDevice *device);
+void             panel_set_device_status                       (GtkBuilder *builder,
+                                                                const gchar *label_name,
+                                                                NMDevice *nm_device,
+                                                                const gchar *speed);
 gboolean         panel_set_device_widget_details               (GtkBuilder *builder,
                                                                 const gchar *widget_suffix,
                                                                 const gchar *value);
@@ -46,8 +48,10 @@ gboolean         panel_set_device_widget_header                (GtkBuilder *buil
 void             panel_set_device_widgets                      (GtkBuilder *builder,
                                                                 NMDevice *device);
 void             panel_unset_device_widgets                    (GtkBuilder *builder);
+gchar           *panel_get_ip4_address_as_string               (NMIP4Config *config, const gchar *what);
+gchar           *panel_get_ip4_dns_as_string                   (NMIP4Config *config);
+gchar           *panel_get_ip6_address_as_string               (NMIP6Config *config);
 
 G_END_DECLS
 
 #endif /* PANEL_COMMON_H */
-

@@ -13,8 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -65,7 +64,7 @@ struct _CcNetworkPanelClass
 
 GType cc_network_panel_get_type (void) G_GNUC_CONST;
 
-void  cc_network_panel_register (GIOModule *module);
+GPtrArray *cc_network_panel_get_devices (CcNetworkPanel *panel);
 
 G_END_DECLS
 

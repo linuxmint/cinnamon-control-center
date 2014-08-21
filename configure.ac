@@ -147,6 +147,36 @@ if test "x$have_libnmgtk" = xyes ; then
   AC_DEFINE(LIBNM_GTK, 1, [Defined if we meet the minimum libnm-gtk version])
 fi
 
+#----------------------------------------------
+#Network Manager
+PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
+                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
+                  libnm-glib-vpn >= $NETWORK_MANAGER_REQUIRED_VERSION
+                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
+                  libnm-gtk >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION
+                  mm-glib >= $MODEM_MANAGER_REQUIRED_VERSION,
+                  [have_networkmanager=yes], have_networkmanager=no)
+if test "x$have_networkmanager" = xno ; then
+        AC_MSG_WARN(*** Network panel will not be built (NetworkManager or ModemManager not found) ***)
+else
+	AC_DEFINE(BUILD_NETWORK, 1, [Define to 1 to build the Network panel])
+fi
+AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
+if test x${have_networkmanager} = xyes; then
+  AC_DEFINE(HAVE_NETWORK_MANAGER, 1, [Define to 1 if NetworkManager is available])
+  NM_VPN_CONFIG_DIR=`$PKG_CONFIG --variable configdir NetworkManager`/VPN
+  NM_VPN_MODULE_DIR=`$PKG_CONFIG --variable plugindir NetworkManager`
+  AC_SUBST(NM_VPN_CONFIG_DIR)
+  AC_SUBST(NM_VPN_MODULE_DIR)
+fi
+
+# Work-around for https://bugzilla.gnome.org/show_bug.cgi?id=723769
+PKG_CHECK_MODULES(NM_UNSTABLE_CHECK, libnm-util >= 0.9.9.0, nm_unstable=yes, nm_unstable=no)
+if test x$nm_unstable = xyes; then
+  AC_DEFINE(HAVE_NM_UNSTABLE, 1, [Define to 1 if NetworkManager is available])
+fi
+AM_CONDITIONAL(HAVE_NM_UNSTABLE, [test x$nm_unstable = xyes])
+
 
 # -----------------------------------------------
 # Check for CUPS 1.4 or newer

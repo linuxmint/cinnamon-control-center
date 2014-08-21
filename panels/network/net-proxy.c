@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <gio/gio.h>
 
 #include "net-proxy.h"
@@ -78,6 +78,8 @@ out:
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "label_proxy_warning"));
         gtk_label_set_markup (GTK_LABEL (widget), string->str);
+        gtk_widget_set_visible (widget, (string->len > 0));
+
         g_free (autoconfig_url);
         g_string_free (string, TRUE);
 }
@@ -140,6 +142,12 @@ panel_proxy_mode_combo_setup_widgets (NetProxy *proxy, guint value)
         gtk_widget_set_visible (widget, value == 1);
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "spinbutton_proxy_socks"));
+        gtk_widget_set_visible (widget, value == 1);
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_ignore"));
+        gtk_widget_set_visible (widget, value == 1);
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "entry_proxy_ignore"));
         gtk_widget_set_visible (widget, value == 1);
 
         /* perhaps show the wpad warning */
@@ -207,7 +215,6 @@ net_proxy_add_to_notebook (NetObject *object,
                            GtkSizeGroup *heading_size_group)
 {
         GtkWidget *widget;
-        GtkWindow *window;
         NetProxy *proxy = NET_PROXY (object);
 
         /* add widgets to size group */
@@ -215,15 +222,9 @@ net_proxy_add_to_notebook (NetObject *object,
                                                      "heading_proxy_method"));
         gtk_size_group_add_widget (heading_size_group, widget);
 
-        /* reparent */
-        window = GTK_WINDOW (gtk_builder_get_object (proxy->priv->builder,
-                                                     "window_tmp"));
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "grid5"));
-        g_object_ref (widget);
-        gtk_container_remove (GTK_CONTAINER (window), widget);
         gtk_notebook_append_page (notebook, widget, NULL);
-        g_object_unref (widget);
         return widget;
 }
 
@@ -250,6 +251,54 @@ net_proxy_class_init (NetProxyClass *klass)
         g_type_class_add_private (klass, sizeof (NetProxyPrivate));
 }
 
+static gboolean
+get_ignore_hosts (GValue   *value,
+                  GVariant *variant,
+                  gpointer  user_data)
+{
+        GVariantIter iter;
+        const gchar *s;
+        gchar **av, **p;
+        gsize n;
+
+        n = g_variant_iter_init (&iter, variant);
+        p = av = g_new0 (gchar *, n + 1);
+
+        while (g_variant_iter_next (&iter, "&s", &s))
+                if (s[0] != '\0') {
+                        *p = (gchar *) s;
+                        ++p;
+                }
+
+        g_value_take_string (value, g_strjoinv (", ", av));
+        g_free (av);
+
+        return TRUE;
+}
+
+static GVariant *
+set_ignore_hosts (const GValue       *value,
+                  const GVariantType *expected_type,
+                  gpointer            user_data)
+{
+        GVariantBuilder builder;
+        const gchar *sv;
+        gchar **av, **p;
+
+        sv = g_value_get_string (value);
+        av = g_strsplit_set (sv, ", ", 0);
+
+        g_variant_builder_init (&builder, G_VARIANT_TYPE_STRING_ARRAY);
+        for (p = av; *p; ++p) {
+                if (*p[0] != '\0')
+                        g_variant_builder_add (&builder, "s", *p);
+        }
+
+        g_strfreev (av);
+
+        return g_variant_builder_end (&builder);
+}
+
 static void
 net_proxy_init (NetProxy *proxy)
 {
@@ -262,10 +311,9 @@ net_proxy_init (NetProxy *proxy)
         proxy->priv = NET_PROXY_GET_PRIVATE (proxy);
 
         proxy->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (proxy->priv->builder, GETTEXT_PACKAGE);
-        gtk_builder_add_from_file (proxy->priv->builder,
-                                   CINNAMONCC_UI_DIR "/network-proxy.ui",
-                                   &error);
+        gtk_builder_add_from_resource (proxy->priv->builder,
+                                       "/org/gnome/control-center/network/network-proxy.ui",
+                                       &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);
                 g_error_free (error);
@@ -277,12 +325,6 @@ net_proxy_init (NetProxy *proxy)
                           "changed",
                           G_CALLBACK (settings_changed_cb),
                           proxy);
-
-        /* explicitly set this to false as the panel has no way of
-         * linking the http and https proxies them together */
-        g_settings_set_boolean (proxy->priv->settings,
-                                "use-same-proxy",
-                                FALSE);
 
         /* actions */
         value = g_settings_get_enum (proxy->priv->settings, "mode");
@@ -370,13 +412,19 @@ net_proxy_init (NetProxy *proxy)
                                                      "label_proxy_status"));
         gtk_label_set_label (GTK_LABEL (widget), "");
 
+        /* bind the proxy ignore hosts */
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "entry_proxy_ignore"));
+        g_settings_bind_with_mapping (proxy->priv->settings, "ignore-hosts",
+                                      widget, "text",
+                                      G_SETTINGS_BIND_DEFAULT, get_ignore_hosts, set_ignore_hosts,
+                                      NULL, NULL);
+
         /* hide the switch until we get some more detail in the mockup */
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "device_proxy_off_switch"));
         if (widget != NULL)
                 gtk_widget_hide (widget);
-
-        gtk_widget_destroy (widget);
 }
 
 NetProxy *

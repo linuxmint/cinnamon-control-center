@@ -23,10 +23,11 @@
 #include "config.h"
 
 #include <glib.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
 #include <nm-device-ethernet.h>
+#include <nm-device-infiniband.h>
 #include <nm-device-modem.h>
 #include <nm-utils.h>
 
@@ -36,7 +37,7 @@
  * panel_device_to_icon_name:
  **/
 const gchar *
-panel_device_to_icon_name (NMDevice *device)
+panel_device_to_icon_name (NMDevice *device, gboolean symbolic)
 {
         const gchar *value = NULL;
         NMDeviceState state;
@@ -44,68 +45,32 @@ panel_device_to_icon_name (NMDevice *device)
         switch (nm_device_get_device_type (device)) {
         case NM_DEVICE_TYPE_ETHERNET:
                 state = nm_device_get_state (device);
-                if (state == NM_DEVICE_STATE_UNAVAILABLE) {
-                        value = "network-wired-disconnected";
+                if (state <= NM_DEVICE_STATE_DISCONNECTED) {
+                        value = symbolic ? "network-wired-disconnected-symbolic"
+                                         : "network-wired-disconnected";
                 } else {
-                        value = "network-wired";
+                        value = symbolic ? "network-wired-symbolic"
+                                         : "network-wired";
                 }
                 break;
         case NM_DEVICE_TYPE_WIFI:
         case NM_DEVICE_TYPE_BT:
         case NM_DEVICE_TYPE_OLPC_MESH:
-                value = "network-wireless";
+                value = symbolic ? "network-wireless-signal-excellent-symbolic"
+                                 : "network-wireless";
                 break;
         case NM_DEVICE_TYPE_MODEM:
                 caps = nm_device_modem_get_current_capabilities (NM_DEVICE_MODEM (device));
                 if ((caps & NM_DEVICE_MODEM_CAPABILITY_GSM_UMTS) ||
                     (caps & NM_DEVICE_MODEM_CAPABILITY_CDMA_EVDO)) {
-                        value = "network-wireless";
+                        value = symbolic ? "network-cellular-signal-excellent-symbolic"
+                                         : "network-cellular";
+                        break;
                 }
-                break;
+                /* fall thru */
         default:
-                break;
-        }
-        return value;
-}
-
-/**
- * panel_device_to_localized_string:
- **/
-const gchar *
-panel_device_to_localized_string (NMDevice *device)
-{
-        const gchar *value = NULL;
-        NMDeviceModemCapabilities caps;
-        switch (nm_device_get_device_type (device)) {
-        case NM_DEVICE_TYPE_UNKNOWN:
-                /* TRANSLATORS: device type */
-                value = _("Unknown");
-                break;
-        case NM_DEVICE_TYPE_ETHERNET:
-                /* TRANSLATORS: device type */
-                value = _("Wired");
-                break;
-        case NM_DEVICE_TYPE_WIFI:
-                /* TRANSLATORS: device type */
-                value = _("Wireless");
-                break;
-        case NM_DEVICE_TYPE_MODEM:
-                caps = nm_device_modem_get_current_capabilities (NM_DEVICE_MODEM (device));
-                if ((caps & NM_DEVICE_MODEM_CAPABILITY_GSM_UMTS) ||
-                    (caps & NM_DEVICE_MODEM_CAPABILITY_CDMA_EVDO)) {
-                        /* TRANSLATORS: device type */
-                        value = _("Mobile broadband");
-                }
-                break;
-        case NM_DEVICE_TYPE_BT:
-                /* TRANSLATORS: device type */
-                value = _("Bluetooth");
-                break;
-        case NM_DEVICE_TYPE_OLPC_MESH:
-                /* TRANSLATORS: device type */
-                value = _("Mesh");
-                break;
-        default:
+                value = symbolic ? "network-idle-symbolic"
+                                 : "network-idle";
                 break;
         }
         return value;
@@ -175,19 +140,11 @@ panel_ap_mode_to_localized_string (NM80211Mode mode)
         return value;
 }
 
-/**
- * panel_device_state_to_localized_string:
- **/
-const gchar *
-panel_device_state_to_localized_string (NMDevice *device)
+static const gchar *
+device_state_to_localized_string (NMDeviceState state)
 {
-        NMDeviceType type;
-        NMDeviceState state;
-
-        type = nm_device_get_device_type (device);
-        state = nm_device_get_state (device);
-
         const gchar *value = NULL;
+
         switch (state) {
         case NM_DEVICE_STATE_UNKNOWN:
                 /* TRANSLATORS: device status */
@@ -199,17 +156,10 @@ panel_device_state_to_localized_string (NMDevice *device)
                 break;
         case NM_DEVICE_STATE_UNAVAILABLE:
                 /* TRANSLATORS: device status */
-                if (nm_device_get_firmware_missing (device))
-                        value = _("Firmware missing");
-                else if (type == NM_DEVICE_TYPE_ETHERNET &&
-                         !nm_device_ethernet_get_carrier (NM_DEVICE_ETHERNET (device)))
-                        value = _("Cable unplugged");
-                else
-                        value = _("Unavailable");
+                value = _("Unavailable");
                 break;
         case NM_DEVICE_STATE_DISCONNECTED:
-                /* TRANSLATORS: device status */
-                value = _("Disconnected");
+                value = NULL;
                 break;
         case NM_DEVICE_STATE_PREPARE:
         case NM_DEVICE_STATE_CONFIG:
@@ -284,16 +234,17 @@ panel_vpn_state_to_localized_string (NMVPNConnectionState type)
         return value;
 }
 
-/**
- * panel_device_state_reason_to_localized_string:
- **/
-const gchar *
-panel_device_state_reason_to_localized_string (NMDevice *device)
+static const gchar *
+device_state_reason_to_localized_string (NMDevice *device)
 {
         const gchar *value = NULL;
         NMDeviceStateReason state_reason;
 
-        /* we only want the StateReason's we care about */
+        /* This only covers NMDeviceStateReasons that explain why a connection
+         * failed / can't be attempted, and aren't redundant with the state
+         * (eg, NM_DEVICE_STATE_REASON_CARRIER).
+         */
+
         nm_device_get_state_reason (device, &state_reason);
         switch (state_reason) {
         case NM_DEVICE_STATE_REASON_CONFIG_FAILED:
@@ -428,10 +379,6 @@ panel_device_state_reason_to_localized_string (NMDevice *device)
                 /* TRANSLATORS: device status reason */
                 value = _("Connection disappeared");
                 break;
-        case NM_DEVICE_STATE_REASON_CARRIER:
-                /* TRANSLATORS: device status reason */
-                value = _("Carrier/link changed");
-                break;
         case NM_DEVICE_STATE_REASON_CONNECTION_ASSUMED:
                 /* TRANSLATORS: device status reason */
                 value = _("Existing connection was assumed");
@@ -474,6 +421,69 @@ panel_device_state_reason_to_localized_string (NMDevice *device)
                 break;
         }
         return value;
+}
+
+static gchar *
+device_status_to_localized_string (NMDevice *nm_device,
+                                   const gchar *speed)
+{
+        NMDeviceState state;
+        GString *string;
+        const gchar *state_str = NULL, *reason_str = NULL;
+
+        string = g_string_new (NULL);
+
+        state = nm_device_get_state (nm_device);
+        if (state == NM_DEVICE_STATE_UNAVAILABLE) {
+                if (nm_device_get_firmware_missing (nm_device)) {
+                        /* TRANSLATORS: device status */
+                        state_str = _("Firmware missing");
+                } else if (NM_IS_DEVICE_ETHERNET (nm_device) &&
+                           !nm_device_ethernet_get_carrier (NM_DEVICE_ETHERNET (nm_device))) {
+                        /* TRANSLATORS: device status */
+                        state_str = _("Cable unplugged");
+                } else if (NM_IS_DEVICE_INFINIBAND (nm_device) &&
+                           !nm_device_infiniband_get_carrier (NM_DEVICE_INFINIBAND (nm_device))) {
+                        state_str = _("Cable unplugged");
+                }
+        }
+        if (!state_str)
+                state_str = device_state_to_localized_string (state);
+        if (state_str)
+                g_string_append (string, state_str);
+
+        if (state > NM_DEVICE_STATE_UNAVAILABLE && speed) {
+                if (string->len)
+                        g_string_append (string, " - ");
+                g_string_append (string, speed);
+        } else if (state == NM_DEVICE_STATE_UNAVAILABLE ||
+                   state == NM_DEVICE_STATE_DISCONNECTED ||
+                   state == NM_DEVICE_STATE_DEACTIVATING ||
+                   state == NM_DEVICE_STATE_FAILED) {
+                reason_str = device_state_reason_to_localized_string (nm_device);
+                if (*reason_str) {
+                        if (string->len)
+                                g_string_append (string, " - ");
+                        g_string_append (string, reason_str);
+                }
+        }
+
+        return g_string_free (string, FALSE);
+}
+
+void
+panel_set_device_status (GtkBuilder *builder,
+                         const gchar *label_name,
+                         NMDevice *nm_device,
+                         const gchar *speed)
+{
+        GtkLabel *label;
+        gchar *status;
+
+        label = GTK_LABEL (gtk_builder_get_object (builder, label_name));
+        status = device_status_to_localized_string (nm_device, speed);
+        gtk_label_set_label (label, status);
+        g_free (status);
 }
 
 gboolean
@@ -530,8 +540,8 @@ panel_set_device_widget_header (GtkBuilder *builder,
         return TRUE;
 }
 
-static gchar *
-get_ipv4_config_address_as_string (NMIP4Config *ip4_config, const char *what)
+gchar *
+panel_get_ip4_address_as_string (NMIP4Config *ip4_config, const char *what)
 {
         const GSList *list;
         struct in_addr addr;
@@ -564,8 +574,8 @@ out:
         return str;
 }
 
-static gchar *
-get_ipv4_config_name_servers_as_string (NMIP4Config *ip4_config)
+gchar *
+panel_get_ip4_dns_as_string (NMIP4Config *ip4_config)
 {
         const GArray *array;
         GString *dns;
@@ -589,8 +599,8 @@ out:
         return str;
 }
 
-static gchar *
-get_ipv6_config_address_as_string (NMIP6Config *ip6_config)
+gchar *
+panel_get_ip6_address_as_string (NMIP6Config *ip6_config)
 {
         const GSList *list;
         const struct in6_addr *addr;
@@ -628,7 +638,7 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         if (ip4_config != NULL) {
 
                 /* IPv4 address */
-                str_tmp = get_ipv4_config_address_as_string (ip4_config, "address");
+                str_tmp = panel_get_ip4_address_as_string (ip4_config, "address");
                 panel_set_device_widget_details (builder,
                                                  "ipv4",
                                                  str_tmp);
@@ -636,14 +646,14 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
                 g_free (str_tmp);
 
                 /* IPv4 DNS */
-                str_tmp = get_ipv4_config_name_servers_as_string (ip4_config);
+                str_tmp = panel_get_ip4_dns_as_string (ip4_config);
                 panel_set_device_widget_details (builder,
                                                  "dns",
                                                  str_tmp);
                 g_free (str_tmp);
 
                 /* IPv4 route */
-                str_tmp = get_ipv4_config_address_as_string (ip4_config, "gateway");
+                str_tmp = panel_get_ip4_address_as_string (ip4_config, "gateway");
                 panel_set_device_widget_details (builder,
                                                  "route",
                                                  str_tmp);
@@ -670,7 +680,7 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         /* get IPv6 parameters */
         ip6_config = nm_device_get_ip6_config (device);
         if (ip6_config != NULL) {
-                str_tmp = get_ipv6_config_address_as_string (ip6_config);
+                str_tmp = panel_get_ip6_address_as_string (ip6_config);
                 panel_set_device_widget_details (builder, "ipv6", str_tmp);
                 has_ip6 = str_tmp != NULL;
                 g_free (str_tmp);
