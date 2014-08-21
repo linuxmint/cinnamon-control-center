@@ -66,7 +66,7 @@ cc-network-resources.h: network.gresource.xml $(resource_files)
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-network-panel.desktop.in
+desktop_in_files = cinnamon-network-panel.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)

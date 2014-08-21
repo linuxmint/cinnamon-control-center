@@ -265,7 +265,7 @@ cc_network_panel_finalize (GObject *object)
 static const char *
 cc_network_panel_get_help_uri (CcPanel *panel)
 {
-	return "help:gnome-help/net";
+	return "help:cinnamon-help/net";
 }
 
 static void
@@ -278,7 +278,7 @@ cc_network_panel_notify_enable_active_cb (GtkSwitch *sw,
 	enable = gtk_switch_get_active (sw);
         g_dbus_proxy_call (priv->rfkill_proxy,
                            "org.freedesktop.DBus.Properties.Set",
-                           g_variant_new_parsed ("('org.gnome.SettingsDaemon.Rfkill',"
+                           g_variant_new_parsed ("('org.cinnamon.SettingsDaemon.Rfkill',"
                                                  "'AirplaneMode', %v)",
                                                  g_variant_new_boolean (enable)),
                            G_DBUS_CALL_FLAGS_NONE,
@@ -378,9 +378,9 @@ cc_network_panel_constructed (GObject *object)
         g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
                                   G_DBUS_PROXY_FLAGS_NONE,
                                   NULL,
-                                  "org.gnome.SettingsDaemon.Rfkill",
-                                  "/org/gnome/SettingsDaemon/Rfkill",
-                                  "org.gnome.SettingsDaemon.Rfkill",
+                                  "org.cinnamon.SettingsDaemon.Rfkill",
+                                  "/org/cinnamon/SettingsDaemon/Rfkill",
+                                  "org.cinnamon.SettingsDaemon.Rfkill",
                                   panel->priv->cancellable,
                                   got_rfkill_proxy_cb,
                                   panel);
@@ -1406,7 +1406,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
 
         panel->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_resource (panel->priv->builder,
-                                       "/org/gnome/control-center/network/network.ui",
+                                       "/org/cinnamon/control-center/network/network.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

@@ -240,7 +240,7 @@ eap_method_simple_new (WirelessSecurity *ws_parent,
 	                          fill_connection,
 	                          update_secrets,
 	                          NULL,
-	                          "/org/gnome/control-center/network/eap-method-simple.ui",
+	                          "/org/cinnamon/control-center/network/eap-method-simple.ui",
 	                          "eap_simple_notebook",
 	                          "eap_simple_username_entry",
 	                          phase2);

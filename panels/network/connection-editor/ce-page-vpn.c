@@ -58,14 +58,14 @@ all_user_changed (GtkToggleButton *b, CEPageVpn *page)
  *      Bar baz [__________]
  */
 static void
-vpn_gnome3ify_editor (GtkWidget *widget)
+vpn_cinnamon3ify_editor (GtkWidget *widget)
 {
         if (GTK_IS_CONTAINER (widget)) {
                 GList *children, *iter;
 
                 children = gtk_container_get_children (GTK_CONTAINER (widget));
                 for (iter = children; iter; iter = iter->next)
-                        vpn_gnome3ify_editor (iter->data);
+                        vpn_cinnamon3ify_editor (iter->data);
                 g_list_free (children);
         } else if (GTK_IS_LABEL (widget)) {
                 const char *text;
@@ -105,7 +105,7 @@ load_vpn_plugin (CEPageVpn *page, NMConnection *connection)
                 page->plugin = NULL;
 		return;
 	}
-        vpn_gnome3ify_editor (ui_widget);
+        vpn_cinnamon3ify_editor (ui_widget);
 
         failure = GTK_WIDGET (gtk_builder_get_object (parent->builder, "failure_label"));
         gtk_widget_destroy (failure);
@@ -200,7 +200,7 @@ ce_page_vpn_new (NMConnection     *connection,
 					 connection,
 					 client,
 					 settings,
-					 "/org/gnome/control-center/network/vpn-page.ui",
+					 "/org/cinnamon/control-center/network/vpn-page.ui",
 					 _("Identity")));
 
         page->name = GTK_ENTRY (gtk_builder_get_object (CE_PAGE (page)->builder, "entry_name"));

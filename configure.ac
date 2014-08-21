@@ -92,8 +92,9 @@ PA_REQUIRED_VERSION=1.1
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
-NETWORK_MANAGER_REQUIRED_VERSION=0.8.992
-LIBNM_GTK_REQUIRED_VERSION=0.9.9.0
+NETWORK_MANAGER_REQUIRED_VERSION=0.9.8
+NETWORK_MANAGER_APPLET_REQUIRED_VERSION=0.9.7.995
+MODEM_MANAGER_REQUIRED_VERSION=0.7
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 CINNAMON_DESKTOP_REQUIRED_VERSION=1.0.0
 CLUTTER_REQUIRED_VERSION=1.11.3
@@ -134,21 +135,9 @@ PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libpulse-mainloop-glib >= $PA_REQUIRED_VERSION)
 PKG_CHECK_MODULES(UNIVERSAL_ACCESS_PANEL, $COMMON_MODULES)
 
-PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-		  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION)
-
-# Check for libnm-gtk + 0.9.9.0
-PKG_CHECK_MODULES(LIBNM_GTK_COMPAT, libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION
-		  libnm-gtk >= $LIBNM_GTK_REQUIRED_VERSION,
-                  [have_libnmgtk=yes], have_libnmgtk=no)
-if test "x$have_libnmgtk" = xyes ; then
-  AC_DEFINE(LIBNM_GTK, 1, [Defined if we meet the minimum libnm-gtk version])
-fi
-
 #----------------------------------------------
-#Network Manager
+# Network Manager Stuff
+
 PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
                   libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
                   libnm-glib-vpn >= $NETWORK_MANAGER_REQUIRED_VERSION
@@ -374,6 +363,8 @@ panels/color/icons/64x64/Makefile
 panels/color/icons/256x256/Makefile
 panels/color/icons/scalable/Makefile
 panels/network/Makefile
+panels/network/wireless-security/Makefile
+panels/network/connection-editor/Makefile
 panels/network/cinnamon-network-panel.desktop.in
 panels/universal-access/Makefile
 panels/universal-access/cinnamon-universal-access-panel.desktop.in

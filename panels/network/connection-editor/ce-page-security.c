@@ -451,7 +451,7 @@ ce_page_security_new (NMConnection      *connection,
                                               connection,
                                               client,
                                               settings,
-                                              "/org/gnome/control-center/network/security-page.ui",
+                                              "/org/cinnamon/control-center/network/security-page.ui",
                                               _("Security")));
 
         sws = nm_connection_get_setting_wireless_security (connection);

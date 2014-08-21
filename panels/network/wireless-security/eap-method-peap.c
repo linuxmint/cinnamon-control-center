@@ -327,7 +327,7 @@ eap_method_peap_new (WirelessSecurity *ws_parent,
 	                          fill_connection,
 	                          update_secrets,
 	                          destroy,
-	                          "/org/gnome/control-center/network/eap-method-peap.ui",
+	                          "/org/cinnamon/control-center/network/eap-method-peap.ui",
 	                          "eap_peap_notebook",
 	                          "eap_peap_anon_identity_entry",
 	                          FALSE);

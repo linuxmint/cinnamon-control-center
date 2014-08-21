@@ -149,7 +149,7 @@ ws_leap_new (NMConnection *connection, gboolean secrets_only)
 	                                 fill_connection,
 	                                 update_secrets,
 	                                 NULL,
-	                                 "/org/gnome/control-center/network/ws-leap.ui",
+	                                 "/org/cinnamon/control-center/network/ws-leap.ui",
 	                                 "leap_notebook",
 	                                 "leap_username_entry");
 	if (!parent)

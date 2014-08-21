@@ -130,11 +130,11 @@ net_vpn_get_state (NetVpn *vpn)
 }
 
 /* VPN parameters can be found at:
- * http://git.gnome.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
- * http://git.gnome.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
- * http://git.gnome.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
- * http://git.gnome.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
- * http://git.gnome.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
+ * http://git.cinnamon.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
+ * http://git.cinnamon.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
+ * http://git.cinnamon.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
+ * http://git.cinnamon.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
+ * http://git.cinnamon.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
  * See also 'properties' directory in these plugins.
  */
 static const gchar *
@@ -565,7 +565,7 @@ net_vpn_init (NetVpn *vpn)
 
         vpn->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_resource (vpn->priv->builder,
-                                       "/org/gnome/control-center/network/network-vpn.ui",
+                                       "/org/cinnamon/control-center/network/network-vpn.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

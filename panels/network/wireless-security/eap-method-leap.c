@@ -145,7 +145,7 @@ eap_method_leap_new (WirelessSecurity *ws_parent,
 	                          fill_connection,
 	                          update_secrets,
 	                          NULL,
-	                          "/org/gnome/control-center/network/eap-method-leap.ui",
+	                          "/org/cinnamon/control-center/network/eap-method-leap.ui",
 	                          "eap_leap_notebook",
 	                          "eap_leap_username_entry",
 	                          FALSE);

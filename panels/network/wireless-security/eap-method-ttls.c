@@ -327,7 +327,7 @@ eap_method_ttls_new (WirelessSecurity *ws_parent,
 	                          fill_connection,
 	                          update_secrets,
 	                          destroy,
-	                          "/org/gnome/control-center/network/eap-method-ttls.ui",
+	                          "/org/cinnamon/control-center/network/eap-method-ttls.ui",
 	                          "eap_ttls_notebook",
 	                          "eap_ttls_anon_identity_entry",
 	                          FALSE);

@@ -27,6 +27,8 @@ cinnamon_control_center_SOURCES =			\
 	cc-shell-model.h			\
 	cc-shell-nav-bar.c			\
 	cc-shell-nav-bar.h			\
+	list-box-helper.h			\
+	list-box-helper.c			\
 	$(MARSHAL_FILES)
 
 cinnamon_control_center_LDADD =			\

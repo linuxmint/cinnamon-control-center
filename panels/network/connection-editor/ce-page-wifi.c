@@ -266,7 +266,7 @@ ce_page_wifi_new (NMConnection     *connection,
                                           connection,
                                           client,
                                           settings,
-                                          "/org/gnome/control-center/network/wifi-page.ui",
+                                          "/org/cinnamon/control-center/network/wifi-page.ui",
                                           _("Identity")));
 
         page->setting = nm_connection_get_setting_wireless (connection);

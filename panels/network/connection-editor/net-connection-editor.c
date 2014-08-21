@@ -145,7 +145,7 @@ net_connection_editor_init (NetConnectionEditor *editor)
         editor->builder = gtk_builder_new ();
 
         gtk_builder_add_from_resource (editor->builder,
-                                       "/org/gnome/control-center/network/connection-editor.ui",
+                                       "/org/cinnamon/control-center/network/connection-editor.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load ui file: %s", error->message);

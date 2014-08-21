@@ -423,7 +423,7 @@ eap_method_tls_new (WirelessSecurity *ws_parent,
 	                          fill_connection,
 	                          update_secrets,
 	                          NULL,
-	                          "/org/gnome/control-center/network/eap-method-tls.ui",
+	                          "/org/cinnamon/control-center/network/eap-method-tls.ui",
 	                          "eap_tls_notebook",
 	                          "eap_tls_identity_entry",
 	                          phase2);

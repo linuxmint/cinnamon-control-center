@@ -915,7 +915,7 @@ ce_page_ip6_new (NMConnection     *connection,
                                            connection,
                                            client,
                                            settings,
-                                           "/org/gnome/control-center/network/ip6-page.ui",
+                                           "/org/cinnamon/control-center/network/ip6-page.ui",
                                            _("IPv6")));
 
         page->setting = nm_connection_get_setting_ip6_config (connection);

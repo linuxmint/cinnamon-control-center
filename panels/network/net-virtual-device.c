@@ -410,7 +410,7 @@ net_virtual_device_init (NetVirtualDevice *virtual_device)
 
         virtual_device->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_resource (virtual_device->priv->builder,
-                                       "/org/gnome/control-center/network/network-simple.ui",
+                                       "/org/cinnamon/control-center/network/network-simple.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

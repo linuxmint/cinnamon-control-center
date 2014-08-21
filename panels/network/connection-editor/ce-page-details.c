@@ -236,7 +236,7 @@ ce_page_details_new (NMConnection     *connection,
                                              connection,
                                              client,
                                              settings,
-                                             "/org/gnome/control-center/network/details-page.ui",
+                                             "/org/cinnamon/control-center/network/details-page.ui",
                                              _("Details")));
 
         page->device = device;

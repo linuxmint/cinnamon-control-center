@@ -632,7 +632,7 @@ net_device_ethernet_init (NetDeviceEthernet *device)
 
         device->builder = gtk_builder_new ();
         gtk_builder_add_from_resource (device->builder,
-                                       "/org/gnome/control-center/network/network-ethernet.ui",
+                                       "/org/cinnamon/control-center/network/network-ethernet.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

@@ -118,8 +118,8 @@ _get_ca_ignore_settings (const char *uuid)
 	GSettings *settings;
 	char *path = NULL;
 
-	path = g_strdup_printf ("/org/gnome/nm-applet/eap/%s/", uuid);
-	settings = g_settings_new_with_path ("org.gnome.nm-applet.eap", path);
+	path = g_strdup_printf ("/org/cinnamon/nm-applet/eap/%s/", uuid);
+	settings = g_settings_new_with_path ("org.cinnamon.nm-applet.eap", path);
 	g_free (path);
 
 	return settings;
@@ -203,7 +203,7 @@ eap_method_nag_user (EAPMethod *method)
 	return method->nag_dialog;
 }
 
-#define NAG_DIALOG_UI "/org/gnome/control-center/network/nag-user-dialog.ui"
+#define NAG_DIALOG_UI "/org/cinnamon/control-center/network/nag-user-dialog.ui"
 
 static gboolean
 _get_ignore_ca_cert (const char *uuid, gboolean phase2)

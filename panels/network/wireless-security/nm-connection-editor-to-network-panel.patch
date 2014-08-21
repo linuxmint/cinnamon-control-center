@@ -14,7 +14,7 @@
  }
  
 -#define NAG_DIALOG_UI UIDIR "/nag-user-dialog.ui"
-+#define NAG_DIALOG_UI "/org/gnome/control-center/network/nag-user-dialog.ui"
++#define NAG_DIALOG_UI "/org/cinnamon/control-center/network/nag-user-dialog.ui"
  
  static gboolean
  _get_ignore_ca_cert (const char *uuid, gboolean phase2)
@@ -73,7 +73,7 @@
  	                          update_secrets,
  	                          destroy,
 -	                          UIDIR "/eap-method-fast.ui",
-+	                          "/org/gnome/control-center/network/eap-method-fast.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-fast.ui",
  	                          "eap_fast_notebook",
  	                          "eap_fast_anon_identity_entry",
  	                          FALSE);
@@ -95,7 +95,7 @@
  	                          update_secrets,
  	                          NULL,
 -	                          UIDIR "/eap-method-leap.ui",
-+	                          "/org/gnome/control-center/network/eap-method-leap.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-leap.ui",
  	                          "eap_leap_notebook",
  	                          "eap_leap_username_entry",
  	                          FALSE);
@@ -106,7 +106,7 @@
  	                          update_secrets,
  	                          destroy,
 -	                          UIDIR "/eap-method-peap.ui",
-+	                          "/org/gnome/control-center/network/eap-method-peap.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-peap.ui",
  	                          "eap_peap_notebook",
  	                          "eap_peap_anon_identity_entry",
  	                          FALSE);
@@ -117,7 +117,7 @@
  	                          update_secrets,
  	                          NULL,
 -	                          UIDIR "/eap-method-simple.ui",
-+	                          "/org/gnome/control-center/network/eap-method-simple.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-simple.ui",
  	                          "eap_simple_notebook",
  	                          "eap_simple_username_entry",
  	                          phase2);
@@ -128,7 +128,7 @@
  	                          update_secrets,
  	                          NULL,
 -	                          UIDIR "/eap-method-tls.ui",
-+	                          "/org/gnome/control-center/network/eap-method-tls.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-tls.ui",
  	                          "eap_tls_notebook",
  	                          "eap_tls_identity_entry",
  	                          phase2);
@@ -139,7 +139,7 @@
  	                          update_secrets,
  	                          destroy,
 -	                          UIDIR "/eap-method-ttls.ui",
-+	                          "/org/gnome/control-center/network/eap-method-ttls.ui",
++	                          "/org/cinnamon/control-center/network/eap-method-ttls.ui",
  	                          "eap_ttls_notebook",
  	                          "eap_ttls_anon_identity_entry",
  	                          FALSE);
@@ -220,7 +220,7 @@
  	                                 update_secrets,
  	                                 destroy,
 -	                                 UIDIR "/ws-dynamic-wep.ui",
-+	                                 "/org/gnome/control-center/network/ws-dynamic-wep.ui",
++	                                 "/org/cinnamon/control-center/network/ws-dynamic-wep.ui",
  	                                 "dynamic_wep_notebook",
  	                                 NULL);
  	if (!parent)
@@ -231,7 +231,7 @@
  	                                 update_secrets,
  	                                 NULL,
 -	                                 UIDIR "/ws-leap.ui",
-+	                                 "/org/gnome/control-center/network/ws-leap.ui",
++	                                 "/org/cinnamon/control-center/network/ws-leap.ui",
  	                                 "leap_notebook",
  	                                 "leap_username_entry");
  	if (!parent)
@@ -242,7 +242,7 @@
  	                                 update_secrets,
  	                                 destroy,
 -	                                 UIDIR "/ws-wep-key.ui",
-+	                                 "/org/gnome/control-center/network/ws-wep-key.ui",
++	                                 "/org/cinnamon/control-center/network/ws-wep-key.ui",
  	                                 "wep_key_notebook",
  	                                 "wep_key_entry");
  	if (!parent)
@@ -253,7 +253,7 @@
  	                                 update_secrets,
  	                                 destroy,
 -	                                 UIDIR "/ws-wpa-eap.ui",
-+	                                 "/org/gnome/control-center/network/ws-wpa-eap.ui",
++	                                 "/org/cinnamon/control-center/network/ws-wpa-eap.ui",
  	                                 "wpa_eap_notebook",
  	                                 NULL);
  	if (!parent)
@@ -264,7 +264,7 @@
  	                                 update_secrets,
  	                                 NULL,
 -	                                 UIDIR "/ws-wpa-psk.ui",
-+	                                 "/org/gnome/control-center/network/ws-wpa-psk.ui",
++	                                 "/org/cinnamon/control-center/network/ws-wpa-psk.ui",
  	                                 "wpa_psk_notebook",
  	                                 "wpa_psk_entry");
  	if (!parent)

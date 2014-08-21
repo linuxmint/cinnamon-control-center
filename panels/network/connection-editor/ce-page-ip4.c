@@ -949,7 +949,7 @@ ce_page_ip4_new (NMConnection     *connection,
                                            connection,
                                            client,
                                            settings,
-                                           "/org/gnome/control-center/network/ip4-page.ui",
+                                           "/org/cinnamon/control-center/network/ip4-page.ui",
                                            _("IPv4")));
 
         page->setting = nm_connection_get_setting_ip4_config (connection);

@@ -222,7 +222,7 @@ ce_page_ethernet_new (NMConnection     *connection,
                                               connection,
                                               client,
                                               settings,
-                                              "/org/gnome/control-center/network/ethernet-page.ui",
+                                              "/org/cinnamon/control-center/network/ethernet-page.ui",
                                               _("Identity")));
 
         page->name = GTK_ENTRY (gtk_builder_get_object (CE_PAGE (page)->builder, "entry_name"));

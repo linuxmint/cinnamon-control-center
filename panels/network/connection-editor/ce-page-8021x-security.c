@@ -104,7 +104,7 @@ ce_page_8021x_security_new (NMConnection     *connection,
 	                                            connection,
 	                                            client,
 	                                            settings,
-	                                            "/org/gnome/control-center/network/8021x-security-page.ui",
+	                                            "/org/cinnamon/control-center/network/8021x-security-page.ui",
 	                                            _("Security")));
 
 	if (nm_connection_get_setting_802_1x (connection))

@@ -87,7 +87,7 @@ ce_page_reset_new (NMConnection        *connection,
                                            connection,
                                            client,
                                            settings,
-                                           "/org/gnome/control-center/network/reset-page.ui",
+                                           "/org/cinnamon/control-center/network/reset-page.ui",
                                            _("Reset")));
         page->editor = editor;
 

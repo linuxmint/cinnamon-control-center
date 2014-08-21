@@ -312,7 +312,7 @@ net_proxy_init (NetProxy *proxy)
 
         proxy->priv->builder = gtk_builder_new ();
         gtk_builder_add_from_resource (proxy->priv->builder,
-                                       "/org/gnome/control-center/network/network-proxy.ui",
+                                       "/org/cinnamon/control-center/network/network-proxy.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);
@@ -320,7 +320,7 @@ net_proxy_init (NetProxy *proxy)
                 return;
         }
 
-        proxy->priv->settings = g_settings_new ("org.gnome.system.proxy");
+        proxy->priv->settings = g_settings_new ("org.cinnamon.system.proxy");
         g_signal_connect (proxy->priv->settings,
                           "changed",
                           G_CALLBACK (settings_changed_cb),
