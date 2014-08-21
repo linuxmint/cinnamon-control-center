@@ -4,4 +4,5 @@ usr/share/desktop-directories
 usr/share/icons
 usr/share/polkit-1
 debian/source_cinnamon-control-center.py /usr/share/apport/package-hooks
+usr/share/locale/* /usr/share/cinnamon/locale
 
