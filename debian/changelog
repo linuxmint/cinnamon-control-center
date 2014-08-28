@@ -1,3 +1,9 @@
+cinnamon-control-center (2.2.11) qiana; urgency=medium
+
+  * Fixed compatibility issue with upower 1
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 28 Aug 2014 16:44:43 +0200
+
 cinnamon-control-center (2.2.10) qiana; urgency=medium
 
   * Hide the zoom enable shortcut label (it doesn't use a shortcut anymore) and hide some tabs in the zoom prefs that don't appear to do anything currently. (TODO: why not?)
