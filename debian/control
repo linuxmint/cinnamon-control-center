@@ -78,8 +78,7 @@ Recommends: cups-pk-helper,
             iso-codes,
             mesa-utils,
             mousetweaks,
-            policykit-1-gnome,
-            network-manager-gnome (>= 0.9.8)
+            policykit-1-gnome
 Breaks: gnome-power-manager (<< 3.0)
 Suggests: gstreamer0.10-pulseaudio,
           libcanberra-gtk-module,

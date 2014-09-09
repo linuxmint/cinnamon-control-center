@@ -1408,7 +1408,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
         g_resources_register (cc_network_get_resource ());
 
         panel->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
+        gtk_builder_set_translation_domain (panel->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (panel->priv->builder,
                                        "/org/cinnamon/control-center/network/network.ui",
                                        &error);
