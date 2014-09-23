@@ -2070,7 +2070,7 @@ gvc_mixer_dialog_constructor (GType                  type,
 
         add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);
         add_sound_effect_selector (sounds_grid, 1, _("Switching workspace:"), sound_settings, "switch-file", "switch-enabled", self);       
-        add_sound_effect_selector (sounds_grid, 2, _("Mapping windows:"), sound_settings, "map-file", "map-enabled", self);       
+        add_sound_effect_selector (sounds_grid, 2, _("Opening new windows:"), sound_settings, "map-file", "map-enabled", self);       
         add_sound_effect_selector (sounds_grid, 3, _("Closing windows:"), sound_settings, "close-file", "close-enabled", self);       
         add_sound_effect_selector (sounds_grid, 4, _("Minimizing windows:"), sound_settings, "minimize-file", "minimize-enabled", self);       
         add_sound_effect_selector (sounds_grid, 5, _("Maximizing windows:"), sound_settings, "maximize-file", "maximize-enabled", self);       
