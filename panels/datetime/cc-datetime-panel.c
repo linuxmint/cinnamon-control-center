@@ -905,6 +905,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 
   priv->builder = gtk_builder_new ();
 
+  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
   ret = gtk_builder_add_objects_from_file (priv->builder, DATADIR"/datetime.ui",
                                            objects, &err);
 

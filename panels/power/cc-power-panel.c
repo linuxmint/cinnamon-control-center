@@ -818,30 +818,6 @@ combo_time_changed_cb (GtkWidget *widget, CcPowerPanel *self)
 }
 
 static void
-combo_session_time_changed_cb (GtkWidget *widget, CcPowerPanel *self)
-{
-  GtkTreeIter iter;
-  GtkTreeModel *model;
-  guint value;
-  gboolean ret;
-  const gchar *key = (const gchar *)g_object_get_data (G_OBJECT(widget), "_gsettings_key");
-
-  /* no selection */
-  ret = gtk_combo_box_get_active_iter (GTK_COMBO_BOX(widget), &iter);
-  if (!ret)
-    return;
-
-  /* get entry */
-  model = gtk_combo_box_get_model (GTK_COMBO_BOX(widget));
-  gtk_tree_model_get (model, &iter,
-                      1, &value,
-                      -1);
-
-  /* set both keys */
-  g_settings_set_uint (self->priv->session_settings, key, value);
-}
-
-static void
 combo_enum_changed_cb (GtkWidget *widget, CcPowerPanel *self)
 {
   GtkTreeIter iter;
@@ -1099,7 +1075,6 @@ cc_power_panel_init (CcPowerPanel *self)
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_display_battery")), LS("liststore_display"));
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_sleep_ac")), LS("liststore_suspend"));
   gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_sleep_battery")), LS("liststore_suspend"));
-  gtk_combo_box_set_model (GTK_COMBO_BOX(SWID("combobox_session_idle")), LS("liststore_session"));
 
   /* add levelbar */
   self->priv->levelbar_primary = SWID("levelbar_primary");
@@ -1123,14 +1098,6 @@ cc_power_panel_init (CcPowerPanel *self)
 
   self->priv->csd_settings = g_settings_new ("org.cinnamon.settings-daemon.plugins.power");
   self->priv->session_settings = g_settings_new ("org.cinnamon.desktop.session");
-
-
-  /* Session idle time */
-  value = g_settings_get_uint (self->priv->session_settings, "idle-delay");
-  widget = SWID("combobox_session_idle");
-  set_value_for_combo (GTK_COMBO_BOX (widget), value);
-  g_object_set_data (G_OBJECT(widget), "_gsettings_key", "idle-delay");
-  g_signal_connect (widget, "changed", G_CALLBACK (combo_session_time_changed_cb), self);
 
   /* auto-display-off time */
   value = g_settings_get_int (self->priv->csd_settings, "sleep-display-ac");

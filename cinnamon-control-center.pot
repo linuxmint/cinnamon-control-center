@@ -1006,7 +1006,7 @@ msgid "Switching workspace:"
 msgstr ""
 
 #: panels/sound-nua/gvc-mixer-dialog.c:2071
-msgid "Mapping windows:"
+msgid "Opening new windows:"
 msgstr ""
 
 #: panels/sound-nua/gvc-mixer-dialog.c:2072

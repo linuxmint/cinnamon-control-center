@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.0"/>
   <object class="GtkListStore" id="liststore_critical">
     <columns>
       <!-- column-name name -->
@@ -141,66 +142,6 @@
         <col id="0" translatable="yes">Do nothing</col>
         <col id="1">5</col>
         <col id="2">True</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="liststore_session">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-      <!-- column-name value -->
-      <column type="guint"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">5 minutes</col>
-        <col id="1">300</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">10 minutes</col>
-        <col id="1">600</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">30 minutes</col>
-        <col id="1">1800</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">1 hour</col>
-        <col id="1">3600</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Never</col>
-        <col id="1">0</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="liststore_suspend">
-    <columns>
-      <!-- column-name name -->
-      <column type="gchararray"/>
-      <!-- column-name value -->
-      <column type="gint"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">5 minutes</col>
-        <col id="1">300</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">10 minutes</col>
-        <col id="1">600</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">30 minutes</col>
-        <col id="1">1800</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">1 hour</col>
-        <col id="1">3600</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Never</col>
-        <col id="1">0</col>
       </row>
     </data>
   </object>
@@ -345,7 +286,7 @@
                           </object>
                           <packing>
                             <property name="left_attach">0</property>
-                            <property name="top_attach">6</property>
+                            <property name="top_attach">5</property>
                             <property name="width">1</property>
                             <property name="height">1</property>
                           </packing>
@@ -358,7 +299,7 @@
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
-                            <property name="top_attach">6</property>
+                            <property name="top_attach">5</property>
                             <property name="width">1</property>
                             <property name="height">1</property>
                           </packing>
@@ -368,26 +309,13 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">end</property>
-                            <property name="label" translatable="yes">When battery power is critically low</property>
+                            <property name="label" translatable="yes">When the battery is critically low</property>
                             <property name="use_underline">True</property>
                             <property name="mnemonic_widget">combobox_critical</property>
                           </object>
                           <packing>
                             <property name="left_attach">0</property>
-                            <property name="top_attach">5</property>
-                            <property name="width">1</property>
-                            <property name="height">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkComboBox" id="combobox_critical">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="model">liststore_critical</property>
-                          </object>
-                          <packing>
-                            <property name="left_attach">1</property>
-                            <property name="top_attach">5</property>
+                            <property name="top_attach">6</property>
                             <property name="width">1</property>
                             <property name="height">1</property>
                           </packing>
@@ -412,8 +340,6 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="hexpand">True</property>
-                            <property name="entry_text_column">0</property>
-                            <property name="id_column">1</property>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -427,8 +353,6 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="hexpand">True</property>
-                            <property name="entry_text_column">0</property>
-                            <property name="id_column">1</property>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -457,8 +381,6 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="hexpand">True</property>
-                            <property name="entry_text_column">0</property>
-                            <property name="id_column">1</property>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
@@ -473,8 +395,6 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="hexpand">True</property>
-                            <property name="entry_text_column">0</property>
-                            <property name="id_column">1</property>
                           </object>
                           <packing>
                             <property name="left_attach">2</property>
@@ -484,66 +404,44 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="label4">
+                          <object class="GtkComboBox" id="combobox_critical">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Start the screensaver when inactive for</property>
-                          </object>
-                          <packing>
-                            <property name="left_attach">0</property>
-                            <property name="top_attach">7</property>
-                            <property name="width">1</property>
-                            <property name="height">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkComboBoxText" id="combobox_session_idle">
-                            <property name="width_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="hexpand">True</property>
-                            <property name="entry_text_column">0</property>
-                            <property name="id_column">1</property>
+                            <property name="model">liststore_critical</property>
                           </object>
                           <packing>
                             <property name="left_attach">1</property>
-                            <property name="top_attach">7</property>
+                            <property name="top_attach">6</property>
                             <property name="width">1</property>
                             <property name="height">1</property>
                           </packing>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
                         </child>
                       </object>
                       <packing>
@@ -780,6 +678,66 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkListStore" id="liststore_session">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="guint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">5 minutes</col>
+        <col id="1">300</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">10 minutes</col>
+        <col id="1">600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">30 minutes</col>
+        <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">1 hour</col>
+        <col id="1">3600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Never</col>
+        <col id="1">0</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore_suspend">
+    <columns>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name value -->
+      <column type="gint"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">5 minutes</col>
+        <col id="1">300</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">10 minutes</col>
+        <col id="1">600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">30 minutes</col>
+        <col id="1">1800</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">1 hour</col>
+        <col id="1">3600</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Never</col>
+        <col id="1">0</col>
+      </row>
+    </data>
   </object>
   <object class="GtkSizeGroup" id="sizegroup_combos"/>
 </interface>
