@@ -130,11 +130,11 @@ net_vpn_get_state (NetVpn *vpn)
 }
 
 /* VPN parameters can be found at:
- * http://git.cinnamon.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
- * http://git.cinnamon.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
- * http://git.cinnamon.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
- * http://git.cinnamon.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
- * http://git.cinnamon.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
+ * http://git.gnome.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
+ * http://git.gnome.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
+ * http://git.gnome.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
+ * http://git.gnome.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
+ * http://git.gnome.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
  * See also 'properties' directory in these plugins.
  */
 static const gchar *
