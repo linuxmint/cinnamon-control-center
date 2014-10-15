@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <nm-client.h>
 #include <nm-device.h>
@@ -403,6 +403,7 @@ net_virtual_device_init (NetVirtualDevice *virtual_device)
         virtual_device->priv = NET_VIRTUAL_DEVICE_GET_PRIVATE (virtual_device);
 
         virtual_device->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (virtual_device->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (virtual_device->priv->builder,
                                        "/org/cinnamon/control-center/network/network-simple.ui",
                                        &error);
