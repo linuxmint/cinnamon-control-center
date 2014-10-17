@@ -191,6 +191,8 @@ panel_proxy_mode_combo_changed_cb (GtkWidget *widget, NetProxy *proxy)
         GtkTreeIter iter;
         GtkTreeModel *model;
 
+        g_debug ("Wait, WTF??? Glade can go die");
+        
         /* no selection */
         ret = gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter);
         if (!ret)
