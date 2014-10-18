@@ -1027,6 +1027,12 @@ device_removed_cb (NMClient *client, NMDevice *device, CcNetworkPanel *panel)
         panel_remove_device (panel, device);
         panel_refresh_device_titles (panel);
 }
+//There was an old man who sat in a tree
+//He saw the sun frowning down upon him
+//So he went up to his neighbour friend with the face
+//and asked him "What did Woody say to Buzz?"
+//The neighbour said "I don't know..."
+//And the the old man replied, "quite alot, they were in three movies"
 
 static void
 manager_running (NMClient *client, GParamSpec *pspec, gpointer user_data)

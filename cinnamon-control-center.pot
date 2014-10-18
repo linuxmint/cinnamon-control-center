@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-25 01:01-0600\n"
+"POT-Creation-Date: 2014-10-17 21:33-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,13 +283,13 @@ msgstr ""
 msgid "Network Proxy"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1147 panels/network/net-vpn.c:278
+#: panels/network/cc-network-panel.c:1153 panels/network/net-vpn.c:278
 #: panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1292
+#: panels/network/cc-network-panel.c:1298
 msgid "The system network services are not compatible with this version."
 msgstr ""
 
@@ -496,8 +496,12 @@ msgstr ""
 msgid "This is not recommended for untrusted public networks."
 msgstr ""
 
-#: panels/network/net-proxy.c:405
+#: panels/network/net-proxy.c:406
 msgid "Proxy"
+msgstr ""
+
+#: panels/network/net-proxy.c:410
+msgid "_Method"
 msgstr ""
 
 #: panels/network/panel-common.c:127
@@ -1485,7 +1489,7 @@ msgid "Network"
 msgstr ""
 
 #: panels/network/network-proxy.ui.h:4
-msgid "_Method"
+msgid "Method"
 msgstr ""
 
 #: panels/network/network-proxy.ui.h:5

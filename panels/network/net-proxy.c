@@ -405,6 +405,10 @@ net_proxy_init (NetProxy *proxy)
         gtk_label_set_label (GTK_LABEL (widget),
                              _("Proxy"));
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_method"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_Method"));
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "label_proxy_status"));
         gtk_label_set_label (GTK_LABEL (widget), "");
 
