@@ -7,7 +7,8 @@ AM_CPPFLAGS = 								\
 	$(NETWORK_PANEL_CFLAGS)					\
 	$(NETWORK_MANAGER_CFLAGS)				\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""		\
-	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
+	-DLOCALE_DIR="\"$(datadir)/locale\""	\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""\
 	-I$(srcdir)/wireless-security			\
 	$(NULL)
 

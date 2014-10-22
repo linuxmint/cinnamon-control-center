@@ -54,6 +54,7 @@ typedef struct _CcNetworkPanelPrivate CcNetworkPanelPrivate;
 struct _CcNetworkPanel
 {
         CcPanel parent;
+        
         CcNetworkPanelPrivate *priv;
 };
 

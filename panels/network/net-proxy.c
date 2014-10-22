@@ -404,10 +404,45 @@ net_proxy_init (NetProxy *proxy)
                                                      "label_proxy_device"));
         gtk_label_set_label (GTK_LABEL (widget),
                              _("Proxy"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "liststore_proxy_method"));
+                             
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "heading_proxy_method"));
         gtk_label_set_label (GTK_LABEL (widget),
                              _("_Method"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_url"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_Configuration URL"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_http"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_HTTP Proxy"));
+                        
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_https"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("H_TTPS Proxy"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_ftp"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_FTP Proxy"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_socks"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_Socks Host"));
+                             
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "heading_proxy_ignore"));
+        gtk_label_set_label (GTK_LABEL (widget),
+                             _("_Ignore Hosts"));
+                             
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "label_proxy_status"));
         gtk_label_set_label (GTK_LABEL (widget), "");

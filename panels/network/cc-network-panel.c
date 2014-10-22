@@ -21,6 +21,8 @@
 
 #include <config.h>
 #include <glib/gi18n-lib.h>
+#include <string.h>
+#include <gtk/gtk.h>
 #include <stdlib.h>
 
 #include "cc-network-panel.h"
@@ -1032,7 +1034,7 @@ device_removed_cb (NMClient *client, NMDevice *device, CcNetworkPanel *panel)
 //So he went up to his neighbour friend with the face
 //and asked him "What did Woody say to Buzz?"
 //The neighbour said "I don't know..."
-//And the the old man replied, "quite alot, they were in three movies"
+//And the the old man replied, "Quite alot, they were in three movies"
 
 static void
 manager_running (NMClient *client, GParamSpec *pspec, gpointer user_data)
@@ -1409,13 +1411,13 @@ cc_network_panel_init (CcNetworkPanel *panel)
         GtkWidget *widget;
         GtkWidget *toplevel;
         GDBusConnection *system_bus;
+        CcNetworkPanelPrivate *priv;
 
-        panel->priv = NETWORK_PANEL_PRIVATE (panel);
+        priv = panel->priv = NETWORK_PANEL_PRIVATE (panel);
         g_resources_register (cc_network_get_resource ());
 
-        panel->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (panel->priv->builder, GETTEXT_PACKAGE);
-        gtk_builder_add_from_resource (panel->priv->builder,
+        priv->builder = gtk_builder_new ();
+        gtk_builder_add_from_resource (priv->builder,
                                        "/org/cinnamon/control-center/network/network.ui",
                                        &error);
         if (error != NULL) {
@@ -1518,9 +1520,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
 void
 cc_network_panel_register (GIOModule *module)
 {
+    cc_network_panel_register_type (G_TYPE_MODULE (module));
     bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-    cc_network_panel_register_type (G_TYPE_MODULE (module));
     g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
                                     CC_TYPE_NETWORK_PANEL,
                                     "network", 0);
