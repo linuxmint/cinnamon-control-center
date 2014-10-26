@@ -41,7 +41,7 @@ enum {
 	LAST_SIGNAL
 };
 
-static int signals[LAST_SIGNAL] = { 0 };
+static guint signals[LAST_SIGNAL] = { 0 };
 
 #define CC_RFKILL_GLIB_GET_PRIVATE(obj) (G_TYPE_INSTANCE_GET_PRIVATE((obj), \
 				CC_RFKILL_TYPE_GLIB, CcRfkillGlibPrivate))
