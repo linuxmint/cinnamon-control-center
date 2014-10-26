@@ -50,7 +50,7 @@ enum {
         NUM_SIGNALS,
 };
 
-static gint signals[NUM_SIGNALS] = { 0, };
+static guint signals[NUM_SIGNALS] = { 0, };
 
 G_DEFINE_TYPE (UmRealmManager, um_realm_manager, UM_REALM_TYPE_OBJECT_MANAGER_CLIENT);
 
