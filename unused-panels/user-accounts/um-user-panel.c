@@ -1064,7 +1064,7 @@ login_options_cb (GtkWidget *widget, UmUserPanelPrivate *private)
     gchar *argv[3];
     argv[0] = "gksu";
     argv[1] = "/usr/sbin/mdmsetup";
-    argv[3] = NULL;
+    argv[2] = NULL;
     g_spawn_async(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
 }
 
