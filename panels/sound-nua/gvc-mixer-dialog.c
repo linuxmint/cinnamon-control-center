@@ -774,7 +774,7 @@ active_input_update (GvcMixerDialog *dialog,
         adj = GTK_ADJUSTMENT (gvc_channel_bar_get_adjustment (GVC_CHANNEL_BAR (dialog->priv->input_bar)));
         g_signal_handlers_disconnect_by_func(adj, on_adjustment_value_changed, dialog);
 
-        g_char *str = g_strdup_printf(_("Settings for %s"),
+        gchar *str = g_strdup_printf(_("Settings for %s"),
                                       gvc_mixer_ui_device_get_description (active_input));
         gtk_label_set_label (GTK_LABEL(dialog->priv->selected_input_label), str);
         g_free (str);
