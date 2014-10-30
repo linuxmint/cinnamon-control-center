@@ -704,7 +704,7 @@ set_display_by_output (CsdWacomDevice  *device,
 	const gchar *values[3];
 	const gchar **unused_variant;
 
-	tablet  = gsd_wacom_device_get_settings (device);
+	tablet  = csd_wacom_device_get_settings (device);
 	c_array = g_settings_get_value (tablet, "display");
 	unused_variant = g_variant_get_strv (c_array, &nvalues);
 
