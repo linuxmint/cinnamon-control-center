@@ -55,7 +55,7 @@ cc_wacom_nav_button_update (CcWacomNavButton *nav)
 	CcWacomNavButtonPrivate *priv = nav->priv;
 	int num_pages;
 	int current_page;
-	char *text;
+	gchar *text;
 
 	if (priv->notebook == NULL) {
 		gtk_widget_hide (GTK_WIDGET (nav));
@@ -90,6 +90,7 @@ cc_wacom_nav_button_update (CcWacomNavButton *nav)
 				current_page + 1,
 				num_pages);
 	gtk_label_set_text (GTK_LABEL (priv->label), text);
+	g_free (text);
 }
 
 static void

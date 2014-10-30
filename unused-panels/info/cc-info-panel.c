@@ -310,8 +310,6 @@ get_graphics_data_glx_renderer (void)
   char       *result;
   GString    *info;
 
-  info = g_string_new (NULL);
-
   error = NULL;
   g_spawn_command_line_sync ("glxinfo -l", &output, NULL, NULL, &error);
   if (error != NULL)
@@ -320,6 +318,8 @@ get_graphics_data_glx_renderer (void)
       g_error_free (error);
       return NULL;
     }
+
+  info = g_string_new (NULL);
 
   re = g_regex_new ("^OpenGL renderer string: (.+)$", G_REGEX_MULTILINE, 0, &error);
   if (re == NULL)

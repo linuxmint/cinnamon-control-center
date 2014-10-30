@@ -51,5 +51,7 @@ int main (int argc, char **argv)
 	while ((name = g_dir_read_name (dir)) != NULL)
 		print_endianess (name);
 
+	g_dir_close (dir);
+
 	return 0;
 }

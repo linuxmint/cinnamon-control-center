@@ -784,6 +784,7 @@ um_user_set_icon_data (UmUser    *user,
         if (fd == -1) {
             g_warning ("failed to create temporary file for image data");
             g_free (path);
+            path = NULL;
         }
 
         stream = g_unix_output_stream_new (fd, TRUE);

@@ -1281,10 +1281,12 @@ get_hostname (void)
         }
 
         if (str == NULL || *str == '\0') {
+                g_free (str);
                 str = g_strdup (g_get_host_name ());
         }
 
         if (str == NULL || *str == '\0') {
+                g_free (str);
                 str = g_strdup ("GNOME");
 	}
 

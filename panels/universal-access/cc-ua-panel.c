@@ -615,7 +615,7 @@ pointing_mouse_preferences_clicked_cb (GtkButton  *button,
     gchar *argv[3];
     argv[0] = "cinnamon-settings";
     argv[1] = "mouse";
-    argv[3] = NULL;
+    argv[2] = NULL;
     g_spawn_async(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, NULL);
 
     return TRUE;

@@ -629,6 +629,8 @@ printer_rename (const gchar *old_name,
     g_strfreev (users_allowed);
   if (users_denied)
     g_strfreev (users_denied);
+  if (member_names)
+    g_strfreev (member_names);
 
   return result;
 }
@@ -1323,8 +1325,10 @@ printer_get_hostname (cups_ptype_t  printer_type,
         }
     }
 
-  if (local)
+  if (local) {
+    g_free (result);
     result = g_strdup ("localhost");
+  }
 
   return result;
 }

@@ -607,7 +607,7 @@ gvc_channel_bar_set_is_amplified (GvcChannelBar *bar, gboolean amplified)
         gtk_scale_clear_marks (GTK_SCALE (bar->priv->scale));
 
         if (amplified) {
-                char *str;
+                gchar *str;
 
                 if (bar->priv->base_volume == ADJUSTMENT_MAX_NORMAL) {
                         str = g_strdup_printf ("<small>%s</small>", C_("volume", "100%"));
@@ -619,6 +619,7 @@ gvc_channel_bar_set_is_amplified (GvcChannelBar *bar, gboolean amplified)
                                             GTK_POS_BOTTOM, str);
                         /* Only show 100% if it's higher than the base volume */
                         if (bar->priv->base_volume < ADJUSTMENT_MAX_NORMAL) {
+                                g_free (str);
                                 str = g_strdup_printf ("<small>%s</small>", C_("volume", "100%"));
                                 gtk_scale_add_mark (GTK_SCALE (bar->priv->scale), ADJUSTMENT_MAX_NORMAL,
                                                     GTK_POS_BOTTOM, str);

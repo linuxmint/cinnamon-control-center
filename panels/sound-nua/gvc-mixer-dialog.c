@@ -774,9 +774,10 @@ active_input_update (GvcMixerDialog *dialog,
         adj = GTK_ADJUSTMENT (gvc_channel_bar_get_adjustment (GVC_CHANNEL_BAR (dialog->priv->input_bar)));
         g_signal_handlers_disconnect_by_func(adj, on_adjustment_value_changed, dialog);
 
-        gtk_label_set_label (GTK_LABEL(dialog->priv->selected_input_label),
-                             g_strdup_printf(_("Settings for %s"),
-                                             gvc_mixer_ui_device_get_description (active_input)));  
+        g_char *str = g_strdup_printf(_("Settings for %s"),
+                                      gvc_mixer_ui_device_get_description (active_input));
+        gtk_label_set_label (GTK_LABEL(dialog->priv->selected_input_label), str);
+        g_free (str);
 
         gvc_channel_bar_set_base_volume (GVC_CHANNEL_BAR (dialog->priv->input_bar),
                                          gvc_mixer_stream_get_base_volume (stream));
@@ -944,9 +945,11 @@ active_output_update (GvcMixerDialog *dialog,
         gtk_widget_set_sensitive (dialog->priv->output_bar, 
                                   TRUE);
         // Set the label accordingly
-	gtk_label_set_label (GTK_LABEL(dialog->priv->selected_output_label),
-			     g_strdup_printf(_("Settings for %s"),
-                                             gvc_mixer_ui_device_get_description (active_output)));
+        gchar *str = g_strdup_printf(_("Settings for %s"),
+                                     gvc_mixer_ui_device_get_description (active_output));
+        gtk_label_set_label (GTK_LABEL(dialog->priv->selected_output_label), str);
+        g_free (str);
+
         g_debug ("\n active_output_update %s \n", gvc_mixer_ui_device_get_description (active_output));
 
         GList* profiles = gvc_mixer_ui_device_get_profiles (active_output);
