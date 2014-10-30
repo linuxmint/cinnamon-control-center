@@ -486,6 +486,7 @@ gvc_mixer_ui_device_get_best_profile (GvcMixerUIDevice *device,
                         candidates = g_list_append (candidates, p);
                         g_debug ("Candidate for profile switching: '%s'", p->profile);
                 }
+                g_free (canonical_name);
         }
 
         if (!candidates) {
