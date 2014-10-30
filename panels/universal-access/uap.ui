@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.0"/>
   <object class="GtkAdjustment" id="bouncekeys_delay_adjustment">
     <property name="upper">900</property>
     <property name="value">0.5</property>
@@ -58,6 +59,7 @@
     <property name="step_increment">0.10000000000000001</property>
     <property name="page_increment">0.10000000000000001</property>
   </object>
+  <object class="GtkSizeGroup" id="hearing_sizegroup"/>
   <object class="GtkListStore" id="osk_model">
     <columns>
       <!-- column-name osks -->
@@ -92,49 +94,15 @@
     <property name="step_increment">10</property>
     <property name="page_increment">10</property>
   </object>
+  <object class="GtkSizeGroup" id="seeing_sizegroup"/>
+  <object class="GtkSizeGroup" id="sizegroup1">
+    <property name="ignore_hidden">True</property>
+  </object>
   <object class="GtkAdjustment" id="slowkeys_delay_adjustment">
     <property name="upper">500</property>
     <property name="value">0.5</property>
     <property name="step_increment">10</property>
     <property name="page_increment">10</property>
-  </object>
-  <object class="GtkListStore" id="text_size_model">
-    <columns>
-      <!-- column-name text_sizes -->
-      <column type="gchararray"/>
-      <!-- column-name text_sizes_markup -->
-      <column type="gchararray"/>
-      <!-- column-name text_scale -->
-      <column type="gfloat"/>
-      <!-- column-name calculated_text_scale -->
-      <column type="gfloat"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">75%</col>
-        <col id="1" translatable="yes" context="universal access, text size">Small</col>
-        <col id="2">0.75</col>
-        <col id="3">0.75</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">100%</col>
-        <col id="1" translatable="yes" context="universal access, text size">Normal</col>
-        <col id="2">1</col>
-        <col id="3">1</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">125%</col>
-        <col id="1" translatable="yes" context="universal access, text size">Large</col>
-        <col id="2">1.25</col>
-        <col id="3">1.25</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">150%</col>
-        <col id="1" translatable="yes" context="universal access, text size">Larger</col>
-        <col id="2">1.5</col>
-        <col id="3">1.5</col>
-      </row>
-    </data>
   </object>
   <object class="GtkWindow" id="universal_access_settings_window">
     <property name="can_focus">False</property>
@@ -449,7 +417,6 @@
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkHBox" id="hbox20">
-                                <property name="visible">False</property>
                                 <property name="can_focus">False</property>
                                 <property name="spacing">6</property>
                                 <child>
@@ -1912,7 +1879,6 @@
                     </child>
                     <child>
                       <object class="GtkBox" id="box37">
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="valign">start</property>
                         <property name="orientation">vertical</property>
@@ -2015,12 +1981,12 @@
                                         <property name="can_focus">True</property>
                                         <property name="adjustment">click_delay_adjustment</property>
                                         <property name="draw_value">False</property>
+                                        <signal name="value-changed" handler="integer_changed" swapped="no"/>
                                         <child internal-child="accessible">
                                           <object class="AtkObject" id="pointing_secondary_click_delay_scale-atkobject">
                                             <property name="AtkObject::accessible-description" translatable="yes">Secondary click delay</property>
                                           </object>
                                         </child>
-                                        <signal name="value-changed" handler="integer_changed" swapped="no"/>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -2078,7 +2044,6 @@
                     </child>
                     <child>
                       <object class="GtkBox" id="box40">
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="valign">start</property>
                         <property name="orientation">vertical</property>
@@ -2327,7 +2292,6 @@
                     </child>
                     <child>
                       <object class="GtkBox" id="box43">
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">6</property>
@@ -2370,7 +2334,6 @@
                     </child>
                     <child>
                       <object class="GtkSwitch" id="pointing_second_click_switch">
-                        <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">end</property>
                         <property name="valign">start</property>
@@ -2487,7 +2450,6 @@
       </object>
     </child>
   </object>
-  <object class="GtkSizeGroup" id="hearing_sizegroup"/>
   <object class="GtkSizeGroup" id="hover_click_sizegroup">
     <widgets>
       <widget name="pointing_dwell_threshold_label"/>
@@ -2510,9 +2472,43 @@
       <widget name="pointing_secondary_click_delay_label"/>
     </widgets>
   </object>
-  <object class="GtkSizeGroup" id="seeing_sizegroup"/>
-  <object class="GtkSizeGroup" id="sizegroup1">
-    <property name="ignore_hidden">True</property>
+  <object class="GtkListStore" id="text_size_model">
+    <columns>
+      <!-- column-name text_sizes -->
+      <column type="gchararray"/>
+      <!-- column-name text_sizes_markup -->
+      <column type="gchararray"/>
+      <!-- column-name text_scale -->
+      <column type="gfloat"/>
+      <!-- column-name calculated_text_scale -->
+      <column type="gfloat"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">75%</col>
+        <col id="1" translatable="yes" context="universal access, text size">Small</col>
+        <col id="2">0.75</col>
+        <col id="3">0.75</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">100%</col>
+        <col id="1" translatable="yes" context="universal access, text size">Normal</col>
+        <col id="2">1</col>
+        <col id="3">1</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">125%</col>
+        <col id="1" translatable="yes" context="universal access, text size">Large</col>
+        <col id="2">1.25</col>
+        <col id="3">1.25</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">150%</col>
+        <col id="1" translatable="yes" context="universal access, text size">Larger</col>
+        <col id="2">1.5</col>
+        <col id="3">1.5</col>
+      </row>
+    </data>
   </object>
   <object class="GtkSizeGroup" id="typing_sizegroup"/>
 </interface>
