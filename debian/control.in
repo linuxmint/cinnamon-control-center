@@ -47,7 +47,7 @@ Build-Depends: autotools-dev,
                libxklavier-dev (>= 5.1),
                libxml2-dev,
                locales,
-               network-manager-dev (>= 0.9),
+               network-manager-dev (>= 0.9.8),
                shared-mime-info,
 #               libclutter-1.0-dev (>= 1.11.3),
                libclutter-gtk-1.0-dev
