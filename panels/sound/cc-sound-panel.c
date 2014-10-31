@@ -134,7 +134,7 @@ cc_sound_panel_register (GIOModule *module)
 void
 g_io_module_load (GIOModule *module)
 {
-        bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
+        bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
         /* register the panel */

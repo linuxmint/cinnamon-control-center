@@ -51,7 +51,7 @@ main (int argc, char **argv)
                 { NULL, 0, 0, 0, NULL, NULL, NULL }
         };
 
-        bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
+        bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         textdomain (GETTEXT_PACKAGE);
 

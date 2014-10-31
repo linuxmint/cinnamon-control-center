@@ -1352,7 +1352,7 @@ um_user_panel_class_init (UmUserPanelClass *klass)
 void
 um_user_panel_register (GIOModule *module)
 {
-    bindtextdomain (GETTEXT_PACKAGE, "/usr/share/cinnamon/locale");
+    bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
     um_user_panel_register_type (G_TYPE_MODULE (module));
     g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
