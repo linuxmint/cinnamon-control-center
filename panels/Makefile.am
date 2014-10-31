@@ -10,10 +10,15 @@ enabled_panels = \
 	power \
 	sound \
 	sound-nua \
-	network \
 	datetime
 
 disabled_panels = $(NULL)
+
+if BUILD_NETWORK
+enabled_panels += network
+else
+disabled_panels += network
+endif
 
 if BUILD_WACOM
 enabled_panels += wacom
