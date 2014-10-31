@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 01:08+0100\n"
+"POT-Creation-Date: 2014-10-31 01:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1646,6 +1646,7 @@ msgid "_Password"
 msgstr ""
 
 #: panels/network/network-wifi.ui.h:22
+#: panels/network/connection-editor/wifi-page.ui.h:3
 msgid "My Home Network"
 msgstr ""
 
@@ -2612,10 +2613,6 @@ msgstr ""
 
 #: panels/network/connection-editor/vpn-page.ui.h:4
 msgid "(Error: unable to load VPN connection editor)"
-msgstr ""
-
-#: panels/network/connection-editor/wifi-page.ui.h:3
-msgid "mtwebster's network"
 msgstr ""
 
 #: panels/network/connection-editor/wifi-page.ui.h:6

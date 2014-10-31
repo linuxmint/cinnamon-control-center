@@ -51,7 +51,7 @@
         <property name="can_focus">True</property>
         <property name="hexpand">True</property>
         <property name="invisible_char">●</property>
-        <property name="text" translatable="yes">mtwebster's network</property>
+        <property name="text" translatable="yes">My Home Network</property>
       </object>
       <packing>
         <property name="left_attach">1</property>
