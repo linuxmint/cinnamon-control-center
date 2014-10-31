@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gio/gio.h>
 
 #include "net-proxy.h"
@@ -311,6 +311,7 @@ net_proxy_init (NetProxy *proxy)
         proxy->priv = NET_PROXY_GET_PRIVATE (proxy);
 
         proxy->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (proxy->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (proxy->priv->builder,
                                        "/org/cinnamon/control-center/network/network-proxy.ui",
                                        &error);

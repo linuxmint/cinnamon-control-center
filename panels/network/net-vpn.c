@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include "panel-common.h"
 
@@ -564,6 +564,7 @@ net_vpn_init (NetVpn *vpn)
         vpn->priv = NET_VPN_GET_PRIVATE (vpn);
 
         vpn->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (vpn->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (vpn->priv->builder,
                                        "/org/cinnamon/control-center/network/network-vpn.ui",
                                        &error);

@@ -24,7 +24,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include "../list-box-helper.h"
 #include "ce-page-ip6.h"

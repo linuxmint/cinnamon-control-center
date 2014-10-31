@@ -1736,7 +1736,7 @@ here</property>
             </child>
             <child>
               <object class="GtkButton" id="connect_phidden_button">
-                <property name="label" translatable="yes">Connect to Hidden Network</property>
+                <property name="label" translatable="yes">Connect to a Hidden Network</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>

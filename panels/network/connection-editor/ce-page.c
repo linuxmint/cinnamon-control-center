@@ -28,7 +28,7 @@
 
 #include <nm-utils.h>
 
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include "ce-page.h"
 
@@ -164,6 +164,7 @@ static void
 ce_page_init (CEPage *self)
 {
         self->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (self->builder, GETTEXT_PACKAGE);
         self->cancellable = g_cancellable_new ();
 }
 

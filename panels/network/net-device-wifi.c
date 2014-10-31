@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <netinet/ether.h>
 
@@ -2055,6 +2055,7 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
         device_wifi->priv = NET_DEVICE_WIFI_GET_PRIVATE (device_wifi);
 
         device_wifi->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (device_wifi->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device_wifi->priv->builder,
                                        "/org/cinnamon/control-center/network/network-wifi.ui",
                                        &error);

@@ -20,7 +20,7 @@
  */
 
 #include <config.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <stdlib.h>
 
 #include "cc-network-panel.h"
@@ -1408,8 +1408,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
         g_resources_register (cc_network_get_resource ());
 
         panel->priv->builder = gtk_builder_new ();
-        gtk_builder_add_from_resource (panel->priv->builder,
-                                       "/org/cinnamon/control-center/network/network.ui",
+        gtk_builder_set_translation_domain (panel->priv->builder, GETTEXT_PACKAGE);
+        gtk_builder_add_from_file (panel->priv->builder,
+                                       "/home/clem/Sandbox/Cinnamon/projects/cinnamon-control-center/panels/network/network.ui",
                                        &error);
         if (error != NULL) {
                 g_warning ("Could not load interface file: %s", error->message);

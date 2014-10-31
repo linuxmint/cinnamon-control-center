@@ -23,7 +23,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <nm-client.h>
 #include <nm-device.h>
@@ -898,6 +898,7 @@ net_device_mobile_init (NetDeviceMobile *device_mobile)
         device_mobile->priv = NET_DEVICE_MOBILE_GET_PRIVATE (device_mobile);
 
         device_mobile->priv->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (device_mobile->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device_mobile->priv->builder,
                                        "/org/cinnamon/control-center/network/network-mobile.ui",
                                        &error);

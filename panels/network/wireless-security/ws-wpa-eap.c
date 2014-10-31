@@ -20,7 +20,8 @@
  * (C) Copyright 2007 - 2010 Red Hat, Inc.
  */
 
-#include <glib/gi18n.h>
+#include <config.h>
+#include <glib/gi18n-lib.h>
 #include <ctype.h>
 #include <string.h>
 #include <nm-setting-wireless.h>

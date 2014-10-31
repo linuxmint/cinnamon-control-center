@@ -26,7 +26,7 @@
 
 #include <glib.h>
 #include <gtk/gtk.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <nm-setting-connection.h>
 #include <nm-setting-wired.h>
@@ -183,6 +183,7 @@ wireless_security_init (gsize obj_size,
 	sec->default_field = default_field;
 
 	sec->builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (sec->builder, GETTEXT_PACKAGE);
 	if (!gtk_builder_add_from_resource (sec->builder, ui_resource, &error)) {
 		g_warning ("Couldn't load UI builder file %s: %s",
 		           ui_resource, error->message);

@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 
 #include <nm-client.h>
 #include <nm-device.h>
@@ -626,6 +626,7 @@ net_device_ethernet_init (NetDeviceEthernet *device)
         GError *error = NULL;
 
         device->builder = gtk_builder_new ();
+        gtk_builder_set_translation_domain (device->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device->builder,
                                        "/org/cinnamon/control-center/network/network-ethernet.ui",
                                        &error);

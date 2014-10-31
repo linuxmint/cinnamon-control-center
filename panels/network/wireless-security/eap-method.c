@@ -24,7 +24,7 @@
 #include "config.h"
 
 #include <glib.h>
-#include <glib/gi18n.h>
+#include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 #include <string.h>
 #include <sys/types.h>
@@ -237,6 +237,7 @@ eap_method_nag_init (EAPMethod *method,
 	g_return_val_if_fail (ca_cert_chooser != NULL, FALSE);
 
 	method->nag_builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (method->nag_builder, GETTEXT_PACKAGE);
 	if (!gtk_builder_add_from_resource (method->nag_builder, NAG_DIALOG_UI, &error)) {
 		g_warning ("Couldn't load UI builder file " NAG_DIALOG_UI ": %s",
 		           error->message);
@@ -354,6 +355,7 @@ eap_method_init (gsize obj_size,
 	method->phase2 = phase2;
 
 	method->builder = gtk_builder_new ();
+	gtk_builder_set_translation_domain (method->builder, GETTEXT_PACKAGE);
 	if (!gtk_builder_add_from_resource (method->builder, ui_resource, &error)) {
 		g_warning ("Couldn't load UI builder file %s: %s",
 		           ui_resource, error->message);
