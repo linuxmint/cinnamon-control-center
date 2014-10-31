@@ -2,12 +2,14 @@ SUBDIRS = wireless-security connection-editor
 
 cappletname = network
 
-AM_CPPFLAGS = 						\
-	$(PANEL_CFLAGS)					\
-	$(NETWORK_PANEL_CFLAGS)				\
-	$(NETWORK_MANAGER_CFLAGS)			\
-	-DLOCALE_DIR="\"$(datadir)/locale\""	\
-	-I$(srcdir)/wireless-security			\
+INCLUDES = 											\
+	$(PANEL_CFLAGS)									\
+	$(NETWORK_PANEL_CFLAGS)							\
+	$(NETWORK_MANAGER_CFLAGS)						\
+	-DCINNAMONCC_UI_DIR="\"$(uidir)\""				\
+	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""		\
+	-DLOCALE_DIR="\"$(datadir)/locale\""			\
+	-I$(srcdir)/wireless-security					\
 	$(NULL)
 
 ccpanelsdir = $(PANELS_DIR)
@@ -60,6 +62,8 @@ endif
 libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la
 
 libnetwork_la_LDFLAGS = $(PANEL_LDFLAGS)
+
+uidir = $(pkgdatadir)
 
 resource_files = $(shell glib-compile-resources --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/network.gresource.xml)
 cc-network-resources.c: network.gresource.xml $(resource_files)
