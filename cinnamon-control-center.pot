@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 11:50+0100\n"
+"POT-Creation-Date: 2014-11-03 12:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,6 +231,26 @@ msgstr ""
 
 #: panels/common/gdm-languages.c:781
 msgid "Unspecified"
+msgstr ""
+
+#: panels/display/cc-display-panel.c:482
+msgctxt "display panel, rotation"
+msgid "Normal"
+msgstr ""
+
+#: panels/display/cc-display-panel.c:483
+msgctxt "display panel, rotation"
+msgid "Counterclockwise"
+msgstr ""
+
+#: panels/display/cc-display-panel.c:484
+msgctxt "display panel, rotation"
+msgid "Clockwise"
+msgstr ""
+
+#: panels/display/cc-display-panel.c:485
+msgctxt "display panel, rotation"
+msgid "180 Degrees"
 msgstr ""
 
 #: panels/display/cc-display-panel.c:624 panels/display/cc-rr-labeler.c:449
@@ -1141,6 +1161,26 @@ msgstr ""
 msgid "%d of %d"
 msgstr ""
 
+#: panels/wacom/cc-wacom-page.c:118
+msgctxt "Wacom action-type"
+msgid "None"
+msgstr ""
+
+#: panels/wacom/cc-wacom-page.c:119
+msgctxt "Wacom action-type"
+msgid "Send Keystroke"
+msgstr ""
+
+#: panels/wacom/cc-wacom-page.c:120
+msgctxt "Wacom action-type"
+msgid "Switch Monitor"
+msgstr ""
+
+#: panels/wacom/cc-wacom-page.c:121
+msgctxt "Wacom action-type"
+msgid "Show On-Screen Help"
+msgstr ""
+
 #: panels/wacom/cc-wacom-page.c:663
 msgid "Switch Modes"
 msgstr ""
@@ -1157,7 +1197,7 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: panels/wacom/cc-wacom-page.c:921
+#: panels/wacom/cc-wacom-page.c:922
 msgid "Display Mapping"
 msgstr ""
 
