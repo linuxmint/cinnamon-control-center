@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 01:28+0100\n"
+"POT-Creation-Date: 2014-11-03 11:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1826,78 +1826,86 @@ msgid "10 minutes"
 msgstr ""
 
 #: panels/power/power.ui.h:5
-msgid "30 minutes"
+msgid "15 minutes"
 msgstr ""
 
 #: panels/power/power.ui.h:6
-msgid "1 hour"
+msgid "30 minutes"
 msgstr ""
 
 #: panels/power/power.ui.h:7
-msgid "Never"
+msgid "45 minutes"
 msgstr ""
 
 #: panels/power/power.ui.h:8
-msgid "When battery is present"
+msgid "1 hour"
 msgstr ""
 
 #: panels/power/power.ui.h:9
-msgid "When battery is charging/in use"
+msgid "Never"
 msgstr ""
 
 #: panels/power/power.ui.h:10
-msgid "Suspend"
+msgid "When battery is present"
 msgstr ""
 
 #: panels/power/power.ui.h:11
-msgid "Do nothing"
+msgid "When battery is charging/in use"
 msgstr ""
 
 #: panels/power/power.ui.h:12
-msgid "Lock Screen"
+msgid "Suspend"
 msgstr ""
 
 #: panels/power/power.ui.h:13
-msgid "Shutdown Immediately"
+msgid "Do nothing"
 msgstr ""
 
 #: panels/power/power.ui.h:14
-msgid "Ask"
+msgid "Lock Screen"
 msgstr ""
 
 #: panels/power/power.ui.h:15
-msgid "On battery power"
+msgid "Shutdown Immediately"
 msgstr ""
 
 #: panels/power/power.ui.h:16
-msgid "On A/C power"
+msgid "Ask"
 msgstr ""
 
 #: panels/power/power.ui.h:17
-msgid "When the lid is closed"
+msgid "On battery power"
 msgstr ""
 
 #: panels/power/power.ui.h:18
-msgid "When the power button is pressed"
+msgid "On A/C power"
 msgstr ""
 
 #: panels/power/power.ui.h:19
-msgid "When the battery is critically low"
+msgid "When the lid is closed"
 msgstr ""
 
 #: panels/power/power.ui.h:20
-msgid "Suspend when inactive for"
+msgid "When the power button is pressed"
 msgstr ""
 
 #: panels/power/power.ui.h:21
-msgid "Turn off the screen when inactive for"
+msgid "When the battery is critically low"
 msgstr ""
 
 #: panels/power/power.ui.h:22
-msgid "<b>Power Options</b>"
+msgid "Suspend when inactive for"
 msgstr ""
 
 #: panels/power/power.ui.h:23
+msgid "Turn off the screen when inactive for"
+msgstr ""
+
+#: panels/power/power.ui.h:24
+msgid "<b>Power Options</b>"
+msgstr ""
+
+#: panels/power/power.ui.h:25
 msgid "<b>Battery Status</b>"
 msgstr ""
 
@@ -2390,6 +2398,7 @@ msgid "Bluetooth Settings"
 msgstr ""
 
 #: panels/wacom/cinnamon-wacom-properties.ui.h:7
+#: generate_additional_files.py:194
 msgid "Graphics Tablet"
 msgstr ""
 
@@ -2808,7 +2817,7 @@ msgid "Change your region and language settings"
 msgstr ""
 
 #: generate_additional_files.py:134
-msgid "Displays"
+msgid "Display"
 msgstr ""
 
 #: generate_additional_files.py:134
@@ -2820,7 +2829,7 @@ msgid "Network settings"
 msgstr ""
 
 #: generate_additional_files.py:164
-msgid "Universal Access"
+msgid "Accessibility"
 msgstr ""
 
 #: generate_additional_files.py:164
@@ -2833,4 +2842,8 @@ msgstr ""
 
 #: generate_additional_files.py:179
 msgid "Date and Time preferences"
+msgstr ""
+
+#: generate_additional_files.py:194
+msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
 msgstr ""

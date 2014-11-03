@@ -131,7 +131,7 @@ X-Cinnamon-Settings-Panel=display
 _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop.in.in", prefix, _("Displays"), _("Change resolution and position of monitors and projectors"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop.in.in", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings network
@@ -161,7 +161,7 @@ X-Cinnamon-Settings-Panel=universal-access
 _Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/universal-access/cinnamon-universal-access-panel.desktop.in.in", prefix, _("Universal Access"), _("Universal Access Preferences"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/universal-access/cinnamon-universal-access-panel.desktop.in.in", prefix, _("Accessibility"), _("Universal Access Preferences"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-control-center datetime
@@ -177,3 +177,18 @@ _Keywords=Clock;Timezone;Location;
 """
 
 additionalfiles.generate(DOMAIN, PATH, "./panels/datetime/cinnamon-datetime-panel.desktop.in", prefix, _("Date & Time"), _("Date and Time preferences"), "")
+
+prefix = """[Desktop Entry]
+Exec=cinnamon-settings wacom
+Icon=cs-tablet
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+X-Cinnamon-Settings-Panel=wacom
+OnlyShowIn=X-Cinnamon;
+# Translators: those are keywords for the wacom tablet control-center panel
+_Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop.in.in", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")
