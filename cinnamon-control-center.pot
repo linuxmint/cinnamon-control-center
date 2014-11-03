@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-03 12:18+0100\n"
+"POT-Creation-Date: 2014-11-03 12:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,6 +142,21 @@ msgstr[1] ""
 msgid "Less than 1 week"
 msgstr ""
 
+#: panels/color/cc-color-panel.c:1585
+msgctxt "Colorspace fallback"
+msgid "Default RGB"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:1590
+msgctxt "Colorspace fallback"
+msgid "Default CMYK"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:1595
+msgctxt "Colorspace fallback"
+msgid "Default Gray"
+msgstr ""
+
 #: panels/color/cc-color-panel.c:1713 panels/color/cc-color-panel.c:1754
 #: panels/color/cc-color-panel.c:1765 panels/color/cc-color-panel.c:1776
 msgid "Uncalibrated"
@@ -171,6 +186,31 @@ msgstr ""
 
 #: panels/color/cc-color-panel.c:2014
 msgid "No devices supporting color management detected"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:2243
+msgctxt "Device kind"
+msgid "Display"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:2245
+msgctxt "Device kind"
+msgid "Scanner"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:2247
+msgctxt "Device kind"
+msgid "Printer"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:2249
+msgctxt "Device kind"
+msgid "Camera"
+msgstr ""
+
+#: panels/color/cc-color-panel.c:2251
+msgctxt "Device kind"
+msgid "Webcam"
 msgstr ""
 
 #: panels/common/cc-common-language.c:533
@@ -442,6 +482,36 @@ msgstr ""
 msgid "Enterprise"
 msgstr ""
 
+#: panels/network/net-device-wifi.c:235 panels/network/net-device-wifi.c:368
+msgctxt "Wifi security"
+msgid "None"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:558
+msgctxt "Signal strength"
+msgid "Terrible"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:560
+msgctxt "Signal strength"
+msgid "Weak"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:562
+msgctxt "Signal strength"
+msgid "Ok"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:564
+msgctxt "Signal strength"
+msgid "Good"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:566
+msgctxt "Signal strength"
+msgid "Excellent"
+msgstr ""
+
 #: panels/network/net-device-wifi.c:1153
 msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
@@ -513,6 +583,11 @@ msgstr ""
 
 #: panels/network/net-device-wifi.c:1868
 msgid "_Close"
+msgstr ""
+
+#: panels/network/net-device-wifi.c:1876
+msgctxt "Wi-Fi Network"
+msgid "_Forget"
 msgstr ""
 
 #: panels/network/net-proxy.c:67
@@ -884,6 +959,36 @@ msgstr ""
 msgid "Battery"
 msgstr ""
 
+#: panels/power/cc-power-panel.c:546
+msgctxt "Battery power"
+msgid "Charging"
+msgstr ""
+
+#: panels/power/cc-power-panel.c:553
+msgctxt "Battery power"
+msgid "Caution"
+msgstr ""
+
+#: panels/power/cc-power-panel.c:558
+msgctxt "Battery power"
+msgid "Low"
+msgstr ""
+
+#: panels/power/cc-power-panel.c:563
+msgctxt "Battery power"
+msgid "Good"
+msgstr ""
+
+#: panels/power/cc-power-panel.c:568
+msgctxt "Battery power"
+msgid "Charging - fully charged"
+msgstr ""
+
+#: panels/power/cc-power-panel.c:572
+msgctxt "Battery power"
+msgid "Empty"
+msgstr ""
+
 #: panels/region/cinnamon-region-panel-xkblt.c:210
 msgid "Layout"
 msgstr ""
@@ -922,6 +1027,36 @@ msgstr ""
 msgid "Microphone Volume"
 msgstr ""
 
+#: panels/sound/gvc-balance-bar.c:111 panels/sound-nua/gvc-balance-bar.c:111
+msgctxt "balance"
+msgid "Left"
+msgstr ""
+
+#: panels/sound/gvc-balance-bar.c:112 panels/sound-nua/gvc-balance-bar.c:112
+msgctxt "balance"
+msgid "Right"
+msgstr ""
+
+#: panels/sound/gvc-balance-bar.c:115 panels/sound-nua/gvc-balance-bar.c:115
+msgctxt "balance"
+msgid "Rear"
+msgstr ""
+
+#: panels/sound/gvc-balance-bar.c:116 panels/sound-nua/gvc-balance-bar.c:116
+msgctxt "balance"
+msgid "Front"
+msgstr ""
+
+#: panels/sound/gvc-balance-bar.c:119 panels/sound-nua/gvc-balance-bar.c:119
+msgctxt "balance"
+msgid "Minimum"
+msgstr ""
+
+#: panels/sound/gvc-balance-bar.c:120 panels/sound-nua/gvc-balance-bar.c:120
+msgctxt "balance"
+msgid "Maximum"
+msgstr ""
+
 #: panels/sound/gvc-balance-bar.c:295 panels/sound-nua/gvc-balance-bar.c:295
 msgid "_Balance:"
 msgstr ""
@@ -932,6 +1067,16 @@ msgstr ""
 
 #: panels/sound/gvc-balance-bar.c:301 panels/sound-nua/gvc-balance-bar.c:301
 msgid "_Subwoofer:"
+msgstr ""
+
+#: panels/sound/gvc-channel-bar.c:613 panels/sound/gvc-channel-bar.c:623
+msgctxt "volume"
+msgid "100%"
+msgstr ""
+
+#: panels/sound/gvc-channel-bar.c:617
+msgctxt "volume"
+msgid "Unamplified"
 msgstr ""
 
 #: panels/sound/gvc-combo-box.c:167 panels/sound/gvc-mixer-dialog.c:258
@@ -1144,6 +1289,31 @@ msgstr ""
 msgid "No shortcut set"
 msgstr ""
 
+#: panels/universal-access/zoom-options.c:358
+msgctxt "Distance"
+msgid "Short"
+msgstr ""
+
+#: panels/universal-access/zoom-options.c:359
+msgctxt "Distance"
+msgid "¼ Screen"
+msgstr ""
+
+#: panels/universal-access/zoom-options.c:360
+msgctxt "Distance"
+msgid "½ Screen"
+msgstr ""
+
+#: panels/universal-access/zoom-options.c:361
+msgctxt "Distance"
+msgid "¾ Screen"
+msgstr ""
+
+#: panels/universal-access/zoom-options.c:362
+msgctxt "Distance"
+msgid "Long"
+msgstr ""
+
 #: panels/wacom/cc-wacom-mapping-panel.c:275
 msgid "Output:"
 msgstr ""
@@ -1161,7 +1331,7 @@ msgstr ""
 msgid "%d of %d"
 msgstr ""
 
-#: panels/wacom/cc-wacom-page.c:118
+#: panels/wacom/cc-wacom-page.c:118 panels/wacom/cc-wacom-page.c:385
 msgctxt "Wacom action-type"
 msgid "None"
 msgstr ""
@@ -1179,6 +1349,16 @@ msgstr ""
 #: panels/wacom/cc-wacom-page.c:121
 msgctxt "Wacom action-type"
 msgid "Show On-Screen Help"
+msgstr ""
+
+#: panels/wacom/cc-wacom-page.c:622
+msgctxt "Wacom tablet button"
+msgid "Up"
+msgstr ""
+
+#: panels/wacom/cc-wacom-page.c:622
+msgctxt "Wacom tablet button"
+msgid "Down"
 msgstr ""
 
 #: panels/wacom/cc-wacom-page.c:663
@@ -1529,6 +1709,21 @@ msgstr ""
 
 #: panels/network/network-mobile.ui.h:7 generate_additional_files.py:149
 msgid "Network"
+msgstr ""
+
+#: panels/network/network-proxy.ui.h:1 panels/network/network.ui.h:4
+msgctxt "proxy method"
+msgid "None"
+msgstr ""
+
+#: panels/network/network-proxy.ui.h:2 panels/network/network.ui.h:5
+msgctxt "proxy method"
+msgid "Manual"
+msgstr ""
+
+#: panels/network/network-proxy.ui.h:3 panels/network/network.ui.h:6
+msgctxt "proxy method"
+msgid "Automatic"
 msgstr ""
 
 #: panels/network/network-proxy.ui.h:4
@@ -2023,6 +2218,26 @@ msgid ""
 "default settings"
 msgstr ""
 
+#: panels/universal-access/uap.ui.h:1
+msgctxt "universal access, contrast"
+msgid "Low"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:2
+msgctxt "universal access, contrast"
+msgid "Normal"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:3
+msgctxt "universal access, contrast"
+msgid "High"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:4
+msgctxt "universal access, contrast"
+msgid "High/Inverse"
+msgstr ""
+
 #: panels/universal-access/uap.ui.h:5
 msgid "On screen keyboard"
 msgstr ""
@@ -2040,9 +2255,19 @@ msgstr ""
 msgid "75%"
 msgstr ""
 
+#: panels/universal-access/uap.ui.h:11
+msgctxt "universal access, text size"
+msgid "Small"
+msgstr ""
+
 #: panels/universal-access/uap.ui.h:13
 #, no-c-format
 msgid "100%"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:14
+msgctxt "universal access, text size"
+msgid "Normal"
 msgstr ""
 
 #: panels/universal-access/uap.ui.h:16
@@ -2050,9 +2275,19 @@ msgstr ""
 msgid "125%"
 msgstr ""
 
+#: panels/universal-access/uap.ui.h:17
+msgctxt "universal access, text size"
+msgid "Large"
+msgstr ""
+
 #: panels/universal-access/uap.ui.h:19
 #, no-c-format
 msgid "150%"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:20
+msgctxt "universal access, text size"
+msgid "Larger"
 msgstr ""
 
 #: panels/universal-access/uap.ui.h:21
@@ -2073,6 +2308,11 @@ msgstr ""
 
 #: panels/universal-access/uap.ui.h:25
 msgid "Turn on or off:"
+msgstr ""
+
+#: panels/universal-access/uap.ui.h:26
+msgctxt "universal access, zoom"
+msgid "Zoom"
 msgstr ""
 
 #: panels/universal-access/uap.ui.h:27
@@ -2381,6 +2621,21 @@ msgstr ""
 
 #: panels/universal-access/zoom-options.ui.h:29
 msgid "Contrast:"
+msgstr ""
+
+#: panels/universal-access/zoom-options.ui.h:30
+msgctxt "Zoom Grayscale"
+msgid "Color"
+msgstr ""
+
+#: panels/universal-access/zoom-options.ui.h:31
+msgctxt "Zoom Grayscale"
+msgid "None"
+msgstr ""
+
+#: panels/universal-access/zoom-options.ui.h:32
+msgctxt "Zoom Grayscale"
+msgid "Full"
 msgstr ""
 
 #: panels/universal-access/zoom-options.ui.h:34
