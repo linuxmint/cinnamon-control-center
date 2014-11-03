@@ -322,7 +322,7 @@ cc_wacom_panel_init (CcWacomPanel *self)
         g_resources_register (cc_wacom_get_resource ());
 
 	priv->builder = gtk_builder_new ();
-
+	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_objects_from_resource (priv->builder,
                                                "/org/cinnamon/control-center/wacom/cinnamon-wacom-properties.ui",
                                                objects,

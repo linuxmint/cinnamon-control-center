@@ -296,7 +296,7 @@ cc_wacom_stylus_page_init (CcWacomStylusPage *self)
 	priv = self->priv = WACOM_STYLUS_PAGE_PRIVATE (self);
 
 	priv->builder = gtk_builder_new ();
-
+	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_objects_from_resource (priv->builder,
                                                "/org/cinnamon/control-center/wacom/wacom-stylus-page.ui",
                                                objects,
