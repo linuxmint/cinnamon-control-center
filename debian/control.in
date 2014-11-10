@@ -48,9 +48,7 @@ Build-Depends: autotools-dev,
                libxml2-dev,
                locales,
                network-manager-dev (>= 0.9.8),
-               shared-mime-info,
-#               libclutter-1.0-dev (>= 1.11.3),
-               libclutter-gtk-1.0-dev
+               shared-mime-info
 Homepage: http://www.github.com/linuxmint/cinnamon-control-center
 
 Package: cinnamon-control-center
