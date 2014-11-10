@@ -410,6 +410,10 @@ else
 	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
 fi
 
-AC_MSG_NOTICE([   Wacom support:  $build_wacom])
+if test "x$build_wacom" = "xtrue"; then
+	AC_MSG_NOTICE([** Wacom support (Wacom panel)])
+else
+	AC_MSG_NOTICE([   Wacom support disabled])
+fi
 
 AC_MSG_NOTICE([End options])
