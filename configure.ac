@@ -424,9 +424,4 @@ fi
 
 AC_MSG_NOTICE([   Wacom support:  $build_wacom])
 
-if test "x$enable_ibus" == "xyes"; then
-	AC_MSG_NOTICE([** IBus (Region panel IBus support)])
-else
-	AC_MSG_NOTICE([   Region panel IBus support disabled])
-fi
 AC_MSG_NOTICE([End options])
