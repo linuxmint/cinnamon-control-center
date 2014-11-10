@@ -399,17 +399,16 @@ if test "x$have_networkmanager" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Network panel disabled])
 fi
-if test "x$with_libsocialweb" = "xyes"; then
-	AC_MSG_NOTICE([** libsocialweb (Background panel Flickr support)])
-else
-	AC_MSG_NOTICE([   Background panel Flickr support disabled])
-fi
-if test "x$with_systemd" = "xyes"; then
-	AC_MSG_NOTICE([** systemd (Systemd session tracking)])
-else
-	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
-fi
-
+#if test "x$with_libsocialweb" = "xyes"; then
+#	AC_MSG_NOTICE([** libsocialweb (Background panel Flickr support)])
+#else
+#	AC_MSG_NOTICE([   Background panel Flickr support disabled])
+#fi
+#if test "x$with_systemd" = "xyes"; then
+#	AC_MSG_NOTICE([** systemd (Systemd session tracking)])
+#else
+#	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
+#fi
 if test "x$build_wacom" = "xtrue"; then
 	AC_MSG_NOTICE([** Wacom support (Wacom panel)])
 else
