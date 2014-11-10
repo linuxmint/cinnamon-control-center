@@ -168,7 +168,7 @@ AM_CONDITIONAL(HAVE_NM_UNSTABLE, [test x$nm_unstable = xyes])
 
 AC_ARG_ENABLE([cups],
               AS_HELP_STRING([--disable-cups], [disable CUPS support (default: enabled)]),,
-              [enable_cups=yes])
+              [enable_cups=no])
 
 if test x"$enable_cups" != x"no" ; then
   AC_PROG_SED
