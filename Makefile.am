@@ -26,7 +26,7 @@ MAINTAINERCLEANFILES = \
 EXTRA_DIST = \
 	MAINTAINERS
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-update-mimedb --enable-gtk-doc --disable-maintainer-mode
+DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-maintainer-mode
 
 GITIGNOREFILES=m4
 

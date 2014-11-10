@@ -259,18 +259,6 @@ fi
 AM_CONDITIONAL(WITH_LIBSOCIALWEB, test "x$with_libsocialweb" = "xyes")
 
 
-dnl =======================================
-dnl Update Mime Database
-dnl =======================================
-
-AC_PATH_PROG(UPDATE_MIME_DATABASE, update-mime-database, no)
-
-AC_ARG_ENABLE(update-mimedb,
-   AS_HELP_STRING([--disable-update-mimedb],
-                  [do not update mime database after installation]),,
-                   enable_update_mimedb=yes)
-AM_CONDITIONAL(ENABLE_UPDATE_MIMEDB, test x$enable_update_mimedb = xyes)
-
 CONTROL_CENTER_VERSION=cinnamon_control_center_version
 AC_SUBST(CONTROL_CENTER_VERSION)
 
