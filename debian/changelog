@@ -1,3 +1,9 @@
+cinnamon-control-center (2.4.1) rebecca; urgency=medium
+
+  * Fixed l10n issues
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 12 Nov 2014 01:19:22 +0100
+
 cinnamon-control-center (2.4.0) rebecca; urgency=medium
 
   * 2.4.0
