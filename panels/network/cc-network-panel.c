@@ -346,8 +346,7 @@ got_rfkill_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_da
 
         //g_signal_connect (panel->priv->rfkill_proxy, "g-properties-changed",
         //                 G_CALLBACK (on_property_change), panel);
-        //FIXME, I'm an evil function that is misbehaving and 
-        //have badly written code inside me >:)
+        //FIXME: Figure out problematic behavior here 
         //sync_airplane_mode_switch (panel);
 }
 
@@ -408,7 +407,7 @@ cc_network_panel_class_init (CcNetworkPanelClass *klass)
         object_class->finalize = cc_network_panel_finalize;
         object_class->constructed = cc_network_panel_constructed;
         
-        //FIXME: Causing evil warnings
+        //FIXME: Causing warnings
         //g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
 }
 
