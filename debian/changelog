@@ -1,3 +1,9 @@
+cinnamon-control-center (2.4.2) rebecca; urgency=medium
+
+  * Fixed creation of mobile broadband connections
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 26 Nov 2014 22:10:57 +0100
+
 cinnamon-control-center (2.4.1) rebecca; urgency=medium
 
   * Fixed l10n issues
