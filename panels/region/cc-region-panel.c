@@ -50,9 +50,6 @@ cc_region_panel_set_property (GObject * object,
 
 	switch (property_id) {
         case PROP_ARGV: {
-                gchar **args;
-
-                args = g_value_get_boxed (value);
                 break;
         }
 	default:
@@ -97,12 +94,9 @@ cc_region_panel_init (CcRegionPanel * self)
 {
 	CcRegionPanelPrivate *priv;
 	GtkWidget *prefs_widget;
-	const char *desktop;
 	GError *error = NULL;
 
 	priv = self->priv = REGION_PANEL_PRIVATE (self);
-
-	desktop = g_getenv ("XDG_CURRENT_DESKTOP");
 
 	priv->builder = gtk_builder_new ();
     gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);

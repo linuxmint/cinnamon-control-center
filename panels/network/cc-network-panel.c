@@ -1086,7 +1086,6 @@ find_in_model_by_id (CcNetworkPanel *panel, const gchar *id, GtkTreeIter *iter_o
                 goto out;
 
         /* get the other elements */
-        ret = FALSE;
         do {
                 gtk_tree_model_get (model, &iter,
                                     PANEL_DEVICES_COLUMN_OBJECT, &object_tmp,
