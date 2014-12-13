@@ -44,10 +44,6 @@ cc_region_panel_set_property (GObject * object,
 			      const GValue * value,
 			      GParamSpec * pspec)
 {
-	CcRegionPanel *self;
-
-	self = CC_REGION_PANEL (object);
-
 	switch (property_id) {
         case PROP_ARGV: {
                 break;
