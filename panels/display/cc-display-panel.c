@@ -1925,7 +1925,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   GnomeRRRotation rotation;
   int total_w, total_h;
   GList *connected_outputs = list_connected_outputs (self, &total_w, &total_h);
-  GnomeRROutputInfo *output = g_list_nth (connected_outputs, i)->data;
+  GnomeRROutputInfo *output = g_list_nth_data (connected_outputs, i);
   PangoLayout *layout = get_display_name (self, output);
   PangoRectangle ink_extent, log_extent;
   GdkRectangle viewport;
