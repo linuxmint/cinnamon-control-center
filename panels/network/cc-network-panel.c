@@ -287,7 +287,7 @@ cc_network_panel_notify_enable_active_cb (GtkSwitch *sw,
                            NULL, NULL);
 }
 
-static void
+/* static void
 sync_airplane_mode_switch (CcNetworkPanel *panel)
 {
         GVariant *result;
@@ -321,8 +321,9 @@ sync_airplane_mode_switch (CcNetworkPanel *panel)
 
 	gtk_widget_set_sensitive (GTK_WIDGET (panel->priv->rfkill_switch), !hw_enabled);
 }
+*/
 
-static void
+/* static void
 on_property_change (GDBusProxy *proxy,
                     GVariant   *changed_properties,
                     GVariant   *invalidated_properties,
@@ -330,6 +331,7 @@ on_property_change (GDBusProxy *proxy,
 {
         sync_airplane_mode_switch (CC_NETWORK_PANEL (user_data));
 }
+*/
 
 static void
 got_rfkill_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)

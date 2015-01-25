@@ -1052,7 +1052,6 @@ cc_power_panel_init (CcPowerPanel *self)
   GError     *error;
   GtkWidget  *widget;
   gint        value;
-  char       *text;
 
   self->priv = POWER_PANEL_PRIVATE (self);
 
