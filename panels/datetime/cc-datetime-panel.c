@@ -236,7 +236,6 @@ update_time (CcDateTimePanel *self)
 {
   CcDateTimePanelPrivate *priv = self->priv;
   char *label;
-  guint i;
 
   if (priv->clock_use_24h)
     {
@@ -1025,6 +1024,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 
   /* add the lock button */
   priv->permission = polkit_permission_new_sync ("org.cinnamon.settingsdaemon.datetimemechanism.configure", NULL, NULL, NULL);
+
   if (priv->permission == NULL)
     {
       g_warning ("Your system does not have the '%s' PolicyKit files installed. Please check your installation",
@@ -1035,7 +1035,6 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   priv->lock_button = widget = (GtkWidget *) W("lock_button");
   gtk_lock_button_set_permission ( GTK_LOCK_BUTTON (priv->lock_button), priv->permission );
   gtk_widget_show (widget);
-
   g_signal_connect (priv->permission, "notify", G_CALLBACK (on_permission_changed), self);
   on_permission_changed (priv->permission, NULL, self);
 }
