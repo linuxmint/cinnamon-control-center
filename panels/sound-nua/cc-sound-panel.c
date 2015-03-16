@@ -138,4 +138,3 @@ void
 g_io_module_unload (GIOModule *module)
 {
 }
-
