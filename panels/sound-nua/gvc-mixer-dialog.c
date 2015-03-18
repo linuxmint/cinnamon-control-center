@@ -57,7 +57,6 @@ struct GvcMixerDialogPrivate
         GvcMixerControl *mixer_control;
         GHashTable      *bars;        
         GtkWidget       *stack;
-        GtkWidget       *stack_switcher;
         GtkWidget       *output_bar;
         GtkWidget       *input_bar;
         GtkWidget       *input_level_bar;
@@ -1803,14 +1802,6 @@ gvc_mixer_dialog_constructor (GType                  type,
                                        GTK_STACK_TRANSITION_TYPE_SLIDE_LEFT_RIGHT);
         gtk_stack_set_transition_duration (GTK_STACK (self->priv->stack), 150);
 
-        self->priv->stack_switcher = gtk_stack_switcher_new ();
-        gtk_widget_set_halign (self->priv->stack_switcher,
-                               GTK_ALIGN_CENTER);
-        gtk_stack_switcher_set_stack(GTK_STACK_SWITCHER (self->priv->stack_switcher),
-                                     GTK_STACK (self->priv->stack));
-        gtk_box_pack_start (GTK_BOX (main_vbox),
-                            self->priv->stack_switcher,
-                            TRUE, TRUE, 0);
         gtk_box_pack_start (GTK_BOX (main_vbox),
                             self->priv->stack,
                             TRUE, TRUE, 0);
