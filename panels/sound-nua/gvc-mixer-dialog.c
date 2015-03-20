@@ -56,7 +56,7 @@ struct GvcMixerDialogPrivate
 {
         GvcMixerControl *mixer_control;
         GHashTable      *bars;        
-        GtkWidget       *notebook;
+        GtkWidget       *stack;
         GtkWidget       *output_bar;
         GtkWidget       *input_bar;
         GtkWidget       *input_level_bar;
@@ -1720,19 +1720,23 @@ gvc_mixer_dialog_constructor (GType                  type,
                             alignment,
                             FALSE, FALSE, 0);
 
-        self->priv->notebook = gtk_notebook_new ();
+        self->priv->stack = gtk_stack_new ();
+        gtk_stack_set_transition_type (GTK_STACK (self->priv->stack),
+                                       GTK_STACK_TRANSITION_TYPE_SLIDE_LEFT_RIGHT);
+        gtk_stack_set_transition_duration (GTK_STACK (self->priv->stack), 150);
+
         gtk_box_pack_start (GTK_BOX (main_vbox),
-                            self->priv->notebook,
+                            self->priv->stack,
                             TRUE, TRUE, 0);
-        gtk_container_set_border_width (GTK_CONTAINER (self->priv->notebook), 5);
+        gtk_container_set_border_width (GTK_CONTAINER (self->priv->stack), 5);
 
         /* Output page */
         self->priv->output_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);        
         gtk_container_set_border_width (GTK_CONTAINER (self->priv->output_box), 12);
-        label = gtk_label_new (_("Output"));
-        gtk_notebook_append_page (GTK_NOTEBOOK (self->priv->notebook),
-                                  self->priv->output_box,
-                                  label);
+        gtk_stack_add_titled (GTK_STACK (self->priv->stack),
+                              self->priv->output_box,
+                              "output",
+                              _("Output"));
 
         box = gtk_frame_new (_("Play sound through"));
         gtk_widget_set_size_request (GTK_WIDGET (box), 310, -1);        
@@ -1862,10 +1866,10 @@ gvc_mixer_dialog_constructor (GType                  type,
         /* Input page */
         self->priv->input_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
         gtk_container_set_border_width (GTK_CONTAINER (self->priv->input_box), 12);
-        label = gtk_label_new (_("Input"));
-        gtk_notebook_append_page (GTK_NOTEBOOK (self->priv->notebook),
-                                  self->priv->input_box,
-                                  label);
+        gtk_stack_add_titled (GTK_STACK (self->priv->stack),
+                              self->priv->input_box,
+                              "input",
+                              _("Input"));
         box = gtk_frame_new (_("Record sound from"));
         gtk_widget_set_size_request (GTK_WIDGET (box), 310, -1);        
         label = gtk_frame_get_label_widget (GTK_FRAME (box));
@@ -1968,10 +1972,10 @@ gvc_mixer_dialog_constructor (GType                  type,
         /* Effects page */
         self->priv->sound_effects_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
         gtk_container_set_border_width (GTK_CONTAINER (self->priv->sound_effects_box), 12);
-        label = gtk_label_new (_("Sound Effects"));
-        gtk_notebook_append_page (GTK_NOTEBOOK (self->priv->notebook),
-                                  self->priv->sound_effects_box,
-                                  label);
+        gtk_stack_add_titled (GTK_STACK (self->priv->stack),
+                              self->priv->sound_effects_box,
+                              "effects",
+                              _("Sound Effects"));
 
         self->priv->effects_bar = create_bar (self, FALSE, TRUE);
         gvc_channel_bar_set_name (GVC_CHANNEL_BAR (self->priv->effects_bar),
@@ -2005,10 +2009,10 @@ gvc_mixer_dialog_constructor (GType                  type,
         /* Applications */
         self->priv->applications_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
         gtk_container_set_border_width (GTK_CONTAINER (self->priv->applications_box), 12);
-        label = gtk_label_new (_("Applications"));
-        gtk_notebook_append_page (GTK_NOTEBOOK (self->priv->notebook),
-                                  self->priv->applications_box,
-                                  label);
+        gtk_stack_add_titled (GTK_STACK (self->priv->stack),
+                              self->priv->applications_box,
+                              "applications",
+                              _("Applications"));
         self->priv->no_apps_label = gtk_label_new (_("No application is currently playing or recording audio."));
         gtk_box_pack_start (GTK_BOX (self->priv->applications_box),
                             self->priv->no_apps_label,
@@ -2161,33 +2165,13 @@ gvc_mixer_dialog_new (GvcMixerControl *control)
         return GVC_MIXER_DIALOG (dialog);
 }
 
-enum {
-        PAGE_OUTPUT,
-        PAGE_INPUT,
-        PAGE_EVENTS,
-        PAGE_APPLICATIONS
-};
-
 gboolean
 gvc_mixer_dialog_set_page (GvcMixerDialog *self,
                            const char     *page)
 {
-        guint num;
-
         g_return_val_if_fail (self != NULL, FALSE);
 
-        num = PAGE_OUTPUT;
-
-        if (g_str_equal (page, "effects"))
-                num = PAGE_EVENTS;
-        else if (g_str_equal (page, "input"))
-                num = PAGE_INPUT;
-        else if (g_str_equal (page, "output"))
-                num = PAGE_OUTPUT;
-        else if (g_str_equal (page, "applications"))
-                num = PAGE_APPLICATIONS;
-
-        gtk_notebook_set_current_page (GTK_NOTEBOOK (self->priv->notebook), num);
+        gtk_stack_set_visible_child_name (GTK_STACK (self->priv->stack), page);
 
         return TRUE;
 }
