@@ -2,12 +2,10 @@ NULL =
 
 enabled_panels = \
 	common \
-	screen \
 	color \
 	display \
 	region \
 	universal-access \
-	power \
 	sound \
 	sound-nua \
 	datetime
