@@ -122,13 +122,10 @@ PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES cinnamon-desktop x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
 PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES gmodule-2.0)
-PKG_CHECK_MODULES(POWER_PANEL, $COMMON_MODULES upower-glib >= 0.9.1
-                  cinnamon-settings-daemon >= $CSD_REQUIRED_VERSION)
 PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.14)
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
-PKG_CHECK_MODULES(SCREEN_PANEL, $COMMON_MODULES)
 PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libcanberra-gtk3 >= $CANBERRA_REQUIRED_VERSION
                   libpulse >= $PA_REQUIRED_VERSION
@@ -349,8 +346,6 @@ panels/display/Makefile
 panels/display/cinnamon-display-panel.desktop.in
 panels/region/Makefile
 panels/region/cinnamon-region-panel.desktop.in
-panels/screen/Makefile
-panels/screen/cinnamon-screen-panel.desktop.in
 panels/color/Makefile
 panels/color/cinnamon-color-panel.desktop.in
 panels/color/icons/Makefile
@@ -399,15 +394,6 @@ panels/sound/data/icons/scalable/devices/Makefile
 panels/sound-nua/Makefile
 panels/sound-nua/data/Makefile
 panels/sound-nua/data/cinnamon-sound-nua-panel.desktop.in
-panels/power/Makefile
-panels/power/cinnamon-power-panel.desktop.in
-panels/power/icons/Makefile
-panels/power/icons/16x16/Makefile
-panels/power/icons/22x22/Makefile
-panels/power/icons/24x24/Makefile
-panels/power/icons/32x32/Makefile
-panels/power/icons/48x48/Makefile
-panels/power/icons/256x256/Makefile
 panels/wacom/Makefile
 panels/wacom/calibrator/Makefile
 panels/wacom/cinnamon-wacom-panel.desktop.in
