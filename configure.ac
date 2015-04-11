@@ -1,6 +1,6 @@
-m4_define([cinnamon_control_center_version], 2.4.2)
+m4_define([cinnamon_control_center_version], 2.5.0)
 AC_INIT([cinnamon-control-center], [cinnamon_control_center_version],
-        [http://bugzilla.gnome.org/enter_bug.cgi?product=cinnamon-control-center])
+        [https://github.com/linuxmint/cinnamon-control-center/issues])
 
 AC_CONFIG_SRCDIR([shell])
 AC_CONFIG_HEADERS([config.h])
