@@ -1,8 +1,8 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-SUBDIRS = po shell panels files
+SUBDIRS = po shell panels
 
-DIST_SUBDIRS = po shell panels files
+DIST_SUBDIRS = po shell panels
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \

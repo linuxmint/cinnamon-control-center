@@ -326,7 +326,6 @@ fi
 
 AC_OUTPUT([
 Makefile
-shell/libcinnamon-control-center.pc
 panels/Makefile
 panels/common/Makefile
 panels/display/Makefile
@@ -388,9 +387,9 @@ panels/datetime/Makefile
 panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
 po/Makefile.in
-files/Makefile
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
+shell/libcinnamon-control-center.pc
 ])
 
 AC_MSG_NOTICE([cinnamon-control-center was configured with the following options:])
