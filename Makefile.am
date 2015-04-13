@@ -1,8 +1,8 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-SUBDIRS = po shell panels files
+SUBDIRS = po shell panels
 
-DIST_SUBDIRS = po shell panels files
+DIST_SUBDIRS = po shell panels
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \
@@ -26,7 +26,7 @@ MAINTAINERCLEANFILES = \
 EXTRA_DIST = \
 	MAINTAINERS
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-update-mimedb --enable-gtk-doc --disable-maintainer-mode
+DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --disable-maintainer-mode
 
 GITIGNOREFILES=m4
 
