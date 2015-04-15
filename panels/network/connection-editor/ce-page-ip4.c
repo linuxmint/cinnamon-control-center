@@ -623,6 +623,10 @@ connect_ip4_page (CEPageIP4 *page)
                                            METHOD_COL_NAME, _("Link-Local Only"),
                                            METHOD_COL_METHOD, IP4_METHOD_LINK_LOCAL,
                                            -1);
+        gtk_list_store_insert_with_values (store, &iter, -1,
+                                           METHOD_COL_NAME, _("Shared to Other Computers"),
+                                           METHOD_COL_METHOD, IP4_METHOD_SHARED,
+                                           -1);
 
         gtk_combo_box_set_model (page->method, GTK_TREE_MODEL (store));
 
@@ -643,7 +647,7 @@ connect_ip4_page (CEPageIP4 *page)
         g_signal_connect_swapped (page->never_default, "toggled", G_CALLBACK (ce_page_changed), page);
 
         g_signal_connect (page->method, "changed", G_CALLBACK (method_changed), page);
-        if (method != IP4_METHOD_SHARED && method != IP4_METHOD_DISABLED)
+        if (method != IP4_METHOD_DISABLED)
                 gtk_combo_box_set_active (page->method, method);
 }
 
@@ -695,6 +699,9 @@ ui_to_setting (CEPageIP4 *page)
                         break;
                 case IP4_METHOD_LINK_LOCAL:
                         method = NM_SETTING_IP4_CONFIG_METHOD_LINK_LOCAL;
+                        break;
+                case IP4_METHOD_SHARED:
+                        method = NM_SETTING_IP4_CONFIG_METHOD_SHARED;
                         break;
                 default:
                 case IP4_METHOD_AUTO:
