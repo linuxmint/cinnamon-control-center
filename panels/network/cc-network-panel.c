@@ -375,7 +375,6 @@ cc_network_panel_constructed (GObject *object)
         gtk_box_pack_start (GTK_BOX (box), widget, FALSE, FALSE, 4);
         gtk_widget_show_all (box);
         panel->priv->rfkill_switch = GTK_SWITCH (widget);
-        //cc_shell_embed_widget_in_header (cc_panel_get_shell (CC_PANEL (panel)), box);
         panel->priv->kill_switch_header = g_object_ref (box);
 
         g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
@@ -564,7 +563,7 @@ handle_argv_for_device (CcNetworkPanel *panel,
 {
         CcNetworkPanelPrivate *priv = panel->priv;
         NMDeviceType type;
-        GtkWidget *toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)));
+        GtkWidget *toplevel = GTK_WIDGET(panel);
 
         if (priv->arg_operation == OPERATION_NULL)
                 return TRUE;
