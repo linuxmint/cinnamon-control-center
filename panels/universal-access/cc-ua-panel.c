@@ -315,8 +315,15 @@ cc_ua_panel_set_shortcut_label (CcUaPanel  *self,
             continue;
         }
 
-        text = gtk_accelerator_get_label_with_keycode (gtk_widget_get_display (widget), accel_key, *keycode, mods);
-        g_free (keycode);
+        if (keycode)
+        {
+                text = gtk_accelerator_get_label_with_keycode (gtk_widget_get_display (widget), accel_key, *keycode, mods);
+                g_free (keycode);
+        }
+        else
+        {
+                text = gtk_accelerator_get_label_with_keycode (gtk_widget_get_display (widget), accel_key, (guint)0, mods);
+        }
 
         if (once)
             g_string_append (final, ", ");

@@ -1191,7 +1191,6 @@ static void
 user_to_device (double *x, double *y,
                 gpointer user_data)
 {
-  gdouble ox, oy;
   user_to_device_data* data = user_data;
 
   /* The translations by the user */

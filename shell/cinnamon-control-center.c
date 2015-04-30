@@ -577,67 +577,6 @@ category_filter_func (GtkTreeModel *model,
   return result;
 }
 
-static void
-search_entry_changed_cb (GtkEntry           *entry,
-                         CinnamonControlCenter *center)
-{
-  CinnamonControlCenterPrivate *priv = center->priv;
-  char *str;
-
-  /* if the entry text was set manually (not by the user) */
-  if (!g_strcmp0 (priv->filter_string, gtk_entry_get_text (entry)))
-    return;
-
-  /* Don't re-filter for added trailing or leading spaces */
-  str = g_strdup (gtk_entry_get_text (entry));
-  g_strstrip (str);
-  if (!g_strcmp0 (str, priv->filter_string))
-    {
-      g_free (str);
-      return;
-    }
-
-  g_free (priv->filter_string);
-  priv->filter_string = str;
-
-  if (!g_strcmp0 (priv->filter_string, ""))
-    {
-      shell_show_overview_page (center);
-    }
-  else
-    {
-      gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (priv->search_filter));
-      notebook_select_page (priv->notebook, priv->search_scrolled);
-    }
-}
-
-static gboolean
-search_entry_key_press_event_cb (GtkEntry    *entry,
-                                 GdkEventKey *event,
-                                 CinnamonControlCenterPrivate   *priv)
-{
-  if (event->keyval == GDK_KEY_Return)
-    {
-      GtkTreePath *path;
-
-      path = gtk_tree_path_new_first ();
-
-      priv->last_time = event->time;
-
-      gtk_icon_view_item_activated (GTK_ICON_VIEW (priv->search_view), path);
-
-      gtk_tree_path_free (path);
-      return TRUE;
-    }
-
-  if (event->keyval == GDK_KEY_Escape)
-    {
-      gtk_entry_set_text (entry, "");
-      return TRUE;
-    }
-
-  return FALSE;
-}
 
 static void
 on_search_selection_changed (GtkTreeSelection   *selection,
@@ -665,7 +604,7 @@ on_search_selection_changed (GtkTreeSelection   *selection,
 static void
 setup_search (CinnamonControlCenter *shell)
 {
-  GtkWidget *search_view, *widget;
+  GtkWidget *search_view;
   GtkCellRenderer *renderer;
   GtkTreeViewColumn *column;
   CinnamonControlCenterPrivate *priv = shell->priv;
@@ -1445,3 +1384,4 @@ cinnamon_control_center_show (CinnamonControlCenter *center,
   gtk_window_set_application (GTK_WINDOW (center->priv->window), app);
   gtk_widget_show (gtk_bin_get_child (GTK_BIN (center->priv->window)));
 }
+

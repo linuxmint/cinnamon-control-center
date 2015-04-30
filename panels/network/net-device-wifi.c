@@ -625,7 +625,7 @@ connect_to_hidden_network (NetDeviceWifi *device_wifi)
         remote_settings = net_object_get_remote_settings (NET_OBJECT (device_wifi));
         client = net_object_get_client (NET_OBJECT (device_wifi));
         panel = net_object_get_panel (NET_OBJECT (device_wifi));
-        cc_network_panel_connect_to_hidden_network (panel, client, remote_settings);
+        cc_network_panel_connect_to_hidden_network ((GtkWidget *)panel, client, remote_settings);
 }
 
 static void
@@ -1843,7 +1843,6 @@ open_history (NetDeviceWifi *device_wifi)
         GtkWidget *connect_button;
         GtkWidget *disconnect_button;
         GtkWidget *forget;
-        GtkWidget *hidden;
         GtkWidget *swin;
         GSList *connections;
         GSList *l;

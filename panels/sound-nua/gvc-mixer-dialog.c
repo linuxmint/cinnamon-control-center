@@ -146,45 +146,6 @@ static void   on_control_active_input_update (GvcMixerControl *control,
 G_DEFINE_TYPE (GvcMixerDialog, gvc_mixer_dialog, GTK_TYPE_VBOX)
 
 
-static void
-update_description (GvcMixerDialog *dialog,
-                    guint column,
-                    const char *value,
-                    GvcMixerStream *stream)
-{
-        GtkTreeModel *model;
-        GtkTreeIter   iter;
-        guint         id;
-
-        if (GVC_IS_MIXER_SOURCE (stream))
-                model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->priv->input_treeview));
-        else if (GVC_IS_MIXER_SINK (stream))
-                model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->priv->output_treeview));
-        else
-                g_assert_not_reached ();
-
-        if (gtk_tree_model_get_iter_first (model, &iter) == FALSE){
-                g_warning ("The tree is empty => Cannot update the description");
-                return;        
-        }
-
-        id = gvc_mixer_stream_get_id (stream);
-        do {
-                guint       current_id;
-
-                gtk_tree_model_get (model, &iter,
-                                    ID_COLUMN, &current_id,
-                                    -1);
-                if (id != current_id)
-                        continue;
-
-                gtk_list_store_set (GTK_LIST_STORE (model),
-                                    &iter,
-                                    column, value,
-                                    -1);
-                break;
-        } while (gtk_tree_model_iter_next (model, &iter));
-}
 
 static void
 profile_selection_changed (GvcComboBox *combo_box,
@@ -549,19 +510,6 @@ lookup_bar_for_stream (GvcMixerDialog *dialog,
         return bar;
 }
 
-// TODO
-// Do we need this ?
-// UI devices now pull description material mainly for the card ports.
-// Therefore the need for stream description dynamic changes more than ever seems unneccessary. 
-static void
-on_stream_description_notify (GvcMixerStream *stream,
-                              GParamSpec     *pspec,
-                              GvcMixerDialog *dialog)
-{
-        update_description (dialog, NAME_COLUMN,
-                            gvc_mixer_stream_get_description (stream),
-                            stream);
-}
 
 static void
 on_stream_volume_notify (GObject        *object,
@@ -1179,7 +1127,6 @@ add_input_ui_entry (GvcMixerDialog *dialog,
         gchar    *port_name;
         gchar    *origin;
         gchar    *description;
-        gboolean active;
         gboolean available;
         gint     stream_id;
         GvcMixerCard  *card;
@@ -1194,7 +1141,6 @@ add_input_ui_entry (GvcMixerDialog *dialog,
                       NULL);
         GtkTreeModel        *model;
         GtkTreeIter          iter;
-        const GvcChannelMap *map;
         GIcon               *icon;
 
         if (card == NULL) {
@@ -1250,7 +1196,6 @@ add_output_ui_entry (GvcMixerDialog *dialog,
         gchar    *sink_port_name;
         gchar    *origin;
         gchar    *description;
-        gboolean active;
         gboolean available;
         gint     sink_stream_id;
         GvcMixerCard  *card;
@@ -1266,7 +1211,6 @@ add_output_ui_entry (GvcMixerDialog *dialog,
 	
         GtkTreeModel        *model;
         GtkTreeIter          iter;
-        const GvcChannelMap *map;
         GIcon               *icon;
 
         if (card == NULL) {
@@ -1380,7 +1324,6 @@ on_control_output_removed (GvcMixerControl *control,
                            guint	    id,
                            GvcMixerDialog  *dialog)
 {
-        GtkWidget    *bar;
         gboolean      found;
         GtkTreeIter   iter;
         GtkTreeModel *model;
@@ -1413,7 +1356,6 @@ on_control_input_removed (GvcMixerControl *control,
 			   guint	    id,
 			   GvcMixerDialog  *dialog)
 {
-        GtkWidget    *bar;
         gboolean      found;
         GtkTreeIter   iter;
         GtkTreeModel *model;
@@ -1611,24 +1553,6 @@ create_stream_treeview (GvcMixerDialog *dialog,
         return treeview;
 }
 
-static void
-on_profile_changed (GvcComboBox *widget,
-                    const char  *profile,
-                    gpointer     user_data)
-{
-        GvcMixerCard        *card;
-
-        card = g_object_get_data (G_OBJECT (widget), "card");
-        if (card == NULL) {
-                g_warning ("Could not find card for combobox");
-                return;
-        }
-
-        g_debug ("Profile changed to %s for card %s", profile,
-                 gvc_mixer_card_get_name (card));
-
-        gvc_mixer_card_change_profile (card, profile);
-}
 
 static void
 on_test_speakers_clicked (GtkButton *widget,
@@ -1677,7 +1601,6 @@ on_test_speakers_clicked (GtkButton *widget,
         g_debug ("Test the speakers on the %s", gvc_mixer_ui_device_get_description (output));
         
         GvcMixerStream        *stream;
-        GvcMixerCardProfile *profile;
         GtkWidget           *d, *speaker_test, *container;
         char                *title;
 
@@ -1710,7 +1633,7 @@ change_sound_file (GtkFileChooserButton *widget,
                     gpointer              user_data)
 {
     GSettings * settings = user_data;
-    char * filename = gtk_file_chooser_get_filename(widget);
+    char * filename = gtk_file_chooser_get_filename((GtkFileChooser *)widget);
     g_settings_set_string(settings, g_object_get_data (G_OBJECT (widget), "gsetting_key"), filename);
     g_free(filename);
 }
@@ -1741,25 +1664,25 @@ add_sound_effect_selector (GtkWidget * grid, int row, char * label, GSettings * 
         GtkWidget * file_chooser = gtk_file_chooser_button_new(_("Choose an audio file"), GTK_FILE_CHOOSER_ACTION_OPEN);
         g_object_set_data (G_OBJECT (file_chooser), "gsetting_key", file_key);
 
-        gtk_file_chooser_set_filename(file_chooser, g_settings_get_string(settings, file_key));
+        gtk_file_chooser_set_filename((GtkFileChooser *)file_chooser, g_settings_get_string(settings, file_key));
         gtk_widget_set_sensitive(file_chooser, g_settings_get_boolean(settings, enabled_key));
         g_signal_connect (file_chooser, "file-set", G_CALLBACK (change_sound_file), settings);
         
         GtkWidget * checkbox = gtk_check_button_new_with_label(label);
         g_object_set_data (G_OBJECT (checkbox), "widget", file_chooser);
         g_object_set_data (G_OBJECT (checkbox), "gsetting_key", enabled_key);        
-        gtk_toggle_button_set_active(checkbox, g_settings_get_boolean(settings, enabled_key));
+        gtk_toggle_button_set_active((GtkToggleButton *)checkbox, g_settings_get_boolean(settings, enabled_key));
         g_signal_connect (checkbox, "toggled", G_CALLBACK (toggle_sound_file), settings);
 
         GtkWidget * button = gtk_button_new();        
         GtkWidget * image = gtk_image_new_from_stock(GTK_STOCK_MEDIA_PLAY, GTK_ICON_SIZE_MENU);
-        gtk_button_set_image(button, image);
+        gtk_button_set_image((GtkButton *)button, image);
         g_object_set_data (G_OBJECT (button), "widget", file_chooser);
         g_signal_connect (button, "released", G_CALLBACK (test_sound_file), dialog);
 
-        gtk_grid_attach(grid, checkbox, 0, row, 1, 1);        
-        gtk_grid_attach(grid, file_chooser, 1, row, 1, 1);       
-        gtk_grid_attach(grid, button, 2, row, 1, 1);
+        gtk_grid_attach((GtkGrid *)grid, checkbox, 0, row, 1, 1);        
+        gtk_grid_attach((GtkGrid *)grid, file_chooser, 1, row, 1, 1);       
+        gtk_grid_attach((GtkGrid *)grid, button, 2, row, 1, 1);
 }
 
 
@@ -1778,7 +1701,7 @@ gvc_mixer_dialog_constructor (GType                  type,
         GtkWidget        *settings_box;
         GtkWidget        *box;
         GtkWidget        *sbox;
-        GtkWidget        *test_sound_box;
+        GtkWidget        *test_sound_box;      
 
         object = G_OBJECT_CLASS (gvc_mixer_dialog_parent_class)->constructor (type, n_construct_properties, construct_params);
 
@@ -2065,8 +1988,8 @@ gvc_mixer_dialog_constructor (GType                  type,
         GSettings * desktop_sound_settings = g_settings_new("org.cinnamon.desktop.sound");
 
         GtkWidget * sounds_grid = gtk_grid_new ();
-        gtk_grid_set_column_spacing (sounds_grid, 6);
-        gtk_grid_set_row_spacing (sounds_grid, 3);
+        gtk_grid_set_column_spacing ((GtkGrid *)sounds_grid, 6);
+        gtk_grid_set_row_spacing ((GtkGrid *)sounds_grid, 3);
 
         add_sound_effect_selector (sounds_grid, 0, _("Starting Cinnamon:"), sound_settings, "login-file", "login-enabled", self);
         add_sound_effect_selector (sounds_grid, 1, _("Switching workspace:"), sound_settings, "switch-file", "switch-enabled", self);       
