@@ -174,7 +174,6 @@ bar_calc_layout (GvcLevelBar *bar)
         bar->priv->layout.area.height = allocation.height - 2;
 
         style = gtk_widget_get_style (GTK_WIDGET (bar));
-        color = style->bg [GTK_STATE_NORMAL];
         bar->priv->layout.bg_r = 1.0;
         bar->priv->layout.bg_g = 1.0;
         bar->priv->layout.bg_b = 1.0;
