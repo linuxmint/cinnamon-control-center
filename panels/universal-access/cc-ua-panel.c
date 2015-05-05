@@ -471,6 +471,10 @@ cc_ua_panel_init_seeing (CcUaPanel *self)
                    WID (priv->builder, "seeing_zoom_switch"), "active",
                    G_SETTINGS_BIND_DEFAULT);
 
+  g_settings_bind (priv->wm_settings, "mouse-button-zoom-modifier",
+                   WID(priv->builder, "zoom_mod_combo"), "active-id",
+                   G_SETTINGS_BIND_DEFAULT);
+
   settings_on_off_editor_new (priv, priv->application_settings,
                               "screen-reader-enabled",
                               WID (priv->builder, "seeing_reader_switch"),

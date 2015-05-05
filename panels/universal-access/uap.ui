@@ -448,6 +448,47 @@
                             <property name="margin_left">10</property>
                             <property name="orientation">vertical</property>
                             <child>
+                              <object class="GtkBox" id="box14">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkLabel" id="label3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="label" translatable="yes">Mouse wheel modifier:</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBoxText" id="zoom_mod_combo">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <items>
+                                      <item id="" translatable="yes">Disabled</item>
+                                      <item id="&lt;Alt&gt;" translatable="yes">&lt;Alt&gt;</item>
+                                      <item id="&lt;Super&gt;" translatable="yes">&lt;Super&gt;</item>
+                                      <item id="&lt;Control&gt;" translatable="yes">&lt;Control&gt;</item>
+                                    </items>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkHBox" id="hbox20">
                                 <property name="visible">False</property>
                                 <property name="can_focus">False</property>
@@ -488,7 +529,7 @@
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">0</property>
+                                <property name="position">1</property>
                               </packing>
                             </child>
                             <child>
@@ -532,7 +573,7 @@
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">1</property>
+                                <property name="position">2</property>
                               </packing>
                             </child>
                             <child>
@@ -570,7 +611,7 @@
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">2</property>
+                                <property name="position">3</property>
                               </packing>
                             </child>
                           </object>
