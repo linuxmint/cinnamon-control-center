@@ -236,7 +236,6 @@ update_time (CcDateTimePanel *self)
 {
   CcDateTimePanelPrivate *priv = self->priv;
   char *label;
-  guint i;
 
   if (priv->clock_use_24h)
     {

@@ -1843,7 +1843,6 @@ open_history (NetDeviceWifi *device_wifi)
         GtkWidget *connect_button;
         GtkWidget *disconnect_button;
         GtkWidget *forget;
-        GtkWidget *hidden;
         GtkWidget *swin;
         GSList *connections;
         GSList *l;
