@@ -11,22 +11,6 @@ os.environ['LANG'] = "en_US.UTF-8"
 gettext.install(DOMAIN, PATH)
 
 prefix = """[Desktop Entry]
-Exec=cinnamon-control-center screen
-Icon=cs-screensaver
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=screen
-# Translators: those are keywords for the brightness and lock control-center panel
-_Keywords=Brightness;Lock;Dim;Blank;Monitor;
-NoDisplay=true
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/screen/cinnamon-screen-panel.desktop.in.in", prefix, _("Brightness & Lock"), _("Screen brightness and lock settings"), "")
-
-prefix = """[Desktop Entry]
 Exec=cinnamon-settings sound
 Icon=cs-sound
 Terminal=false
@@ -85,22 +69,6 @@ OnlyShowIn=X-Cinnamon;
 """
 
 additionalfiles.generate(DOMAIN, PATH, "./panels/sound/data/cinnamon-sound-applet.desktop.in", prefix, _("Volume Control"), _("Show desktop volume control"), "")
-
-prefix = """[Desktop Entry]
-Exec=cinnamon-settings power
-Icon=cs-power
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;HardwareSettings
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=power
-NoDisplay=true
-# Translators: those are keywords for the power control-center panel
-_Keywords=Power;Sleep;Suspend;Hibernate;Battery;
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/power/cinnamon-power-panel.desktop.in.in", prefix, _("Power"), _("Power management settings"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings region
