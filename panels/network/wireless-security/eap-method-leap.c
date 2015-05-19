@@ -115,7 +115,6 @@ fill_connection (EAPMethod *parent, NMConnection *connection)
 	if (method->new_connection) {
 		g_object_set (s_8021x,
 		              NM_SETTING_802_1X_PASSWORD_FLAGS, NM_SETTING_SECRET_FLAG_AGENT_OWNED,
-		              NM_SETTING_802_1X_SYSTEM_CA_CERTS, TRUE,
 		              NULL);
 	}
 }
