@@ -93,6 +93,10 @@ dist_ui_DATA = \
 	data/timezone_-8_dim.png \
 	data/timezone_8.png \
 	data/timezone_8_dim.png \
+	data/timezone_-8.5.png \
+	data/timezone_-8.5_dim.png \
+	data/timezone_8.5.png \
+	data/timezone_8.5_dim.png \
 	data/timezone_8.75.png \
 	data/timezone_8.75_dim.png \
 	data/timezone_-9.png \
