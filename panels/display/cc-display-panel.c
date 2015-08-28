@@ -1839,12 +1839,19 @@ get_display_name (CcDisplayPanel *self,
   PangoLayout *layout;
   char *text;
 
-  if (gnome_rr_config_get_clone (self->priv->current_configuration))
+  if (gnome_rr_config_get_clone (self->priv->current_configuration)) {
     text = mirror_monitor_name ();
-  else
-    text = g_strdup (gnome_rr_output_info_get_display_name (output));
+  }
+  else {
+    char * output_name = g_strdup (gnome_rr_output_info_get_name (output));
+    char * display_name = g_strdup (gnome_rr_output_info_get_display_name (output));
+    text = g_strdup_printf ("%s\n<small>%s</small>", display_name, output_name);
+    g_free (output_name);
+    g_free (display_name);
+  }
 
   layout = gtk_widget_create_pango_layout (GTK_WIDGET (self->priv->area), text);
+  pango_layout_set_markup (layout, text, -1);
   g_free (text);
   pango_layout_set_alignment (layout, PANGO_ALIGN_CENTER);
 

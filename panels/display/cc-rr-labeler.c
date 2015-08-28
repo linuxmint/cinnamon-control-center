@@ -200,16 +200,16 @@ make_palette (CcRRLabeler *labeler)
 
 	labeler->priv->palette = g_new (GdkRGBA, labeler->priv->num_outputs);
 
-	start_hue = 1.0/4; /* mint green */
-	end_hue   = 1.0; /* red */
+	start_hue = 0.0; /* red */
+	end_hue   = 2.0/3; /* blue */
 
 	for (i = 0; i < labeler->priv->num_outputs; i++) {
 		double h, s, v;
 		double r, g, b;
 
 		h = start_hue + (end_hue - start_hue) / labeler->priv->num_outputs * i;
-		s = 0.327;
-		v = 0.804;
+		s = 0.6;
+		v = 1.0;
 
 		gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
 
@@ -264,7 +264,7 @@ rounded_rectangle (cairo_t *cr,
 /* Look for panel-corner in:
  * http://git.gnome.org/browse/gnome-shell/tree/data/theme/gnome-shell.css
  * to match the corner radius */
-#define LABEL_CORNER_RADIUS 6 + LABEL_WINDOW_EDGE_THICKNESS
+#define LABEL_CORNER_RADIUS 0
 
 static void
 label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr, gboolean for_shape)
@@ -407,7 +407,7 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 	GtkWidget *window;
 	GtkWidget *widget;
 	char *str;
-	const char *display_name;
+	const char *display_name, *output_name;
 	GdkRGBA black = { 0, 0, 0, 1.0 };
 	int x, y;
 	GdkScreen *screen;
@@ -447,10 +447,14 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 		 * the Spanish translation could be "Pantallas en Espejo".
 		 */
 		display_name = _("Mirrored Displays");
-	} else
+		str = g_strdup_printf ("<b>%s</b>", display_name);
+	}
+	else {
 		display_name = gnome_rr_output_info_get_display_name (output);
+		output_name = gnome_rr_output_info_get_name (output);
+		str = g_strdup_printf ("<b>%s</b>\n%s", display_name, output_name);
+	}
 
-	str = g_strdup_printf ("<b>%s</b>", display_name);
 	widget = gtk_label_new (NULL);
 	gtk_label_set_markup (GTK_LABEL (widget), str);
 	g_free (str);
