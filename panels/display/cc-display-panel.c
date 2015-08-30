@@ -2189,7 +2189,7 @@ begin_version2_apply_configuration (CcDisplayPanel *self, GdkWindow *parent_wind
                                                      NULL,
                                                      &error);
   if (self->priv->proxy == NULL) {
-    error_message (self, _("Failed to apply configuration: %s"), error->message);
+    error_message (self, _("Failed to apply configuration"), error->message);
     g_error_free (error);
     return;
   }
@@ -2241,7 +2241,7 @@ apply_configuration_returned_cb (GObject          *proxy,
 
   result = g_dbus_proxy_call_finish (G_DBUS_PROXY (proxy), res, &error);
   if (error)
-    error_message (self, _("Failed to apply configuration: %s"), error->message);
+    error_message (self, _("Failed to apply configuration"), error->message);
   g_clear_error (&error);  
   if (result)
     g_variant_unref (result);
