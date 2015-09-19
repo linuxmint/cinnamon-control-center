@@ -1,1 +1,2 @@
-usr/lib/libcinnamon-control-center.so.*
+usr/lib/*/libcinnamon-control-center.so.1
+usr/lib/*/libcinnamon-control-center.so.1.*

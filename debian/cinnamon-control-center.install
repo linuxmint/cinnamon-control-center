@@ -1,3 +1,7 @@
-usr/bin
-usr/lib/cinnamon-control-center-1/panels/*.so
-usr/share/applications
+debian/cinnamon-control-center.xpm usr/share/pixmaps
+etc/xdg/autostart/cinnamon-sound-applet.desktop
+usr/bin/cinnamon-control-center
+usr/bin/cinnamon-sound-applet
+usr/lib/*/cinnamon-control-center-1/panels/*.so
+usr/share/applications/cinnamon-*-panel.desktop
+usr/share/applications/cinnamon-control-center.desktop

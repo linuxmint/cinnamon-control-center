@@ -1,24 +1,38 @@
 #!/usr/bin/make -f
 
-export DEB_BUILD_HARDENING=1
+export DEB_BUILD_MAINT_OPTIONS  = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DATA_PKG = cinnamon-control-center-data
+MAIN_PKG = cinnamon-control-center
 
-include /usr/share/cdbs/1/rules/autoreconf.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/utils.mk
-include debian/cinnamon.mk
-include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-version.mk
-include /usr/share/gnome-pkg-tools/1/rules/clean-la.mk
-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+%:
+	dh $@ --parallel --with=autoreconf,gnome
 
-#LDFLAGS += -Wl,-O1 -Wl,--as-needed
-LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+override_dh_gnome_clean:
+	dh_gnome_clean --no-control
 
-DEB_DH_MAKESHLIBS_ARGS_cinnamon-control-center = --no-act
+override_dh_auto_test:
+	# Disable auto tests
+	:
 
-binary-post-install/cinnamon-control-center-data::
-	rm -rf debian/cinnamon-capplets-data/usr/share/applications/mimeinfo.cache
-	rm -rf debian/cinnamon-capplets-data/usr/share/pkgconfig
-	dh_installmime -p$(cdbs_curpkg)
+override_dh_strip:
+	dh_strip --dbg-package=cinnamon-control-center-dbg
 
-common-binary-post-install-arch:: list-missing
+override_dh_install:
+	dh_install --list-missing
+
+override_dh_installchangelogs:
+	# Only install the changelog in the arch:all package
+	dh_installchangelogs -i ChangeLog
+	dh_installchangelogs -a -XChangeLog
+	# Put the changelog file in the main package doc dir.
+	install -d debian/$(DATA_PKG)/usr/share/doc/$(MAIN_PKG)
+	[ ! -f debian/$(DATA_PKG)/usr/share/doc/$(DATA_PKG)/changelog ] \
+	    || mv debian/$(DATA_PKG)/usr/share/doc/$(DATA_PKG)/changelog \
+	    debian/$(DATA_PKG)/usr/share/doc/$(MAIN_PKG)/changelog
+
+override_dh_makeshlibs:
+	dh_makeshlibs \
+	    -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels

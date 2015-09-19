@@ -1,20 +1,212 @@
-Copyright: 1998,99,2000 Free Software Foundation, Inc.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cinnamon-control-center
+Upstream-Contact: Linux Mint Project <root@linuxmint.com>
+Source: https://github.com/linuxmint/cinnamon-control-center.git
 
-  This program is free software; you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation; either version 2 of the License, or
-  (at your option) any later version.
+Files: *
+Copyright: 2013, Aleksander Morgado <aleksander@gnu.org>
+           2009, Bastien Nocera
+           2010-2012, Bastien Nocera <hadess@hadess.net>
+           2012, Canonical
+           2009, Canonical Ltd
+           2012, Conor Curran
+           2011, Conor Curran <conor.curran@canonical.com>
+           2012, David Henningsson, Canonical Ltd <david.henningsson@canonical.com>
+           2007, David Zeuthen <david@fubar.dk>
+           2001, Eazel, Inc
+           1999-2013, Free Software Foundation, Inc
+           2011, Giovanni Campagna <scampa.giovanni@gmail.com>
+           2009-2010, Intel, Inc
+           2006-2008, Lennart Poettering
+           2009-2010, Red Hat, Inc
+           2010-2012, Richard Hughes <richard@hughsie.com>
+           2003-2007, Sergey V Udaltsov
+           2003-2007, Sergey V. Udaltsov
+           2008, Sjoerd Simons <sjoerd@luon.net>
+           2012, Thomas Bechtold <thomasbechtold@jpberlin.de>
+           2012, Wacom
+           2008, William Jon McCann
+           2008, William Jon McCann <jmccann@redhat.com>
+           2007, William Jon McCann <mccann@jhu.edu>
+           2008, William Jon McCann <william.jon.mccann@gmail.com>
+           2000-2001, Ximian, Inc
+           2004, Alan Cox
+           Croatian team
+           Free Software Foundation
+           2004-2007, Free Software Foundation Inc
+           2004-2008, Free Software Foundation, Inc
+           2003, Hasbullah Bin Pit
+           2003, Nikos Charonitakis
+           2002, Red Hat Inc
+           2005, Red Hat, Inc
+           2004, RedHat Inc
+           2002-2008, RedHat, Inc
+           2004-2005, Sharif FarsiWeb, Inc
+           2003, The free software foundation, inc
+License: GPL-2+
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+Files: INSTALL
+       m4/libtool.m4
+       m4/ltoptions.m4
+       m4/ltsugar.m4
+       m4/ltversion.m4
+       m4/lt~obsolete.m4
+       po/Makefile.in.in
+Copyright: 2004-2009, Free Software Foundation
+           2004-2009, Free Software Foundation, Inc
+           2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
+           1995-1997, Ulrich Drepper <drepper@gnu.ai.mit.edu>
+License: Permissive
+ This file is free software; the Free Software Foundation gives
+ unlimited permission to copy and/or distribute it, with or without
+ modifications, as long as this notice is preserved.
 
-  You should have received a copy of the GNU General Public License
-  along with this package; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301,
-  USA.
+Files: panels/wacom/calibrator/COPYING
+       panels/wacom/calibrator/calibrator.c
+       panels/wacom/calibrator/calibrator.h
+       panels/wacom/calibrator/gui_gtk.c
+       panels/wacom/calibrator/gui_gtk.h
+       panels/wacom/calibrator/main.c
+Copyright: 2009, Soren Hauberg
+           2009, Tias Guns
+           2010, Tias Guns <tias@ulyssis.org> and others
+License: Expat
 
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Files: panels/display/cc-rr-labeler.c
+       panels/display/cc-rr-labeler.h
+       panels/display/scrollarea.c
+       panels/display/scrollarea.h
+Copyright: 2008, Novell, Inc
+           2006-2008, Soren Sandmann <sandmann@daimi.au.dk>
+License: LGPL-2+
 
+Files: panels/universal-access/zoom-options.c
+       panels/universal-access/zoom-options.h
+Copyright: 2011, Inclusive Design Research Centre, OCAD University
+License: GPL-2.1+
+
+Files: panels/common/locarchive.h
+Copyright: 2002, Free Software Foundation, Inc
+License: LGPL-2.1+
+
+Files: panels/datetime/backward
+Copyright: No copyright claimed
+License: public-domain
+ This file is in the public domain, so clarified as of
+ 2009-05-17 by Arthur David Olson.
+
+Files: debian/*
+Copyright: 2014, Maximiliano Curia <maxy@debian.org>
+License: GPL-2+
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program; if not, write to the Free Software Foundation, Inc., 51
+ Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program; if not, write to the Free Software Foundation, Inc., 51
+ Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-2.1+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the
+ Free Software Foundation; either version 2.1 of the License, or (at your
+ option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1', and the
+ complete text of the GNU General Public License version 3 can be found in
+ `/usr/share/common-licenses/GPL-3'.
+Comment: There is no GPL-2.1+, this is probably a typo for LGPL-2.1+, arguably
+ GPL-3+
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 2 of the License, or (at your option) any
+ later version.
+ .
+ This library is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this library; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Suite 500, Boston, MA 02110-1335, USA.
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: LGPL-2.1+
+ The GNU C Library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation; either version 2.1 of the License, or (at your
+ option) any later version.
+ .
+ The GNU C Library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+ for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with the GNU C Library; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin Street, Suite 500, Boston, MA 02110-1335 USA.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1'.

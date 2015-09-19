@@ -1,0 +1,6 @@
+# Ignoring static and libtool libs
+usr/lib/*/cinnamon-control-center-1/panels/*.a
+usr/lib/*/cinnamon-control-center-1/panels/*.la
+usr/lib/*/libcinnamon-control-center.la
+# The wheel group is not used in Debian, do a normal request
+usr/share/polkit-1/rules.d/cinnamon-control-center.rules
