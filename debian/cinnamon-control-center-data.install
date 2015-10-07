@@ -1,8 +1,8 @@
-etc/xdg/menus
+etc/xdg/menus/cinnamoncc.menu
 usr/share/cinnamon-control-center
-usr/share/desktop-directories
-usr/share/icons
-usr/share/polkit-1
-debian/source_cinnamon-control-center.py /usr/share/apport/package-hooks
-usr/share/locale/* /usr/share/locale
-
+usr/share/desktop-directories/cinnamoncc.directory
+usr/share/icons/*/*/*/cin-audio-headset.*
+usr/share/icons/*/*/*/cin-audio-input-microphone-*-symbolic.*
+usr/share/icons/*/*/*/cin-multimedia-volume-control.*
+usr/share/icons/*/*/*/cinnamon-preferences-*
+usr/share/locale/*

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<descriptor>
+
+<version>
+    2.0.9
+</version>
+
+<headers>
+    /usr/include/cinnamon-control-center-1
+</headers>
+
+<libs>
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libcinnamon-control-center.so
+</libs>
+
+</descriptor>
