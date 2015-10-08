@@ -26,7 +26,6 @@ override_dh_install:
 override_dh_installchangelogs:
 	# Only install the changelog in the arch:all package
 	dh_installchangelogs -i ChangeLog
-	dh_installchangelogs -a -XChangeLog
 	# Put the changelog file in the main package doc dir.
 	install -d debian/$(DATA_PKG)/usr/share/doc/$(MAIN_PKG)
 	[ ! -f debian/$(DATA_PKG)/usr/share/doc/$(DATA_PKG)/changelog ] \
