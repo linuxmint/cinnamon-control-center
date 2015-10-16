@@ -1,3 +1,25 @@
+cinnamon-control-center (2.8.0) rosa; urgency=medium
+
+  [ Anders Ladegaard Marchsteiner ]
+  * Kim'ie has moved Pyonyang half an hour. Not to say several centuries back in time...
+
+  [ Clement Lefebvre ]
+  * Display settings: Use a wider range of colors (there's one color taken per output.. connected or not.. so we need to start with red and go all the way to blue) to identify displays, use more vivid colors, don't round OSD (they appear in the corner so it looks a bit weird), show output names (underneath the display name itself)
+  * Fixed wrong arguments in error_message() usage
+
+  [ tomoe-musashi ]
+  * Update date-endian.c
+  * Update date-endian.h
+  * Update date-endian.c
+
+  [ Fabio Fantoni ]
+  * Debian packaging improvements and fixes
+
+  [ Michael Webster ]
+  * debian/rules: fix packaging conflict
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 16 Oct 2015 22:49:04 +0100
+
 cinnamon-control-center (2.6.0) rafaela; urgency=medium
 
   * 2.6.0 
