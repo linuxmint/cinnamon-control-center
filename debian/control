@@ -76,12 +76,12 @@ Recommends: cinnamon-control-center (>= ${source:Version})
 Provides: cinnamon-capplets-data
 Conflicts: cinnamon-capplets-data
 Replaces: cinnamon-capplets-data,
-          cinnamon-control-center (<< 2.2.11),
+          cinnamon-control-center (<< 2.8.0),
           gdm (<< 3.0),
           gdm3 (<< 3.0),
           gnome-media-common (<< 2.91),
           gnome-power-manager (<< 3.2)
-Breaks: cinnamon-control-center (<< 2.2.11),
+Breaks: cinnamon-control-center (<< 2.8.0),
         gdm (<< 3.0),
         gdm3 (<< 3.0),
         gnome-media-common (<< 2.91),
