@@ -1,3 +1,9 @@
+cinnamon-control-center (2.8.1) rosa; urgency=medium
+
+  * Packaging: cinnamon-control-center-data breaks/replaces cinnamon-control-center ( << 2.8.0 )
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 21 Oct 2015 00:56:44 +0100
+
 cinnamon-control-center (2.8.0) rosa; urgency=medium
 
   [ Anders Ladegaard Marchsteiner ]
