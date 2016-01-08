@@ -129,7 +129,6 @@ PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
                   libcanberra-gtk3 >= $CANBERRA_REQUIRED_VERSION
                   libpulse >= $PA_REQUIRED_VERSION
                   libpulse-mainloop-glib >= $PA_REQUIRED_VERSION)
-PKG_CHECK_MODULES(UNIVERSAL_ACCESS_PANEL, $COMMON_MODULES)
 
 #----------------------------------------------
 # Network Manager Stuff
@@ -347,8 +346,6 @@ panels/network/Makefile
 panels/network/wireless-security/Makefile
 panels/network/connection-editor/Makefile
 panels/network/cinnamon-network-panel.desktop.in
-panels/universal-access/Makefile
-panels/universal-access/cinnamon-universal-access-panel.desktop.in
 panels/sound/Makefile
 panels/sound/data/Makefile
 panels/sound/data/cinnamon-sound-panel.desktop.in

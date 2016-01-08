@@ -5,7 +5,6 @@ enabled_panels = \
 	color \
 	display \
 	region \
-	universal-access \
 	sound \
 	sound-nua \
 	datetime
