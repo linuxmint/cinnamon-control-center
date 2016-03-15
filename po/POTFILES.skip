@@ -11,8 +11,6 @@ panels/power/cinnamon-power-panel.desktop.in
 panels/printers/cinnamon-printers-panel.desktop.in
 panels/region/cinnamon-region-panel.desktop.in
 panels/screen/cinnamon-screen-panel.desktop.in
-panels/sound/data/cinnamon-sound-panel.desktop.in
-panels/sound/data/sounds/cinnamon-sounds-default.xml.in
 panels/universal-access/cinnamon-universal-access-panel.desktop.in
 panels/user-accounts/data/cinnamon-user-accounts-panel.desktop.in
 panels/user-accounts/fingerprint-strings.h
