@@ -1,8 +1,5 @@
 etc/xdg/menus/cinnamoncc.menu
 usr/share/cinnamon-control-center
 usr/share/desktop-directories/cinnamoncc.directory
-usr/share/icons/*/*/*/cin-audio-headset.*
-usr/share/icons/*/*/*/cin-audio-input-microphone-*-symbolic.*
-usr/share/icons/*/*/*/cin-multimedia-volume-control.*
 usr/share/icons/*/*/*/cinnamon-preferences-*
 usr/share/locale/*

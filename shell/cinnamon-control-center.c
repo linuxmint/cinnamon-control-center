@@ -990,10 +990,6 @@ _shell_set_active_panel_from_id (CcShell      *shell,
     priv->current_panel_id = NULL;
   }
 
-  if (!g_strcmp0 (g_getenv ("XDG_CURRENT_DESKTOP"), "Unity") && 
-      !g_strcmp0(start_id, "sound"))
-      start_id = "sound-nua";
-
   /* clear any custom widgets */
   _shell_remove_all_custom_widgets (priv);
 

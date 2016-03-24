@@ -5,8 +5,6 @@ enabled_panels = \
 	color \
 	display \
 	region \
-	sound \
-	sound-nua \
 	datetime
 
 disabled_panels = $(NULL)
