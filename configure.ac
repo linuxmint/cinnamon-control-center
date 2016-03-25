@@ -125,10 +125,6 @@ PKG_CHECK_MODULES(COLOR_PANEL, $COMMON_MODULES colord >= 0.1.14)
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
-PKG_CHECK_MODULES(SOUND_PANEL, $COMMON_MODULES libxml-2.0
-                  libcanberra-gtk3 >= $CANBERRA_REQUIRED_VERSION
-                  libpulse >= $PA_REQUIRED_VERSION
-                  libpulse-mainloop-glib >= $PA_REQUIRED_VERSION)
 
 #----------------------------------------------
 # Network Manager Stuff
