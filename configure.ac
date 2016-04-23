@@ -1,4 +1,4 @@
-m4_define([cinnamon_control_center_version], 2.8.1)
+m4_define([cinnamon_control_center_version], 3.0.0)
 AC_INIT([cinnamon-control-center], [cinnamon_control_center_version],
         [https://github.com/linuxmint/cinnamon-control-center/issues])
 

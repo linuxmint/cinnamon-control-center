@@ -1,3 +1,17 @@
+cinnamon-control-center (3.0.0) sarah; urgency=medium
+
+  [ Michael Webster ]
+  * Remove universal-access (moved to cinnamon)
+  * configure.ac: remove PKG_CHECK_MODULES for defunct sound panel
+
+  [ Stephen Collins ]
+  * Remove sound settings in preparation for port to Cinnamon
+
+  [ Clement Lefebvre ]
+  * Updated pot and generated files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 23 Apr 2016 16:10:22 +0100
+
 cinnamon-control-center (2.8.1) rosa; urgency=medium
 
   * Packaging: cinnamon-control-center-data breaks/replaces cinnamon-control-center ( << 2.8.0 )
