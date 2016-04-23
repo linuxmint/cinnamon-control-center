@@ -72,21 +72,6 @@ _Keywords=Network;Wireless;IP;LAN;Proxy;
 additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop.in.in", prefix, _("Network"), _("Network settings"), "")
 
 prefix = """[Desktop Entry]
-Exec=cinnamon-settings universal-access
-Icon=cs-universal-access
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;X-Cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=universal-access
-# Translators: those are keywords for the universal access control-center panel
-_Keywords=Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/universal-access/cinnamon-universal-access-panel.desktop.in.in", prefix, _("Accessibility"), _("Universal Access Preferences"), "")
-
-prefix = """[Desktop Entry]
 Exec=cinnamon-control-center datetime
 Icon=cs-date-time
 Terminal=false
