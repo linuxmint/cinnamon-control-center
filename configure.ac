@@ -131,26 +131,68 @@ PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
 #----------------------------------------------
 # Network Manager Stuff
 
-PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib-vpn >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-gtk >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION
-                  mm-glib >= $MODEM_MANAGER_REQUIRED_VERSION,
-                  [have_networkmanager=yes], have_networkmanager=no)
-if test "x$have_networkmanager" = xno ; then
-        AC_MSG_WARN(*** Network panel will not be built (NetworkManager or ModemManager not found) ***)
-else
-	AC_DEFINE(BUILD_NETWORK, 1, [Define to 1 to build the Network panel])
+AC_ARG_ENABLE(networkmanager,
+              AC_HELP_STRING([--disable-networkmanager],
+                             [build NetworkManager support]),
+              [case "${enableval}" in
+                      yes) enable_networkmanager=yes ;;
+                      no) enable_networkmanager=no ;;
+                      *) AC_MSG_ERROR(bad value ${enableval} for --disable-networkmanager) ;;
+              esac],
+              [enable_networkmanager=yes]) dnl Enabled by default
+
+if test "x$enable_networkmanager" = xyes; then
+    PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
+                      libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
+                      libnm-glib-vpn >= $NETWORK_MANAGER_REQUIRED_VERSION
+                      libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
+                      libnm-gtk >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION,
+                      [have_networkmanager=yes], have_networkmanager=no)
+    if test "x$have_networkmanager" = xno ; then
+        AC_MSG_ERROR(*** NetworkManager not found ***)
+    fi
+
+    AC_DEFINE(BUILD_NETWORK, 1, [Define to 1 to build the Network panel])
+
+    if test x${have_networkmanager} = xyes; then
+      AC_DEFINE(HAVE_NETWORK_MANAGER, 1, [Define to 1 if NetworkManager is available])
+      NM_VPN_CONFIG_DIR=`$PKG_CONFIG --variable configdir NetworkManager`/VPN
+      NM_VPN_MODULE_DIR=`$PKG_CONFIG --variable plugindir NetworkManager`
+      AC_SUBST(NM_VPN_CONFIG_DIR)
+      AC_SUBST(NM_VPN_MODULE_DIR)
+    fi
 fi
+
 AM_CONDITIONAL(BUILD_NETWORK, [test x$have_networkmanager = xyes])
-if test x${have_networkmanager} = xyes; then
-  AC_DEFINE(HAVE_NETWORK_MANAGER, 1, [Define to 1 if NetworkManager is available])
-  NM_VPN_CONFIG_DIR=`$PKG_CONFIG --variable configdir NetworkManager`/VPN
-  NM_VPN_MODULE_DIR=`$PKG_CONFIG --variable plugindir NetworkManager`
-  AC_SUBST(NM_VPN_CONFIG_DIR)
-  AC_SUBST(NM_VPN_MODULE_DIR)
+
+AC_ARG_ENABLE(modemmanager,
+              AC_HELP_STRING([--disable-modemmanager],
+                             [build ModemManager support]),
+              [case "${enableval}" in
+                      yes) enable_modemmanager=yes ;;
+                      no) enable_modemmanager=no ;;
+                      *) AC_MSG_ERROR(bad value ${enableval} for --disable-modemmanager) ;;
+              esac],
+              [enable_modemmanager=yes]) dnl Enable by default
+
+if test "x$enable_modemmanager" = xyes; then
+    if test "x$enable_networkmanager" = xno; then
+        AC_MSG_ERROR(*** NetworkManager is required by ModemManager ***)
+    fi
 fi
+
+if test "x$enable_modemmanager" = xyes; then
+    PKG_CHECK_MODULES(MODEM_MANAGER, mm-glib >= $MODEM_MANAGER_REQUIRED_VERSION,
+                      [have_modemmanager=yes], have_modemmanager=no)
+
+    if test "x$have_modemmanager" = xno ; then
+        AC_MSG_ERROR(*** ModemManager not found ***)
+    fi
+
+    AC_DEFINE(BUILD_MODEM, 1, [Define 1 to build ModemManager support])
+fi
+
+AM_CONDITIONAL(BUILD_MODEM, [test x$have_modemmanager = xyes])
 
 # Work-around for https://bugzilla.gnome.org/show_bug.cgi?id=723769
 PKG_CHECK_MODULES(NM_UNSTABLE_CHECK, libnm-util >= 0.9.9.0, nm_unstable=yes, nm_unstable=no)
@@ -380,6 +422,11 @@ if test "x$have_networkmanager" = "xyes"; then
 	AC_MSG_NOTICE([** NetworkManager (Network panel)])
 else
 	AC_MSG_NOTICE([   Network panel disabled])
+fi
+if test "x$have_modemmanager" = "xyes"; then
+	AC_MSG_NOTICE([** ModemManager support enabled])
+else
+	AC_MSG_NOTICE([   ModemManager support disabled])
 fi
 #if test "x$with_systemd" = "xyes"; then
 #	AC_MSG_NOTICE([** systemd (Systemd session tracking)])

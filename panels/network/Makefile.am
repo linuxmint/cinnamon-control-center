@@ -32,8 +32,6 @@ libnetwork_la_SOURCES =					\
 	net-device-simple.h				\
 	net-device-ethernet.c				\
 	net-device-ethernet.h				\
-	net-device-mobile.c				\
-	net-device-mobile.h				\
 	net-device-bond.c				\
 	net-device-bond.h				\
 	net-device-bridge.c				\
@@ -50,6 +48,14 @@ libnetwork_la_SOURCES =					\
 	list-box-helper.c			\
 	cc-network-panel.c				\
 	cc-network-panel.h
+
+if BUILD_MODEM
+libnetwork_la_SOURCES +=			\
+	net-device-mobile.c				\
+	net-device-mobile.h
+NETWORK_PANEL_CFLAGS += -DBUILD_MODEM
+AM_CPPFLAGS += $(MODEM_MANAGER_CFLAGS)
+endif
 
 TEAM_FILES = net-device-team.c net-device-team.h
 EXTRA_DIST = $(TEAM_FILES)
