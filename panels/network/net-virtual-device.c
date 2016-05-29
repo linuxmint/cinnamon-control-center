@@ -182,11 +182,9 @@ net_virtual_device_refresh (NetObject *object)
         GtkWidget *widget;
         NMDevice *nm_device;
         NMDeviceState state;
-        gboolean disconnected;
 
         nm_device = net_device_get_nm_device (NET_DEVICE (virtual_device));
         state = nm_device ? nm_device_get_state (nm_device) : NM_DEVICE_STATE_DISCONNECTED;
-        disconnected = (state == NM_DEVICE_STATE_DISCONNECTED || state == NM_DEVICE_STATE_UNAVAILABLE);
 
         /* set up the device on/off switch */
         widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "device_off_switch"));
