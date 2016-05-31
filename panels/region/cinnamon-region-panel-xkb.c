@@ -51,22 +51,6 @@ xci_desc_to_utf8 (const XklConfigItem * ci)
 }
 
 static void
-cleanup_xkb_tabs (GtkBuilder * dialog,
-		  GObject *where_the_object_wa)
-{
-	gkbd_desktop_config_term (&desktop_config);
-	gkbd_keyboard_config_term (&initial_config);
-	g_object_unref (G_OBJECT (config_registry));
-	config_registry = NULL;
-	/* Don't unref it here, or we'll crash if open the panel again */
-	engine = NULL;
-	g_object_unref (G_OBJECT (xkb_keyboard_settings));
-	g_object_unref (G_OBJECT (xkb_desktop_settings));
-	xkb_keyboard_settings = NULL;
-	xkb_desktop_settings = NULL;
-}
-
-static void
 reset_to_defaults (GtkWidget * button, GtkBuilder * dialog)
 {
 	GkbdKeyboardConfig empty_kbd_config;
