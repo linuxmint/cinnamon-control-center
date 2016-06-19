@@ -132,7 +132,7 @@ xkb_options_select (gchar * optionname)
 	g_strfreev (options_list);
 }
 
-/* Remove all occurences of optionname from the backend's selection list */
+/* Remove all occurrences of optionname from the backend's selection list */
 static void
 xkb_options_deselect (gchar * optionname)
 {

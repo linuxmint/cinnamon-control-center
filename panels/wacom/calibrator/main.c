@@ -38,7 +38,7 @@
  * find a calibratable touchscreen device (using XInput)
  *
  * if pre_device is NULL, the last calibratable device is selected.
- * retuns number of devices found,
+ * returns number of devices found,
  * the data of the device is returned in the last 3 function parameters
  */
 static int find_device(const char* pre_device, gboolean verbose, gboolean list_devices,

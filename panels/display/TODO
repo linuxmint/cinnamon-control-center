@@ -53,7 +53,7 @@ Here is the OS X Display menu:
 	Events must be emitted whenever something changes, including when
 	the reason for the change is a manual change.
 
-	The maximum framebuffer must be dynamically changable.
+	The maximum framebuffer must be dynamically changeable.
 
 - Control panel work:
 	Capplet needs to be written. The main complications:
@@ -193,7 +193,7 @@ a manufacturer that has nothing to do with the laptop manufacturer.
 Needed XRandr output properties:
 
 - Modes that the monitor supports, or enough information that the
-  client can go throught the list of modes for the relevant
+  client can go through the list of modes for the relevant
   CRTC/Outputs and filter those out that the monitor can't support.
 
 - The preferred mode, if any. Also useful if we could get a "strongly
@@ -551,7 +551,7 @@ screen_list_monitors()
     - EDID information is not reported for VGA when the output is not 
       turned on (i945 laptop).
 
-    - Screen size must be dynamically changable. (No xorg.conf changes
+    - Screen size must be dynamically changeable. (No xorg.conf changes
       should be required).
 
     - Make use of ACPI information when possible. 
@@ -787,7 +787,7 @@ Detecting plugged in
 -- details for control panel --
 Screen changes
        - Currently it is polling via rw_screen_refresh(), which will always emit
-         a screen-changed event. In reponse to this event the capplet currently
+         a screen-changed event. In response to this event the capplet currently
 	 checks whether anything changed physically about the setup. This means
 	 the capplet can't react to external changes to modes. On the other hand
 	 if it didn't
