@@ -220,7 +220,7 @@ tz_info_from_location (TzLocation *loc)
 	curzone = localtime (&curtime);
 
 #ifndef __sun
-	/* Currently this solution doesnt seem to work - I get that */
+	/* Currently this solution doesn't seem to work - I get that */
 	/* America/Phoenix uses daylight savings, which is wrong    */
 	tzinfo->tzname_normal = g_strdup (curzone->tm_zone);
 	if (curzone->tm_isdst) 

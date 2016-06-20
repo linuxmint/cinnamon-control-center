@@ -67,7 +67,7 @@ panel_device_to_icon_name (NMDevice *device, gboolean symbolic)
                                          : "network-cellular";
                         break;
                 }
-                /* fall thru */
+                /* fall through */
         default:
                 value = symbolic ? "network-idle-symbolic"
                                  : "network-idle";

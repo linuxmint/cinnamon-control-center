@@ -66,7 +66,7 @@ struct CalibArea
 #define MAX_TIME		15000 /* 5000 = 5 sec */
 #define END_TIME		750   /*  750 = 0.75 sec */
 
-/* Clock appereance */
+/* Clock appearance */
 #define CROSS_LINES		47
 #define CROSS_CIRCLE		7
 #define CROSS_CIRCLE2		27

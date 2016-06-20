@@ -774,7 +774,7 @@ timedate1_call_set_time (
  *
  * Finishes an operation started with timedate1_call_set_time().
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_time_finish (
@@ -806,7 +806,7 @@ _out:
  *
  * See timedate1_call_set_time() for the asynchronous version of this method.
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_time_sync (
@@ -881,7 +881,7 @@ timedate1_call_set_timezone (
  *
  * Finishes an operation started with timedate1_call_set_timezone().
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_timezone_finish (
@@ -912,7 +912,7 @@ _out:
  *
  * See timedate1_call_set_timezone() for the asynchronous version of this method.
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_timezone_sync (
@@ -988,7 +988,7 @@ timedate1_call_set_local_rtc (
  *
  * Finishes an operation started with timedate1_call_set_local_rtc().
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_local_rtc_finish (
@@ -1020,7 +1020,7 @@ _out:
  *
  * See timedate1_call_set_local_rtc() for the asynchronous version of this method.
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_local_rtc_sync (
@@ -1095,7 +1095,7 @@ timedate1_call_set_ntp (
  *
  * Finishes an operation started with timedate1_call_set_ntp().
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_ntp_finish (
@@ -1126,7 +1126,7 @@ _out:
  *
  * See timedate1_call_set_ntp() for the asynchronous version of this method.
  *
- * Returns: (skip): %TRUE if the call succeded, %FALSE if @error is set.
+ * Returns: (skip): %TRUE if the call succeeded, %FALSE if @error is set.
  */
 gboolean
 timedate1_call_set_ntp_sync (
