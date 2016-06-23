@@ -1219,7 +1219,11 @@ make_path (FooScrollArea *area,
   path->fill_rule = cairo_get_fill_rule (cr);
   path->line_width = cairo_get_line_width (cr);
   path->path = cairo_copy_path (cr);
-  path_foreach_point (path->path, user_to_device, &conversion_data);
+  /* FIXME: this shifts the input region for some reason - half below the actual
+     monitor widget - or is the drawing incorrectly shifted?  The drag region
+     corresponds to what would be a centered monitor vertically.
+     path_foreach_point (path->path, user_to_device, &conversion_data);
+  */
   path->func = func;
   path->data = data;
   path->next = area->priv->current_input->paths;
