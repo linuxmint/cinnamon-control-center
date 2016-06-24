@@ -1,3 +1,18 @@
+cinnamon-control-center (3.0.1) sarah; urgency=medium
+
+  [ brownsr ]
+  * remove unused function
+  * avoid compiler warning
+  * remove unused variable
+
+  [ leigh123linux ]
+  * fix spelling mistakes
+
+  [ Michael Webster ]
+  * display/scrollarea.c: fix monitor drag-and-drop alignment. Somewhere along the way either path_foreach_point/user_to_device is incorrect, or our monitor representations are being drawn shifted up in y, causing the mouse pointer change to occur in the wrong areas.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 24 Jun 2016 10:07:23 +0100
+
 cinnamon-control-center (3.0.0) sarah; urgency=medium
 
   [ Michael Webster ]
