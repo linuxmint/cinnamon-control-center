@@ -26,7 +26,7 @@ libdisplay_la_SOURCES =		\
 	$(MARSHALFILES)
 
 libdisplay_la_LIBADD = $(PANEL_LIBS) $(DISPLAY_PANEL_LIBS)
-libdisplay_la_LDFLAGS = $(PANEL_LDFLAGS)
+libdisplay_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 # You will need a recent intltool or the patch from this bug
 # http://bugzilla.gnome.org/show_bug.cgi?id=462312
@@ -49,7 +49,7 @@ desktopdir = $(datadir)/applications
 Desktop_in_files = cinnamon-display-panel.desktop.in
 desktop_DATA = $(Desktop_in_files:.desktop.in=.desktop)
 
-INCLUDES   = $(PANEL_CFLAGS) \
+AM_CPPFLAGS = $(PANEL_CFLAGS) \
 	     $(DISPLAY_PANEL_CFLAGS) \
 	     -DSBINDIR="\"$(sbindir)\"" \
 	     -DUIDIR="\"$(uidir)\"" \

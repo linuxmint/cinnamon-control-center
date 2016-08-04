@@ -5,6 +5,7 @@ noinst_LTLIBRARIES = liblanguage.la
 noinst_PROGRAMS = list-languages
 
 AM_CPPFLAGS =						\
+	$(WARN_CFLAGS)					\
 	$(PANEL_CFLAGS)					\
 	$(LIBLANGUAGE_CFLAGS)				\
 	-DDATADIR=\""$(datadir)"\"			\
@@ -26,7 +27,7 @@ liblanguage_la_LIBADD = 		\
 	$(PANEL_LIBS)			    \
 	$(LIBLANGUAGE_LIBS)
 
-liblanguage_la_LDFLAGS = $(PANEL_LDFLAGS)
+liblanguage_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 list_languages_SOURCES = list-languages.c
 list_languages_LDADD = liblanguage.la
