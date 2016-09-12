@@ -6,7 +6,7 @@ AC_CONFIG_SRCDIR([shell])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
-AX_IS_RELEASE([git-directory])
+AX_IS_RELEASE([always])
 
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz tar-ustar check-news])
 AM_MAINTAINER_MODE([enable])
