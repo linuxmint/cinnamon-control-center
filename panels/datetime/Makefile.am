@@ -112,6 +112,7 @@ tzdatadir = $(pkgdatadir)/datetime
 dist_tzdata_DATA = backward
 
 AM_CPPFLAGS =						\
+	$(WARN_CFLAGS)					\
 	$(PANEL_CFLAGS)					\
 	$(DATETIME_PANEL_CFLAGS)			\
 	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""	\
@@ -162,7 +163,7 @@ libdate_time_la_SOURCES =	\
 	tz.c tz.h
 
 libdate_time_la_LIBADD = $(PANEL_LIBS) $(DATETIME_PANEL_LIBS)
-libdate_time_la_LDFLAGS = $(PANEL_LDFLAGS)
+libdate_time_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 @INTLTOOL_DESKTOP_RULE@
 

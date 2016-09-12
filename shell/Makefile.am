@@ -1,4 +1,4 @@
-INCLUDES =					\
+AM_CPPFLAGS =					\
 	-I$(top_srcdir)				\
 	$(SHELL_CFLAGS)
 
@@ -33,7 +33,7 @@ cinnamon_control_center_LDADD =			\
 	libcinnamon-control-center.la		\
 	$(SHELL_LIBS)
 
-cinnamon_control_center_LDFLAGS = -export-dynamic
+cinnamon_control_center_LDFLAGS = $(WARN_LDFLAGS) -export-dynamic
 
 lib_LTLIBRARIES = libcinnamon-control-center.la
 
@@ -53,6 +53,7 @@ libcinnamon_control_center_la_SOURCES =		\
 	$(NULL)
 
 libcinnamon_control_center_la_LDFLAGS =		\
+	$(WARN_LDFLAGS)				\
 	-no-undefined				\
 	-version-info $(LIBCINNAMONCONTROLCENTER_CURRENT):$(LIBCINNAMONCONTROLCENTER_REVISION):$(LIBCINNAMONCONTROLCENTER_AGE) \
 	$(NULL)
@@ -68,7 +69,7 @@ libcinnamon_control_center_includedir = $(includedir)/cinnamon-control-center-1/
 pkgconfigdir=$(libdir)/pkgconfig
 pkgconfig_DATA=libcinnamon-control-center.pc
 
-AM_CPPFLAGS =							\
+AM_CPPFLAGS +=							\
 	-DCINNAMONLOCALEDIR="\"$(datadir)/locale\""		\
 	-DUIDIR="\"$(uidir)\""					\
 	-DMENUDIR="\"$(menudir)\""				\

@@ -2,7 +2,8 @@ SUBDIRS = icons
 
 cappletname = color
 
-INCLUDES = 						\
+AM_CPPFLAGS = 						\
+	$(WARN_CFLAGS)					\
 	$(PANEL_CFLAGS)					\
 	$(COLOR_PANEL_CFLAGS)				\
 	-DCINNAMONCC_UI_DIR="\"$(uidir)\""			\
@@ -20,7 +21,7 @@ libcolor_la_SOURCES =		\
 	cc-color-panel.h
 
 libcolor_la_LIBADD = $(PANEL_LIBS) $(COLOR_PANEL_LIBS)
-libcolor_la_LDFLAGS = $(PANEL_LDFLAGS)
+libcolor_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 uidir = $(pkgdatadir)/ui
 dist_ui_DATA = color.ui

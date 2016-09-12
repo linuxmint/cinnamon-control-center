@@ -3,7 +3,7 @@ cappletname = wacom
 
 SUBDIRS = calibrator
 
-INCLUDES = 						\
+AM_CPPFLAGS = 						\
 	$(PANEL_CFLAGS)					\
 	$(WACOM_PANEL_CFLAGS)				\
 	-I$(srcdir)/calibrator				\
@@ -37,7 +37,7 @@ libwacom_properties_la_SOURCES =	\
 	csd-enums.h
 
 libwacom_properties_la_LIBADD = $(PANEL_LIBS) $(WACOM_PANEL_LIBS) $(builddir)/calibrator/libwacom-calibrator.la
-libwacom_properties_la_LDFLAGS = $(PANEL_LDFLAGS)
+libwacom_properties_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 noinst_PROGRAMS = test-wacom
 
@@ -58,7 +58,7 @@ test_wacom_SOURCES =			\
 	csd-input-helper.h		\
 	csd-enums.h
 
-test_wacom_CPPFLAGS = $(INCLUDES)
+test_wacom_CFLAGS = $(AM_CFLAGS)
 test_wacom_LDADD = $(PANEL_LIBS) $(WACOM_PANEL_LIBS) $(builddir)/calibrator/libwacom-calibrator.la
 
 resource_files = $(shell glib-compile-resources --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/wacom.gresource.xml)

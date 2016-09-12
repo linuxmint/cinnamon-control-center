@@ -1,7 +1,7 @@
 # This is used in PANEL_CFLAGS
 cappletname = region
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	$(PANEL_CFLAGS)					\
 	$(REGION_PANEL_CFLAGS)				\
 	-DLOCALE_DIR="\"$(datadir)/locale\""	\
@@ -26,7 +26,7 @@ libregion_la_SOURCES =	\
 
 libregion_la_LIBADD = $(PANEL_LIBS) $(REGION_PANEL_LIBS) $(builddir)/../common/liblanguage.la
 
-libregion_la_LDFLAGS = $(PANEL_LDFLAGS)
+libregion_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
 @INTLTOOL_DESKTOP_RULE@
 
