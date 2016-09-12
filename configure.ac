@@ -84,6 +84,12 @@ else
   SYSTEMD=
 fi
 
+#gtkdocize greps for '^GTK_DOC_CHECK'
+m4_ifdef([GTK_DOC_CHECK], [
+GTK_DOC_CHECK([1.18],[--flavour no-tmpl])],
+          [AM_CONDITIONAL([ENABLE_GTK_DOC], [false])
+           enable_gtk_doc=no])
+
 dnl ==============================================
 dnl Check that we meet the  dependencies
 dnl ==============================================
