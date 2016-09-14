@@ -238,23 +238,6 @@ AC_SUBST(PANEL_LIBS)
 PANEL_LDFLAGS="-export_dynamic -avoid-version -module -no-undefined -export-symbols-regex '^g_io_module_(load|unload)'"
 AC_SUBST(PANEL_LDFLAGS)
 
-dnl ==============================================
-dnl libsocialweb
-dnl ==============================================
-
-AC_MSG_CHECKING([Enable libsocialweb support])
-AC_ARG_WITH([libsocialweb],
-   AS_HELP_STRING([--with-libsocialweb],
-                  [enable libsocialweb support]),,
-   [with_libsocialweb=no])
-AC_MSG_RESULT([$with_libsocialweb])
-
-if test "x$with_libsocialweb" == "xyes"; then
-  PKG_CHECK_MODULES(SOCIALWEB, libsocialweb-client)
-  AC_DEFINE(HAVE_LIBSOCIALWEB, 1, [Defined if libsocialweb is available])
-fi
-AM_CONDITIONAL(WITH_LIBSOCIALWEB, test "x$with_libsocialweb" = "xyes")
-
 
 CONTROL_CENTER_VERSION=cinnamon_control_center_version
 AC_SUBST(CONTROL_CENTER_VERSION)
@@ -362,11 +345,6 @@ if test "x$have_networkmanager" = "xyes"; then
 else
 	AC_MSG_NOTICE([   Network panel disabled])
 fi
-#if test "x$with_libsocialweb" = "xyes"; then
-#	AC_MSG_NOTICE([** libsocialweb (Background panel Flickr support)])
-#else
-#	AC_MSG_NOTICE([   Background panel Flickr support disabled])
-#fi
 #if test "x$with_systemd" = "xyes"; then
 #	AC_MSG_NOTICE([** systemd (Systemd session tracking)])
 #else
