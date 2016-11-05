@@ -31,6 +31,11 @@
 
 #include <libgnomekbd/gkbd-desktop-config.h>
 
+#define CINNAMON_DESKTOP_INTERFACE_SCHEMA "org.cinnamon.desktop.interface"
+#define CINNAMON_DESKTOP_FLAG_KEY "keyboard-layout-show-flags"
+#define CINNAMON_DESKTOP_VARIANT_KEY "keyboard-layout-prefer-variant-names"
+#define CINNAMON_DESKTOP_UPPER_CASE_KEY "keyboard-layout-use-upper"
+
 XklEngine *engine;
 XklConfigRegistry *config_registry;
 
@@ -39,6 +44,7 @@ GkbdDesktopConfig desktop_config;
 
 GSettings *xkb_keyboard_settings;
 GSettings *xkb_desktop_settings;
+GSettings *cinnamon_desktop_settings;
 
 char *
 xci_desc_to_utf8 (const XklConfigItem * ci)
@@ -88,6 +94,8 @@ setup_xkb_tabs (GtkBuilder * dialog)
 	xkb_desktop_settings = g_settings_new (GKBD_DESKTOP_SCHEMA);
 	xkb_keyboard_settings = g_settings_new (GKBD_KEYBOARD_SCHEMA);
 
+    cinnamon_desktop_settings = g_settings_new (CINNAMON_DESKTOP_INTERFACE_SCHEMA);
+
 	engine =
 	    xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY
 				     (gdk_display_get_default ()));
@@ -121,6 +129,24 @@ setup_xkb_tabs (GtkBuilder * dialog)
 			 GKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW,
 			 WID ("chk_new_windows_default_layout"), "sensitive",
 			 G_SETTINGS_BIND_DEFAULT);
+
+    g_settings_bind (cinnamon_desktop_settings,
+                     CINNAMON_DESKTOP_FLAG_KEY,
+                     WID ("country-flag-check"),
+                     "active",
+                     G_SETTINGS_BIND_DEFAULT);
+
+    g_settings_bind (cinnamon_desktop_settings,
+                     CINNAMON_DESKTOP_VARIANT_KEY,
+                     WID ("prefer-variant-check"),
+                     "active",
+                     G_SETTINGS_BIND_DEFAULT);
+
+    g_settings_bind (cinnamon_desktop_settings,
+                     CINNAMON_DESKTOP_UPPER_CASE_KEY,
+                     WID ("use-caps-check"),
+                     "active",
+                     G_SETTINGS_BIND_DEFAULT);
 
 	xkb_layouts_prepare_selected_tree (dialog);
 	xkb_layouts_fill_selected_tree (dialog);
