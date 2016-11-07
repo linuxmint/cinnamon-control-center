@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-23 16:08+0100\n"
+"POT-Creation-Date: 2016-11-07 10:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1621,18 +1621,36 @@ msgid "New windows use the previous window's layout"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:11
-msgid "_Options..."
+msgid "Display options"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:12
-msgid "View and edit keyboard layout options"
+msgid "Use a country flag, if available,  to represent keyboard layouts"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:13
-msgid "Reset to De_faults"
+msgid ""
+"Show the layout name instead of the group name when using text to represent "
+"a layout"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:14
+msgid "Prefer upper-case when using text to represent a layout"
+msgstr ""
+
+#: panels/region/cinnamon-region-panel.ui.h:15
+msgid "_Options..."
+msgstr ""
+
+#: panels/region/cinnamon-region-panel.ui.h:16
+msgid "View and edit keyboard layout options"
+msgstr ""
+
+#: panels/region/cinnamon-region-panel.ui.h:17
+msgid "Reset to De_faults"
+msgstr ""
+
+#: panels/region/cinnamon-region-panel.ui.h:18
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
