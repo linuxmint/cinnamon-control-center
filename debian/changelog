@@ -1,3 +1,26 @@
+cinnamon-control-center (3.2.0) serena; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Migrate away from gnome-common deprecated vars and macros
+
+  [ Clement Lefebvre ]
+  * Fixed build
+
+  [ leigh123linux ]
+  * Remove unused configure options
+  * network: Don't try to get secrets for new connections
+
+  [ Clement Lefebvre ]
+  * Generate additional files
+
+  [ Michael Webster ]
+  * region widget: Add keyboard layout display options.
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT file
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 Nov 2016 12:16:59 +0000
+
 cinnamon-control-center (3.0.1) sarah; urgency=medium
 
   [ brownsr ]
