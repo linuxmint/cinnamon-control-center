@@ -48,7 +48,9 @@
 #include "network-dialogs.h"
 #include "connection-editor/net-connection-editor.h"
 
+#ifdef BUILD_MODEM
 #include <libmm-glib.h>
+#endif
 
 CC_PANEL_REGISTER (CcNetworkPanel, cc_network_panel)
 
@@ -70,7 +72,11 @@ struct _CcNetworkPanelPrivate
         GtkBuilder       *builder;
         GtkWidget        *treeview;
         NMClient         *client;
+#ifdef BUILD_MODEM
         MMManager        *modem_manager;
+#else
+        void             *modem_manager;
+#endif
         NMRemoteSettings *remote_settings;
         gboolean          updating_device;
         guint             nm_warning_idle;
@@ -1435,7 +1441,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
                           G_CALLBACK (device_added_cb), panel);
         g_signal_connect (panel->priv->client, "device-removed",
                           G_CALLBACK (device_removed_cb), panel);
-
+#ifdef BUILD_MODEM
         /* Setup ModemManager client */
         system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
         if (system_bus == NULL) {
@@ -1454,7 +1460,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
                 }
                 g_object_unref (system_bus);
         }
-
+#else
+        panel->priv->modem_manager = NULL;
+#endif
         widget = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
                                                      "add_toolbutton"));
         g_signal_connect (widget, "clicked",

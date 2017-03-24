@@ -2,7 +2,6 @@ NULL =
 
 enabled_panels = \
 	common \
-	color \
 	display \
 	region \
 	datetime
@@ -13,6 +12,12 @@ if BUILD_NETWORK
 enabled_panels += network
 else
 disabled_panels += network
+endif
+
+if BUILD_COLOR
+enabled_panels += color
+else
+disabled_panels += color
 endif
 
 if BUILD_WACOM
