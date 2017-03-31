@@ -67,7 +67,7 @@ enum {
 struct _CcWacomPagePrivate
 {
 	CcWacomPanel   *panel;
-	CsdWacomDevice *stylus, *eraser, *pad;
+	CsdWacomDevice *stylus, *pad;
 	GtkBuilder     *builder;
 	GtkWidget      *nav;
 	GtkWidget      *notebook;
@@ -1200,7 +1200,7 @@ add_styli (CcWacomPage *page)
 	styli = csd_wacom_device_list_styli (priv->stylus);
 
 	for (l = styli; l; l = l->next) {
-		CsdWacomStylus *stylus, *eraser;
+		CsdWacomStylus *stylus;
 		GtkWidget *page;
 
 		stylus = l->data;
@@ -1208,15 +1208,7 @@ add_styli (CcWacomPage *page)
 		if (csd_wacom_stylus_get_stylus_type (stylus) == WACOM_STYLUS_TYPE_PUCK)
 			continue;
 
-		if (csd_wacom_stylus_get_has_eraser (stylus)) {
-			CsdWacomDeviceType type;
-			type = csd_wacom_stylus_get_stylus_type (stylus);
-			eraser = csd_wacom_device_get_stylus_for_type (priv->eraser, type);
-		} else {
-			eraser = NULL;
-		}
-
-		page = cc_wacom_stylus_page_new (stylus, eraser);
+		page = cc_wacom_stylus_page_new (stylus);
 		cc_wacom_stylus_page_set_navigation (CC_WACOM_STYLUS_PAGE (page), GTK_NOTEBOOK (priv->notebook));
 		gtk_widget_show (page);
 		gtk_notebook_append_page (GTK_NOTEBOOK (priv->notebook), page, NULL);
@@ -1321,7 +1313,6 @@ update_tablet_ui (CcWacomPage *page,
 gboolean
 cc_wacom_page_update_tools (CcWacomPage    *page,
 			    CsdWacomDevice *stylus,
-			    CsdWacomDevice *eraser,
 			    CsdWacomDevice *pad)
 {
 	CcWacomPagePrivate *priv;
@@ -1332,12 +1323,11 @@ cc_wacom_page_update_tools (CcWacomPage    *page,
 	layout = get_layout_type (stylus);
 
 	priv = page->priv;
-	changed = (priv->stylus != stylus || priv->eraser != eraser || priv->pad != pad);
+	changed = (priv->stylus != stylus || priv->pad != pad);
 	if (!changed)
 		return FALSE;
 
 	priv->stylus = stylus;
-	priv->eraser = eraser;
 	priv->pad = pad;
 
 	update_tablet_ui (CC_WACOM_PAGE (page), layout);
@@ -1348,7 +1338,6 @@ cc_wacom_page_update_tools (CcWacomPage    *page,
 GtkWidget *
 cc_wacom_page_new (CcWacomPanel   *panel,
 		   CsdWacomDevice *stylus,
-		   CsdWacomDevice *eraser,
 		   CsdWacomDevice *pad)
 {
 	CcWacomPage *page;
@@ -1356,9 +1345,6 @@ cc_wacom_page_new (CcWacomPanel   *panel,
 
 	g_return_val_if_fail (CSD_IS_WACOM_DEVICE (stylus), NULL);
 	g_return_val_if_fail (csd_wacom_device_get_device_type (stylus) == WACOM_TYPE_STYLUS, NULL);
-
-	g_return_val_if_fail (CSD_IS_WACOM_DEVICE (eraser), NULL);
-	g_return_val_if_fail (csd_wacom_device_get_device_type (eraser) == WACOM_TYPE_ERASER, NULL);
 
 	if (pad != NULL)
 		g_return_val_if_fail (csd_wacom_device_get_device_type (pad) == WACOM_TYPE_PAD, NULL);
@@ -1368,7 +1354,7 @@ cc_wacom_page_new (CcWacomPanel   *panel,
 	priv = page->priv;
 	priv->panel = panel;
 
-	cc_wacom_page_update_tools (page, stylus, eraser, pad);
+	cc_wacom_page_update_tools (page, stylus, pad);
 
 	/* FIXME move this to construct */
 	priv->wacom_settings  = csd_wacom_device_get_settings (stylus);

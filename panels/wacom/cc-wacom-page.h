@@ -71,12 +71,10 @@ GType cc_wacom_page_get_type (void) G_GNUC_CONST;
 
 GtkWidget * cc_wacom_page_new (CcWacomPanel   *panel,
 			       CsdWacomDevice *stylus,
-			       CsdWacomDevice *eraser,
 			       CsdWacomDevice *pad);
 
 gboolean cc_wacom_page_update_tools (CcWacomPage    *page,
 				     CsdWacomDevice *stylus,
-				     CsdWacomDevice *eraser,
 				     CsdWacomDevice *pad);
 
 void cc_wacom_page_set_navigation (CcWacomPage *page,

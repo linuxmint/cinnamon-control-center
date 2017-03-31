@@ -68,8 +68,7 @@ struct _CcWacomStylusPageClass
 
 GType cc_wacom_stylus_page_get_type (void) G_GNUC_CONST;
 
-GtkWidget * cc_wacom_stylus_page_new (CsdWacomStylus *stylus,
-				      CsdWacomStylus *eraser);
+GtkWidget * cc_wacom_stylus_page_new (CsdWacomStylus *stylus);
 
 CsdWacomStylus * cc_wacom_stylus_page_get_stylus (CcWacomStylusPage *page);
 
