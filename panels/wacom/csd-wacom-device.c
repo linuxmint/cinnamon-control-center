@@ -121,8 +121,10 @@ csd_wacom_stylus_finalize (GObject *object)
 }
 
 static const char *
-get_icon_name_from_type (WacomStylusType type)
+get_icon_name_from_type (const WacomStylusType *wstylus)
 {
+	WacomStylusType type = libwacom_stylus_get_type (wstylus);
+
 	switch (type) {
 	case WSTYLUS_INKING:
 	case WSTYLUS_STROKE:
@@ -136,6 +138,8 @@ get_icon_name_from_type (WacomStylusType type)
 	case WSTYLUS_CLASSIC:
 		return "wacom-stylus-classic";
 	default:
+		if (!libwacom_stylus_has_eraser (wstylus))
+			return "wacom-stylus-no-eraser";
 		return "wacom-stylus";
 	}
 }
@@ -157,7 +161,7 @@ csd_wacom_stylus_new (CsdWacomDevice    *device,
 	stylus->priv->name = g_strdup (libwacom_stylus_get_name (wstylus));
 	stylus->priv->settings = settings;
 	stylus->priv->type = libwacom_stylus_get_type (wstylus);
-	stylus->priv->icon_name = get_icon_name_from_type (stylus->priv->type);
+	stylus->priv->icon_name = get_icon_name_from_type (wstylus);
 	stylus->priv->has_eraser = libwacom_stylus_has_eraser (wstylus);
 	stylus->priv->num_buttons = libwacom_stylus_get_num_buttons (wstylus);
 
