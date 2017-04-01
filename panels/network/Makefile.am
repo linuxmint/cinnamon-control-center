@@ -63,7 +63,11 @@ if HAVE_NM_UNSTABLE
 libnetwork_la_SOURCES += $(TEAM_FILES)
 endif
 
+if BUILD_MODEM
+libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(MODEM_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la
+else
 libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la
+endif
 
 libnetwork_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
 
