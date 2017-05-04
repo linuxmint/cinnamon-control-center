@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-07 10:07+0000\n"
+"POT-Creation-Date: 2017-05-04 13:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -333,21 +333,21 @@ msgstr ""
 msgid "Could not get screen information"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:367
+#: panels/network/cc-network-panel.c:373
 msgid "Air_plane Mode"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:966
+#: panels/network/cc-network-panel.c:972
 msgid "Network Proxy"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1145 panels/network/net-vpn.c:278
+#: panels/network/cc-network-panel.c:1151 panels/network/net-vpn.c:278
 #: panels/network/net-vpn.c:431
 #, c-format
 msgid "%s VPN"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1290
+#: panels/network/cc-network-panel.c:1296
 msgid "The system network services are not compatible with this version."
 msgstr ""
 
@@ -885,7 +885,7 @@ msgstr ""
 msgid "Switch Modes"
 msgstr ""
 
-#: panels/wacom/cc-wacom-page.c:753 panels/wacom/cc-wacom-stylus-page.c:373
+#: panels/wacom/cc-wacom-page.c:753 panels/wacom/cc-wacom-stylus-page.c:378
 msgid "Button"
 msgstr ""
 
@@ -901,79 +901,79 @@ msgstr ""
 msgid "Display Mapping"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1082
+#: panels/wacom/csd-wacom-device.c:1086
 msgid "Left Ring"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1092
+#: panels/wacom/csd-wacom-device.c:1096
 #, c-format
 msgid "Left Ring Mode #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1111
+#: panels/wacom/csd-wacom-device.c:1115
 msgid "Right Ring"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1121
+#: panels/wacom/csd-wacom-device.c:1125
 #, c-format
 msgid "Right Ring Mode #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1162
+#: panels/wacom/csd-wacom-device.c:1166
 msgid "Left Touchstrip"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1172
+#: panels/wacom/csd-wacom-device.c:1176
 #, c-format
 msgid "Left Touchstrip Mode #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1191
+#: panels/wacom/csd-wacom-device.c:1195
 msgid "Right Touchstrip"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1201
+#: panels/wacom/csd-wacom-device.c:1205
 #, c-format
 msgid "Right Touchstrip Mode #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1226
+#: panels/wacom/csd-wacom-device.c:1230
 msgid "Left Touchring Mode Switch"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1228
+#: panels/wacom/csd-wacom-device.c:1232
 msgid "Right Touchring Mode Switch"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1231
+#: panels/wacom/csd-wacom-device.c:1235
 msgid "Left Touchstrip Mode Switch"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1233
+#: panels/wacom/csd-wacom-device.c:1237
 msgid "Right Touchstrip Mode Switch"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1238
+#: panels/wacom/csd-wacom-device.c:1242
 #, c-format
 msgid "Mode Switch #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1342
+#: panels/wacom/csd-wacom-device.c:1346
 #, c-format
 msgid "Left Button #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1345
+#: panels/wacom/csd-wacom-device.c:1349
 #, c-format
 msgid "Right Button #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1348
+#: panels/wacom/csd-wacom-device.c:1352
 #, c-format
 msgid "Top Button #%d"
 msgstr ""
 
-#: panels/wacom/csd-wacom-device.c:1351
+#: panels/wacom/csd-wacom-device.c:1355
 #, c-format
 msgid "Bottom Button #%d"
 msgstr ""
