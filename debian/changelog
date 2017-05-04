@@ -1,3 +1,25 @@
+cinnamon-control-center (3.4.0) sonya; urgency=medium
+
+  [ Garry Filakhtov ]
+  * making colord optional
+  * 1. Optional networkmanager/modemmanages
+
+  [ Clement Lefebvre ]
+  * wacom: do not bail out if the tablet doesn't have an eraser
+  * wacom: add an icon for stylii without an eraser
+  * wacom: Allow button mapping if the stylus has one button too
+  * wacom: Add margins to the UI
+  * Fix Network module
+  * display: Fix csd-xrandr DBUS name
+
+  [ leigh123linux ]
+  * remove aclocal from autogen
+
+  [ Clement Lefebvre ]
+  * l10n: Generate additional files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 04 May 2017 13:29:40 +0100
+
 cinnamon-control-center (3.2.1) serena; urgency=medium
 
   [ leigh123linux ]
