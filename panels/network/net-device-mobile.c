@@ -23,19 +23,14 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
-#include <nm-client.h>
-#include <nm-device.h>
-#include <nm-device-modem.h>
-#include <nm-remote-connection.h>
-#include <nm-mobile-providers.h>
+#include <NetworkManager.h>
+#include <libmm-glib.h>
+#include <nma-mobile-providers.h>
 
 #include "panel-common.h"
 #include "network-dialogs.h"
-
-#include <libmm-glib.h>
-
 #include "net-device-mobile.h"
 
 #define NET_DEVICE_MOBILE_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), NET_TYPE_DEVICE_MOBILE, NetDeviceMobilePrivate))
@@ -95,16 +90,16 @@ device_mobile_proxy_add_to_notebook (NetObject *object,
 }
 
 static void
-connection_activate_cb (NMClient *client,
-                        NMActiveConnection *connection,
-                        GError *error,
+connection_activate_cb (GObject *source_object,
+                        GAsyncResult *res,
                         gpointer user_data)
 {
-        NetDeviceMobile *device_mobile = NET_DEVICE_MOBILE (user_data);
+        GError *error = NULL;
 
-        if (connection == NULL) {
+        if (!nm_client_activate_connection_finish (NM_CLIENT (source_object), res, &error)) {
                 /* failed to activate */
-                nm_device_mobile_refresh_ui (device_mobile);
+                nm_device_mobile_refresh_ui (user_data);
+                g_error_free (error);
         }
 }
 
@@ -118,8 +113,8 @@ mobile_connection_changed_cb (GtkComboBox *combo_box, NetDeviceMobile *device_mo
         NMConnection *connection;
         NMDevice *device;
         NMClient *client;
-        NMRemoteSettings *remote_settings;
         CcNetworkPanel *panel;
+        GtkWidget *toplevel;
 
         if (device_mobile->priv->updating_device)
                 goto out;
@@ -132,7 +127,6 @@ mobile_connection_changed_cb (GtkComboBox *combo_box, NetDeviceMobile *device_mo
         if (device == NULL)
                 goto out;
         client = net_object_get_client (NET_OBJECT (device_mobile));
-        remote_settings = net_object_get_remote_settings (NET_OBJECT (device_mobile));
 
         /* get entry */
         model = gtk_combo_box_get_model (GTK_COMBO_BOX (combo_box));
@@ -141,24 +135,23 @@ mobile_connection_changed_cb (GtkComboBox *combo_box, NetDeviceMobile *device_mo
                             -1);
         if (g_strcmp0 (object_path, NULL) == 0) {
                 panel = net_object_get_panel (NET_OBJECT (device_mobile));
-                cc_network_panel_connect_to_3g_network (GTK_WIDGET (panel),
+                toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)));
+                cc_network_panel_connect_to_3g_network (toplevel,
                                                         client,
-                                                        remote_settings,
                                                         device);
                 goto out;
         }
 
         /* activate the connection */
         g_debug ("try to switch to connection %s", object_path);
-        connection = (NMConnection*) nm_remote_settings_get_connection_by_path (remote_settings,
-                                                                                object_path);
+        connection = (NMConnection*) nm_client_get_connection_by_path (client, object_path);
         if (connection != NULL) {
                 nm_device_disconnect (device, NULL, NULL);
-                nm_client_activate_connection (client,
-                                               connection,
-                                               device, NULL,
-                                               connection_activate_cb,
-                                               device_mobile);
+                nm_client_activate_connection_async (client,
+                                                     connection,
+                                                     device, NULL, NULL,
+                                                     connection_activate_cb,
+                                                     device_mobile);
                 goto out;
         }
 out:
@@ -170,7 +163,7 @@ mobilebb_enabled_toggled (NMClient       *client,
                           GParamSpec     *pspec,
                           NetDeviceMobile *device_mobile)
 {
-        gboolean enabled;
+        gboolean enabled = FALSE;
         GtkSwitch *sw;
         NMDevice *device;
 
@@ -178,7 +171,22 @@ mobilebb_enabled_toggled (NMClient       *client,
         if (nm_device_get_device_type (device) != NM_DEVICE_TYPE_MODEM)
                 return;
 
-        enabled = nm_client_wwan_get_enabled (client);
+        if (nm_client_wwan_get_enabled (client)) {
+                NMDeviceState state;
+
+                state = nm_device_get_state (device);
+                if (state == NM_DEVICE_STATE_UNKNOWN ||
+                    state == NM_DEVICE_STATE_UNMANAGED ||
+                    state == NM_DEVICE_STATE_UNAVAILABLE ||
+                    state == NM_DEVICE_STATE_DISCONNECTED ||
+                    state == NM_DEVICE_STATE_DEACTIVATING ||
+                    state == NM_DEVICE_STATE_FAILED) {
+                        enabled = FALSE;
+                } else {
+                        enabled = TRUE;
+                }
+        }
+
         sw = GTK_SWITCH (gtk_builder_get_object (device_mobile->priv->builder,
                                                  "device_off_switch"));
 
@@ -214,8 +222,8 @@ device_add_device_connections (NetDeviceMobile *device_mobile,
 
                 /* is this already activated? */
                 if (active_connection != NULL &&
-                    g_strcmp0 (nm_connection_get_path (connection),
-                               nm_active_connection_get_connection (active_connection)) == 0) {
+                    g_strcmp0 (nm_connection_get_uuid (connection),
+                               nm_active_connection_get_uuid (active_connection)) == 0) {
                         priv->updating_device = TRUE;
                         gtk_combo_box_set_active_iter (combobox, &treeiter);
                         priv->updating_device = FALSE;
@@ -432,7 +440,6 @@ device_off_toggled (GtkSwitch *sw,
                     GParamSpec *pspec,
                     NetDeviceMobile *device_mobile)
 {
-        const gchar *path;
         const GPtrArray *acs;
         gboolean active;
         gint i;
@@ -449,21 +456,23 @@ device_off_toggled (GtkSwitch *sw,
                 connection = net_device_get_find_connection (NET_DEVICE (device_mobile));
                 if (connection == NULL)
                         return;
-                nm_client_activate_connection (client,
-                                               connection,
-                                               net_device_get_nm_device (NET_DEVICE (device_mobile)),
-                                               NULL, NULL, NULL);
+                nm_client_activate_connection_async (client,
+                                                     connection,
+                                                     net_device_get_nm_device (NET_DEVICE (device_mobile)),
+                                                     NULL, NULL, NULL, NULL);
         } else {
+                const gchar *uuid;
+
                 connection = net_device_get_find_connection (NET_DEVICE (device_mobile));
                 if (connection == NULL)
                         return;
-                path = nm_connection_get_path (connection);
+                uuid = nm_connection_get_uuid (connection);
                 client = net_object_get_client (NET_OBJECT (device_mobile));
                 acs = nm_client_get_active_connections (client);
                 for (i = 0; acs && i < acs->len; i++) {
                         a = (NMActiveConnection*)acs->pdata[i];
-                        if (strcmp (nm_active_connection_get_connection (a), path) == 0) {
-                                nm_client_deactivate_connection (client, a);
+                        if (strcmp (nm_active_connection_get_uuid (a), uuid) == 0) {
+                                nm_client_deactivate_connection (client, a, NULL, NULL);
                                 break;
                         }
                 }
@@ -765,9 +774,9 @@ net_device_mobile_constructed (GObject *object)
         }
 
         client = net_object_get_client (NET_OBJECT (device_mobile));
-        g_signal_connect (client, "notify::wwan-enabled",
-                          G_CALLBACK (mobilebb_enabled_toggled),
-                          device_mobile);
+        g_signal_connect_object (client, "notify::wwan-enabled",
+                                 G_CALLBACK (mobilebb_enabled_toggled),
+                                 device_mobile, 0);
         nm_device_mobile_refresh_ui (device_mobile);
 }
 
@@ -896,7 +905,6 @@ net_device_mobile_init (NetDeviceMobile *device_mobile)
         device_mobile->priv = NET_DEVICE_MOBILE_GET_PRIVATE (device_mobile);
 
         device_mobile->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (device_mobile->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device_mobile->priv->builder,
                                        "/org/cinnamon/control-center/network/network-mobile.ui",
                                        &error);

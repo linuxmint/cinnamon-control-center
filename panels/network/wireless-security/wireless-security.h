@@ -17,16 +17,13 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2007 - 2010 Red Hat, Inc.
+ * Copyright 2007 - 2014 Red Hat, Inc.
  */
 
 #ifndef WIRELESS_SECURITY_H
 #define WIRELESS_SECURITY_H
 
-#include <glib.h>
 #include <gtk/gtk.h>
-
-#include <nm-connection.h>
 
 typedef struct _WirelessSecurity WirelessSecurity;
 
@@ -36,7 +33,7 @@ typedef void (*WSAddToSizeGroupFunc) (WirelessSecurity *sec, GtkSizeGroup *group
 typedef void (*WSFillConnectionFunc) (WirelessSecurity *sec, NMConnection *connection);
 typedef void (*WSUpdateSecretsFunc)  (WirelessSecurity *sec, NMConnection *connection);
 typedef void (*WSDestroyFunc)        (WirelessSecurity *sec);
-typedef gboolean (*WSValidateFunc)   (WirelessSecurity *sec, const GByteArray *ssid);
+typedef gboolean (*WSValidateFunc)   (WirelessSecurity *sec, GError **error);
 typedef GtkWidget * (*WSNagUserFunc) (WirelessSecurity *sec);
 
 struct _WirelessSecurity {
@@ -48,12 +45,15 @@ struct _WirelessSecurity {
 	gpointer changed_notify_data;
 	const char *default_field;
 	gboolean adhoc_compatible;
+	gboolean hotspot_compatible;
+
+	char *username, *password;
+	gboolean always_ask, show_password;
 
 	WSAddToSizeGroupFunc add_to_size_group;
 	WSFillConnectionFunc fill_connection;
 	WSUpdateSecretsFunc update_secrets;
 	WSValidateFunc validate;
-	WSNagUserFunc nag_user;
 	WSDestroyFunc destroy;
 };
 
@@ -66,7 +66,7 @@ void wireless_security_set_changed_notify (WirelessSecurity *sec,
                                            WSChangedFunc func,
                                            gpointer user_data);
 
-gboolean wireless_security_validate (WirelessSecurity *sec, const GByteArray *ssid);
+gboolean wireless_security_validate (WirelessSecurity *sec, GError **error);
 
 void wireless_security_add_to_size_group (WirelessSecurity *sec,
                                           GtkSizeGroup *group);
@@ -77,15 +77,23 @@ void wireless_security_fill_connection (WirelessSecurity *sec,
 void wireless_security_update_secrets (WirelessSecurity *sec,
                                        NMConnection *connection);
 
-GtkWidget * wireless_security_nag_user (WirelessSecurity *sec);
-
 gboolean wireless_security_adhoc_compatible (WirelessSecurity *sec);
+
+gboolean wireless_security_hotspot_compatible (WirelessSecurity *sec);
+
+void wireless_security_set_userpass (WirelessSecurity *sec,
+                                     const char *user,
+                                     const char *password,
+                                     gboolean always_ask,
+                                     gboolean show_password);
+void wireless_security_set_userpass_802_1x (WirelessSecurity *sec,
+                                            NMConnection *connection);
 
 WirelessSecurity *wireless_security_ref (WirelessSecurity *sec);
 
 void wireless_security_unref (WirelessSecurity *sec);
 
-GType wireless_security_get_g_type (void);
+GType wireless_security_get_type (void);
 
 /* Below for internal use only */
 
@@ -125,7 +133,7 @@ void ws_802_1x_auth_combo_changed (GtkWidget *combo,
                                    const char *vbox_name,
                                    GtkSizeGroup *size_group);
 
-gboolean ws_802_1x_validate (WirelessSecurity *sec, const char *combo_name);
+gboolean ws_802_1x_validate (WirelessSecurity *sec, const char *combo_name, GError **error);
 
 void ws_802_1x_add_to_size_group (WirelessSecurity *sec,
                                   GtkSizeGroup *size_group,
@@ -139,9 +147,6 @@ void ws_802_1x_fill_connection (WirelessSecurity *sec,
 void ws_802_1x_update_secrets (WirelessSecurity *sec,
                                const char *combo_name,
                                NMConnection *connection);
-
-GtkWidget * ws_802_1x_nag_user (WirelessSecurity *sec,
-                                const char *combo_name);
 
 #endif /* WIRELESS_SECURITY_H */
 

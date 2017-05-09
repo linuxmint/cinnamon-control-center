@@ -22,14 +22,12 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
+#include <NetworkManager.h>
 
 #include "panel-common.h"
 
 #include "net-vpn.h"
-#include "nm-client.h"
-#include "nm-remote-connection.h"
-#include "nm-setting-vpn.h"
 
 #include "connection-editor/net-connection-editor.h"
 
@@ -54,9 +52,9 @@ enum {
 G_DEFINE_TYPE (NetVpn, net_vpn, NET_TYPE_OBJECT)
 
 static void
-connection_vpn_state_changed_cb (NMVPNConnection *connection,
-                                 NMVPNConnectionState state,
-                                 NMVPNConnectionStateReason reason,
+connection_vpn_state_changed_cb (NMVpnConnection *connection,
+                                 NMVpnConnectionState state,
+                                 NMVpnConnectionStateReason reason,
                                  NetVpn *vpn)
 {
         net_object_emit_changed (NET_OBJECT (vpn));
@@ -70,10 +68,14 @@ connection_changed_cb (NMConnection *connection,
 }
 
 static void
-connection_removed_cb (NMConnection *connection,
-                       NetVpn *vpn)
+connection_removed_cb (NMClient     *client,
+                       NMConnection *connection,
+                       NetVpn       *vpn)
 {
-        net_object_emit_removed (NET_OBJECT (vpn));
+        NetVpnPrivate *priv = vpn->priv;
+
+        if (priv->connection == connection)
+                net_object_emit_removed (NET_OBJECT (vpn));
 }
 
 static char *
@@ -91,8 +93,10 @@ static void
 net_vpn_set_connection (NetVpn *vpn, NMConnection *connection)
 {
         NetVpnPrivate *priv = vpn->priv;
+        NMClient *client;
+
         /*
-         * vpnc config example:
+         * vpnc config exmaple:
          * key=IKE DH Group, value=dh2
          * key=xauth-password-type, value=ask
          * key=ipsec-secret-type, value=save
@@ -102,14 +106,17 @@ net_vpn_set_connection (NetVpn *vpn, NMConnection *connection)
          * key=Xauth username, value=rhughes
          */
         priv->connection = g_object_ref (connection);
-        g_signal_connect (priv->connection,
-                          NM_REMOTE_CONNECTION_REMOVED,
+
+        client = net_object_get_client (NET_OBJECT (vpn));
+        g_signal_connect (client,
+                          NM_CLIENT_CONNECTION_REMOVED,
                           G_CALLBACK (connection_removed_cb),
                           vpn);
-        g_signal_connect (priv->connection,
-                          NM_REMOTE_CONNECTION_UPDATED,
+        g_signal_connect (connection,
+                          NM_CONNECTION_CHANGED,
                           G_CALLBACK (connection_changed_cb),
                           vpn);
+
         if (NM_IS_VPN_CONNECTION (priv->connection)) {
                 g_signal_connect (priv->connection,
                                   NM_VPN_CONNECTION_VPN_STATE,
@@ -120,7 +127,7 @@ net_vpn_set_connection (NetVpn *vpn, NMConnection *connection)
         priv->service_type = net_vpn_connection_to_type (priv->connection);
 }
 
-static NMVPNConnectionState
+static NMVpnConnectionState
 net_vpn_get_state (NetVpn *vpn)
 {
         NetVpnPrivate *priv = vpn->priv;
@@ -130,11 +137,11 @@ net_vpn_get_state (NetVpn *vpn)
 }
 
 /* VPN parameters can be found at:
- * http://git.cinnamon.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
- * http://git.cinnamon.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
- * http://git.cinnamon.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
- * http://git.cinnamon.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
- * http://git.cinnamon.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
+ * http://git.gnome.org/browse/network-manager-openvpn/tree/src/nm-openvpn-service.h
+ * http://git.gnome.org/browse/network-manager-vpnc/tree/src/nm-vpnc-service.h
+ * http://git.gnome.org/browse/network-manager-pptp/tree/src/nm-pptp-service.h
+ * http://git.gnome.org/browse/network-manager-openconnect/tree/src/nm-openconnect-service.h
+ * http://git.gnome.org/browse/network-manager-openswan/tree/src/nm-openswan-service.h
  * See also 'properties' directory in these plugins.
  */
 static const gchar *
@@ -225,8 +232,8 @@ static void
 vpn_proxy_delete (NetObject *object)
 {
         NetVpn *vpn = NET_VPN (object);
-        nm_remote_connection_delete (NM_REMOTE_CONNECTION (vpn->priv->connection),
-                                     NULL, vpn);
+        nm_remote_connection_delete_async (NM_REMOTE_CONNECTION (vpn->priv->connection),
+                                           NULL, NULL, vpn);
 }
 
 static GtkWidget *
@@ -258,9 +265,7 @@ nm_device_refresh_vpn_ui (NetVpn *vpn)
         const GPtrArray *acs;
         NMActiveConnection *a;
         gint i;
-        const gchar *path;
-        const gchar *apath;
-        NMVPNConnectionState state;
+        NMVpnConnectionState state;
         gchar *title;
         NMClient *client;
 
@@ -293,12 +298,16 @@ nm_device_refresh_vpn_ui (NetVpn *vpn)
         client = net_object_get_client (NET_OBJECT (vpn));
         acs = nm_client_get_active_connections (client);
         if (acs != NULL) {
-                path = nm_connection_get_path (vpn->priv->connection);
+                const gchar *uuid;
+
+                uuid = nm_connection_get_uuid (vpn->priv->connection);
                 for (i = 0; i < acs->len; i++) {
+                        const gchar *auuid;
+
                         a = (NMActiveConnection*)acs->pdata[i];
 
-                        apath = nm_active_connection_get_connection (a);
-                        if (NM_IS_VPN_CONNECTION (a) && strcmp (apath, path) == 0) {
+                        auuid = nm_active_connection_get_uuid (a);
+                        if (NM_IS_VPN_CONNECTION (a) && strcmp (auuid, uuid) == 0) {
                                 priv->active_connection = g_object_ref (a);
                                 g_signal_connect_swapped (a, "notify::vpn-state",
                                                           G_CALLBACK (nm_device_refresh_vpn_ui),
@@ -363,7 +372,6 @@ device_off_toggled (GtkSwitch *sw,
                     GParamSpec *pspec,
                     NetVpn *vpn)
 {
-        const gchar *path;
         const GPtrArray *acs;
         gboolean active;
         gint i;
@@ -376,17 +384,19 @@ device_off_toggled (GtkSwitch *sw,
         active = gtk_switch_get_active (sw);
         if (active) {
                 client = net_object_get_client (NET_OBJECT (vpn));
-                nm_client_activate_connection (client,
-                                               vpn->priv->connection, NULL, NULL,
-                                               NULL, NULL);
+                nm_client_activate_connection_async (client,
+                                                     vpn->priv->connection, NULL, NULL,
+                                                     NULL, NULL, NULL);
         } else {
-                path = nm_connection_get_path (vpn->priv->connection);
+                const gchar *uuid;
+
+                uuid = nm_connection_get_uuid (vpn->priv->connection);
                 client = net_object_get_client (NET_OBJECT (vpn));
                 acs = nm_client_get_active_connections (client);
                 for (i = 0; acs && i < acs->len; i++) {
                         a = (NMActiveConnection*)acs->pdata[i];
-                        if (strcmp (nm_active_connection_get_connection (a), path) == 0) {
-                                nm_client_deactivate_connection (client, a);
+                        if (strcmp (nm_active_connection_get_uuid (a), uuid) == 0) {
+                                nm_client_deactivate_connection (client, a, NULL, NULL);
                                 break;
                         }
                 }
@@ -406,6 +416,7 @@ editor_done (NetConnectionEditor *editor,
 {
         g_object_unref (editor);
         net_object_refresh (NET_OBJECT (vpn));
+        g_object_unref (vpn);
 }
 
 static void
@@ -415,7 +426,6 @@ vpn_proxy_edit (NetObject *object)
         GtkWidget *button, *window;
         NetConnectionEditor *editor;
         NMClient *client;
-        NMRemoteSettings *settings;
         gchar *title;
 
         button = GTK_WIDGET (gtk_builder_get_object (vpn->priv->builder,
@@ -423,16 +433,15 @@ vpn_proxy_edit (NetObject *object)
         window = gtk_widget_get_toplevel (button);
 
         client = net_object_get_client (object);
-        settings = net_object_get_remote_settings (object);
 
         editor = net_connection_editor_new (GTK_WINDOW (window),
                                             vpn->priv->connection,
-                                            NULL, NULL, client, settings);
+                                            NULL, NULL, client);
         title = g_strdup_printf (_("%s VPN"), nm_connection_get_id (vpn->priv->connection));
         net_connection_editor_set_title (editor, title);
         g_free (title);
 
-        g_signal_connect (editor, "done", G_CALLBACK (editor_done), vpn);
+        g_signal_connect (editor, "done", G_CALLBACK (editor_done), g_object_ref (vpn));
         net_connection_editor_run (editor);
 }
 
@@ -503,9 +512,11 @@ net_vpn_finalize (GObject *object)
         NetVpnPrivate *priv = vpn->priv;
         NMClient *client = net_object_get_client (NET_OBJECT (object));
 
-        g_signal_handlers_disconnect_by_func (client,
-                                              nm_active_connections_changed,
-                                              vpn);
+        if (client) {
+                g_signal_handlers_disconnect_by_func (client,
+                                                      nm_active_connections_changed,
+                                                      vpn);
+        }
 
         if (priv->active_connection) {
                 g_signal_handlers_disconnect_by_func (priv->active_connection,
@@ -564,7 +575,6 @@ net_vpn_init (NetVpn *vpn)
         vpn->priv = NET_VPN_GET_PRIVATE (vpn);
 
         vpn->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (vpn->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (vpn->priv->builder,
                                        "/org/cinnamon/control-center/network/network-vpn.ui",
                                        &error);

@@ -17,14 +17,13 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2007 - 2010 Red Hat, Inc.
+ * Copyright 2007 - 2014 Red Hat, Inc.
  */
 
-#include <config.h>
-#include <glib/gi18n-lib.h>
+#include "nm-default.h"
+
 #include <ctype.h>
 #include <string.h>
-#include <nm-setting-wireless.h>
 
 #include "wireless-security.h"
 #include "eap-method.h"
@@ -46,9 +45,9 @@ destroy (WirelessSecurity *parent)
 }
 
 static gboolean
-validate (WirelessSecurity *parent, const GByteArray *ssid)
+validate (WirelessSecurity *parent, GError **error)
 {
-	return ws_802_1x_validate (parent, "wpa_eap_auth_combo");
+	return ws_802_1x_validate (parent, "wpa_eap_auth_combo", error);
 }
 
 static void
@@ -91,12 +90,6 @@ auth_combo_changed_cb (GtkWidget *combo, gpointer user_data)
 	                              sec->size_group);
 }
 
-static GtkWidget *
-nag_user (WirelessSecurity *parent)
-{
-	return ws_802_1x_nag_user (parent, "wpa_eap_auth_combo");
-}
-
 static void
 update_secrets (WirelessSecurity *parent, NMConnection *connection)
 {
@@ -123,8 +116,8 @@ ws_wpa_eap_new (NMConnection *connection,
 	if (!parent)
 		return NULL;
 
-	parent->nag_user = nag_user;
 	parent->adhoc_compatible = FALSE;
+	parent->hotspot_compatible = FALSE;
 
 	widget = ws_802_1x_auth_combo_init (parent,
 	                                    "wpa_eap_auth_combo",

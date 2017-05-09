@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <gio/gio.h>
 
 #include "net-proxy.h"
@@ -311,7 +311,6 @@ net_proxy_init (NetProxy *proxy)
         proxy->priv = NET_PROXY_GET_PRIVATE (proxy);
 
         proxy->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (proxy->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (proxy->priv->builder,
                                        "/org/cinnamon/control-center/network/network-proxy.ui",
                                        &error);
@@ -399,6 +398,12 @@ net_proxy_init (NetProxy *proxy)
                          G_SETTINGS_BIND_DEFAULT);
         g_object_unref (settings_tmp);
 
+        /* set header to something sane */
+        widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
+                                                     "image_proxy_device"));
+        gtk_image_set_from_icon_name (GTK_IMAGE (widget),
+                                      "preferences-system-network",
+                                      GTK_ICON_SIZE_DIALOG);
         widget = GTK_WIDGET (gtk_builder_get_object (proxy->priv->builder,
                                                      "label_proxy_device"));
         gtk_label_set_label (GTK_LABEL (widget),

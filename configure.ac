@@ -96,8 +96,8 @@ PA_REQUIRED_VERSION=1.1
 CANBERRA_REQUIRED_VERSION=0.13
 GDKPIXBUF_REQUIRED_VERSION=2.23.0
 POLKIT_REQUIRED_VERSION=0.103
-NETWORK_MANAGER_REQUIRED_VERSION=0.9.8
-NETWORK_MANAGER_APPLET_REQUIRED_VERSION=0.9.7.995
+NETWORK_MANAGER_REQUIRED_VERSION=1.2.0
+NETWORK_MANAGER_APPLET_REQUIRED_VERSION=1.2.0
 MODEM_MANAGER_REQUIRED_VERSION=0.7
 LIBNOTIFY_REQUIRED_VERSION=0.7.3
 CINNAMON_DESKTOP_REQUIRED_VERSION=1.0.0
@@ -124,7 +124,8 @@ PKG_CHECK_MODULES(DATETIME_PANEL, $COMMON_MODULES dbus-glib-1
 PKG_CHECK_MODULES(DISPLAY_PANEL, $COMMON_MODULES cinnamon-desktop x11)
 PKG_CHECK_MODULES(MEDIA_PANEL, $COMMON_MODULES)
 
-PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES gmodule-2.0)
+PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES gmodule-2.0
+                  polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION)
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
@@ -143,11 +144,9 @@ AC_ARG_ENABLE(networkmanager,
               [enable_networkmanager=yes]) dnl Enabled by default
 
 if test "x$enable_networkmanager" = xyes; then
-    PKG_CHECK_MODULES(NETWORK_MANAGER, NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                      libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                      libnm-glib-vpn >= $NETWORK_MANAGER_REQUIRED_VERSION
-                      libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-                      libnm-gtk >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION,
+    PKG_CHECK_MODULES(NETWORK_MANAGER,
+                      libnm >= $NETWORK_MANAGER_REQUIRED_VERSION
+                      libnma >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION,
                       [have_networkmanager=yes], have_networkmanager=no)
     if test "x$have_networkmanager" = xno ; then
         AC_MSG_ERROR(*** NetworkManager not found ***)

@@ -67,7 +67,7 @@
           <object class="GtkLabel" id="heading_proxy_method">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_Method</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">combobox_proxy_mode</property>
@@ -93,7 +93,7 @@
           <packing>
             <property name="left_attach">1</property>
             <property name="top_attach">1</property>
-            <property name="width">1</property>
+            <property name="width">2</property>
             <property name="height">1</property>
           </packing>
         </child>
@@ -101,7 +101,7 @@
           <object class="GtkLabel" id="heading_proxy_url">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_Configuration URL</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_url</property>
@@ -134,7 +134,7 @@
           <object class="GtkLabel" id="heading_proxy_http">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_HTTP Proxy</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_http</property>
@@ -153,7 +153,7 @@
           <object class="GtkLabel" id="heading_proxy_https">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">H_TTPS Proxy</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_https</property>
@@ -172,7 +172,7 @@
           <object class="GtkLabel" id="heading_proxy_ftp">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_FTP Proxy</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_ftp</property>
@@ -191,7 +191,7 @@
           <object class="GtkLabel" id="heading_proxy_socks">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_Socks Host</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_socks</property>
@@ -210,7 +210,7 @@
           <object class="GtkLabel" id="heading_proxy_ignore">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xalign">0</property>
+            <property name="xalign">1</property>
             <property name="label" translatable="yes">_Ignore Hosts</property>
             <property name="use_underline">True</property>
             <property name="mnemonic_widget">entry_proxy_ignore</property>
@@ -400,6 +400,23 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">6</property>
+            <child>
+              <object class="GtkImage" id="image_proxy_device">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">end</property>
+                <property name="valign">start</property>
+                <property name="xalign">1</property>
+                <property name="pixel_size">48</property>
+                <property name="icon_name">preferences-system-network</property>
+                <property name="icon-size">6</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
             <child>
               <object class="GtkVBox" id="vbox13">
                 <property name="visible">True</property>

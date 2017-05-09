@@ -17,17 +17,14 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2007 - 2010 Red Hat, Inc.
+ * Copyright 2007 - 2014 Red Hat, Inc.
  */
 
 #ifndef WS_LEAP_H
 #define WS_LEAP_H
-
-#include <nm-connection.h>
 
 typedef struct _WirelessSecurityLEAP WirelessSecurityLEAP;
 
 WirelessSecurityLEAP * ws_leap_new (NMConnection *connection, gboolean secrets_only);
 
 #endif /* WS_LEAP_H */
-

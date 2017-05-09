@@ -22,20 +22,15 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #include <netinet/ether.h>
 
-#include <nm-client.h>
-#include <nm-utils.h>
-#include <nm-device.h>
-#include <nm-device-wifi.h>
-#include <nm-device-ethernet.h>
-#include <nm-setting-wireless-security.h>
-#include <nm-remote-connection.h>
-#include <nm-setting-wireless.h>
+#include <NetworkManager.h>
+#include <polkit/polkit.h>
 
-#include "../list-box-helper.h"
+#include "shell/list-box-helper.h"
+#include "shell/hostname-helper.h"
 #include "network-dialogs.h"
 #include "panel-common.h"
 
@@ -55,12 +50,14 @@ typedef enum {
 static void nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi);
 static void show_wifi_list (NetDeviceWifi *device_wifi);
 static void populate_ap_list (NetDeviceWifi *device_wifi);
+static void show_hotspot_ui (NetDeviceWifi *device_wifi);
 
 struct _NetDeviceWifiPrivate
 {
         GtkBuilder              *builder;
         GtkWidget               *details_dialog;
         GtkWidget               *hotspot_dialog;
+        GtkSwitch               *hotspot_switch;
         gboolean                 updating_device;
         gchar                   *selected_ssid_title;
         gchar                   *selected_connection_id;
@@ -137,8 +134,7 @@ get_access_point_security (NMAccessPoint *ap)
 static GPtrArray *
 panel_get_strongest_unique_aps (const GPtrArray *aps)
 {
-        const GByteArray *ssid;
-        const GByteArray *ssid_tmp;
+        GBytes *ssid, *ssid_tmp;
         GPtrArray *aps_unique = NULL;
         gboolean add_ap;
         guint i;
@@ -167,18 +163,20 @@ panel_get_strongest_unique_aps (const GPtrArray *aps)
                                 g_assert (ssid_tmp);
 
                                 /* is this the same type and data? */
-                                if (nm_utils_same_ssid (ssid, ssid_tmp, TRUE)) {
+                                if (nm_utils_same_ssid (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid),
+                                                        g_bytes_get_data (ssid_tmp, NULL), g_bytes_get_size (ssid_tmp),
+                                                        TRUE)) {
 
                                         g_debug ("found duplicate: %s",
-                                                 nm_utils_escape_ssid (ssid_tmp->data,
-                                                                       ssid_tmp->len));
+                                                 nm_utils_escape_ssid (g_bytes_get_data (ssid_tmp, NULL),
+                                                                       g_bytes_get_size (ssid_tmp)));
 
                                         /* the new access point is stronger */
                                         if (nm_access_point_get_strength (ap) >
                                             nm_access_point_get_strength (ap_tmp)) {
                                                 g_debug ("removing %s",
-                                                         nm_utils_escape_ssid (ssid_tmp->data,
-                                                                               ssid_tmp->len));
+                                                         nm_utils_escape_ssid (g_bytes_get_data (ssid_tmp, NULL),
+                                                                               g_bytes_get_size (ssid_tmp)));
                                                 g_ptr_array_remove (aps_unique, ap_tmp);
                                                 add_ap = TRUE;
                                         } else {
@@ -190,8 +188,8 @@ panel_get_strongest_unique_aps (const GPtrArray *aps)
                         }
                         if (add_ap) {
                                 g_debug ("adding %s",
-                                         nm_utils_escape_ssid (ssid->data,
-                                                               ssid->len));
+                                         nm_utils_escape_ssid (g_bytes_get_data (ssid, NULL),
+                                                               g_bytes_get_size (ssid)));
                                 g_ptr_array_add (aps_unique, g_object_ref (ap));
                         }
                 }
@@ -238,6 +236,18 @@ get_ap_security_string (NMAccessPoint *ap)
 }
 
 static void
+net_device_wifi_access_point_changed (NMDeviceWifi *nm_device_wifi,
+                                      NMAccessPoint *ap,
+                                      gpointer user_data)
+{
+        NetDeviceWifi *device_wifi;
+
+        device_wifi = NET_DEVICE_WIFI (user_data);
+
+        populate_ap_list (device_wifi);
+}
+
+static void
 wireless_enabled_toggled (NMClient       *client,
                           GParamSpec     *pspec,
                           NetDeviceWifi *device_wifi)
@@ -265,14 +275,11 @@ find_connection_for_device (NetDeviceWifi *device_wifi,
 {
         NetDevice *tmp;
         NMConnection *connection;
-        NMRemoteSettings *remote_settings;
         NMClient *client;
 
         client = net_object_get_client (NET_OBJECT (device_wifi));
-        remote_settings = net_object_get_remote_settings (NET_OBJECT (device_wifi));
         tmp = g_object_new (NET_TYPE_DEVICE,
                             "client", client,
-                            "remote-settings", remote_settings,
                             "nm-device", device,
                             NULL);
         connection = net_device_get_find_connection (tmp);
@@ -283,10 +290,10 @@ find_connection_for_device (NetDeviceWifi *device_wifi,
 static gboolean
 connection_is_shared (NMConnection *c)
 {
-        NMSettingIP4Config *s_ip4;
+        NMSettingIPConfig *s_ip4;
 
         s_ip4 = nm_connection_get_setting_ip4_config (c);
-        if (g_strcmp0 (nm_setting_ip4_config_get_method (s_ip4),
+        if (g_strcmp0 (nm_setting_ip_config_get_method (s_ip4),
                        NM_SETTING_IP4_CONFIG_METHOD_SHARED) != 0) {
                 return FALSE;
         }
@@ -301,6 +308,9 @@ device_is_hotspot (NetDeviceWifi *device_wifi)
         NMDevice *device;
 
         device = net_device_get_nm_device (NET_DEVICE (device_wifi));
+        if (nm_device_get_active_connection (device) == NULL)
+                return FALSE;
+
         c = find_connection_for_device (device_wifi, device);
         if (c == NULL)
                 return FALSE;
@@ -308,7 +318,7 @@ device_is_hotspot (NetDeviceWifi *device_wifi)
         return connection_is_shared (c);
 }
 
-static const GByteArray *
+static GBytes *
 device_get_hotspot_ssid (NetDeviceWifi *device_wifi,
                          NMDevice *device)
 {
@@ -316,27 +326,32 @@ device_get_hotspot_ssid (NetDeviceWifi *device_wifi,
         NMSettingWireless *sw;
 
         c = find_connection_for_device (device_wifi, device);
-        if (c == NULL) {
-                return FALSE;
-        }
+        if (c == NULL)
+                return NULL;
 
         sw = nm_connection_get_setting_wireless (c);
         return nm_setting_wireless_get_ssid (sw);
 }
 
 static void
-get_secrets_cb (NMRemoteConnection *c,
-                GHashTable         *secrets,
-                GError             *error,
+get_secrets_cb (GObject            *source_object,
+                GAsyncResult       *res,
                 gpointer            data)
 {
         NetDeviceWifi *device_wifi = data;
-        NMSettingWireless *sw;
+        GVariant *secrets;
+        GError *error = NULL;
 
-        sw = nm_connection_get_setting_wireless (NM_CONNECTION (c));
+        secrets = nm_remote_connection_get_secrets_finish (NM_REMOTE_CONNECTION (source_object), res, &error);
+        if (!secrets) {
+                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+                        g_warning ("Could not get secrets: %s", error->message);
+                g_error_free (error);
+                return;
+        }
 
-        nm_connection_update_secrets (NM_CONNECTION (c),
-                                      nm_setting_wireless_get_security (sw),
+        nm_connection_update_secrets (NM_CONNECTION (source_object),
+                                      NM_SETTING_WIRELESS_SECURITY_SETTING_NAME,
                                       secrets, NULL);
 
         nm_device_wifi_refresh_ui (device_wifi);
@@ -349,7 +364,6 @@ device_get_hotspot_security_details (NetDeviceWifi *device_wifi,
                                      gchar **security)
 {
         NMConnection *c;
-        NMSettingWireless *sw;
         NMSettingWirelessSecurity *sws;
         const gchar *key_mgmt;
         const gchar *tmp_secret;
@@ -359,9 +373,8 @@ device_get_hotspot_security_details (NetDeviceWifi *device_wifi,
         if (c == NULL)
                 return;
 
-        sw = nm_connection_get_setting_wireless (c);
         sws = nm_connection_get_setting_wireless_security (c);
-        if (sw == NULL || sws == NULL)
+        if (sws == NULL)
                 return;
 
         tmp_secret = NULL;
@@ -389,10 +402,11 @@ device_get_hotspot_security_details (NetDeviceWifi *device_wifi,
          * We'll refresh the UI when secrets arrive.
          */
         if (tmp_secret == NULL) {
-                nm_remote_connection_get_secrets ((NMRemoteConnection*)c,
-                                                  nm_setting_wireless_get_security (sw),
-                                                  get_secrets_cb,
-                                                  device_wifi);
+                nm_remote_connection_get_secrets_async ((NMRemoteConnection*)c,
+                                                        NM_SETTING_WIRELESS_SECURITY_SETTING_NAME,
+                                                        NULL,
+                                                        get_secrets_cb,
+                                                        device_wifi);
                 return;
         }
 
@@ -405,7 +419,7 @@ device_get_hotspot_security_details (NetDeviceWifi *device_wifi,
 static void
 nm_device_wifi_refresh_hotspot (NetDeviceWifi *device_wifi)
 {
-        const GByteArray *ssid;
+        GBytes *ssid;
         gchar *hotspot_secret = NULL;
         gchar *hotspot_security = NULL;
         gchar *hotspot_ssid = NULL;
@@ -415,11 +429,14 @@ nm_device_wifi_refresh_hotspot (NetDeviceWifi *device_wifi)
         nm_device = net_device_get_nm_device (NET_DEVICE (device_wifi));
         ssid = device_get_hotspot_ssid (device_wifi, nm_device);
         if (ssid)
-                hotspot_ssid = nm_utils_ssid_to_utf8 (ssid);
+                hotspot_ssid = nm_utils_ssid_to_utf8 (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid));
         device_get_hotspot_security_details (device_wifi,
                                              nm_device,
                                              &hotspot_secret,
                                              &hotspot_security);
+
+        g_debug ("Refreshing hotspot labels to name: '%s', security key: '%s', security: '%s'",
+                 hotspot_ssid, hotspot_secret, hotspot_security);
 
         panel_set_device_widget_details (device_wifi->priv->builder,
                                          "hotspot_network_name",
@@ -485,7 +502,6 @@ static void
 nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
 {
         const gchar *str;
-        gboolean is_hotspot;
         gchar *str_tmp = NULL;
         gint strength = 0;
         guint speed = 0;
@@ -498,9 +514,9 @@ nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
         NetDeviceWifiPrivate *priv = device_wifi->priv;
         GtkWidget *dialog;
 
-        is_hotspot = device_is_hotspot (device_wifi);
-        if (is_hotspot) {
+        if (device_is_hotspot (device_wifi)) {
                 nm_device_wifi_refresh_hotspot (device_wifi);
+                show_hotspot_ui (device_wifi);
                 return;
         }
 
@@ -555,7 +571,7 @@ nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
         if (strength <= 0)
                 str = NULL;
         else if (strength < 20)
-                str = C_("Signal strength", "Terrible");
+                str = C_("Signal strength", "None");
         else if (strength < 40)
                 str = C_("Signal strength", "Weak");
         else if (strength < 50)
@@ -589,6 +605,7 @@ nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
         panel_set_device_status (priv->builder, "heading_status", nm_device, NULL);
 
         /* update list of APs */
+        show_wifi_list (device_wifi);
         populate_ap_list (device_wifi);
 }
 
@@ -618,47 +635,54 @@ device_off_toggled (GtkSwitch *sw,
 static void
 connect_to_hidden_network (NetDeviceWifi *device_wifi)
 {
-        NMRemoteSettings *remote_settings;
         NMClient *client;
         CcNetworkPanel *panel;
 
-        remote_settings = net_object_get_remote_settings (NET_OBJECT (device_wifi));
         client = net_object_get_client (NET_OBJECT (device_wifi));
         panel = net_object_get_panel (NET_OBJECT (device_wifi));
-        cc_network_panel_connect_to_hidden_network (panel, client, remote_settings);
+        cc_network_panel_connect_to_hidden_network (panel, client);
 }
 
 static void
-connection_add_or_activate_cb (NMActiveConnection *connection,
-                               GError *error,
-                               NetDeviceWifi *device_wifi)
+connection_add_activate_cb (GObject *source_object,
+                            GAsyncResult *res,
+                            gpointer user_data)
 {
-        if (connection == NULL) {
-                /* failed to activate */
-                g_debug ("Failed to add and/or activate connection '%d': %s",
-                         error->code,
-                         error->message);
-                nm_device_wifi_refresh_ui (device_wifi);
+        NMActiveConnection *conn;
+        GError *error = NULL;
+
+        conn = nm_client_add_and_activate_connection_finish (NM_CLIENT (source_object), res, &error);
+        if (!conn) {
+                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED)) {
+                        nm_device_wifi_refresh_ui (user_data);
+                        /* failed to activate */
+                        g_warning ("Failed to add and activate connection '%d': %s",
+                                   error->code,
+                                   error->message);
+                }
+                g_error_free (error);
+                return;
         }
 }
 
 static void
-connection_add_activate_cb (NMClient *client,
-                            NMActiveConnection *connection,
-                            const char *path,
-                            GError *error,
-                            gpointer user_data)
-{
-        connection_add_or_activate_cb (connection, error, user_data);
-}
-
-static void
-connection_activate_cb (NMClient *client,
-                        NMActiveConnection *connection,
-                        GError *error,
+connection_activate_cb (GObject *source_object,
+                        GAsyncResult *res,
                         gpointer user_data)
 {
-        connection_add_or_activate_cb (connection, error, user_data);
+        GError *error = NULL;
+
+        if (!nm_client_activate_connection_finish (NM_CLIENT (source_object), res, &error)) {
+                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED)) {
+                        nm_device_wifi_refresh_ui (user_data);
+                        /* failed to activate */
+                        g_debug ("Failed to add and activate connection '%d': %s",
+                                 error->code,
+                                 error->message);
+                }
+                g_error_free (error);
+                return;
+        }
 }
 
 static gboolean
@@ -685,11 +709,11 @@ is_8021x (NMDevice   *device,
 
 static void
 wireless_try_to_connect (NetDeviceWifi *device_wifi,
-                         const gchar *ssid_target,
+                         GBytes *ssid,
                          const gchar *ap_object_path)
 {
-        const GByteArray *ssid;
-        const gchar *ssid_tmp;
+        GBytes *match_ssid;
+        const gchar *ssid_target;
         GSList *list, *l;
         NMConnection *connection_activate = NULL;
         NMDevice *device;
@@ -706,6 +730,7 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
         if (device == NULL)
                 goto out;
 
+        ssid_target = nm_utils_escape_ssid ((gpointer) g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid));
         g_debug ("try to connect to WIFI network %s [%s]",
                  ssid_target, ap_object_path);
 
@@ -719,11 +744,10 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
                 setting_wireless = nm_connection_get_setting_wireless (connection);
                 if (!NM_IS_SETTING_WIRELESS (setting_wireless))
                         continue;
-                ssid = nm_setting_wireless_get_ssid (setting_wireless);
-                if (ssid == NULL)
+                match_ssid = nm_setting_wireless_get_ssid (setting_wireless);
+                if (match_ssid == NULL)
                         continue;
-                ssid_tmp = nm_utils_escape_ssid (ssid->data, ssid->len);
-                if (g_strcmp0 (ssid_target, ssid_tmp) == 0) {
+                if (g_bytes_equal (ssid, match_ssid)) {
                         g_debug ("we found an existing connection %s to activate!",
                                  nm_connection_get_id (connection));
                         connection_activate = connection;
@@ -736,10 +760,13 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
         /* activate the connection */
         client = net_object_get_client (NET_OBJECT (device_wifi));
         if (connection_activate != NULL) {
-                nm_client_activate_connection (client,
-                                               connection_activate,
-                                               device, NULL,
-                                               connection_activate_cb, device_wifi);
+                nm_client_activate_connection_async (client,
+                                                     connection_activate,
+                                                     device,
+                                                     NULL,
+                                                     NULL,
+                                                     connection_activate_cb,
+                                                     device_wifi);
                 goto out;
         }
 
@@ -747,11 +774,36 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
         g_debug ("no existing connection found for %s, creating", ssid_target);
 
         if (!is_8021x (device, ap_object_path)) {
+                GPermission *permission;
+                gboolean allowed_to_share = FALSE;
+                NMConnection *partial = NULL;
+
+                permission = polkit_permission_new_sync ("org.freedesktop.NetworkManager.settings.modify.system",
+                                                         NULL, NULL, NULL);
+                if (permission) {
+                        allowed_to_share = g_permission_get_allowed (permission);
+                        g_object_unref (permission);
+                }
+
+                if (!allowed_to_share) {
+                        NMSettingConnection *s_con;
+
+                        s_con = (NMSettingConnection *)nm_setting_connection_new ();
+                        nm_setting_connection_add_permission (s_con, "user", g_get_user_name (), NULL);
+                        partial = nm_simple_connection_new ();
+                        nm_connection_add_setting (partial, NM_SETTING (s_con));
+                }
+
                 g_debug ("no existing connection found for %s, creating and activating one", ssid_target);
-                nm_client_add_and_activate_connection (client,
-                                                       NULL,
-                                                       device, ap_object_path,
-                                                       connection_add_activate_cb, device_wifi);
+                nm_client_add_and_activate_connection_async (client,
+                                                             partial,
+                                                             device,
+                                                             ap_object_path,
+                                                             NULL,
+                                                             connection_add_activate_cb,
+                                                             device_wifi);
+                if (!allowed_to_share)
+                        g_object_unref (partial);
         } else {
                 CcNetworkPanel *panel;
                 GVariantBuilder *builder;
@@ -771,19 +823,6 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
         }
 out:
         return;
-}
-
-static GByteArray *
-ssid_to_byte_array (const gchar *ssid)
-{
-        guint32 len;
-        GByteArray *ba;
-
-        len = strlen (ssid);
-        ba = g_byte_array_sized_new (len);
-        g_byte_array_append (ba, (guchar *)ssid, len);
-
-        return ba;
 }
 
 static gchar *
@@ -831,30 +870,25 @@ get_hostname (void)
                 g_variant_unref (res);
         }
 
-        if (str == NULL || *str == '\0') {
-                g_free (str);
-                str = g_strdup (g_get_host_name ());
-        }
-
-        if (str == NULL || *str == '\0') {
-                g_free (str);
-                str = g_strdup ("GNOME");
-	}
-
         return str;
 }
 
-static GByteArray *
+static GBytes *
 generate_ssid_for_hotspot (NetDeviceWifi *device_wifi)
 {
-        GByteArray *ssid_array;
-        gchar *ssid;
+        GBytes *ssid_bytes;
+        gchar *hostname, *ssid;
 
-        ssid = get_hostname ();
-        ssid_array = ssid_to_byte_array (ssid);
-        g_free (ssid);
+        hostname = get_hostname ();
+        ssid = pretty_hostname_to_ssid (hostname);
+        g_free (hostname);
 
-        return ssid_array;
+        ssid_bytes = g_bytes_new_with_free_func (ssid,
+                                                 strlen (ssid),
+                                                 g_free,
+                                                 NULL);
+
+        return ssid_bytes;
 }
 
 #define WPA_PASSKEY_SIZE 8
@@ -909,7 +943,8 @@ is_hotspot_connection (NMConnection *connection)
 {
         NMSettingConnection *sc;
         NMSettingWireless *sw;
-        NMSettingIP4Config *sip;
+        NMSettingIPConfig *sip;
+        NMSetting *setting;
 
         sc = nm_connection_get_setting_connection (connection);
         if (g_strcmp0 (nm_setting_connection_get_connection_type (sc), "802-11-wireless") != 0) {
@@ -920,11 +955,12 @@ is_hotspot_connection (NMConnection *connection)
             g_strcmp0 (nm_setting_wireless_get_mode (sw), "ap") != 0) {
                 return FALSE;
         }
-        if (g_strcmp0 (nm_setting_wireless_get_security (sw), "802-11-wireless-security") != 0) {
+        setting = nm_connection_get_setting_by_name (connection, NM_SETTING_WIRELESS_SETTING_NAME);
+        if (!setting)
                 return FALSE;
-        }
+
         sip = nm_connection_get_setting_ip4_config (connection);
-        if (g_strcmp0 (nm_setting_ip4_config_get_method (sip), "shared") != 0) {
+        if (g_strcmp0 (nm_setting_ip_config_get_method (sip), "shared") != 0) {
                 return FALSE;
         }
 
@@ -935,74 +971,67 @@ static void
 show_hotspot_ui (NetDeviceWifi *device_wifi)
 {
         GtkWidget *widget;
-        GtkSwitch *sw;
 
         /* show hotspot tab */
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder, "notebook_view"));
         gtk_notebook_set_current_page (GTK_NOTEBOOK (widget), 1);
 
         /* force switch to on as this succeeded */
-        sw = GTK_SWITCH (gtk_builder_get_object (device_wifi->priv->builder,
-                                                 "switch_hotspot_off"));
         device_wifi->priv->updating_device = TRUE;
-        gtk_switch_set_active (sw, TRUE);
+        gtk_switch_set_active (device_wifi->priv->hotspot_switch, TRUE);
         device_wifi->priv->updating_device = FALSE;
 }
 
 static void
-activate_cb (NMClient           *client,
-             NMActiveConnection *connection,
-             GError             *error,
-             NetDeviceWifi     *device_wifi)
+activate_cb (GObject            *source_object,
+             GAsyncResult       *res,
+             gpointer            user_data)
 {
-        if (error != NULL) {
+        GError *error = NULL;
+
+        if (nm_client_activate_connection_finish (NM_CLIENT (source_object), res, &error) == NULL) {
                 g_warning ("Failed to add new connection: (%d) %s",
                            error->code,
                            error->message);
+                g_error_free (error);
                 return;
         }
 
         /* show hotspot tab */
-        nm_device_wifi_refresh_ui (device_wifi);
-        show_hotspot_ui (device_wifi);
+        nm_device_wifi_refresh_ui (user_data);
 }
 
 static void
-activate_new_cb (NMClient           *client,
-                 NMActiveConnection *connection,
-                 const gchar        *path,
-                 GError             *error,
-                 NetDeviceWifi     *device_wifi)
+activate_new_cb (GObject            *source_object,
+                 GAsyncResult       *res,
+                 gpointer            user_data)
 {
-        activate_cb (client, connection, error, device_wifi);
+        NMActiveConnection *conn;
+        GError *error = NULL;
+
+        conn = nm_client_add_and_activate_connection_finish (NM_CLIENT (source_object),
+                                                             res, &error);
+        if (!conn) {
+                g_warning ("Failed to add new connection: (%d) %s",
+                           error->code,
+                           error->message);
+                g_error_free (error);
+                return;
+        }
+
+        /* show hotspot tab */
+        nm_device_wifi_refresh_ui (user_data);
 }
 
-static void
-start_shared_connection (NetDeviceWifi *device_wifi)
+static NMConnection *
+net_device_wifi_get_hotspot_connection (NetDeviceWifi *device_wifi)
 {
-        NMConnection *c;
-        NMConnection *tmp;
-        NMSettingConnection *sc;
-        NMSettingWireless *sw;
-        NMSettingIP4Config *sip;
-        NMSettingWirelessSecurity *sws;
-        NMDevice *device;
-        GByteArray *ssid_array;
-        const gchar *str_mac;
-        struct ether_addr *bin_mac;
-        GSList *connections;
-        GSList *l;
-        NMClient *client;
-        const char *mode;
-        NMDeviceWifiCapabilities caps;
-
-        device = net_device_get_nm_device (NET_DEVICE (device_wifi));
-        g_assert (nm_device_get_device_type (device) == NM_DEVICE_TYPE_WIFI);
+        GSList *connections, *l;
+        NMConnection *c = NULL;
 
         connections = net_device_get_valid_connections (NET_DEVICE (device_wifi));
-        c = NULL;
         for (l = connections; l; l = l->next) {
-                tmp = l->data;
+                NMConnection *tmp = l->data;
                 if (is_hotspot_connection (tmp)) {
                         c = tmp;
                         break;
@@ -1010,20 +1039,95 @@ start_shared_connection (NetDeviceWifi *device_wifi)
         }
         g_slist_free (connections);
 
-        client = net_object_get_client (NET_OBJECT (device_wifi));
-        if (c != NULL) {
-                g_debug ("activate existing hotspot connection\n");
-                nm_client_activate_connection (client,
-                                               c,
-                                               device,
-                                               NULL,
-                                               (NMClientActivateFn)activate_cb,
-                                               device_wifi);
+        return c;
+}
+
+static void
+overwrite_ssid_cb (GObject      *source_object,
+                   GAsyncResult *res,
+                   gpointer      user_data)
+{
+        GError *error = NULL;
+        NMClient *client;
+        NMRemoteConnection *connection;
+        NMDevice *device;
+        NMConnection *c;
+        NetDeviceWifi *device_wifi;
+
+        connection = NM_REMOTE_CONNECTION (source_object);
+
+        if (!nm_remote_connection_commit_changes_finish (connection, res, &error)) {
+                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+                        g_warning ("Failed to save hotspot's settings to disk: %s",
+                                   error->message);
+                g_error_free (error);
                 return;
         }
 
-        g_debug ("create new hotspot connection\n");
-        c = nm_connection_new ();
+        device_wifi = user_data;
+        device = net_device_get_nm_device (NET_DEVICE (device_wifi));
+        client = net_object_get_client (NET_OBJECT (device_wifi));
+        c = net_device_wifi_get_hotspot_connection (device_wifi);
+
+        g_debug ("activate existing hotspot connection\n");
+        nm_client_activate_connection_async (client,
+                                             c,
+                                             device,
+                                             NULL,
+                                             NULL,
+                                             activate_cb,
+                                             device_wifi);
+}
+
+static void
+start_shared_connection (NetDeviceWifi *device_wifi)
+{
+        NMConnection *c;
+        NMSettingConnection *sc;
+        NMSettingWireless *sw;
+        NMSettingIP4Config *sip;
+        NMSettingWirelessSecurity *sws;
+        NMDevice *device;
+        GBytes *ssid;
+        const gchar *str_mac;
+        struct ether_addr *bin_mac;
+        NMClient *client;
+        const char *mode;
+        NMDeviceWifiCapabilities caps;
+
+        device = net_device_get_nm_device (NET_DEVICE (device_wifi));
+        g_assert (nm_device_get_device_type (device) == NM_DEVICE_TYPE_WIFI);
+
+        c = net_device_wifi_get_hotspot_connection (device_wifi);
+
+        ssid = generate_ssid_for_hotspot (device_wifi);
+
+        client = net_object_get_client (NET_OBJECT (device_wifi));
+        if (c != NULL) {
+                NMSettingWireless *sw;
+                const char *c_path;
+                NMRemoteConnection *connection;
+
+                sw = nm_connection_get_setting_wireless (c);
+                g_object_set (sw, "ssid", ssid, NULL);
+                g_bytes_unref (ssid);
+
+                c_path = nm_connection_get_path (c);
+                connection = nm_client_get_connection_by_path (client, c_path);
+
+                g_debug ("overwriting ssid to %s", (char *) g_bytes_get_data (ssid, NULL));
+
+                nm_remote_connection_commit_changes_async (connection,
+                                                           TRUE,
+                                                           NULL,
+                                                           overwrite_ssid_cb,
+                                                           device_wifi);
+                return;
+        }
+
+        g_debug ("create new hotspot connection with SSID '%s'",
+                 (char *) g_bytes_get_data (ssid, NULL));
+        c = nm_simple_connection_new ();
 
         sc = (NMSettingConnection *)nm_setting_connection_new ();
         g_object_set (sc,
@@ -1044,7 +1148,6 @@ start_shared_connection (NetDeviceWifi *device_wifi)
 
         g_object_set (sw,
                       "mode", mode,
-                      "security", "802-11-wireless-security",
                       NULL);
 
         str_mac = nm_device_wifi_get_permanent_hw_address (NM_DEVICE_WIFI (device));
@@ -1065,11 +1168,8 @@ start_shared_connection (NetDeviceWifi *device_wifi)
         g_object_set (sip, "method", "shared", NULL);
         nm_connection_add_setting (c, (NMSetting *)sip);
 
-        ssid_array = generate_ssid_for_hotspot (device_wifi);
-        g_object_set (sw,
-                      "ssid", ssid_array,
-                      NULL);
-        g_byte_array_unref (ssid_array);
+        g_object_set (sw, "ssid", ssid, NULL);
+        g_bytes_unref (ssid);
 
         sws = (NMSettingWirelessSecurity*) nm_setting_wireless_security_new ();
 
@@ -1093,12 +1193,13 @@ start_shared_connection (NetDeviceWifi *device_wifi)
 
         nm_connection_add_setting (c, (NMSetting *)sws);
 
-        nm_client_add_and_activate_connection (client,
-                                               c,
-                                               device,
-                                               NULL,
-                                               (NMClientAddActivateFn)activate_new_cb,
-                                               device_wifi);
+        nm_client_add_and_activate_connection_async (client,
+                                                     c,
+                                                     device,
+                                                     NULL,
+                                                     NULL,
+                                                     activate_new_cb,
+                                                     device_wifi);
 
         g_object_unref (c);
 }
@@ -1138,8 +1239,10 @@ start_hotspot (GtkButton *button, NetDeviceWifi *device_wifi)
                         devices = nm_active_connection_get_devices (c);
                         if (devices && devices->pdata[0] == device) {
                                 NMAccessPoint *ap;
+                                GBytes *ssid;
                                 ap = nm_device_wifi_get_active_access_point (NM_DEVICE_WIFI (device));
-                                active_ssid = nm_utils_ssid_to_utf8 (nm_access_point_get_ssid (ap));
+                                ssid = nm_access_point_get_ssid (ap);
+                                active_ssid = nm_utils_ssid_to_utf8 (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid));
                                 break;
                         }
                 }
@@ -1182,6 +1285,7 @@ stop_shared_connection (NetDeviceWifi *device_wifi)
         gint i;
         NMActiveConnection *c;
         NMClient *client;
+        gboolean found = FALSE;
 
         device = net_device_get_nm_device (NET_DEVICE (device_wifi));
         client = net_object_get_client (NET_OBJECT (device_wifi));
@@ -1191,13 +1295,21 @@ stop_shared_connection (NetDeviceWifi *device_wifi)
 
                 devices = nm_active_connection_get_devices (c);
                 if (devices && devices->pdata[0] == device) {
-                        nm_client_deactivate_connection (client, c);
+                        nm_client_deactivate_connection (client, c, NULL, NULL);
+                        found = TRUE;
                         break;
                 }
         }
 
+        if (!found) {
+                g_warning ("Could not stop hotspot connection as no connection attached to the device could be found.");
+                device_wifi->priv->updating_device = TRUE;
+                gtk_switch_set_active (device_wifi->priv->hotspot_switch, TRUE);
+                device_wifi->priv->updating_device = FALSE;
+                return;
+        }
+
         nm_device_wifi_refresh_ui (device_wifi);
-        show_wifi_list (device_wifi);
 }
 
 static void
@@ -1206,12 +1318,8 @@ stop_hotspot_response_cb (GtkWidget *dialog, gint response, NetDeviceWifi *devic
         if (response == GTK_RESPONSE_OK) {
                 stop_shared_connection (device_wifi);
         } else {
-                GtkWidget *sw;
-
-                sw = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
-                                                         "switch_hotspot_off"));
                 device_wifi->priv->updating_device = TRUE;
-                gtk_switch_set_active (GTK_SWITCH (sw), TRUE);
+                gtk_switch_set_active (device_wifi->priv->hotspot_switch, TRUE);
                 device_wifi->priv->updating_device = FALSE;
         }
         gtk_widget_destroy (dialog);
@@ -1254,34 +1362,56 @@ show_wifi_list (NetDeviceWifi *device_wifi)
 }
 
 static void
-remote_settings_read_cb (NMRemoteSettings *remote_settings,
-                         NetDeviceWifi *device_wifi)
+client_connection_added_cb (NMClient           *client,
+                            NMRemoteConnection *connection,
+                            NetDeviceWifi *device_wifi)
 {
         gboolean is_hotspot;
-
-        populate_ap_list (device_wifi);
 
         /* go straight to the hotspot UI */
         is_hotspot = device_is_hotspot (device_wifi);
         if (is_hotspot) {
                 nm_device_wifi_refresh_hotspot (device_wifi);
                 show_hotspot_ui (device_wifi);
+                return;
         }
+
+        populate_ap_list (device_wifi);
+        show_wifi_list (device_wifi);
 }
 
 static void
-switch_page_cb (GtkNotebook   *notebook,
-                GtkWidget     *page,
-                guint          page_num,
-                NetDeviceWifi *device_wifi)
+client_connection_removed_cb (NMClient           *client,
+                              NMRemoteConnection *connection,
+                              NetDeviceWifi      *device_wifi)
 {
-        GtkWidget *widget;
+        GtkWidget *swin;
+        GtkWidget *list;
+        GList *rows, *l;
+        const char *uuid;
 
-        if (page_num == 1) {
-                widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
-                                                             "button_back1"));
-                gtk_widget_grab_focus (widget);
+        uuid = nm_connection_get_uuid (NM_CONNECTION (connection));
+
+        swin = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
+                                                   "scrolledwindow_list"));
+        list = gtk_bin_get_child (GTK_BIN (gtk_bin_get_child (GTK_BIN (swin))));
+        rows = gtk_container_get_children (GTK_CONTAINER (list));
+        for (l = rows; l != NULL; l = l->next) {
+                GtkWidget *row = l->data;
+                NMConnection *connection;
+                const char *uuid_r;
+
+                connection = g_object_get_data (G_OBJECT (row), "connection");
+                if (!connection)
+                        continue;
+
+                uuid_r = nm_connection_get_uuid (connection);
+                if (g_strcmp0 (uuid_r, uuid) == 0) {
+                        gtk_widget_destroy (row);
+                        break;
+                }
         }
+        g_list_free (rows);
 }
 
 static void
@@ -1289,7 +1419,6 @@ net_device_wifi_constructed (GObject *object)
 {
         NetDeviceWifi *device_wifi = NET_DEVICE_WIFI (object);
         NMClient *client;
-        NMRemoteSettings *remote_settings;
         NMClientPermissionResult perm;
         NMDevice *nm_device;
         NMDeviceWifiCapabilities caps;
@@ -1298,10 +1427,17 @@ net_device_wifi_constructed (GObject *object)
         G_OBJECT_CLASS (net_device_wifi_parent_class)->constructed (object);
 
         client = net_object_get_client (NET_OBJECT (device_wifi));
-        g_signal_connect (client, "notify::wireless-enabled",
-                          G_CALLBACK (wireless_enabled_toggled), device_wifi);
+        g_signal_connect_object (client, "notify::wireless-enabled",
+                                 G_CALLBACK (wireless_enabled_toggled), device_wifi, 0);
 
         nm_device = net_device_get_nm_device (NET_DEVICE (device_wifi));
+
+        g_signal_connect_object (nm_device, "access-point-added",
+                                 G_CALLBACK (net_device_wifi_access_point_changed),
+                                 device_wifi, 0);
+        g_signal_connect_object (nm_device, "access-point-removed",
+                                 G_CALLBACK (net_device_wifi_access_point_changed),
+                                 device_wifi, 0);
 
         /* only enable the button if the user can create a hotspot */
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
@@ -1318,9 +1454,10 @@ net_device_wifi_constructed (GObject *object)
         } else
                 gtk_widget_set_sensitive (widget, TRUE);
 
-        remote_settings = net_object_get_remote_settings (NET_OBJECT (device_wifi));
-        g_signal_connect (remote_settings, "connections-read",
-                          G_CALLBACK (remote_settings_read_cb), device_wifi);
+        g_signal_connect (client, NM_CLIENT_CONNECTION_ADDED,
+                          G_CALLBACK (client_connection_added_cb), device_wifi);
+        g_signal_connect (client, NM_CLIENT_CONNECTION_REMOVED,
+                          G_CALLBACK (client_connection_removed_cb), device_wifi);
 
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder, "heading_list"));
         g_object_bind_property (device_wifi, "title", widget, "label", 0);
@@ -1351,11 +1488,11 @@ device_wifi_edit (NetObject *object)
         gchar *cmdline;
         GError *error = NULL;
         NetDeviceWifi *device = NET_DEVICE_WIFI (object);
-        NMRemoteSettings *settings;
+        NMClient *client;
         NMRemoteConnection *connection;
 
-        settings = net_object_get_remote_settings (object);
-        connection = nm_remote_settings_get_connection_by_path (settings, device->priv->selected_connection_id);
+        client = net_object_get_client (object);
+        connection = nm_client_get_connection_by_path (client, device->priv->selected_connection_id);
         if (connection == NULL) {
                 g_warning ("failed to get remote connection");
                 return;
@@ -1386,21 +1523,22 @@ net_device_wifi_class_init (NetDeviceWifiClass *klass)
 }
 
 static void
-really_forgotten (NMRemoteConnection *connection,
-                  GError             *error,
+really_forgotten (GObject            *source_object,
+                  GAsyncResult       *res,
                   gpointer            user_data)
 {
-        NetDeviceWifi *device_wifi = NET_DEVICE_WIFI (user_data);
+        GError *error = NULL;
 
-        if (error != NULL) {
+        if (!nm_remote_connection_delete_finish (NM_REMOTE_CONNECTION (source_object), res, &error)) {
                 g_warning ("failed to delete connection %s: %s",
-                           nm_object_get_path (NM_OBJECT (connection)),
+                           nm_object_get_path (NM_OBJECT (source_object)),
                            error->message);
+                g_error_free (error);
                 return;
         }
 
         /* remove the entry from the list */
-        populate_ap_list (device_wifi);
+        populate_ap_list (user_data);
 }
 
 static void
@@ -1423,7 +1561,8 @@ really_forget (GtkDialog *dialog, gint response, gpointer data)
         for (r = rows; r; r = r->next) {
                 row = r->data;
                 connection = g_object_get_data (G_OBJECT (row), "connection");
-                nm_remote_connection_delete (connection, really_forgotten, device_wifi);
+                //FIXME cancellable
+                nm_remote_connection_delete_async (connection, NULL, really_forgotten, device_wifi);
                 gtk_widget_destroy (row);
         }
         g_list_free (rows);
@@ -1496,23 +1635,22 @@ make_row (GtkSizeGroup   *rows,
           NMAccessPoint  *active_ap,
           GtkWidget     **row_out,
           GtkWidget     **check_out,
-          GtkWidget     **edit_out,
-          GtkWidget     **connect_out,
-          GtkWidget     **disconnect_out)
+          GtkWidget     **edit_out)
 {
         GtkWidget *row, *row_box;
         GtkWidget *widget;
         GtkWidget *box;
-        const gchar *title;
+        GtkWidget *button_stack;
+        GtkWidget *image;
+        gchar *title;
         gboolean active;
         gboolean in_range;
         gboolean connecting;
         guint security;
         guint strength;
-        const GByteArray *ssid;
+        GBytes *ssid;
         const gchar *icon_name;
         guint64 timestamp;
-        GtkSizeGroup *spinner_button_group;
         NMDeviceState state;
 
         g_assert (connection || ap);
@@ -1530,8 +1668,6 @@ make_row (GtkSizeGroup   *rows,
                 ssid = nm_access_point_get_ssid (ap);
                 timestamp = 0;
         }
-
-        title = nm_utils_escape_ssid (ssid->data, ssid->len);
 
         if (ap != NULL) {
                 in_range = TRUE;
@@ -1556,9 +1692,16 @@ make_row (GtkSizeGroup   *rows,
         gtk_size_group_add_widget (rows, row);
 
         row_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
-        gtk_widget_set_margin_left (row_box, 12);
-        gtk_widget_set_margin_right (row_box, 12);
+        gtk_widget_set_margin_start (row_box, 12);
+        gtk_widget_set_margin_end (row_box, 12);
         gtk_container_add (GTK_CONTAINER (row), row_box);
+
+        button_stack = gtk_stack_new ();
+        gtk_widget_show (button_stack);
+
+        widget = gtk_label_new ("");
+        gtk_widget_show (widget);
+        gtk_container_add (GTK_CONTAINER (button_stack), widget);
 
         widget = NULL;
         if (forget) {
@@ -1574,13 +1717,15 @@ make_row (GtkSizeGroup   *rows,
         if (check_out)
                 *check_out = widget;
 
+        title = nm_utils_ssid_to_utf8 (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid));
         widget = gtk_label_new (title);
+        g_free (title);
         gtk_widget_set_margin_top (widget, 12);
         gtk_widget_set_margin_bottom (widget, 12);
         gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
 
         if (active) {
-                widget = gtk_image_new_from_icon_name ("emblem-default-symbolic", GTK_ICON_SIZE_MENU);
+                widget = gtk_image_new_from_icon_name ("object-select-symbolic", GTK_ICON_SIZE_MENU);
                 gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
                 gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
                 gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
@@ -1588,90 +1733,39 @@ make_row (GtkSizeGroup   *rows,
 
         gtk_box_pack_start (GTK_BOX (row_box), gtk_label_new (""), TRUE, FALSE, 0);
 
-        spinner_button_group = gtk_size_group_new (GTK_SIZE_GROUP_BOTH);
-        g_object_set_data_full (G_OBJECT (row), "spinner_button_group", spinner_button_group, g_object_unref);
-             
-        /*Connection prefrences button*/
         widget = NULL;
-        if (connection) {
-                GtkWidget *image;
-                image = gtk_image_new_from_icon_name ("preferences-system-symbolic", GTK_ICON_SIZE_MENU);
-                gtk_widget_show (image);
-                widget = gtk_button_new ();
-                gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");
-                gtk_widget_set_no_show_all (widget, TRUE);
-                gtk_widget_set_tooltip_text (widget, _("Preferences"));
-                if (!connecting)
-                        gtk_widget_show (widget);
-                gtk_container_add (GTK_CONTAINER (widget), image);
-                gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
-                gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
-                atk_object_set_name (gtk_widget_get_accessible (widget), _("Options"));
-                gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
-                gtk_size_group_add_widget (spinner_button_group, widget);
-                g_object_set_data (G_OBJECT (row), "edit", widget);
-        }
-        if (edit_out) {
-            *edit_out = widget;
-        }
-        
-        /*Connect Button*/        
-        widget = NULL;
-        if (!active && in_range) {
-            GtkWidget *image;
-            image = gtk_image_new_from_icon_name ("media-playback-start-symbolic", GTK_ICON_SIZE_MENU);
-            gtk_widget_show (image);
-            widget = gtk_button_new ();
-            gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");
-            gtk_widget_set_no_show_all (widget, TRUE);
-            gtk_widget_set_tooltip_text (widget, _("Connect"));
-            if (!connecting)
-                    gtk_widget_show (widget);
-            gtk_container_add (GTK_CONTAINER (widget), image);
-            gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
-            gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
-            gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
-            gtk_size_group_add_widget (spinner_button_group, widget);
-            g_object_set_data (G_OBJECT (row), "connect", widget);
-        }
-        if (connect_out) {
-            *connect_out = widget;
-        }
-        
-        /*Disconnect Button */
-        widget = NULL;
-        if (active && in_range) {
-            GtkWidget *image;
-            image = gtk_image_new_from_icon_name ("media-playback-stop-symbolic", GTK_ICON_SIZE_MENU);
-            gtk_widget_show (image);
-            widget = gtk_button_new ();
-            gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");
-            gtk_widget_set_no_show_all (widget, TRUE);
-            gtk_widget_set_tooltip_text (widget, _("Disconnect"));
-            if (!connecting)
-                    gtk_widget_show (widget);
-            gtk_container_add (GTK_CONTAINER (widget), image);
-            gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
-            gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
-            gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
-            gtk_size_group_add_widget (spinner_button_group, widget);
-            g_object_set_data (G_OBJECT (row), "disconnect", widget);
-        }
-        if (connect_out) {
-            *disconnect_out = widget;
-        }
-
-        widget = gtk_spinner_new ();
-        gtk_widget_set_no_show_all (widget, TRUE);
-        if (connecting) {
-                gtk_widget_show (widget);
-                gtk_spinner_start (GTK_SPINNER (widget));
-        }
+        image = gtk_image_new_from_icon_name ("emblem-system-symbolic", GTK_ICON_SIZE_MENU);
+        gtk_widget_show (image);
+        widget = gtk_button_new ();
+        gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");
+        gtk_style_context_add_class (gtk_widget_get_style_context (widget), "circular-button");
+        gtk_widget_show (widget);
+        gtk_container_add (GTK_CONTAINER (widget), image);
         gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
         gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
-        gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
-        gtk_size_group_add_widget (spinner_button_group, widget);
-        g_object_set_data (G_OBJECT (row), "spinner", widget);
+        atk_object_set_name (gtk_widget_get_accessible (widget), _("Options…"));
+        gtk_stack_add_named (GTK_STACK (button_stack), widget, "button");
+        g_object_set_data (G_OBJECT (row), "edit", widget);
+
+        if (connection)
+                gtk_stack_set_visible_child_name (GTK_STACK (button_stack), "button");
+
+        gtk_box_pack_start (GTK_BOX (row_box), button_stack, FALSE, FALSE, 0);
+        g_object_set_data (G_OBJECT (row), "button_stack", button_stack);
+
+
+        if (edit_out)
+                *edit_out = widget;
+
+        widget = gtk_spinner_new ();
+        gtk_spinner_start (GTK_SPINNER (widget));
+        gtk_widget_show (widget);
+
+        gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
+        gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
+        gtk_stack_add_named (GTK_STACK (button_stack), widget, "spinner");
+        if (connecting)
+                gtk_stack_set_visible_child_name (GTK_STACK (button_stack), "spinner");
 
         box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
         gtk_box_set_homogeneous (GTK_BOX (box), TRUE);
@@ -1704,11 +1798,8 @@ make_row (GtkSizeGroup   *rows,
         gtk_widget_show_all (row);
 
         g_object_set_data (G_OBJECT (row), "ap", ap);
-        if (connection) {
+        if (connection)
                 g_object_set_data (G_OBJECT (row), "connection", connection);
-                g_signal_connect_object (connection, "removed",
-                                         G_CALLBACK (gtk_widget_destroy), row, G_CONNECT_SWAPPED);
-        }
         g_object_set_data (G_OBJECT (row), "timestamp", GUINT_TO_POINTER (timestamp));
         g_object_set_data (G_OBJECT (row), "active", GUINT_TO_POINTER (active));
         g_object_set_data (G_OBJECT (row), "strength", GUINT_TO_POINTER (strength));
@@ -1760,7 +1851,6 @@ show_details_for_row (GtkButton *button, NetDeviceWifi *device_wifi)
         GtkWidget *window;
         NetConnectionEditor *editor;
         NMClient *client;
-        NMRemoteSettings *settings;
         NMDevice *device;
 
         window = gtk_widget_get_toplevel (GTK_WIDGET (button));
@@ -1771,66 +1861,9 @@ show_details_for_row (GtkButton *button, NetDeviceWifi *device_wifi)
 
         device = net_device_get_nm_device (NET_DEVICE (device_wifi));
         client = net_object_get_client (NET_OBJECT (device_wifi));
-        settings = net_object_get_remote_settings (NET_OBJECT (device_wifi));
-        editor = net_connection_editor_new (GTK_WINDOW (window), connection, device, ap, client, settings);
+        editor = net_connection_editor_new (GTK_WINDOW (window), connection, device, ap, client);
         g_signal_connect (editor, "done", G_CALLBACK (editor_done), device_wifi);
         net_connection_editor_run (editor);
-}
-
-static void
-ap_disconnect (GtkButton *button, NetDeviceWifi *device_wifi)
-{
-        NMDevice *device;
-        device = net_device_get_nm_device (NET_DEVICE (device_wifi));
-        if (device == NULL) {
-            return;
-        }
-        nm_device_disconnect (device, NULL, NULL);
-}
-
-static void
-ap_activated (GtkButton *button, NetDeviceWifi *device_wifi)
-{
-        GtkWidget *row;
-        NMConnection *connection;
-        NMAccessPoint *ap;
-        NMClient *client;
-        NMDevice *nm_device;
-        GtkWidget *spinner;
-        GtkWidget *edit;
-        GtkWidget *connect;
-
-        row = GTK_WIDGET (g_object_get_data (G_OBJECT (button), "row_1"));
-        connection = NM_CONNECTION (g_object_get_data (G_OBJECT (row), "connection"));
-        ap = NM_ACCESS_POINT (g_object_get_data (G_OBJECT (row), "ap"));
-        spinner = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "spinner"));
-        edit = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "edit"));
-        connect = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "connect"));
-
-        if (ap != NULL) {
-                if (connection != NULL) {
-                        gtk_widget_hide (edit);
-                        client = net_object_get_client (NET_OBJECT (device_wifi));
-                        nm_device = net_device_get_nm_device (NET_DEVICE (device_wifi));
-                        nm_client_activate_connection (client,
-                                                       connection,
-                                                       nm_device, NULL,
-                                                       connection_activate_cb, device_wifi);
-                } else {
-                        const GByteArray *ssid;
-                        gchar *ssid_text;
-                        const gchar *object_path;
-                        gtk_widget_show (spinner);
-                        gtk_spinner_start (GTK_SPINNER (spinner));
-                        gtk_widget_hide (connect);
-
-                        ssid = nm_access_point_get_ssid (ap);
-                        ssid_text = g_markup_escape_text (nm_utils_escape_ssid (ssid->data, ssid->len), -1);
-                        object_path = nm_object_get_path (NM_OBJECT (ap));
-                        wireless_try_to_connect (device_wifi, ssid_text, object_path);
-                        g_free (ssid_text);
-                }
-        }
 }
 
 static void
@@ -1840,8 +1873,6 @@ open_history (NetDeviceWifi *device_wifi)
         GtkWidget *window;
         CcNetworkPanel *panel;
         GtkWidget *button;
-        GtkWidget *connect_button;
-        GtkWidget *disconnect_button;
         GtkWidget *forget;
         GtkWidget *swin;
         GSList *connections;
@@ -1860,7 +1891,7 @@ open_history (NetDeviceWifi *device_wifi)
         panel = net_object_get_panel (NET_OBJECT (device_wifi));
         window = gtk_widget_get_toplevel (GTK_WIDGET (panel));
         gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
-        gtk_window_set_title (GTK_WINDOW (dialog), _("Known Networks"));
+        gtk_window_set_title (GTK_WINDOW (dialog), _("History"));
         gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
         gtk_window_set_default_size (GTK_WINDOW (dialog), 600, 400);
 
@@ -1885,8 +1916,8 @@ open_history (NetDeviceWifi *device_wifi)
         gtk_widget_show (swin);
         gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (swin), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
         gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (swin), GTK_SHADOW_IN);
-        gtk_widget_set_margin_left (swin, 50);
-        gtk_widget_set_margin_right (swin, 50);
+        gtk_widget_set_margin_start (swin, 50);
+        gtk_widget_set_margin_end (swin, 50);
         gtk_widget_set_margin_top (swin, 12);
         gtk_widget_set_margin_bottom (swin, 12);
         gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), swin, TRUE, TRUE, 0);
@@ -1915,37 +1946,29 @@ open_history (NetDeviceWifi *device_wifi)
                 NMConnection *connection = l->data;
                 NMAccessPoint *ap = NULL;
                 NMSetting *setting;
-                const GByteArray *ssid;
+                GBytes *ssid;
                 if (connection_is_shared (connection))
                         continue;
 
                 setting = nm_connection_get_setting_by_name (connection, NM_SETTING_WIRELESS_SETTING_NAME);
                 ssid = nm_setting_wireless_get_ssid (NM_SETTING_WIRELESS (setting));
                 for (i = 0; i < aps_unique->len; i++) {
-                        const GByteArray *ssid_ap;
+                        GBytes *ssid_ap;
                         ap = NM_ACCESS_POINT (g_ptr_array_index (aps_unique, i));
                         ssid_ap = nm_access_point_get_ssid (ap);
-                        if (nm_utils_same_ssid (ssid, ssid_ap, TRUE))
+                        if (nm_utils_same_ssid (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid),
+                                                g_bytes_get_data (ssid_ap, NULL), g_bytes_get_size (ssid_ap),
+                                                TRUE))
                                 break;
                         ap = NULL;
                 }
 
-                make_row (rows, icons, forget, nm_device, connection, ap, active_ap, &row, NULL, &button, &connect_button, &disconnect_button);
+                make_row (rows, icons, forget, nm_device, connection, ap, active_ap, &row, NULL, &button);
                 gtk_container_add (GTK_CONTAINER (list), row);
                 if (button) {
                         g_signal_connect (button, "clicked",
                                           G_CALLBACK (show_details_for_row), device_wifi);
                         g_object_set_data (G_OBJECT (button), "row", row);
-                }
-                if (connect_button) {
-                        g_signal_connect (connect_button, "clicked",
-                                          G_CALLBACK (ap_activated), device_wifi);
-                        g_object_set_data (G_OBJECT (connect_button), "row_1", row);
-                }
-                if (disconnect_button) {
-                        g_signal_connect (disconnect_button, "clicked",
-                                          G_CALLBACK (ap_disconnect), device_wifi);
-                        g_object_set_data (G_OBJECT (disconnect_button), "row_1", row);
                 }
         }
         g_slist_free (connections);
@@ -1970,8 +1993,6 @@ populate_ap_list (NetDeviceWifi *device_wifi)
         guint i;
         GtkWidget *row;
         GtkWidget *button;
-        GtkWidget *connect_button;
-        GtkWidget *disconnect_button;
         GList *children, *child;
 
         swin = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
@@ -1996,7 +2017,7 @@ populate_ap_list (NetDeviceWifi *device_wifi)
         active_ap = nm_device_wifi_get_active_access_point (NM_DEVICE_WIFI (nm_device));
 
         for (i = 0; i < aps_unique->len; i++) {
-                const GByteArray *ssid_ap;
+                GBytes *ssid_ap;
                 NMAccessPoint *ap;
                 NMConnection *connection = NULL;
                 ap = NM_ACCESS_POINT (g_ptr_array_index (aps_unique, i));
@@ -2004,7 +2025,7 @@ populate_ap_list (NetDeviceWifi *device_wifi)
                 for (l = connections; l; l = l->next) {
                         connection = l->data;
                         NMSetting *setting;
-                        const GByteArray *ssid;
+                        GBytes *ssid;
 
                         if (connection_is_shared (connection)) {
                                 connection = NULL;
@@ -2013,32 +2034,62 @@ populate_ap_list (NetDeviceWifi *device_wifi)
 
                         setting = nm_connection_get_setting_by_name (connection, NM_SETTING_WIRELESS_SETTING_NAME);
                         ssid = nm_setting_wireless_get_ssid (NM_SETTING_WIRELESS (setting));
-                        if (nm_utils_same_ssid (ssid, ssid_ap, TRUE))
+                        if (nm_utils_same_ssid (g_bytes_get_data (ssid, NULL), g_bytes_get_size (ssid),
+                                                g_bytes_get_data (ssid_ap, NULL), g_bytes_get_size (ssid_ap),
+                                                TRUE))
                                 break;
                         connection = NULL;
                 }
 
-                make_row (rows, icons, NULL, nm_device, connection, ap, active_ap, &row, NULL, &button, &connect_button, &disconnect_button);
+                make_row (rows, icons, NULL, nm_device, connection, ap, active_ap, &row, NULL, &button);
                 gtk_container_add (GTK_CONTAINER (list), row);
                 if (button) {
                         g_signal_connect (button, "clicked",
                                           G_CALLBACK (show_details_for_row), device_wifi);
                         g_object_set_data (G_OBJECT (button), "row", row);
                 }
-                if (connect_button) {
-                        g_signal_connect (connect_button, "clicked",
-                                          G_CALLBACK (ap_activated), device_wifi);
-                        g_object_set_data (G_OBJECT (connect_button), "row_1", row);
-                }
-                if (disconnect_button) {
-                        g_signal_connect (disconnect_button, "clicked",
-                                          G_CALLBACK (ap_disconnect), device_wifi);
-                        g_object_set_data (G_OBJECT (disconnect_button), "row_1", row);
-                }
         }
 
         g_slist_free (connections);
         g_ptr_array_free (aps_unique, TRUE);
+}
+
+static void
+ap_activated (GtkListBox *list, GtkListBoxRow *row, NetDeviceWifi *device_wifi)
+{
+        NMConnection *connection;
+        NMAccessPoint *ap;
+        NMClient *client;
+        NMDevice *nm_device;
+        GtkWidget *edit;
+        GtkWidget *stack;
+
+        connection = NM_CONNECTION (g_object_get_data (G_OBJECT (row), "connection"));
+        ap = NM_ACCESS_POINT (g_object_get_data (G_OBJECT (row), "ap"));
+        edit = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "edit"));
+        stack = GTK_WIDGET (g_object_get_data (G_OBJECT (row), "button_stack"));
+
+
+        if (ap != NULL) {
+                if (connection != NULL) {
+                        gtk_widget_hide (edit);
+                        client = net_object_get_client (NET_OBJECT (device_wifi));
+                        nm_device = net_device_get_nm_device (NET_DEVICE (device_wifi));
+                        nm_client_activate_connection_async (client,
+                                                             connection,
+                                                             nm_device, NULL, NULL,
+                                                             connection_activate_cb, device_wifi);
+                } else {
+                        GBytes *ssid;
+                        const gchar *object_path;
+
+                        gtk_stack_set_visible_child_name (GTK_STACK (stack), "spinner");
+
+                        ssid = nm_access_point_get_ssid (ap);
+                        object_path = nm_object_get_path (NM_OBJECT (ap));
+                        wireless_try_to_connect (device_wifi, ssid, object_path);
+                }
+        }
 }
 
 static void
@@ -2054,7 +2105,6 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
         device_wifi->priv = NET_DEVICE_WIFI_GET_PRIVATE (device_wifi);
 
         device_wifi->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (device_wifi->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device_wifi->priv->builder,
                                        "/org/cinnamon/control-center/network/network-wifi.ui",
                                        &error);
@@ -2071,11 +2121,6 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
                                                      "hotspot-dialog"));
         device_wifi->priv->hotspot_dialog = widget;
-        
-        widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
-                                                     "connect_phidden_button"));
-        g_signal_connect_swapped (widget, "clicked",
-                          G_CALLBACK (connect_to_hidden_network), device_wifi);
 
         /* setup wifi views */
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
@@ -2091,6 +2136,8 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
         gtk_list_box_set_header_func (GTK_LIST_BOX (list), cc_list_box_update_header_func, NULL, NULL);
         gtk_list_box_set_sort_func (GTK_LIST_BOX (list), (GtkListBoxSortFunc)ap_sort, NULL, NULL);
         gtk_container_add (GTK_CONTAINER (swin), list);
+        g_signal_connect (list, "row-activated",
+                          G_CALLBACK (ap_activated), device_wifi);
 
         rows = gtk_size_group_new (GTK_SIZE_GROUP_VERTICAL);
         icons = gtk_size_group_new (GTK_SIZE_GROUP_HORIZONTAL);
@@ -2102,13 +2149,16 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
                                                      "notebook_view"));
         gtk_notebook_set_show_tabs (GTK_NOTEBOOK (widget), FALSE);
         gtk_notebook_set_current_page (GTK_NOTEBOOK (widget), 0);
-        g_signal_connect_after (widget, "switch-page",
-                                G_CALLBACK (switch_page_cb), device_wifi);
 
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
                                                      "start_hotspot_button"));
         g_signal_connect (widget, "clicked",
                           G_CALLBACK (start_hotspot), device_wifi);
+
+        widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
+                                                     "connect_hidden_button"));
+        g_signal_connect_swapped (widget, "clicked",
+                                  G_CALLBACK (connect_to_hidden_network), device_wifi);
 
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
                                                      "history_button"));
@@ -2117,6 +2167,7 @@ net_device_wifi_init (NetDeviceWifi *device_wifi)
 
         widget = GTK_WIDGET (gtk_builder_get_object (device_wifi->priv->builder,
                                                      "switch_hotspot_off"));
+        device_wifi->priv->hotspot_switch = GTK_SWITCH (widget);
         g_signal_connect (widget, "notify::active",
                           G_CALLBACK (switch_hotspot_changed_cb), device_wifi);
 }

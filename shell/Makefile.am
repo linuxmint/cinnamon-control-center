@@ -50,6 +50,10 @@ libcinnamon_control_center_la_SOURCES =		\
 	cc-shell.h				\
 	cc-editable-entry.c			\
 	cc-editable-entry.h			\
+	hostname-helper.h			\
+	hostname-helper.c			\
+	list-box-helper.h			\
+	list-box-helper.c			\
 	$(NULL)
 
 libcinnamon_control_center_la_LDFLAGS =		\
@@ -98,8 +102,8 @@ EXTRA_DIST =					\
 	$(ui_DATA)				\
 	cinnamon-control-center.desktop.in.in	\
 	cinnamoncc.directory.in			\
-	cinnamoncc.menu.in				\
-	libcinnamon-control-center.pc.in  \
+	cinnamoncc.menu.in			\
+	libcinnamon-control-center.pc.in	\
 	cc-shell-marshal.list
 
 DISTCLEANFILES = cinnamon-control-center.desktop cinnamon-control-center.desktop.in cinnamoncc.directory cinnamoncc.menu

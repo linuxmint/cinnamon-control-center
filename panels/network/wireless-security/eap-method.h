@@ -17,25 +17,19 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2007 - 2012 Red Hat, Inc.
+ * Copyright 2007 - 2014 Red Hat, Inc.
  */
 
 #ifndef EAP_METHOD_H
 #define EAP_METHOD_H
 
-#include <glib.h>
-#include <gtk/gtk.h>
-
-#include <nm-connection.h>
-#include <nm-setting-8021x.h>
-
 typedef struct _EAPMethod EAPMethod;
 
 typedef void        (*EMAddToSizeGroupFunc) (EAPMethod *method, GtkSizeGroup *group);
-typedef void        (*EMFillConnectionFunc) (EAPMethod *method, NMConnection *connection);
+typedef void        (*EMFillConnectionFunc) (EAPMethod *method, NMConnection *connection, NMSettingSecretFlags flags);
 typedef void        (*EMUpdateSecretsFunc)  (EAPMethod *method, NMConnection *connection);
 typedef void        (*EMDestroyFunc)        (EAPMethod *method);
-typedef gboolean    (*EMValidateFunc)       (EAPMethod *method);
+typedef gboolean    (*EMValidateFunc)       (EAPMethod *method, GError **error);
 
 struct _EAPMethod {
 	guint32 refcount;
@@ -44,14 +38,11 @@ struct _EAPMethod {
 	GtkBuilder *builder;
 	GtkWidget *ui_widget;
 
-	GtkBuilder *nag_builder;
-	char *ca_cert_chooser;
 	const char *default_field;
-	GtkWidget *nag_dialog;
+	const char *password_flags_name;
 
 	gboolean phase2;
 	gboolean secrets_only;
-	gboolean ignore_ca_cert;
 
 	EMAddToSizeGroupFunc add_to_size_group;
 	EMFillConnectionFunc fill_connection;
@@ -65,21 +56,21 @@ struct _EAPMethod {
 
 GtkWidget *eap_method_get_widget (EAPMethod *method);
 
-gboolean eap_method_validate (EAPMethod *method);
+gboolean eap_method_validate (EAPMethod *method, GError **error);
 
 void eap_method_add_to_size_group (EAPMethod *method, GtkSizeGroup *group);
 
-void eap_method_fill_connection (EAPMethod *method, NMConnection *connection);
+void eap_method_fill_connection (EAPMethod *method,
+                                 NMConnection *connection,
+                                 NMSettingSecretFlags flags);
 
 void eap_method_update_secrets (EAPMethod *method, NMConnection *connection);
-
-GtkWidget * eap_method_nag_user (EAPMethod *method);
 
 EAPMethod *eap_method_ref (EAPMethod *method);
 
 void eap_method_unref (EAPMethod *method);
 
-GType eap_method_get_g_type (void);
+GType eap_method_get_type (void);
 
 /* Below for internal use only */
 
@@ -113,16 +104,28 @@ gboolean eap_method_validate_filepicker (GtkBuilder *builder,
                                          const char *name,
                                          guint32 item_type,
                                          const char *password,
-                                         NMSetting8021xCKFormat *out_format);
-
-gboolean eap_method_nag_init (EAPMethod *method,
-                              const char *ca_cert_chooser,
-                              NMConnection *connection);
+                                         NMSetting8021xCKFormat *out_format,
+                                         GError **error);
 
 void eap_method_phase2_update_secrets_helper (EAPMethod *method,
                                               NMConnection *connection,
                                               const char *combo_name,
                                               guint32 column);
 
-#endif /* EAP_METHOD_H */
+gboolean eap_method_ca_cert_required (GtkBuilder *builder,
+                                      const char *id_ca_cert_is_not_required_checkbox,
+                                      const char *id_ca_cert_chooser);
+void eap_method_ca_cert_not_required_toggled (GtkBuilder *builder,
+                                              const char *id_ca_cert_is_not_required_checkbox,
+                                              const char *id_ca_cert_chooser);
 
+void eap_method_ca_cert_ignore_set (EAPMethod *method,
+                                    NMConnection *connection,
+                                    const char *filename,
+                                    gboolean ca_cert_error);
+gboolean eap_method_ca_cert_ignore_get (EAPMethod *method, NMConnection *connection);
+
+void eap_method_ca_cert_ignore_save (NMConnection *connection);
+void eap_method_ca_cert_ignore_load (NMConnection *connection);
+
+#endif /* EAP_METHOD_H */

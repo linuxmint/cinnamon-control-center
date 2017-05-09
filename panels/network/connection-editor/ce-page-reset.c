@@ -22,7 +22,7 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #include "net-connection-editor.h"
 #include "ce-page-reset.h"
@@ -54,14 +54,6 @@ connect_reset_page (CEPageReset *page)
         g_signal_connect (widget, "clicked", G_CALLBACK (reset_cb), page);
 }
 
-static gboolean
-validate (CEPage        *page,
-          NMConnection  *connection,
-          GError       **error)
-{
-        return TRUE;
-}
-
 static void
 ce_page_reset_init (CEPageReset *page)
 {
@@ -70,15 +62,11 @@ ce_page_reset_init (CEPageReset *page)
 static void
 ce_page_reset_class_init (CEPageResetClass *class)
 {
-        CEPageClass *page_class= CE_PAGE_CLASS (class);
-
-        page_class->validate = validate;
 }
 
 CEPage *
 ce_page_reset_new (NMConnection        *connection,
                    NMClient            *client,
-                   NMRemoteSettings    *settings,
                    NetConnectionEditor *editor)
 {
         CEPageReset *page;
@@ -86,7 +74,6 @@ ce_page_reset_new (NMConnection        *connection,
         page = CE_PAGE_RESET (ce_page_new (CE_TYPE_PAGE_RESET,
                                            connection,
                                            client,
-                                           settings,
                                            "/org/cinnamon/control-center/network/reset-page.ui",
                                            _("Reset")));
         page->editor = editor;

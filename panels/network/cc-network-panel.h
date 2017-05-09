@@ -66,7 +66,7 @@ GType cc_network_panel_get_type (void) G_GNUC_CONST;
 
 GPtrArray *cc_network_panel_get_devices (CcNetworkPanel *panel);
 
-void  cc_network_panel_register (GIOModule *module);
+void cc_network_panel_register (GIOModule *module);
 
 G_END_DECLS
 

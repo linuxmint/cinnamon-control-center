@@ -23,11 +23,9 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
-#include <nm-client.h>
-#include <nm-device.h>
-#include <nm-remote-connection.h>
+#include <NetworkManager.h>
 
 #include "panel-common.h"
 
@@ -95,6 +93,14 @@ nm_device_simple_refresh_ui (NetDeviceSimple *device_simple)
 
         nm_device = net_device_get_nm_device (NET_DEVICE (device_simple));
 
+        /* set device kind */
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "label_device"));
+        g_object_bind_property (device_simple, "title", widget, "label", 0);
+        widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "image_device"));
+        gtk_image_set_from_icon_name (GTK_IMAGE (widget),
+                                      panel_device_to_icon_name (nm_device, FALSE),
+                                      GTK_ICON_SIZE_DIALOG);
+
         /* set up the device on/off switch */
         widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "device_off_switch"));
         state = nm_device_get_state (nm_device);
@@ -135,7 +141,6 @@ device_off_toggled (GtkSwitch *sw,
                     GParamSpec *pspec,
                     NetDeviceSimple *device_simple)
 {
-        const gchar *path;
         const GPtrArray *acs;
         gboolean active;
         gint i;
@@ -152,21 +157,23 @@ device_off_toggled (GtkSwitch *sw,
                 connection = net_device_get_find_connection (NET_DEVICE (device_simple));
                 if (connection == NULL)
                         return;
-                nm_client_activate_connection (client,
-                                               connection,
-                                               net_device_get_nm_device (NET_DEVICE (device_simple)),
-                                               NULL, NULL, NULL);
+                nm_client_activate_connection_async (client,
+                                                     connection,
+                                                     net_device_get_nm_device (NET_DEVICE (device_simple)),
+                                                     NULL, NULL, NULL, NULL);
         } else {
+                const gchar *uuid;
+
                 connection = net_device_get_find_connection (NET_DEVICE (device_simple));
                 if (connection == NULL)
                         return;
-                path = nm_connection_get_path (connection);
+                uuid = nm_connection_get_uuid (connection);
                 client = net_object_get_client (NET_OBJECT (device_simple));
                 acs = nm_client_get_active_connections (client);
                 for (i = 0; acs && i < acs->len; i++) {
                         a = (NMActiveConnection*)acs->pdata[i];
-                        if (strcmp (nm_active_connection_get_connection (a), path) == 0) {
-                                nm_client_deactivate_connection (client, a);
+                        if (strcmp (nm_active_connection_get_uuid (a), uuid) == 0) {
+                                nm_client_deactivate_connection (client, a, NULL, NULL);
                                 break;
                         }
                 }
@@ -231,7 +238,6 @@ net_device_simple_init (NetDeviceSimple *device_simple)
         device_simple->priv = NET_DEVICE_SIMPLE_GET_PRIVATE (device_simple);
 
         device_simple->priv->builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (device_simple->priv->builder, GETTEXT_PACKAGE);
         gtk_builder_add_from_resource (device_simple->priv->builder,
                                        "/org/cinnamon/control-center/network/network-simple.ui",
                                        &error);
@@ -275,7 +281,7 @@ net_device_simple_add_row (NetDeviceSimple *device_simple,
         grid = GTK_GRID (gtk_builder_get_object (priv->builder, "grid"));
 
         label = gtk_label_new (label_string);
-        gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
+        gtk_widget_set_halign (label, GTK_ALIGN_END);
         gtk_container_add (GTK_CONTAINER (grid), label);
 
         context = gtk_widget_get_style_context (label);
@@ -287,7 +293,7 @@ net_device_simple_add_row (NetDeviceSimple *device_simple,
                                  NULL);
 
         value = gtk_label_new (NULL);
-        gtk_misc_set_alignment (GTK_MISC (value), 0.0, 0.5);
+        gtk_widget_set_halign (value, GTK_ALIGN_START);
         g_object_bind_property (device_simple, property_name, value, "label", 0);
         gtk_label_set_mnemonic_widget (GTK_LABEL (label), value);
         gtk_grid_attach (grid, value, 1, top_attach, 1, 1);

@@ -16,18 +16,6 @@
  *
  */
 
-#include <config.h>
-#include "cc-network-panel.h"
-#include <glib/gi18n-lib.h>
-
-void
-g_io_module_load (GIOModule *module)
-{
-        /* register the panel */
-        cc_network_panel_register (module);
-}
-
-void
-g_io_module_unload (GIOModule *module)
-{
-}
+char *pretty_hostname_to_static (const char *pretty,
+				 gboolean    for_display);
+char *pretty_hostname_to_ssid   (const char *pretty);
