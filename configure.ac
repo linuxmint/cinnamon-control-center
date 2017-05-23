@@ -12,7 +12,8 @@ AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz tar-ustar check-news])
 AM_MAINTAINER_MODE([enable])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
-AX_CHECK_ENABLE_DEBUG([yes])
+m4_ifdef([AX_CHECK_ENABLE_DEBUG],
+         [AX_CHECK_ENABLE_DEBUG([yes])])
 m4_ifdef([AX_COMPILER_FLAGS],
          [AX_COMPILER_FLAGS([WARN_CFLAGS],[WARN_LDFLAGS])])
 
