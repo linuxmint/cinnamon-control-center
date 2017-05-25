@@ -313,7 +313,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="apply_button">
-                    <property name="label">gtk-apply</property>
+                    <property name="label" translatable="yes">_Apply</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="can_default">True</property>
