@@ -414,7 +414,6 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 	GdkVisual *visual;
 
 	window = gtk_window_new (GTK_WINDOW_POPUP);
-	gtk_window_set_type_hint (GTK_WINDOW (window), GDK_WINDOW_TYPE_HINT_TOOLTIP);
 	gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
 	gtk_widget_set_app_paintable (window, TRUE);
 	screen = gtk_widget_get_screen (window);

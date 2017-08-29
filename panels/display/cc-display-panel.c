@@ -163,13 +163,8 @@ cc_display_panel_finalize (GObject *object)
   g_object_unref (self->priv->builder);
 
   shell = cc_panel_get_shell (CC_PANEL (self));
-  if (shell != NULL)
+  if (shell == NULL)
     {
-      toplevel = cc_shell_get_toplevel (shell);
-      if (toplevel != NULL)
-        g_signal_handler_disconnect (G_OBJECT (toplevel),
-                                     self->priv->focus_id);
-    } else {
         g_signal_handler_disconnect (GTK_WIDGET (self), self->priv->focus_id);
         g_signal_handler_disconnect (GTK_WIDGET (self), self->priv->focus_id_hide);
     }
@@ -264,10 +259,8 @@ on_screen_changed (GnomeRRScreen *scr,
 
   self->priv->labeler = cc_rr_labeler_new (self->priv->current_configuration);
 
-  if (cc_panel_get_shell (CC_PANEL (self)) == NULL)
-    cc_rr_labeler_hide (self->priv->labeler);
-  else
-    cc_rr_labeler_show (self->priv->labeler);
+  cc_rr_labeler_hide (self->priv->labeler);
+  cc_rr_labeler_show (self->priv->labeler);
 
   select_current_output_from_dialog_position (self);
 
@@ -2333,6 +2326,9 @@ on_detect_displays (GtkWidget *widget, gpointer data)
       g_error_free (error);
     }
   }
+
+  cc_rr_labeler_hide (self->priv->labeler);
+  cc_rr_labeler_show (self->priv->labeler);
 }
 
 static GnomeRROutputInfo *
@@ -2428,19 +2424,6 @@ get_output_for_window (GnomeRRConfig *configuration, GdkWindow *window)
     return get_nearest_output (configuration,
 			       win_rect.x + win_rect.width / 2,
 			       win_rect.y + win_rect.height / 2);
-}
-
-static void
-dialog_toplevel_focus_changed (GtkWindow      *window,
-			       GParamSpec     *pspec,
-			       CcDisplayPanel *self)
-{
-  if (self->priv->labeler == NULL)
-    return;
-  if (gtk_window_has_toplevel_focus (window))
-    cc_rr_labeler_show (self->priv->labeler);
-  else
-    cc_rr_labeler_hide (self->priv->labeler);
 }
 
 static void
@@ -2545,11 +2528,7 @@ cc_display_panel_constructor (GType                  gtype,
 
   shell = cc_panel_get_shell (CC_PANEL (self));
 
-  if (shell != NULL) {
-    toplevel = cc_shell_get_toplevel (shell);
-    self->priv->focus_id = g_signal_connect (toplevel, "notify::has-toplevel-focus",
-                                           G_CALLBACK (dialog_toplevel_focus_changed), self);
-  } else {
+  if (shell == NULL) {
     self->priv->focus_id = g_signal_connect (GTK_WIDGET (self), "show",
                                              G_CALLBACK (widget_visible_changed), NULL);
     self->priv->focus_id_hide = g_signal_connect (GTK_WIDGET (self), "hide",
