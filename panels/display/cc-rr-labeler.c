@@ -185,12 +185,8 @@ static void
 make_palette (CcRRLabeler *labeler)
 {
 	/* The idea is that we go around an hue color wheel.  We want to start
-	 * at red, go around to green/etc. and stop at blue --- because magenta
-	 * is evil.  Eeeeek, no magenta, please!
+	 * at red, go around to green/etc. and stop at blue.
 	 *
-	 * Purple would be nice, though.  Remember that we are watered down
-	 * (i.e. low saturation), so that would be like Like berries with cream.
-	 * Mmmmm, berries.
 	 */
 	double start_hue;
 	double end_hue;
@@ -259,15 +255,13 @@ rounded_rectangle (cairo_t *cr,
 	cairo_close_path (cr);
 }
 
-#define LABEL_WINDOW_EDGE_THICKNESS 2
+#define LABEL_WINDOW_EDGE_THICKNESS 1
 #define LABEL_WINDOW_PADDING 12
-/* Look for panel-corner in:
- * http://git.gnome.org/browse/gnome-shell/tree/data/theme/gnome-shell.css
- * to match the corner radius */
 #define LABEL_CORNER_RADIUS 0
+#define LABEL_WINDOW_MARGIN 5
 
 static void
-label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr, gboolean for_shape)
+label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr)
 {
 	GdkRGBA shape_color = { 0, 0, 0, 1 };
 	GdkRGBA *rgba;
@@ -280,10 +274,7 @@ label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr, gboolean for_sh
 	cairo_set_operator (cr, CAIRO_OPERATOR_SOURCE);
 
 	/* edge outline */
-	if (for_shape)
-		gdk_cairo_set_source_rgba (cr, &shape_color);
-	else
-		cairo_set_source_rgba (cr, 0, 0, 0, 0.5);
+	cairo_set_source_rgba (cr, 0, 0, 0, 1.0);
 
 	rounded_rectangle (cr,
 	                   LABEL_WINDOW_EDGE_THICKNESS / 2.0,
@@ -295,12 +286,8 @@ label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr, gboolean for_sh
 	cairo_stroke (cr);
 
 	/* fill */
-	if (for_shape) {
-		gdk_cairo_set_source_rgba (cr, &shape_color);
-	} else {
-		rgba->alpha = 0.75;
-		gdk_cairo_set_source_rgba (cr, rgba);
-	}
+	rgba->alpha = 0.90;
+	gdk_cairo_set_source_rgba (cr, rgba);
 
 	rounded_rectangle (cr,
 	                   LABEL_WINDOW_EDGE_THICKNESS,
@@ -325,7 +312,7 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 	cairo_restore (cr);
 
 	gtk_widget_shape_combine_region (widget, NULL);
-	label_draw_background_and_frame (widget, cr, FALSE);
+	label_draw_background_and_frame (widget, cr);
 
 	return FALSE;
 }
@@ -347,7 +334,7 @@ position_window (CcRRLabeler  *labeler,
                                          &monitor);
 	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
 
-	gtk_window_move (GTK_WINDOW (window), workarea.x, workarea.y);
+	gtk_window_move (GTK_WINDOW (window), workarea.x + LABEL_WINDOW_MARGIN, workarea.y + LABEL_WINDOW_MARGIN);
 }
 
 static void
@@ -407,8 +394,6 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 			  G_CALLBACK (label_window_composited_changed_cb), labeler);
 
 	if (gnome_rr_config_get_clone (labeler->priv->config)) {
-		/* Keep this string in sync with gnome-control-center/capplets/display/xrandr-capplet.c:get_display_name() */
-
 		/* Translators:  this is the feature where what you see on your
 		 * laptop's screen is the same as your external projector.
 		 * Here, "Mirrored" is being used as an adjective.  For example,
@@ -425,19 +410,13 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 
 	widget = gtk_label_new (NULL);
 	gtk_label_set_markup (GTK_LABEL (widget), str);
+	gtk_label_set_justify (GTK_LABEL (widget), GTK_JUSTIFY_CENTER);
 	g_free (str);
 
-	/* Make the label explicitly black.  We don't want it to follow the
-	 * theme's colors, since the label is always shown against a light
-	 * pastel background.  See bgo#556050
-	 */
-	gtk_widget_override_color (widget,
-				   gtk_widget_get_state_flags (widget),
-				   &black);
+	gtk_widget_override_color (widget, gtk_widget_get_state_flags (widget), &black);
 
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
-	/* Should we center this at the top edge of the monitor, instead of using the upper-left corner? */
 	gnome_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);
 	position_window (labeler, window, x, y);
 
