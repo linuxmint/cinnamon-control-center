@@ -4,7 +4,7 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">preferences-system-symbolic</property>
+    <property name="icon_name">emblem-system-symbolic</property>
     <property name="icon_size">1</property>
   </object>
       <object class="GtkVBox" id="vbox6">
@@ -17,6 +17,24 @@
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>
             <property name="column_spacing">6</property>
+            <child>
+              <object class="GtkImage" id="image_device">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">end</property>
+                <property name="valign">start</property>
+                <property name="xalign">1</property>
+                <property name="pixel_size">48</property>
+                <property name="icon_name">network-wired</property>
+                <property name="icon-size">6</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
+              </packing>
+            </child>
             <child>
               <object class="GtkVBox" id="vbox4">
                 <property name="visible">True</property>

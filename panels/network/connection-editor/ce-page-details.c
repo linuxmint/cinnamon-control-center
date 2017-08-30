@@ -22,11 +22,9 @@
 #include "config.h"
 
 #include <glib-object.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
-#include <nm-utils.h>
-#include <nm-device-wifi.h>
-#include <nm-device-ethernet.h>
+#include <NetworkManager.h>
 
 #include "../panel-common.h"
 #include "ce-page-details.h"
@@ -141,8 +139,8 @@ connect_details_page (CEPageDetails *page)
                 const gchar *p1, *p2;
 
                 ac = nm_device_get_active_connection (page->device);
-                p1 = ac ? nm_active_connection_get_connection (ac) : NULL;
-                p2 = nm_connection_get_path (CE_PAGE (page)->connection);
+                p1 = ac ? nm_active_connection_get_uuid (ac) : NULL;
+                p2 = nm_connection_get_uuid (CE_PAGE (page)->connection);
                 if (g_strcmp0 (p1, p2) == 0) {
                         device_is_active = TRUE;
                         if (NM_IS_DEVICE_WIFI (page->device))
@@ -202,14 +200,6 @@ connect_details_page (CEPageDetails *page)
 
 }
 
-static gboolean
-validate (CEPage        *page,
-          NMConnection  *connection,
-          GError       **error)
-{
-        return TRUE;
-}
-
 static void
 ce_page_details_init (CEPageDetails *page)
 {
@@ -218,15 +208,11 @@ ce_page_details_init (CEPageDetails *page)
 static void
 ce_page_details_class_init (CEPageDetailsClass *class)
 {
-        CEPageClass *page_class= CE_PAGE_CLASS (class);
-
-        page_class->validate = validate;
 }
 
 CEPage *
 ce_page_details_new (NMConnection     *connection,
                      NMClient         *client,
-                     NMRemoteSettings *settings,
                      NMDevice         *device,
                      NMAccessPoint    *ap)
 {
@@ -235,7 +221,6 @@ ce_page_details_new (NMConnection     *connection,
         page = CE_PAGE_DETAILS (ce_page_new (CE_TYPE_PAGE_DETAILS,
                                              connection,
                                              client,
-                                             settings,
                                              "/org/cinnamon/control-center/network/details-page.ui",
                                              _("Details")));
 

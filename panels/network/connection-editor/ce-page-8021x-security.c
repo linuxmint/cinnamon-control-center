@@ -25,14 +25,9 @@
 #include <string.h>
 
 #include <gtk/gtk.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #include <NetworkManager.h>
-#include <nm-setting-connection.h>
-#include <nm-setting-wired.h>
-#include <nm-setting-8021x.h>
-#include <nm-setting-wireless.h>
-#include <nm-utils.h>
 
 #include "wireless-security.h"
 #include "ce-page-ethernet.h"
@@ -95,15 +90,13 @@ finish_setup (CEPage8021xSecurity *page, gpointer unused, GError *error, gpointe
 
 CEPage *
 ce_page_8021x_security_new (NMConnection     *connection,
-                            NMClient         *client,
-                            NMRemoteSettings *settings)
+                            NMClient         *client)
 {
 	CEPage8021xSecurity *page;
 
 	page = CE_PAGE_8021X_SECURITY (ce_page_new (CE_TYPE_PAGE_8021X_SECURITY,
 	                                            connection,
 	                                            client,
-	                                            settings,
 	                                            "/org/cinnamon/control-center/network/8021x-security-page.ui",
 	                                            _("Security")));
 
@@ -131,12 +124,12 @@ validate (CEPage *cepage, NMConnection *connection, GError **error)
 		NMSetting *s_8021x;
 
 		/* FIXME: get failed property and error out of wireless security objects */
-		valid = wireless_security_validate (page->security, NULL);
+		valid = wireless_security_validate (page->security, error);
 		if (valid) {
 			NMSetting *s_con;
 
 			/* Here's a nice hack to work around the fact that ws_802_1x_fill_connection needs wireless setting. */
-			tmp_connection = nm_connection_new ();
+			tmp_connection = nm_simple_connection_new ();
 			nm_connection_add_setting (tmp_connection, nm_setting_wireless_new ());
 
 			/* temp connection needs a 'connection' setting too, since most of
@@ -151,8 +144,7 @@ validate (CEPage *cepage, NMConnection *connection, GError **error)
 			nm_connection_add_setting (connection, NM_SETTING (g_object_ref (s_8021x)));
 
 			g_object_unref (tmp_connection);
-		} else
-			g_set_error (error, NM_CONNECTION_ERROR, NM_CONNECTION_ERROR_UNKNOWN, "Invalid 802.1x security");
+		}
 	} else {
 		nm_connection_remove_setting (connection, NM_TYPE_SETTING_802_1X);
 		valid = TRUE;

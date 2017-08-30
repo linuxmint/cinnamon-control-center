@@ -17,13 +17,11 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2007 - 2010 Red Hat, Inc.
+ * Copyright 2007 - 2014 Red Hat, Inc.
  */
 
 #ifndef WS_WEP_KEY_H
 #define WS_WEP_KEY_H
-
-#include <nm-setting-wireless-security.h>
 
 typedef struct _WirelessSecurityWEPKey WirelessSecurityWEPKey;
 
@@ -33,4 +31,3 @@ WirelessSecurityWEPKey *ws_wep_key_new (NMConnection *connection,
                                         gboolean secrets_only);
 
 #endif /* WS_WEP_KEY_H */
-

@@ -17,20 +17,17 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2012 Red Hat, Inc.
+ * Copyright 2012 - 2014 Red Hat, Inc.
  */
 
-#include "config.h"
+#include "nm-default.h"
 
-#include <glib/gi18n-lib.h>
 #include <ctype.h>
 #include <string.h>
 
-#include <nm-setting-connection.h>
-#include <nm-setting-8021x.h>
-
 #include "eap-method.h"
 #include "wireless-security.h"
+#include "utils.h"
 #include "helpers.h"
 
 #define I_NAME_COLUMN   0
@@ -54,7 +51,7 @@ destroy (EAPMethod *parent)
 }
 
 static gboolean
-validate (EAPMethod *parent)
+validate (EAPMethod *parent, GError **error)
 {
 	GtkWidget *widget;
 	GtkTreeModel *model;
@@ -62,7 +59,7 @@ validate (EAPMethod *parent)
 	EAPMethod *eap = NULL;
 	const char *file;
 	gboolean provisioning;
-	gboolean ret = TRUE;
+	gboolean valid = TRUE;
 
 	widget = GTK_WIDGET (gtk_builder_get_object (parent->builder, "eap_fast_pac_provision_checkbutton"));
 	g_assert (widget);
@@ -72,10 +69,10 @@ validate (EAPMethod *parent)
 	file = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (widget));
 	if (!provisioning && !file) {
 		widget_set_error (widget);
-		ret = FALSE;
-	} else {
+		g_set_error_literal (error, NMA_ERROR, NMA_ERROR_GENERIC, _("missing EAP-FAST PAC file"));
+		valid = FALSE;
+	} else
 		widget_unset_error (widget);
-	}
 
 	widget = GTK_WIDGET (gtk_builder_get_object (parent->builder, "eap_fast_inner_auth_combo"));
 	g_assert (widget);
@@ -83,14 +80,9 @@ validate (EAPMethod *parent)
 	gtk_combo_box_get_active_iter (GTK_COMBO_BOX (widget), &iter);
 	gtk_tree_model_get (model, &iter, I_METHOD_COLUMN, &eap, -1);
 	g_assert (eap);
-	if (!eap_method_validate (eap)) {
-		widget_set_error (widget);
-		ret = FALSE;
-	} else {
-		widget_unset_error (widget);
-	}
+	valid = eap_method_validate (eap, valid ? error : NULL) && valid;
 	eap_method_unref (eap);
-	return ret;
+	return valid;
 }
 
 static void
@@ -134,7 +126,7 @@ add_to_size_group (EAPMethod *parent, GtkSizeGroup *group)
 }
 
 static void
-fill_connection (EAPMethod *parent, NMConnection *connection)
+fill_connection (EAPMethod *parent, NMConnection *connection, NMSettingSecretFlags flags)
 {
 	NMSetting8021x *s_8021x;
 	GtkWidget *widget;
@@ -193,7 +185,7 @@ fill_connection (EAPMethod *parent, NMConnection *connection)
 	gtk_tree_model_get (model, &iter, I_METHOD_COLUMN, &eap, -1);
 	g_assert (eap);
 
-	eap_method_fill_connection (eap, connection);
+	eap_method_fill_connection (eap, connection, flags);
 	eap_method_unref (eap);
 }
 
@@ -250,8 +242,9 @@ inner_auth_combo_init (EAPMethodFAST *method,
 	EAPMethodSimple *em_mschap_v2;
 	guint32 active = 0;
 	const char *phase2_auth = NULL;
+	EAPMethodSimpleFlags simple_flags;
 
-	auth_model = gtk_list_store_new (2, G_TYPE_STRING, eap_method_get_g_type ());
+	auth_model = gtk_list_store_new (2, G_TYPE_STRING, eap_method_get_type ());
 
 	if (s_8021x) {
 		if (nm_setting_802_1x_get_phase2_auth (s_8021x))
@@ -260,12 +253,16 @@ inner_auth_combo_init (EAPMethodFAST *method,
 			phase2_auth = nm_setting_802_1x_get_phase2_autheap (s_8021x);
 	}
 
+	simple_flags = EAP_METHOD_SIMPLE_FLAG_PHASE2;
+	if (method->is_editor)
+		simple_flags |= EAP_METHOD_SIMPLE_FLAG_IS_EDITOR;
+	if (secrets_only)
+		simple_flags |= EAP_METHOD_SIMPLE_FLAG_SECRETS_ONLY;
+
 	em_gtc = eap_method_simple_new (method->sec_parent,
 	                                connection,
 	                                EAP_METHOD_SIMPLE_TYPE_GTC,
-	                                TRUE,
-	                                method->is_editor,
-	                                secrets_only);
+	                                simple_flags);
 	gtk_list_store_append (auth_model, &iter);
 	gtk_list_store_set (auth_model, &iter,
 	                    I_NAME_COLUMN, _("GTC"),
@@ -280,8 +277,7 @@ inner_auth_combo_init (EAPMethodFAST *method,
 	em_mschap_v2 = eap_method_simple_new (method->sec_parent,
 	                                      connection,
 	                                      EAP_METHOD_SIMPLE_TYPE_MSCHAP_V2,
-	                                      TRUE,
-	                                      method->is_editor, secrets_only);
+	                                      simple_flags);
 	gtk_list_store_append (auth_model, &iter);
 	gtk_list_store_set (auth_model, &iter,
 	                    I_NAME_COLUMN, _("MSCHAPv2"),
@@ -360,6 +356,7 @@ eap_method_fast_new (WirelessSecurity *ws_parent,
 	if (!parent)
 		return NULL;
 
+	parent->password_flags_name = NM_SETTING_802_1X_PASSWORD;
 	method = (EAPMethodFAST *) parent;
 	method->sec_parent = ws_parent;
 	method->is_editor = is_editor;

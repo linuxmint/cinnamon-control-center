@@ -17,16 +17,11 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * (C) Copyright 2009 Red Hat, Inc.
+ * Copyright 2009 - 2014 Red Hat, Inc.
  */
 
 #ifndef _HELPERS_H_
 #define _HELPERS_H_
-
-#include <glib.h>
-#include <gtk/gtk.h>
-#include <nm-connection.h>
-#include <nm-setting.h>
 
 typedef const char * (*HelperSecretFunc)(NMSetting *);
 
@@ -35,9 +30,6 @@ void helper_fill_secret_entry (NMConnection *connection,
                                const char *entry_name,
                                GType setting_type,
                                HelperSecretFunc func);
-
-extern void widget_set_error   (GtkWidget *widget);
-extern void widget_unset_error (GtkWidget *widget);
 
 #endif  /* _HELPERS_H_ */
 

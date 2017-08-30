@@ -17,16 +17,28 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * Copyright 2007 - 2014 Red Hat, Inc.
+ * Copyright 2007 - 2015 Red Hat, Inc.
  */
 
-#ifndef WS_WPA_EAP_H
-#define WS_WPA_EAP_H
+#include <nm-setting-wired.h>
+#include <nm-setting-connection.h>
 
-typedef struct _WirelessSecurityWPAEAP WirelessSecurityWPAEAP;
+gboolean utils_char_is_ascii_print (char character);
 
-WirelessSecurityWPAEAP * ws_wpa_eap_new (NMConnection *connection,
-                                         gboolean is_editor,
-                                         gboolean secrets_only);
+#define NMA_ERROR (g_quark_from_static_string ("nma-error-quark"))
 
-#endif /* WS_WPA_EAP_H */
+typedef enum  {
+	NMA_ERROR_GENERIC
+} NMAError;
+
+typedef gboolean (*UtilsFilterGtkEditableFunc) (char character);
+gboolean utils_filter_editable_on_insert_text (GtkEditable *editable,
+					       const gchar *text,
+					       gint length,
+					       gint *position,
+					       void *user_data,
+					       UtilsFilterGtkEditableFunc validate_character,
+					       gpointer block_func);
+
+extern void widget_set_error (GtkWidget *widget);
+extern void widget_unset_error (GtkWidget *widget);
