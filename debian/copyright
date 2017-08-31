@@ -46,11 +46,6 @@ Copyright: 2013, Aleksander Morgado <aleksander@gnu.org>
 License: GPL-2+
 
 Files: INSTALL
-       m4/libtool.m4
-       m4/ltoptions.m4
-       m4/ltsugar.m4
-       m4/ltversion.m4
-       m4/lt~obsolete.m4
        po/Makefile.in.in
 Copyright: 2004-2009, Free Software Foundation
            2004-2009, Free Software Foundation, Inc
@@ -79,11 +74,6 @@ Files: panels/display/cc-rr-labeler.c
 Copyright: 2008, Novell, Inc
            2006-2008, Soren Sandmann <sandmann@daimi.au.dk>
 License: LGPL-2+
-
-Files: panels/universal-access/zoom-options.c
-       panels/universal-access/zoom-options.h
-Copyright: 2011, Inclusive Design Research Centre, OCAD University
-License: GPL-2.1+
 
 Files: panels/common/locarchive.h
 Copyright: 2002, Free Software Foundation, Inc
@@ -135,45 +125,6 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General Public License
  version 2 can be found in `/usr/share/common-licenses/GPL-2'.
-
-License: GPL-2
- This program is free software; you can redistribute it and/or modify it under
- the terms of the GNU General Public License as published by the Free Software
- Foundation; version 2 of the License.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT
- ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
- details.
- .
- You should have received a copy of the GNU General Public License along with
- this program; if not, write to the Free Software Foundation, Inc., 51
- Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
- .
- On Debian systems, the complete text of the GNU General Public License
- version 2 can be found in `/usr/share/common-licenses/GPL-2'.
-
-License: GPL-2.1+
- This program is free software; you can redistribute it and/or modify it
- under the terms of the GNU General Public License as published by the
- Free Software Foundation; either version 2.1 of the License, or (at your
- option) any later version.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT
- ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
- for more details.
- .
- You should have received a copy of the GNU Lesser General Public License
- along with this program; if not, write to the Free Software Foundation,
- Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- .
- On Debian systems, the complete text of the GNU Lesser General Public License
- version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1', and the
- complete text of the GNU General Public License version 3 can be found in
- `/usr/share/common-licenses/GPL-3'.
-Comment: There is no GPL-2.1+, this is probably a typo for LGPL-2.1+, arguably
- GPL-3+
 
 License: LGPL-2+
  This library is free software; you can redistribute it and/or modify it under
