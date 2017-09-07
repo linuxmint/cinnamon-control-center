@@ -26,6 +26,12 @@ else
 disabled_panels += wacom
 endif
 
+if BUILD_ONLINE_ACCOUNTS
+enabled_panels += online-accounts
+else
+disabled_panels += online-accounts
+endif
+
 SUBDIRS = common $(enabled_panels)
 DIST_SUBDIRS = $(SUBDIRS) $(disabled_panels)
 

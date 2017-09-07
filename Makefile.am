@@ -1,8 +1,8 @@
-ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ACLOCAL_AMFLAGS = -I m4 -I libgd ${ACLOCAL_FLAGS}
 
-SUBDIRS = po shell panels
+SUBDIRS = libgd po shell panels
 
-DIST_SUBDIRS = po shell panels
+DIST_SUBDIRS = libgd po shell panels
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/INSTALL \

@@ -1,0 +1,14 @@
+[Desktop Entry]
+# Translators: Add soft hyphens to your translations so that the icon view won't clip your translations. See https://bugzilla.gnome.org/show_bug.cgi?id=647087#c13 for details
+_Name=Online Accounts
+_Comment=Connect to your online accounts and decide what to use them for
+Exec=cinnamon-settings online-accounts
+Icon=cs-online-accounts
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Settings;DesktopSettings;
+OnlyShowIn=X-Cinnamon;
+# Translators: those are keywords for the online-accounts control-center panel
+# For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
+_Keywords=Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;
