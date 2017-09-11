@@ -333,6 +333,7 @@ cc_wacom_panel_init (CcWacomPanel *self)
 
 	/* Notebook */
 	notebook = GTK_NOTEBOOK (gtk_notebook_new ());
+	gtk_notebook_set_show_border(notebook, FALSE);
 	priv->notebook = GTK_WIDGET (notebook);
 
 	gtk_notebook_set_show_tabs (notebook, FALSE);
