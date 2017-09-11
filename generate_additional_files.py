@@ -72,21 +72,6 @@ _Keywords=Network;Wireless;IP;LAN;Proxy;
 additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop.in.in", prefix, _("Network"), _("Network settings"), "")
 
 prefix = """[Desktop Entry]
-Exec=cinnamon-control-center datetime
-Icon=cs-date-time
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;X-cinnamon-SystemSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=datetime
-# Translators: those are keywords for the date and time control-center panel
-_Keywords=Clock;Timezone;Location;
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/datetime/cinnamon-datetime-panel.desktop.in", prefix, _("Date & Time"), _("Date and Time preferences"), "")
-
-prefix = """[Desktop Entry]
 Exec=cinnamon-settings wacom
 Icon=cs-tablet
 Terminal=false

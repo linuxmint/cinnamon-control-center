@@ -15,7 +15,6 @@ panels/common/cc-language-chooser.c
 panels/common/gdm-languages.c
 [type: gettext/glade]panels/common/language-chooser.ui
 [type: gettext/glade]panels/datetime/datetime.ui
-panels/datetime/cinnamon-datetime-panel.desktop.in.in
 panels/display/cc-display-panel.c
 [type: gettext/glade]panels/display/display-capplet.ui
 panels/display/cinnamon-display-panel.desktop.in.in

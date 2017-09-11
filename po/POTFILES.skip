@@ -1,6 +1,5 @@
 panels/background/cinnamon-background-panel.desktop.in
 panels/color/cinnamon-color-panel.desktop.in
-panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/display/cinnamon-display-panel.desktop.in
 panels/info/cinnamon-info-panel.desktop.in
 panels/keyboard/cinnamon-keyboard-panel.desktop.in

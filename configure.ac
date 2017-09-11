@@ -407,7 +407,6 @@ panels/wacom/Makefile
 panels/wacom/calibrator/Makefile
 panels/wacom/cinnamon-wacom-panel.desktop.in
 panels/datetime/Makefile
-panels/datetime/cinnamon-datetime-panel.desktop.in
 panels/datetime/po-timezones/Makefile
 po/Makefile.in
 shell/Makefile
