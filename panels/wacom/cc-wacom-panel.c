@@ -285,7 +285,7 @@ static gboolean
 link_activated (GtkLinkButton *button,
 		CcWacomPanel  *self)
 {
-    g_spawn_command_line_async ("cinnamon-settings bluetooth", NULL);
+    g_spawn_command_line_async ("blueberry", NULL);
 	return TRUE;
 }
 
