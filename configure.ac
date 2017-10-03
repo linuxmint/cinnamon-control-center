@@ -101,6 +101,7 @@ LIBNOTIFY_REQUIRED_VERSION=0.7.3
 CINNAMON_DESKTOP_REQUIRED_VERSION=1.0.0
 CSD_REQUIRED_VERSION=1.0.0
 LIBWACOM_REQUIRED_VERSION=0.7
+GOA_REQUIRED_VERSION=3.21.5
 
 COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  glib-2.0 >= $GLIB_REQUIRED_VERSION
@@ -109,6 +110,8 @@ COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  gio-unix-2.0
  cinnamon-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION
  libnotify >= $LIBNOTIFY_REQUIRED_VERSION"
+
+LIBGD_INIT([_view-common static])
 
 PKG_CHECK_MODULES(LIBCINNAMON_CONTROL_CENTER, $COMMON_MODULES)
 PKG_CHECK_MODULES(LIBLANGUAGE, $COMMON_MODULES cinnamon-desktop fontconfig)
@@ -127,6 +130,8 @@ PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES gmodule-2.0
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
+PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0
+                  goa-backend-1.0 >= $GOA_REQUIRED_VERSION)
 
 #----------------------------------------------
 # Network Manager Stuff
@@ -280,6 +285,35 @@ AM_CONDITIONAL(BUILD_WACOM, test "x$build_wacom" = "xtrue")
 AC_SUBST(WACOM_PANEL_CFLAGS)
 AC_SUBST(WACOM_PANEL_LIBS)
 
+# Online accounts
+AC_ARG_ENABLE(onlineaacounts,
+              AC_HELP_STRING([--disable-onlineaccounts],
+                             [build online-accounts panel]),
+              [case "${enableval}" in
+                      yes) enable_onlineaccounts=yes ;;
+                      no) enable_onlineaccounts=no ;;
+                      *) AC_MSG_ERROR(bad value ${enableval} for --disable-onlineaccounts) ;;
+              esac],
+              [enable_onlineaccounts=yes]) dnl Enabled by default
+
+if test "x$enable_onlineaccounts" = xyes; then
+    PKG_CHECK_MODULES(ONLINE_ACCOUNTS, goa-1.0,
+                      [have_onlineaccounts=yes], have_onlineaccounts=no)
+    if test "x$have_onlineaccounts" = xno ; then
+        AC_MSG_ERROR(*** Gnome Online Accounts not found ***)
+    fi
+
+    AC_DEFINE(BUILD_ONLINE_ACCOUNTS, 1, [Define to 1 to build the online-accounts panel])
+
+    if test x${have_onlineaccounts} = xyes; then
+      AC_DEFINE(HAVE_ONLINE_ACCOUNTS, 1, [Define to 1 if Gnome Online Accounts is available])
+    fi
+fi
+
+AM_CONDITIONAL(BUILD_ONLINE_ACCOUNTS, [test x$have_onlineaccounts = xyes])
+AC_SUBST(ONLINE_ACCOUNTS_CFLAGS)
+AC_SUBST(ONLINE_ACCOUNTS_LIBS)
+
 # This is a hard-dependency for the region and user-accounts panels
 PKG_CHECK_MODULES(ISOCODES, iso-codes)
 
@@ -382,6 +416,7 @@ fi
 
 AC_OUTPUT([
 Makefile
+libgd/Makefile
 panels/Makefile
 panels/common/Makefile
 panels/display/Makefile
@@ -408,6 +443,15 @@ panels/wacom/calibrator/Makefile
 panels/wacom/cinnamon-wacom-panel.desktop.in
 panels/datetime/Makefile
 panels/datetime/po-timezones/Makefile
+panels/online-accounts/Makefile
+panels/online-accounts/cinnamon-online-accounts-panel.desktop.in
+panels/online-accounts/icons/Makefile
+panels/online-accounts/icons/16x16/Makefile
+panels/online-accounts/icons/22x22/Makefile
+panels/online-accounts/icons/24x24/Makefile
+panels/online-accounts/icons/32x32/Makefile
+panels/online-accounts/icons/48x48/Makefile
+panels/online-accounts/icons/256x256/Makefile
 po/Makefile.in
 shell/Makefile
 shell/cinnamon-control-center.desktop.in
@@ -441,6 +485,12 @@ if test "x$build_wacom" = "xtrue"; then
 	AC_MSG_NOTICE([** Wacom support (Wacom panel)])
 else
 	AC_MSG_NOTICE([   Wacom support disabled])
+fi
+
+if test "x$have_onlineaccounts" = "xyes"; then
+	AC_MSG_NOTICE([** Online-Accounts support (Online-Accounts panel)])
+else
+	AC_MSG_NOTICE([   Online-Accounts support disabled])
 fi
 
 AC_MSG_NOTICE([End options])
