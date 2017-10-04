@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-11 11:45+0100\n"
+"POT-Creation-Date: 2017-10-04 11:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -791,6 +791,25 @@ msgstr ""
 msgid "Cable unplugged"
 msgstr ""
 
+#: panels/online-accounts/cc-online-accounts-panel.c:148
+msgctxt "Online Account"
+msgid "Other"
+msgstr ""
+
+#: panels/online-accounts/cc-online-accounts-panel.c:603
+#, c-format
+msgid "%s Account"
+msgstr ""
+
+#: panels/online-accounts/cc-online-accounts-panel.c:895
+msgid "Error removing account"
+msgstr ""
+
+#: panels/online-accounts/cc-online-accounts-panel.c:960
+#, c-format
+msgid "<b>%s</b> removed"
+msgstr ""
+
 #: panels/region/cinnamon-region-panel-xkblt.c:210
 msgid "Layout"
 msgstr ""
@@ -1538,6 +1557,22 @@ msgstr ""
 
 #: panels/network/network-wifi.ui.h:63
 msgid "Password"
+msgstr ""
+
+#: panels/online-accounts/online-accounts.ui.h:1
+msgid "Undo"
+msgstr ""
+
+#: panels/online-accounts/online-accounts.ui.h:2
+msgid "No internet connection — connect to set up new online accounts"
+msgstr ""
+
+#: panels/online-accounts/online-accounts.ui.h:3
+msgid "Add an account"
+msgstr ""
+
+#: panels/online-accounts/online-accounts.ui.h:4
+msgid "Remove Account"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel-layout-chooser.ui.h:1
