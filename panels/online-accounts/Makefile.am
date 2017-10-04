@@ -5,7 +5,6 @@ SUBDIRS = icons
 AM_CPPFLAGS = 						\
 	$(PANEL_CFLAGS)					\
 	$(ONLINE_ACCOUNTS_PANEL_CFLAGS)			\
-	-I$(top_srcdir)/libgd				\
 	-DCINNAMONCC_DATA_DIR="\"$(pkgdatadir)\""
 	$(NULL)
 
@@ -24,8 +23,7 @@ libonline_accounts_la_SOURCES =		\
 
 libonline_accounts_la_LIBADD =				\
 	$(PANEL_LIBS)					\
-	$(ONLINE_ACCOUNTS_PANEL_LIBS)			\
-	$(top_builddir)/libgd/libgd.la
+	$(ONLINE_ACCOUNTS_PANEL_LIBS)
 
 libonline_accounts_la_LDFLAGS = $(PANEL_LDFLAGS)
 

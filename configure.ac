@@ -111,8 +111,6 @@ COMMON_MODULES="gtk+-3.0 >= $GTK_REQUIRED_VERSION
  cinnamon-desktop >= $CINNAMON_DESKTOP_REQUIRED_VERSION
  libnotify >= $LIBNOTIFY_REQUIRED_VERSION"
 
-LIBGD_INIT([_view-common static])
-
 PKG_CHECK_MODULES(LIBCINNAMON_CONTROL_CENTER, $COMMON_MODULES)
 PKG_CHECK_MODULES(LIBLANGUAGE, $COMMON_MODULES cinnamon-desktop fontconfig)
 PKG_CHECK_MODULES(LIBSHORTCUTS, $COMMON_MODULES x11)
@@ -416,7 +414,6 @@ fi
 
 AC_OUTPUT([
 Makefile
-libgd/Makefile
 panels/Makefile
 panels/common/Makefile
 panels/display/Makefile
