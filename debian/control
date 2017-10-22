@@ -21,6 +21,8 @@ Build-Depends:
  libgdk-pixbuf2.0-dev (>= 2.23.0),
  libglib2.0-dev (>= 2.31.0),
  libgnomekbd-dev,
+ libgoa-1.0-dev,
+ libgoa-backend-1.0-dev,
  libgtk-3-dev (>= 3.4.1),
  libmm-glib-dev (>= 0.7) [linux-any],
  libnm-dev (>=1.2.0) [linux-any],
