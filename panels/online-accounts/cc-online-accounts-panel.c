@@ -237,6 +237,7 @@ add_account (CcGoaPanel  *self,
              GoaProvider *provider,
              GVariant    *preseed)
 {
+  GtkWindow *parent;
   GoaObject *object;
   GError *error;
 
@@ -250,6 +251,9 @@ add_account (CcGoaPanel  *self,
 
   /* Move to the new account page */
   gtk_stack_set_visible_child_name (GTK_STACK (self->stack), "new-account");
+
+  parent = GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (self)));
+  gtk_window_set_transient_for (GTK_WINDOW (self->edit_account_dialog), parent);
 
   /* Reset the dialog size */
   gtk_window_resize (GTK_WINDOW (self->edit_account_dialog), 1, 1);
@@ -492,20 +496,6 @@ cc_goa_panel_get_help_uri (CcPanel *panel)
 }
 
 static void
-cc_goa_panel_constructed (GObject *object)
-{
-  CcGoaPanel *self = CC_GOA_PANEL (object);
-  GtkWindow *parent;
-
-  /* Setup account editor dialog */
-  parent = GTK_WINDOW (cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (self))));
-
-  gtk_window_set_transient_for (GTK_WINDOW (self->edit_account_dialog), parent);
-
-  G_OBJECT_CLASS (cc_goa_panel_parent_class)->constructed (object);
-}
-
-static void
 cc_goa_panel_class_init (CcGoaPanelClass *klass)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
@@ -516,7 +506,6 @@ cc_goa_panel_class_init (CcGoaPanelClass *klass)
 
   object_class->set_property = cc_goa_panel_set_property;
   object_class->finalize = cc_goa_panel_finalize;
-  object_class->constructed = cc_goa_panel_constructed;
   object_class->dispose = cc_goa_panel_dispose;
 
   g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
@@ -556,6 +545,7 @@ static void
 show_page_account (CcGoaPanel  *panel,
                    GoaObject *object)
 {
+  GtkWindow *parent;
   GList *children;
   GList *l;
   GoaProvider *provider;
@@ -603,6 +593,9 @@ show_page_account (CcGoaPanel  *panel,
   title = g_strdup_printf (_("%s Account"), provider_name);
   gtk_header_bar_set_title (GTK_HEADER_BAR (panel->edit_account_headerbar), title);
   g_free (title);
+
+  parent = GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (panel)));
+  gtk_window_set_transient_for (GTK_WINDOW (panel->edit_account_dialog), parent);
 
   /* Reset the dialog size */
   gtk_window_resize (GTK_WINDOW (panel->edit_account_dialog), 1, 1);
@@ -888,7 +881,7 @@ remove_account_cb (GoaAccount    *account,
   if (!goa_account_call_remove_finish (account, res, &error))
     {
       GtkWidget *dialog;
-      dialog = gtk_message_dialog_new (GTK_WINDOW (cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)))),
+      dialog = gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (panel))),
                                        GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
                                        GTK_MESSAGE_ERROR,
                                        GTK_BUTTONS_CLOSE,
