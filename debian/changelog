@@ -1,3 +1,48 @@
+cinnamon-control-center (3.6.0) sylvia; urgency=medium
+
+  [ Alexei Sorokin ]
+  * Make AX_ macros optional (#171)
+
+  [ Clement Lefebvre ]
+  * Display: Fix monitor labels not showing properly
+  * Display: Remove obsolete code
+  * Display: Clean up code and label window
+
+  [ Björn Esser ]
+  * Port to libnm >= 1.2, obsoleting legacy nm-glib (#173)
+
+  [ Clement Lefebvre ]
+  * Network: Adapt debian/control to libnm/libnma.
+
+  [ Fabio Fantoni ]
+  * Improve debian packaging (#178)
+
+  [ Clement Lefebvre ]
+  * Remove leftover variables in configure.ac
+  * Wacom: Point Bluetooth settings to Blueberry
+  * Wacom: Remove the border around the notebook widget
+  * Remove obsolete datetime desktop file
+  * l10n: Update POT file
+
+  [ Björn Esser ]
+  * Add support for online-accounts (#181)
+
+  [ Clement Lefebvre ]
+  * GOA: Lower dependency requirement to 3.18.0
+  * Online Accounts: Remove header label
+  * Remove libgd
+  * l10n: Update POT file
+
+  [ Michael Webster ]
+  * debian/control: add goa and goa-backend to build-deps.
+  * cc-online-accounts-panel.c: Fix assertion when setting the transient parent for the account dialog.  _constructed() is too soon to have been added to our main settings window, so just set it when the dialog is actually about to be used.
+
+  [ Clement Lefebvre ]
+  * Depend on gnome-online-accounts
+  * Generate additional files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 23 Oct 2017 13:47:05 +0100
+
 cinnamon-control-center (3.4.0) sonya; urgency=medium
 
   [ Garry Filakhtov ]
