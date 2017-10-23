@@ -51,6 +51,7 @@ Depends:
  cinnamon-settings-daemon,
  desktop-file-utils,
  gettext,
+ gnome-online-accounts,
  libcinnamon-control-center1 (= ${binary:Version}),
  xdg-utils,
  ${misc:Depends},
