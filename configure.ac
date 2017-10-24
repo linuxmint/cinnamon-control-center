@@ -128,8 +128,6 @@ PKG_CHECK_MODULES(NETWORK_PANEL, $COMMON_MODULES gmodule-2.0
 PKG_CHECK_MODULES(REGION_PANEL, $COMMON_MODULES libgnomekbd >= 2.91.91
                   polkit-gobject-1 >= $POLKIT_REQUIRED_VERSION
                   libxklavier >= 5.1 libgnomekbdui >= 2.91.91)
-PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0
-                  goa-backend-1.0 >= $GOA_REQUIRED_VERSION)
 
 #----------------------------------------------
 # Network Manager Stuff
@@ -284,9 +282,7 @@ AC_SUBST(WACOM_PANEL_CFLAGS)
 AC_SUBST(WACOM_PANEL_LIBS)
 
 # Online accounts
-AC_ARG_ENABLE(onlineaacounts,
-              AC_HELP_STRING([--disable-onlineaccounts],
-                             [build online-accounts panel]),
+AC_ARG_ENABLE(onlineaccounts, AC_HELP_STRING([--disable-onlineaccounts], [disable online-accounts panel]),
               [case "${enableval}" in
                       yes) enable_onlineaccounts=yes ;;
                       no) enable_onlineaccounts=no ;;
@@ -295,7 +291,8 @@ AC_ARG_ENABLE(onlineaacounts,
               [enable_onlineaccounts=yes]) dnl Enabled by default
 
 if test "x$enable_onlineaccounts" = xyes; then
-    PKG_CHECK_MODULES(ONLINE_ACCOUNTS, goa-1.0,
+    PKG_CHECK_MODULES(ONLINE_ACCOUNTS_PANEL, $COMMON_MODULES goa-1.0
+                  goa-backend-1.0 >= $GOA_REQUIRED_VERSION,
                       [have_onlineaccounts=yes], have_onlineaccounts=no)
     if test "x$have_onlineaccounts" = xno ; then
         AC_MSG_ERROR(*** Gnome Online Accounts not found ***)
