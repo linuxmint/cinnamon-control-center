@@ -1,3 +1,9 @@
+cinnamon-control-center (3.6.1) sylvia; urgency=medium
+
+  * Fix build when --disable-onlineaccounts is used
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 24 Oct 2017 13:42:40 +0100
+
 cinnamon-control-center (3.6.0) sylvia; urgency=medium
 
   [ Alexei Sorokin ]
