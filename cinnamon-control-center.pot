@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-04 11:18+0100\n"
+"POT-Creation-Date: 2017-11-10 13:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -796,16 +796,16 @@ msgctxt "Online Account"
 msgid "Other"
 msgstr ""
 
-#: panels/online-accounts/cc-online-accounts-panel.c:603
+#: panels/online-accounts/cc-online-accounts-panel.c:593
 #, c-format
 msgid "%s Account"
 msgstr ""
 
-#: panels/online-accounts/cc-online-accounts-panel.c:895
+#: panels/online-accounts/cc-online-accounts-panel.c:888
 msgid "Error removing account"
 msgstr ""
 
-#: panels/online-accounts/cc-online-accounts-panel.c:960
+#: panels/online-accounts/cc-online-accounts-panel.c:953
 #, c-format
 msgid "<b>%s</b> removed"
 msgstr ""
@@ -2066,4 +2066,12 @@ msgstr ""
 
 #: generate_additional_files.py:87
 msgid "Set button mappings and adjust stylus sensitivity for graphics tablets"
+msgstr ""
+
+#: generate_additional_files.py:101
+msgid "Online Accounts"
+msgstr ""
+
+#: generate_additional_files.py:101
+msgid "Connect your online accounts"
 msgstr ""
