@@ -1,3 +1,10 @@
+cinnamon-control-center (3.6.3) sylvia; urgency=medium
+
+  [ JosephMcc ]
+  * online-accounts: Tweak the layout just a bit (#185)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 17 Nov 2017 10:14:19 +0000
+
 cinnamon-control-center (3.6.2) sylvia; urgency=medium
 
   * l10n: Fix GOA desktop file missing proper l10n
