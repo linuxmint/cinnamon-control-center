@@ -326,8 +326,9 @@ device_get_hotspot_ssid (NetDeviceWifi *device_wifi,
         NMSettingWireless *sw;
 
         c = find_connection_for_device (device_wifi, device);
-        if (c == NULL)
-                return NULL;
+        if (c == NULL) {
+                return FALSE;
+        }
 
         sw = nm_connection_get_setting_wireless (c);
         return nm_setting_wireless_get_ssid (sw);
@@ -347,6 +348,7 @@ get_secrets_cb (GObject            *source_object,
                 if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
                         g_warning ("Could not get secrets: %s", error->message);
                 g_error_free (error);
+                //FIXME ignore cancelled
                 return;
         }
 
@@ -502,6 +504,7 @@ static void
 nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
 {
         const gchar *str;
+        gboolean is_hotspot;
         gchar *str_tmp = NULL;
         gint strength = 0;
         guint speed = 0;
@@ -514,7 +517,8 @@ nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi)
         NetDeviceWifiPrivate *priv = device_wifi->priv;
         GtkWidget *dialog;
 
-        if (device_is_hotspot (device_wifi)) {
+        is_hotspot = device_is_hotspot (device_wifi);
+        if (is_hotspot) {
                 nm_device_wifi_refresh_hotspot (device_wifi);
                 show_hotspot_ui (device_wifi);
                 return;
@@ -636,11 +640,13 @@ static void
 connect_to_hidden_network (NetDeviceWifi *device_wifi)
 {
         NMClient *client;
-        CcNetworkPanel *panel;
+        GList *windows = gtk_window_list_toplevels ();
+        GtkWidget *toplevel = GTK_WIDGET (windows->data);
 
         client = net_object_get_client (NET_OBJECT (device_wifi));
-        panel = net_object_get_panel (NET_OBJECT (device_wifi));
-        cc_network_panel_connect_to_hidden_network (panel, client);
+        cc_network_panel_connect_to_hidden_network (toplevel, client);
+
+        g_list_free (windows);
 }
 
 static void
@@ -653,13 +659,12 @@ connection_add_activate_cb (GObject *source_object,
 
         conn = nm_client_add_and_activate_connection_finish (NM_CLIENT (source_object), res, &error);
         if (!conn) {
-                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED)) {
-                        nm_device_wifi_refresh_ui (user_data);
-                        /* failed to activate */
-                        g_warning ("Failed to add and activate connection '%d': %s",
-                                   error->code,
-                                   error->message);
-                }
+                //FIXME cancelled
+                nm_device_wifi_refresh_ui (user_data);
+                /* failed to activate */
+                g_debug ("Failed to add and activate connection '%d': %s",
+                         error->code,
+                         error->message);
                 g_error_free (error);
                 return;
         }
@@ -673,13 +678,12 @@ connection_activate_cb (GObject *source_object,
         GError *error = NULL;
 
         if (!nm_client_activate_connection_finish (NM_CLIENT (source_object), res, &error)) {
-                if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED)) {
-                        nm_device_wifi_refresh_ui (user_data);
-                        /* failed to activate */
-                        g_debug ("Failed to add and activate connection '%d': %s",
-                                 error->code,
-                                 error->message);
-                }
+                //FIXME cancelled
+                nm_device_wifi_refresh_ui (user_data);
+                /* failed to activate */
+                g_debug ("Failed to add and activate connection '%d': %s",
+                         error->code,
+                         error->message);
                 g_error_free (error);
                 return;
         }

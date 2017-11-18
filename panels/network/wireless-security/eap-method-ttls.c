@@ -227,7 +227,6 @@ inner_auth_combo_init (EAPMethodTTLS *method,
 	EAPMethodSimple *em_pap;
 	EAPMethodSimple *em_mschap;
 	EAPMethodSimple *em_mschap_v2;
-	EAPMethodSimple *em_plain_mschap_v2;
 	EAPMethodSimple *em_chap;
 	EAPMethodSimple *em_md5;
 	EAPMethodSimple *em_gtc;
@@ -292,25 +291,8 @@ inner_auth_combo_init (EAPMethodTTLS *method,
 	eap_method_unref (EAP_METHOD (em_mschap_v2));
 
 	/* Check for defaulting to MSCHAPv2 */
-	if (phase2_auth && !strcasecmp (phase2_auth, "mschapv2") &&
-	    nm_setting_802_1x_get_phase2_autheap (s_8021x) != NULL)
+	if (phase2_auth && !strcasecmp (phase2_auth, "mschapv2"))
 		active = 2;
-
-	em_plain_mschap_v2 = eap_method_simple_new (method->sec_parent,
-	                                            connection,
-	                                            EAP_METHOD_SIMPLE_TYPE_PLAIN_MSCHAP_V2,
-	                                            simple_flags);
-	gtk_list_store_append (auth_model, &iter);
-	gtk_list_store_set (auth_model, &iter,
-	                    I_NAME_COLUMN, _("MSCHAPv2 (no EAP)"),
-	                    I_METHOD_COLUMN, em_plain_mschap_v2,
-	                    -1);
-	eap_method_unref (EAP_METHOD (em_plain_mschap_v2));
-
-	/* Check for defaulting to plain MSCHAPv2 */
-	if (phase2_auth && !strcasecmp (phase2_auth, "mschapv2") &&
-	    nm_setting_802_1x_get_phase2_auth (s_8021x) != NULL)
-		active = 3;
 
 	em_chap = eap_method_simple_new (method->sec_parent,
 	                                 connection,
@@ -325,7 +307,7 @@ inner_auth_combo_init (EAPMethodTTLS *method,
 
 	/* Check for defaulting to CHAP */
 	if (phase2_auth && !strcasecmp (phase2_auth, "chap"))
-		active = 4;
+		active = 3;
 
 	em_md5 = eap_method_simple_new (method->sec_parent,
 	                                connection,
@@ -340,7 +322,7 @@ inner_auth_combo_init (EAPMethodTTLS *method,
 
 	/* Check for defaulting to MD5 */
 	if (phase2_auth && !strcasecmp (phase2_auth, "md5"))
-		active = 5;
+		active = 4;
 
 	em_gtc = eap_method_simple_new (method->sec_parent,
 	                                connection,
@@ -355,7 +337,7 @@ inner_auth_combo_init (EAPMethodTTLS *method,
 
 	/* Check for defaulting to GTC */
 	if (phase2_auth && !strcasecmp (phase2_auth, "gtc"))
-		active = 6;
+		active = 5;
 
 	combo = GTK_WIDGET (gtk_builder_get_object (parent->builder, "eap_ttls_inner_auth_combo"));
 	g_assert (combo);

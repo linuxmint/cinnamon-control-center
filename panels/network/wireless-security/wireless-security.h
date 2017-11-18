@@ -23,6 +23,7 @@
 #ifndef WIRELESS_SECURITY_H
 #define WIRELESS_SECURITY_H
 
+#include <glib.h>
 #include <gtk/gtk.h>
 
 typedef struct _WirelessSecurity WirelessSecurity;

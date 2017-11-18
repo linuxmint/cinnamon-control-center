@@ -167,7 +167,6 @@ net_connection_editor_init (NetConnectionEditor *editor)
         GtkTreeSelection *selection;
 
         editor->builder = gtk_builder_new ();
-
         gtk_builder_add_from_resource (editor->builder,
                                        "/org/cinnamon/control-center/network/connection-editor.ui",
                                        &error);

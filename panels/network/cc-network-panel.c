@@ -76,11 +76,6 @@ struct _CcNetworkPanelPrivate
 #endif
         gboolean          updating_device;
 
-        /* Killswitch stuff */
-        GDBusProxy       *rfkill_proxy;
-        GtkWidget        *kill_switch_header;
-        GtkSwitch        *rfkill_switch;
-
         /* wireless dialog stuff */
         CmdlineOperation  arg_operation;
         gchar            *arg_device;
@@ -90,8 +85,6 @@ struct _CcNetworkPanelPrivate
 
 enum {
         PANEL_DEVICES_COLUMN_ICON,
-        PANEL_DEVICES_COLUMN_TITLE,
-        PANEL_DEVICES_COLUMN_SORT,
         PANEL_DEVICES_COLUMN_OBJECT,
         PANEL_DEVICES_COLUMN_LAST
 };
@@ -169,7 +162,8 @@ variant_av_to_string_array (GVariant *array)
         count = g_variant_iter_init (&iter, array);
         strv = g_ptr_array_sized_new (count + 1);
         while (g_variant_iter_next (&iter, "v", &v)) {
-                g_ptr_array_add (strv, (gpointer *)g_variant_get_string (v, NULL));
+                if (g_variant_is_of_type (v, G_VARIANT_TYPE_STRING))
+                        g_ptr_array_add (strv, (gpointer *)g_variant_get_string (v, NULL));
                 g_variant_unref (v);
         }
         g_ptr_array_add (strv, NULL); /* NULL-terminate the strv data array */
@@ -232,12 +226,9 @@ cc_network_panel_dispose (GObject *object)
                 g_cancellable_cancel (priv->cancellable);
 
         g_clear_object (&priv->cancellable);
-        g_clear_object (&priv->rfkill_proxy);
         g_clear_object (&priv->builder);
         g_clear_object (&priv->client);
         g_clear_object (&priv->modem_manager);
-        g_clear_object (&priv->kill_switch_header);
-        priv->rfkill_switch = NULL;
 
         G_OBJECT_CLASS (cc_network_panel_parent_class)->dispose (object);
 }
@@ -255,132 +246,7 @@ cc_network_panel_finalize (GObject *object)
 static const char *
 cc_network_panel_get_help_uri (CcPanel *panel)
 {
-	return "help:cinnamon-help/net";
-}
-
-static void
-cc_network_panel_notify_enable_active_cb (GtkSwitch *sw,
-                                          GParamSpec *pspec,
-                                          CcNetworkPanel *panel)
-{
-        CcNetworkPanelPrivate *priv = panel->priv;
-	gboolean enable;
-	enable = gtk_switch_get_active (sw);
-        g_dbus_proxy_call (priv->rfkill_proxy,
-                           "org.freedesktop.DBus.Properties.Set",
-                           g_variant_new_parsed ("('org.gnome.SettingsDaemon.Rfkill',"
-                                                 "'AirplaneMode', %v)",
-                                                 g_variant_new_boolean (enable)),
-                           G_DBUS_CALL_FLAGS_NONE,
-                           -1,
-                           priv->cancellable,
-                           NULL, NULL);
-}
-
-static void
-sync_airplane_mode_switch (CcNetworkPanel *panel)
-{
-        GVariant *result;
-        gboolean enabled, should_show;
-        gboolean hw_enabled;
-
-        result = g_dbus_proxy_get_cached_property (panel->priv->rfkill_proxy, "HasAirplaneMode");
-        enabled = g_variant_get_boolean (result);
-
-        result = g_dbus_proxy_get_cached_property (panel->priv->rfkill_proxy, "ShouldShowAirplaneMode");
-        should_show = g_variant_get_boolean (result);
-
-        gtk_widget_set_visible (GTK_WIDGET (panel->priv->kill_switch_header), enabled && should_show);
-        if (!enabled || !should_show)
-                return;
-
-        result = g_dbus_proxy_get_cached_property (panel->priv->rfkill_proxy, "AirplaneMode");
-        enabled = g_variant_get_boolean (result);
-
-        result = g_dbus_proxy_get_cached_property (panel->priv->rfkill_proxy, "HardwareAirplaneMode");
-        hw_enabled = !!g_variant_get_boolean (result);
-
-	enabled |= hw_enabled;
-
-	if (enabled != gtk_switch_get_active (panel->priv->rfkill_switch)) {
-		g_signal_handlers_block_by_func (panel->priv->rfkill_switch,
-						 cc_network_panel_notify_enable_active_cb,
-						 panel);
-		gtk_switch_set_active (panel->priv->rfkill_switch, enabled);
-		g_signal_handlers_unblock_by_func (panel->priv->rfkill_switch,
-						 cc_network_panel_notify_enable_active_cb,
-						 panel);
-	}
-
-	gtk_widget_set_sensitive (GTK_WIDGET (panel->priv->rfkill_switch), !hw_enabled);
-}
-
-static void
-on_property_change (GDBusProxy *proxy,
-                    GVariant   *changed_properties,
-                    GVariant   *invalidated_properties,
-                    gpointer    user_data)
-{
-        sync_airplane_mode_switch (CC_NETWORK_PANEL (user_data));
-}
-
-static void
-got_rfkill_proxy_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)
-{
-        GError *error = NULL;
-        CcNetworkPanel *panel = CC_NETWORK_PANEL (user_data);
-
-        panel->priv->rfkill_proxy = g_dbus_proxy_new_for_bus_finish (res, &error);
-        if (panel->priv->rfkill_proxy == NULL) {
-                g_printerr ("Error creating rfkill proxy: %s\n", error->message);
-                g_error_free (error);
-                return;
-        }
-
-        g_signal_connect (panel->priv->rfkill_proxy, "g-properties-changed",
-                          G_CALLBACK (on_property_change), panel);
-        sync_airplane_mode_switch (panel);
-}
-
-static void
-cc_network_panel_constructed (GObject *object)
-{
-        CcNetworkPanel *panel = CC_NETWORK_PANEL (object);
-        GtkWidget *box;
-        GtkWidget *label;
-        GtkWidget *widget;
-
-        G_OBJECT_CLASS (cc_network_panel_parent_class)->constructed (object);
-
-        /* add kill switch widgets  */
-        box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 3);
-        /* TRANSLATORS: this is to disable the radio hardware in the
-         * network panel */
-        label = gtk_label_new_with_mnemonic (_("Air_plane Mode"));
-        gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
-        gtk_widget_set_visible (label, TRUE);
-        widget = gtk_switch_new ();
-        gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
-        gtk_label_set_mnemonic_widget (GTK_LABEL (label), widget);
-        gtk_box_pack_start (GTK_BOX (box), widget, FALSE, FALSE, 4);
-        gtk_widget_show_all (box);
-        panel->priv->rfkill_switch = GTK_SWITCH (widget);
-        //cc_shell_embed_widget_in_header (cc_panel_get_shell (CC_PANEL (panel)), box);
-        panel->priv->kill_switch_header = g_object_ref (box);
-
-        g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
-                                  G_DBUS_PROXY_FLAGS_NONE,
-                                  NULL,
-                                  "org.gnome.SettingsDaemon.Rfkill",
-                                  "/org/cinnamon/SettingsDaemon/Rfkill",
-                                  "org.gnome.SettingsDaemon.Rfkill",
-                                  panel->priv->cancellable,
-                                  got_rfkill_proxy_cb,
-                                  panel);
-
-        g_signal_connect (panel->priv->rfkill_switch, "notify::active",
-                          G_CALLBACK (cc_network_panel_notify_enable_active_cb),
-                          panel);
+	return "help:gnome-help/net";
 }
 
 static void
@@ -397,7 +263,6 @@ cc_network_panel_class_init (CcNetworkPanelClass *klass)
         object_class->set_property = cc_network_panel_set_property;
         object_class->dispose = cc_network_panel_dispose;
         object_class->finalize = cc_network_panel_finalize;
-        object_class->constructed = cc_network_panel_constructed;
 
         //FIXME: Causing warnings
         //g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
@@ -509,6 +374,64 @@ cc_network_panel_get_devices (CcNetworkPanel *panel)
         } while (gtk_tree_model_iter_next (model, &iter));
 
         return devices;
+}
+
+static gint
+panel_net_object_get_sort_category (NetObject *net_object)
+{
+        if (NET_IS_DEVICE (net_object)) {
+                return panel_device_get_sort_category (net_device_get_nm_device (NET_DEVICE (net_object)));
+        } else if (NET_IS_PROXY (net_object)) {
+                return 9;
+        } else if (NET_IS_VPN (net_object)) {
+                return 5;
+        }
+
+        g_assert_not_reached ();
+}
+
+static gint
+panel_net_object_sort_func (GtkTreeModel *model, GtkTreeIter *a,
+                            GtkTreeIter *b, void *data)
+{
+        g_autoptr(NetObject) obj_a = NULL;
+        g_autoptr(NetObject) obj_b = NULL;
+        gint cat_a, cat_b;
+
+        gtk_tree_model_get (model, a,
+                            PANEL_DEVICES_COLUMN_OBJECT, &obj_a,
+                            -1);
+        gtk_tree_model_get (model, b,
+                            PANEL_DEVICES_COLUMN_OBJECT, &obj_b,
+                            -1);
+
+        cat_a = panel_net_object_get_sort_category (obj_a);
+        cat_b = panel_net_object_get_sort_category (obj_b);
+
+        if (cat_a != cat_b)
+                return cat_a - cat_b;
+
+        return g_utf8_collate (net_object_get_title (obj_a), net_object_get_title (obj_b));
+}
+
+static void
+panel_net_object_notify_title_cb (NetObject *net_object, GParamSpec *pspec, CcNetworkPanel *panel)
+{
+        GtkTreeIter iter;
+        GtkListStore *liststore;
+
+        if (!find_in_model_by_id (panel, net_object_get_id (net_object), &iter))
+                return;
+
+        liststore = GTK_LIST_STORE (gtk_builder_get_object (panel->priv->builder,
+                                                            "liststore_devices"));
+
+        /* gtk_tree_model_row_changed would not cause the list store to resort.
+         * Instead set the object column to the current value.
+         * See https://bugzilla.gnome.org/show_bug.cgi?id=782737 */
+        gtk_list_store_set (liststore, &iter,
+                            PANEL_DEVICES_COLUMN_OBJECT, net_object,
+                           -1);
 }
 
 static void
@@ -708,19 +631,12 @@ panel_add_device (CcNetworkPanel *panel, NMDevice *device)
         if (find_in_model_by_id (panel, udi, NULL) != NULL)
                 goto out;
 
-        /* Don't add the libvirtd bridge to the UI */
-        if (g_strrstr (udi, "/virbr0") != NULL)
-                goto out;
-        /* Don't add VPN devices either */
-        if (g_strrstr (udi, "/tun0") != NULL)
-                goto out;
-
         type = nm_device_get_device_type (device);
 
         g_debug ("device %s type %i path %s",
                  udi, type, nm_object_get_path (NM_OBJECT (device)));
 
-        /* map the NMDeviceType to the GType */
+        /* map the NMDeviceType to the GType, or ignore */
         switch (type) {
         case NM_DEVICE_TYPE_ETHERNET:
                 device_g_type = NET_TYPE_DEVICE_ETHERNET;
@@ -731,6 +647,16 @@ panel_add_device (CcNetworkPanel *panel, NMDevice *device)
         case NM_DEVICE_TYPE_WIFI:
                 device_g_type = NET_TYPE_DEVICE_WIFI;
                 break;
+        /* not going to set up a cluster in GNOME */
+        case NM_DEVICE_TYPE_VETH:
+        /* enterprise features */
+        case NM_DEVICE_TYPE_BOND:
+        case NM_DEVICE_TYPE_TEAM:
+        /* Don't need the libvirtd bridge */
+        case NM_DEVICE_TYPE_BRIDGE:
+        /* Don't add VPN devices */
+        case NM_DEVICE_TYPE_TUN:
+                goto out;
         default:
                 device_g_type = NET_TYPE_DEVICE_SIMPLE;
                 break;
@@ -790,9 +716,11 @@ panel_add_device (CcNetworkPanel *panel, NMDevice *device)
         gtk_list_store_set (liststore_devices,
                             &iter,
                             PANEL_DEVICES_COLUMN_ICON, panel_device_to_icon_name (device, TRUE),
-                            PANEL_DEVICES_COLUMN_SORT, panel_device_to_sortable_string (device),
                             PANEL_DEVICES_COLUMN_OBJECT, net_device,
                             -1);
+        g_signal_connect (net_device, "notify::title",
+                          G_CALLBACK (panel_net_object_notify_title_cb), panel);
+
         g_object_unref (net_device);
         g_signal_connect (device, "state-changed",
                           G_CALLBACK (state_changed_cb), panel);
@@ -884,11 +812,14 @@ panel_add_devices_columns (CcNetworkPanel *panel, GtkTreeView *treeview)
                                                  renderer,
                                                  get_object_title,
                                                  NULL, NULL);
-        gtk_tree_view_column_set_sort_column_id (column, PANEL_DEVICES_COLUMN_SORT);
+        gtk_tree_view_column_set_sort_column_id (column, PANEL_DEVICES_COLUMN_OBJECT);
         liststore_devices = GTK_LIST_STORE (gtk_builder_get_object (priv->builder,
                                             "liststore_devices"));
+        gtk_tree_sortable_set_sort_func (GTK_TREE_SORTABLE (liststore_devices),
+                                         PANEL_DEVICES_COLUMN_OBJECT,
+                                         panel_net_object_sort_func, NULL, NULL);
         gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (liststore_devices),
-                                              PANEL_DEVICES_COLUMN_SORT,
+                                              PANEL_DEVICES_COLUMN_OBJECT,
                                               GTK_SORT_ASCENDING);
         gtk_tree_view_append_column (treeview, column);
         gtk_tree_view_column_set_expand (column, TRUE);
@@ -967,9 +898,12 @@ panel_add_proxy_device (CcNetworkPanel *panel)
         gtk_list_store_set (liststore_devices,
                             &iter,
                             PANEL_DEVICES_COLUMN_ICON, "preferences-system-network-symbolic",
-                            PANEL_DEVICES_COLUMN_SORT, "9",
                             PANEL_DEVICES_COLUMN_OBJECT, proxy,
                             -1);
+
+        /* NOTE: No connect to notify::title here as it is guaranteed to not
+         *       be changed by anyone.*/
+
         g_object_unref (proxy);
 }
 
@@ -1145,9 +1079,11 @@ panel_add_vpn_device (CcNetworkPanel *panel, NMConnection *connection)
         gtk_list_store_set (liststore_devices,
                             &iter,
                             PANEL_DEVICES_COLUMN_ICON, "network-vpn-symbolic",
-                            PANEL_DEVICES_COLUMN_SORT, "5",
                             PANEL_DEVICES_COLUMN_OBJECT, net_vpn,
                             -1);
+        g_signal_connect (net_vpn, "notify::title",
+                          G_CALLBACK (panel_net_object_notify_title_cb), panel);
+
         g_free (title);
         g_object_unref (net_vpn);
 }
@@ -1335,6 +1271,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
         g_signal_connect (panel->priv->client, "device-removed",
                           G_CALLBACK (device_removed_cb), panel);
 
+#ifdef BUILD_MODEM
         /* Setup ModemManager client */
         system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
         if (system_bus == NULL) {
@@ -1353,6 +1290,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
                 }
                 g_object_unref (system_bus);
         }
+#else
+        panel->priv->modem_manager = NULL;
+#endif
 
         widget = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
                                                      "add_toolbutton"));
@@ -1390,8 +1330,10 @@ cc_network_panel_init (CcNetworkPanel *panel)
 
         /* Cold-plug existing connections */
         connections = nm_client_get_connections (panel->priv->client);
-        for (i = 0; i < connections->len; i++)
-                add_connection (panel, connections->pdata[i]);
+        if (connections) {
+                for (i = 0; i < connections->len; i++)
+                        add_connection (panel, connections->pdata[i]);
+        }
 
         g_debug ("Calling handle_argv() after cold-plugging connections");
         handle_argv (panel);

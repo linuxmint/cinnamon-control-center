@@ -28,6 +28,7 @@
 
 #include "ce-page-vpn.h"
 #include "vpn-helpers.h"
+#include "firewall-helpers.h"
 
 G_DEFINE_TYPE (CEPageVpn, ce_page_vpn, CE_TYPE_PAGE)
 
@@ -57,14 +58,14 @@ all_user_changed (GtkToggleButton *b, CEPageVpn *page)
  *      Bar baz [__________]
  */
 static void
-vpn_cinnamon3ify_editor (GtkWidget *widget)
+vpn_cinnamonify_editor (GtkWidget *widget)
 {
         if (GTK_IS_CONTAINER (widget)) {
                 GList *children, *iter;
 
                 children = gtk_container_get_children (GTK_CONTAINER (widget));
                 for (iter = children; iter; iter = iter->next)
-                        vpn_cinnamon3ify_editor (iter->data);
+                        vpn_cinnamonify_editor (iter->data);
                 g_list_free (children);
         } else if (GTK_IS_LABEL (widget)) {
                 const char *text;
@@ -105,7 +106,7 @@ load_vpn_plugin (CEPageVpn *page, NMConnection *connection)
                 page->plugin = NULL;
 		return;
 	}
-        vpn_cinnamon3ify_editor (ui_widget);
+        vpn_cinnamonify_editor (ui_widget);
 
         failure = GTK_WIDGET (gtk_builder_get_object (parent->builder, "failure_label"));
         gtk_widget_destroy (failure);
@@ -121,6 +122,7 @@ connect_vpn_page (CEPageVpn *page)
 {
         const gchar *name;
         GtkWidget *widget;
+        GtkWidget *heading;
 
         name = nm_setting_connection_get_id (page->setting_connection);
         gtk_entry_set_text (page->name, name);
@@ -132,6 +134,12 @@ connect_vpn_page (CEPageVpn *page)
                                       nm_setting_connection_get_num_permissions (page->setting_connection) == 0);
         g_signal_connect (widget, "toggled",
                           G_CALLBACK (all_user_changed), page);
+
+        widget = GTK_WIDGET (gtk_builder_get_object (CE_PAGE (page)->builder, "combo_zone"));
+        heading = GTK_WIDGET (gtk_builder_get_object (CE_PAGE (page)->builder, "heading_zone"));
+        firewall_ui_setup (page->setting_connection, widget, heading, CE_PAGE (page)->cancellable);
+        g_signal_connect_swapped (widget, "changed", G_CALLBACK (ce_page_changed), page);
+
 }
 
 static gboolean
@@ -140,10 +148,13 @@ validate (CEPage        *page,
           GError       **error)
 {
         CEPageVpn *self = CE_PAGE_VPN (page);
+        GtkWidget *widget;
 
         g_object_set (self->setting_connection,
                       NM_SETTING_CONNECTION_ID, gtk_entry_get_text (self->name),
                       NULL);
+        widget = GTK_WIDGET (gtk_builder_get_object (CE_PAGE (page)->builder, "combo_zone"));
+        firewall_ui_to_setting (self->setting_connection, widget);
 
         if (!nm_setting_verify (NM_SETTING (self->setting_connection), NULL, error))
                 return FALSE;
