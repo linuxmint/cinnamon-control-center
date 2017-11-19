@@ -45,6 +45,10 @@
 #include <libmm-glib.h>
 #endif
 
+#ifdef HAVE_NMA_18
+#include <nma-cert-chooser.h>
+#endif
+
 CC_PANEL_REGISTER (CcNetworkPanel, cc_network_panel)
 
 #define NETWORK_PANEL_PRIVATE(o) \
@@ -1289,6 +1293,12 @@ cc_network_panel_init (CcNetworkPanel *panel)
                 g_error_free (error);
                 return;
         }
+
+#ifdef HAVE_NMA_18
+        /* some newer VPN plugins pre-require internal resources from libnma */
+        /* this solution is really ugly, but works clean */
+        gtk_widget_destroy (nma_cert_chooser_new ("dummy", NMA_CERT_CHOOSER_FLAG_NONE));
+#endif
 
         panel->priv->cancellable = g_cancellable_new ();
 
