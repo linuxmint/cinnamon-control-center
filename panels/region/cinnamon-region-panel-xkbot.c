@@ -24,7 +24,7 @@
 #  include <config.h>
 #endif
 
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <string.h>
 
 #include "cinnamon-region-panel-xkb.h"
@@ -442,7 +442,6 @@ xkb_options_popup_dialog (GtkBuilder * dialog)
 	GtkWidget *chooser;
 
 	chooser_dialog = gtk_builder_new ();
-    gtk_builder_set_translation_domain (chooser_dialog, GETTEXT_PACKAGE);
 	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
 				   "/cinnamon-region-panel-options-dialog.ui",
 				   NULL);

@@ -25,7 +25,7 @@
 #include <locale.h>
 
 #include <glib.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
 
@@ -287,7 +287,6 @@ cc_language_chooser_new (GtkWidget *parent, gboolean regions)
 	GtkTreeModel *filter_model;
 
         builder = gtk_builder_new ();
-        gtk_builder_set_translation_domain (builder, GETTEXT_PACKAGE);
         filename = UIDIR "/language-chooser.ui";
         if (!g_file_test (filename, G_FILE_TEST_EXISTS))
                 filename = "data/language-chooser.ui";

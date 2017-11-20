@@ -22,7 +22,7 @@
 
 #include <config.h>
 
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
 #include "cc-wacom-page.h"
@@ -865,7 +865,6 @@ map_buttons_button_clicked_cb (GtkButton   *button,
 
 	g_assert (priv->mapping_builder == NULL);
 	priv->mapping_builder = gtk_builder_new ();
-	gtk_builder_set_translation_domain (priv->mapping_builder, GETTEXT_PACKAGE);
 	gtk_builder_add_from_resource (priv->mapping_builder,
                                        "/org/cinnamon/control-center/wacom/button-mapping.ui",
                                        &error);
@@ -1125,7 +1124,6 @@ cc_wacom_page_init (CcWacomPage *self)
 	priv = self->priv = WACOM_PAGE_PRIVATE (self);
 
 	priv->builder = gtk_builder_new ();
-	gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
 	gtk_builder_add_objects_from_resource (priv->builder,
                                                "/org/cinnamon/control-center/wacom/cinnamon-wacom-properties.ui",
                                                objects,

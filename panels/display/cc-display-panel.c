@@ -33,7 +33,7 @@
 #include <libcinnamon-desktop/gnome-rr-config.h>
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <libcinnamon-desktop/cdesktop-enums.h>
 
 #include "cc-rr-labeler.h"
@@ -2507,7 +2507,6 @@ cc_display_panel_constructor (GType                  gtype,
 
   error = NULL;
   self->priv->builder = builder = gtk_builder_new ();
-  gtk_builder_set_translation_domain (self->priv->builder, GETTEXT_PACKAGE);
   if (!gtk_builder_add_objects_from_file (builder, UIDIR "/display-capplet.ui", objects, &error))
     {
       g_warning ("Could not parse UI definition: %s", error->message);
@@ -2603,6 +2602,7 @@ cc_display_panel_constructor (GType                  gtype,
 void
 cc_display_panel_register (GIOModule *module)
 {
+  textdomain (GETTEXT_PACKAGE);
   bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   cc_display_panel_register_type (G_TYPE_MODULE (module));

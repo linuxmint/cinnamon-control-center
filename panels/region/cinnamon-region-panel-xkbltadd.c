@@ -378,7 +378,6 @@ xkb_layout_choose (GtkBuilder * dialog)
 	GtkTreeSelection *selection;
 	GtkListStore *model;
 	GtkTreeModelFilter *filtered_model;
-    gtk_builder_set_translation_domain (chooser_dialog, GETTEXT_PACKAGE);
 	gtk_builder_add_from_file (chooser_dialog, CINNAMONCC_UI_DIR
 				   "/cinnamon-region-panel-layout-chooser.ui",
 				   NULL);

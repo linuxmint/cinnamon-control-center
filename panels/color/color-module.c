@@ -24,7 +24,7 @@
 
 #include "cc-color-panel.h"
 
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 void
 g_io_module_load (GIOModule *module)
