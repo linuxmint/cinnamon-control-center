@@ -147,6 +147,8 @@ if test "x$enable_networkmanager" = xyes; then
                       libnm >= $NETWORK_MANAGER_REQUIRED_VERSION
                       libnma >= $NETWORK_MANAGER_APPLET_REQUIRED_VERSION,
                       [have_networkmanager=yes], have_networkmanager=no)
+    PKG_CHECK_MODULES(LIBNMA_1_8_0, libnma >= 1.8.0,
+                      [have_nma_18=yes], have_nma_18=no)
     if test "x$have_networkmanager" = xno ; then
         AC_MSG_ERROR(*** NetworkManager not found ***)
     fi
@@ -159,6 +161,10 @@ if test "x$enable_networkmanager" = xyes; then
       NM_VPN_MODULE_DIR=`$PKG_CONFIG --variable plugindir NetworkManager`
       AC_SUBST(NM_VPN_CONFIG_DIR)
       AC_SUBST(NM_VPN_MODULE_DIR)
+    fi
+
+    if test x${have_nma_18} = xyes; then
+      AC_DEFINE(HAVE_NMA_18, 1, [Define to 1 if libnma ist >= 1.8.0])
     fi
 fi
 
