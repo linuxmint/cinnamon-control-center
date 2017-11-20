@@ -1,3 +1,10 @@
+cinnamon-control-center (3.6.4) sylvia; urgency=medium
+
+  [ Leigh Scott ]
+  * network: Avoid crashing if the NMDevice doesn't have a hw-address (#187)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 20 Nov 2017 09:42:35 +0000
+
 cinnamon-control-center (3.6.3) sylvia; urgency=medium
 
   [ JosephMcc ]
