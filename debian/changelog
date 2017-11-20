@@ -1,3 +1,16 @@
+cinnamon-control-center (3.6.5) sylvia; urgency=medium
+
+  [ Björn Esser ]
+  * all: Simplify and fix i18n (#191)
+  * online-accounts: Fix Gtk-warning (#192)
+  * network: Enable loading of newer VPN plugins (fix #183) (#188)
+  * all: Remove obsolete files and setup gitignore (#190)
+
+  [ Clement Lefebvre ]
+  * Fix Debian build
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 20 Nov 2017 14:46:06 +0000
+
 cinnamon-control-center (3.6.4) sylvia; urgency=medium
 
   [ Leigh Scott ]
