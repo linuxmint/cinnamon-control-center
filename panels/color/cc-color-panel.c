@@ -25,7 +25,7 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 #include <gio/gio.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include "cc-color-panel.h"
 
 #define WID(b, w) (GtkWidget *) gtk_builder_get_object (b, w)
@@ -2484,8 +2484,6 @@ cc_color_panel_init (CcColorPanel *prefs)
   priv = prefs->priv = COLOR_PANEL_PRIVATE (prefs);
 
   priv->builder = gtk_builder_new ();
-  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
-
   gtk_builder_add_from_file (priv->builder,
                              CINNAMONCC_UI_DIR "/color.ui",
                              &error);
@@ -2676,6 +2674,7 @@ cc_color_panel_init (CcColorPanel *prefs)
 void
 cc_color_panel_register (GIOModule *module)
 {
+  textdomain (GETTEXT_PACKAGE);
   bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   cc_color_panel_register_type (G_TYPE_MODULE (module));

@@ -903,8 +903,6 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   }
 
   priv->builder = gtk_builder_new ();
-
-  gtk_builder_set_translation_domain (priv->builder, GETTEXT_PACKAGE);
   ret = gtk_builder_add_objects_from_file (priv->builder, DATADIR"/datetime.ui",
                                            objects, &err);
 
@@ -1042,7 +1040,9 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 void
 cc_date_time_panel_register (GIOModule *module)
 {
-  bind_textdomain_codeset (GETTEXT_PACKAGE_TIMEZONES, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
   cc_date_time_panel_register_type (G_TYPE_MODULE (module));
   g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,

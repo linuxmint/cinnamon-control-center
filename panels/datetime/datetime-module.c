@@ -23,19 +23,11 @@
 
 #include "cc-datetime-panel.h"
 
-#include <glib/gi18n-lib.h>
-
-#define GETTEXT_PACKAGE_TIMEZONES GETTEXT_PACKAGE "-timezones"
+#include <glib/gi18n.h>
 
 void
 g_io_module_load (GIOModule *module)
 {
-  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
-  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
-  bindtextdomain (GETTEXT_PACKAGE_TIMEZONES, "/usr/share/locale");
-  bind_textdomain_codeset (GETTEXT_PACKAGE_TIMEZONES, "UTF-8");
-
   /* register the panel */
   cc_date_time_panel_register (module);
 }

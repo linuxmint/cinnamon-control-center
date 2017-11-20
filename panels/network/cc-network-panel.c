@@ -1390,6 +1390,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
 void
 cc_network_panel_register (GIOModule *module)
 {
+        textdomain (GETTEXT_PACKAGE);
         bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         cc_network_panel_register_type (G_TYPE_MODULE (module));

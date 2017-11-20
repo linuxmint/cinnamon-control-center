@@ -18,7 +18,7 @@
 
 #include <config.h>
 #include "cc-online-accounts-panel.h"
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 void
 g_io_module_load (GIOModule *module)

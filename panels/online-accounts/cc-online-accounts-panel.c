@@ -22,7 +22,7 @@
 
 #include <gio/gio.h>
 #include <string.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #define GOA_API_IS_SUBJECT_TO_CHANGE
 #include <goa/goa.h>
@@ -968,6 +968,7 @@ on_remove_button_clicked (CcGoaPanel *panel)
 void
 cc_goa_panel_register (GIOModule *module)
 {
+        textdomain (GETTEXT_PACKAGE);
         bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         cc_goa_panel_register_type (G_TYPE_MODULE (module));

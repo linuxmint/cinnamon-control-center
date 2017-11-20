@@ -24,7 +24,7 @@
 #endif
 
 #include <gdk/gdkx.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 
 #include <libgnomekbd/gkbd-desktop-config.h>
 #include <libgnomekbd/gkbd-keyboard-drawing.h>
