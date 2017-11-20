@@ -508,9 +508,9 @@ cc_goa_panel_class_init (CcGoaPanelClass *klass)
   object_class->finalize = cc_goa_panel_finalize;
   object_class->dispose = cc_goa_panel_dispose;
 
-  g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
+  //g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/control-center/online-accounts/online-accounts.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/org/cinnamon/control-center/online-accounts/online-accounts.ui");
 
   gtk_widget_class_bind_template_child (widget_class, CcGoaPanel, accounts_frame);
   gtk_widget_class_bind_template_child (widget_class, CcGoaPanel, accounts_listbox);
