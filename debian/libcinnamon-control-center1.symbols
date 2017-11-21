@@ -12,6 +12,9 @@ libcinnamon-control-center.so.1 libcinnamon-control-center1 #MINVER#
  cc_editable_entry_set_selectable@Base 2.0.9
  cc_editable_entry_set_text@Base 2.0.9
  cc_editable_entry_set_weight@Base 2.0.9
+ cc_list_box_adjust_scrolling@Base 3.6.1
+ cc_list_box_setup_scrolling@Base 3.6.1
+ cc_list_box_update_header_func@Base 3.6.1
  cc_panel_get_help_uri@Base 2.0.9
  cc_panel_get_permission@Base 2.0.9
  cc_panel_get_shell@Base 2.0.9
@@ -22,3 +25,5 @@ libcinnamon-control-center.so.1 libcinnamon-control-center1 #MINVER#
  cc_shell_get_type@Base 2.0.9
  cc_shell_set_active_panel@Base 2.0.9
  cc_shell_set_active_panel_from_id@Base 2.0.9
+ pretty_hostname_to_ssid@Base 3.6.1
+ pretty_hostname_to_static@Base 3.6.1
