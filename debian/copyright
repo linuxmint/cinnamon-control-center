@@ -45,17 +45,6 @@ Copyright: 2013, Aleksander Morgado <aleksander@gnu.org>
            2003, The free software foundation, inc
 License: GPL-2+
 
-Files: INSTALL
-       po/Makefile.in.in
-Copyright: 2004-2009, Free Software Foundation
-           2004-2009, Free Software Foundation, Inc
-           2004-2008, Rodney Dawes <dobey.pwns@gmail.com>
-           1995-1997, Ulrich Drepper <drepper@gnu.ai.mit.edu>
-License: Permissive
- This file is free software; the Free Software Foundation gives
- unlimited permission to copy and/or distribute it, with or without
- modifications, as long as this notice is preserved.
-
 Files: panels/wacom/calibrator/COPYING
        panels/wacom/calibrator/calibrator.c
        panels/wacom/calibrator/calibrator.h
