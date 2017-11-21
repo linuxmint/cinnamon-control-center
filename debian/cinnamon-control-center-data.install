@@ -2,5 +2,6 @@ etc/xdg/menus/cinnamoncc.menu
 usr/share/cinnamon-control-center
 usr/share/desktop-directories/cinnamoncc.directory
 usr/share/icons/*/*/*/cinnamon-preferences-*
+usr/share/icons/*/*/*/cs-online-accounts.png
 usr/share/locale/*
 usr/share/polkit-1/actions
