@@ -3,3 +3,4 @@ usr/share/cinnamon-control-center
 usr/share/desktop-directories/cinnamoncc.directory
 usr/share/icons/*/*/*/cinnamon-preferences-*
 usr/share/locale/*
+usr/share/polkit-1/actions

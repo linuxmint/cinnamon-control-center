@@ -144,11 +144,23 @@ check-local: test-timezone-gfx test-endianess test-timezone
 ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libdate_time.la
 
-# FIXME add a way to regenerate the dtm.[ch]
-# gdbus-codegen --generate-c-code dtm  --interface-prefix org.cinnamon.SettingsDaemon  /path/to/cinnamon-settings-daemon/plugins/datetime/gsd-datetime-mechanism.xml
-# See also:
-# https://bugzilla.gnome.org/show_bug.cgi?id=650875
-# https://bugzilla.gnome.org/show_bug.cgi?id=650874
+cc-dtm-proxy.h : Makefile.am timedated1-interface.xml
+	gdbus-codegen                                       \
+        --annotate "org.freedesktop.timedate1" org.gtk.GDBus.C.Name "Dtm"       \
+        --c-namespace CC                        \
+        --generate-c-code cc-dtm-proxy   \
+        timedated1-interface.xml                         \
+        $(NULL)
+cc-dtm-proxy.c : cc-dtm-proxy.h
+
+cc-csddtm-proxy.h : Makefile.am csd-dtm-interface.xml
+	gdbus-codegen                                       \
+        --annotate "org.cinnamon.SettingsDaemon.DateTimeMechanism" org.gtk.GDBus.C.Name "Csddtm"       \
+        --c-namespace CC                        \
+        --generate-c-code cc-csddtm-proxy   \
+        csd-dtm-interface.xml                         \
+        $(NULL)
+cc-csddtm-proxy.c : cc-csddtm-proxy.h
 
 libdate_time_la_SOURCES =	\
 	datetime-module.c	\
@@ -156,14 +168,22 @@ libdate_time_la_SOURCES =	\
 	cc-datetime-panel.h	\
 	cc-timezone-map.c	\
 	cc-timezone-map.h	\
-	dtm.c			\
-	dtm.h			\
+	cc-dtm-proxy.c			\
+	cc-dtm-proxy.h			\
+	cc-csddtm-proxy.c			\
+	cc-csddtm-proxy.h			\
 	date-endian.c		\
 	date-endian.h		\
 	tz.c tz.h
 
 libdate_time_la_LIBADD = $(PANEL_LIBS) $(DATETIME_PANEL_LIBS)
 libdate_time_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
+
+polkitdir = $(datadir)/polkit-1/actions
+polkit_in_files = org.cinnamon.controlcenter.datetime.policy.in
+
+@INTLTOOL_POLICY_RULE@
+polkit_DATA = $(polkit_in_files:.policy.in=.policy)
 
 -include $(top_srcdir)/git.mk
 

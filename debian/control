@@ -54,13 +54,13 @@ Depends:
  gnome-online-accounts,
  libcinnamon-control-center1 (= ${binary:Version}),
  xdg-utils,
+ policykit-1-gnome,
  ${misc:Depends},
  ${shlibs:Depends},
 Recommends:
  iso-codes,
  mesa-utils,
- mousetweaks,
- policykit-1-gnome,
+ mousetweaks
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
  This package contains configuration applets for the Cinnamon desktop,

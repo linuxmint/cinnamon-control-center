@@ -24,7 +24,8 @@
 
 #include <sys/time.h>
 #include "cc-timezone-map.h"
-#include "dtm.h"
+#include "cc-dtm-proxy.h"
+#include "cc-csddtm-proxy.h"
 #include "date-endian.h"
 #define GNOME_DESKTOP_USE_UNSTABLE_API
 
@@ -85,7 +86,10 @@ struct _CcDateTimePanelPrivate
 
   GnomeWallClock *clock_tracker;
 
-  DateTimeMechanism *dtm;
+  CCDtm *dtm;
+  CCCsddtm *csddtm;
+  gboolean use_systemd;
+
   GCancellable *cancellable;
 
   GPermission *permission;
@@ -265,19 +269,31 @@ set_time_cb (GObject      *source,
 {
   CcDateTimePanel *self = user_data;
   GError *error;
-
+  gboolean success;
   error = NULL;
-  if (!date_time_mechanism_call_set_time_finish (self->priv->dtm,
-                                                 res,
-                                                 &error))
+
+  if (self->priv->use_systemd)
+    {
+      success = cc_dtm_call_set_time_finish (self->priv->dtm,
+                                             res,
+                                             &error);
+    }
+  else
+    {
+      success = cc_csddtm_call_set_time_finish (self->priv->csddtm,
+                                                res,
+                                                &error);
+    }
+
+  if (success)
+    {
+      update_time (self);
+    }
+  else
     {
       /* TODO: display any error in a user friendly way */
       g_warning ("Could not set system time: %s", error->message);
       g_error_free (error);
-    }
-  else
-    {
-      update_time (self);
     }
 }
 
@@ -288,11 +304,23 @@ set_timezone_cb (GObject      *source,
 {
   CcDateTimePanel *self = user_data;
   GError *error;
-
+  gboolean success;
   error = NULL;
-  if (!date_time_mechanism_call_set_timezone_finish (self->priv->dtm,
-                                                     res,
-                                                     &error))
+
+  if (self->priv->use_systemd)
+    {
+      success = cc_dtm_call_set_timezone_finish (self->priv->dtm,
+                                                 res,
+                                                 &error);
+    }
+  else
+    {
+      success = cc_csddtm_call_set_timezone_finish (self->priv->csddtm,
+                                                    res,
+                                                    &error);
+    }
+
+  if (!success)
     {
       /* TODO: display any error in a user friendly way */
       g_warning ("Could not set system timezone: %s", error->message);
@@ -307,16 +335,28 @@ set_using_ntp_cb (GObject      *source,
 {
   CcDateTimePanel *self = user_data;
   GError *error;
-
+  gboolean success;
   error = NULL;
-  if (!date_time_mechanism_call_set_using_ntp_finish (self->priv->dtm,
-                                                      res,
-                                                      &error))
+
+  if (self->priv->use_systemd)
     {
-      /* TODO: display any error in a user friendly way */
-      g_warning ("Could not set system to use NTP: %s", error->message);
-      g_error_free (error);
+      success = cc_dtm_call_set_ntp_finish (self->priv->dtm,
+                                            res,
+                                            &error);
     }
+  else
+    {
+      success = cc_csddtm_call_set_using_ntp_finish (self->priv->csddtm,
+                                                     res,
+                                                     &error);
+    }
+
+    if (!success)
+      {
+        /* TODO: display any error in a user friendly way */
+        g_warning ("Could not set system to use NTP: %s", error->message);
+        g_error_free (error);
+      }
 }
 
 static gboolean
@@ -327,16 +367,30 @@ set_date_time_cb (CcDateTimePanel *panel)
 
     unixtime = g_date_time_to_unix (priv->date);
 
-    date_time_mechanism_call_set_time (priv->dtm,
-                                     unixtime,
-                                     priv->cancellable,
-                                     set_time_cb,
-                                     panel);
+    if (priv->use_systemd)
+      {
+        cc_dtm_call_set_time (priv->dtm,
+                              unixtime * 1000000,
+                              FALSE,
+                              TRUE,
+                              priv->cancellable,
+                              set_time_cb,
+                              panel);
+      }
+    else
+      {
+        cc_csddtm_call_set_time (priv->csddtm,
+                                 unixtime,
+                                 priv->cancellable,
+                                 set_time_cb,
+                                 panel);
+      }
 
-    if (priv->clock_blocked) {
+    if (priv->clock_blocked)
+      {
         g_signal_handlers_unblock_by_func (priv->clock_tracker, on_clock_changed, panel);
         priv->clock_blocked = FALSE;
-    }
+      }
 
     priv->set_date_time_delay_id = 0;
     return FALSE;
@@ -368,11 +422,23 @@ queue_set_ntp (CcDateTimePanel *self)
   /* for now just do it */
   using_ntp = gtk_switch_get_active (GTK_SWITCH (W("network_time_switch")));
 
-  date_time_mechanism_call_set_using_ntp (self->priv->dtm,
-                                          using_ntp,
-                                          self->priv->cancellable,
-                                          set_using_ntp_cb,
-                                          self);
+  if (self->priv->use_systemd)
+    {
+      cc_dtm_call_set_ntp (self->priv->dtm,
+                           using_ntp,
+                           TRUE,
+                           self->priv->cancellable,
+                           set_using_ntp_cb,
+                           self);
+    }
+  else
+    {
+      cc_csddtm_call_set_using_ntp (self->priv->csddtm,
+                                    using_ntp,
+                                    self->priv->cancellable,
+                                    set_using_ntp_cb,
+                                    self);
+    }
 }
 
 static void
@@ -381,11 +447,23 @@ queue_set_timezone (CcDateTimePanel *self)
   /* for now just do it */
   if (self->priv->current_location)
     {
-      date_time_mechanism_call_set_timezone (self->priv->dtm,
-                                             self->priv->current_location->zone,
-                                             self->priv->cancellable,
-                                             set_timezone_cb,
-                                             self);
+      if (self->priv->use_systemd)
+        {
+          cc_dtm_call_set_timezone (self->priv->dtm,
+                                    self->priv->current_location->zone,
+                                    TRUE,
+                                    self->priv->cancellable,
+                                    set_timezone_cb,
+                                    self);
+        }
+      else
+        {
+          cc_csddtm_call_set_timezone (self->priv->csddtm,
+                                       self->priv->current_location->zone,
+                                       self->priv->cancellable,
+                                       set_timezone_cb,
+                                       self);
+        }
     }
 }
 
@@ -542,31 +620,37 @@ location_changed_cb (CcTimezoneMap   *map,
 }
 
 static void
-get_timezone_cb (GObject      *source,
-                 GAsyncResult *res,
-                 gpointer      user_data)
+get_timezone (CcDateTimePanel *self)
 {
-  CcDateTimePanel *self = user_data;
   GtkWidget *widget;
   gchar *timezone;
   GError *error;
 
   error = NULL;
-  if (!date_time_mechanism_call_get_timezone_finish (self->priv->dtm, &timezone, res, &error))
+
+  if (self->priv->use_systemd) {
+    timezone = cc_dtm_dup_timezone (self->priv->dtm);
+  } else {
+    cc_csddtm_call_get_timezone_sync (self->priv->csddtm,
+                                      &timezone,
+                                      NULL,
+                                      &error);
+  }
+
+  if (error != NULL || timezone == NULL || !cc_timezone_map_set_timezone (CC_TIMEZONE_MAP (self->priv->map), timezone))
     {
-      g_warning ("Could not get current timezone: %s", error->message);
-      g_error_free (error);
-    }
-  else
-    {
-      if (!cc_timezone_map_set_timezone (CC_TIMEZONE_MAP (self->priv->map), timezone))
+      if (error)
         {
-          g_warning ("Timezone '%s' is unhandled, setting %s as default", timezone, DEFAULT_TZ);
-          cc_timezone_map_set_timezone (CC_TIMEZONE_MAP (self->priv->map), DEFAULT_TZ);
+          g_warning ("Problem getting the current timezone: %s", error->message);
+          g_error_free (error);
         }
-      self->priv->current_location = cc_timezone_map_get_location (CC_TIMEZONE_MAP (self->priv->map));
-      update_timezone (self);
+
+      g_warning ("Timezone '%s' is unhandled, setting %s as default", timezone, DEFAULT_TZ);
+      cc_timezone_map_set_timezone (CC_TIMEZONE_MAP (self->priv->map), DEFAULT_TZ);
     }
+
+  self->priv->current_location = cc_timezone_map_get_location (CC_TIMEZONE_MAP (self->priv->map));
+  update_timezone (self);
 
   /* now that the initial state is loaded set connect the signals */
   widget = (GtkWidget*) gtk_builder_get_object (self->priv->builder,
@@ -579,7 +663,6 @@ get_timezone_cb (GObject      *source,
 
   g_signal_connect (self->priv->map, "location-changed",
                     G_CALLBACK (location_changed_cb), self);
-
 
   g_free (timezone);
 }
@@ -883,6 +966,7 @@ cc_date_time_panel_init (CcDateTimePanel *self)
   int ret;
   DateEndianess endianess;
   GError *error;
+  gboolean have_ntpd;
 
   priv = self->priv = DATE_TIME_PANEL_PRIVATE (self);
 
@@ -891,16 +975,45 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 
   priv->cancellable = g_cancellable_new ();
   error = NULL;
-  priv->dtm = date_time_mechanism_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
-                                                          G_DBUS_PROXY_FLAGS_NONE,
-                                                          "org.cinnamon.SettingsDaemon.DateTimeMechanism",
-                                                          "/",
-                                                          priv->cancellable,
-                                                          &error);
-  if (priv->dtm == NULL) {
-        g_warning ("could not get proxy for DateTimeMechanism: %s", error->message);
-        g_error_free (error);
-  }
+
+  have_ntpd = g_file_test ("/usr/sbin/ntpd", G_FILE_TEST_EXISTS);
+
+  if (!have_ntpd)
+    {
+      priv->dtm = cc_dtm_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                 G_DBUS_PROXY_FLAGS_NONE,
+                                                 "org.freedesktop.timedate1",
+                                                 "/org/freedesktop/timedate1",
+                                                 priv->cancellable,
+                                                 &error);
+      priv->use_systemd = TRUE;
+    }
+
+  if (have_ntpd || priv->dtm == NULL)
+    {
+      if (error)
+        {
+          g_warning ("could not get proxy for systemd timedate1 service: %s", error->message);
+          g_clear_error (&error);
+
+          g_warning ("trying to use csd DateTimeMechanism instead, though network time may be unavailable");
+        }
+
+      priv->csddtm = cc_csddtm_proxy_new_for_bus_sync (G_BUS_TYPE_SYSTEM,
+                                                       G_DBUS_PROXY_FLAGS_NONE,
+                                                       "org.cinnamon.SettingsDaemon.DateTimeMechanism",
+                                                       "/",
+                                                       priv->cancellable,
+                                                       &error);
+
+      if (priv->csddtm == NULL)
+        {
+          g_warning ("could not get proxy for csd DateTimeMechanism: %s", error->message);
+          g_error_free (error);
+        }
+
+      priv->use_systemd = FALSE;
+    }
 
   priv->builder = gtk_builder_new ();
   ret = gtk_builder_add_objects_from_file (priv->builder, DATADIR"/datetime.ui",
@@ -914,17 +1027,24 @@ cc_date_time_panel_init (CcDateTimePanel *self)
       return;
     }
 
-  /* set up network time button */
   error = NULL;
   using_ntp = can_use_ntp = FALSE;
-  if (!date_time_mechanism_call_get_using_ntp_sync (priv->dtm,
-                                                    &can_use_ntp,
-                                                    &using_ntp,
-                                                    priv->cancellable,
-                                                    &error))
+
+  if (priv->use_systemd)
     {
-      g_warning ("Failed to get using ntp: %s", error->message);
-      g_error_free (error);
+      using_ntp = cc_dtm_get_ntp (priv->dtm);
+    }
+  else
+    {
+      if (!cc_csddtm_call_get_using_ntp_sync (priv->csddtm,
+                                              &can_use_ntp,
+                                              &using_ntp,
+                                              priv->cancellable,
+                                              &error))
+        {
+          g_warning ("Failed to get using ntp: %s", error->message);
+          g_error_free (error);
+        }
     }
 
   gtk_switch_set_active (GTK_SWITCH (W("network_time_switch")), using_ntp);
@@ -1015,17 +1135,31 @@ cc_date_time_panel_init (CcDateTimePanel *self)
 
   /* After the initial setup, so we can be sure that
    * the model is filled up */
-  date_time_mechanism_call_get_timezone (priv->dtm,
-                                         priv->cancellable,
-                                         get_timezone_cb,
-                                         self);
+  get_timezone (self);
 
   /* add the lock button */
-  priv->permission = polkit_permission_new_sync ("org.cinnamon.settingsdaemon.datetimemechanism.configure", NULL, NULL, NULL);
+  if (priv->use_systemd)
+    {
+      priv->permission = polkit_permission_new_sync ("org.cinnamon.controlcenter.datetime.configure",
+                                                     NULL, NULL, NULL);
+    }
+  else
+    {
+      priv->permission = polkit_permission_new_sync ("org.cinnamon.settingsdaemon.datetimemechanism.configure",
+                                                     NULL, NULL, NULL);
+    }
+
   if (priv->permission == NULL)
     {
       g_warning ("Your system does not have the '%s' PolicyKit files installed. Please check your installation",
                  "org.cinnamon.settingsdaemon.datetimemechanism.configure");
+      return;
+    }
+
+  if (priv->dtm == NULL && priv->csddtm == NULL)
+    {
+      g_warning ("No mechanism available for setting time or NTP state.  Either install ntpd/ntpdate (if using"
+                 "consolekit) or make sure the systemd-timedated1 and systemd-timesync services are enabled.");
       return;
     }
 
