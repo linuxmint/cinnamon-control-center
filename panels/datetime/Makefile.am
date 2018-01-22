@@ -144,37 +144,41 @@ check-local: test-timezone-gfx test-endianess test-timezone
 ccpanelsdir = $(PANELS_DIR)
 ccpanels_LTLIBRARIES = libdate_time.la
 
+built_sources =\
+	cc-dtm-proxy.c \
+	cc-dtm-proxy.h \
+	cc-csddtm-proxy.c \
+	cc-csddtm-proxy.h
+
 cc-dtm-proxy.h : Makefile.am timedated1-interface.xml
 	gdbus-codegen                                       \
-        --annotate "org.freedesktop.timedate1" org.gtk.GDBus.C.Name "Dtm"       \
-        --c-namespace CC                        \
-        --generate-c-code cc-dtm-proxy   \
-        timedated1-interface.xml                         \
-        $(NULL)
+		--annotate "org.freedesktop.timedate1" org.gtk.GDBus.C.Name "Dtm"       \
+		--c-namespace CC                        \
+		--generate-c-code cc-dtm-proxy   \
+		timedated1-interface.xml                         \
+		$(NULL)
 cc-dtm-proxy.c : cc-dtm-proxy.h
 
 cc-csddtm-proxy.h : Makefile.am csd-dtm-interface.xml
 	gdbus-codegen                                       \
-        --annotate "org.cinnamon.SettingsDaemon.DateTimeMechanism" org.gtk.GDBus.C.Name "Csddtm"       \
-        --c-namespace CC                        \
-        --generate-c-code cc-csddtm-proxy   \
-        csd-dtm-interface.xml                         \
-        $(NULL)
+		--annotate "org.cinnamon.SettingsDaemon.DateTimeMechanism" org.gtk.GDBus.C.Name "Csddtm"       \
+		--c-namespace CC                        \
+		--generate-c-code cc-csddtm-proxy   \
+		csd-dtm-interface.xml                         \
+		$(NULL)
 cc-csddtm-proxy.c : cc-csddtm-proxy.h
 
-libdate_time_la_SOURCES =	\
-	datetime-module.c	\
-	cc-datetime-panel.c	\
-	cc-datetime-panel.h	\
-	cc-timezone-map.c	\
-	cc-timezone-map.h	\
-	cc-dtm-proxy.c			\
-	cc-dtm-proxy.h			\
-	cc-csddtm-proxy.c			\
-	cc-csddtm-proxy.h			\
-	date-endian.c		\
-	date-endian.h		\
-	tz.c tz.h
+libdate_time_la_SOURCES =       \
+	$(built_sources)        \
+	datetime-module.c       \
+	cc-datetime-panel.c     \
+	cc-datetime-panel.h     \
+	cc-timezone-map.c       \
+	cc-timezone-map.h       \
+	date-endian.c           \
+	date-endian.h           \
+	tz.c tz.h               \
+	$(NULL)
 
 libdate_time_la_LIBADD = $(PANEL_LIBS) $(DATETIME_PANEL_LIBS)
 libdate_time_la_LDFLAGS = $(WARN_LDFLAGS) $(PANEL_LDFLAGS)
@@ -184,6 +188,16 @@ polkit_in_files = org.cinnamon.controlcenter.datetime.policy.in
 
 @INTLTOOL_POLICY_RULE@
 polkit_DATA = $(polkit_in_files:.policy.in=.policy)
+
+CLEANFILES = $(built_sources)
+
+MAINTAINERCLEANFILES =          \
+	Makefile.in
+
+EXTRA_DIST = \
+	timedated1-interface.xml \
+	csd-dtm-interface.xml \
+	org.cinnamon.controlcenter.datetime.policy
 
 -include $(top_srcdir)/git.mk
 
