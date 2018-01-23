@@ -1335,6 +1335,7 @@ cc_network_panel_init (CcNetworkPanel *panel)
         g_signal_connect (panel->priv->client, "device-removed",
                           G_CALLBACK (device_removed_cb), panel);
 
+#ifdef BUILD_MODEM
         /* Setup ModemManager client */
         system_bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL, &error);
         if (system_bus == NULL) {
@@ -1353,6 +1354,9 @@ cc_network_panel_init (CcNetworkPanel *panel)
                 }
                 g_object_unref (system_bus);
         }
+#else
+        panel->priv->modem_manager = NULL;
+#endif
 
         widget = GTK_WIDGET (gtk_builder_get_object (panel->priv->builder,
                                                      "add_toolbutton"));
