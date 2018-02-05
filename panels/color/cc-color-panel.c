@@ -2664,11 +2664,6 @@ cc_color_panel_init (CcColorPanel *prefs)
                     G_CALLBACK (gcm_prefs_window_realize_cb),
                     prefs);
 
-  widget = WID (priv->builder, "linkbutton_help");
-  if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
-    g_object_set (G_OBJECT (widget),
-              "uri", "help:ubuntu-help/color-whyimportant",
-              NULL);
 }
 
 void
