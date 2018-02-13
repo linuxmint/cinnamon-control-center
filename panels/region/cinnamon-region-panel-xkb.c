@@ -36,6 +36,8 @@
 #define CINNAMON_DESKTOP_VARIANT_KEY "keyboard-layout-prefer-variant-names"
 #define CINNAMON_DESKTOP_UPPER_CASE_KEY "keyboard-layout-use-upper"
 
+#define GKBD_CONFIG_KEY_LOAD_EXTRA_ITEMS "load-extra-items"
+
 XklEngine *engine;
 XklConfigRegistry *config_registry;
 
@@ -80,6 +82,20 @@ chk_new_windows_inherit_layout_toggled (GtkWidget *
 				(GTK_TOGGLE_BUTTON
 				 (chk_new_windows_inherit_layout)) ? -1 :
 				0);
+}
+
+static void
+on_load_extra_items_toggled (GtkWidget *widget,
+                             gpointer   user_data)
+{
+    g_settings_set_boolean (xkb_desktop_settings,
+                            GKBD_CONFIG_KEY_LOAD_EXTRA_ITEMS,
+                            gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)));
+
+    gkbd_desktop_config_load (&desktop_config);
+
+    xkl_config_registry_load (config_registry,
+                              desktop_config.load_extra_items);
 }
 
 void
@@ -166,6 +182,18 @@ setup_xkb_tabs (GtkBuilder * dialog)
 				  "clicked",
 				  G_CALLBACK (xkb_options_popup_dialog),
 				  dialog);
+
+    widget = WID ("load_extras_checkbox");
+
+    g_settings_bind (xkb_desktop_settings,
+                     GKBD_CONFIG_KEY_LOAD_EXTRA_ITEMS,
+                     widget, "active",
+                     G_SETTINGS_BIND_GET);
+
+    g_signal_connect (widget,
+                      "toggled",
+                      G_CALLBACK (on_load_extra_items_toggled),
+                      dialog);
 
 	xkb_layouts_register_conf_listener (dialog);
 	xkb_options_register_conf_listener (dialog);
