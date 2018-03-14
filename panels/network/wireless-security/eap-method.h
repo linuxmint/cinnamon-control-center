@@ -23,6 +23,9 @@
 #ifndef EAP_METHOD_H
 #define EAP_METHOD_H
 
+#include <glib.h>
+#include <gtk/gtk.h>
+
 typedef struct _EAPMethod EAPMethod;
 
 typedef void        (*EMAddToSizeGroupFunc) (EAPMethod *method, GtkSizeGroup *group);
@@ -129,3 +132,4 @@ void eap_method_ca_cert_ignore_save (NMConnection *connection);
 void eap_method_ca_cert_ignore_load (NMConnection *connection);
 
 #endif /* EAP_METHOD_H */
+

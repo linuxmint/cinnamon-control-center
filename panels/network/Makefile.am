@@ -47,9 +47,7 @@ libnetwork_la_SOURCES +=				\
 	net-device-mobile.h
 NETWORK_PANEL_CFLAGS += -DBUILD_MODEM
 AM_CPPFLAGS += $(MODEM_MANAGER_CFLAGS)
-endif
 
-if BUILD_MODEM
 libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(MODEM_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la
 else
 libnetwork_la_LIBADD = $(PANEL_LIBS) $(NETWORK_PANEL_LIBS) $(NETWORK_MANAGER_LIBS) $(builddir)/connection-editor/libconnection-editor.la

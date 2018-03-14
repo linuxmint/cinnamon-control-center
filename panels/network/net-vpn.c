@@ -54,7 +54,11 @@ G_DEFINE_TYPE (NetVpn, net_vpn, NET_TYPE_OBJECT)
 static void
 connection_vpn_state_changed_cb (NMVpnConnection *connection,
                                  NMVpnConnectionState state,
+#if NM_CHECK_VERSION(1,8,0)
+                                 NMActiveConnectionStateReason reason,
+#else
                                  NMVpnConnectionStateReason reason,
+#endif
                                  NetVpn *vpn)
 {
         net_object_emit_changed (NET_OBJECT (vpn));

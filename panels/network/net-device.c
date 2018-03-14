@@ -268,7 +268,8 @@ net_device_finalize (GObject *object)
                 g_signal_handler_disconnect (priv->nm_device,
                                              priv->changed_id);
         }
-        g_clear_object (&priv->nm_device);
+        if (priv->nm_device != NULL)
+                g_object_unref (priv->nm_device);
 
         G_OBJECT_CLASS (net_device_parent_class)->finalize (object);
 }
