@@ -2,7 +2,9 @@ AM_CPPFLAGS =					\
 	-I$(top_srcdir)				\
 	$(SHELL_CFLAGS)
 
+if BUILD_SHELL
 bin_PROGRAMS = cinnamon-control-center
+endif
 
 MARSHAL_FILES = cc-shell-marshal.c cc-shell-marshal.h
 BUILT_SOURCES = $(MARSHAL_FILES)
@@ -85,6 +87,7 @@ menu_DATA = cinnamoncc.menu
 cinnamoncc.menu: cinnamoncc.menu.in
 	$(AM_V_GEN) cat $< | sed 's,@applicationsdir@,$(datadir)/applications/,' > $@
 
+if BUILD_SHELL
 uidir = $(pkgdatadir)/ui
 ui_DATA = shell.ui
 
@@ -92,6 +95,7 @@ sysdir = $(datadir)/applications
 sys_in_files = cinnamon-control-center.desktop.in
 sys_DATA = $(sys_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
+endif
 
 directorydir = $(datadir)/desktop-directories
 directory_in_files = cinnamoncc.directory.in
