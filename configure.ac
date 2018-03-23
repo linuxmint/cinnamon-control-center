@@ -321,6 +321,16 @@ PKG_CHECK_MODULES(ISOCODES, iso-codes)
 AC_DEFINE_UNQUOTED([ISO_CODES_PREFIX],["`$PKG_CONFIG --variable=prefix iso-codes`"],[ISO codes prefix])
 ISO_CODES=iso-codes
 
+AC_ARG_ENABLE(shell, AC_HELP_STRING([--enable-shell], [enable panel debugging shell]),
+              [case "${enableval}" in
+                      yes) enable_shell=yes ;;
+                      no) enable_shell=no ;;
+                      *) AC_MSG_ERROR(bad value ${enableval} for --enable-shell) ;;
+              esac],
+              [enable_shell=no]) dnl disabled by default
+
+AM_CONDITIONAL(BUILD_SHELL, [test x$enable_shell = xyes])
+
 dnl ==============================================
 dnl End: Check that we meet the  dependencies
 dnl ==============================================
