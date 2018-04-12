@@ -39,9 +39,7 @@ libconnection_editor_la_CPPFLAGS = 		\
 	$(PANEL_CFLAGS)				\
 	-I$(srcdir)/../wireless-security	\
 	$(NETWORK_PANEL_CFLAGS) 		\
-        $(NETWORK_MANAGER_CFLAGS)		\
-	-DNM_VPN_CONFIG_DIR=\""$(NM_VPN_CONFIG_DIR)"\" \
-	-DNM_VPN_MODULE_DIR=\""$(NM_VPN_MODULE_DIR)"\"
+        $(NETWORK_MANAGER_CFLAGS)
 
 libconnection_editor_la_LIBADD = 		\
 	$(builddir)/../wireless-security/libwireless-security.la \
