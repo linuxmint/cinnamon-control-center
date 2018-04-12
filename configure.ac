@@ -155,10 +155,6 @@ if test "x$enable_networkmanager" = xyes; then
 
     AC_DEFINE(BUILD_NETWORK, 1, [Define to 1 to build the Network panel])
 
-    if test x${have_networkmanager} = xyes; then
-      AC_DEFINE(HAVE_NETWORK_MANAGER, 1, [Define to 1 if NetworkManager is available])
-    fi
-
     if test x${have_nma_18} = xyes; then
       AC_DEFINE(HAVE_NMA_18, 1, [Define to 1 if libnma ist >= 1.8.0])
     fi
