@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cinnamon-control-center
 Upstream-Contact: Linux Mint Project <root@linuxmint.com>
 Source: https://github.com/linuxmint/cinnamon-control-center.git
@@ -60,7 +60,11 @@ Files: panels/display/cc-rr-labeler.c
        panels/display/cc-rr-labeler.h
        panels/display/scrollarea.c
        panels/display/scrollarea.h
+       panels/network/wireless-security/nm-default.h
+       panels/online-accounts/cc-online-accounts-panel.c
+       panels/online-accounts/cc-online-accounts-panel.h
 Copyright: 2008, Novell, Inc
+           2011-2015, Red Hat, Inc
            2006-2008, Soren Sandmann <sandmann@daimi.au.dk>
 License: LGPL-2+
 
