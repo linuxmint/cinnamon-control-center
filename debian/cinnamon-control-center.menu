@@ -1,4 +1,0 @@
-?package(cinnamon-control-center):needs="X11" section="Applications/System/Administration" \
-  hints="Gnome" title="Cinnamon Control Center" \
-  icon="/usr/share/pixmaps/cinnamon-control-center.xpm" \
-  command="/usr/bin/cinnamon-control-center"
