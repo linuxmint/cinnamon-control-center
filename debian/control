@@ -7,13 +7,12 @@ Build-Depends:
  automake,
  autotools-dev,
  cinnamon-settings-daemon-dev,
- debhelper (>= 9),
- dh-autoreconf,
+ debhelper (>= 10),
  gnome-doc-utils (>= 0.3.2),
  gnome-pkg-tools (>= 0.10),
  gtk-doc-tools,
  intltool (>= 0.37.1),
- libcinnamon-desktop-dev (>= 1.0.0),
+ libcinnamon-desktop-dev (>= 3.6),
  libcinnamon-menu-3-dev,
  libcolord-dev,
  libdbus-1-dev (>= 0.32),
@@ -25,8 +24,8 @@ Build-Depends:
  libgoa-backend-1.0-dev,
  libgtk-3-dev (>= 3.4.1),
  libmm-glib-dev (>= 0.7) [linux-any],
- libnm-dev (>=1.2.0) [linux-any],
- libnma-dev (>=1.2.0) [linux-any],
+ libnm-dev (>= 1.2.0) [linux-any],
+ libnma-dev (>= 1.2.0) [linux-any],
  libnotify-dev (>= 0.7.3),
  libpolkit-gobject-1-dev (>= 0.103),
  libupower-glib-dev (>= 0.9.1),
@@ -57,7 +56,11 @@ Depends:
  xdg-utils,
  ${misc:Depends},
  ${shlibs:Depends},
-Recommends: iso-codes, mesa-utils, mousetweaks
+Recommends:
+ cinnamon-l10n,
+ iso-codes,
+ mesa-utils,
+ mousetweaks
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
  This package contains configuration applets for the Cinnamon desktop,
@@ -72,19 +75,8 @@ Depends: ${misc:Depends}
 Recommends: cinnamon-control-center (>= ${source:Version})
 Provides: cinnamon-capplets-data
 Conflicts: cinnamon-capplets-data
-Replaces:
- cinnamon-capplets-data,
- cinnamon-control-center (<< 2.8.0),
- gdm (<< 3.0),
- gdm3 (<< 3.0),
- gnome-media-common (<< 2.91),
- gnome-power-manager (<< 3.2),
-Breaks:
- cinnamon-control-center (<< 2.8.0),
- gdm (<< 3.0),
- gdm3 (<< 3.0),
- gnome-media-common (<< 2.91),
- gnome-power-manager (<< 3.2),
+Replaces: cinnamon-capplets-data, cinnamon-control-center (<< 2.8.0)
+Breaks: cinnamon-control-center (<< 2.8.0)
 Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
