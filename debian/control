@@ -53,14 +53,11 @@ Depends:
  gettext,
  gnome-online-accounts,
  libcinnamon-control-center1 (= ${binary:Version}),
- xdg-utils,
  policykit-1-gnome,
+ xdg-utils,
  ${misc:Depends},
  ${shlibs:Depends},
-Recommends:
- iso-codes,
- mesa-utils,
- mousetweaks
+Recommends: iso-codes, mesa-utils, mousetweaks
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
  This package contains configuration applets for the Cinnamon desktop,
@@ -75,27 +72,39 @@ Depends: ${misc:Depends}
 Recommends: cinnamon-control-center (>= ${source:Version})
 Provides: cinnamon-capplets-data
 Conflicts: cinnamon-capplets-data
-Replaces: cinnamon-capplets-data,
-          cinnamon-control-center (<< 2.8.0),
-          gdm (<< 3.0),
-          gdm3 (<< 3.0),
-          gnome-media-common (<< 2.91),
-          gnome-power-manager (<< 3.2)
-Breaks: cinnamon-control-center (<< 2.8.0),
-        gdm (<< 3.0),
-        gdm3 (<< 3.0),
-        gnome-media-common (<< 2.91),
-        gnome-power-manager (<< 3.2)
+Replaces:
+ cinnamon-capplets-data,
+ cinnamon-control-center (<< 2.8.0),
+ gdm (<< 3.0),
+ gdm3 (<< 3.0),
+ gnome-media-common (<< 2.91),
+ gnome-power-manager (<< 3.2),
+Breaks:
+ cinnamon-control-center (<< 2.8.0),
+ gdm (<< 3.0),
+ gdm3 (<< 3.0),
+ gnome-media-common (<< 2.91),
+ gnome-power-manager (<< 3.2),
 Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
 
+Package: cinnamon-control-center-dbg
+Priority: extra
+Section: debug
+Architecture: any
+Depends: cinnamon-control-center (= ${binary:Version}), ${misc:Depends}
+Description: utilities to configure the Cinnamon desktop - debug symbols
+ This package contains the debug symbols for the configuration applets of the
+ Cinnamon desktop.
+
 Package: libcinnamon-control-center-dev
 Section: libdevel
 Architecture: any
-Depends: libcinnamon-control-center1 (= ${binary:Version}),
-         libgtk-3-dev (>= 3.4.1),
-         ${misc:Depends}
+Depends:
+ libcinnamon-control-center1 (= ${binary:Version}),
+ libgtk-3-dev (>= 3.4.1),
+ ${misc:Depends},
 Description: utilities to configure the Cinnamon desktop
  This package contains the development files for the cinnamon control center
  panels library.
@@ -108,12 +117,3 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: utilities to configure the Cinnamon desktop
  This package contains the library used by control center panels
-
-Package: cinnamon-control-center-dbg
-Priority: extra
-Section: debug
-Architecture: any
-Depends: cinnamon-control-center (= ${binary:Version}), ${misc:Depends}
-Description: utilities to configure the Cinnamon desktop - debug symbols
- This package contains the debug symbols for the configuration applets of the
- Cinnamon desktop.
