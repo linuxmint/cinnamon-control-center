@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-10 13:19+0000\n"
+"POT-Creation-Date: 2018-04-17 12:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Test profile: "
 msgstr ""
 
-#: panels/color/cc-color-panel.c:183 panels/color/color.ui.h:11
+#: panels/color/cc-color-panel.c:183 panels/color/color.ui.h:9
 msgid "Set for all users"
 msgstr ""
 
@@ -264,7 +264,7 @@ msgstr ""
 msgid "China"
 msgstr ""
 
-#: panels/common/cc-language-chooser.c:304
+#: panels/common/cc-language-chooser.c:303
 msgid "Select a region"
 msgstr ""
 
@@ -329,54 +329,50 @@ msgstr ""
 msgid "Could not detect displays"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:2523
+#: panels/display/cc-display-panel.c:2522
 msgid "Could not get screen information"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:355
-msgid "Air_plane Mode"
-msgstr ""
-
-#: panels/network/cc-network-panel.c:961
+#: panels/network/cc-network-panel.c:896
 msgid "Network proxy"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1137 panels/network/net-vpn.c:283
-#: panels/network/net-vpn.c:440
+#: panels/network/cc-network-panel.c:1075 panels/network/net-vpn.c:287
+#: panels/network/net-vpn.c:444
 #, c-format
 msgid "%s VPN"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1202
+#: panels/network/cc-network-panel.c:1142
 msgid "Oops, something has gone wrong. Please contact your software vendor."
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1208
+#: panels/network/cc-network-panel.c:1148
 msgid "NetworkManager needs to be running."
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:50 panels/network/net-device-wifi.c:545
+#: panels/network/net-device-ethernet.c:50 panels/network/net-device-wifi.c:549
 #, c-format
 msgid "%d Mb/s"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:106
-#: panels/network/net-device-wifi.c:475
+#: panels/network/net-device-wifi.c:477
 msgid "never"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:116
-#: panels/network/net-device-wifi.c:485
+#: panels/network/net-device-wifi.c:487
 msgid "today"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:118
-#: panels/network/net-device-wifi.c:487
+#: panels/network/net-device-wifi.c:489
 msgid "yesterday"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:120
-#: panels/network/net-device-wifi.c:489
+#: panels/network/net-device-wifi.c:491
 #, c-format
 msgid "%i day ago"
 msgid_plural "%i days ago"
@@ -434,7 +430,7 @@ msgid "Wired"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:348
-#: panels/network/net-device-wifi.c:1746 panels/network/network-ethernet.ui.h:3
+#: panels/network/net-device-wifi.c:1750 panels/network/network-ethernet.ui.h:3
 #: panels/network/network-mobile.ui.h:8 panels/network/network-simple.ui.h:8
 #: panels/network/network-vpn.ui.h:7
 msgid "Options…"
@@ -444,11 +440,11 @@ msgstr ""
 msgid "Add new connection"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:215 panels/network/net-device-wifi.c:391
+#: panels/network/net-device-wifi.c:215 panels/network/net-device-wifi.c:393
 msgid "WEP"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:219 panels/network/net-device-wifi.c:396
+#: panels/network/net-device-wifi.c:219 panels/network/net-device-wifi.c:398
 #: panels/network/network-wifi.ui.h:19
 msgid "WPA"
 msgstr ""
@@ -461,95 +457,95 @@ msgstr ""
 msgid "Enterprise"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:233 panels/network/net-device-wifi.c:381
+#: panels/network/net-device-wifi.c:233 panels/network/net-device-wifi.c:383
 msgctxt "Wifi security"
 msgid "None"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:574
+#: panels/network/net-device-wifi.c:578
 msgctxt "Signal strength"
 msgid "None"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:576
+#: panels/network/net-device-wifi.c:580
 msgctxt "Signal strength"
 msgid "Weak"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:578
+#: panels/network/net-device-wifi.c:582
 msgctxt "Signal strength"
 msgid "Ok"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:580
+#: panels/network/net-device-wifi.c:584
 msgctxt "Signal strength"
 msgid "Good"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:582
+#: panels/network/net-device-wifi.c:586
 msgctxt "Signal strength"
 msgid "Excellent"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1256
+#: panels/network/net-device-wifi.c:1260
 msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
 "a wireless hotspot to share the connection with others."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1260
+#: panels/network/net-device-wifi.c:1264
 #, c-format
 msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1264
+#: panels/network/net-device-wifi.c:1268
 msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1346
+#: panels/network/net-device-wifi.c:1350
 msgid "Stop hotspot and disconnect any users?"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1348 panels/network/net-device-wifi.c:1587
+#: panels/network/net-device-wifi.c:1352 panels/network/net-device-wifi.c:1591
 #: panels/common/language-chooser.ui.h:2 panels/network/network-wifi.ui.h:1
 #: panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Cancel"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1349
+#: panels/network/net-device-wifi.c:1353
 msgid "_Stop Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1449
+#: panels/network/net-device-wifi.c:1453
 msgid "System policy prohibits use as a Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1452
+#: panels/network/net-device-wifi.c:1456
 msgid "Wireless device does not support Hotspot mode"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1584
+#: panels/network/net-device-wifi.c:1588
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1588 panels/network/network-wifi.ui.h:42
+#: panels/network/net-device-wifi.c:1592 panels/network/network-wifi.ui.h:42
 #: panels/network/connection-editor/reset-page.ui.h:2
 msgid "_Forget"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1894
+#: panels/network/net-device-wifi.c:1898
 msgid "History"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1898
+#: panels/network/net-device-wifi.c:1902
 msgid "_Close"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1906
+#: panels/network/net-device-wifi.c:1910
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
 msgstr ""
@@ -869,7 +865,7 @@ msgstr ""
 msgid "Switch Modes"
 msgstr ""
 
-#: panels/wacom/cc-wacom-page.c:753 panels/wacom/cc-wacom-stylus-page.c:378
+#: panels/wacom/cc-wacom-page.c:753 panels/wacom/cc-wacom-stylus-page.c:377
 msgid "Button"
 msgstr ""
 
@@ -881,7 +877,7 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: panels/wacom/cc-wacom-page.c:922
+#: panels/wacom/cc-wacom-page.c:921
 msgid "Display Mapping"
 msgstr ""
 
@@ -1016,66 +1012,58 @@ msgid "Each device needs an up to date color profile to be color managed."
 msgstr ""
 
 #: panels/color/color.ui.h:5
-msgid "Learn more"
-msgstr ""
-
-#: panels/color/color.ui.h:6
-msgid "Learn more about color management"
-msgstr ""
-
-#: panels/color/color.ui.h:7
 msgid "Add device"
 msgstr ""
 
-#: panels/color/color.ui.h:8
+#: panels/color/color.ui.h:6
 msgid "Add a virtual device"
 msgstr ""
 
-#: panels/color/color.ui.h:9
+#: panels/color/color.ui.h:7
 msgid "Delete device"
 msgstr ""
 
-#: panels/color/color.ui.h:10
+#: panels/color/color.ui.h:8
 msgid "Remove a device"
 msgstr ""
 
-#: panels/color/color.ui.h:12
+#: panels/color/color.ui.h:10
 msgid "Set this profile for all users on this computer"
 msgstr ""
 
-#: panels/color/color.ui.h:13
+#: panels/color/color.ui.h:11
 msgid "Add profile"
 msgstr ""
 
-#: panels/color/color.ui.h:14 panels/wacom/cinnamon-wacom-properties.ui.h:10
+#: panels/color/color.ui.h:12 panels/wacom/cinnamon-wacom-properties.ui.h:10
 msgid "Calibrate…"
 msgstr ""
 
-#: panels/color/color.ui.h:15
+#: panels/color/color.ui.h:13
 msgid "Calibrate the device"
 msgstr ""
 
-#: panels/color/color.ui.h:16
+#: panels/color/color.ui.h:14
 msgid "Remove profile"
 msgstr ""
 
-#: panels/color/color.ui.h:17
+#: panels/color/color.ui.h:15
 msgid "View details"
 msgstr ""
 
-#: panels/color/color.ui.h:18
+#: panels/color/color.ui.h:16
 msgid "Device type:"
 msgstr ""
 
-#: panels/color/color.ui.h:19
+#: panels/color/color.ui.h:17
 msgid "Manufacturer:"
 msgstr ""
 
-#: panels/color/color.ui.h:20
+#: panels/color/color.ui.h:18
 msgid "Model:"
 msgstr ""
 
-#: panels/color/color.ui.h:21
+#: panels/color/color.ui.h:19
 msgid ""
 "Image files can be dragged on this window to auto-complete the above fields."
 msgstr ""
@@ -1616,52 +1604,56 @@ msgid "Preview Layout"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:7
-msgid "Use the same layout for all windows"
+msgid "Include less-common layouts in the selection list"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:8
-msgid "Allow different layouts for individual windows"
+msgid "Use the same layout for all windows"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:9
-msgid "New windows use the default layout"
+msgid "Allow different layouts for individual windows"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:10
-msgid "New windows use the previous window's layout"
+msgid "New windows use the default layout"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:11
-msgid "Display options"
+msgid "New windows use the previous window's layout"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:12
-msgid "Use a country flag, if available,  to represent keyboard layouts"
+msgid "Display options"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:13
+msgid "Use a country flag, if available,  to represent keyboard layouts"
+msgstr ""
+
+#: panels/region/cinnamon-region-panel.ui.h:14
 msgid ""
 "Show the layout name instead of the group name when using text to represent "
 "a layout"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel.ui.h:14
+#: panels/region/cinnamon-region-panel.ui.h:15
 msgid "Prefer upper-case when using text to represent a layout"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel.ui.h:15
+#: panels/region/cinnamon-region-panel.ui.h:16
 msgid "_Options..."
 msgstr ""
 
-#: panels/region/cinnamon-region-panel.ui.h:16
+#: panels/region/cinnamon-region-panel.ui.h:17
 msgid "View and edit keyboard layout options"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel.ui.h:17
+#: panels/region/cinnamon-region-panel.ui.h:18
 msgid "Reset to De_faults"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel.ui.h:18
+#: panels/region/cinnamon-region-panel.ui.h:19
 msgid ""
 "Replace the current keyboard layout settings with the\n"
 "default settings"
@@ -1803,25 +1795,25 @@ msgid "802.1x _Security"
 msgstr ""
 
 #: panels/network/connection-editor/8021x-security-page.ui.h:2
-#: panels/network/connection-editor/security-page.ui.h:2
+#: panels/network/connection-editor/security-page.ui.h:3
 msgid "page 1"
 msgstr ""
 
 #: panels/network/connection-editor/8021x-security-page.ui.h:3
-#: panels/network/connection-editor/security-page.ui.h:3
-#: panels/network/wireless-security/eap-method-fast.ui.h:4
-#: panels/network/wireless-security/eap-method-peap.ui.h:4
-#: panels/network/wireless-security/eap-method-ttls.ui.h:1
+#: panels/network/connection-editor/security-page.ui.h:4
+#: panels/network/wireless-security/eap-method-fast.ui.h:5
+#: panels/network/wireless-security/eap-method-peap.ui.h:5
+#: panels/network/wireless-security/eap-method-ttls.ui.h:2
 msgid "Anony_mous identity"
 msgstr ""
 
 #: panels/network/connection-editor/8021x-security-page.ui.h:4
-#: panels/network/connection-editor/security-page.ui.h:4
+#: panels/network/connection-editor/security-page.ui.h:5
 msgid "Inner _authentication"
 msgstr ""
 
 #: panels/network/connection-editor/8021x-security-page.ui.h:5
-#: panels/network/connection-editor/security-page.ui.h:5
+#: panels/network/connection-editor/security-page.ui.h:6
 msgid "page 2"
 msgstr ""
 
@@ -1832,7 +1824,7 @@ msgstr ""
 #: panels/network/connection-editor/ethernet-page.ui.h:1
 #: panels/network/connection-editor/ip4-page.ui.h:4
 #: panels/network/connection-editor/ip6-page.ui.h:4
-#: panels/network/wireless-security/eap-method-peap.ui.h:1
+#: panels/network/wireless-security/eap-method-peap.ui.h:2
 msgid "Automatic"
 msgstr ""
 
@@ -1887,13 +1879,19 @@ msgid "bytes"
 msgstr ""
 
 #: panels/network/connection-editor/ethernet-page.ui.h:15
-#: panels/network/connection-editor/vpn-page.ui.h:2
+#: panels/network/connection-editor/vpn-page.ui.h:3
 msgid "Make available to other _users"
 msgstr ""
 
 #: panels/network/connection-editor/ethernet-page.ui.h:16
 #: panels/network/connection-editor/wifi-page.ui.h:7
 msgid "Connect _automatically"
+msgstr ""
+
+#: panels/network/connection-editor/ethernet-page.ui.h:17
+#: panels/network/connection-editor/security-page.ui.h:2
+#: panels/network/connection-editor/vpn-page.ui.h:2
+msgid "Firewall _Zone"
 msgstr ""
 
 #: panels/network/connection-editor/ip4-page.ui.h:5
@@ -1918,7 +1916,7 @@ msgid ""
 "connect"
 msgstr ""
 
-#: panels/network/connection-editor/vpn-page.ui.h:3
+#: panels/network/connection-editor/vpn-page.ui.h:4
 msgid "(Error: unable to load VPN connection editor)"
 msgstr ""
 
@@ -1927,28 +1925,36 @@ msgid "Make available to _other users"
 msgstr ""
 
 #: panels/network/wireless-security/eap-method-fast.ui.h:1
-msgid "Anonymous"
+#: panels/network/wireless-security/eap-method-peap.ui.h:1
+#: panels/network/wireless-security/eap-method-ttls.ui.h:1
+#: panels/network/wireless-security/ws-dynamic-wep.ui.h:1
+#: panels/network/wireless-security/ws-wpa-eap.ui.h:1
+msgid " "
 msgstr ""
 
 #: panels/network/wireless-security/eap-method-fast.ui.h:2
-msgid "Authenticated"
+msgid "Anonymous"
 msgstr ""
 
 #: panels/network/wireless-security/eap-method-fast.ui.h:3
+msgid "Authenticated"
+msgstr ""
+
+#: panels/network/wireless-security/eap-method-fast.ui.h:4
 msgid "Both"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-fast.ui.h:5
+#: panels/network/wireless-security/eap-method-fast.ui.h:6
 msgid "PAC _file"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-fast.ui.h:6
-#: panels/network/wireless-security/eap-method-peap.ui.h:7
-#: panels/network/wireless-security/eap-method-ttls.ui.h:4
+#: panels/network/wireless-security/eap-method-fast.ui.h:7
+#: panels/network/wireless-security/eap-method-peap.ui.h:8
+#: panels/network/wireless-security/eap-method-ttls.ui.h:5
 msgid "_Inner authentication"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-fast.ui.h:7
+#: panels/network/wireless-security/eap-method-fast.ui.h:8
 msgid "Allow automatic PAC pro_visioning"
 msgstr ""
 
@@ -1966,27 +1972,27 @@ msgstr ""
 msgid "Sho_w password"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-peap.ui.h:2
+#: panels/network/wireless-security/eap-method-peap.ui.h:3
 msgid "Version 0"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-peap.ui.h:3
+#: panels/network/wireless-security/eap-method-peap.ui.h:4
 msgid "Version 1"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-peap.ui.h:5
+#: panels/network/wireless-security/eap-method-peap.ui.h:6
 #: panels/network/wireless-security/eap-method-tls.ui.h:3
-#: panels/network/wireless-security/eap-method-ttls.ui.h:2
+#: panels/network/wireless-security/eap-method-ttls.ui.h:3
 msgid "C_A certificate"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-peap.ui.h:6
+#: panels/network/wireless-security/eap-method-peap.ui.h:7
 #: panels/network/wireless-security/eap-method-tls.ui.h:4
-#: panels/network/wireless-security/eap-method-ttls.ui.h:3
+#: panels/network/wireless-security/eap-method-ttls.ui.h:4
 msgid "No CA certificate is _required"
 msgstr ""
 
-#: panels/network/wireless-security/eap-method-peap.ui.h:8
+#: panels/network/wireless-security/eap-method-peap.ui.h:9
 msgid "PEAP _version"
 msgstr ""
 
@@ -2006,9 +2012,9 @@ msgstr ""
 msgid "_Private key password"
 msgstr ""
 
-#: panels/network/wireless-security/ws-dynamic-wep.ui.h:1
-#: panels/network/wireless-security/ws-wep-key.ui.h:6
-#: panels/network/wireless-security/ws-wpa-eap.ui.h:1
+#: panels/network/wireless-security/ws-dynamic-wep.ui.h:2
+#: panels/network/wireless-security/ws-wep-key.ui.h:9
+#: panels/network/wireless-security/ws-wpa-eap.ui.h:2
 msgid "Au_thentication"
 msgstr ""
 
@@ -2017,22 +2023,34 @@ msgid "1 (Default)"
 msgstr ""
 
 #: panels/network/wireless-security/ws-wep-key.ui.h:2
-msgid "Open System"
+msgid "2"
 msgstr ""
 
 #: panels/network/wireless-security/ws-wep-key.ui.h:3
-msgid "Shared Key"
+msgid "3"
 msgstr ""
 
 #: panels/network/wireless-security/ws-wep-key.ui.h:4
-msgid "_Key"
+msgid "4"
 msgstr ""
 
 #: panels/network/wireless-security/ws-wep-key.ui.h:5
-msgid "Sho_w key"
+msgid "Open System"
+msgstr ""
+
+#: panels/network/wireless-security/ws-wep-key.ui.h:6
+msgid "Shared Key"
 msgstr ""
 
 #: panels/network/wireless-security/ws-wep-key.ui.h:7
+msgid "_Key"
+msgstr ""
+
+#: panels/network/wireless-security/ws-wep-key.ui.h:8
+msgid "Sho_w key"
+msgstr ""
+
+#: panels/network/wireless-security/ws-wep-key.ui.h:10
 msgid "WEP inde_x"
 msgstr ""
 
