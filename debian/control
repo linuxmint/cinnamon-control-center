@@ -35,7 +35,6 @@ Build-Depends:
  libxklavier-dev (>= 5.1),
  libxml2-dev,
  locales,
- network-manager-dev (>= 0.9.8) [linux-any],
  tzdata,
 Standards-Version: 3.9.8
 Homepage: http://www.github.com/linuxmint/cinnamon-control-center
