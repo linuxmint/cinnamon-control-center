@@ -1,7 +1,6 @@
 
 subdir('icons')
-
-# subdir('po-timezones')
+subdir('po-timezones')
 
 
 # Datetime data

@@ -12,12 +12,10 @@ panel_color = shared_library('color',
     libcinnamon_control_center,
   ],
   dependencies: [
-    # glib,
     gtk,
     colord,
     cinn_desktop,
   ],
-
   install: true,
   install_dir: panels_dir
 )
