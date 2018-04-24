@@ -34,7 +34,7 @@ install_data('online-accounts.ui',
 
 
 i18n.merge_file(
-  input : 'cinnamon-online-accounts-panel.desktop.in.in',
+  input : 'cinnamon-online-accounts-panel.desktop.in',
   output: 'cinnamon-online-accounts-panel.desktop',
   po_dir: po_dir,
   type: 'desktop',

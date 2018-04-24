@@ -46,7 +46,7 @@ panel_wacom = shared_library('wacom-properties',
 
 
 i18n.merge_file(
-  input : 'cinnamon-wacom-panel.desktop.in.in',
+  input : 'cinnamon-wacom-panel.desktop.in',
   output: 'cinnamon-wacom-panel.desktop',
   po_dir: po_dir,
   type: 'desktop',

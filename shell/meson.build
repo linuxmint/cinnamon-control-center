@@ -98,7 +98,7 @@ install_data(
 
 
 i18n.merge_file(
-  input : 'cinnamon-control-center.desktop.in.in',
+  input : 'cinnamon-control-center.desktop.in',
   output: 'cinnamon-control-center.desktop',
   po_dir: po_dir,
   type: 'desktop',

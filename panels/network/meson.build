@@ -54,7 +54,7 @@ install_data('network.ui',
 
 
 i18n.merge_file(
-  input : 'cinnamon-network-panel.desktop.in.in',
+  input : 'cinnamon-network-panel.desktop.in',
   output: 'cinnamon-network-panel.desktop',
   po_dir: po_dir,
   type: 'desktop',

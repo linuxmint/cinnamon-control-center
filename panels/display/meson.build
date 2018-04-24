@@ -34,7 +34,7 @@ install_data('display-capplet.ui',
 
 
 i18n.merge_file(
-  input : 'cinnamon-display-panel.desktop.in.in',
+  input : 'cinnamon-display-panel.desktop.in',
   output: 'cinnamon-display-panel.desktop',
   po_dir: po_dir,
   type: 'desktop',

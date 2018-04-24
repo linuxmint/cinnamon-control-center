@@ -27,7 +27,7 @@ install_data('color.ui',
 
 
 i18n.merge_file(
-  input : 'cinnamon-color-panel.desktop.in.in',
+  input : 'cinnamon-color-panel.desktop.in',
   output: 'cinnamon-color-panel.desktop',
   po_dir: po_dir,
   type: 'desktop',
