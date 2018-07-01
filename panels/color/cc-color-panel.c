@@ -28,6 +28,8 @@
 #include <glib/gi18n.h>
 #include "cc-color-panel.h"
 
+#include <libcinnamon-desktop/gnome-installer.h>
+
 #define WID(b, w) (GtkWidget *) gtk_builder_get_object (b, w)
 
 CC_PANEL_REGISTER (CcColorPanel, cc_color_panel)
@@ -257,28 +259,38 @@ gcm_prefs_file_chooser_get_icc_profile (CcColorPanel *prefs)
   return file;
 }
 
-static void
-gcm_packagekit_finished_cb (GObject *source, GAsyncResult *res, gpointer user_data)
+typedef struct
 {
-  GPtrArray *argv = (GPtrArray *)user_data;
-  GVariant *reply;
-  GError *error = NULL;
+  GPtrArray *argv;
+  guint xid;
+
+} ClosureData;
+
+static void free_data(ClosureData *data)
+{
+    g_ptr_array_unref (data->argv);
+    g_slice_free (ClosureData, data);
+}
+
+static void
+installer_finished_cb (gboolean success, gpointer user_data)
+{
+  ClosureData *data = (ClosureData *)user_data;
+  GError *error;
   gboolean ret;
 
-  reply = g_dbus_proxy_call_finish (G_DBUS_PROXY (source), res, &error);
-  g_variant_unref (reply);
-
-  if (error != NULL)
+  if (!success)
     {
-      g_warning ("failed to install required component: %s", error->message);
-      g_ptr_array_unref (argv);
-      g_error_free (error);
+      g_warning ("failed to install required component");
+      free_data (data);
       return;
     }
 
-  ret = g_spawn_async (NULL, (gchar**) argv->pdata, NULL, 0,
+  error = NULL;
+
+  ret = g_spawn_async (NULL, (gchar**) data->argv->pdata, NULL, 0,
                        NULL, NULL, NULL, &error);
-  g_ptr_array_unref (argv);
+  free_data (data);
   if (!ret)
     {
       g_warning ("failed to run command: %s", error->message);
@@ -286,71 +298,22 @@ gcm_packagekit_finished_cb (GObject *source, GAsyncResult *res, gpointer user_da
     }
 }
 
-struct gcm_packagekit_closure_data
-{
-  GPtrArray *argv;
-  guint xid;
-};
-
-static void
-gcm_packagekit_proxy_ready_cb (GObject *source, GAsyncResult *res, gpointer user_data)
-{
-  struct gcm_packagekit_closure_data *data =
-    (struct gcm_packagekit_closure_data *)user_data;
-  GDBusProxy *session_installer;
-  GVariantBuilder *builder;
-  GError *error = NULL;
-
-  session_installer = g_dbus_proxy_new_for_bus_finish (res, &error);
-  if (error != NULL)
-    {
-      g_warning ("failed to connect to PackageKit interface: %s",
-                 error->message);
-      g_ptr_array_unref (data->argv);
-      g_free (data);
-      g_error_free (error);
-      return;
-    }
-
-  builder = g_variant_builder_new (G_VARIANT_TYPE ("as"));
-  g_variant_builder_add (builder, "s",
-                         g_ptr_array_index (data->argv, 0));
-  g_dbus_proxy_call (session_installer,
-                     "InstallProvideFiles",
-                     g_variant_new ("(uass)",
-                                    data->xid,
-                                    builder,
-                                    "hide-finished"
-                                    ),
-                     G_DBUS_CALL_FLAGS_NONE,
-                     -1,
-                     NULL,
-                     &gcm_packagekit_finished_cb,
-                     data->argv);
-
-  g_free (data);
-  g_variant_builder_unref (builder);
-}
-
 static void
 gcm_prefs_install_component (guint xid, GPtrArray *argv)
 {
-  struct gcm_packagekit_closure_data *data;
-  data = g_malloc (sizeof (*data));
+  ClosureData *data;
+  data = g_slice_new(ClosureData);
   data->argv = argv;
   data->xid = xid;
   g_ptr_array_ref (data->argv);
 
-  g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
-                            G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
-                            G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS,
-                            NULL,
-                            "org.freedesktop.PackageKit",
-                            "/org/freedesktop/PackageKit",
-                            "org.freedesktop.PackageKit.Modify",
-                            NULL,
-                            &gcm_packagekit_proxy_ready_cb,
-                            data);
+  const gchar *to_install[2];
+  to_install[0] = "gnome-color-manager";
+  to_install[1] = NULL;
+
+  gnome_installer_install_packages(to_install,
+                                   (GnomeInstallerClientCallback) installer_finished_cb,
+                                   data);
 }
 
 static void
