@@ -1,3 +1,13 @@
+cinnamon-control-center (3.8.1) tara; urgency=medium
+
+  [ Michael Webster ]
+  * cc-color-panel.c: Use cinnamon-desktop packagekit methods to install gnome-color-manager.
+
+  [ Leigh Scott ]
+  * Remove stray ] (#211)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 17 Jul 2018 09:38:20 +0200
+
 cinnamon-control-center (3.8.0) tara; urgency=medium
 
   [ Michael Webster ]
