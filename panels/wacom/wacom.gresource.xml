@@ -11,6 +11,8 @@
     <file>wacom-stylus-inking.svg</file>
     <file>wacom-stylus-art-pen.svg</file>
     <file>wacom-stylus-classic.svg</file>
+    <file>wacom-stylus-3btn.svg</file>
+    <file>wacom-stylus-3btn-no-eraser.svg</file>
     <file>wacom-tablet-cintiq.svg</file>
     <file>wacom-tablet-pc.svg</file>
   </gresource>

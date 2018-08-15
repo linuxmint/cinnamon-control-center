@@ -274,6 +274,11 @@ if test x$WANT_WACOM = xyes; then
                   gtk+-3.0 >= 3.8.0])
         build_wacom="true"
         AC_DEFINE(HAVE_WACOM, 1, [Define if wacom is being build])
+
+        PKG_CHECK_MODULES(NEWER_WACOM, libwacom >= 0.27, have_newer_wacom="yes", have_newer_wacom="no")
+        if test x$have_newer_wacom = xyes; then
+                    AC_DEFINE(HAVE_WACOM_3D_STYLUS, 1, [Define if wacom supports 3d stylus])
+        fi
 fi
 AM_CONDITIONAL(BUILD_WACOM, test "x$build_wacom" = "xtrue")
 AC_SUBST(WACOM_PANEL_CFLAGS)

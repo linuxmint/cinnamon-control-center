@@ -158,7 +158,7 @@ set_button_mapping_from_gsettings (GtkComboBox *combo, GSettings* settings, gint
 }
 
 static void
-map_button (GSettings *settings, int button2, int button3)
+map_button (GSettings *settings, int button2, int button3, int button4)
 {
 	GVariant	*current; /* current mapping */
 	GVariant	*array;   /* new mapping */
@@ -176,6 +176,8 @@ map_button (GSettings *settings, int button2, int button3)
 			tmp[i] = g_variant_new_int32 (button2);
 		else if (i == 2)
 			tmp[i] = g_variant_new_int32 (button3);
+        else if (i == 3)
+            tmp[i] = g_variant_new_int32 (button4);
 		else
 			tmp[i] = g_variant_new_int32 (values[i]);
 	}
@@ -193,7 +195,8 @@ button_changed_cb (GtkComboBox *combo, gpointer user_data)
 	GtkTreeIter		iter;
 	GtkListStore		*liststore;
 	gint			mapping_b2,
-				mapping_b3;
+				    mapping_b3,
+                    mapping_b4;
 
 	if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (WID ("combo-bottombutton")), &iter))
 		return;
@@ -214,7 +217,19 @@ button_changed_cb (GtkComboBox *combo, gpointer user_data)
 		mapping_b3 = 0;
 	}
 
-	map_button (priv->stylus_settings, mapping_b2, mapping_b3);
+    if (csd_wacom_stylus_get_num_buttons (priv->stylus) > 2) {
+        if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (WID ("combo-thirdbutton")), &iter))
+            return;
+
+        gtk_tree_model_get (GTK_TREE_MODEL (liststore), &iter,
+                            BUTTONNUMBER_COLUMN, &mapping_b4,
+                            -1);
+    } else {
+        mapping_b4 = 0;
+    }
+
+
+	map_button (priv->stylus_settings, mapping_b2, mapping_b3, mapping_b4);
 }
 
 static void
@@ -330,6 +345,11 @@ cc_wacom_stylus_page_init (CcWacomStylusPage *self)
 	g_signal_connect (G_OBJECT (combo), "changed",
 			  G_CALLBACK (button_changed_cb), self);
 
+    combo = GTK_COMBO_BOX (WID ("combo-thirdbutton"));
+    combobox_text_cellrenderer (combo, BUTTONNAME_COLUMN);
+    g_signal_connect (G_OBJECT (combo), "changed",
+              G_CALLBACK (button_changed_cb), self);
+
 	priv->nav = cc_wacom_nav_button_new ();
         gtk_widget_set_halign (priv->nav, GTK_ALIGN_END);
         gtk_widget_set_margin_left (priv->nav, 10);
@@ -357,24 +377,26 @@ enum {
 	LAYOUT_INKING,                      /* tip */
 	LAYOUT_AIRBRUSH,                    /* eraser, 1 button, tip */
 	LAYOUT_GENERIC_2_BUTTONS_NO_ERASER, /* 2 buttons, tip, no eraser */
+    LAYOUT_3DPEN,                       /* 3 buttons, tip, no eraser */
 	LAYOUT_OTHER
 };
 
 static void
-remove_buttons (CcWacomStylusPagePrivate *priv)
+remove_buttons (CcWacomStylusPagePrivate *priv, int n)
 {
-	gtk_widget_destroy (WID ("combo-topbutton"));
-	gtk_widget_destroy (WID ("combo-bottombutton"));
-	gtk_widget_destroy (WID ("label-top-button"));
-	gtk_widget_destroy (WID ("label-lower-button"));
-}
-
-static void
-remove_button (CcWacomStylusPagePrivate *priv)
-{
-	gtk_widget_destroy (WID ("combo-topbutton"));
-	gtk_widget_destroy (WID ("label-top-button"));
-	gtk_label_set_text (GTK_LABEL (WID ("label-lower-button")), _("Button"));
+    if (n < 3) {
+        gtk_widget_destroy (WID ("combo-thirdbutton"));
+        gtk_widget_destroy (WID ("label-third-button"));
+    }
+    if (n < 2) {
+        gtk_widget_destroy (WID ("combo-topbutton"));
+        gtk_widget_destroy (WID ("label-top-button"));
+        gtk_label_set_text (GTK_LABEL (WID ("label-lower-button")), _("Button"));
+    }
+    if (n < 1) {
+        gtk_widget_destroy (WID ("combo-bottombutton"));
+        gtk_widget_destroy (WID ("label-lower-button"));
+    }
 }
 
 static void
@@ -392,10 +414,11 @@ update_stylus_ui (CcWacomStylusPage *page,
 
 	switch (layout) {
 	case LAYOUT_NORMAL:
+        remove_buttons (page->priv, 2);
 		/* easy! */
 		break;
 	case LAYOUT_INKING:
-		remove_buttons (page->priv);
+        remove_buttons (page->priv, 0);
 		remove_eraser (page->priv);
 		gtk_container_child_set (CWID ("stylus-controls-grid"),
 					 WID ("label-tip-feel"),
@@ -405,7 +428,7 @@ update_stylus_ui (CcWacomStylusPage *page,
 					 "top_attach", 0, NULL);
 		break;
 	case LAYOUT_AIRBRUSH:
-		remove_button (page->priv);
+		remove_buttons (page->priv, 1);
 		gtk_container_child_set (CWID ("stylus-controls-grid"),
 					 WID ("label-lower-button"),
 					 "top_attach", 1, NULL);
@@ -420,8 +443,12 @@ update_stylus_ui (CcWacomStylusPage *page,
 					 "top_attach", 2, NULL);
 		break;
 	case LAYOUT_GENERIC_2_BUTTONS_NO_ERASER:
+        remove_buttons (page->priv, 2);
 		remove_eraser (page->priv);
 		break;
+    case LAYOUT_3DPEN:
+        remove_buttons (page->priv, 3);
+        remove_eraser (page->priv);
 	case LAYOUT_OTHER:
 		/* We already warn about it in cc_wacom_stylus_page_new () */
 		break;
@@ -465,24 +492,28 @@ cc_wacom_stylus_page_new (CsdWacomStylus *stylus)
 		layout = LAYOUT_AIRBRUSH;
 	else if (num_buttons == 2 && !has_eraser)
 		layout = LAYOUT_GENERIC_2_BUTTONS_NO_ERASER;
+    else if (num_buttons == 3 && !has_eraser)
+        layout = LAYOUT_3DPEN;
 	else {
 		layout = LAYOUT_OTHER;
 		if (num_buttons == 0)
-			remove_buttons (priv);
+			remove_buttons (priv, 0);
 		else if (num_buttons == 1)
-			remove_button (priv);
+			remove_buttons (priv, 1);
 
 		/* Gray out eraser if not available */
 		gtk_widget_set_sensitive (WID ("eraser-box"), has_eraser);
 		gtk_widget_set_sensitive (WID ("label-eraser-feel"), has_eraser);
 
-		g_warning ("The layout of this page is not known, %d buttons, %s eraser",
-			   num_buttons, has_eraser ? "with" : "without");
+		g_warning ("%s  The layout of this page is not known, %d buttons, %s eraser",
+			   csd_wacom_stylus_get_name (stylus),num_buttons, has_eraser ? "with" : "without");
 	}
 
 	update_stylus_ui (page, layout);
 
-	if (num_buttons == 2)
+    if (num_buttons >= 3)
+        set_button_mapping_from_gsettings (GTK_COMBO_BOX (WID ("combo-thirdbutton")), priv->stylus_settings, 4);
+	if (num_buttons >= 2)
 		set_button_mapping_from_gsettings (GTK_COMBO_BOX (WID ("combo-topbutton")), priv->stylus_settings, 3);
 	if (num_buttons >= 1)
 		set_button_mapping_from_gsettings (GTK_COMBO_BOX (WID ("combo-bottombutton")), priv->stylus_settings, 2);

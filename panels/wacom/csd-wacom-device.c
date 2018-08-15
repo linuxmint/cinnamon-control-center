@@ -137,11 +137,36 @@ get_icon_name_from_type (const WacomStylusType *wstylus)
 		return "wacom-stylus-art-pen";
 	case WSTYLUS_CLASSIC:
 		return "wacom-stylus-classic";
-	default:
-		if (!libwacom_stylus_has_eraser (wstylus))
-			return "wacom-stylus-no-eraser";
-		return "wacom-stylus";
-	}
+#ifdef HAVE_WACOM_3D_STYLUS
+    case WSTYLUS_3D:
+        return "wacom-stylus-3btn-no-eraser";
+#endif
+    default:
+        if (!libwacom_stylus_has_eraser (wstylus)) {
+            if (libwacom_stylus_get_num_buttons (wstylus) >= 3)
+                return "wacom-stylus-3btn-no-eraser";
+            else
+                return "wacom-stylus-no-eraser";
+        }
+        else {
+            if (libwacom_stylus_get_num_buttons (wstylus) >= 3)
+                return "wacom-stylus-3btn";
+            else
+                return "wacom-stylus";
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 static CsdWacomStylus *
@@ -238,6 +263,10 @@ csd_wacom_stylus_get_stylus_type (CsdWacomStylus *stylus)
 		return WACOM_STYLUS_TYPE_STROKE;
 	case WSTYLUS_PUCK:
 		return WACOM_STYLUS_TYPE_PUCK;
+#ifdef HAVE_WACOM_3D_STYLUS
+    case WSTYLUS_3D:
+        return WACOM_STYLUS_TYPE_3D;
+#endif
 	default:
 		g_assert_not_reached ();
 	}

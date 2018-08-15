@@ -77,7 +77,8 @@ typedef enum {
 	WACOM_STYLUS_TYPE_CLASSIC,
 	WACOM_STYLUS_TYPE_MARKER,
 	WACOM_STYLUS_TYPE_STROKE,
-	WACOM_STYLUS_TYPE_PUCK
+	WACOM_STYLUS_TYPE_PUCK,
+    WACOM_STYLUS_TYPE_3D
 } CsdWacomStylusType;
 
 GType            csd_wacom_stylus_get_type       (void);
