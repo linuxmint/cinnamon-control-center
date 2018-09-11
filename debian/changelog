@@ -1,3 +1,10 @@
+cinnamon-control-center (3.8.2) tara; urgency=medium
+
+  [ Michael Webster ]
+  * wacom: Update to support 3-button and 3D styli.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Sep 2018 14:47:17 +0100
+
 cinnamon-control-center (3.8.1) tara; urgency=medium
 
   [ Michael Webster ]
