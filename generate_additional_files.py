@@ -66,7 +66,7 @@ Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=network
 # Translators: those are keywords for the network control-center panel
-_Keywords=Network;Wireless;IP;LAN;Proxy;
+_Keywords=Network;Wireless;IP;LAN;Proxy;Internet;WiFi;
 """
 
 additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop.in.in", prefix, _("Network"), _("Network settings"), "")
