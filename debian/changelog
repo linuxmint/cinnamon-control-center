@@ -1,3 +1,14 @@
+cinnamon-control-center (4.0.0) tessa; urgency=medium
+
+  [ Germán Franco ]
+  * Add "Internet" and "WiFi" keywords to the network settings entry (#213)
+
+  [ Clement Lefebvre ]
+  * CI: Remove Mint 18
+  * l10n: Update POT and additional files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 30 Oct 2018 14:47:53 +0000
+
 cinnamon-control-center (3.8.2) tara; urgency=medium
 
   [ Michael Webster ]
