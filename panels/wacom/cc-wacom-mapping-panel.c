@@ -45,6 +45,8 @@ struct _CcWacomMappingPanelPrivate
 	GtkWidget      *checkbutton;
 	GtkWidget      *aspectlabel;
 	GtkWidget      *aspectswitch;
+	GtkWidget      *rotationlabel;
+	GtkWidget      *rotationswitch;
 };
 
 enum {
@@ -56,6 +58,7 @@ enum {
 static void combobox_changed_cb (GtkWidget *widget, CcWacomMappingPanel *self);
 static void checkbutton_toggled_cb (GtkWidget *widget, CcWacomMappingPanel *self);
 static void aspectswitch_toggled_cb (GtkWidget *widget, GParamSpec *pspec, CcWacomMappingPanel *self);
+static void rotationswitch_toggled_cb (GtkWidget *widget, GParamSpec *pspec, CcWacomMappingPanel *self);
 
 static GnomeRROutputInfo**
 get_rr_outputs (void)
@@ -78,6 +81,8 @@ set_combobox_sensitive (CcWacomMappingPanel *self,
 	gtk_widget_set_sensitive (GTK_WIDGET(self->priv->label), sensitive);
 	gtk_widget_set_sensitive (GTK_WIDGET(self->priv->aspectswitch), sensitive);
 	gtk_widget_set_sensitive (GTK_WIDGET(self->priv->aspectlabel), sensitive);
+	gtk_widget_set_sensitive (GTK_WIDGET(self->priv->rotationswitch), sensitive);
+	gtk_widget_set_sensitive (GTK_WIDGET(self->priv->rotationlabel), sensitive);
 }
 
 /* Update the display of available monitors based on the latest
@@ -118,6 +123,10 @@ update_monitor_chooser (CcWacomMappingPanel *self)
 	g_signal_handlers_block_by_func (G_OBJECT (self->priv->aspectswitch), aspectswitch_toggled_cb, self);
 	gtk_switch_set_active (GTK_SWITCH(self->priv->aspectswitch), g_settings_get_boolean (settings, "keep-aspect"));
 	g_signal_handlers_unblock_by_func (G_OBJECT (self->priv->aspectswitch), aspectswitch_toggled_cb, self);
+
+	g_signal_handlers_block_by_func (G_OBJECT (self->priv->rotationswitch), rotationswitch_toggled_cb, self);
+	gtk_switch_set_active (GTK_SWITCH(self->priv->rotationswitch), g_settings_get_boolean (settings, "keep-rotation"));
+	g_signal_handlers_unblock_by_func (G_OBJECT (self->priv->rotationswitch), rotationswitch_toggled_cb, self);
 
 	/* FIXME: does this break screen tablets? What's the default
 	 * for unconfigured tablets? */
@@ -228,8 +237,10 @@ checkbutton_toggled_cb (GtkWidget           *widget,
 
 	active = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
 	set_combobox_sensitive (self, active);
-	if (!active)
+	if (!active) {
 		gtk_switch_set_active (GTK_SWITCH(self->priv->aspectswitch), FALSE);
+		gtk_switch_set_active (GTK_SWITCH(self->priv->rotationswitch), FALSE);
+	}
 	update_mapping (self);
 }
 
@@ -243,6 +254,19 @@ aspectswitch_toggled_cb (GtkWidget           *widget,
 	settings = csd_wacom_device_get_settings (self->priv->device);
 	g_settings_set_boolean (settings,
 				"keep-aspect",
+				gtk_switch_get_active (GTK_SWITCH (widget)));
+}
+
+static void
+rotationswitch_toggled_cb (GtkWidget           *widget,
+                         GParamSpec          *pspec,
+			 CcWacomMappingPanel *self)
+{
+	GSettings *settings;
+
+	settings = csd_wacom_device_get_settings (self->priv->device);
+	g_settings_set_boolean (settings,
+				"keep-rotation",
 				gtk_switch_get_active (GTK_SWITCH (widget)));
 }
 
@@ -293,6 +317,17 @@ cc_wacom_mapping_panel_init (CcWacomMappingPanel *self)
                       G_CALLBACK (aspectswitch_toggled_cb), self);
 	gtk_grid_attach (GTK_GRID(grid), GTK_WIDGET(priv->aspectlabel), 0, 1, 1, 1);
 	gtk_grid_attach (GTK_GRID(grid), GTK_WIDGET(priv->aspectswitch), 1, 1, 1, 1);
+
+	/* Apply screen rotation */
+	priv->rotationlabel = gtk_label_new (_("Apply screen rotation:"));
+	gtk_widget_set_halign (priv->rotationlabel, GTK_ALIGN_END);
+	priv->rotationswitch = gtk_switch_new ();
+	gtk_widget_set_halign (priv->rotationswitch, GTK_ALIGN_START);
+	gtk_switch_set_active (GTK_SWITCH (priv->rotationswitch), FALSE);
+	g_signal_connect (GTK_SWITCH (priv->rotationswitch), "notify::active",
+                      G_CALLBACK (rotationswitch_toggled_cb), self);
+	gtk_grid_attach (GTK_GRID(grid), GTK_WIDGET(priv->rotationlabel), 0, 2, 1, 1);
+	gtk_grid_attach (GTK_GRID(grid), GTK_WIDGET(priv->rotationswitch), 1, 2, 1, 1);
 
 	/* Whole-desktop checkbox */
 	priv->checkbutton = gtk_check_button_new_with_label (_("Map to single monitor"));
