@@ -239,7 +239,6 @@ checkbutton_toggled_cb (GtkWidget           *widget,
 	set_combobox_sensitive (self, active);
 	if (!active) {
 		gtk_switch_set_active (GTK_SWITCH(self->priv->aspectswitch), FALSE);
-		gtk_switch_set_active (GTK_SWITCH(self->priv->rotationswitch), FALSE);
 	}
 	update_mapping (self);
 }
@@ -319,7 +318,7 @@ cc_wacom_mapping_panel_init (CcWacomMappingPanel *self)
 	gtk_grid_attach (GTK_GRID(grid), GTK_WIDGET(priv->aspectswitch), 1, 1, 1, 1);
 
 	/* Apply screen rotation */
-	priv->rotationlabel = gtk_label_new (_("Apply screen rotation:"));
+	priv->rotationlabel = gtk_label_new (_("Rotate the tablet when the screen is rotated:"));
 	gtk_widget_set_halign (priv->rotationlabel, GTK_ALIGN_END);
 	priv->rotationswitch = gtk_switch_new ();
 	gtk_widget_set_halign (priv->rotationswitch, GTK_ALIGN_START);
