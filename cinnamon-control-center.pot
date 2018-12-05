@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 14:46+0000\n"
+"POT-Creation-Date: 2018-12-05 12:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -814,15 +814,19 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: panels/wacom/cc-wacom-mapping-panel.c:275
+#: panels/wacom/cc-wacom-mapping-panel.c:298
 msgid "Output:"
 msgstr ""
 
-#: panels/wacom/cc-wacom-mapping-panel.c:287
+#: panels/wacom/cc-wacom-mapping-panel.c:310
 msgid "Keep aspect ratio (letterbox):"
 msgstr ""
 
-#: panels/wacom/cc-wacom-mapping-panel.c:298
+#: panels/wacom/cc-wacom-mapping-panel.c:321
+msgid "Rotate the tablet when the screen is rotated:"
+msgstr ""
+
+#: panels/wacom/cc-wacom-mapping-panel.c:332
 msgid "Map to single monitor"
 msgstr ""
 
