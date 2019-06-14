@@ -1,3 +1,10 @@
+cinnamon-control-center (4.2.0) tina; urgency=medium
+
+  [ Michael Webster ]
+  * network.ui: Provide a height request for the toplevel widget.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 14 Jun 2019 12:48:40 +0100
+
 cinnamon-control-center (4.0.1) tessa; urgency=medium
 
   * Wacom: Add a switch to set automatic rotation
