@@ -178,7 +178,7 @@ get_icon_name_from_g_icon (GIcon *gicon)
 static gboolean
 activate_panel (CinnamonControlCenter *shell,
                 const gchar        *id,
-		const gchar       **argv,
+                GVariant           *parameters,
                 const gchar        *desktop_file,
                 const gchar        *name,
                 GIcon              *gicon)
@@ -236,7 +236,7 @@ activate_panel (CinnamonControlCenter *shell,
     }
 
   /* create the panel plugin */
-  priv->current_panel = g_object_new (panel_type, "shell", shell, "argv", argv, NULL);
+  priv->current_panel = g_object_new (panel_type, "shell", shell, "parameters", parameters, NULL);
   cc_shell_set_active_panel (CC_SHELL (shell), CC_PANEL (priv->current_panel));
   gtk_widget_show (priv->current_panel);
 
@@ -967,7 +967,7 @@ _shell_embed_widget_in_header (CcShell      *shell,
 static gboolean
 _shell_set_active_panel_from_id (CcShell      *shell,
                                  const gchar  *start_id,
-				 const gchar **argv,
+                                 GVariant     *parameters,
                                  GError      **err)
 {
   GtkTreeIter iter;
@@ -978,10 +978,10 @@ _shell_set_active_panel_from_id (CcShell      *shell,
   CinnamonControlCenterPrivate *priv = CINNAMON_CONTROL_CENTER (shell)->priv;
   GtkWidget *old_panel;
 
-  /* When loading the same panel again, just set the argv */
+  /* When loading the same panel again, just set its parameters */
   if (g_strcmp0 (priv->current_panel_id, start_id) == 0)
     {
-      g_object_set (G_OBJECT (priv->current_panel), "argv", argv, NULL);
+      g_object_set (G_OBJECT (priv->current_panel), "parameters", parameters, NULL);
       return TRUE;
     }
 
@@ -1035,7 +1035,7 @@ _shell_set_active_panel_from_id (CcShell      *shell,
     {
       g_warning ("Could not find settings panel \"%s\"", start_id);
     }
-  else if (activate_panel (CINNAMON_CONTROL_CENTER (shell), start_id, argv, desktop,
+  else if (activate_panel (CINNAMON_CONTROL_CENTER (shell), start_id, parameters, desktop,
                            name, gicon) == FALSE)
     {
       /* Failed to activate the panel for some reason */

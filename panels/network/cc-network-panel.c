@@ -264,8 +264,7 @@ cc_network_panel_class_init (CcNetworkPanelClass *klass)
         object_class->dispose = cc_network_panel_dispose;
         object_class->finalize = cc_network_panel_finalize;
 
-        //FIXME: Causing warnings
-        //g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
+        g_object_class_override_property (object_class, PROP_PARAMETERS, "parameters");
 }
 
 static NetObject *
