@@ -172,7 +172,8 @@ cc_shell_set_active_panel (CcShell *shell,
 /**
  * cc_shell_set_active_panel_from_id:
  * @shell: A #CcShell
- * @id: the ID of the panel to set as active
+ * @id: The ID of the panel to set as active
+ * @parameters: A #GVariant with additional parameters
  * @error: A #GError
  *
  * Find a panel corresponding to the specified id and set it as active.
@@ -182,7 +183,7 @@ cc_shell_set_active_panel (CcShell *shell,
 gboolean
 cc_shell_set_active_panel_from_id (CcShell      *shell,
                                    const gchar  *id,
-                                   const gchar **argv,
+                                   GVariant     *parameters,
                                    GError      **error)
 {
   CcShellClass *class;
@@ -201,7 +202,7 @@ cc_shell_set_active_panel_from_id (CcShell      *shell,
     }
   else
     {
-      return class->set_active_panel_from_id (shell, id, argv, error);
+      return class->set_active_panel_from_id (shell, id, parameters, error);
     }
 }
 
