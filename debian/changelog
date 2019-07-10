@@ -1,3 +1,10 @@
+cinnamon-control-center (4.2.1) tina; urgency=medium
+
+  [ NikoKrause ]
+  * Fix network settings, fixes e.g. eduroam (#220)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 10 Jul 2019 11:51:29 +0200
+
 cinnamon-control-center (4.2.0) tina; urgency=medium
 
   [ Michael Webster ]
