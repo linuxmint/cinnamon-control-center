@@ -85,17 +85,3 @@ _Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
 """
 
 additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop.in.in", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")
-
-prefix = """[Desktop Entry]
-Exec=cinnamon-settings online-accounts
-Icon=cs-online-accounts
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;DesktopSettings;
-OnlyShowIn=X-Cinnamon;
-# Translators: those are keywords for the online-accounts control-center panel
-_Keywords=Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;Kerberos;IMAP;SMTP;Pocket;ReadItLater;
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/online-accounts/cinnamon-online-accounts-panel.desktop.in.in", prefix, _("Online Accounts"), _("Connect your online accounts"), "")

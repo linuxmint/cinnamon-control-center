@@ -35,10 +35,6 @@ cc-online-accounts-resources.h: online-accounts.gresource.xml $(resource_files)
 
 @INTLTOOL_DESKTOP_RULE@
 
-desktopdir = $(datadir)/applications
-desktop_in_files = cinnamon-online-accounts-panel.desktop.in
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-
 CLEANFILES = $(desktop_in_files) $(desktop_DATA) $(BUILT_SOURCES)
 EXTRA_DIST = $(resource_files) online-accounts.gresource.xml
 
