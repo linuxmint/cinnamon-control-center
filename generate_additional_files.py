@@ -1,11 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 DOMAIN = "cinnamon-control-center"
 PATH = "/usr/share/locale"
 
 import os, gettext, sys
-sys.path.append('/usr/lib/linuxmint/common')
-import additionalfiles
+from mintcommon import additionalfiles
 
 os.environ['LANGUAGE'] = "en_US.UTF-8"
 gettext.install(DOMAIN, PATH)
