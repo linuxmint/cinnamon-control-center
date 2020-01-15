@@ -79,9 +79,9 @@ struct _CcDisplayPanelPrivate
   GtkListStore   *resolution_store;
   GtkWidget      *resolution_combo;
   GtkWidget      *rotation_combo;
-  GtkWidget      *clone_checkbox;
+  GtkWidget      *refresh_combo;
+  GtkWidget      *clone_switch;
   GtkWidget      *clone_label;
-  GtkWidget      *show_icon_checkbox;
 
   /* We store the event timestamp when the Apply button is clicked */
   guint32         apply_button_clicked_timestamp;
@@ -112,6 +112,7 @@ static void apply_configuration_returned_cb (GObject *proxy, GAsyncResult *res, 
 static gboolean get_clone_size (GnomeRRScreen *screen, int *width, int *height);
 static gboolean output_info_supports_mode (CcDisplayPanel *self, GnomeRROutputInfo *info, int width, int height);
 static char *make_resolution_string (int width, int height);
+static char *make_refresh_string (double rate, gboolean preferred);
 static GObject *cc_display_panel_constructor (GType                  gtype,
 					      guint                  n_properties,
 					      GObjectConstructParam *properties);
@@ -236,6 +237,20 @@ should_show_resolution (gint output_width,
   return FALSE;
 }
 
+static gboolean
+should_show_rate (gint output_width,
+                  gint output_height,
+                  gint width,
+                  gint height)
+{
+  if (width == output_width &&
+      height == output_height)
+    {
+      return TRUE;
+    }
+  return FALSE;
+}
+
 static void
 on_screen_changed (GnomeRRScreen *scr,
                    gpointer data)
@@ -336,7 +351,7 @@ static void
 add_key (GtkTreeModel *model,
          const char *text,
          gboolean preferred,
-         int width, int height, int rate,
+         int width, int height, double rate,
          GnomeRRRotation rotation)
 {
   ForeachInfo info;
@@ -349,7 +364,7 @@ add_key (GtkTreeModel *model,
   if (!info.found)
     {
       GtkTreeIter iter;
-      g_debug ("adding %s with rate %d Hz", text, rate);
+      g_debug ("adding %s with rate %.2f Hz", text, rate);
       gtk_list_store_insert_with_values (GTK_LIST_STORE (model), &iter, -1,
                                          TEXT_COL, text,
                                          WIDTH_COL, width,
@@ -364,7 +379,7 @@ add_key (GtkTreeModel *model,
   /* Look, the preferred output, replace the old one */
   if (preferred)
     {
-      g_debug ("replacing %s with rate %d Hz (preferred mode)", text, rate);
+      g_debug ("replacing %s with rate %.2f Hz (preferred mode)", text, rate);
       gtk_list_store_set (GTK_LIST_STORE (model), &info.iter,
                           RATE_COL, rate,
                           -1);
@@ -372,7 +387,7 @@ add_key (GtkTreeModel *model,
     }
 
   {
-    int old_rate;
+    double old_rate;
 
     gtk_tree_model_get (model, &info.iter,
                         RATE_COL, &old_rate,
@@ -381,7 +396,7 @@ add_key (GtkTreeModel *model,
     /* Higher refresh rate */
     if (rate > old_rate)
     {
-      g_debug ("replacing %s with rate %d Hz (old rate: %d)", text, rate, old_rate);
+      g_debug ("replacing %s with rate %.2f Hz (old rate: %.2f)", text, rate, old_rate);
       gtk_list_store_set (GTK_LIST_STORE (model), &info.iter,
                           RATE_COL, rate,
                           -1);
@@ -389,7 +404,7 @@ add_key (GtkTreeModel *model,
     }
   }
 
-  g_debug ("not adding %s with rate %d Hz (higher rate already there)", text, rate);
+  g_debug ("not adding %s with rate %.2f Hz (higher rate already there)", text, rate);
 }
 
 static void
@@ -399,11 +414,12 @@ add_mode (CcDisplayPanel *self,
 	  gint  output_height,
 	  guint preferred_id)
 {
-  int width, height, rate;
+  int width, height;
+  double rate;
 
   width = gnome_rr_mode_get_width (mode);
   height = gnome_rr_mode_get_height (mode);
-  rate = gnome_rr_mode_get_freq (mode);
+  rate = gnome_rr_mode_get_freq_f (mode);
 
   if (should_show_resolution (output_width, output_height, width, height))
     {
@@ -418,7 +434,39 @@ add_mode (CcDisplayPanel *self,
     }
 }
 
+static void
+add_rate (CcDisplayPanel *self,
+          GnomeRRMode *mode,
+          gint  output_width,
+          gint  output_height,
+          double highest_rate)
+{
+  int width, height;
+  double rate;
 
+  width = gnome_rr_mode_get_width (mode);
+  height = gnome_rr_mode_get_height (mode);
+  rate = gnome_rr_mode_get_freq_f (mode);
+
+  if (should_show_rate (output_width, output_height, width, height))
+    {
+      GtkListStore *model;
+      char *text;
+
+      model = gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->refresh_combo));
+
+      text = make_refresh_string (rate, rate == highest_rate);
+
+      g_debug ("adding rate %.2f for resolution: %dx%d", rate, width, height);
+      gtk_list_store_insert_with_values (GTK_LIST_STORE (model), NULL, -1,
+                                         TEXT_COL, text,
+                                         RATE_COL, rate,
+                                         SORT_COL, (int)(rate * 1000),
+                                         -1);
+
+      g_free (text);
+    }
+}
 
 static gboolean
 combo_select (GtkWidget *widget, const char *text)
@@ -590,18 +638,18 @@ rebuild_mirror_screens (CcDisplayPanel *self)
   gboolean mirror_is_active;
   gboolean mirror_is_supported;
 
-  g_signal_handlers_block_by_func (self->priv->clone_checkbox, G_CALLBACK (on_clone_changed), self);
+  g_signal_handlers_block_by_func (self->priv->clone_switch, G_CALLBACK (on_clone_changed), self);
 
   mirror_is_active = self->priv->current_configuration && gnome_rr_config_get_clone (self->priv->current_configuration);
 
   /* If mirror_is_active, then it *must* be possible to turn mirroring off */
   mirror_is_supported = mirror_is_active || mirror_screens_is_supported (self);
 
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->priv->clone_checkbox), mirror_is_active);
-  gtk_widget_set_sensitive (self->priv->clone_checkbox, mirror_is_supported);
+  gtk_switch_set_active (GTK_SWITCH (self->priv->clone_switch), mirror_is_active);
+  gtk_widget_set_sensitive (self->priv->clone_switch, mirror_is_supported);
   gtk_widget_set_sensitive (self->priv->clone_label, mirror_is_supported);
 
-  g_signal_handlers_unblock_by_func (self->priv->clone_checkbox, G_CALLBACK (on_clone_changed), self);
+  g_signal_handlers_unblock_by_func (self->priv->clone_switch, G_CALLBACK (on_clone_changed), self);
 }
 
 static char *
@@ -747,6 +795,44 @@ make_resolution_string (int width, int height)
     return g_strdup_printf (_("%d x %d"), width, height);
 }
 
+static char *
+make_refresh_string (double      rate,
+                     gboolean preferred)
+{
+  if (preferred)
+    return g_strdup_printf (_("%.2lf Hz (preferred)"), rate);
+  else
+    return g_strdup_printf (_("%.2lf Hz"), rate);
+}
+
+static void
+find_highest_rate (GnomeRRMode **modes, int for_w, int for_h, double *out_rate)
+{
+  int i;
+
+  *out_rate = 0;
+
+  for (i = 0; modes[i] != NULL; i++)
+    {
+      int w, h;
+      double rate;
+
+      w = gnome_rr_mode_get_width (modes[i]);
+      h = gnome_rr_mode_get_height (modes[i]);
+      rate = gnome_rr_mode_get_freq_f (modes[i]);
+
+      if (w != for_w || h != for_h)
+        {
+          continue;
+        }
+
+      if (rate > *out_rate)
+        {
+          *out_rate = rate;
+        }
+    }
+}
+
 static void
 find_best_mode (GnomeRRMode **modes, int *out_width, int *out_height)
 {
@@ -828,6 +914,58 @@ rebuild_resolution_combo (CcDisplayPanel *self)
 }
 
 static void
+rebuild_refresh_combo (CcDisplayPanel *self)
+{
+  int i;
+  GnomeRRMode **modes;
+  char *current;
+  int output_width, output_height;
+  double current_rate, highest_rate;
+  GnomeRROutput *output;
+
+  clear_combo (self->priv->refresh_combo);
+
+  if (!(modes = get_current_modes (self))
+      || !self->priv->current_output
+      || !gnome_rr_output_info_is_active (self->priv->current_output))
+    {
+      gtk_widget_set_sensitive (self->priv->refresh_combo, FALSE);
+      return;
+    }
+
+  g_assert (self->priv->current_output != NULL);
+
+  gnome_rr_output_info_get_geometry (self->priv->current_output, NULL, NULL, &output_width, &output_height);
+  g_assert (output_width != 0 && output_height != 0);
+
+  gtk_widget_set_sensitive (self->priv->refresh_combo, TRUE);
+
+  output = gnome_rr_screen_get_output_by_name (self->priv->screen,
+                                               gnome_rr_output_info_get_name (self->priv->current_output));
+
+  find_highest_rate (modes, output_width, output_height, &highest_rate);
+
+  for (i = 0; modes[i] != NULL; ++i)
+    add_rate (self, modes[i], output_width, output_height, highest_rate);
+
+  current_rate = gnome_rr_output_info_get_refresh_rate_f (self->priv->current_output);
+  // legacy behavior - best rate is the highest - is this always true?
+  current = make_refresh_string (current_rate,
+                                 current_rate == highest_rate);
+
+  if (!combo_select (self->priv->refresh_combo, current))
+    {
+      char *str;
+
+      str = make_resolution_string (highest_rate, TRUE);
+      combo_select (self->priv->refresh_combo, str);
+      g_free (str);
+    }
+
+  g_free (current);
+}
+
+static void
 rebuild_gui (CcDisplayPanel *self)
 {
   /* We would break spectacularly if we recursed, so
@@ -841,6 +979,7 @@ rebuild_gui (CcDisplayPanel *self)
   rebuild_current_monitor_label (self);
   rebuild_on_off_radios (self);
   rebuild_resolution_combo (self);
+  rebuild_refresh_combo (self);
   rebuild_rotation_combo (self);
 
   gtk_widget_set_sensitive (self->priv->primary_button,
@@ -850,12 +989,13 @@ rebuild_gui (CcDisplayPanel *self)
 }
 
 static gboolean
-get_mode (GtkWidget *widget, int *width, int *height, int *rate, GnomeRRRotation *rot)
+get_mode (GtkWidget *widget, int *width, int *height, double *rate, GnomeRRRotation *rot)
 {
   GtkTreeIter iter;
   GtkTreeModel *model;
   GtkComboBox *box = GTK_COMBO_BOX (widget);
   int dummy;
+  double dummy_d;
 
   if (!gtk_combo_box_get_active_iter (box, &iter))
     return FALSE;
@@ -867,7 +1007,7 @@ get_mode (GtkWidget *widget, int *width, int *height, int *rate, GnomeRRRotation
     height = &dummy;
 
   if (!rate)
-    rate = &dummy;
+    rate = &dummy_d;
 
   if (!rot)
     rot = (GnomeRRRotation *)&dummy;
@@ -1015,15 +1155,28 @@ on_resolution_changed (GtkComboBox *box, gpointer data)
   int x,y;
   int width;
   int height;
+  double rate;
 
   if (!self->priv->current_output)
     return;
 
   gnome_rr_output_info_get_geometry (self->priv->current_output, &x, &y, &old_width, &old_height);
 
-  if (get_mode (self->priv->resolution_combo, &width, &height, NULL, NULL))
+  if (get_mode (self->priv->resolution_combo, &width, &height, &rate, NULL))
     {
       gnome_rr_output_info_set_geometry (self->priv->current_output, x, y, width, height);
+
+      /* At construction, resolution_changed gets called by combo_select() during
+       * rebuild_resolution_combo(). We don't want to lose what our starting refresh rate was
+       * (because the res combo only has the highest refresh rate modes for a given resolution).
+       * Once we've been thru rebuild_gui() once, and future res combo box changes can reset the
+       * current_output (our working info for a monitor) to whatever the highest refresh rate is
+       * for that resolution, which is also the preferred rate.
+       */
+      if (!self->priv->ignore_gui_changes)
+        {
+          gnome_rr_output_info_set_refresh_rate_f (self->priv->current_output, rate);
+        }
 
       if (width == 0 || height == 0)
         gnome_rr_output_info_set_active (self->priv->current_output, FALSE);
@@ -1033,9 +1186,25 @@ on_resolution_changed (GtkComboBox *box, gpointer data)
 
   realign_outputs_after_resolution_change (self, self->priv->current_output, old_width, old_height);
 
+  rebuild_refresh_combo (self);
   rebuild_rotation_combo (self);
 
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
+}
+
+static void
+on_refresh_changed (GtkComboBox *box, gpointer data)
+{
+  CcDisplayPanel *self = data;
+  double rate;
+
+  if (!self->priv->current_output)
+    return;
+
+  if (get_mode (self->priv->refresh_combo, NULL, NULL, &rate, NULL))
+    {
+      gnome_rr_output_info_set_refresh_rate_f (self->priv->current_output, rate);
+    }
 }
 
 static void
@@ -1149,7 +1318,7 @@ on_clone_changed (GtkWidget *box, gpointer data)
 {
   CcDisplayPanel *self = data;
 
-  gnome_rr_config_set_clone (self->priv->current_configuration, gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (self->priv->clone_checkbox)));
+  gnome_rr_config_set_clone (self->priv->current_configuration, gtk_switch_get_active (GTK_SWITCH (self->priv->clone_switch)));
 
   if (gnome_rr_config_get_clone (self->priv->current_configuration))
     {
@@ -2087,7 +2256,7 @@ make_text_combo (GtkWidget *widget, int sort_column)
                                             G_TYPE_STRING,          /* Text */
                                             G_TYPE_INT,             /* Width */
                                             G_TYPE_INT,             /* Height */
-                                            G_TYPE_INT,             /* Frequency */
+                                            G_TYPE_DOUBLE,          /* Frequency */
                                             G_TYPE_INT,             /* Width * Height */
                                             G_TYPE_INT);            /* Rotation */
 
@@ -2493,13 +2662,13 @@ cc_display_panel_constructor (GType                  gtype,
                               GObjectConstructParam *properties)
 {
   GtkBuilder *builder;
-  GtkWidget *align;
+  GtkWidget *display_box;
   GError *error;
   GObject *obj;
   CcDisplayPanel *self;
   CcShell *shell;
   GtkWidget *toplevel;
-  gchar *objects[] = {"display-panel", "available_launcher_placement_store", NULL};
+  gchar *objects[] = {"display-panel", NULL};
 
   obj = G_OBJECT_CLASS (cc_display_panel_parent_class)->constructor (gtype, n_properties, properties);
   self = CC_DISPLAY_PANEL (obj);
@@ -2557,8 +2726,12 @@ cc_display_panel_constructor (GType                  gtype,
   g_signal_connect (self->priv->rotation_combo, "changed",
                     G_CALLBACK (on_rotation_changed), self);
 
-  self->priv->clone_checkbox = WID ("clone_checkbox");
-  g_signal_connect (self->priv->clone_checkbox, "toggled",
+  self->priv->refresh_combo = WID ("refresh_combo");
+  g_signal_connect (self->priv->refresh_combo, "changed",
+                    G_CALLBACK (on_refresh_changed), self);
+
+  self->priv->clone_switch = WID ("clone_switch");
+  g_signal_connect (self->priv->clone_switch, "state-set",
                     G_CALLBACK (on_clone_changed), self);
 
   self->priv->clone_label    = WID ("clone_resolution_warning_label");
@@ -2568,6 +2741,7 @@ cc_display_panel_constructor (GType                  gtype,
 
   make_text_combo (self->priv->resolution_combo, 4);
   make_text_combo (self->priv->rotation_combo, -1);
+  make_text_combo (self->priv->refresh_combo, -1);
 
   /* Scroll Area */
   self->priv->area = (GtkWidget *)foo_scroll_area_new ();
@@ -2584,9 +2758,9 @@ cc_display_panel_constructor (GType                  gtype,
   g_signal_connect (self->priv->area, "viewport_changed",
                     G_CALLBACK (on_viewport_changed), self);
 
-  align = WID ("align");
+  display_box = WID ("display-box");
 
-  gtk_container_add (GTK_CONTAINER (align), self->priv->area);
+  gtk_box_pack_start (GTK_BOX (display_box), self->priv->area, TRUE, TRUE, 0);
 
   on_screen_changed (self->priv->screen, self);
 
