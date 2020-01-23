@@ -325,9 +325,11 @@ position_window (CcRRLabeler  *labeler,
 {
 	GdkRectangle    workarea;
 	GdkRectangle    monitor;
-	int             monitor_num;
+	int             monitor_num, scale_factor;
 
-	monitor_num = gdk_screen_get_monitor_at_point (labeler->priv->screen, x, y);
+    scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
+	monitor_num = gdk_screen_get_monitor_at_point (labeler->priv->screen, x / scale_factor, y / scale_factor);
+
 	gdk_screen_get_monitor_workarea (labeler->priv->screen, monitor_num, &workarea);
 	gdk_screen_get_monitor_geometry (labeler->priv->screen,
                                          monitor_num,
