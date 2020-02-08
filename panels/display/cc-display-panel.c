@@ -52,7 +52,7 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_HEIGHT 530
 
 #define INTERFACE_SETTINGS_SCHEMA "org.cinnamon.desktop.interface"
-#define UPSCALE_SETTINGS_KEY "upscale-fractional-scaling"
+// #define UPSCALE_SETTINGS_KEY "upscale-fractional-scaling"
 
 enum {
   TEXT_COL,
@@ -81,7 +81,7 @@ struct _CcDisplayPanelPrivate
   GnomeRRConfig  *current_configuration;
   CcRRLabeler *labeler;
   GnomeRROutputInfo         *current_output;
-  GSettings      *interface_settings;
+  // GSettings      *interface_settings;
 
   GtkBuilder     *builder;
   guint           focus_id;
@@ -173,7 +173,7 @@ cc_display_panel_dispose (GObject *object)
 {
   CcDisplayPanel *panel = CC_DISPLAY_PANEL (object);
 
-  g_clear_object (&panel->priv->interface_settings);
+  // g_clear_object (&panel->priv->interface_settings);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->dispose (object);
 }
@@ -3611,18 +3611,18 @@ cc_display_panel_constructor (GType                  gtype,
   g_signal_connect (self->priv->base_scale_combo, "changed",
                     G_CALLBACK (on_base_scale_changed), self);
 
-  self->priv->interface_settings = g_settings_new (INTERFACE_SETTINGS_SCHEMA);
+  // self->priv->interface_settings = g_settings_new (INTERFACE_SETTINGS_SCHEMA);
 
-  widget = WID ("upscale_switch");
+  // widget = WID ("upscale_switch");
 
-  gtk_switch_set_active (GTK_SWITCH (widget),
-                         g_settings_get_boolean (self->priv->interface_settings,
-                         UPSCALE_SETTINGS_KEY));
+  // gtk_switch_set_active (GTK_SWITCH (widget),
+  //                        g_settings_get_boolean (self->priv->interface_settings,
+  //                        UPSCALE_SETTINGS_KEY));
 
-  g_settings_bind (self->priv->interface_settings,
-                   UPSCALE_SETTINGS_KEY,
-                   G_OBJECT (widget), "active",
-                   G_SETTINGS_BIND_DEFAULT);
+  // g_settings_bind (self->priv->interface_settings,
+  //                  UPSCALE_SETTINGS_KEY,
+  //                  G_OBJECT (widget), "active",
+  //                  G_SETTINGS_BIND_DEFAULT);
 
   self->priv->clone_label    = WID ("clone_resolution_warning_label");
 
