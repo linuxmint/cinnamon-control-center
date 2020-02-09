@@ -26,6 +26,8 @@
       <object class="GtkFrame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">20</property>
+        <property name="margin_right">20</property>
         <property name="label_xalign">0</property>
         <property name="shadow_type">none</property>
         <child>
@@ -138,6 +140,8 @@
       <object class="GtkGrid">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">20</property>
+        <property name="margin_right">20</property>
         <property name="row_spacing">6</property>
         <property name="column_spacing">12</property>
         <property name="row_homogeneous">True</property>
@@ -394,6 +398,9 @@
       <object class="GtkButtonBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">20</property>
+        <property name="margin_right">20</property>
+        <property name="margin_bottom">5</property>
         <child>
           <object class="GtkButton" id="detect_displays_button">
             <property name="label" translatable="yes">_Detect Displays</property>
