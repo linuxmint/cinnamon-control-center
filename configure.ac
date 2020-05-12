@@ -47,18 +47,6 @@ x_libs="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
 
 AC_PATH_PROG([GLIB_MKENUMS],[glib-mkenums])
 
-AC_ARG_ENABLE(documentation,
-              AC_HELP_STRING([--enable-documentation],
-                             [build documentation]),,
-              enable_documentation=yes)
-if test x$enable_documentation = xyes; then
-   AC_PATH_PROG([XSLTPROC], [xsltproc])
-   if test x$XSLTPROC = x; then
-      AC_MSG_ERROR([xsltproc is required to build documentation])
-   fi
-fi
-AM_CONDITIONAL(BUILD_DOCUMENTATION, test x$enable_documentation = xyes)
-
 dnl Region panel
 savecppflags=$CPPFLAGS
 CPPFLAGS="$CPPFLAGS $X_CFLAGS"
@@ -74,17 +62,6 @@ AC_CHECK_HEADERS(X11/extensions/XKB.h)
 CPPFLAGS=$savecppflags
 
 AC_CHECK_LIB(m, floor)
-
-AC_ARG_ENABLE([systemd],
-              AS_HELP_STRING([--enable-systemd], [Use systemd]),
-              [with_systemd=$enableval],
-              [with_systemd=no])
-if test "$with_systemd" = "yes" ; then
-  SYSTEMD=libsystemd-login
-  AC_DEFINE(HAVE_SYSTEMD, 1, [Define to 1 if systemd is available])
-else
-  SYSTEMD=
-fi
 
 dnl ==============================================
 dnl Check that we meet the  dependencies
@@ -197,41 +174,6 @@ if test x$nm_unstable = xyes; then
   AC_DEFINE(HAVE_NM_UNSTABLE, 1, [Define to 1 if NetworkManager is available])
 fi
 AM_CONDITIONAL(HAVE_NM_UNSTABLE, [test x$nm_unstable = xyes])
-
-
-# -----------------------------------------------
-# Check for CUPS 1.4 or newer
-
-AC_ARG_ENABLE([cups],
-              AS_HELP_STRING([--disable-cups], [disable CUPS support (default: enabled)]),,
-              [enable_cups=no])
-
-if test x"$enable_cups" != x"no" ; then
-  AC_PROG_SED
-
-  AC_PATH_PROG(CUPS_CONFIG, cups-config)
-
-  if test x$CUPS_CONFIG = x; then
-    AC_MSG_ERROR([cups-config not found but CUPS support requested])
-  fi
-
-  CUPS_API_VERSION=`$CUPS_CONFIG --api-version`
-  CUPS_API_MAJOR=`echo $ECHO_N $CUPS_API_VERSION | cut -d . -f 1`
-  CUPS_API_MINOR=`echo $ECHO_N $CUPS_API_VERSION | cut -d . -f 2`
-
-  AC_CHECK_HEADERS([cups/cups.h cups/http.h cups/ipp.h cups/ppd.h],,
-                   AC_MSG_ERROR([CUPS headers not found but CUPS support requested]))
-
-  if ! test $CUPS_API_MAJOR -gt 1 -o \
-            $CUPS_API_MAJOR -eq 1 -a $CUPS_API_MINOR -ge 4 ; then
-    AC_MSG_ERROR([CUPS 1.4 or newer not found, but CUPS support requested])
-  fi
-
-  CUPS_CFLAGS=`$CUPS_CONFIG --cflags | $SED -e 's/-O\w*//g' -e 's/-m\w*//g'`
-  CUPS_LIBS=`$CUPS_CONFIG --libs`
-  AC_SUBST(CUPS_CFLAGS)
-  AC_SUBST(CUPS_LIBS)
-fi
 
 build_color=false
 AC_ARG_ENABLE(color,
@@ -465,11 +407,6 @@ if test "x$have_modemmanager" = "xyes"; then
 else
 	AC_MSG_NOTICE([   ModemManager support disabled])
 fi
-#if test "x$with_systemd" = "xyes"; then
-#	AC_MSG_NOTICE([** systemd (Systemd session tracking)])
-#else
-#	AC_MSG_NOTICE([   Using ConsoleKit for session tracking])
-#fi
 
 if test "x$build_color" = "xtrue"; then
 	AC_MSG_NOTICE([** Colord support (Color management panel)])
