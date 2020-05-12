@@ -1,3 +1,26 @@
+cinnamon-control-center (4.6.0) ulyana; urgency=medium
+
+  [ Michael Webster ]
+  * display: Allow the selection of different modes of the same resolution using a refresh rate combobox.
+  * Allow setting of per-monitor scale factors using a combination of ui scaling and xrandr scaling.
+  * display: Add a combo for base scale configuration setting.
+  * cc-display-panel.c: Comment some unused code.
+
+  [ JosephMcc ]
+  * display-applet.ui: Add some margins
+
+  [ Michael Webster ]
+  * debian/control: Remove gnome-doc-utils dependency
+
+  [ Garry Filakhtov ]
+  * Remove checks for unused dependencies
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+  * l10n: Generate files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 12 May 2020 16:40:05 +0100
+
 cinnamon-control-center (4.4.0) tricia; urgency=medium
 
   [ JosephMcc ]
