@@ -15,7 +15,6 @@ Build-Depends:
  libcinnamon-menu-3-dev,
  libcolord-dev,
  libdbus-1-dev (>= 0.32),
- libdbus-glib-1-dev (>= 0.32),
  libgdk-pixbuf2.0-dev (>= 2.23.0),
  libglib2.0-dev (>= 2.31.0),
  libgnomekbd-dev,
