@@ -72,6 +72,7 @@ enum {
 enum {
   BASE_SCALE_TEXT_COL,
   BASE_SCALE_VALUE_COL,
+  AUTO_SCALE_COL,
   BASE_SCALE_NUM_COLS
 };
 
@@ -79,6 +80,7 @@ struct _CcDisplayPanelPrivate
 {
   GnomeRRScreen       *screen;
   GnomeRRConfig  *current_configuration;
+  GnomeRRConfig  *old_configuration;
   CcRRLabeler *labeler;
   GnomeRROutputInfo         *current_output;
   // GSettings      *interface_settings;
@@ -97,15 +99,17 @@ struct _CcDisplayPanelPrivate
   GtkWidget      *rotation_combo;
   GtkWidget      *refresh_combo;
   GtkWidget      *clone_switch;
-  GtkWidget      *clone_label;
   GtkWidget      *scale_combo;
   GtkWidget      *base_scale_combo;
+  GtkWidget      *fractional_switch;
 
   /* We store the event timestamp when the Apply button is clicked */
   guint32         apply_button_clicked_timestamp;
 
   GtkWidget      *area;
   gboolean        ignore_gui_changes;
+
+  gboolean        need_apply;
 
   /* These are used while we are waiting for the ApplyConfiguration method to be executed over D-bus */
   GDBusProxy *proxy;
@@ -126,6 +130,7 @@ static void on_resolution_changed (GtkComboBox *box, gpointer data);
 static void on_refresh_changed (GtkComboBox *box, gpointer data);
 static void on_rotation_changed (GtkComboBox *box, gpointer data);
 static void on_base_scale_changed (GtkComboBox *box, gpointer data);
+static void on_fractional_switch_toggled (gpointer user_data);
 static void rebuild_base_scale_combo (CcDisplayPanel *self);
 static gboolean output_overlaps (CcDisplayPanel *self, GnomeRROutputInfo *output, GnomeRRConfig *config);
 static void select_current_output_from_dialog_position (CcDisplayPanel *self);
@@ -171,7 +176,7 @@ cc_display_panel_set_property (GObject      *object,
 static void
 cc_display_panel_dispose (GObject *object)
 {
-  CcDisplayPanel *panel = CC_DISPLAY_PANEL (object);
+  // CcDisplayPanel *panel = CC_DISPLAY_PANEL (object);
 
   // g_clear_object (&panel->priv->interface_settings);
 
@@ -183,7 +188,6 @@ cc_display_panel_finalize (GObject *object)
 {
   CcDisplayPanel *self;
   CcShell *shell;
-  GtkWidget *toplevel;
 
   self = CC_DISPLAY_PANEL (object);
 
@@ -252,51 +256,26 @@ error_message (CcDisplayPanel *self, const char *primary_text, const char *secon
   gtk_widget_destroy (dialog);
 }
 
-static void
-update_base_scale (CcDisplayPanel *self)
+static gboolean
+int_equals_float (gint _int, gfloat _float)
 {
-  int i;
-  float max_scale = 1.0;
-  float min_scale = 4.0;
-  gint old_base_scale;
+    gfloat int_as_float = (float) _int;
 
-  GnomeRROutputInfo **outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
+    return int_as_float < _float + .05 &&
+           int_as_float > _float - .05;
+}
 
-  for (i = 0; outputs[i] != NULL; ++i)
-    {
-      float info_scale = gnome_rr_output_info_get_scale (outputs[i]);
+static void
+update_apply_state (CcDisplayPanel *self)
+{
+    // gboolean changed = !gnome_rr_config_equal (self->priv->current_configuration,
+    //                                            self->priv->old_configuration);
+    // gtk_widget_set_sensitive (WID ("apply_button"), changed);
 
-      if (info_scale > max_scale)
-        {
-          max_scale = info_scale;
-        }
-
-      if (info_scale < min_scale)
-        {
-          min_scale = info_scale;
-        }
-    }
-
-  old_base_scale = gnome_rr_config_get_base_scale (self->priv->current_configuration);
-
-  if (old_base_scale > (int) ceilf (max_scale))
-  {
-    gnome_rr_config_set_base_scale (self->priv->current_configuration, (int) ceilf (max_scale));
-
-    g_debug ("Update to base scale (it was 1 or more steps larger than any monitor scale: %d->%d\n",
-             old_base_scale, (int) ceilf (max_scale));
-
-    rebuild_base_scale_combo (self);
-  }
-  else if (old_base_scale < (int) floorf (min_scale))
-  {
-    gnome_rr_config_set_base_scale (self->priv->current_configuration, (int) floorf (min_scale));
-
-    g_debug ("Update to base scale (it was 1 or more steps smaller than any monitor scale: %d->%d\n",
-             old_base_scale, (int) floorf (min_scale));
-
-    rebuild_base_scale_combo (self);
-  }
+    // Until and unless we can count on xrandr calls to apply cleanly, we need
+    // to allow re-applying the same configuration to potentially straighten things
+    // out.
+    gtk_widget_set_sensitive (WID ("apply_button"), TRUE);
 }
 
 static void
@@ -370,7 +349,7 @@ should_show_rate (gint output_width,
 static void
 on_screen_changed (gpointer data)
 {
-  GnomeRRConfig *current;
+  GnomeRRConfig *current, *old;
   CcDisplayPanel *self = data;
 
   g_debug ("GnomeRRScreen::changed");
@@ -378,12 +357,19 @@ on_screen_changed (gpointer data)
   gnome_rr_screen_refresh (self->priv->screen, NULL);
 
   current = gnome_rr_config_new_current (self->priv->screen, NULL);
+  old = gnome_rr_config_new_current (self->priv->screen, NULL);
+
   gnome_rr_config_ensure_primary (current);
+  gnome_rr_config_ensure_primary (old);
 
   if (self->priv->current_configuration)
     g_object_unref (self->priv->current_configuration);
 
+  if (self->priv->old_configuration)
+    g_object_unref (self->priv->old_configuration);
+
   self->priv->current_configuration = current;
+  self->priv->old_configuration = old;
   self->priv->current_output = NULL;
 
   if (self->priv->labeler) {
@@ -396,10 +382,7 @@ on_screen_changed (gpointer data)
   cc_rr_labeler_hide (self->priv->labeler);
   cc_rr_labeler_show (self->priv->labeler);
 
-  update_base_scale (self);
-
   select_current_output_from_dialog_position (self);
-
 }
 
 static void
@@ -582,7 +565,7 @@ add_rate (CcDisplayPanel *self,
       char *text;
       gboolean preferred;
 
-      model = gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->refresh_combo));
+      model = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->refresh_combo)));
       preferred = (gnome_rr_mode_get_id (mode) == preferred_id);
 
       text = make_refresh_string (rate, rate == highest_rate, doublescan, interlaced, vsync);
@@ -611,7 +594,7 @@ add_scale (CcDisplayPanel *self,
   GtkListStore *model;
   char *text;
 
-  model = gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->scale_combo));
+  model = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->scale_combo)));
 
   text = g_strdup_printf (_("%d%%"), (int) (scale * 100));
 
@@ -814,7 +797,6 @@ rebuild_mirror_screens (CcDisplayPanel *self)
 
   gtk_switch_set_active (GTK_SWITCH (self->priv->clone_switch), mirror_is_active);
   gtk_widget_set_sensitive (self->priv->clone_switch, mirror_is_supported);
-  gtk_widget_set_sensitive (self->priv->clone_label, mirror_is_supported);
 
   g_signal_handlers_unblock_by_func (self->priv->clone_switch, G_CALLBACK (on_clone_changed), self);
 }
@@ -1190,6 +1172,7 @@ rebuild_scale_combo (CcDisplayPanel *self)
   int output_width, output_height, n_supported_scales;
   float current_scale;
   float *scales;
+  gboolean enabled;
 
   g_signal_handlers_block_by_func (self->priv->scale_combo, on_scale_changed, self);
 
@@ -1209,8 +1192,6 @@ rebuild_scale_combo (CcDisplayPanel *self)
 
   gnome_rr_output_info_get_geometry (self->priv->current_output, NULL, NULL, &output_width, &output_height);
   g_assert (output_width != 0 && output_height != 0);
-
-  gtk_widget_set_sensitive (self->priv->scale_combo, TRUE);
 
   scales = gnome_rr_screen_calculate_supported_scales (self->priv->screen,
                                                        output_width,
@@ -1239,25 +1220,13 @@ rebuild_scale_combo (CcDisplayPanel *self)
 
   g_signal_handlers_unblock_by_func (self->priv->scale_combo, on_scale_changed, self);
 
+  enabled = !int_equals_float (gnome_rr_config_get_base_scale (self->priv->current_configuration), current_scale) ||
+                               gtk_switch_get_active (GTK_SWITCH (self->priv->fractional_switch));
+
+  gtk_widget_set_sensitive (self->priv->scale_combo, enabled);
+
+
   g_free (current);
-}
-
-static gint
-get_monitor_index_for_output (XID output_id)
-{
-    GdkDisplay *display = gdk_display_get_default ();
-    GdkScreen *screen = gdk_display_get_default_screen (display);
-    gint i;
-
-    i = 0;
-
-    for (i = 0; i < gdk_display_get_n_monitors (display); i++) {
-        if (gdk_x11_screen_get_monitor_output (screen, i) == output_id) {
-            return i;
-        }
-    }
-
-    return -1;
 }
 
 static gchar *
@@ -1265,6 +1234,8 @@ get_base_scale_string (guint value)
 {
     switch (value)
     {
+        case 0:
+            return g_strdup (_("Automatic"));
         case 1:
             return g_strdup (_("Normal"));
         case 2:
@@ -1274,126 +1245,73 @@ get_base_scale_string (guint value)
     }
 }
 
-typedef struct
-{
-  guint value;
-  gboolean found;
-  GtkTreeIter iter;
-} BaseScaleForeachInfo;
-
-static gint
-get_max_base_scale_for_output (GnomeRRScreen     *screen,
-                               GnomeRROutputInfo *info)
-{
-    gint monitor_index;
-    GnomeRROutput *output;
-
-    output = gnome_rr_screen_get_output_by_name (screen, gnome_rr_output_info_get_name (info));
-    monitor_index = get_monitor_index_for_output (gnome_rr_output_get_id (output));
-
-    return gnome_rr_screen_calculate_best_global_scale (screen, monitor_index);
-}
-
-static gboolean
-base_scale_foreach (GtkTreeModel *model,
-         GtkTreePath *path,
-         GtkTreeIter *iter,
-         gpointer data)
-{
-  BaseScaleForeachInfo *info = data;
-  guint model_val = 0;
-
-  gtk_tree_model_get (model, iter, BASE_SCALE_VALUE_COL, &model_val, -1);
-
-  if (info->value == model_val)
-    {
-      info->found = TRUE;
-      info->iter = *iter;
-      return TRUE;
-    }
-
-  return FALSE;
-}
-
 static GtkTreeIter
 add_base_scale_value (GtkTreeModel *model,
                       guint         value)
 {
-  BaseScaleForeachInfo info;
+    GtkTreeIter iter;
+    gchar *text;
 
-  info.value = value;
-  info.found = FALSE;
+    g_debug ("adding base scale of %d to base scale combo", value);
 
-  gtk_tree_model_foreach (model, base_scale_foreach, &info);
+    text = get_base_scale_string (value);
 
-  if (!info.found)
-    {
-      GtkTreeIter iter;
-      gchar *text;
-      g_debug ("adding base scale of %d to base scale combo", value);
+    gtk_list_store_insert_with_values (GTK_LIST_STORE (model), &iter, -1,
+                                       BASE_SCALE_TEXT_COL, text,
+                                       BASE_SCALE_VALUE_COL, value,
+                                       AUTO_SCALE_COL, FALSE,
+                                       -1);
 
-      text = get_base_scale_string (value);
+    g_free (text);
 
-      gtk_list_store_insert_with_values (GTK_LIST_STORE (model), &iter, -1,
-                                         BASE_SCALE_TEXT_COL, text,
-                                         BASE_SCALE_VALUE_COL, value,
-                                         -1);
+    return iter;
+}
 
-      g_free (text);
+static GtkTreeIter
+add_auto_scale_value (CcDisplayPanel *self,
+                      GtkTreeModel   *model)
+{
+    GtkTreeIter iter;
+    gchar *text;
+    guint auto_scale_value;
 
-      return iter;
-    }
+    auto_scale_value = gnome_rr_screen_calculate_best_global_scale (self->priv->screen, -1);
 
-  return info.iter;
+    g_debug ("adding auto scale of %u to base scale combo", auto_scale_value);
+
+    text = g_strdup_printf (_("Automatic (%ux)"), auto_scale_value);
+
+    gtk_list_store_insert_with_values (GTK_LIST_STORE (model), &iter, -1,
+                                       BASE_SCALE_TEXT_COL, text,
+                                       BASE_SCALE_VALUE_COL, auto_scale_value,
+                                       AUTO_SCALE_COL, TRUE,
+                                       -1);
+
+    g_free (text);
+
+    return iter;
 }
 
 static void
 rebuild_base_scale_combo (CcDisplayPanel *self)
 {
   GtkListStore *model;
-  GnomeRROutputInfo **outputs;
-  int i, n_active, current_base_scale, max_base_scale;
+  int i, current_base_scale;
   GtkTreeIter selected_iter;
-  GtkTreeIter iter;
+  GtkTreeIter auto_iter, iter;
 
-  model = gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->base_scale_combo));
+  model = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->base_scale_combo)));
 
   g_signal_handlers_block_by_func (self->priv->base_scale_combo, on_base_scale_changed, self);
 
   clear_combo (self->priv->base_scale_combo);
 
-  outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
   current_base_scale = gnome_rr_config_get_base_scale (self->priv->current_configuration);
 
-  n_active = 0;
-  max_base_scale = 0;
-
-  /* Find the optimal scale for each monitor, looking for the highest. */
-  for (i = 0; outputs[i] != NULL; i++)
-  {
-    GnomeRROutputInfo *info = outputs[i];
-    gint base_scale;
-
-    if (!gnome_rr_output_info_is_active (info))
-    {
-        continue;
-    }
-
-    base_scale = get_max_base_scale_for_output (self->priv->screen, info);
-    max_base_scale = MAX (max_base_scale, base_scale);
-    n_active++;
-  }
-
-  if (n_active == 0)
-  {
-    gtk_widget_set_sensitive (self->priv->base_scale_combo, FALSE);
-
-    g_signal_handlers_unblock_by_func (self->priv->base_scale_combo, on_base_scale_changed, self);
-    return;
-  }
+  auto_iter = add_auto_scale_value (self, GTK_TREE_MODEL (model));
 
   /* Now add 1 thru max_base_scale, and one past. */
-  for (i = 1; i <= max_base_scale + 1; i++)
+  for (i = 1; i <= 2; i++)
   {
     iter = add_base_scale_value (GTK_TREE_MODEL (model), i);
 
@@ -1403,8 +1321,12 @@ rebuild_base_scale_combo (CcDisplayPanel *self)
     }
   }
 
-  gtk_widget_set_sensitive (self->priv->base_scale_combo, TRUE);
-  gtk_combo_box_set_active_iter (self->priv->base_scale_combo, &selected_iter);
+  if (gnome_rr_config_get_auto_scale (self->priv->current_configuration))
+  {
+    gtk_combo_box_set_active_iter (GTK_COMBO_BOX (self->priv->base_scale_combo), &auto_iter);
+  } else {
+    gtk_combo_box_set_active_iter (GTK_COMBO_BOX (self->priv->base_scale_combo), &selected_iter);
+  }
 
   g_signal_handlers_unblock_by_func (self->priv->base_scale_combo, on_base_scale_changed, self);
 }
@@ -1412,6 +1334,7 @@ rebuild_base_scale_combo (CcDisplayPanel *self)
 static void
 rebuild_gui (CcDisplayPanel *self)
 {
+  gint fractional_active;
   /* We would break spectacularly if we recursed, so
    * just assert if that happens
    */
@@ -1429,6 +1352,17 @@ rebuild_gui (CcDisplayPanel *self)
   rebuild_scale_combo (self);
   rebuild_base_scale_combo (self);
 
+  fractional_active = !int_equals_float (gnome_rr_config_get_base_scale (self->priv->current_configuration),
+                                         gnome_rr_output_info_get_scale (self->priv->current_output));
+
+  g_signal_handlers_block_by_func (self->priv->fractional_switch, on_fractional_switch_toggled, self);
+  gtk_switch_set_active (GTK_SWITCH (self->priv->fractional_switch), fractional_active);
+  g_signal_handlers_unblock_by_func (self->priv->fractional_switch, on_fractional_switch_toggled, self);
+
+  gtk_widget_set_sensitive (self->priv->fractional_switch,
+                            !gnome_rr_config_get_auto_scale (self->priv->current_configuration));
+
+  gtk_widget_set_sensitive (self->priv->scale_combo, fractional_active);
   gtk_widget_set_sensitive (self->priv->primary_button,
                             !gnome_rr_output_info_get_primary (self->priv->current_output));
 
@@ -1508,6 +1442,8 @@ on_rotation_changed (GtkComboBox *box, gpointer data)
   if (get_mode (self->priv->rotation_combo, NULL, NULL, NULL, NULL, &rotation, NULL, NULL, NULL))
     gnome_rr_output_info_set_rotation (self->priv->current_output, rotation);
 
+  update_apply_state (self);
+
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
@@ -1565,6 +1501,9 @@ monitor_switch_active_cb (GObject    *object,
     }
 
   rebuild_gui (self);
+
+  update_apply_state (self);
+
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
@@ -1745,6 +1684,8 @@ on_resolution_changed (GtkComboBox *box, gpointer data)
   rebuild_scale_combo (self);
   rebuild_base_scale_combo (self);
 
+  update_apply_state (self);
+
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
@@ -1763,6 +1704,8 @@ on_refresh_changed (GtkComboBox *box, gpointer data)
       gnome_rr_output_info_set_refresh_rate_f (self->priv->current_output, rate);
       gnome_rr_output_info_set_flags (self->priv->current_output, doublescan, interlaced, vsync);
     }
+
+  update_apply_state (self);
 }
 
 static void
@@ -1778,8 +1721,9 @@ on_scale_changed (GtkComboBox *box, gpointer data)
   if (get_mode (self->priv->scale_combo, NULL, NULL, NULL, &scale, NULL, NULL, NULL, NULL))
     {
       gnome_rr_output_info_set_scale (self->priv->current_output, scale);
-      update_base_scale (self);
     }
+
+  update_apply_state (self);
 
   get_scaled_geometry (self, self->priv->current_output, NULL, NULL, &width, &height);
 
@@ -1794,6 +1738,7 @@ on_base_scale_changed (GtkComboBox *box, gpointer data)
   GtkTreeIter iter;
   GtkTreeModel *model;
   guint current_value, new_value;
+  gboolean current_auto_scale, new_auto_scale;
 
   if (!gtk_combo_box_get_active_iter (box, &iter))
   {
@@ -1802,20 +1747,50 @@ on_base_scale_changed (GtkComboBox *box, gpointer data)
   }
 
   current_value = gnome_rr_config_get_base_scale (self->priv->current_configuration);
+  current_auto_scale = gnome_rr_config_get_auto_scale (self->priv->current_configuration);
 
   model = gtk_combo_box_get_model (box);
   gtk_tree_model_get (model, &iter,
                       BASE_SCALE_VALUE_COL, &new_value,
+                      AUTO_SCALE_COL, &new_auto_scale,
                       -1);
 
-  if (new_value != current_value)
+  if (new_value != current_value || new_auto_scale != current_auto_scale)
   {
-    g_debug ("Setting current configuration's base scale to %d\n", new_value);
+    GnomeRROutputInfo **outputs;
+    gint i;
+
+    g_debug ("Setting current configuration's base and fractional scale to %d\n", new_value);
     gnome_rr_config_set_base_scale (self->priv->current_configuration, new_value);
+    gnome_rr_config_set_auto_scale (self->priv->current_configuration, new_auto_scale);
+
+    if (new_auto_scale || !gtk_switch_get_active (GTK_SWITCH (self->priv->fractional_switch)))
+    {
+        outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
+
+        for (i = 0; outputs[i] != NULL; i++)
+        {
+          if (gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i]))
+          {
+              gnome_rr_output_info_set_scale (outputs[i], (float) new_value);
+          }
+        }
+    }
   }
+
+  if (new_auto_scale)
+  {
+    gtk_switch_set_active (GTK_SWITCH (self->priv->fractional_switch), FALSE);
+  }
+
+  gtk_widget_set_sensitive (self->priv->fractional_switch, !new_auto_scale);
 
   realign_outputs_after_scale_change (self, self->priv->current_output);
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
+
+  update_apply_state (self);
+
+  rebuild_scale_combo (self);
 }
 
 static void
@@ -1925,7 +1900,7 @@ output_info_supports_mode (CcDisplayPanel *self, GnomeRROutputInfo *info, int wi
 }
 
 static void
-on_clone_changed (GtkWidget *box, gboolean state, gpointer data)
+on_clone_changed (GtkWidget *switch_, gboolean state, gpointer data)
 {
   CcDisplayPanel *self = data;
 
@@ -1969,6 +1944,27 @@ on_clone_changed (GtkWidget *box, gboolean state, gpointer data)
     }
 
   rebuild_gui (self);
+
+  update_apply_state (self);
+}
+
+static void
+on_fractional_switch_toggled (gpointer user_data)
+{
+  CcDisplayPanel *self = CC_DISPLAY_PANEL (user_data);
+  gboolean enabled;
+
+  enabled = gtk_switch_get_active (GTK_SWITCH (self->priv->fractional_switch));
+
+  gtk_widget_set_sensitive (self->priv->scale_combo, enabled);
+
+  if (!enabled)
+    {
+      gnome_rr_output_info_set_scale (self->priv->current_output,
+                                      (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
+
+      rebuild_scale_combo (self);
+    }
 }
 
 static void
@@ -3130,7 +3126,8 @@ make_base_scale_combo (CcDisplayPanel *self)
 
   GtkListStore *store = gtk_list_store_new (BASE_SCALE_NUM_COLS,
                                             G_TYPE_STRING,      /* Text */
-                                            G_TYPE_INT);        /* Preferred */
+                                            G_TYPE_INT,
+                                            G_TYPE_BOOLEAN);        /* Preferred */
 
   gtk_combo_box_set_model (box, GTK_TREE_MODEL (store));
 
@@ -3140,10 +3137,6 @@ make_base_scale_combo (CcDisplayPanel *self)
   gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (box), cell,
                                   "text", BASE_SCALE_TEXT_COL,
                                   NULL);
-
-  gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
-                                        BASE_SCALE_VALUE_COL,
-                                        GTK_SORT_ASCENDING);
 }
 
 static void
@@ -3533,8 +3526,6 @@ cc_display_panel_constructor (GType                  gtype,
   GObject *obj;
   CcDisplayPanel *self;
   CcShell *shell;
-  GtkWidget *toplevel;
-  GtkWidget *widget;
   gchar *objects[] = {"display-panel", NULL};
 
   obj = G_OBJECT_CLASS (cc_display_panel_parent_class)->constructor (gtype, n_properties, properties);
@@ -3611,20 +3602,10 @@ cc_display_panel_constructor (GType                  gtype,
   g_signal_connect (self->priv->base_scale_combo, "changed",
                     G_CALLBACK (on_base_scale_changed), self);
 
-  // self->priv->interface_settings = g_settings_new (INTERFACE_SETTINGS_SCHEMA);
+  self->priv->fractional_switch = WID ("fractional_switch");
 
-  // widget = WID ("upscale_switch");
-
-  // gtk_switch_set_active (GTK_SWITCH (widget),
-  //                        g_settings_get_boolean (self->priv->interface_settings,
-  //                        UPSCALE_SETTINGS_KEY));
-
-  // g_settings_bind (self->priv->interface_settings,
-  //                  UPSCALE_SETTINGS_KEY,
-  //                  G_OBJECT (widget), "active",
-  //                  G_SETTINGS_BIND_DEFAULT);
-
-  self->priv->clone_label    = WID ("clone_resolution_warning_label");
+  g_signal_connect_swapped (self->priv->fractional_switch, "notify::active",
+                            G_CALLBACK (on_fractional_switch_toggled), self);
 
   g_signal_connect (WID ("detect_displays_button"),
                     "clicked", G_CALLBACK (on_detect_displays), self);
