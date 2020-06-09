@@ -1,0 +1,5 @@
+option('color',         type: 'boolean', value: 'true', description: 'Color Management support')
+option('modemmanager',  type: 'boolean', value: 'true', description: 'ModemManager support')
+option('networkmanager',type: 'boolean', value: 'true', description: 'NetworkManager support')
+option('onlineaccounts',type: 'boolean', value: 'true', description: 'Online Accounts support')
+option('wacom',         type: 'boolean', value: 'true', description: 'Wacom Management support')
