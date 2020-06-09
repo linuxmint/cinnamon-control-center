@@ -8,10 +8,7 @@ DATA_PKG = cinnamon-control-center-data
 MAIN_PKG = cinnamon-control-center
 
 %:
-	dh $@ --with=gnome
-
-override_dh_autoreconf:
-	NOCONFIGURE=1 dh_autoreconf --as-needed ./autogen.sh
+	dh $@ --with=gnome --buildsystem=meson
 
 override_dh_gnome_clean:
 	dh_gnome_clean --no-control
@@ -26,6 +23,9 @@ override_dh_strip:
 override_dh_install:
 	dh_install --list-missing
 
+override_dh_makeshlibs:
+	dh_makeshlibs -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels
+
 override_dh_installchangelogs:
 	# Only install the changelog in the arch:all package
 	dh_installchangelogs -i ChangeLog
@@ -34,7 +34,3 @@ override_dh_installchangelogs:
 	[ ! -f debian/$(DATA_PKG)/usr/share/doc/$(DATA_PKG)/changelog ] \
 	    || mv debian/$(DATA_PKG)/usr/share/doc/$(DATA_PKG)/changelog \
 	    debian/$(DATA_PKG)/usr/share/doc/$(MAIN_PKG)/changelog
-
-override_dh_makeshlibs:
-	dh_makeshlibs \
-	    -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels
