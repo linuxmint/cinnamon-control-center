@@ -52,15 +52,25 @@ jobs:
         <<: *shared
         docker:
             - image: linuxmintd/mint19-amd64
+    "mint20":
+        <<: *shared
+        docker:
+            - image: linuxmintd/mint20-amd64
 
     "lmde3":
         <<: *shared
         docker:
             - image: linuxmintd/lmde3-amd64
+    "lmde4":
+        <<: *shared
+        docker:
+            - image: linuxmintd/lmde4-amd64
 
 workflows:
     version: 2
     build:
         jobs:
             - "mint19"
+            - "mint20"
             - "lmde3"
+            - "lmde4"
