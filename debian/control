@@ -3,11 +3,9 @@ Section: x11
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends:
- autoconf-archive,
- automake,
- autotools-dev,
+ meson,
  cinnamon-settings-daemon-dev,
- debhelper (>= 10),
+ debhelper (>= 11.1~),
  gnome-pkg-tools (>= 0.10),
  gtk-doc-tools,
  intltool (>= 0.37.1),
