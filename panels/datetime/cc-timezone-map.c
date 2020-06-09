@@ -22,6 +22,8 @@
  *
  */
 
+#include "config.h"
+
 #include "cc-timezone-map.h"
 #include <math.h>
 #include <string.h>

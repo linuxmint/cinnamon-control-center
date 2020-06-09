@@ -4,7 +4,7 @@
  * Copyright (C) 2000-2001 Ximian, Inc.
  *
  * Authors: Hans Petter Jansson <hpj@ximian.com>
- * 
+ *
  * Largely based on Michael Fulbright's work on Anaconda.
  *
  * This program is free software; you can redistribute it and/or modify
@@ -22,6 +22,7 @@
  * Foundation, Inc., 51 Franklin Street, Suite 500, Boston, MA 02110-1335, USA.
  */
 
+#include "config.h"
 
 #include <glib.h>
 #include <stdio.h>
@@ -77,19 +78,19 @@ tz_load_db (void)
 
 		g_strchomp(buf);
 		tmpstrarr = g_strsplit(buf,"\t", 6);
-		
+
 		latstr = g_strdup (tmpstrarr[1]);
 		p = latstr + 1;
 		while (*p != '-' && *p != '+') p++;
 		lngstr = g_strdup (p);
 		*p = '\0';
-		
+
 		loc = g_new0 (TzLocation, 1);
 		loc->country = g_strdup (tmpstrarr[0]);
 		loc->zone = g_strdup (tmpstrarr[2]);
 		loc->latitude  = convert_pos (latstr, 2);
 		loc->longitude = convert_pos (lngstr, 3);
-		
+
 #ifdef __sun
 		if (tmpstrarr[3] && *tmpstrarr[3] == '-' && tmpstrarr[4])
 			loc->comment = g_strdup (tmpstrarr[4]);
@@ -117,12 +118,12 @@ tz_load_db (void)
 		g_free (lngstr);
 		g_strfreev (tmpstrarr);
 	}
-	
+
 	fclose (tzfile);
-	
+
 	/* now sort by country */
 	sort_locations_by_country (tz_db->locations);
-	
+
 	g_free (tz_data_file);
 
 	/* Load up the hashtable of backward links */
@@ -204,13 +205,13 @@ tz_info_from_location (TzLocation *loc)
 	time_t curtime;
 	struct tm *curzone;
 	gchar *tz_env_value;
-	
+
 	g_return_val_if_fail (loc != NULL, NULL);
 	g_return_val_if_fail (loc->zone != NULL, NULL);
-	
+
 	tz_env_value = g_strdup (getenv ("TZ"));
 	setenv ("TZ", loc->zone, 1);
-	
+
 #if 0
 	tzset ();
 #endif
@@ -223,7 +224,7 @@ tz_info_from_location (TzLocation *loc)
 	/* Currently this solution doesn't seem to work - I get that */
 	/* America/Phoenix uses daylight savings, which is wrong    */
 	tzinfo->tzname_normal = g_strdup (curzone->tm_zone);
-	if (curzone->tm_isdst) 
+	if (curzone->tm_isdst)
 		tzinfo->tzname_daylight =
 			g_strdup (&curzone->tm_zone[curzone->tm_isdst]);
 	else
@@ -244,7 +245,7 @@ tz_info_from_location (TzLocation *loc)
 		unsetenv ("TZ");
 
 	g_free (tz_env_value);
-	
+
 	return tzinfo;
 }
 
@@ -253,7 +254,7 @@ void
 tz_info_free (TzInfo *tzinfo)
 {
 	g_return_if_fail (tzinfo != NULL);
-	
+
 	if (tzinfo->tzname_normal) g_free (tzinfo->tzname_normal);
 	if (tzinfo->tzname_daylight) g_free (tzinfo->tzname_daylight);
 	g_free (tzinfo);
@@ -373,9 +374,9 @@ convert_pos (gchar *pos, int digits)
 	gchar *fraction;
 	gint i;
 	float t1, t2;
-	
+
 	if (!pos || strlen(pos) < 4 || digits > 9) return 0.0;
-	
+
 	for (i = 0; i < digits + 1; i++) whole[i] = pos[i];
 	whole[i] = '\0';
 	fraction = pos + digits + 1;
@@ -394,14 +395,14 @@ convert_pos (gchar *pos, int digits)
 static void
 free_tzdata (TzLocation *tz)
 {
-	
+
 	if (tz->country)
 	  g_free(tz->country);
 	if (tz->zone)
 	  g_free(tz->zone);
 	if (tz->comment)
 	  g_free(tz->comment);
-	
+
 	g_free(tz);
 }
 #endif
@@ -412,7 +413,7 @@ compare_country_names (const void *a, const void *b)
 {
 	const TzLocation *tza = * (TzLocation **) a;
 	const TzLocation *tzb = * (TzLocation **) b;
-	
+
 	return strcmp (tza->zone, tzb->zone);
 }
 
@@ -479,4 +480,3 @@ load_backward_tz (TzDB *tz_db)
     }
   g_strfreev (lines);
 }
-
