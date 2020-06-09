@@ -19,9 +19,6 @@ list_languages = executable('list-languages',
   ],
 )
 
-install_data('cinnamon-control-center.rules',
-  install_dir: get_option('datadir') / 'polkit-1' / 'rules.d',
-)
 install_data('language-chooser.ui',
   install_dir: ui_dir,
 )

@@ -5,7 +5,7 @@ Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends:
  meson,
  cinnamon-settings-daemon-dev,
- debhelper (>= 11.1~),
+ debhelper-compat (= 12),
  gnome-pkg-tools (>= 0.10),
  gtk-doc-tools,
  intltool (>= 0.37.1),

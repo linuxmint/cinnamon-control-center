@@ -1,2 +1,0 @@
-# These are cinnamon settings modules
-cinnamon-control-center: desktop-command-not-in-package * cinnamon-settings

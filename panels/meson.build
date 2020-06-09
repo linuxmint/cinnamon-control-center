@@ -5,8 +5,6 @@ endif
 
 subdir('common')
 
-subdir('datetime')
-
 subdir('display')
 
 if libnm.found()

@@ -21,7 +21,7 @@ libcinnamon_control_center = shared_library('cinnamon-control-center',
   dependencies: [
     gtk,
   ],
-  soversion: lib_ver,
+  version: lib_ver,
   install: true,
 )
 
@@ -57,6 +57,7 @@ controlcenter = executable('cinnamon-control-center',
     libnotify,
   ],
   link_with: libcinnamon_control_center,
+  install: true
 )
 
 ##############################################################################
@@ -80,37 +81,6 @@ pkgconfig.generate(
   variables: [
     'extensiondir=${libdir}/cinnamon-control-center-1/panels',
   ],
-)
-
-
-dataconf = configuration_data()
-dataconf.set('applicationsdir',
-  get_option('prefix') / get_option('datadir') / 'applications',
-)
-install_data(
-  configure_file(
-    input : 'cinnamoncc.menu.in',
-    output: 'cinnamoncc.menu',
-    configuration: dataconf,
-  ),
-  install_dir: '/' / menu_dir,
-)
-
-
-i18n.merge_file(
-  input : 'cinnamon-control-center.desktop.in.in',
-  output: 'cinnamon-control-center.desktop',
-  po_dir: po_dir,
-  type: 'desktop',
-  install_dir: get_option('datadir') / 'applications',
-)
-
-i18n.merge_file(
-  input : 'cinnamoncc.directory.in',
-  output: 'cinnamoncc.directory',
-  po_dir: po_dir,
-  type: 'desktop',
-  install_dir: get_option('datadir') / 'desktop-directories',
 )
 
 install_data('shell.ui',

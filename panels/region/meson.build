@@ -21,6 +21,7 @@ panel_region = shared_library('region',
     cinn_desktop,
     libgnomekbd,
     libgnomekbdui,
+    libxklavier
   ],
 
   install: true,

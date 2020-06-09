@@ -35,6 +35,7 @@ libgnomekbdui=dependency('libgnomekbdui',   version: '>=3.0.0')
 libnotify   = dependency('libnotify',       version: '>=0.7.3')
 libx11      = dependency('x11')
 polkit_gobj = dependency('polkit-gobject-1',version: '>=0.103')
+libxklavier = dependency('libxklavier',     version: '>=5.1')
 
 config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 
@@ -50,10 +51,6 @@ config.set_quoted('ISO_CODES_PREFIX', isocodes.get_pkgconfig_variable('prefix'))
 if get_option('networkmanager')
   libnm         = dependency('libnm', version: '>=1.2.0')
   libnma        = dependency('libnma',version: '>=1.2.0')
-  networkmanager= dependency('NetworkManager')
-
-  nm_vpn_config_dir = networkmanager.get_pkgconfig_variable('configdir') + '/VPN'
-  nm_vpn_module_dir = networkmanager.get_pkgconfig_variable('plugindir')
 else
   libnm = dependency('', required: false)
   libnma= dependency('', required: false)
