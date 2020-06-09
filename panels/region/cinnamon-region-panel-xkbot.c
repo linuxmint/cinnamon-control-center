@@ -20,9 +20,7 @@
  * 02110-1335, USA.
  */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
+#include <config.h>
 
 #include <glib/gi18n.h>
 #include <string.h>
@@ -67,7 +65,7 @@ xkb_options_expander_selcounter_get (void)
 			      SELCOUNTER_PROP));
 }
 
-/* Increments the selection counter in the expander (static current_expander) 
+/* Increments the selection counter in the expander (static current_expander)
    using the value (can be 0)*/
 static void
 xkb_options_expander_selcounter_add (int value)
@@ -230,7 +228,7 @@ xkb_options_add_option (XklConfigRegistry * config_registry,
 			gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON
 						      (option_check),
 						      TRUE);
-			/* Make option name underscore - 
+			/* Make option name underscore -
 			   to enforce its first position in the list */
 			g_object_set_data_full (G_OBJECT (option_check),
 						"utfOptionName",

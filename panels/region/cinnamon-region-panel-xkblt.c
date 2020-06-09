@@ -19,9 +19,7 @@
  * 02110-1335, USA.
  */
 
-#ifdef HAVE_CONFIG_H
-#  include <config.h>
-#endif
+#include <config.h>
 
 #include <gdk/gdkx.h>
 #include <glib/gi18n.h>
@@ -400,14 +398,14 @@ move_up_selected_layout (GtkWidget * button, GtkBuilder * dialog)
 		return;
 
 	path = gtk_tree_model_get_path (model, &prev);
-	
+
 	gtk_list_store_swap (GTK_LIST_STORE (model), &iter, &prev);
 
 	update_layouts_list (model, dialog);
-	
+
 	set_selected_path (dialog, path);
 
-	gtk_tree_path_free (path);	
+	gtk_tree_path_free (path);
 }
 
 static void
@@ -432,7 +430,7 @@ move_down_selected_layout (GtkWidget * button, GtkBuilder * dialog)
 
 	set_selected_path (dialog, path);
 
-	gtk_tree_path_free (path);	
+	gtk_tree_path_free (path);
 }
 
 void

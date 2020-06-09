@@ -19,6 +19,7 @@
  * Author: Thomas Wood <thos@gnome.org>
  */
 
+#include "config.h"
 
 #include "cinnamon-control-center.h"
 
