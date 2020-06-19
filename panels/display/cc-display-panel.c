@@ -1203,7 +1203,7 @@ rebuild_scale_combo (CcDisplayPanel *self)
 
   current_scale = gnome_rr_output_info_get_scale (self->priv->current_output);
 
-  g_debug ("Current scale for selected output: %f", current_scale);
+  g_debug ("Current scale for selected output:%p   %f",self->priv->current_output,  current_scale);
 
   current = g_strdup_printf (_("%d%%"), (int) (current_scale * 100));
 
@@ -1234,8 +1234,6 @@ get_base_scale_string (guint value)
 {
     switch (value)
     {
-        case 0:
-            return g_strdup (_("Automatic"));
         case 1:
             return g_strdup (_("Normal"));
         case 2:
@@ -1719,7 +1717,7 @@ on_scale_changed (GtkComboBox *box, gpointer data)
     return;
 
   if (get_mode (self->priv->scale_combo, NULL, NULL, NULL, &scale, NULL, NULL, NULL, NULL))
-    {
+    {g_printerr ("on scale changed, %.2f\n", scale);
       gnome_rr_output_info_set_scale (self->priv->current_output, scale);
     }
 
@@ -1766,21 +1764,28 @@ on_base_scale_changed (GtkComboBox *box, gpointer data)
 
     if (new_auto_scale || !gtk_switch_get_active (GTK_SWITCH (self->priv->fractional_switch)))
     {
+        g_signal_handlers_block_by_func (self->priv->scale_combo, on_scale_changed, self);
+
         outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
 
         for (i = 0; outputs[i] != NULL; i++)
         {
           if (gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i]))
           {
+            g_printerr ("output %p, scale: %.2f\n",outputs[i], (float) new_value);
               gnome_rr_output_info_set_scale (outputs[i], (float) new_value);
           }
         }
+
+        g_signal_handlers_unblock_by_func (self->priv->scale_combo, on_scale_changed, self);
     }
   }
 
   if (new_auto_scale)
   {
+    g_signal_handlers_block_by_func (self->priv->fractional_switch, on_fractional_switch_toggled, self);
     gtk_switch_set_active (GTK_SWITCH (self->priv->fractional_switch), FALSE);
+    g_signal_handlers_unblock_by_func (self->priv->fractional_switch, on_fractional_switch_toggled, self);
   }
 
   gtk_widget_set_sensitive (self->priv->fractional_switch, !new_auto_scale);
@@ -1959,7 +1964,7 @@ on_fractional_switch_toggled (gpointer user_data)
   gtk_widget_set_sensitive (self->priv->scale_combo, enabled);
 
   if (!enabled)
-    {
+    {g_printerr ("fractional switchtoggle %.2f\n", (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
       gnome_rr_output_info_set_scale (self->priv->current_output,
                                       (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
 
