@@ -381,7 +381,6 @@
           <object class="GtkButton" id="apply_button">
             <property name="label">gtk-apply</property>
             <property name="visible">True</property>
-            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="can_default">True</property>
             <property name="receives_default">True</property>
