@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.2 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkBox" id="display-panel">
@@ -264,7 +264,7 @@
           <object class="GtkComboBox" id="base_scale_combo">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="tooltip_text" translatable="yes">Adjusts the global scaling factor. This is used for high-dpi monitors.  Setting it to auto will have the system decide the best scale based on the primary monitor.</property>
+            <property name="tooltip_text" translatable="yes">This is the global scaling factor for all monitors. In automatic mode, it is chosen based on the primary monitor.</property>
             <property name="hexpand">True</property>
             <child>
               <object class="GtkCellRendererText" id="cellrenderertext3"/>
@@ -301,6 +301,7 @@
               <object class="GtkSwitch" id="fractional_switch">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="tooltip_text" translatable="yes">This feature is experimental and may not work well with all hardware and drivers. Enabling it may impact performance, vsync, resolution or screen ratio.</property>
                 <property name="halign">start</property>
               </object>
               <packing>
@@ -313,7 +314,7 @@
               <object class="GtkComboBox" id="scale_combo">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="tooltip_text" translatable="yes">Allows adjustment of an individual monitor's scale factor.  This may not yield acceptable results on all hardware, and can be resource-intensive.</property>
+                <property name="tooltip_text" translatable="yes">This feature is experimental and may not work well with all hardware and drivers. Enabling it may impact performance, vsync, resolution or screen ratio.</property>
                 <property name="hexpand">True</property>
                 <child>
                   <object class="GtkCellRendererText" id="cellrenderertext2"/>
