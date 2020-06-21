@@ -1,3 +1,14 @@
+cinnamon-control-center (4.6.1) ulyana; urgency=medium
+
+  [ Michael Webster ]
+  * Display module fixes (scaling) (#238)
+
+  [ Clement Lefebvre ]
+  * l10n: Adjust msgids and update POT
+  * CI: Update targets
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 21 Jun 2020 13:38:31 +0100
+
 cinnamon-control-center (4.6.0) ulyana; urgency=medium
 
   [ Michael Webster ]
