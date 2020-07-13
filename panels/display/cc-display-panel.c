@@ -136,7 +136,7 @@ static gboolean output_overlaps (CcDisplayPanel *self, GnomeRROutputInfo *output
 static void select_current_output_from_dialog_position (CcDisplayPanel *self);
 static void monitor_switch_active_cb (GObject *object, GParamSpec *pspec, gpointer data);
 static void primary_button_clicked_cb (GObject *object, gpointer data);
-static void get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *w, int *h);
+static void get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *x, int *y, int *w, int *h);
 static void apply_configuration_returned_cb (GObject *proxy, GAsyncResult *res, gpointer data);
 static gboolean get_clone_size (GnomeRRScreen *screen, int *width, int *height);
 static gboolean output_info_supports_mode (CcDisplayPanel *self, GnomeRROutputInfo *info, int width, int height);
@@ -1996,11 +1996,11 @@ on_fractional_switch_toggled (gpointer user_data)
 }
 
 static void
-get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *w, int *h)
+get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *x, int *y, int *w, int *h)
 {
   if (gnome_rr_output_info_is_active (output))
     {
-      get_scaled_geometry (self, output, NULL, NULL, w, h);
+      get_scaled_geometry (self, output, x, y, w, h);
     }
   else
     {
@@ -2019,7 +2019,7 @@ get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *w, int *h)
 #define MARGIN  15
 
 static GList *
-list_connected_outputs (CcDisplayPanel *self, int *total_w, int *total_h)
+list_connected_outputs (CcDisplayPanel *self, int *total_w, int *total_h, int *used_w, int *used_h)
 {
   int i, dummy;
   GList *result = NULL;
@@ -2029,23 +2029,32 @@ list_connected_outputs (CcDisplayPanel *self, int *total_w, int *total_h)
     total_w = &dummy;
   if (!total_h)
     total_h = &dummy;
+  if (!used_w)
+    used_w = &dummy;
+  if (!used_h)
+    used_h = &dummy;
 
   *total_w = 0;
   *total_h = 0;
+  *used_w = 0;
+  *used_h = 0;
 
   outputs = gnome_rr_config_get_outputs (self->priv->current_configuration);
   for (i = 0; outputs[i] != NULL; ++i)
     {
       if (gnome_rr_output_info_is_connected (outputs[i]))
-	{
-	  int w, h;
+        {
+          int x, y, w, h;
 
-	  result = g_list_prepend (result, outputs[i]);
+          result = g_list_prepend (result, outputs[i]);
 
-	  get_geometry (self, outputs[i], &w, &h);
+          get_geometry (self, outputs[i], &x, &y, &w, &h);
 
           *total_w += w;
           *total_h += h;
+
+          *used_w = MAX (*used_w, x + w);
+          *used_h = MAX (*used_h, y + h);
         }
     }
 
@@ -2055,7 +2064,7 @@ list_connected_outputs (CcDisplayPanel *self, int *total_w, int *total_h)
 static int
 get_n_connected (CcDisplayPanel *self)
 {
-  GList *connected_outputs = list_connected_outputs (self, NULL, NULL);
+  GList *connected_outputs = list_connected_outputs (self, NULL, NULL, NULL, NULL);
   int n = g_list_length (connected_outputs);
 
   g_list_free (connected_outputs);
@@ -2074,7 +2083,7 @@ compute_scale (CcDisplayPanel *self)
 
   foo_scroll_area_get_viewport (FOO_SCROLL_AREA (self->priv->area), &viewport);
 
-  connected_outputs = list_connected_outputs (self, &total_w, &total_h);
+  connected_outputs = list_connected_outputs (self, &total_w, &total_h, NULL, NULL);
 
   n_monitors = g_list_length (connected_outputs);
 
@@ -2718,8 +2727,8 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   double x, y;
   int output_x, output_y;
   GnomeRRRotation rotation;
-  int total_w, total_h;
-  GList *connected_outputs = list_connected_outputs (self, &total_w, &total_h);
+  int total_w, total_h, used_w, used_h;
+  GList *connected_outputs = list_connected_outputs (self, &total_w, &total_h, &used_w, &used_h);
   GnomeRROutputInfo *output = g_list_nth_data (connected_outputs, i);
   PangoLayout *layout = get_display_name (self, output);
   PangoRectangle ink_extent, log_extent;
@@ -2732,7 +2741,7 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   cairo_save (cr);
 
   foo_scroll_area_get_viewport (FOO_SCROLL_AREA (self->priv->area), &viewport);
-  get_geometry (self, output, &w, &h);
+  get_geometry (self, output, NULL, NULL, &w, &h);
 
 #if 0
   g_printerr ("%s (%p) geometry %d %d %.2f primary=%d\n",
@@ -2747,8 +2756,8 @@ paint_output (CcDisplayPanel *self, cairo_t *cr, int i)
   viewport.width -= 2 * MARGIN;
 
   get_scaled_geometry (self, output, &output_x, &output_y, NULL, NULL);
-  x = output_x * scale + MARGIN + (viewport.width - total_w * scale) / 2.0;
-  y = output_y * scale + MARGIN + (viewport.height - total_h * scale) / 2.0;
+  x = output_x * scale + MARGIN + (viewport.width - used_w * scale) / 2.0;
+  y = output_y * scale + MARGIN + (viewport.height - used_h * scale) / 2.0;
 
 #if 0
   g_printerr ("scaled: %f %f\n", x, y);
@@ -2866,7 +2875,7 @@ on_area_paint (FooScrollArea  *area,
   if (!self->priv->current_configuration)
     return;
 
-  connected_outputs = list_connected_outputs (self, NULL, NULL);
+  connected_outputs = list_connected_outputs (self, NULL, NULL, NULL, NULL);
 
   for (list = connected_outputs; list != NULL; list = list->next)
     {
