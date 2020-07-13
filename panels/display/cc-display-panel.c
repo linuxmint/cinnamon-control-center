@@ -146,6 +146,8 @@ static GObject *cc_display_panel_constructor (GType                  gtype,
 					      guint                  n_properties,
 					      GObjectConstructParam *properties);
 static void on_screen_changed (gpointer data);
+static void realign_outputs_after_scale_or_rotation_change (CcDisplayPanel *self,
+                                                            GnomeRROutputInfo *output_that_changed);
 
 static void
 cc_display_panel_get_property (GObject    *object,
@@ -1442,6 +1444,10 @@ on_rotation_changed (GtkComboBox *box, gpointer data)
 
   update_apply_state (self);
 
+  // Changing rotation can cause overlap (until a drag is initiated), so just
+  // refresh it when this change.
+  realign_outputs_after_scale_or_rotation_change (self, self->priv->current_output);
+  gnome_rr_config_sanitize (self->priv->current_configuration);
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
@@ -1519,7 +1525,23 @@ sort_by_x (gconstpointer a, gconstpointer b)
 }
 
 static void
-realign_outputs_after_scale_change (CcDisplayPanel *self, GnomeRROutputInfo *output_that_changed)
+apply_rotation_to_geometry (GnomeRROutputInfo *output, int *w, int *h)
+{
+  GnomeRRRotation rotation;
+
+  rotation = gnome_rr_output_info_get_rotation (output);
+  if ((rotation & GNOME_RR_ROTATION_90) || (rotation & GNOME_RR_ROTATION_270))
+    {
+      int tmp;
+      tmp = *h;
+      *h = *w;
+      *w = tmp;
+    }
+}
+
+static void
+realign_outputs_after_scale_or_rotation_change (CcDisplayPanel *self,
+                                                GnomeRROutputInfo *output_that_changed)
 {
   /* We take all outputs, figure out their existing left-to-right order, then reconnect their edges.
    * This is different from a resolution change on a single monitor, because a scale change can potentially
@@ -1564,6 +1586,7 @@ realign_outputs_after_scale_change (CcDisplayPanel *self, GnomeRROutputInfo *out
       int width, height;
       get_scaled_geometry (self, iter->data, NULL, NULL, &width, &height);
       set_scaled_geometry (self, iter->data, x, 0, width, height);
+      apply_rotation_to_geometry (iter->data, &width, &height);
       x += width;
     }
 
@@ -1725,7 +1748,7 @@ on_scale_changed (GtkComboBox *box, gpointer data)
 
   get_scaled_geometry (self, self->priv->current_output, NULL, NULL, &width, &height);
 
-  realign_outputs_after_scale_change (self, self->priv->current_output);
+  realign_outputs_after_scale_or_rotation_change (self, self->priv->current_output);
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
@@ -1790,7 +1813,7 @@ on_base_scale_changed (GtkComboBox *box, gpointer data)
 
   gtk_widget_set_sensitive (self->priv->fractional_switch, !new_auto_scale);
 
-  realign_outputs_after_scale_change (self, self->priv->current_output);
+  realign_outputs_after_scale_or_rotation_change (self, self->priv->current_output);
   foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 
   update_apply_state (self);
@@ -1969,21 +1992,6 @@ on_fractional_switch_toggled (gpointer user_data)
                                       (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
 
       rebuild_scale_combo (self);
-    }
-}
-
-static void
-apply_rotation_to_geometry (GnomeRROutputInfo *output, int *w, int *h)
-{
-  GnomeRRRotation rotation;
-
-  rotation = gnome_rr_output_info_get_rotation (output);
-  if ((rotation & GNOME_RR_ROTATION_90) || (rotation & GNOME_RR_ROTATION_270))
-    {
-      int tmp;
-      tmp = *h;
-      *h = *w;
-      *w = tmp;
     }
 }
 
@@ -2586,6 +2594,9 @@ on_output_event (FooScrollArea *area,
 
 	      g_free (g_object_get_data (G_OBJECT (output), "grab-info"));
 	      g_object_set_data (G_OBJECT (output), "grab-info", NULL);
+
+          // Re-center and scale everything after a drag
+          gnome_rr_config_sanitize (self->priv->current_configuration);
 
 #if 0
               g_debug ("new position: %d %d %d %d", output->x, output->y, output->width, output->height);
