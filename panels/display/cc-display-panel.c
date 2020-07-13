@@ -1964,7 +1964,7 @@ on_fractional_switch_toggled (gpointer user_data)
   gtk_widget_set_sensitive (self->priv->scale_combo, enabled);
 
   if (!enabled)
-    {g_printerr ("fractional switchtoggle %.2f\n", (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
+    {
       gnome_rr_output_info_set_scale (self->priv->current_output,
                                       (float) gnome_rr_config_get_base_scale (self->priv->current_configuration));
 
@@ -2311,8 +2311,7 @@ output_is_aligned (CcDisplayPanel *self, GnomeRROutputInfo *output, GArray *edge
 static void
 get_output_rect (CcDisplayPanel *self, GnomeRROutputInfo *output, GdkRectangle *rect)
 {
-  gnome_rr_output_info_get_geometry (output, &rect->x, &rect->y, &rect->width, &rect->height);
-
+  get_scaled_geometry (self, output, &rect->x, &rect->y, &rect->width, &rect->height);
   apply_rotation_to_geometry (output, &rect->width, &rect->height);
 }
 
