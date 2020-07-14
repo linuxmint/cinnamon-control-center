@@ -148,6 +148,9 @@ static GObject *cc_display_panel_constructor (GType                  gtype,
 static void on_screen_changed (gpointer data);
 static void realign_outputs_after_scale_or_rotation_change (CcDisplayPanel *self,
                                                             GnomeRROutputInfo *output_that_changed);
+static void begin_version2_apply_configuration (CcDisplayPanel *self,
+                                                GdkWindow *parent_window,
+                                                guint32 timestamp);
 
 static void
 cc_display_panel_get_property (GObject    *object,
@@ -251,12 +254,34 @@ error_message (CcDisplayPanel *self, const char *primary_text, const char *secon
                                    GTK_BUTTONS_CLOSE,
                                    "%s", primary_text);
 
-  if (secondary_text)
-    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s", secondary_text);
+  if (secondary_text) {
+    GtkWidget *scrolled_window;
+    GtkWidget *box;
+    GtkWidget *label;
+
+    scrolled_window = gtk_scrolled_window_new (NULL, NULL);
+    gtk_widget_set_size_request (scrolled_window, 600, 200);
+    gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
+                                    GTK_POLICY_NEVER,
+                                    GTK_POLICY_AUTOMATIC);
+
+    label = gtk_label_new (secondary_text);
+    gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
+    box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
+    gtk_box_pack_start (GTK_BOX (box), label, TRUE, TRUE, 0);
+
+    gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (scrolled_window), box);
+
+    gtk_box_pack_start(GTK_BOX (gtk_message_dialog_get_message_area (GTK_MESSAGE_DIALOG (dialog))),
+                       scrolled_window, TRUE, TRUE, 10);
+    gtk_widget_show_all (scrolled_window);
+  }
 
   gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_destroy (dialog);
 }
+
+
 
 static gboolean
 int_equals_float (gint _int, gfloat _float)
@@ -3383,6 +3408,52 @@ on_detect_displays (GtkWidget *widget, gpointer data)
   cc_rr_labeler_show (self->priv->labeler);
 }
 
+static void
+delete_config_complete (GObject      *source,
+                        GAsyncResult *res,
+                        gpointer      user_data)
+{
+    GError *error = NULL;
+
+    if (!g_file_delete_finish (G_FILE (source), res, &error)) {
+      if (error) {
+        if (error->code != G_IO_ERROR_NOT_FOUND) {
+          g_critical ("Could not remove ~/.config/cinnamon-monitors.xml: %s", error->message);
+        }
+
+        g_error_free (error);
+      }
+
+      return;
+    }
+
+    /* We deleted the configuration file. We start an instance of csd-xrandr solely
+     * for the purpose of getting a default 'safe' configuration applied to the system
+     * without having to log out and back in. The original instance of csd-xrandr will
+     * remain running after this exits. */
+    if (!g_spawn_command_line_async ("csd-xrandr --exit-time 5", &error)) {
+      g_critical ("Could not apply default configuration. You should log out and back in: %s",
+                  error->message);
+      g_error_free (error);
+    }
+}
+
+static void
+reset_to_defaults (CcDisplayPanel *self)
+{
+    gchar *path = g_build_filename (g_get_user_config_dir (), "cinnamon-monitors.xml", NULL);
+    GFile *xml = g_file_new_for_path (path);
+    g_free (path);
+
+    g_file_delete_async (xml,
+                         G_PRIORITY_DEFAULT,
+                         NULL,
+                         (GAsyncReadyCallback) (delete_config_complete),
+                         self);
+
+    g_object_unref (xml);
+}
+
 static GnomeRROutputInfo *
 get_nearest_output (CcDisplayPanel *self, GnomeRRConfig *configuration, int x, int y)
 {
@@ -3664,6 +3735,9 @@ cc_display_panel_constructor (GType                  gtype,
 
   g_signal_connect_swapped (WID ("apply_button"),
                             "clicked", G_CALLBACK (apply), self);
+
+  g_signal_connect_swapped (WID ("reset_button"),
+                            "clicked", G_CALLBACK (reset_to_defaults), self);
 
   gtk_widget_show (self->priv->panel);
   gtk_container_add (GTK_CONTAINER (self), self->priv->panel);
