@@ -2018,6 +2018,10 @@ on_fractional_switch_toggled (gpointer user_data)
 
       rebuild_scale_combo (self);
     }
+
+  realign_outputs_after_scale_or_rotation_change (self, self->priv->current_output);
+  gnome_rr_config_sanitize (self->priv->current_configuration);
+  foo_scroll_area_invalidate (FOO_SCROLL_AREA (self->priv->area));
 }
 
 static void
