@@ -329,19 +329,13 @@ get_scaled_geometry (CcDisplayPanel *self,
 }
 
 static void
-set_scaled_geometry (CcDisplayPanel *self,
+set_output_position (CcDisplayPanel    *self,
                      GnomeRROutputInfo *info,
-                     int x,     int y,
-                     int width, int height)
+                     int x, int y)
 {
-    float scale;
-    g_return_if_fail (GNOME_IS_RR_OUTPUT_INFO (info));
+    int width, height;
 
-    scale = 1 / (gnome_rr_output_info_get_scale (info) / gnome_rr_config_get_base_scale (self->priv->current_configuration));
-
-    width = ceilf (width / scale);
-    height = ceilf (height / scale);
-
+    gnome_rr_output_info_get_geometry (info, NULL, NULL, &width, &height);
     gnome_rr_output_info_set_geometry (info, x, y, width, height);
 }
 
@@ -1610,7 +1604,7 @@ realign_outputs_after_scale_or_rotation_change (CcDisplayPanel *self,
     {
       int width, height;
       get_scaled_geometry (self, iter->data, NULL, NULL, &width, &height);
-      set_scaled_geometry (self, iter->data, x, 0, width, height);
+      set_output_position (self, iter->data, x, 0);
       apply_rotation_to_geometry (iter->data, &width, &height);
       x += width;
     }
@@ -1623,7 +1617,7 @@ realign_outputs_after_scale_or_rotation_change (CcDisplayPanel *self,
       if (!(gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i])))
         {
           get_scaled_geometry (self, outputs[i], NULL, NULL, &width, &height);
-          set_scaled_geometry (self, outputs[i], x, 0, width, height);
+          set_output_position (self, outputs[i], x, 0);
           x += width;
         }
     }
@@ -1679,7 +1673,7 @@ realign_outputs_after_resolution_change (CcDisplayPanel *self, GnomeRROutputInfo
       else if (output_y + output_height == old_bottom_edge)
          output_y = y + height - output_height;
 
-      set_scaled_geometry (self, outputs[i], output_x, output_y, output_width, output_height);
+      set_output_position (self, outputs[i], output_x, output_y);
     }
 }
 
@@ -1869,7 +1863,7 @@ lay_out_outputs_horizontally (CcDisplayPanel *self)
       if (gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i]))
         {
           get_scaled_geometry (self, outputs[i], NULL, NULL, &width, &height);
-          set_scaled_geometry (self, outputs[i], x, 0, width, height);
+          set_output_position (self, outputs[i], x, 0);
           x += width;
         }
     }
@@ -1882,7 +1876,7 @@ lay_out_outputs_horizontally (CcDisplayPanel *self)
       if (!(gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i])))
         {
           get_scaled_geometry (self, outputs[i], NULL, NULL, &width, &height);
-          set_scaled_geometry (self, outputs[i], x, 0, width, height);
+          set_output_position (self, outputs[i], x, 0);
           x += width;
         }
     }
@@ -2587,7 +2581,7 @@ on_output_event (FooScrollArea *area,
 	  new_x = info->output_x + (event->x - info->grab_x) / scale;
 	  new_y = info->output_y + (event->y - info->grab_y) / scale;
 
-	  set_scaled_geometry (self, output, new_x, new_y, width, height);
+	  set_output_position (self, output, new_x, new_y);
 
 	  edges = g_array_new (TRUE, TRUE, sizeof (Edge));
 	  snaps = g_array_new (TRUE, TRUE, sizeof (Snap));
@@ -2598,14 +2592,14 @@ on_output_event (FooScrollArea *area,
 
 	  g_array_sort (snaps, compare_snaps);
 
-	  set_scaled_geometry (self, output, new_x, new_y, width, height);
+	  set_output_position (self, output, new_x, new_y);
 
 	  for (i = 0; i < snaps->len; ++i)
 	    {
 	      Snap *snap = &(g_array_index (snaps, Snap, i));
 	      GArray *new_edges = g_array_new (TRUE, TRUE, sizeof (Edge));
 
-	      set_scaled_geometry (self, output, new_x + snap->dx, new_y + snap->dy, width, height);
+	      set_output_position (self, output, new_x + snap->dx, new_y + snap->dy);
 
 	      g_array_set_size (new_edges, 0);
 	      list_edges (self, self->priv->current_configuration, new_edges);
@@ -2617,7 +2611,7 @@ on_output_event (FooScrollArea *area,
 		}
 	      else
 		{
-		  set_scaled_geometry (self, output, info->output_x, info->output_y, width, height);
+		  set_output_position (self, output, info->output_x, info->output_y);
 		}
 	    }
 
