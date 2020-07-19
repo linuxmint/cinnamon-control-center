@@ -2202,8 +2202,7 @@ vertical_overlap (Edge *snapper, Edge *snappee)
 static void
 add_snap (GArray *snaps, Snap snap)
 {
-  if (ABS (snap.dx) <= 200 || ABS (snap.dy) <= 200)
-    g_array_append_val (snaps, snap);
+  g_array_append_val (snaps, snap);
 }
 
 static void
