@@ -2028,7 +2028,7 @@ get_geometry (CcDisplayPanel *self, GnomeRROutputInfo *output, int *x, int *y, i
   else
     {
       float scale;
-
+      gnome_rr_output_info_get_geometry (output, x, y, NULL, NULL);
       scale = 1 / (gnome_rr_output_info_get_scale (output) / gnome_rr_config_get_base_scale (self->priv->current_configuration));
 
       *h = floor (gnome_rr_output_info_get_preferred_height (output) * scale);
