@@ -1,3 +1,20 @@
+cinnamon-control-center (4.6.2) ulyana; urgency=medium
+
+  [ Michael Webster ]
+  * cc-display-panel.c: Use scaled geometry when checking overlap and alignment while dragging.
+  * cc-display-panel.c: Realign after a rotation change, re-scale and center the view after a grab ends.
+  * cc-display-panel.c: Improve display representation while dragging.
+  * cc-display-panel.c: Use a scrolled window in the error popup, and add a reset button to the panel.
+  * cc-display-panel.c: Update the view after toggling the fractional scale switch.
+  * cc-display-panel.c: Never scale the output width and height.
+  * cc-display-panel.c: Fill in all geometry for non-active monitors, not just the size, to ensure uninitialized values don't get returned to callers.
+  * cc-display-panel.c: Don't allow monitors to be dragged apart.
+
+  [ Eli Schwartz ]
+  * remove outdated build dependency on dbus-glib (#235)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Aug 2020 15:31:06 +0100
+
 cinnamon-control-center (4.6.1) ulyana; urgency=medium
 
   [ Michael Webster ]
