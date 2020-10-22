@@ -17,7 +17,7 @@ override_dh_auto_test:
 override_dh_dwz:
 
 override_dh_strip:
-	dh_strip --dbg-package=cinnamon-control-center-dbg
+# 	dh_strip --dbg-package=cinnamon-control-center-dbg
 
 override_dh_makeshlibs:
 	dh_makeshlibs -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels
