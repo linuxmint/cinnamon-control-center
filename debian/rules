@@ -10,21 +10,14 @@ MAIN_PKG = cinnamon-control-center
 %:
 	dh $@ --buildsystem=meson
 
-override_dh_gnome_clean:
-	dh_gnome_clean --no-control
-
 override_dh_auto_test:
 	# Disable auto tests
 	:
 
+override_dh_dwz:
+
 override_dh_strip:
 	dh_strip --dbg-package=cinnamon-control-center-dbg
-
-override_dh_missing:
-	dh_missing --list-missing
-
-override_dh_makeshlibs:
-	dh_makeshlibs -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels
 
 override_dh_makeshlibs:
 	dh_makeshlibs -Xusr/lib/$(DEB_HOST_MULTIARCH)/cinnamon-control-center-1/panels
