@@ -76,6 +76,15 @@ Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
 
+Package: cinnamon-control-center-dbg
+Priority: extra
+Section: debug
+Architecture: any
+Depends: cinnamon-control-center (= ${binary:Version}), ${misc:Depends}
+Description: utilities to configure the Cinnamon desktop - debug symbols
+ This package contains the debug symbols for the configuration applets of the
+ Cinnamon desktop.
+
 Package: libcinnamon-control-center-dev
 Section: libdevel
 Architecture: any
