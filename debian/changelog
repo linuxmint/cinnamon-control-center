@@ -1,3 +1,25 @@
+cinnamon-control-center (4.8.0) ulyssa; urgency=medium
+
+  [ Leigh Scott ]
+  * network: Fix runtime warning
+
+  [ Félix Piédallu ]
+  * Fix config.h inclusion
+  * Port to Meson
+  * Debian rules
+  * Target LMDE4 and Mint 20 too.
+  * Fix some build issues - we no longer use datetime, NetworkManager is gone, removed old build system and many other files that weren't used.
+
+  [ Michael Webster ]
+  * debian/rules: Fix build in lmde4, remove duplicate item, remove redundant dh_missing.
+  * debian: Disable debug packages for now, until they can be fixed.
+  * Revert previous commit disabling debug packages.
+
+  [ Clement Lefebvre ]
+  * l10n: Generate files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 25 Nov 2020 14:17:42 +0000
+
 cinnamon-control-center (4.6.2) ulyana; urgency=medium
 
   [ Michael Webster ]
