@@ -25,11 +25,11 @@ config.set_quoted('GETTEXT_PACKAGE',  gettext_package)
 
 math = cc.find_library('m')
 
-cinn_desktop= dependency('cinnamon-desktop')
+cinn_desktop= dependency('cinnamon-desktop', version: '>=4.6.0')
 cinn_menu   = dependency('libcinnamon-menu-3.0')
 
-gtk         = dependency('gtk+-3.0',        version: '>=3.8.0')
-glib        = dependency('glib-2.0',        version: '>=2.31.0')
+gtk         = dependency('gtk+-3.0',        version: '>=3.16.0')
+glib        = dependency('glib-2.0',        version: '>=2.44.0')
 libgnomekbd = dependency('libgnomekbd',     version: '>=3.0.0')
 libgnomekbdui=dependency('libgnomekbdui',   version: '>=3.0.0')
 libnotify   = dependency('libnotify',       version: '>=0.7.3')
