@@ -1449,7 +1449,8 @@ net_device_wifi_constructed (GObject *object)
         perm = nm_client_get_permission_result (client, NM_CLIENT_PERMISSION_WIFI_SHARE_OPEN);
         caps = nm_device_wifi_get_capabilities (NM_DEVICE_WIFI (nm_device));
         if (perm != NM_CLIENT_PERMISSION_RESULT_YES &&
-            perm != NM_CLIENT_PERMISSION_RESULT_AUTH) {
+            perm != NM_CLIENT_PERMISSION_RESULT_AUTH &&
+            perm != NM_CLIENT_PERMISSION_RESULT_UNKNOWN) {
                 gtk_widget_set_tooltip_text (widget, _("System policy prohibits use as a Hotspot"));
                 gtk_widget_set_sensitive (widget, FALSE);
         } else if (!(caps & (NM_WIFI_DEVICE_CAP_AP | NM_WIFI_DEVICE_CAP_ADHOC))) {
