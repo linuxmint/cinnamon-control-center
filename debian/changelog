@@ -1,3 +1,9 @@
+cinnamon-control-center (4.8.2) ulyssa; urgency=medium
+
+  * Network: Don't prevent hotspot capability unless NM specifically rules it out
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 02 Jan 2021 18:26:37 +0000
+
 cinnamon-control-center (4.8.1) ulyssa; urgency=medium
 
   [ Michael Webster ]
