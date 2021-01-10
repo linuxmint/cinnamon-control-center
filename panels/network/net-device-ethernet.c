@@ -136,17 +136,19 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         gchar *ip4_route = NULL;
         gchar *ip4_dns = NULL;
         gchar *ip6_address = NULL;
+        gchar *ip6_dns = NULL;
         gint i = 0;
 
         ip4_config = nm_device_get_ip4_config (device);
         if (ip4_config) {
                 ip4_address = panel_get_ip4_address_as_string (ip4_config, "address");
                 ip4_route = panel_get_ip4_address_as_string (ip4_config, "gateway");
-                ip4_dns = panel_get_ip4_dns_as_string (ip4_config);
+                ip4_dns = panel_get_dns_as_string (ip4_config);
         }
         ip6_config = nm_device_get_ip6_config (device);
         if (ip6_config) {
                 ip6_address = panel_get_ip6_address_as_string (ip6_config);
+                ip6_dns = panel_get_dns_as_string (ip6_config);
         }
 
         if (ip4_address && ip6_address) {
@@ -155,7 +157,7 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         } else if (ip4_address) {
                 add_details_row (details, i++, _("IP Address"), ip4_address);
         } else if (ip6_address) {
-                add_details_row (details, i++, _("IPv6 Address"), ip6_address);
+                add_details_row (details, i++, _("IP Address"), ip6_address);
         }
 
         add_details_row (details, i++, _("Hardware Address"),
@@ -163,8 +165,15 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
 
         if (ip4_route)
                 add_details_row (details, i++, _("Default Route"), ip4_route);
-        if (ip4_dns)
+        
+        if (ip4_dns && ip6_dns) {
+                add_details_row (details, i++, _("DNS4"), ip4_dns);
+                add_details_row (details, i++, _("DNS6"), ip6_dns);
+        } else if (ip4_dns) {
                 add_details_row (details, i++, _("DNS"), ip4_dns);
+        } else if (ip6_dns) {
+                add_details_row (details, i++, _("DNS"), ip6_dns);
+        }
 
         if (nm_device_get_state (device) != NM_DEVICE_STATE_ACTIVATED) {
                 gchar *last_used;
@@ -177,6 +186,7 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         g_free (ip4_route);
         g_free (ip4_dns);
         g_free (ip6_address);
+        g_free (ip6_dns);
 }
 
 static void populate_ui (NetDeviceEthernet *device);

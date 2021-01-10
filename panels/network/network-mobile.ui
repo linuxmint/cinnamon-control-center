@@ -131,7 +131,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_dns">
+              <object class="GtkLabel" id="label_dns4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">0</property>
@@ -142,6 +142,22 @@
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">7</property>
+                <property name="width">2</property>
+                <property name="height">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_dns6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">0</property>
+                <property name="yalign">0</property>
+                <property name="wrap">True</property>
+                <property name="selectable">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">8</property>
                 <property name="width">2</property>
                 <property name="height">1</property>
               </packing>
@@ -215,12 +231,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="heading_dns">
+              <object class="GtkLabel" id="heading_dns4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="xalign">1</property>
                 <property name="yalign">0</property>
-                <property name="label" translatable="yes">DNS</property>
+                <property name="label" translatable="yes">DNS4</property>
                 <style>
                   <class name="dim-label"/>
                 </style>
@@ -228,6 +244,24 @@
               <packing>
                 <property name="left_attach">0</property>
                 <property name="top_attach">7</property>
+                <property name="width">1</property>
+                <property name="height">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="heading_dns6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">1</property>
+                <property name="yalign">0</property>
+                <property name="label" translatable="yes">DNS6</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">8</property>
                 <property name="width">1</property>
                 <property name="height">1</property>
               </packing>
