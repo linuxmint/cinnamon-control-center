@@ -556,10 +556,15 @@ out:
 }
 
 gchar *
-panel_get_ip4_dns_as_string (NMIPConfig *ip4_config)
+panel_get_dns_as_string (NMIPConfig *ip_config)
 {
-        return g_strjoinv (" ",
-                           (char **) nm_ip_config_get_nameservers (ip4_config));
+        const char *const *arrc;
+
+        arrc = nm_ip_config_get_nameservers (ip_config);
+        if (*arrc != NULL)
+                return g_strjoinv (" ", (char **) arrc);
+
+        return NULL;
 }
 
 gchar *
@@ -582,6 +587,8 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         NMIPConfig *ip6_config = NULL;
         gboolean has_ip4;
         gboolean has_ip6;
+        gchar *ip4_dns = NULL;
+        gchar *ip6_dns = NULL;
         gchar *str_tmp;
 
         /* get IPv4 parameters */
@@ -597,11 +604,10 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
                 g_free (str_tmp);
 
                 /* IPv4 DNS */
-                str_tmp = panel_get_ip4_dns_as_string (ip4_config);
+                ip4_dns = panel_get_dns_as_string (ip4_config);
                 panel_set_device_widget_details (builder,
-                                                 "dns",
-                                                 str_tmp);
-                g_free (str_tmp);
+                                                 "dns4",
+                                                 ip4_dns);
 
                 /* IPv4 route */
                 str_tmp = panel_get_ip4_address_as_string (ip4_config, "gateway");
@@ -619,7 +625,7 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
 
                 /* IPv4 DNS */
                 panel_set_device_widget_details (builder,
-                                                 "dns",
+                                                 "dns4",
                                                  NULL);
 
                 /* IPv4 route */
@@ -632,12 +638,28 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         ip6_config = nm_device_get_ip6_config (device);
         if (ip6_config != NULL) {
                 str_tmp = panel_get_ip6_address_as_string (ip6_config);
-                panel_set_device_widget_details (builder, "ipv6", str_tmp);
+                panel_set_device_widget_details (builder,
+                                                 "ipv6",
+                                                 str_tmp);
                 has_ip6 = str_tmp != NULL;
                 g_free (str_tmp);
+
+                /* IPv6 DNS */
+                ip6_dns = panel_get_dns_as_string (ip6_config);
+                panel_set_device_widget_details (builder,
+                                                 "dns6",
+                                                 ip6_dns);
+
         } else {
-                panel_set_device_widget_details (builder, "ipv6", NULL);
+                panel_set_device_widget_details (builder,
+                                                 "ipv6",
+                                                 NULL);
                 has_ip6 = FALSE;
+
+                /* IPv6 DNS */
+                panel_set_device_widget_details (builder,
+                                                 "dns6",
+                                                 NULL);
         }
 
         if (has_ip4 && has_ip6) {
@@ -648,6 +670,18 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         } else if (has_ip6) {
                 panel_set_device_widget_header (builder, "ipv6", _("IP Address"));
         }
+
+        if (ip4_dns && ip6_dns) {
+                panel_set_device_widget_header (builder, "dns4", _("DNS4"));
+                panel_set_device_widget_header (builder, "dns6", _("DNS6"));
+        } else if (ip4_dns) {
+                panel_set_device_widget_header (builder, "dns4", _("DNS"));
+        } else if (ip6_dns) {
+                panel_set_device_widget_header (builder, "dns6", _("DNS"));
+        }
+
+        g_free (ip4_dns);
+        g_free (ip6_dns);
 }
 
 void
@@ -655,6 +689,7 @@ panel_unset_device_widgets (GtkBuilder *builder)
 {
         panel_set_device_widget_details (builder, "ipv4", NULL);
         panel_set_device_widget_details (builder, "ipv6", NULL);
-        panel_set_device_widget_details (builder, "dns", NULL);
+        panel_set_device_widget_details (builder, "dns4", NULL);
+        panel_set_device_widget_details (builder, "dns6", NULL);
         panel_set_device_widget_details (builder, "route", NULL);
 }
