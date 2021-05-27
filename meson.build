@@ -1,5 +1,5 @@
 project('cinnamon-control-center', 'c',
-  version: '4.8.2',
+  version: '5.0.0',
   meson_version: '>=0.49.0',
 )
 
