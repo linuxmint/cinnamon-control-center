@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-21 13:10+0100\n"
+"POT-Creation-Date: 2021-05-27 15:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -306,28 +306,28 @@ msgstr ""
 msgid "Unspecified"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:599 panels/display/cc-display-panel.c:1208
-#: panels/display/cc-display-panel.c:1215
+#: panels/display/cc-display-panel.c:620 panels/display/cc-display-panel.c:1229
+#: panels/display/cc-display-panel.c:1236
 #, c-format
 msgid "%d%%"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:666
+#: panels/display/cc-display-panel.c:687
 msgctxt "display panel, rotation"
 msgid "Normal"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:667
+#: panels/display/cc-display-panel.c:688
 msgctxt "display panel, rotation"
 msgid "Counterclockwise"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:668
+#: panels/display/cc-display-panel.c:689
 msgctxt "display panel, rotation"
 msgid "Clockwise"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:669
+#: panels/display/cc-display-panel.c:690
 msgctxt "display panel, rotation"
 msgid "180 Degrees"
 msgstr ""
@@ -343,84 +343,84 @@ msgstr ""
 #. * Here, "Mirrored" is being used as an adjective.  For example,
 #. * the Spanish translation could be "Pantallas en Espejo".
 #.
-#: panels/display/cc-display-panel.c:814 panels/display/cc-rr-labeler.c:404
+#: panels/display/cc-display-panel.c:835 panels/display/cc-rr-labeler.c:404
 msgid "Mirrored Displays"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:838
+#: panels/display/cc-display-panel.c:859
 msgid "Monitor"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:942
+#: panels/display/cc-display-panel.c:963
 #, c-format
 msgid "%d x %d%s (%s)"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:944
+#: panels/display/cc-display-panel.c:965
 #, c-format
 msgid "%d x %d%s"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:959
+#: panels/display/cc-display-panel.c:980
 #, c-format
 msgid "%.2lf Hz"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1238
+#: panels/display/cc-display-panel.c:1259
 msgid "Normal"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1240
+#: panels/display/cc-display-panel.c:1261
 msgid "Double (Hi-DPI)"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1280
+#: panels/display/cc-display-panel.c:1301
 #, c-format
 msgid "Automatic (%ux)"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:2444
+#: panels/display/cc-display-panel.c:2482
 msgid ""
 "Select a monitor to change its properties; drag it to rearrange its "
 "placement."
 msgstr ""
 
-#: panels/display/cc-display-panel.c:2890
+#: panels/display/cc-display-panel.c:2931
 msgid "DoubleScan"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:2928
+#: panels/display/cc-display-panel.c:2969
 msgid "VSync"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:2966
-#: panels/display/cc-display-panel.c:2994
+#: panels/display/cc-display-panel.c:3007
+#: panels/display/cc-display-panel.c:3035
 msgid "Recommended"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:3029
+#: panels/display/cc-display-panel.c:3070
 #, c-format
 msgid "<b>scaled resolution: %d x %d</b>"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:3218
-#: panels/display/cc-display-panel.c:3270
+#: panels/display/cc-display-panel.c:3259
+#: panels/display/cc-display-panel.c:3311
 msgid "Failed to apply configuration"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:3298
+#: panels/display/cc-display-panel.c:3339
 msgid "Could not save the monitor configuration"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:3358
+#: panels/display/cc-display-panel.c:3399
 msgid "Could not detect displays"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:3554
+#: panels/display/cc-display-panel.c:3641
 msgid "Could not get screen information"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:895
+#: panels/network/cc-network-panel.c:910
 msgid "Network proxy"
 msgstr ""
 
@@ -428,17 +428,17 @@ msgstr ""
 #. * window for vpn connections, it is also used to display
 #. * vpn connections in the device list.
 #.
-#: panels/network/cc-network-panel.c:1074 panels/network/net-vpn.c:287
+#: panels/network/cc-network-panel.c:1089 panels/network/net-vpn.c:287
 #: panels/network/net-vpn.c:444
 #, c-format
 msgid "%s VPN"
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1141
+#: panels/network/cc-network-panel.c:1156
 msgid "Oops, something has gone wrong. Please contact your software vendor."
 msgstr ""
 
-#: panels/network/cc-network-panel.c:1147
+#: panels/network/cc-network-panel.c:1162
 msgid "NetworkManager needs to be running."
 msgstr ""
 
@@ -471,48 +471,61 @@ msgid_plural "%i days ago"
 msgstr[0] ""
 msgstr[1] ""
 
-#: panels/network/net-device-ethernet.c:153 panels/network/panel-common.c:644
+#: panels/network/net-device-ethernet.c:155 panels/network/panel-common.c:666
 #: panels/network/network-simple.ui.h:3 panels/network/network-wifi.ui.h:7
 #: panels/network/connection-editor/details-page.ui.h:4
 msgid "IPv4 Address"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:154
-#: panels/network/net-device-ethernet.c:158 panels/network/panel-common.c:645
+#: panels/network/net-device-ethernet.c:156 panels/network/panel-common.c:667
 #: panels/network/network-mobile.ui.h:4 panels/network/network-simple.ui.h:4
 #: panels/network/network-wifi.ui.h:8
 #: panels/network/connection-editor/details-page.ui.h:5
 msgid "IPv6 Address"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:156 panels/network/panel-common.c:647
-#: panels/network/panel-common.c:649 panels/network/network-mobile.ui.h:3
+#: panels/network/net-device-ethernet.c:158
+#: panels/network/net-device-ethernet.c:160 panels/network/panel-common.c:669
+#: panels/network/panel-common.c:671 panels/network/network-mobile.ui.h:3
 msgid "IP Address"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:161
+#: panels/network/net-device-ethernet.c:163
 #: panels/network/network-simple.ui.h:2 panels/network/network-wifi.ui.h:9
 #: panels/network/connection-editor/details-page.ui.h:6
 msgid "Hardware Address"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:165
+#: panels/network/net-device-ethernet.c:167
 #: panels/network/network-mobile.ui.h:5 panels/network/network-simple.ui.h:5
 #: panels/network/network-wifi.ui.h:10
 #: panels/network/connection-editor/details-page.ui.h:7
 msgid "Default Route"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:167
+#: panels/network/net-device-ethernet.c:170 panels/network/panel-common.c:675
 #: panels/network/network-mobile.ui.h:6 panels/network/network-simple.ui.h:6
 #: panels/network/network-wifi.ui.h:11
 #: panels/network/connection-editor/details-page.ui.h:8
+msgid "DNS4"
+msgstr ""
+
+#: panels/network/net-device-ethernet.c:171 panels/network/panel-common.c:676
+#: panels/network/network-mobile.ui.h:7 panels/network/network-simple.ui.h:7
+#: panels/network/network-wifi.ui.h:12
+#: panels/network/connection-editor/details-page.ui.h:9
+msgid "DNS6"
+msgstr ""
+
+#: panels/network/net-device-ethernet.c:173
+#: panels/network/net-device-ethernet.c:175 panels/network/panel-common.c:678
+#: panels/network/panel-common.c:680
 #: panels/network/connection-editor/ip4-page.ui.h:3
 #: panels/network/connection-editor/ip6-page.ui.h:3
 msgid "DNS"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:172 panels/network/network-wifi.ui.h:12
+#: panels/network/net-device-ethernet.c:181 panels/network/network-wifi.ui.h:13
 msgid "Last used"
 msgstr ""
 
@@ -521,14 +534,14 @@ msgstr ""
 #. * profile. It is also used to display ethernet in the
 #. * device list.
 #.
-#: panels/network/net-device-ethernet.c:280
+#: panels/network/net-device-ethernet.c:290
 #: panels/network/network-ethernet.ui.h:1 panels/network/network-simple.ui.h:1
 msgid "Wired"
 msgstr ""
 
-#: panels/network/net-device-ethernet.c:348
-#: panels/network/net-device-wifi.c:1750 panels/network/network-ethernet.ui.h:3
-#: panels/network/network-mobile.ui.h:8 panels/network/network-simple.ui.h:8
+#: panels/network/net-device-ethernet.c:358
+#: panels/network/net-device-wifi.c:1751 panels/network/network-ethernet.ui.h:3
+#: panels/network/network-mobile.ui.h:9 panels/network/network-simple.ui.h:9
 #: panels/network/network-vpn.ui.h:7
 msgid "Options…"
 msgstr ""
@@ -544,7 +557,7 @@ msgstr ""
 
 #. TRANSLATORS: this WPA WiFi security
 #: panels/network/net-device-wifi.c:219 panels/network/net-device-wifi.c:398
-#: panels/network/network-wifi.ui.h:19
+#: panels/network/network-wifi.ui.h:20
 msgid "WPA"
 msgstr ""
 
@@ -609,7 +622,7 @@ msgstr ""
 msgid "Stop hotspot and disconnect any users?"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1352 panels/network/net-device-wifi.c:1591
+#: panels/network/net-device-wifi.c:1352 panels/network/net-device-wifi.c:1592
 #: panels/common/language-chooser.ui.h:2 panels/network/network-wifi.ui.h:1
 #: panels/network/connection-editor/connection-editor.ui.h:1
 msgid "_Cancel"
@@ -619,35 +632,35 @@ msgstr ""
 msgid "_Stop Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1453
+#: panels/network/net-device-wifi.c:1454
 msgid "System policy prohibits use as a Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1456
+#: panels/network/net-device-wifi.c:1457
 msgid "Wireless device does not support Hotspot mode"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1588
+#: panels/network/net-device-wifi.c:1589
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1592 panels/network/network-wifi.ui.h:42
+#: panels/network/net-device-wifi.c:1593 panels/network/network-wifi.ui.h:43
 #: panels/network/connection-editor/reset-page.ui.h:2
 msgid "_Forget"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1898
+#: panels/network/net-device-wifi.c:1899
 msgid "History"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1902
+#: panels/network/net-device-wifi.c:1903
 msgid "_Close"
 msgstr ""
 
 #. translators: This is the label for the "Forget wireless network" functionality
-#: panels/network/net-device-wifi.c:1910
+#: panels/network/net-device-wifi.c:1911
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
 msgstr ""
@@ -980,11 +993,11 @@ msgstr ""
 msgid "<b>%s</b> removed"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel-xkblt.c:210
+#: panels/region/cinnamon-region-panel-xkblt.c:208
 msgid "Layout"
 msgstr ""
 
-#: panels/region/cinnamon-region-panel-xkbot.c:229
+#: panels/region/cinnamon-region-panel-xkbot.c:227
 msgid "Default"
 msgstr ""
 
@@ -1408,6 +1421,11 @@ msgstr ""
 msgid "_Detect Displays"
 msgstr ""
 
+#: panels/display/display-capplet.ui.h:13
+#: panels/region/cinnamon-region-panel.ui.h:18
+msgid "Reset to De_faults"
+msgstr ""
+
 #: panels/network/network-ethernet.ui.h:2
 msgid "_Add Profile…"
 msgstr ""
@@ -1420,7 +1438,7 @@ msgstr ""
 msgid "Provider"
 msgstr ""
 
-#: panels/network/network-mobile.ui.h:7 generate_additional_files.py:71
+#: panels/network/network-mobile.ui.h:8 generate_additional_files.py:71
 msgid "Network"
 msgstr ""
 
@@ -1483,7 +1501,7 @@ msgstr ""
 msgid "Socks proxy port"
 msgstr ""
 
-#: panels/network/network-simple.ui.h:7
+#: panels/network/network-simple.ui.h:8
 msgid "Turn device off"
 msgstr ""
 
@@ -1543,26 +1561,26 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:13
+#: panels/network/network-wifi.ui.h:14
 msgid "details"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:14
+#: panels/network/network-wifi.ui.h:15
 #: panels/network/connection-editor/wifi-page.ui.h:1
 msgid "_SSID"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:15
+#: panels/network/network-wifi.ui.h:16
 #: panels/network/connection-editor/wifi-page.ui.h:2
 msgid "_BSSID"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:16
+#: panels/network/network-wifi.ui.h:17
 #: panels/network/connection-editor/security-page.ui.h:1
 msgid "S_ecurity"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:17
+#: panels/network/network-wifi.ui.h:18
 #: panels/network/wireless-security/eap-method-leap.ui.h:2
 #: panels/network/wireless-security/eap-method-simple.ui.h:2
 #: panels/network/wireless-security/ws-leap.ui.h:2
@@ -1570,196 +1588,196 @@ msgstr ""
 msgid "_Password"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:18
+#: panels/network/network-wifi.ui.h:19
 #: panels/network/connection-editor/wifi-page.ui.h:3
 msgid "My Home Network"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:20
+#: panels/network/network-wifi.ui.h:21
 msgid "None"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:21
+#: panels/network/network-wifi.ui.h:22
 msgid "Show P_assword"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:22
+#: panels/network/network-wifi.ui.h:23
 msgid "Make available to other users"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:23
+#: panels/network/network-wifi.ui.h:24
 msgid "identity"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:24
+#: panels/network/network-wifi.ui.h:25
 #: panels/network/connection-editor/ip4-page.ui.h:1
 msgid "IPv_4"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:25
+#: panels/network/network-wifi.ui.h:26
 #: panels/network/connection-editor/ip4-page.ui.h:2
 #: panels/network/connection-editor/ip6-page.ui.h:2
 msgid "_Addresses"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:26
+#: panels/network/network-wifi.ui.h:27
 msgid "Manual"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:27
+#: panels/network/network-wifi.ui.h:28
 msgid "Automatic (DHCP)"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:28
+#: panels/network/network-wifi.ui.h:29
 msgid "Automatic (DHCP) addresses only"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:29
+#: panels/network/network-wifi.ui.h:30
 msgid "Link-local only"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:30
+#: panels/network/network-wifi.ui.h:31
 msgid "Shared with other computers"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:31
+#: panels/network/network-wifi.ui.h:32
 msgid "Disabled"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:32
+#: panels/network/network-wifi.ui.h:33
 #: panels/network/connection-editor/ip4-page.ui.h:6
 #: panels/network/connection-editor/ip6-page.ui.h:6
 msgid "Routes"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:33
+#: panels/network/network-wifi.ui.h:34
 msgid "_Ignore automatically obtained routes"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:34
+#: panels/network/network-wifi.ui.h:35
 #: panels/network/connection-editor/ip4-page.ui.h:8
 #: panels/network/connection-editor/ip6-page.ui.h:8
 msgid "Use this connection _only for resources on its network"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:35
+#: panels/network/network-wifi.ui.h:36
 msgid "ipv4"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:36
+#: panels/network/network-wifi.ui.h:37
 #: panels/network/connection-editor/ip6-page.ui.h:1
 msgid "IPv_6"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:37
+#: panels/network/network-wifi.ui.h:38
 msgid "ipv6"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:38
+#: panels/network/network-wifi.ui.h:39
 #: panels/network/connection-editor/ethernet-page.ui.h:11
 #: panels/network/connection-editor/wifi-page.ui.h:4
 msgid "_MAC Address"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:39
+#: panels/network/network-wifi.ui.h:40
 msgid "_Cloned MAC Address"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:40
+#: panels/network/network-wifi.ui.h:41
 msgid "hardware"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:41
+#: panels/network/network-wifi.ui.h:42
 #: panels/network/connection-editor/reset-page.ui.h:1
 msgid "_Reset"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:43
+#: panels/network/network-wifi.ui.h:44
 msgid ""
 "Reset the settings for this connection to their defaults, but remember as a "
 "preferred connection."
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:44
+#: panels/network/network-wifi.ui.h:45
 msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect to it."
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:45
+#: panels/network/network-wifi.ui.h:46
 msgid "reset"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:46
+#: panels/network/network-wifi.ui.h:47
 msgid "Details"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:47
+#: panels/network/network-wifi.ui.h:48
 msgid "Identity"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:48
+#: panels/network/network-wifi.ui.h:49
 msgid "IPv4"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:49
+#: panels/network/network-wifi.ui.h:50
 msgid "IPv6"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:50
+#: panels/network/network-wifi.ui.h:51
 msgid "Hardware"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:51
+#: panels/network/network-wifi.ui.h:52
 msgctxt "tab"
 msgid "Reset"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:52
+#: panels/network/network-wifi.ui.h:53
 msgid "Wi-Fi Hotspot"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:53
+#: panels/network/network-wifi.ui.h:54
 msgid "_Turn On"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:54
+#: panels/network/network-wifi.ui.h:55
 msgid "Wi-Fi"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:55
+#: panels/network/network-wifi.ui.h:56
 msgid "Turn Wi-Fi off"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:56
+#: panels/network/network-wifi.ui.h:57
 msgid "_Use as Hotspot…"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:57
+#: panels/network/network-wifi.ui.h:58
 msgid "_Connect to Hidden Network…"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:58
+#: panels/network/network-wifi.ui.h:59
 msgid "_History"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:59
+#: panels/network/network-wifi.ui.h:60
 msgid "Switch off to connect to a Wi-Fi network"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:60
+#: panels/network/network-wifi.ui.h:61
 msgid "Network Name"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:61
+#: panels/network/network-wifi.ui.h:62
 msgid "Connected Devices"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:62
+#: panels/network/network-wifi.ui.h:63
 msgid "Security type"
 msgstr ""
 
-#: panels/network/network-wifi.ui.h:63
+#: panels/network/network-wifi.ui.h:64
 msgid "Password"
 msgstr ""
 
@@ -1863,10 +1881,6 @@ msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:17
 msgid "View and edit keyboard layout options"
-msgstr ""
-
-#: panels/region/cinnamon-region-panel.ui.h:18
-msgid "Reset to De_faults"
 msgstr ""
 
 #: panels/region/cinnamon-region-panel.ui.h:19
@@ -2037,7 +2051,7 @@ msgstr ""
 msgid "page 2"
 msgstr ""
 
-#: panels/network/connection-editor/details-page.ui.h:9
+#: panels/network/connection-editor/details-page.ui.h:10
 msgid "Last Used"
 msgstr ""
 
