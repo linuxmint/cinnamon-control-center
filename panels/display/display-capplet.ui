@@ -180,18 +180,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Fractional scaling</property>
-            <property name="xalign">1</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">3</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkComboBox" id="rotation_combo">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -293,9 +281,9 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
+          <object class="GtkBox" id="fractional_box">
             <property name="can_focus">False</property>
+            <property name="no_show_all">True</property>
             <property name="spacing">6</property>
             <child>
               <object class="GtkSwitch" id="fractional_switch">
@@ -345,6 +333,18 @@
             <property name="left_attach">1</property>
             <property name="top_attach">4</property>
             <property name="width">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="fractional_label">
+            <property name="can_focus">False</property>
+            <property name="no_show_all">True</property>
+            <property name="label" translatable="yes">Fractional scaling</property>
+            <property name="xalign">1</property>
+          </object>
+          <packing>
+            <property name="left_attach">0</property>
+            <property name="top_attach">3</property>
           </packing>
         </child>
         <child>

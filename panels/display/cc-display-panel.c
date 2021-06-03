@@ -51,8 +51,8 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_WIDTH 675
 #define MINIMUM_HEIGHT 530
 
-#define INTERFACE_SETTINGS_SCHEMA "org.cinnamon.desktop.interface"
-// #define UPSCALE_SETTINGS_KEY "upscale-fractional-scaling"
+#define PANEL_SETTINGS_SCHEMA "org.cinnamon.control-center.display"
+#define SHOW_FRACTIONAL_CONTROLS_KEY "show-fractional-scaling-controls"
 
 enum {
   TEXT_COL,
@@ -83,7 +83,7 @@ struct _CcDisplayPanelPrivate
   GnomeRRConfig  *old_configuration;
   CcRRLabeler *labeler;
   GnomeRROutputInfo         *current_output;
-  // GSettings      *interface_settings;
+  // GSettings      *panel_settings;
 
   GtkBuilder     *builder;
   guint           focus_id;
@@ -102,6 +102,10 @@ struct _CcDisplayPanelPrivate
   GtkWidget      *scale_combo;
   GtkWidget      *base_scale_combo;
   GtkWidget      *fractional_switch;
+  GtkWidget      *fractional_box;
+  GtkWidget      *fractional_label;
+
+  GSettings      *panel_settings;
 
   /* We store the event timestamp when the Apply button is clicked */
   guint32         apply_button_clicked_timestamp;
@@ -153,6 +157,24 @@ static void begin_version2_apply_configuration (CcDisplayPanel *self,
                                                 guint32 timestamp);
 
 static void
+set_fractional_controls_visible (CcDisplayPanel *self,
+                                 gboolean        visible)
+{
+  gtk_widget_set_visible (self->priv->fractional_box, visible);
+  gtk_widget_set_visible (self->priv->fractional_label, visible);
+}
+
+static void
+show_fractional_controls_changed (CcDisplayPanel *self)
+{
+  gboolean show;
+
+  show = g_settings_get_boolean (self->priv->panel_settings, SHOW_FRACTIONAL_CONTROLS_KEY);
+
+  set_fractional_controls_visible (self, show);
+}
+
+static void
 cc_display_panel_get_property (GObject    *object,
                                guint       property_id,
                                GValue     *value,
@@ -183,7 +205,7 @@ cc_display_panel_dispose (GObject *object)
 {
   // CcDisplayPanel *panel = CC_DISPLAY_PANEL (object);
 
-  // g_clear_object (&panel->priv->interface_settings);
+  // g_clear_object (&panel->priv->panel_settings);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->dispose (object);
 }
@@ -1378,6 +1400,13 @@ rebuild_gui (CcDisplayPanel *self)
   gtk_switch_set_active (GTK_SWITCH (self->priv->fractional_switch), fractional_active);
   g_signal_handlers_unblock_by_func (self->priv->fractional_switch, on_fractional_switch_toggled, self);
 
+  // If the user was already using fractional controls, we need to make sure they're visible,
+  // regardless of the initial setting state (which defaults to hidden). We'll update this when
+  // we update the gui for monitor that has a fractional scale set.
+  if (fractional_active) {
+      g_settings_set_boolean (self->priv->panel_settings, SHOW_FRACTIONAL_CONTROLS_KEY, TRUE);
+  }
+
   gtk_widget_set_sensitive (self->priv->fractional_switch,
                             !gnome_rr_config_get_auto_scale (self->priv->current_configuration));
 
@@ -1759,7 +1788,7 @@ on_scale_changed (GtkComboBox *box, gpointer data)
     return;
 
   if (get_mode (self->priv->scale_combo, NULL, NULL, NULL, &scale, NULL, NULL, NULL, NULL))
-    {g_printerr ("on scale changed, %.2f\n", scale);
+    {
       gnome_rr_output_info_set_scale (self->priv->current_output, scale);
     }
 
@@ -1814,7 +1843,6 @@ on_base_scale_changed (GtkComboBox *box, gpointer data)
         {
           if (gnome_rr_output_info_is_connected (outputs[i]) && gnome_rr_output_info_is_active (outputs[i]))
           {
-            g_printerr ("output %p, scale: %.2f\n",outputs[i], (float) new_value);
               gnome_rr_output_info_set_scale (outputs[i], (float) new_value);
           }
         }
@@ -3624,6 +3652,8 @@ cc_display_panel_constructor (GType                  gtype,
   self = CC_DISPLAY_PANEL (obj);
   self->priv = DISPLAY_PANEL_PRIVATE (self);
 
+  self->priv->panel_settings = g_settings_new (PANEL_SETTINGS_SCHEMA);
+
   error = NULL;
   self->priv->builder = builder = gtk_builder_new ();
   if (!gtk_builder_add_objects_from_file (builder, UIDIR "/display-capplet.ui", objects, &error))
@@ -3695,6 +3725,15 @@ cc_display_panel_constructor (GType                  gtype,
                     G_CALLBACK (on_base_scale_changed), self);
 
   self->priv->fractional_switch = WID ("fractional_switch");
+  self->priv->fractional_box = WID ("fractional_box");
+  self->priv->fractional_label = WID ("fractional_label");
+
+  g_signal_connect_swapped (self->priv->panel_settings,
+                            "changed::" SHOW_FRACTIONAL_CONTROLS_KEY,
+                            G_CALLBACK (show_fractional_controls_changed),
+                            self);
+
+  show_fractional_controls_changed (self);
 
   g_signal_connect_swapped (self->priv->fractional_switch, "notify::active",
                             G_CALLBACK (on_fractional_switch_toggled), self);

@@ -42,3 +42,7 @@ i18n.merge_file(
   install: true,
   install_dir: get_option('datadir') / 'applications',
 )
+
+install_data('org.cinnamon.control-center.display.gschema.xml',
+    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+)
