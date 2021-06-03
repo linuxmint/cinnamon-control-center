@@ -1,0 +1,8 @@
+<schemalist>
+  <schema id="org.cinnamon.control-center.display" path="/org/cinnamon/control-center/display/">
+    <key name="show-fractional-scaling-controls" type="b">
+      <default>false</default>
+      <summary>Makes the fractional scaling controls visible.</summary>
+    </key>
+  </schema>
+</schemalist>
