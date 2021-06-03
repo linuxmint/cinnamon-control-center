@@ -161,6 +161,19 @@ if get_option('buildtype').contains('rel')
   more_cflags += '-Wp,-D_FORTIFY_SOURCE=2'
 endif
 
+if not get_option('deprecated_warnings')
+  add_global_arguments([
+      '-Wno-deprecated-declarations',
+      '-Wno-deprecated',
+      '-Wno-declaration-after-statement',
+      '-DGLIB_DISABLE_DEPRECATION_WARNINGS',
+    ],
+    language: 'c',
+  )
+endif
+
+meson.add_install_script('meson_install_schemas.py')
+
 add_project_arguments(cc.get_supported_arguments(more_cflags), language: 'c')
 
 configure_file(

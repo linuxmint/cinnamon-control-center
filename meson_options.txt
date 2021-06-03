@@ -3,3 +3,5 @@ option('modemmanager',  type: 'boolean', value: 'true', description: 'ModemManag
 option('networkmanager',type: 'boolean', value: 'true', description: 'NetworkManager support')
 option('onlineaccounts',type: 'boolean', value: 'true', description: 'Online Accounts support')
 option('wacom',         type: 'boolean', value: 'true', description: 'Wacom Management support')
+option('deprecated_warnings', type : 'boolean', value : false,
+       description: 'Show compiler warnings about deprecated features')
