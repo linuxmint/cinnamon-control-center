@@ -340,33 +340,6 @@ gcm_prefs_run_maybe_install (guint xid, gchar *filename, GPtrArray *argv)
 }
 
 static void
-gcm_prefs_calibrate_cb (GtkWidget *widget, CcColorPanel *prefs)
-{
-  guint xid;
-  GPtrArray *argv;
-  gchar *calibrater_filename;
-  CcColorPanelPrivate *priv = prefs->priv;
-
-  /* get xid */
-  xid = gdk_x11_window_get_xid (gtk_widget_get_window (GTK_WIDGET (priv->main_window)));
-
-  calibrater_filename = g_build_filename (BINDIR, "gcm-calibrate", NULL);
-
-  /* run with modal set */
-  argv = g_ptr_array_new_with_free_func (g_free);
-  g_ptr_array_add (argv, calibrater_filename);
-  g_ptr_array_add (argv, g_strdup ("--device"));
-  g_ptr_array_add (argv, g_strdup (cd_device_get_id (priv->current_device)));
-  g_ptr_array_add (argv, g_strdup ("--parent-window"));
-  g_ptr_array_add (argv, g_strdup_printf ("%i", xid));
-  g_ptr_array_add (argv, NULL);
-
-  gcm_prefs_run_maybe_install (xid, calibrater_filename, argv);
-
-  g_ptr_array_unref (argv);
-}
-
-static void
 gcm_prefs_device_add_cb (GtkWidget *widget, CcColorPanel *prefs)
 {
   CcColorPanelPrivate *priv = prefs->priv;
@@ -943,84 +916,6 @@ gcm_prefs_add_devices_columns (CcColorPanel *prefs,
 }
 
 static void
-gcm_prefs_set_calibrate_button_sensitivity (CcColorPanel *prefs)
-{
-  gboolean ret = FALSE;
-  GtkWidget *widget;
-  const gchar *tooltip;
-  CdDeviceKind kind;
-  CcColorPanelPrivate *priv = prefs->priv;
-
-  /* TRANSLATORS: this is when the button is sensitive */
-  tooltip = _("Create a color profile for the selected device");
-
-  /* no device selected */
-  if (priv->current_device == NULL)
-    goto out;
-
-  /* are we a display */
-  kind = cd_device_get_kind (priv->current_device);
-  if (kind == CD_DEVICE_KIND_DISPLAY)
-    {
-
-      /* find whether we have hardware installed */
-      if (priv->sensor == NULL) {
-        /* TRANSLATORS: this is when the button is insensitive */
-        tooltip = _("The measuring instrument is not detected. Please check it is turned on and correctly connected.");
-        goto out;
-      }
-
-      /* success */
-      ret = TRUE;
-
-    }
-  else if (kind == CD_DEVICE_KIND_SCANNER ||
-           kind == CD_DEVICE_KIND_CAMERA ||
-           kind == CD_DEVICE_KIND_WEBCAM)
-    {
-
-      /* TODO: find out if we can scan using gnome-scan */
-      ret = TRUE;
-
-    }
-  else if (kind == CD_DEVICE_KIND_PRINTER)
-    {
-
-    /* find whether we have hardware installed */
-    if (priv->sensor == NULL)
-      {
-        /* TRANSLATORS: this is when the button is insensitive */
-        tooltip = _("The measuring instrument is not detected. Please check it is turned on and correctly connected.");
-        goto out;
-      }
-
-    /* find whether we have hardware installed */
-    ret = cd_sensor_has_cap (priv->sensor, CD_SENSOR_CAP_PRINTER);
-    if (!ret)
-      {
-        /* TRANSLATORS: this is when the button is insensitive */
-        tooltip = _("The measuring instrument does not support printer profiling.");
-        goto out;
-      }
-
-    /* success */
-    ret = TRUE;
-
-    }
-  else
-    {
-      /* TRANSLATORS: this is when the button is insensitive */
-      tooltip = _("The device type is not currently supported.");
-    }
-out:
-  /* control the tooltip and sensitivity of the button */
-  widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
-                                               "toolbutton_device_calibrate"));
-  gtk_widget_set_tooltip_text (widget, tooltip);
-  gtk_widget_set_sensitive (widget, ret);
-}
-
-static void
 gcm_prefs_device_clicked (CcColorPanel *prefs, CdDevice *device)
 {
   GtkWidget *widget;
@@ -1049,9 +944,6 @@ gcm_prefs_device_clicked (CcColorPanel *prefs, CdDevice *device)
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "toolbutton_device_remove"));
   gtk_widget_set_visible (widget, device_mode == CD_DEVICE_MODE_VIRTUAL);
-
-  /* can this device calibrate */
-  gcm_prefs_set_calibrate_button_sensitivity (prefs);
 }
 
 static void
@@ -1136,9 +1028,6 @@ gcm_prefs_devices_treeview_clicked_cb (GtkTreeSelection *selection,
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "toolbutton_device_add"));
   gtk_widget_set_visible (widget, FALSE);
-  widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
-                                               "toolbutton_device_calibrate"));
-  gtk_widget_set_visible (widget, device != NULL);
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "toolbutton_profile_add"));
   gtk_widget_set_visible (widget, device != NULL);
@@ -1384,7 +1273,6 @@ gcm_prefs_client_sensor_changed_cb (CdClient *client,
                                     CcColorPanel *prefs)
 {
   gcm_prefs_sensor_coldplug (prefs);
-  gcm_prefs_set_calibrate_button_sensitivity (prefs);
 }
 
 static const gchar *
@@ -2530,11 +2418,6 @@ cc_color_panel_init (CcColorPanel *prefs)
                                                "toolbutton_device_add"));
   g_signal_connect (widget, "clicked",
                     G_CALLBACK (gcm_prefs_device_add_cb), prefs);
-  widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
-                                               "toolbutton_device_calibrate"));
-  g_signal_connect (widget, "clicked",
-                    G_CALLBACK (gcm_prefs_calibrate_cb), prefs);
-
   /* make devices toolbar sexy */
   widget = GTK_WIDGET (gtk_builder_get_object (priv->builder,
                                                "scrolledwindow_devices"));
@@ -2617,9 +2500,6 @@ cc_color_panel_init (CcColorPanel *prefs)
   g_signal_connect (priv->client, "sensor-removed",
                     G_CALLBACK (gcm_prefs_client_sensor_changed_cb),
                     prefs);
-
-  /* set calibrate button sensitivity */
-  gcm_prefs_set_calibrate_button_sensitivity (prefs);
 
   widget = WID (priv->builder, "dialog-vbox1");
   gtk_widget_reparent (widget, (GtkWidget *) prefs);
