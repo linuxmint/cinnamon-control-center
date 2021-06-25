@@ -1,3 +1,13 @@
+cinnamon-control-center (5.0.2) uma; urgency=medium
+
+  [ Leigh Scott ]
+  * Remove calibrate button from UI
+
+  [ Michael Webster ]
+  * cc-color-panel.c: Remove references to removed calibrate button.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 25 Jun 2021 16:58:05 +0100
+
 cinnamon-control-center (5.0.1) uma; urgency=medium
 
   [ Michael Webster ]
