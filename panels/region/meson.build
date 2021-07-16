@@ -36,13 +36,3 @@ install_data([
   ],
   install_dir: ui_dir,
 )
-
-
-i18n.merge_file(
-  input : 'cinnamon-region-panel.desktop.in.in',
-  output: 'cinnamon-region-panel.desktop',
-  po_dir: po_dir,
-  type: 'desktop',
-  install: true,
-  install_dir: get_option('datadir') / 'applications',
-)
