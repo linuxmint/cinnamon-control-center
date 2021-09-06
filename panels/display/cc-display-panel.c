@@ -51,6 +51,8 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 #define MINIMUM_WIDTH 675
 #define MINIMUM_HEIGHT 530
 
+#define MINIMUM_3X_PIXELS 2100
+
 #define PANEL_SETTINGS_SCHEMA "org.cinnamon.control-center.display"
 #define SHOW_FRACTIONAL_CONTROLS_KEY "show-fractional-scaling-controls"
 
@@ -1282,6 +1284,7 @@ get_base_scale_string (guint value)
         case 2:
             return g_strdup (_("Double (Hi-DPI)"));
         default:
+            // translate?
             return g_strdup_printf ("%dx", value);
     }
 }
@@ -1340,6 +1343,7 @@ rebuild_base_scale_combo (CcDisplayPanel *self)
   int i, current_base_scale;
   GtkTreeIter selected_iter;
   GtkTreeIter auto_iter, iter;
+  gint primary_height, scale_limit;
 
   model = GTK_LIST_STORE (gtk_combo_box_get_model (GTK_COMBO_BOX (self->priv->base_scale_combo)));
 
@@ -1351,8 +1355,11 @@ rebuild_base_scale_combo (CcDisplayPanel *self)
 
   auto_iter = add_auto_scale_value (self, GTK_TREE_MODEL (model));
 
+  gnome_rr_output_info_get_geometry (self->priv->current_output, NULL, NULL, NULL, &primary_height);
+  scale_limit =  primary_height >= MINIMUM_3X_PIXELS ? 3 : 2;
+
   /* Now add 1 thru max_base_scale, and one past. */
-  for (i = 1; i <= 2; i++)
+  for (i = 1; i <= scale_limit; i++)
   {
     iter = add_base_scale_value (GTK_TREE_MODEL (model), i);
 
