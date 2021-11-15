@@ -228,9 +228,9 @@ cc_network_panel_dispose (GObject *object)
                 g_cancellable_cancel (priv->cancellable);
 
         g_clear_object (&priv->cancellable);
-        g_clear_object (&priv->builder);
         g_clear_object (&priv->client);
         g_clear_object (&priv->modem_manager);
+        g_clear_object (&priv->builder);
 
         G_OBJECT_CLASS (cc_network_panel_parent_class)->dispose (object);
 }
