@@ -1,3 +1,12 @@
+cinnamon-control-center (5.2.0) una; urgency=medium
+
+  [ Michael Webster ]
+  * region panel: Remove desktop file. It can be turned on in the menu editor, but no longer does anything.
+  * cc-display-panel.c: Allow setting up to 3x scaling.
+  * network panel: Don't try to rebuild the ui during shutdown, and (#270)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 15 Nov 2021 13:01:10 +0000
+
 cinnamon-control-center (5.0.2) uma; urgency=medium
 
   [ Leigh Scott ]
