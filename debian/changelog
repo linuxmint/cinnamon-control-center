@@ -1,3 +1,13 @@
+cinnamon-control-center (5.2.1) una; urgency=medium
+
+  [ Michael Webster ]
+  * wacom: Fix column layout in button-mapping dialog.
+
+  [ Clement Lefebvre ]
+  * l10n: Generate files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 16 Dec 2021 09:00:04 +0000
+
 cinnamon-control-center (5.2.0) una; urgency=medium
 
   [ Michael Webster ]
