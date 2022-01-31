@@ -56,8 +56,6 @@ else
   libnma= dependency('', required: false)
 endif
 
-config.set('HAVE_NMA_18', libnm.version().version_compare('>=1.8.0'))
-
 if get_option('modemmanager')
   if not get_option('networkmanager')
     error('*** NetworkManager is required by ModemManager ***')
