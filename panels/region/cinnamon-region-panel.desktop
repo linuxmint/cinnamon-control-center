@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=cinnamon-settings region
+Icon=cs-language
+Terminal=false
+Type=Application
+X-Cinnamon-Settings-Panel=region
+Name=Region & Language

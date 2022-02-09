@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=cinnamon-control-center network
+Icon=cs-network
+Terminal=false
+Type=Application
+X-Cinnamon-Settings-Panel=network
+Name=Network

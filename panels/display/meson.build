@@ -33,15 +33,11 @@ install_data('display-capplet.ui',
   install_dir: ui_dir,
 )
 
-
-i18n.merge_file(
-  input : 'cinnamon-display-panel.desktop.in.in',
-  output: 'cinnamon-display-panel.desktop',
-  po_dir: po_dir,
-  type: 'desktop',
-  install: true,
-  install_dir: get_option('datadir') / 'applications',
+install_data(
+  'cinnamon-display-panel.desktop',
+  install_dir: panel_def_dir
 )
+
 
 install_data('org.cinnamon.control-center.display.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')

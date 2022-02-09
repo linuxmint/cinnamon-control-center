@@ -108,7 +108,7 @@ panels_dir = get_option('libdir') / 'cinnamon-control-center-1' / 'panels'
 ui_dir     = get_option('datadir') / meson.project_name() / 'ui'
 um_pix_dir = get_option('datadir') / meson.project_name() / 'pixmaps'
 menu_dir   = get_option('sysconfdir') / 'xdg' / 'menus'
-
+panel_def_dir = get_option('datadir') / meson.project_name() / 'panels'
 
 prefix = get_option('prefix')
 config.set_quoted('BINDIR',               prefix / get_option('bindir'))
@@ -123,6 +123,7 @@ config.set_quoted('PANELS_DIR',           prefix / panels_dir)
 config.set_quoted('MENUDIR',              '/' / menu_dir)
 config.set_quoted('UIDIR',                prefix / ui_dir)
 config.set_quoted('UM_PIXMAP_DIR',        prefix / um_pix_dir)
+config.set_quoted('PANEL_DEF_DIR',        prefix / panel_def_dir)
 
 ###############################################################################
 # Build options

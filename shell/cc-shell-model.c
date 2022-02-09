@@ -119,47 +119,17 @@ cc_shell_model_new (void)
   return g_object_new (CC_TYPE_SHELL_MODEL, NULL);
 }
 
-static gboolean
-desktop_entry_has_panel_category (GKeyFile *key_file)
-{
-  char   **strv;
-  gsize    len;
-  int      i;
-
-  strv = g_key_file_get_string_list (key_file,
-				     "Desktop Entry",
-				     "Categories",
-				     &len,
-				     NULL);
-  if (!strv)
-    return FALSE;
-
-  for (i = 0; strv[i]; i++)
-    {
-      if (g_str_equal (strv[i], GNOME_SETTINGS_PANEL_CATEGORY))
-        {
-          g_strfreev (strv);
-          return TRUE;
-	}
-    }
-
-  g_strfreev (strv);
-
-  return FALSE;
-
-}
-
 void
 cc_shell_model_add_item (CcShellModel   *model,
-                         const gchar    *category_name,
-                         GMenuTreeEntry *item)
+                         const gchar    *path)
 {
-  GAppInfo    *appinfo = G_APP_INFO (gmenu_tree_entry_get_app_info (item));
+
+  GAppInfo    *appinfo = G_APP_INFO (g_desktop_app_info_new_from_filename (path));
   GIcon       *icon = g_app_info_get_icon (appinfo);
   const gchar *name = g_app_info_get_name (appinfo);
-  const gchar *desktop = gmenu_tree_entry_get_desktop_file_path (item);
   const gchar *comment = g_app_info_get_description (appinfo);
   gchar *id;
+  gchar *basename;
   GdkPixbuf *pixbuf = NULL;
   GKeyFile *key_file;
   gchar **keywords;
@@ -168,26 +138,10 @@ cc_shell_model_add_item (CcShellModel   *model,
    * custom properties from desktop files */
 
   key_file = g_key_file_new ();
-  g_key_file_load_from_file (key_file, desktop, 0, NULL);
+  g_key_file_load_from_file (key_file, path, 0, NULL);
 
   id = g_key_file_get_string (key_file, "Desktop Entry",
                               GNOME_SETTINGS_PANEL_ID_KEY, NULL);
-
-  if (!id)
-    {
-      /* Refuse to load desktop files without a panel ID, but
-       * with the X-GNOME-Settings-Panel category */
-      if (desktop_entry_has_panel_category (key_file))
-        {
-          g_warning ("Not loading desktop file '%s' because it uses the "
-		     GNOME_SETTINGS_PANEL_CATEGORY
-		     " category but isn't a panel.",
-		     desktop);
-         g_key_file_free (key_file);
-         return;
-	}
-      id = g_strdup (gmenu_tree_entry_get_desktop_file_id (item));
-    }
 
   keywords = g_key_file_get_locale_string_list (key_file, "Desktop Entry",
                                                 GNOME_SETTINGS_PANEL_ID_KEYWORDS,
@@ -197,13 +151,14 @@ cc_shell_model_add_item (CcShellModel   *model,
   key_file = NULL;
 
   pixbuf = load_pixbuf_for_gicon (icon);
+  basename = g_path_get_basename (path);
 
   gtk_list_store_insert_with_values (GTK_LIST_STORE (model), NULL, 0,
                                      COL_NAME, name,
-                                     COL_DESKTOP_FILE, desktop,
+                                     COL_DESKTOP_FILE, basename,
                                      COL_ID, id,
                                      COL_PIXBUF, pixbuf,
-                                     COL_CATEGORY, category_name,
+                                     COL_CATEGORY, "C Modules",
                                      COL_DESCRIPTION, comment,
                                      COL_GICON, icon,
                                      COL_KEYWORDS, keywords,

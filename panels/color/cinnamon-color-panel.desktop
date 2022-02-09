@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=cinnamon-settings color
+Icon=cs-color
+Terminal=false
+Type=Application
+X-Cinnamon-Settings-Panel=color
+Name=Color

@@ -36,3 +36,8 @@ install_data([
   ],
   install_dir: ui_dir,
 )
+
+install_data(
+  'cinnamon-region-panel.desktop',
+  install_dir: panel_def_dir
+)

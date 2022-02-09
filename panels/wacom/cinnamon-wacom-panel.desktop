@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=cinnamon-settings wacom
+Icon=cs-tablet
+Terminal=false
+Type=Application
+X-Cinnamon-Settings-Panel=wacom
+Name=Graphics Tablet

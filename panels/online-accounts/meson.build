@@ -31,3 +31,8 @@ panel_online_accounts = shared_library('online-accounts',
 install_data('online-accounts.ui',
   install_dir: ui_dir,
 )
+
+install_data(
+  'cinnamon-online-accounts.desktop',
+  install_dir: panel_def_dir
+)

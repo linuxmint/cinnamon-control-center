@@ -1,3 +1,2 @@
 usr/bin/cinnamon-control-center
 usr/lib/*/cinnamon-control-center-1/panels/*.so
-usr/share/applications/cinnamon-*-panel.desktop

@@ -81,9 +81,7 @@ GType cc_shell_model_get_type (void) G_GNUC_CONST;
 
 CcShellModel *cc_shell_model_new (void);
 
-void cc_shell_model_add_item (CcShellModel   *model,
-                              const gchar    *category_name,
-                              GMenuTreeEntry *item);
+void cc_shell_model_add_item (CcShellModel *model, const gchar *path);
 
 G_END_DECLS
 

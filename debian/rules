@@ -8,7 +8,7 @@ DATA_PKG = cinnamon-control-center-data
 MAIN_PKG = cinnamon-control-center
 
 %:
-	dh $@ --buildsystem=meson
+	dh $@
 
 override_dh_auto_test:
 	# Disable auto tests

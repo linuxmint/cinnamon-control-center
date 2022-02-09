@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=cinnamon-control-center display
+Icon=cs-display
+Terminal=false
+Type=Application
+X-Cinnamon-Settings-Panel=display
+Name=Display
