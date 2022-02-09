@@ -74,6 +74,7 @@ add_details_row (GtkWidget *details, gint top, const gchar *heading, const gchar
         heading_label = gtk_label_new (heading);
         gtk_style_context_add_class (gtk_widget_get_style_context (heading_label), "dim-label");
         gtk_widget_set_halign (heading_label, GTK_ALIGN_END);
+        gtk_widget_set_valign (heading_label, GTK_ALIGN_START);
         gtk_widget_set_hexpand (heading_label, TRUE);
 
         gtk_grid_attach (GTK_GRID (details), heading_label, 0, top, 1, 1);
@@ -136,6 +137,7 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         gchar *ip4_route = NULL;
         gchar *ip4_dns = NULL;
         gchar *ip6_address = NULL;
+        gchar *ip6_route = NULL;
         gchar *ip6_dns = NULL;
         gint i = 0;
 
@@ -147,7 +149,8 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         }
         ip6_config = nm_device_get_ip6_config (device);
         if (ip6_config) {
-                ip6_address = panel_get_ip6_address_as_string (ip6_config);
+                ip6_address = panel_get_ip6_address_as_string (ip6_config, "address");
+                ip6_route = panel_get_ip6_address_as_string (ip6_config, "gateway");
                 ip6_dns = panel_get_dns_as_string (ip6_config);
         }
 
@@ -163,8 +166,14 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         add_details_row (details, i++, _("Hardware Address"),
                          nm_device_ethernet_get_hw_address (NM_DEVICE_ETHERNET (device)));
 
-        if (ip4_route)
+        if (ip4_route && ip6_route) {
+                g_autofree gchar *ip_routes = g_strjoin ("\n", ip4_route, ip6_route, NULL);
+                add_details_row (details, i++, _("Default Route"), ip_routes);
+        } else if (ip4_route) {
                 add_details_row (details, i++, _("Default Route"), ip4_route);
+        } else if (ip6_route) {
+                add_details_row (details, i++, _("Default Route"), ip6_route);
+        }
         
         if (ip4_dns && ip6_dns) {
                 add_details_row (details, i++, _("DNS4"), ip4_dns);
