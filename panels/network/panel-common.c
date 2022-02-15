@@ -570,7 +570,7 @@ panel_get_dns_as_string (NMIPConfig *ip_config)
 gchar *
 panel_get_ip6_address_as_string (NMIPConfig *ip6_config, const char *what)
 {
-        const gchar *str = NULL;
+        gchar *str = NULL;
         
         if (!strcmp (what, "address")) {
                 g_autoptr(GPtrArray) ipv6 = NULL;
@@ -578,7 +578,7 @@ panel_get_ip6_address_as_string (NMIPConfig *ip6_config, const char *what)
 
                 addresses = nm_ip_config_get_addresses (ip6_config);
                 if (addresses->len == 0 ) {
-                        goto out;
+                        return str;
                 }
                 ipv6 = g_ptr_array_sized_new (addresses->len + 1);
 
@@ -588,12 +588,9 @@ panel_get_ip6_address_as_string (NMIPConfig *ip6_config, const char *what)
                 g_ptr_array_add (ipv6, NULL);
                 str = g_strjoinv ("\n", (char **) ipv6->pdata);
         } else if (!strcmp (what, "gateway")) {
-                str = nm_ip_config_get_gateway (ip6_config);
+                str = strdup (nm_ip_config_get_gateway (ip6_config));
         }
-
-out:
-        return g_strdup (str);
-        //return g_strdup (nm_ip_address_get_address (address));
+        return str;
 }
 
 void
