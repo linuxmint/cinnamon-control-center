@@ -568,16 +568,29 @@ panel_get_dns_as_string (NMIPConfig *ip_config)
 }
 
 gchar *
-panel_get_ip6_address_as_string (NMIPConfig *ip6_config)
+panel_get_ip6_address_as_string (NMIPConfig *ip6_config, const char *what)
 {
-        GPtrArray *array;
-        NMIPAddress *address;
+        gchar *str = NULL;
+        
+        if (!strcmp (what, "address")) {
+                g_autoptr(GPtrArray) ipv6 = NULL;
+                GPtrArray *addresses;
 
-        array = nm_ip_config_get_addresses (ip6_config);
-        if (array->len < 1)
-                return NULL;
-        address = array->pdata[0];
-        return g_strdup (nm_ip_address_get_address (address));
+                addresses = nm_ip_config_get_addresses (ip6_config);
+                if (addresses->len == 0 ) {
+                        return str;
+                }
+                ipv6 = g_ptr_array_sized_new (addresses->len + 1);
+
+                for (int i = 0; i < addresses->len; i++) {
+                        g_ptr_array_add (ipv6, (char *) nm_ip_address_get_address (g_ptr_array_index (addresses, i)));
+                }
+                g_ptr_array_add (ipv6, NULL);
+                str = g_strjoinv ("\n", (char **) ipv6->pdata);
+        } else if (!strcmp (what, "gateway")) {
+                str = strdup (nm_ip_config_get_gateway (ip6_config));
+        }
+        return str;
 }
 
 void
@@ -637,7 +650,7 @@ panel_set_device_widgets (GtkBuilder *builder, NMDevice *device)
         /* get IPv6 parameters */
         ip6_config = nm_device_get_ip6_config (device);
         if (ip6_config != NULL) {
-                str_tmp = panel_get_ip6_address_as_string (ip6_config);
+                str_tmp = panel_get_ip6_address_as_string (ip6_config, "address");
                 panel_set_device_widget_details (builder,
                                                  "ipv6",
                                                  str_tmp);
