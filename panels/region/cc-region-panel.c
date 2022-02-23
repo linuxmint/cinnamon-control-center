@@ -33,34 +33,6 @@ struct _CcRegionPanelPrivate {
 	GtkBuilder *builder;
 };
 
-enum {
-	PROP_0,
-	PROP_ARGV
-};
-
-static void
-cc_region_panel_set_property (GObject * object,
-			      guint property_id,
-			      const GValue * value,
-			      GParamSpec * pspec)
-{
-	CcRegionPanel *self;
-
-	self = CC_REGION_PANEL (object);
-
-	switch (property_id) {
-        case PROP_ARGV: {
-                gchar **args;
-
-                args = g_value_get_boxed (value);
-                break;
-        }
-	default:
-		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id,
-						   pspec);
-	}
-}
-
 static void
 cc_region_panel_finalize (GObject * object)
 {
@@ -81,10 +53,7 @@ cc_region_panel_class_init (CcRegionPanelClass * klass)
 
 	g_type_class_add_private (klass, sizeof (CcRegionPanelPrivate));
 
-	object_class->set_property = cc_region_panel_set_property;
 	object_class->finalize = cc_region_panel_finalize;
-
-	g_object_class_override_property (object_class, PROP_ARGV, "argv");
 }
 
 static void
