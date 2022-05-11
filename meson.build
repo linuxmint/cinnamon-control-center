@@ -36,6 +36,8 @@ libnotify   = dependency('libnotify',       version: '>=0.7.3')
 libx11      = dependency('x11')
 polkit_gobj = dependency('polkit-gobject-1',version: '>=0.103')
 libxklavier = dependency('libxklavier',     version: '>=5.1')
+upower_glib_dep = dependency('upower-glib', version: '>= 0.99.8')
+libhandy_dep = dependency('libhandy-0.0', version: '>= 0.0.9', required: true)
 
 config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 

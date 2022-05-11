@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 Intel, Inc
+ * Copyright (C) 2017  Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,24 +13,22 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street - Suite 500, Boston, MA 02110-1335, USA.
- *
- * Author: Thomas Wood <thomas.wood@intel.com>
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
  */
-#include <config.h>
-#include "cc-display-panel.h"
 
-#include <glib/gi18n.h>
+#pragma once
 
-void
-g_io_module_load (GIOModule *module)
-{
-  /* register the panel */
-  cc_display_panel_register (module);
-}
+#include <glib-object.h>
 
-void
-g_io_module_unload (GIOModule *module)
-{
-}
+#include "cc-display-config-manager.h"
+
+G_BEGIN_DECLS
+
+#define CC_TYPE_DISPLAY_CONFIG_MANAGER_DBUS (cc_display_config_manager_dbus_get_type ())
+G_DECLARE_FINAL_TYPE (CcDisplayConfigManagerDBus, cc_display_config_manager_dbus,
+                      CC, DISPLAY_CONFIG_MANAGER_DBUS, CcDisplayConfigManager)
+
+CcDisplayConfigManager * cc_display_config_manager_dbus_new (void);
+
+G_END_DECLS

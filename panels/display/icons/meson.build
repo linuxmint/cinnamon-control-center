@@ -1,11 +1,12 @@
-
-sizes = [
+icon_sizes = [
   '16x16',
   '22x22',
   '24x24',
   '32x32',
-  'scalable',
+  'scalable'
 ]
+
+
 
 foreach size : sizes
   install_subdir(size,
