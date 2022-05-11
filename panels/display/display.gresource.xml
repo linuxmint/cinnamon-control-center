@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/cinnamon/control-center/display">
+    <file preprocess="xml-stripblanks">cc-display-panel.ui</file>
+    <file preprocess="xml-stripblanks">cc-display-settings.ui</file>
+    <file>display-arrangement.css</file>
+  </gresource>
+</gresources>
