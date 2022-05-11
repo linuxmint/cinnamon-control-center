@@ -35,10 +35,10 @@
 #include <X11/Xatom.h>
 #include <gdk/gdkx.h>
 
-#include "cc-rr-labeler.h"
+#include "cc-display-labeler.h"
 
-struct _CcRRLabelerPrivate {
-	GnomeRRConfig *config;
+struct _CcDisplayLabelerPrivate {
+	CcDisplayConfig *config;
 
 	int num_outputs;
 
@@ -55,15 +55,15 @@ enum {
 	PROP_LAST
 };
 
-G_DEFINE_TYPE (CcRRLabeler, cc_rr_labeler, G_TYPE_OBJECT);
+G_DEFINE_TYPE (CcDisplayLabeler, cc_display_labeler, G_TYPE_OBJECT);
 
-static void cc_rr_labeler_finalize (GObject *object);
-static void setup_from_config (CcRRLabeler *labeler);
+static void cc_display_labeler_finalize (GObject *object);
+static void setup_from_config (CcDisplayLabeler *labeler);
 
 static GdkFilterReturn
 screen_xevent_filter (GdkXEvent      *xevent,
 		      GdkEvent       *event,
-		      CcRRLabeler *labeler)
+		      CcDisplayLabeler *labeler)
 {
 	XEvent *xev;
 
@@ -73,8 +73,8 @@ screen_xevent_filter (GdkXEvent      *xevent,
 	    xev->xproperty.atom == labeler->priv->workarea_atom) {
 		/* update label positions */
 		if (labeler->priv->windows != NULL) {
-			cc_rr_labeler_hide (labeler);
-			cc_rr_labeler_show (labeler);
+			cc_display_labeler_hide (labeler);
+			cc_display_labeler_show (labeler);
 		}
 	}
 
@@ -82,11 +82,11 @@ screen_xevent_filter (GdkXEvent      *xevent,
 }
 
 static void
-cc_rr_labeler_init (CcRRLabeler *labeler)
+cc_display_labeler_init (CcDisplayLabeler *labeler)
 {
 	GdkWindow *gdkwindow;
 
-	labeler->priv = G_TYPE_INSTANCE_GET_PRIVATE (labeler, GNOME_TYPE_RR_LABELER, CcRRLabelerPrivate);
+	labeler->priv = G_TYPE_INSTANCE_GET_PRIVATE (labeler, GNOME_TYPE_RR_LABELER, CcDisplayLabelerPrivate);
 
 	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 						    "_NET_WORKAREA",
@@ -100,13 +100,13 @@ cc_rr_labeler_init (CcRRLabeler *labeler)
 }
 
 static void
-cc_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
+cc_display_labeler_set_property (GObject *gobject, guint property_id, const GValue *value, GParamSpec *param_spec)
 {
-	CcRRLabeler *self = CC_RR_LABELER (gobject);
+	CcDisplayLabeler *self = CC_DISPLAY_LABELER (gobject);
 
 	switch (property_id) {
 	case PROP_CONFIG:
-		self->priv->config = GNOME_RR_CONFIG (g_value_dup_object (value));
+		self->priv->config = CC_DISPLAY_CONFIG (g_value_dup_object (value));
 		return;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (gobject, property_id, param_spec);
@@ -114,9 +114,9 @@ cc_rr_labeler_set_property (GObject *gobject, guint property_id, const GValue *v
 }
 
 static GObject *
-cc_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
+cc_display_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
 {
-	CcRRLabeler *self = (CcRRLabeler*) G_OBJECT_CLASS (cc_rr_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
+	CcDisplayLabeler *self = (CcDisplayLabeler*) G_OBJECT_CLASS (cc_display_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
 
 	setup_from_config (self);
 
@@ -124,33 +124,33 @@ cc_rr_labeler_constructor (GType type, guint n_construct_properties, GObjectCons
 }
 
 static void
-cc_rr_labeler_class_init (CcRRLabelerClass *klass)
+cc_display_labeler_class_init (CcDisplayLabelerClass *klass)
 {
 	GObjectClass *object_class;
 
-	g_type_class_add_private (klass, sizeof (CcRRLabelerPrivate));
+	g_type_class_add_private (klass, sizeof (CcDisplayLabelerPrivate));
 
 	object_class = (GObjectClass *) klass;
 
-	object_class->set_property = cc_rr_labeler_set_property;
-	object_class->finalize = cc_rr_labeler_finalize;
-	object_class->constructor = cc_rr_labeler_constructor;
+	object_class->set_property = cc_display_labeler_set_property;
+	object_class->finalize = cc_display_labeler_finalize;
+	object_class->constructor = cc_display_labeler_constructor;
 
 	g_object_class_install_property (object_class, PROP_CONFIG, g_param_spec_object ("config",
 											 "Configuration",
 											 "RandR configuration to label",
-											 GNOME_TYPE_RR_CONFIG,
+											 CC_TYPE_DISPLAY_CONFIG,
 											 G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY |
 											 G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
 }
 
 static void
-cc_rr_labeler_finalize (GObject *object)
+cc_display_labeler_finalize (GObject *object)
 {
-	CcRRLabeler *labeler;
+	CcDisplayLabeler *labeler;
 	GdkWindow      *gdkwindow;
 
-	labeler = CC_RR_LABELER (object);
+	labeler = CC_DISPLAY_LABELER (object);
 
 	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
 	gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
@@ -160,29 +160,28 @@ cc_rr_labeler_finalize (GObject *object)
 	}
 
 	if (labeler->priv->windows != NULL) {
-		cc_rr_labeler_hide (labeler);
+		cc_display_labeler_hide (labeler);
 		g_free (labeler->priv->windows);
 	}
 
 	g_free (labeler->priv->palette);
 
-	G_OBJECT_CLASS (cc_rr_labeler_parent_class)->finalize (object);
+	G_OBJECT_CLASS (cc_display_labeler_parent_class)->finalize (object);
 }
 
 static int
-count_outputs (GnomeRRConfig *config)
+count_outputs (CcDisplayConfig *config)
 {
 	int i;
-	GnomeRROutputInfo **outputs = gnome_rr_config_get_outputs (config);
+	GList *outputs = cc_display_config_get_ui_sorted_monitors (config);
 
-	for (i = 0; outputs[i] != NULL; i++)
-		;
+	i = g_list_length (outputs);
 
-	return i;
+    return i;
 }
 
 static void
-make_palette (CcRRLabeler *labeler)
+make_palette (CcDisplayLabeler *labeler)
 {
 	/* The idea is that we go around an hue color wheel.  We want to start
 	 * at red, go around to green/etc. and stop at blue.
@@ -263,7 +262,6 @@ rounded_rectangle (cairo_t *cr,
 static void
 label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr)
 {
-	GdkRGBA shape_color = { 0, 0, 0, 1 };
 	GdkRGBA *rgba;
 	GtkAllocation allocation;
 
@@ -318,7 +316,7 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 }
 
 static void
-position_window (CcRRLabeler  *labeler,
+position_window (CcDisplayLabeler  *labeler,
 		 GtkWidget       *window,
 		 int              x,
 		 int              y)
@@ -353,14 +351,14 @@ label_window_realize_cb (GtkWidget *widget)
 }
 
 static void
-label_window_composited_changed_cb (GtkWidget *widget, CcRRLabeler *labeler)
+label_window_composited_changed_cb (GtkWidget *widget, CcDisplayLabeler *labeler)
 {
 	if (gtk_widget_get_realized (widget))
 		gtk_widget_shape_combine_region (widget, NULL);
 }
 
 static GtkWidget *
-create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *rgba)
+create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba, gint num)
 {
 	GtkWidget *window;
 	GtkWidget *widget;
@@ -383,7 +381,7 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 	gtk_container_set_border_width (GTK_CONTAINER (window), LABEL_WINDOW_PADDING + LABEL_WINDOW_EDGE_THICKNESS);
 
 	/* This is semi-dangerous.  The color is part of the labeler->palette
-	 * array.  Note that in cc_rr_labeler_finalize(), we are careful to
+	 * array.  Note that in cc_display_labeler_finalize(), we are careful to
 	 * free the palette only after we free the windows.
 	 */
 	g_object_set_data (G_OBJECT (window), "rgba", rgba);
@@ -395,7 +393,7 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 	g_signal_connect (window, "composited-changed",
 			  G_CALLBACK (label_window_composited_changed_cb), labeler);
 
-	if (gnome_rr_config_get_clone (labeler->priv->config)) {
+	if (cc_display_config_is_cloning (labeler->priv->config)) {
 		/* Translators:  this is the feature where what you see on your
 		 * laptop's screen is the same as your external projector.
 		 * Here, "Mirrored" is being used as an adjective.  For example,
@@ -405,9 +403,9 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 		str = g_strdup_printf ("<b>%s</b>", display_name);
 	}
 	else {
-		display_name = gnome_rr_output_info_get_display_name (output);
-		output_name = gnome_rr_output_info_get_name (output);
-		str = g_strdup_printf ("<b>%s</b>\n%s", display_name, output_name);
+		display_name = cc_display_monitor_get_display_name (output);
+		output_name = cc_display_monitor_get_connector_name (output);
+		str = g_strdup_printf ("<b>%d  %s</b>\n%s", num, display_name, output_name);
 	}
 
 	widget = gtk_label_new (NULL);
@@ -419,7 +417,7 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
-	gnome_rr_output_info_get_geometry (output, &x, &y, NULL, NULL);
+	cc_display_monitor_get_geometry (output, &x, &y, NULL, NULL);
 	position_window (labeler, window, x, y);
 
 	gtk_widget_show_all (window);
@@ -428,46 +426,46 @@ create_label_window (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *r
 }
 
 static void
-setup_from_config (CcRRLabeler *labeler)
+setup_from_config (CcDisplayLabeler *labeler)
 {
 	labeler->priv->num_outputs = count_outputs (labeler->priv->config);
 
 	make_palette (labeler);
 
-	cc_rr_labeler_show (labeler);
+	cc_display_labeler_show (labeler);
 }
 
 /**
- * cc_rr_labeler_new:
+ * cc_display_labeler_new:
  * @config: Configuration of the screens to label
  *
  * Create a GUI element that will display colored labels on each connected monitor.
  * This is useful when users are required to identify which monitor is which, e.g. for
  * for configuring multiple monitors.
- * The labels will be shown by default, use cc_rr_labeler_hide to hide them.
+ * The labels will be shown by default, use cc_display_labeler_hide to hide them.
  *
- * Returns: A new #CcRRLabeler
+ * Returns: A new #CcDisplayLabeler
  */
-CcRRLabeler *
-cc_rr_labeler_new (GnomeRRConfig *config)
+CcDisplayLabeler *
+cc_display_labeler_new (CcDisplayConfig *config)
 {
-	g_return_val_if_fail (GNOME_IS_RR_CONFIG (config), NULL);
+	g_return_val_if_fail (CC_IS_DISPLAY_CONFIG (config), NULL);
 
 	return g_object_new (GNOME_TYPE_RR_LABELER, "config", config, NULL);
 }
 
 /**
- * cc_rr_labeler_show:
- * @labeler: A #CcRRLabeler
+ * cc_display_labeler_show:
+ * @labeler: A #CcDisplayLabeler
  *
  * Show the labels.
  */
 void
-cc_rr_labeler_show (CcRRLabeler *labeler)
+cc_display_labeler_show (CcDisplayLabeler *labeler)
 {
-	int i;
+    gint i;
 	gboolean created_window_for_clone;
-	GnomeRROutputInfo **outputs;
+	GList *outputs, *l;
 
 	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
 
@@ -478,13 +476,15 @@ cc_rr_labeler_show (CcRRLabeler *labeler)
 
 	created_window_for_clone = FALSE;
 
-	outputs = gnome_rr_config_get_outputs (labeler->priv->config);
+	outputs = cc_display_config_get_ui_sorted_monitors (labeler->priv->config);
 
-	for (i = 0; i < labeler->priv->num_outputs; i++) {
-		if (!created_window_for_clone && gnome_rr_output_info_is_active (outputs[i])) {
-			labeler->priv->windows[i] = create_label_window (labeler, outputs[i], labeler->priv->palette + i);
+    for (l = outputs, i = 0; l != NULL; l = l->next, i++) {
+        CcDisplayMonitor *output = CC_DISPLAY_MONITOR (l->data);
 
-			if (gnome_rr_config_get_clone (labeler->priv->config))
+		if (!created_window_for_clone && cc_display_monitor_is_active (output)) {
+			labeler->priv->windows[i] = create_label_window (labeler, output, labeler->priv->palette + i, i + 1);
+
+			if (cc_display_config_is_cloning (labeler->priv->config))
 				created_window_for_clone = TRUE;
 		} else
 			labeler->priv->windows[i] = NULL;
@@ -492,16 +492,16 @@ cc_rr_labeler_show (CcRRLabeler *labeler)
 }
 
 /**
- * cc_rr_labeler_hide:
- * @labeler: A #CcRRLabeler
+ * cc_display_labeler_hide:
+ * @labeler: A #CcDisplayLabeler
  *
  * Hide ouput labels.
  */
 void
-cc_rr_labeler_hide (CcRRLabeler *labeler)
+cc_display_labeler_hide (CcDisplayLabeler *labeler)
 {
 	int i;
-	CcRRLabelerPrivate *priv;
+	CcDisplayLabelerPrivate *priv;
 
 	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
 
@@ -520,32 +520,35 @@ cc_rr_labeler_hide (CcRRLabeler *labeler)
 }
 
 /**
- * cc_rr_labeler_get_rgba_for_output:
- * @labeler: A #CcRRLabeler
+ * cc_display_labeler_get_rgba_for_output:
+ * @labeler: A #CcDisplayLabeler
  * @output: Output device (i.e. monitor) to query
  * @rgba_out: (out): Color of selected monitor.
  *
  * Get the color used for the label on a given output (monitor).
  */
 void
-cc_rr_labeler_get_rgba_for_output (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *rgba_out)
+cc_display_labeler_get_rgba_for_output (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba_out)
 {
 	int i;
-	GnomeRROutputInfo **outputs;
+	GList *outputs, *l;
 
 	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
-	g_return_if_fail (GNOME_IS_RR_OUTPUT_INFO (output));
+	g_return_if_fail (CC_IS_DISPLAY_MONITOR (output));
 	g_return_if_fail (rgba_out != NULL);
 
-	outputs = gnome_rr_config_get_outputs (labeler->priv->config);
+	outputs = cc_display_config_get_ui_sorted_monitors (labeler->priv->config);
 
-	for (i = 0; i < labeler->priv->num_outputs; i++)
-		if (outputs[i] == output) {
+    for (l = outputs, i = 0; l != NULL; l = l->next, i++) {
+        CcDisplayMonitor *o = CC_DISPLAY_MONITOR (l->data);
+
+		if (o == output) {
 			*rgba_out = labeler->priv->palette[i];
 			return;
 		}
+    }
 
-	g_warning ("trying to get the color for unknown GnomeOutputInfo %p; returning magenta!", output);
+	g_warning ("trying to get the color for unknown CcDisplayMonitor %p; returning magenta!", output);
 
 	rgba_out->red   = 1.0;
 	rgba_out->green = 0;

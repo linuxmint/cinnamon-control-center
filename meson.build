@@ -1,5 +1,5 @@
 project('cinnamon-control-center', 'c',
-  version: '5.2.1',
+  version: '5.3.0',
   meson_version: '>=0.49.0',
 )
 
@@ -36,6 +36,7 @@ libnotify   = dependency('libnotify',       version: '>=0.7.3')
 libx11      = dependency('x11')
 polkit_gobj = dependency('polkit-gobject-1',version: '>=0.103')
 libxklavier = dependency('libxklavier',     version: '>=5.1')
+upower_glib_dep = dependency('upower-glib', version: '>= 0.99.8')
 
 config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 
