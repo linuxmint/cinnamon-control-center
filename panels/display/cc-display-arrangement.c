@@ -99,6 +99,7 @@ apply_rotation_to_geometry (CcDisplayMonitor *output,
 static void
 get_scaled_geometry (CcDisplayConfig  *config,
                      CcDisplayMonitor *output,
+                     double            max_scale,
                      int              *x,
                      int              *y,
                      int              *w,
@@ -117,6 +118,10 @@ get_scaled_geometry (CcDisplayConfig  *config,
   if (cc_display_config_is_layout_logical (config))
     {
       double scale = cc_display_monitor_get_scale (output);
+
+      if (cc_display_config_layout_use_ui_scale (config))
+        scale /= ceil (max_scale);
+
       *w = round (*w / scale);
       *h = round (*h / scale);
     }
@@ -134,6 +139,7 @@ get_bounding_box (CcDisplayConfig *config,
                   gint            *max_h)
 {
   GList *outputs, *l;
+  gdouble max_scale;
 
   g_assert (x1 && y1 && x2 && y2);
 
@@ -141,6 +147,7 @@ get_bounding_box (CcDisplayConfig *config,
   *x2 = *y2 = G_MININT;
   *max_w = 0;
   *max_h = 0;
+  max_scale = cc_display_config_get_maximum_scaling (config);
 
   outputs = cc_display_config_get_monitors (config);
   for (l = outputs; l; l = l->next)
@@ -151,7 +158,7 @@ get_bounding_box (CcDisplayConfig *config,
       if (!cc_display_monitor_is_useful (output))
         continue;
 
-      get_scaled_geometry (config, output, &x, &y, &w, &h);
+      get_scaled_geometry (config, output, max_scale, &x, &y, &w, &h);
 
       *x1 = MIN (*x1, x);
       *y1 = MIN (*y1, y);
@@ -171,8 +178,10 @@ monitor_get_drawing_rect (CcDisplayArrangement *self,
                           gint                 *y2)
 {
   gdouble x, y;
+  gdouble max_scale;
 
-  get_scaled_geometry (self->config, output, x1, y1, x2, y2);
+  max_scale = cc_display_config_get_maximum_scaling (self->config);
+  get_scaled_geometry (self->config, output, max_scale, x1, y1, x2, y2);
 
   /* get_scaled_geometry returns the width and height */
   *x2 = *x1 + *x2;
@@ -325,10 +334,12 @@ find_best_snapping (CcDisplayConfig   *config,
   GList *outputs, *l;
   gint x1, y1, x2, y2;
   gint w, h;
+  double max_scale;
 
   g_assert (snap_data != NULL);
 
-  get_scaled_geometry (config, snap_output, &x1, &y1, &w, &h);
+  max_scale = cc_display_config_get_maximum_scaling (config);
+  get_scaled_geometry (config, snap_output, max_scale, &x1, &y1, &w, &h);
   x2 = x1 + w;
   y2 = y1 + h;
 
@@ -344,6 +355,7 @@ find_best_snapping (CcDisplayConfig   *config,
       gint left_snap_pos;
       gint right_snap_pos;
       gdouble dist_x, dist_y;
+      gdouble max_scale;
       gdouble tmp;
 
       if (output == snap_output)
@@ -352,7 +364,8 @@ find_best_snapping (CcDisplayConfig   *config,
       if (!cc_display_monitor_is_useful (output))
         continue;
 
-      get_scaled_geometry (config, output, &_x1, &_y1, &_w, &_h);
+      max_scale = cc_display_config_get_maximum_scaling (config);
+      get_scaled_geometry (config, output, max_scale, &_x1, &_y1, &_w, &_h);
       _x2 = _x1 + _w;
       _y2 = _y1 + _h;
 
@@ -541,6 +554,9 @@ cc_display_arrangement_draw (GtkWidget *widget,
   gtk_style_context_save (context);
   gtk_style_context_add_class (context, "display-arrangement");
 
+  cairo_save (cr);
+  gtk_render_background (context, cr, 0, 0, gtk_widget_get_allocated_width (widget), gtk_widget_get_allocated_height (widget));
+  cairo_restore (cr);
   /* Draw in reverse order so that hit detection matches visual. Also pull
    * the selected output to the back. */
   outputs = g_list_copy (cc_display_config_get_monitors (self->config));
@@ -965,6 +981,7 @@ cc_display_config_snap_output (CcDisplayConfig  *config,
 {
   SnapData snap_data;
   gint x, y, w, h;
+  gdouble max_scale;
 
   if (!cc_display_monitor_is_useful (output))
     return;
@@ -972,7 +989,8 @@ cc_display_config_snap_output (CcDisplayConfig  *config,
   if (cc_display_config_count_useful_monitors (config) <= 1)
     return;
 
-  get_scaled_geometry (config, output, &x, &y, &w, &h);
+  max_scale = cc_display_config_get_maximum_scaling (config);
+  get_scaled_geometry (config, output, max_scale, &x, &y, &w, &h);
 
   snap_data.snapped = SNAP_DIR_NONE;
   snap_data.mon_x = x;

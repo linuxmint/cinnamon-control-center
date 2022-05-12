@@ -6,8 +6,7 @@ sources = files(
   'cc-display-config-manager-dbus.c',
   'cc-display-config-manager.c',
   'cc-display-settings.c',
-  'display-module.c',
-  'list-box-helper.c'
+  'display-module.c'
 )
 
 resource_data = files(
@@ -21,9 +20,6 @@ sources += gnome.compile_resources(
   c_name: 'cc_display',
   dependencies: resource_data,
   export: true
-#  gresource_bundle: true,
-#  install: true,
-#  install_dir: ui_dir
 )
 
 deps = [
@@ -32,7 +28,6 @@ deps = [
   math,
   upower_glib_dep,
   cinn_desktop,
-  libhandy_dep,
   glib  
 ]
 

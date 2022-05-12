@@ -160,6 +160,8 @@ struct _CcDisplayConfigClass
   gboolean (*is_scaled_mode_valid) (CcDisplayConfig  *self,
                                     CcDisplayMode    *mode,
                                     double            scale);
+  gboolean (*layout_use_ui_scale) (CcDisplayConfig  *self);
+  gint     (*get_legacy_ui_scale) (CcDisplayConfig  *self);
 };
 
 
@@ -186,6 +188,13 @@ void              cc_display_config_set_minimum_size        (CcDisplayConfig    
 gboolean          cc_display_config_is_scaled_mode_valid    (CcDisplayConfig    *self,
                                                              CcDisplayMode      *mode,
                                                              double              scale);
+gboolean          cc_display_config_layout_use_ui_scale     (CcDisplayConfig    *self);
+gint              cc_display_config_get_legacy_ui_scale     (CcDisplayConfig    *self);
+
+double            cc_display_config_get_maximum_scaling     (CcDisplayConfig    *self);
+void              cc_display_config_set_fractional_scaling  (CcDisplayConfig    *self,
+                                                             gboolean            enabled);
+gboolean          cc_display_config_get_fractional_scaling  (CcDisplayConfig    *self);
 
 const char*       cc_display_monitor_get_display_name       (CcDisplayMonitor   *monitor);
 gboolean          cc_display_monitor_is_active              (CcDisplayMonitor   *monitor);

@@ -26,10 +26,6 @@
 #include <libcinnamon-desktop/cdesktop-enums.h>
 #include <math.h>
 
-#define HANDY_USE_UNSTABLE_API 1
-#include <handy.h>
-
-#include "list-box-helper.h"
 #include <libupower-glib/upower.h>
 
 #include "cc-display-config-manager-dbus.h"
@@ -48,6 +44,8 @@
 #define PANEL_PADDING   32
 #define SECTION_PADDING 32
 #define HEADING_PADDING 12
+
+#define WID(s) GTK_WIDGET (gtk_builder_get_object (self->builder, s))
 
 typedef enum {
   CC_DISPLAY_CONFIG_SINGLE,
@@ -83,38 +81,39 @@ struct _CcDisplayPanel
   GDBusProxy *iio_sensor_proxy;
   gboolean    has_accelerometer;
 
-  gchar     *main_title;
-  GtkWidget *main_titlebar;
-  GtkWidget *apply_titlebar;
-  GtkWidget *apply_titlebar_apply;
-  GtkWidget *apply_titlebar_warning;
+  GtkBuilder *builder;
 
-  GListStore     *primary_display_list;
+  GtkWidget *apply_button;
+  GtkWidget *defaults_button;
+  GtkWidget *cancel_button;
+
+  GtkListStore   *primary_display_list;
   GtkListStore   *output_selection_list;
 
-  GtkWidget      *arrangement_frame;
-  GtkAlignment   *arrangement_bin;
-  GtkRadioButton *config_type_join;
-  GtkRadioButton *config_type_mirror;
-  GtkRadioButton *config_type_single;
-  GtkWidget      *config_type_switcher_frame;
-  GtkLabel       *current_output_label;
-  GtkWidget      *display_settings_frame;
-  GtkSwitch      *output_enabled_switch;
-  GtkComboBox    *output_selection_combo;
-  GtkStack       *output_selection_stack;
-  GtkButtonBox   *output_selection_two_first;
-  GtkButtonBox   *output_selection_two_second;
-  HdyComboRow    *primary_display_row;
-  GtkWidget      *stack_switcher;
+  GtkWidget *arrangement_frame;
+  GtkWidget *arrangement_bin;
+  GtkWidget *config_type_join;
+  GtkWidget *config_type_mirror;
+  GtkWidget *config_type_single;
+  GtkWidget *config_type_switcher_frame;
+  GtkWidget *current_output_label;
+  GtkWidget *display_settings_frame;
+  GtkWidget *output_enabled_switch;
+  GtkWidget *output_selection_combo;
+  GtkWidget *output_selection_stack;
+  GtkWidget *output_selection_two_first;
+  GtkWidget *output_selection_two_second;
+  GtkWidget *primary_display_combo;
+  GtkWidget *stack_switcher;
 
   GCancellable   *cancellable;
+  GSettings      *muffin_settings;
 };
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 static void
-update_apply_button (CcDisplayPanel *panel);
+update_bottom_buttons (CcDisplayPanel *panel);
 static void
 apply_current_configuration (CcDisplayPanel *self);
 static void
@@ -173,6 +172,8 @@ config_ensure_of_type (CcDisplayPanel *panel, CcDisplayConfigType type)
 {
   CcDisplayConfigType current_type = config_get_current_type (panel);
   GList *outputs, *l;
+  CcDisplayMonitor *current_primary = NULL;
+  gdouble old_primary_scale = -1;
 
   /* Do not do anything if the current detected configuration type is
    * identitcal to what we expect. */
@@ -182,6 +183,18 @@ config_ensure_of_type (CcDisplayPanel *panel, CcDisplayConfigType type)
   reset_current_config (panel);
 
   outputs = cc_display_config_get_ui_sorted_monitors (panel->current_config);
+
+  for (l = outputs; l; l = l->next)
+    {
+      CcDisplayMonitor *output = l->data;
+
+      if (cc_display_monitor_is_primary (output))
+        {
+          current_primary = output;
+          old_primary_scale = cc_display_monitor_get_scale (current_primary);
+          break;
+        }
+    }
 
   switch (type)
     {
@@ -217,15 +230,41 @@ config_ensure_of_type (CcDisplayPanel *panel, CcDisplayConfigType type)
       for (l = outputs; l; l = l->next)
         {
           CcDisplayMonitor *output = l->data;
+          gdouble scale;
+          CcDisplayMode *mode;
+
+          mode = cc_display_monitor_get_preferred_mode (output);
+          /* If the monitor was active, try using the current scale, otherwise
+           * try picking the preferred scale. */
+          if (cc_display_monitor_is_active (output))
+            scale = cc_display_monitor_get_scale (output);
+          else
+            scale = cc_display_mode_get_preferred_scale (mode);
+
+          /* If we cannot use the current/preferred scale, try to fall back to
+           * the previously scale of the primary monitor instead.
+           * This is not guaranteed to result in a valid configuration! */
+          if (!cc_display_config_is_scaled_mode_valid (panel->current_config,
+                                                       mode,
+                                                       scale))
+            {
+              if (current_primary &&
+                  cc_display_config_is_scaled_mode_valid (panel->current_config,
+                                                          mode,
+                                                          old_primary_scale))
+                scale = old_primary_scale;
+            }
 
           cc_display_monitor_set_active (output, cc_display_monitor_is_usable (output));
-          cc_display_monitor_set_mode (output, cc_display_monitor_get_preferred_mode (output));
+          cc_display_monitor_set_mode (output, mode);
+          cc_display_monitor_set_scale (output, scale);
         }
       break;
 
     case CC_DISPLAY_CONFIG_CLONE:
       {
         g_debug ("Creating new clone config");
+        gdouble scale;
         GList *modes = cc_display_config_get_cloning_modes (panel->current_config);
         gint bw, bh;
         CcDisplayMode *best = NULL;
@@ -247,7 +286,23 @@ config_ensure_of_type (CcDisplayPanel *panel, CcDisplayConfigType type)
 
             modes = modes->next;
           }
-        cc_display_config_set_mode_on_all_outputs (panel->current_config, best);
+
+        /* Take the preferred scale by default, */
+        scale = cc_display_mode_get_preferred_scale (best);
+        /* but prefer the old primary scale if that is valid. */
+        if (current_primary &&
+            cc_display_config_is_scaled_mode_valid (panel->current_config,
+                                                    best,
+                                                    old_primary_scale))
+          scale = old_primary_scale;
+
+        for (l = outputs; l; l = l->next)
+          {
+            CcDisplayMonitor *output = l->data;
+
+            cc_display_monitor_set_mode (output, best);
+            cc_display_monitor_set_scale (output, scale);
+          }
       }
       break;
 
@@ -364,46 +419,11 @@ dialog_toplevel_focus_changed (CcDisplayPanel *self)
 }
 
 static void
-reset_titlebar (CcDisplayPanel *self)
-{
-    return;
-  GtkWidget *toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (self)));
-
-  if (self->main_titlebar)
-    {
-      gtk_window_set_titlebar (GTK_WINDOW (toplevel), self->main_titlebar);
-      g_clear_object (&self->main_titlebar);
-
-      /* The split header bar will not reset the window title, so do that here. */
-      gtk_window_set_title (GTK_WINDOW (toplevel), self->main_title);
-      g_clear_pointer (&self->main_title, g_free);
-    }
-
-  g_clear_object (&self->apply_titlebar);
-  g_clear_object (&self->apply_titlebar_apply);
-  g_clear_object (&self->apply_titlebar_warning);
-}
-
-// static void
-// active_panel_changed (CcShell    *shell,
-//                       GParamSpec *pspec,
-//                       CcPanel    *self)
-// {
-//   g_autoptr(CcPanel) panel = NULL;
-
-//   g_object_get (shell, "active-panel", &panel, NULL);
-//   if (panel != self)
-//     reset_titlebar (CC_DISPLAY_PANEL (self));
-// }
-
-static void
 cc_display_panel_dispose (GObject *object)
 {
   CcDisplayPanel *self = CC_DISPLAY_PANEL (object);
   CcShell *shell;
   GtkWidget *toplevel;
-
-  reset_titlebar (CC_DISPLAY_PANEL (object));
 
   if (self->sensor_watch_id > 0)
     {
@@ -413,22 +433,13 @@ cc_display_panel_dispose (GObject *object)
 
   g_clear_object (&self->iio_sensor_proxy);
 
-  // if (self->focus_id)
-  //   {
-  //     shell = cc_panel_get_shell (CC_PANEL (object));
-  //     toplevel = cc_shell_get_toplevel (shell);
-  //     if (toplevel != NULL)
-  //       g_signal_handler_disconnect (G_OBJECT (toplevel),
-  //                                    self->focus_id);
-  //     self->focus_id = 0;
-  //     monitor_labeler_hide (CC_DISPLAY_PANEL (object));
-  //   }
-
   g_clear_object (&self->manager);
   g_clear_object (&self->current_config);
   g_clear_object (&self->up_client);
 
   g_clear_object (&self->shell_proxy);
+
+  g_clear_object (&self->muffin_settings);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->dispose (object);
 }
@@ -446,7 +457,7 @@ on_monitor_settings_updated_cb (CcDisplayPanel    *panel,
 {
   if (monitor)
     cc_display_config_snap_output (panel->current_config, monitor);
-  update_apply_button (panel);
+  update_bottom_buttons (panel);
 }
 
 static void
@@ -476,7 +487,7 @@ on_output_enabled_active_changed_cb (CcDisplayPanel *panel)
   if (!panel->current_output)
     return;
 
-  active = gtk_switch_get_active (panel->output_enabled_switch);
+  active = gtk_switch_get_active (GTK_SWITCH (panel->output_enabled_switch));
 
   if (cc_display_monitor_is_active (panel->current_output) == active)
     return;
@@ -519,7 +530,7 @@ on_output_selection_combo_changed_cb (CcDisplayPanel *panel)
   if (!panel->current_config)
     return;
 
-  if (!gtk_combo_box_get_active_iter (panel->output_selection_combo, &iter))
+  if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (panel->output_selection_combo), &iter))
     return;
 
   gtk_tree_model_get (GTK_TREE_MODEL (panel->output_selection_list), &iter,
@@ -555,37 +566,44 @@ on_output_selection_two_toggled_cb (CcDisplayPanel *panel, GtkRadioButton *btn)
       if (output)
         cc_display_monitor_set_active (output, TRUE);
 
-      update_apply_button (panel);
+      update_bottom_buttons (panel);
     }
 
   set_current_output (panel, g_object_get_data (G_OBJECT (btn), "display"), FALSE);
 }
 
 static void
-on_primary_display_selected_index_changed_cb (CcDisplayPanel *panel)
+on_primary_display_selected_index_changed_cb (GtkComboBox *box,
+                                              CcDisplayPanel *panel)
 {
-  gint idx = hdy_combo_row_get_selected_index (panel->primary_display_row);
-  g_autoptr(CcDisplayMonitor) output = NULL;
+  GtkTreeIter iter;
+  if (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (box), &iter))
+    {
+      g_autoptr(CcDisplayMonitor) output = NULL;
 
-  if (idx < 0 || panel->rebuilding_counter > 0)
-    return;
+      if (panel->rebuilding_counter > 0)
+        return;
 
-  output = g_list_model_get_item (G_LIST_MODEL (panel->primary_display_list), idx);
+      gtk_tree_model_get (GTK_TREE_MODEL (panel->primary_display_list),
+                          &iter,
+                          1, &output,
+                          -1);
 
-  if (cc_display_monitor_is_primary (output))
-    return;
+      if (cc_display_monitor_is_primary (output))
+        return;
 
-  cc_display_monitor_set_primary (output, TRUE);
-  update_apply_button (panel);
+      cc_display_monitor_set_primary (output, TRUE);
+      update_bottom_buttons (panel);
+    }
 }
 
 static void
 cc_display_panel_constructed (GObject *object)
 {
+  G_OBJECT_CLASS (cc_display_panel_parent_class)->constructed (object);
   // g_signal_connect_object (cc_panel_get_shell (CC_PANEL (object)), "notify::active-panel",
   //                          G_CALLBACK (active_panel_changed), object, 0);
 
-  G_OBJECT_CLASS (cc_display_panel_parent_class)->constructed (object);
 }
 
 static GtkWidget *
@@ -608,30 +626,6 @@ cc_display_panel_class_init (CcDisplayPanelClass *klass)
 
   object_class->constructed = cc_display_panel_constructed;
   object_class->dispose = cc_display_panel_dispose;
-
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/cinnamon/control-center/display/cc-display-panel.ui");
-
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, arrangement_frame);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, arrangement_bin);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, config_type_switcher_frame);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, config_type_join);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, config_type_mirror);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, config_type_single);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, current_output_label);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, display_settings_frame);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, output_enabled_switch);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, output_selection_combo);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, output_selection_stack);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, output_selection_two_first);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, output_selection_two_second);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, primary_display_row);
-  gtk_widget_class_bind_template_child (widget_class, CcDisplayPanel, stack_switcher);
-
-  gtk_widget_class_bind_template_callback (widget_class, on_config_type_toggled_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_output_enabled_active_changed_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_output_selection_combo_changed_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_output_selection_two_toggled_cb);
-  gtk_widget_class_bind_template_callback (widget_class, on_primary_display_selected_index_changed_cb);
 }
 
 static void
@@ -654,14 +648,14 @@ set_current_output (CcDisplayPanel   *panel,
 
   if (panel->current_output)
     {
-      gtk_label_set_text (panel->current_output_label, cc_display_monitor_get_ui_name (panel->current_output));
-      gtk_switch_set_active (panel->output_enabled_switch, cc_display_monitor_is_active (panel->current_output));
+      gtk_label_set_text (GTK_LABEL (panel->current_output_label), cc_display_monitor_get_ui_name (panel->current_output));
+      gtk_switch_set_active (GTK_SWITCH (panel->output_enabled_switch), cc_display_monitor_is_active (panel->current_output));
       gtk_widget_set_sensitive (GTK_WIDGET (panel->output_enabled_switch), cc_display_monitor_is_usable (panel->current_output));
     }
   else
     {
-      gtk_label_set_text (panel->current_output_label, "");
-      gtk_switch_set_active (panel->output_enabled_switch, FALSE);
+      gtk_label_set_text (GTK_LABEL (panel->current_output_label), "");
+      gtk_switch_set_active (GTK_SWITCH (panel->output_enabled_switch), FALSE);
       gtk_widget_set_sensitive (GTK_WIDGET (panel->output_enabled_switch), FALSE);
     }
 
@@ -681,7 +675,7 @@ set_current_output (CcDisplayPanel   *panel,
 
       if (o == panel->current_output)
         {
-          gtk_combo_box_set_active_iter (panel->output_selection_combo, &iter);
+          gtk_combo_box_set_active_iter (GTK_COMBO_BOX (panel->output_selection_combo), &iter);
           break;
         }
 
@@ -706,7 +700,7 @@ rebuild_ui (CcDisplayPanel *panel)
 
   panel->rebuilding_counter++;
 
-  g_list_store_remove_all (panel->primary_display_list);
+  gtk_list_store_clear (panel->primary_display_list);
   gtk_list_store_clear (panel->output_selection_list);
 
   if (!panel->current_config)
@@ -754,12 +748,21 @@ rebuild_ui (CcDisplayPanel *panel)
 
       if (cc_display_monitor_is_active (output))
         {
+          GtkTreeIter iter;
+
           n_active_outputs += 1;
 
-          g_list_store_append (panel->primary_display_list, output);
+          gtk_list_store_append (panel->primary_display_list, &iter);
+          gtk_list_store_set (panel->primary_display_list,
+                              &iter,
+                              0, cc_display_monitor_get_ui_number_name (output),
+                              1, output,
+                              -1);
+
           if (cc_display_monitor_is_primary (output))
-            hdy_combo_row_set_selected_index (panel->primary_display_row,
-                                              g_list_model_get_n_items (G_LIST_MODEL (panel->primary_display_list)) - 1);
+            {
+              gtk_combo_box_set_active_iter (GTK_COMBO_BOX (panel->primary_display_combo), &iter);
+            }
 
           /* Ensure that an output is selected; note that this doesn't ensure
            * the selected output is any useful (i.e. when switching types).
@@ -784,28 +787,28 @@ rebuild_ui (CcDisplayPanel *panel)
       if (type > CC_DISPLAY_CONFIG_LAST_VALID)
         type = CC_DISPLAY_CONFIG_JOIN;
 
-      gtk_widget_set_visible (panel->config_type_switcher_frame, TRUE);
+      gtk_widget_set_sensitive (panel->config_type_switcher_frame, TRUE);
       gtk_widget_set_visible (panel->arrangement_frame, type == CC_DISPLAY_CONFIG_JOIN);
 
       /* We need a switcher except in CLONE mode */
       if (type == CC_DISPLAY_CONFIG_CLONE)
-        gtk_stack_set_visible_child_name (panel->output_selection_stack, "no-selection");
+        gtk_stack_set_visible_child_name (GTK_STACK (panel->output_selection_stack), "no-selection");
       else
-        gtk_stack_set_visible_child_name (panel->output_selection_stack, "two-selection");
+        gtk_stack_set_visible_child_name (GTK_STACK (panel->output_selection_stack), "two-selection");
     }
   else if (n_usable_outputs > 1)
     {
       /* We have more than one usable monitor. In this case there is no chooser,
        * and we always show the arrangement widget even if we are in SINGLE mode.
        */
-      gtk_widget_set_visible (panel->config_type_switcher_frame, FALSE);
+      gtk_widget_set_sensitive (panel->config_type_switcher_frame, FALSE);
       gtk_widget_set_visible (panel->arrangement_frame, TRUE);
 
       /* Mirror is also invalid as it cannot be configured using this UI. */
       if (type == CC_DISPLAY_CONFIG_CLONE || type > CC_DISPLAY_CONFIG_LAST_VALID)
         type = CC_DISPLAY_CONFIG_JOIN;
 
-      gtk_stack_set_visible_child_name (panel->output_selection_stack, "multi-selection");
+      gtk_stack_set_visible_child_name (GTK_STACK (panel->output_selection_stack), "multi-selection");
     }
   else
     {
@@ -814,16 +817,16 @@ rebuild_ui (CcDisplayPanel *panel)
        * mode (and not e.g. mirroring across one display) */
       type = CC_DISPLAY_CONFIG_SINGLE;
 
-      gtk_widget_set_visible (panel->config_type_switcher_frame, FALSE);
+      gtk_widget_set_sensitive (panel->config_type_switcher_frame, FALSE);
       gtk_widget_set_visible (panel->arrangement_frame, FALSE);
 
-      gtk_stack_set_visible_child_name (panel->output_selection_stack, "no-selection");
+      gtk_stack_set_visible_child_name (GTK_STACK (panel->output_selection_stack), "no-selection");
     }
 
   cc_panel_set_selected_type (panel, type);
 
   panel->rebuilding_counter--;
-  update_apply_button (panel);
+  update_bottom_buttons (panel);
 }
 
 static void
@@ -843,7 +846,7 @@ reset_current_config (CcDisplayPanel *panel)
   cc_display_config_set_minimum_size (current, MINIMUM_WIDTH, MINIMUM_HEIGHT);
   panel->current_config = current;
 
-  g_list_store_remove_all (panel->primary_display_list);
+  gtk_list_store_clear (panel->primary_display_list);
   gtk_list_store_clear (panel->output_selection_list);
 
   if (panel->current_config)
@@ -865,7 +868,7 @@ reset_current_config (CcDisplayPanel *panel)
 
   g_clear_object (&old);
 
-  update_apply_button (panel);
+  update_bottom_buttons (panel);
 }
 
 static void
@@ -873,8 +876,6 @@ on_screen_changed (CcDisplayPanel *panel)
 {
   if (!panel->manager)
     return;
-
-  reset_titlebar (panel);
 
   reset_current_config (panel);
   rebuild_ui (panel);
@@ -896,70 +897,14 @@ on_toplevel_key_press (GtkWidget   *button,
   return GDK_EVENT_STOP;
 }
 
-// static void
-// show_apply_titlebar (CcDisplayPanel *panel, gboolean is_applicable)
-// {
-//   if (!panel->apply_titlebar)
-//     {
-//       g_autoptr(GtkSizeGroup) size_group = NULL;
-//       GtkWidget *header, *button, *toplevel;
-//       panel->apply_titlebar = header = gtk_header_bar_new ();
-//       gtk_widget_show (header);
-
-//       size_group = gtk_size_group_new (GTK_SIZE_GROUP_VERTICAL);
-
-//       button = gtk_button_new_with_mnemonic (_("_Cancel"));
-//       gtk_widget_show (button);
-//       gtk_header_bar_pack_start (GTK_HEADER_BAR (header), button);
-//       gtk_size_group_add_widget (size_group, button);
-//       g_signal_connect_object (button, "clicked", G_CALLBACK (on_screen_changed),
-//                                panel, G_CONNECT_SWAPPED);
-
-//       toplevel = cc_shell_get_toplevel (cc_panel_get_shell (CC_PANEL (panel)));
-//       g_signal_connect_object (toplevel, "key-press-event", G_CALLBACK (on_toplevel_key_press),
-//                                button, G_CONNECT_SWAPPED);
-
-//       panel->apply_titlebar_apply = button = gtk_button_new_with_mnemonic (_("_Apply"));
-//       gtk_widget_show (button);
-//       gtk_header_bar_pack_end (GTK_HEADER_BAR (header), button);
-//       gtk_size_group_add_widget (size_group, button);
-//       g_signal_connect_object (button, "clicked", G_CALLBACK (apply_current_configuration),
-//                                panel, G_CONNECT_SWAPPED);
-//       gtk_style_context_add_class (gtk_widget_get_style_context (button),
-//                                    GTK_STYLE_CLASS_SUGGESTED_ACTION);
-
-//       header = gtk_window_get_titlebar (GTK_WINDOW (toplevel));
-//       if (header)
-//         panel->main_titlebar = g_object_ref (header);
-//       panel->main_title = g_strdup (gtk_window_get_title (GTK_WINDOW (toplevel)));
-
-//       gtk_window_set_titlebar (GTK_WINDOW (toplevel), panel->apply_titlebar);
-//       g_object_ref (panel->apply_titlebar);
-//       g_object_ref (panel->apply_titlebar_apply);
-//     }
-
-//   if (is_applicable)
-//     {
-//       gtk_header_bar_set_title (GTK_HEADER_BAR (panel->apply_titlebar), _("Apply Changes?"));
-//       gtk_header_bar_set_subtitle (GTK_HEADER_BAR (panel->apply_titlebar), NULL);
-//     }
-//   else
-//     {
-//       gtk_header_bar_set_title (GTK_HEADER_BAR (panel->apply_titlebar), _("Changes Cannot be Applied"));
-//       gtk_header_bar_set_subtitle (GTK_HEADER_BAR (panel->apply_titlebar), _("This could be due to hardware limitations."));
-//     }
-//   gtk_widget_set_sensitive (panel->apply_titlebar_apply, is_applicable);
-// }
-
 static void
-update_apply_button (CcDisplayPanel *panel)
+update_bottom_buttons (CcDisplayPanel *panel)
 {
   gboolean config_equal;
   g_autoptr(CcDisplayConfig) applied_config = NULL;
 
   if (!panel->current_config)
     {
-      reset_titlebar (panel);
       return;
     }
 
@@ -968,10 +913,16 @@ update_apply_button (CcDisplayPanel *panel)
   config_equal = cc_display_config_equal (panel->current_config,
                                           applied_config);
 
-  // if (config_equal)
-  //   reset_titlebar (panel);
-  // else
-  //   show_apply_titlebar (panel, cc_display_config_is_applicable (panel->current_config));
+  if (config_equal)
+    {
+      gtk_widget_set_sensitive (panel->apply_button, FALSE);
+      gtk_widget_set_sensitive (panel->cancel_button, FALSE);
+    }
+  else
+    {
+      gtk_widget_set_sensitive (panel->apply_button, cc_display_config_is_applicable (panel->current_config));
+      gtk_widget_set_sensitive (panel->cancel_button, TRUE);
+    }
 }
 
 static void
@@ -1145,6 +1096,65 @@ session_bus_ready (GObject        *source,
 }
 
 static void
+get_primary_display_label (GtkCellLayout   *cell_layout,
+                           GtkCellRenderer *cell,
+                           GtkTreeModel    *model,
+                           GtkTreeIter     *iter,
+                           gpointer         data)
+{
+    CcDisplayMonitor *monitor;
+    const gchar *text;
+
+    gtk_tree_model_get (model,
+                        iter,
+                        1, &monitor,
+                        -1);
+
+    text = cc_display_monitor_get_ui_number_name (monitor);
+
+    g_object_set (G_OBJECT (cell),
+                  "text", text,
+                  NULL);
+}
+
+static void
+experimental_features_changed (CcDisplayPanel *self)
+{
+  on_monitor_settings_updated_cb (self, self->current_output, self->settings);
+}
+
+static void
+apply_button_clicked_cb (GtkWidget *widget,
+                         gpointer   user_data)
+{
+    apply_current_configuration (CC_DISPLAY_PANEL (user_data));
+}
+
+static void
+cancel_button_clicked_cb (GtkWidget *widget,
+                         gpointer   user_data)
+{
+    on_screen_changed (CC_DISPLAY_PANEL (user_data));
+}
+
+static void
+defaults_button_clicked_cb (GtkWidget *widget,
+                            gpointer   user_data)
+{
+  // gchar *path = g_build_filename (g_get_user_config_dir (), "monitors.xml", NULL);
+  // GFile *xml = g_file_new_for_path (path);
+  // g_free (path);
+
+  // g_file_delete_async (xml,
+  //                      G_PRIORITY_DEFAULT,
+  //                      NULL,
+  //                      (GAsyncReadyCallback) (on_screen_changed),
+  //                      CcDisplayPanel (user_data));
+
+  // g_object_unref (xml);
+}
+
+static void
 cc_display_panel_init (CcDisplayPanel *self)
 {
   g_autoptr(GtkCssProvider) provider = NULL;
@@ -1152,11 +1162,42 @@ cc_display_panel_init (CcDisplayPanel *self)
 
   g_resources_register (cc_display_get_resource ());
 
-  // GResource *re = g_resource_load (UIDIR "/cc-display-resources.gresource", NULL);
-  // g_resources_register (re);
+  self->builder = gtk_builder_new_from_resource ("/org/cinnamon/control-center/display/cc-display-panel.ui");
 
+  gtk_container_add (GTK_CONTAINER (self), WID ("toplevel"));
 
-  gtk_widget_init_template (GTK_WIDGET (self));
+  self->arrangement_frame = WID ("arrangement_frame");
+  self->arrangement_bin = WID ("arrangement_bin");
+  self->config_type_switcher_frame = WID ("config_type_switcher_frame");
+  self->config_type_join = WID ("config_type_join");
+  self->config_type_mirror = WID ("config_type_mirror");
+  self->config_type_single = WID ("config_type_single");
+  self->current_output_label = WID ("current_output_label");
+  self->display_settings_frame = WID ("display_settings_frame");
+  self->output_enabled_switch = WID ("output_enabled_switch");
+  self->output_selection_combo = WID ("output_selection_combo");
+  self->output_selection_stack = WID ("output_selection_stack");
+  self->output_selection_two_first = WID ("output_selection_two_first");
+  self->output_selection_two_second = WID ("output_selection_two_second");
+  self->primary_display_combo = WID ("primary_display_combo");
+  self->stack_switcher = WID ("stack_switcher");
+  self->apply_button = WID ("apply_button");
+  self->cancel_button = WID ("cancel_button");
+  self->defaults_button = WID ("defaults_button");
+
+  gtk_builder_add_callback_symbol (self->builder, "on_config_type_toggled_cb", G_CALLBACK (on_config_type_toggled_cb));
+  gtk_builder_add_callback_symbol (self->builder, "on_output_enabled_active_changed_cb", G_CALLBACK (on_output_enabled_active_changed_cb));
+  gtk_builder_add_callback_symbol (self->builder, "on_output_selection_combo_changed_cb", G_CALLBACK (on_output_selection_combo_changed_cb));
+  gtk_builder_add_callback_symbol (self->builder, "on_output_selection_two_toggled_cb", G_CALLBACK (on_output_selection_two_toggled_cb));
+  gtk_builder_add_callback_symbol (self->builder, "on_primary_display_selected_index_changed_cb", G_CALLBACK (on_primary_display_selected_index_changed_cb));
+  gtk_builder_add_callback_symbol (self->builder, "apply_button_clicked_cb", G_CALLBACK (apply_button_clicked_cb));
+  gtk_builder_add_callback_symbol (self->builder, "cancel_button_clicked_cb", G_CALLBACK (cancel_button_clicked_cb));
+  gtk_builder_add_callback_symbol (self->builder, "defaults_button_clicked_cb", G_CALLBACK (defaults_button_clicked_cb));
+
+  gtk_builder_connect_signals (self->builder, self);
+
+  self->muffin_settings = g_settings_new ("org.cinnamon.muffin");
+  g_signal_connect_swapped (self->muffin_settings, "changed::experimental-features", G_CALLBACK (experimental_features_changed), self);
 
   self->arrangement = cc_display_arrangement_new (NULL);
 
@@ -1165,7 +1206,7 @@ cc_display_panel_init (CcDisplayPanel *self)
   gtk_container_add (GTK_CONTAINER (self->arrangement_bin), GTK_WIDGET (self->arrangement));
 
   g_signal_connect_object (self->arrangement, "updated",
-			   G_CALLBACK (update_apply_button), self,
+			   G_CALLBACK (update_bottom_buttons), self,
 			   G_CONNECT_SWAPPED);
   g_signal_connect_object (self->arrangement, "notify::selected-output",
 			   G_CALLBACK (on_arrangement_selected_ouptut_changed_cb), self,
@@ -1178,14 +1219,22 @@ cc_display_panel_init (CcDisplayPanel *self)
                            G_CALLBACK (on_monitor_settings_updated_cb), self,
                            G_CONNECT_SWAPPED);
 
-  self->primary_display_list = g_list_store_new (CC_TYPE_DISPLAY_MONITOR);
-  hdy_combo_row_bind_name_model (self->primary_display_row,
-                                 G_LIST_MODEL (self->primary_display_list),
-                                 (HdyComboRowGetNameFunc) cc_display_monitor_dup_ui_number_name,
-                                 NULL, NULL);
+  self->primary_display_list = gtk_list_store_new (2, G_TYPE_STRING, CC_TYPE_DISPLAY_MONITOR);
+  gtk_combo_box_set_model (GTK_COMBO_BOX (self->primary_display_combo), GTK_TREE_MODEL (self->primary_display_list));
+  gtk_cell_layout_clear (GTK_CELL_LAYOUT (self->primary_display_combo));
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (self->primary_display_combo),
+                              renderer,
+                              TRUE);
+  gtk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (self->primary_display_combo),
+                                      renderer,
+                                      get_primary_display_label,
+                                      self,
+                                      NULL);
+  gtk_cell_renderer_set_visible (renderer, TRUE);
 
   self->output_selection_list = gtk_list_store_new (2, G_TYPE_STRING, CC_TYPE_DISPLAY_MONITOR);
-  gtk_combo_box_set_model (self->output_selection_combo, GTK_TREE_MODEL (self->output_selection_list));
+  gtk_combo_box_set_model (GTK_COMBO_BOX (self->output_selection_combo), GTK_TREE_MODEL (self->output_selection_list));
   gtk_cell_layout_clear (GTK_CELL_LAYOUT (self->output_selection_combo));
   renderer = gtk_cell_renderer_text_new ();
   gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (self->output_selection_combo),
@@ -1246,8 +1295,6 @@ cc_display_panel_init (CcDisplayPanel *self)
 void
 cc_display_panel_register (GIOModule *module)
 {
-  hdy_init (NULL, NULL);
-
   textdomain (GETTEXT_PACKAGE);
   bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");

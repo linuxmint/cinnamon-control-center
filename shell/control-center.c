@@ -30,13 +30,6 @@
 #include <string.h>
 #include <libnotify/notify.h>
 
-
-
-#define HANDY_USE_UNSTABLE_API 1
-#include <handy.h>
-
-
-
 #ifdef GDK_WINDOWING_X11
 #include <X11/Xlib.h>
 #endif

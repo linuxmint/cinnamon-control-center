@@ -54,8 +54,7 @@ controlcenter = executable('cinnamon-control-center',
     gtk,
     cinn_menu,
     libx11,
-    libnotify,
-    libhandy_dep
+    libnotify
   ],
   link_with: libcinnamon_control_center,
   install: true
