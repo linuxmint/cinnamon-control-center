@@ -6,8 +6,6 @@ icon_sizes = [
   'scalable'
 ]
 
-
-
 foreach size : sizes
   install_subdir(size,
     strip_directory: true,

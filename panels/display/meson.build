@@ -6,6 +6,7 @@ sources = files(
   'cc-display-config-manager-dbus.c',
   'cc-display-config-manager.c',
   'cc-display-settings.c',
+  'cc-rr-labeler.c',
   'display-module.c'
 )
 
@@ -28,7 +29,8 @@ deps = [
   math,
   upower_glib_dep,
   cinn_desktop,
-  glib  
+  libx11,
+  glib
 ]
 
 cflags = [
@@ -50,11 +52,9 @@ panel_display = shared_library(
   install_dir: panels_dir
 )
 
-
 install_data(
   'cinnamon-display-panel.desktop',
   install_dir: panel_def_dir
 )
-
 
 subdir('icons')
