@@ -3,7 +3,6 @@ Section: x11
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends:
- meson,
  cinnamon-settings-daemon-dev,
  debhelper-compat (= 12),
  gnome-pkg-tools (>= 0.10),
@@ -31,6 +30,7 @@ Build-Depends:
  libxklavier-dev (>= 5.1),
  libxml2-dev,
  locales,
+ meson,
  tzdata,
 Standards-Version: 3.9.8
 Homepage: http://www.github.com/linuxmint/cinnamon-control-center
