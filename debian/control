@@ -33,7 +33,7 @@ Build-Depends:
  meson,
  tzdata,
 Standards-Version: 3.9.8
-Homepage: http://www.github.com/linuxmint/cinnamon-control-center
+Homepage: https://www.github.com/linuxmint/cinnamon-control-center
 
 Package: cinnamon-control-center
 Architecture: any
@@ -92,7 +92,7 @@ Depends:
  libcinnamon-control-center1 (= ${binary:Version}),
  libgtk-3-dev (>= 3.4.1),
  ${misc:Depends},
-Description: utilities to configure the Cinnamon desktop
+Description: utilities to configure the Cinnamon desktop - development files
  This package contains the development files for the cinnamon control center
  panels library.
 

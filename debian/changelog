@@ -459,7 +459,7 @@ cinnamon-control-center (2.8.0) rosa; urgency=medium
 
 cinnamon-control-center (2.6.0) rafaela; urgency=medium
 
-  * 2.6.0 
+  * 2.6.0
 
  -- Clement Lefebvre <root@linuxmint.com>  Tue, 19 May 2015 17:22:55 +0200
 
@@ -679,5 +679,5 @@ cinnamon-control-center (1.7.1) olivia; urgency=low
 cinnamon-control-center (1.0.0) nadia; urgency=low
 
   * Initial port from gnome-control-center 3.6.3
-    
+
  -- Michael Webster <miketwebster@gmail.com>  Fri, 25 Jan 2013 10:50:00 -0500
