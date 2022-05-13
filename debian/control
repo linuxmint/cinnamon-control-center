@@ -24,7 +24,7 @@ Build-Depends:
  libnma-dev (>= 1.2.0) [linux-any],
  libnotify-dev (>= 0.7.3),
  libpolkit-gobject-1-dev (>= 0.103),
- libupower-glib-dev (>= 0.9.1),
+ libupower-glib-dev (>= 0.99.8),
  libwacom-dev (>= 0.4) [linux-any],
  libx11-dev,
  libxkbfile-dev,
