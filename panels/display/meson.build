@@ -6,7 +6,7 @@ sources = files(
   'cc-display-config-manager-dbus.c',
   'cc-display-config-manager.c',
   'cc-display-settings.c',
-  'cc-rr-labeler.c',
+  'cc-display-labeler.c',
   'display-module.c'
 )
 

@@ -23,42 +23,42 @@
  * Author: Federico Mena-Quintero <federico@novell.com>
  */
 
-#ifndef CC_RR_LABELER_H
-#define CC_RR_LABELER_H
+#ifndef CC_DISPLAY_LABELER_H
+#define CC_DISPLAY_LABELER_H
 
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libcinnamon-desktop/gnome-rr-config.h>
+#include "cc-display-config.h"
 
-#define GNOME_TYPE_RR_LABELER            (cc_rr_labeler_get_type ())
-#define CC_RR_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNOME_TYPE_RR_LABELER, CcRRLabeler))
-#define CC_RR_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  GNOME_TYPE_RR_LABELER, CcRRLabelerClass))
+#define GNOME_TYPE_RR_LABELER            (cc_display_labeler_get_type ())
+#define CC_DISPLAY_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNOME_TYPE_RR_LABELER, CcDisplayLabeler))
+#define CC_DISPLAY_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  GNOME_TYPE_RR_LABELER, CcDisplayLabelerClass))
 #define GNOME_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GNOME_TYPE_RR_LABELER))
 #define GNOME_IS_RR_LABELER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  GNOME_TYPE_RR_LABELER))
-#define CC_RR_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  GNOME_TYPE_RR_LABELER, CcRRLabelerClass))
+#define CC_DISPLAY_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  GNOME_TYPE_RR_LABELER, CcDisplayLabelerClass))
 
-typedef struct _CcRRLabeler CcRRLabeler;
-typedef struct _CcRRLabelerClass CcRRLabelerClass;
-typedef struct _CcRRLabelerPrivate CcRRLabelerPrivate;
+typedef struct _CcDisplayLabeler CcDisplayLabeler;
+typedef struct _CcDisplayLabelerClass CcDisplayLabelerClass;
+typedef struct _CcDisplayLabelerPrivate CcDisplayLabelerPrivate;
 
-struct _CcRRLabeler {
+struct _CcDisplayLabeler {
 	GObject parent;
 
 	/*< private >*/
-	CcRRLabelerPrivate *priv;
+	CcDisplayLabelerPrivate *priv;
 };
 
-struct _CcRRLabelerClass {
+struct _CcDisplayLabelerClass {
 	GObjectClass parent_class;
 };
 
-GType cc_rr_labeler_get_type (void);
+GType cc_display_labeler_get_type (void);
 
-CcRRLabeler *cc_rr_labeler_new (GnomeRRConfig *config);
+CcDisplayLabeler *cc_display_labeler_new (CcDisplayConfig *config);
 
-void cc_rr_labeler_show (CcRRLabeler *labeler);
+void cc_display_labeler_show (CcDisplayLabeler *labeler);
 
-void cc_rr_labeler_hide (CcRRLabeler *labeler);
+void cc_display_labeler_hide (CcDisplayLabeler *labeler);
 
-void cc_rr_labeler_get_rgba_for_output (CcRRLabeler *labeler, GnomeRROutputInfo *output, GdkRGBA *rgba_out);
+void cc_display_labeler_get_rgba_for_output (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba_out);
 
 #endif

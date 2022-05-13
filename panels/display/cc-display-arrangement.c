@@ -22,6 +22,7 @@
 #include <math.h>
 #include "cc-display-arrangement.h"
 #include "cc-display-config.h"
+#include "cc-display-labeler.h"
 
 struct _CcDisplayArrangement
 {
@@ -570,6 +571,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
       CcDisplayMonitor *output = l->data;
       GtkStateFlags state = GTK_STATE_FLAG_NORMAL;
       GtkBorder border, padding, margin;
+      GdkRGBA bg_rgba;
       gint x1, y1, x2, y2;
       gint w, h;
       gint num;
@@ -607,7 +609,23 @@ cc_display_arrangement_draw (GtkWidget *widget,
       w -= margin.left + margin.right;
       h -= margin.top + margin.bottom;
 
-      gtk_render_background (context, cr, 0, 0, w, h);
+      cairo_save (cr);
+
+      gchar *rgba_str;
+
+      g_signal_emit_by_name (G_OBJECT (widget), "get-output-color", output, &rgba_str);
+
+      if (gdk_rgba_parse (&bg_rgba, rgba_str))
+        {
+          gdk_cairo_set_source_rgba (cr, &bg_rgba);
+        }
+
+      g_free (rgba_str);
+
+      cairo_rectangle (cr, 0, 0, w, h);
+      cairo_fill (cr);
+      cairo_restore (cr);
+
       gtk_render_frame (context, cr, 0, 0, w, h);
 
       gtk_style_context_get_border (context, state, &border);
@@ -889,6 +907,12 @@ cc_display_arrangement_class_init (CcDisplayArrangementClass *klass)
                 G_SIGNAL_RUN_LAST,
                 0, NULL, NULL, NULL,
                 G_TYPE_NONE, 0);
+
+  g_signal_new ("get-output-color",
+                CC_TYPE_DISPLAY_ARRANGEMENT,
+                G_SIGNAL_RUN_LAST,
+                0, NULL, NULL, NULL,
+                G_TYPE_STRING, 1, CC_TYPE_DISPLAY_MONITOR);
 }
 
 static void

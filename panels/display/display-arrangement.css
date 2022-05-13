@@ -11,11 +11,18 @@
 }
 
 .display-arrangement.monitor.primary {
-  border-top: 0.4em solid #000000;
+  border-bottom: 0.4em solid black;
 }
 
 .display-arrangement.monitor:selected {
-  background: @theme_selected_bg_color;
+  border: solid .2em black;
+}
+
+.display-arrangement.monitor.primary:selected {
+  border-top: solid .2em black;
+  border-left: solid .2em black;
+  border-right: solid .2em black;
+  border-bottom: 0.4em solid black;
 }
 
 .display-arrangement.monitor-label {

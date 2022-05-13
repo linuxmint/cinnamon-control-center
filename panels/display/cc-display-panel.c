@@ -33,6 +33,7 @@
 #include "cc-display-arrangement.h"
 #include "cc-display-resources.h"
 #include "cc-display-settings.h"
+#include "cc-display-labeler.h"
 
 /* The minimum supported size for the panel
  * Note that WIDTH is assumed to be the larger size and we accept portrait
@@ -108,6 +109,8 @@ struct _CcDisplayPanel
 
   GCancellable   *cancellable;
   GSettings      *muffin_settings;
+
+  CcDisplayLabeler *labeler;
 };
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
@@ -394,22 +397,15 @@ monitor_labeler_show (CcDisplayPanel *self)
 static void
 ensure_monitor_labels (CcDisplayPanel *self)
 {
-  g_autoptr(GList) windows = NULL;
-  GList *w;
+  if (self->labeler) {
+    cc_display_labeler_hide (self->labeler);
+    g_object_unref (self->labeler);
+  }
 
-  windows = gtk_window_list_toplevels ();
+  self->labeler = cc_display_labeler_new (self->current_config);
 
-  for (w = windows; w; w = w->next)
-    {
-      if (gtk_window_has_toplevel_focus (GTK_WINDOW (w->data)))
-        {
-          monitor_labeler_show (self);
-          break;
-        }
-    }
-
-  if (!w)
-    monitor_labeler_hide (self);
+  cc_display_labeler_hide (self->labeler);
+  cc_display_labeler_show (self->labeler);
 }
 
 static void
@@ -440,6 +436,9 @@ cc_display_panel_dispose (GObject *object)
   g_clear_object (&self->shell_proxy);
 
   g_clear_object (&self->muffin_settings);
+
+  cc_display_labeler_hide (self->labeler);
+  g_object_unref (self->labeler);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->dispose (object);
 }
@@ -1154,6 +1153,20 @@ defaults_button_clicked_cb (GtkWidget *widget,
   // g_object_unref (xml);
 }
 
+static gchar *
+get_output_color (CcDisplayArrangement *arrangement, CcDisplayMonitor *output, CcDisplayPanel *self)
+{
+  GdkRGBA color;
+
+  if (self->labeler != NULL)
+    {
+      cc_display_labeler_get_rgba_for_output (self->labeler, output, &color);
+      return gdk_rgba_to_string (&color);
+    }
+
+  return g_strdup ("white");
+}
+
 static void
 cc_display_panel_init (CcDisplayPanel *self)
 {
@@ -1211,6 +1224,8 @@ cc_display_panel_init (CcDisplayPanel *self)
   g_signal_connect_object (self->arrangement, "notify::selected-output",
 			   G_CALLBACK (on_arrangement_selected_ouptut_changed_cb), self,
 			   G_CONNECT_SWAPPED);
+  g_signal_connect_object (self->arrangement, "get-output-color",
+               G_CALLBACK (get_output_color), self, 0);
 
   self->settings = cc_display_settings_new ();
   gtk_widget_show (GTK_WIDGET (self->settings));
