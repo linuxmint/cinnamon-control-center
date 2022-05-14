@@ -197,20 +197,5 @@
         <property name="position">2</property>
       </packing>
     </child>
-    <child>
-      <object class="GtkBox" id="scale_fractional_row">
-        <property name="width_request">100</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
-      <packing>
-        <property name="expand">False</property>
-        <property name="fill">True</property>
-        <property name="position">3</property>
-      </packing>
-    </child>
   </object>
 </interface>

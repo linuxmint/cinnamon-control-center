@@ -5,41 +5,29 @@
   <object class="GtkImage" id="image-join-displays">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="margin_left">4</property>
-    <property name="margin_right">4</property>
+    <property name="margin_left">12</property>
+    <property name="margin_right">12</property>
     <property name="margin_start">12</property>
     <property name="margin_end">12</property>
     <property name="margin_top">4</property>
     <property name="margin_bottom">4</property>
     <property name="icon_name">video-joined-displays-symbolic</property>
-    <property name="icon_size">3</property>
+    <property name="icon_size">2</property>
   </object>
   <object class="GtkImage" id="image-mirror">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="margin_left">4</property>
-    <property name="margin_right">4</property>
+    <property name="margin_left">12</property>
+    <property name="margin_right">12</property>
     <property name="margin_start">12</property>
     <property name="margin_end">12</property>
     <property name="margin_top">4</property>
     <property name="margin_bottom">4</property>
     <property name="icon_name">view-mirror-symbolic</property>
-    <property name="icon_size">3</property>
-  </object>
-  <object class="GtkImage" id="image-single-display">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="margin_left">4</property>
-    <property name="margin_right">4</property>
-    <property name="margin_start">12</property>
-    <property name="margin_end">12</property>
-    <property name="margin_top">4</property>
-    <property name="margin_bottom">4</property>
-    <property name="icon_name">video-single-display-symbolic</property>
-    <property name="icon_size">3</property>
+    <property name="icon_size">2</property>
   </object>
   <object class="GtkBox" id="toplevel">
-    <property name="height_request">600</property>
+    <property name="height_request">550</property>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="orientation">vertical</property>
@@ -106,134 +94,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkFrame" id="config_type_switcher_frame">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="margin_left">6</property>
-                                <property name="margin_right">6</property>
-                                <property name="margin_top">6</property>
-                                <property name="label_xalign">0</property>
-                                <property name="shadow_type">none</property>
-                                <child>
-                                  <object class="GtkButtonBox">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="homogeneous">True</property>
-                                    <property name="layout_style">expand</property>
-                                    <child>
-                                      <object class="GtkRadioButton" id="config_type_join">
-                                        <property name="label" translatable="yes">Join Displays</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="image">image-join-displays</property>
-                                        <property name="always_show_image">True</property>
-                                        <property name="active">True</property>
-                                        <property name="draw_indicator">False</property>
-                                        <signal name="toggled" handler="on_config_type_toggled_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkRadioButton" id="config_type_mirror">
-                                        <property name="label" translatable="yes">Mirror</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="image">image-mirror</property>
-                                        <property name="always_show_image">True</property>
-                                        <property name="draw_indicator">False</property>
-                                        <property name="group">config_type_join</property>
-                                        <signal name="toggled" handler="on_config_type_toggled_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkRadioButton" id="config_type_single">
-                                        <property name="label" translatable="yes">Single Display</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="image">image-single-display</property>
-                                        <property name="always_show_image">True</property>
-                                        <property name="draw_indicator">False</property>
-                                        <property name="group">config_type_join</property>
-                                        <signal name="toggled" handler="on_config_type_toggled_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">2</property>
-                                      </packing>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child type="label_item">
-                                  <placeholder/>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkFrame">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label_xalign">0</property>
-                                <property name="shadow_type">none</property>
-                                <child>
-                                  <object class="GtkBox">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="border_width">6</property>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="halign">start</property>
-                                        <property name="label" translatable="yes">Primary display</property>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="fill">False</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkComboBox" id="primary_display_combo">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <signal name="changed" handler="on_primary_display_selected_index_changed_cb" swapped="no"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="fill">True</property>
-                                        <property name="pack_type">end</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child type="label_item">
-                                  <placeholder/>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                         </child>
@@ -265,125 +126,51 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
-                            <property name="spacing">12</property>
+                            <property name="spacing">6</property>
                             <child>
-                              <object class="GtkStack" id="output_selection_stack">
+                              <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="hhomogeneous">False</property>
-                                <property name="vhomogeneous">False</property>
+                                <property name="spacing">6</property>
                                 <child>
-                                  <object class="GtkLabel" id="current_output_label">
+                                  <object class="GtkComboBox" id="output_selection_combo">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="halign">start</property>
-                                    <attributes>
-                                      <attribute name="weight" value="bold"/>
-                                    </attributes>
+                                    <property name="hexpand">True</property>
+                                    <signal name="changed" handler="on_output_selection_combo_changed_cb" swapped="yes"/>
                                   </object>
                                   <packing>
-                                    <property name="name">no-selection</property>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkButtonBox">
+                                  <object class="GtkToggleButton" id="primary_display_toggle">
+                                    <property name="label" translatable="yes">Set as Primary</property>
                                     <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="layout_style">expand</property>
-                                    <child>
-                                      <object class="GtkRadioButton" id="output_selection_two_first">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">False</property>
-                                        <property name="group">output_selection_two_second</property>
-                                        <signal name="toggled" handler="on_output_selection_two_toggled_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkRadioButton" id="output_selection_two_second">
-                                        <property name="label" translatable="yes">Join Displays</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">False</property>
-                                        <signal name="toggled" handler="on_output_selection_two_toggled_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">True</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <signal name="toggled" handler="primary_display_toggle_toggled_cb" swapped="no"/>
                                   </object>
                                   <packing>
-                                    <property name="name">two-selection</property>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
                                     <property name="position">1</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkBox">
+                                  <object class="GtkSwitch" id="output_enabled_switch">
                                     <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <child>
-                                      <object class="GtkComboBox" id="output_selection_combo">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="halign">start</property>
-                                        <property name="hexpand">True</property>
-                                        <signal name="changed" handler="on_output_selection_combo_changed_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkSwitch" id="output_enabled_switch">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="halign">end</property>
-                                        <property name="valign">center</property>
-                                        <signal name="notify::active" handler="on_output_enabled_active_changed_cb" swapped="yes"/>
-                                      </object>
-                                      <packing>
-                                        <property name="expand">False</property>
-                                        <property name="fill">True</property>
-                                        <property name="position">1</property>
-                                      </packing>
-                                    </child>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">end</property>
+                                    <property name="valign">center</property>
+                                    <signal name="notify::active" handler="on_output_enabled_active_changed_cb" swapped="yes"/>
                                   </object>
                                   <packing>
-                                    <property name="name">multi-selection</property>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
                                     <property name="position">2</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkFrame">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="label_xalign">0</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkListBox">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="selection_mode">none</property>
-                                      </object>
-                                    </child>
-                                    <child type="label_item">
-                                      <placeholder/>
-                                    </child>
-                                  </object>
-                                  <packing>
-                                    <property name="name">single-select</property>
-                                    <property name="position">3</property>
                                   </packing>
                                 </child>
                               </object>
@@ -430,7 +217,79 @@
                       </packing>
                     </child>
                     <child>
-                      <placeholder/>
+                      <object class="GtkSeparator">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_left">20</property>
+                        <property name="margin_right">20</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="config_type_switcher_frame">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label_xalign">0</property>
+                        <property name="shadow_type">none</property>
+                        <child>
+                          <object class="GtkButtonBox">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">20</property>
+                            <property name="margin_right">20</property>
+                            <property name="homogeneous">True</property>
+                            <property name="layout_style">expand</property>
+                            <child>
+                              <object class="GtkRadioButton" id="config_type_join">
+                                <property name="label" translatable="yes">Join Displays</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
+                                <property name="image">image-join-displays</property>
+                                <property name="always_show_image">True</property>
+                                <property name="active">True</property>
+                                <property name="draw_indicator">False</property>
+                                <signal name="toggled" handler="on_config_type_toggled_cb" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkRadioButton" id="config_type_mirror">
+                                <property name="label" translatable="yes">Mirror</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="receives_default">False</property>
+                                <property name="image">image-mirror</property>
+                                <property name="always_show_image">True</property>
+                                <property name="draw_indicator">False</property>
+                                <property name="group">config_type_join</property>
+                                <signal name="toggled" handler="on_config_type_toggled_cb" swapped="yes"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                        </child>
+                        <child type="label_item">
+                          <placeholder/>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
                     </child>
                   </object>
                 </child>

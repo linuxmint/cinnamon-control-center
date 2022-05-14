@@ -549,7 +549,7 @@ cc_display_labeler_get_rgba_for_output (CcDisplayLabeler *labeler, CcDisplayMoni
 		}
     }
 
-	g_warning ("trying to get the color for unknown GnomeOutputInfo %p; returning magenta!", output);
+	g_warning ("trying to get the color for unknown CcDisplayMonitor %p; returning magenta!", output);
 
 	rgba_out->red   = 1.0;
 	rgba_out->green = 0;
