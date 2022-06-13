@@ -1259,6 +1259,9 @@ is_scale_allowed_by_active_monitors (CcDisplayConfigDBus *self,
       if (!cc_display_monitor_is_active (CC_DISPLAY_MONITOR (m)))
         continue;
 
+      if (!is_scaled_mode_allowed (self, m->current_mode, scale))
+        return FALSE;
+
       if (!is_scaled_mode_allowed (self, mode, scale))
         return FALSE;
     }
