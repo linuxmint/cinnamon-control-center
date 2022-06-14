@@ -145,6 +145,8 @@ struct _CcDisplayMonitorPrivate {
   gchar *ui_name;
   gchar *ui_number_name;
   gboolean is_usable;
+
+  GdkRectangle disabled_rect;
 };
 typedef struct _CcDisplayMonitorPrivate CcDisplayMonitorPrivate;
 
@@ -290,6 +292,28 @@ void
 cc_display_monitor_get_geometry (CcDisplayMonitor *self, int *x, int *y, int *w, int *h)
 {
   return CC_DISPLAY_MONITOR_GET_CLASS (self)->get_geometry (self, x, y, w, h);
+}
+
+void
+cc_display_monitor_get_disabled_geometry (CcDisplayMonitor *self, int *x1, int *y1, int *x2, int *y2)
+{
+  CcDisplayMonitorPrivate *priv = cc_display_monitor_get_instance_private (self);
+
+  *x1 = priv->disabled_rect.x;
+  *y1 = priv->disabled_rect.y;
+  *x2 = priv->disabled_rect.x + priv->disabled_rect.width;
+  *y2 = priv->disabled_rect.y + priv->disabled_rect.height;
+}
+
+void
+cc_display_monitor_set_disabled_geometry (CcDisplayMonitor *self, int x, int y, int w, int h)
+{
+  CcDisplayMonitorPrivate *priv = cc_display_monitor_get_instance_private (self);
+
+  priv->disabled_rect.x = x;
+  priv->disabled_rect.y = y;
+  priv->disabled_rect.width = w;
+  priv->disabled_rect.height = h;
 }
 
 CcDisplayMode *

@@ -317,24 +317,30 @@ label_window_draw_event_cb (GtkWidget *widget, cairo_t *cr, gpointer data)
 
 static void
 position_window (CcDisplayLabeler  *labeler,
-		 GtkWidget       *window,
-		 int              x,
-		 int              y)
+                 CcDisplayMonitor  *output,
+                 GtkWidget         *window)
 {
-	GdkRectangle    workarea;
-	GdkRectangle    monitor;
-	int             monitor_num, scale_factor;
+    GdkDisplay *display;
+    GdkRectangle workarea;
+    int i;
 
-    scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (window));
-	monitor_num = gdk_screen_get_monitor_at_point (labeler->priv->screen, x / scale_factor, y / scale_factor);
+    display = gdk_display_get_default ();
 
-	gdk_screen_get_monitor_workarea (labeler->priv->screen, monitor_num, &workarea);
-	gdk_screen_get_monitor_geometry (labeler->priv->screen,
-                                         monitor_num,
-                                         &monitor);
-	gdk_rectangle_intersect (&monitor, &workarea, &workarea);
+    for (i = 0; i < gdk_display_get_n_monitors (display); i++)
+      {
+        GdkMonitor *monitor = gdk_display_get_monitor (display, i);
 
-	gtk_window_move (GTK_WINDOW (window), workarea.x + LABEL_WINDOW_MARGIN, workarea.y + LABEL_WINDOW_MARGIN);
+        if (g_strcmp0 (gdk_monitor_get_model (monitor), cc_display_monitor_get_connector_name (output)) == 0)
+        {
+            gdk_monitor_get_workarea (monitor, &workarea);
+
+            gtk_window_move (GTK_WINDOW (window),
+                             workarea.x + LABEL_WINDOW_MARGIN,
+                             workarea.y + LABEL_WINDOW_MARGIN);
+
+            break;
+        }
+      }
 }
 
 static void
@@ -418,7 +424,7 @@ create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGB
 	gtk_container_add (GTK_CONTAINER (window), widget);
 
 	cc_display_monitor_get_geometry (output, &x, &y, NULL, NULL);
-	position_window (labeler, window, x, y);
+	position_window (labeler, output, window);
 
 	gtk_widget_show_all (window);
 
@@ -481,7 +487,7 @@ cc_display_labeler_show (CcDisplayLabeler *labeler)
     for (l = outputs, i = 0; l != NULL; l = l->next, i++) {
         CcDisplayMonitor *output = CC_DISPLAY_MONITOR (l->data);
 
-		if (!created_window_for_clone && cc_display_monitor_is_active (output)) {
+		if (!created_window_for_clone) {
 			labeler->priv->windows[i] = create_label_window (labeler, output, labeler->priv->palette + i, i + 1);
 
 			if (cc_display_config_is_cloning (labeler->priv->config))

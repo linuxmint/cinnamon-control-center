@@ -226,6 +226,16 @@ void              cc_display_monitor_get_geometry           (CcDisplayMonitor  *
                                                              int               *y,
                                                              int               *width,
                                                              int               *height);
+void              cc_display_monitor_get_disabled_geometry  (CcDisplayMonitor  *monitor,
+                                                             int               *x,
+                                                             int               *y,
+                                                             int               *width,
+                                                             int               *height);
+void              cc_display_monitor_set_disabled_geometry  (CcDisplayMonitor  *monitor,
+                                                             int                x,
+                                                             int                y,
+                                                             int                width,
+                                                             int                height);
 GList*            cc_display_monitor_get_modes              (CcDisplayMonitor  *monitor);
 CcDisplayMode*    cc_display_monitor_get_preferred_mode     (CcDisplayMonitor  *monitor);
 double            cc_display_monitor_get_scale              (CcDisplayMonitor  *monitor);

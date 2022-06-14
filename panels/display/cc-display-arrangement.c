@@ -496,10 +496,17 @@ cc_display_arrangement_find_monitor_at (CcDisplayArrangement *self,
       CcDisplayMonitor *output = l->data;
       gint x1, y1, x2, y2;
 
-      if (!cc_display_monitor_is_useful (output))
+      if (!cc_display_monitor_is_usable (output))
         continue;
 
-      monitor_get_drawing_rect (self, output, &x1, &y1, &x2, &y2);
+      if (!cc_display_monitor_is_active (output))
+        {
+          cc_display_monitor_get_disabled_geometry (output, &x1, &y1, &x2, &y2);
+        }
+      else
+        {
+          monitor_get_drawing_rect (self, output, &x1, &y1, &x2, &y2);
+        }
 
       if (x >= x1 && x <= x2 && y >= y1 && y <= y2)
         return output;
@@ -538,6 +545,22 @@ on_output_changed_cb (CcDisplayArrangement *self,
   gtk_widget_queue_draw (GTK_WIDGET (self));
 }
 
+static gint
+sort_outputs_by_disabled (gconstpointer a, gconstpointer b)
+{
+    CcDisplayMonitor *ma = CC_DISPLAY_MONITOR (a);
+    CcDisplayMonitor *mb = CC_DISPLAY_MONITOR (b);
+
+    if (!cc_display_monitor_is_active (ma) && cc_display_monitor_is_active (mb))
+        return -1;
+
+
+    if (cc_display_monitor_is_active (ma) && !cc_display_monitor_is_active (mb))
+        return 1;
+
+    return cc_display_monitor_get_ui_number (a) < cc_display_monitor_get_ui_number (b) ? -1 : 1;
+}
+
 static gboolean
 cc_display_arrangement_draw (GtkWidget *widget,
                              cairo_t   *cr)
@@ -546,6 +569,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
   GtkStyleContext *context = gtk_widget_get_style_context (widget);
   g_autoptr(GList) outputs = NULL;
   GList *l;
+  gint last_disabled_x = 0;
 
   if (!self->config)
     return FALSE;
@@ -561,9 +585,15 @@ cc_display_arrangement_draw (GtkWidget *widget,
   /* Draw in reverse order so that hit detection matches visual. Also pull
    * the selected output to the back. */
   outputs = g_list_copy (cc_display_config_get_monitors (self->config));
-  outputs = g_list_remove (outputs, self->selected_output);
-  if (self->selected_output != NULL)
-    outputs = g_list_prepend (outputs, self->selected_output);
+  outputs = g_list_sort (outputs, (GCompareFunc) sort_outputs_by_disabled);
+
+  if (cc_display_monitor_is_active (self->selected_output))
+    {
+      outputs = g_list_remove (outputs, self->selected_output);
+      if (self->selected_output != NULL)
+        outputs = g_list_prepend (outputs, self->selected_output);
+    }
+
   outputs = g_list_reverse (outputs);
 
   for (l = outputs; l; l = l->next)
@@ -576,7 +606,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
       gint w, h;
       gint num;
 
-      if (!cc_display_monitor_is_useful (output))
+      if (!cc_display_monitor_is_usable (output))
         continue;
 
       gtk_style_context_save (context);
@@ -600,7 +630,19 @@ cc_display_arrangement_draw (GtkWidget *widget,
       w = x2 - x1;
       h = y2 - y1;
 
-      cairo_translate (cr, x1, y1);
+      if (!cc_display_monitor_is_active (output))
+        {
+          h = 50;
+          w = h * 1.77;
+          cairo_translate (cr, last_disabled_x, 0);
+
+          cc_display_monitor_set_disabled_geometry (output, last_disabled_x, 0, w, h);
+          last_disabled_x += w;
+        }
+        else
+        {
+          cairo_translate (cr, x1, y1);
+        }
 
       gtk_style_context_get_margin (context, state, &margin);
 
@@ -617,6 +659,10 @@ cc_display_arrangement_draw (GtkWidget *widget,
 
       if (gdk_rgba_parse (&bg_rgba, rgba_str))
         {
+          if (!cc_display_monitor_is_active (output))
+            {
+              bg_rgba.alpha = 0.35;
+            }
           gdk_cairo_set_source_rgba (cr, &bg_rgba);
         }
 
@@ -712,6 +758,12 @@ cc_display_arrangement_button_press_event (GtkWidget      *widget,
   if (!output)
     return FALSE;
 
+  if (!cc_display_monitor_is_active (output))
+    {
+      cc_display_arrangement_set_selected_output (self, output);
+      return FALSE;
+    }
+
   event_x = event->x;
   event_y = event->y;
 
@@ -779,6 +831,9 @@ cc_display_arrangement_motion_notify_event (GtkWidget      *widget,
     {
       CcDisplayMonitor *output;
       output = cc_display_arrangement_find_monitor_at (self, event->x, event->y);
+
+      if (output != NULL && !cc_display_monitor_is_active (output))
+        return FALSE;
 
       cc_display_arrangement_update_cursor (self, output != NULL);
       if (self->prelit_output != output)
