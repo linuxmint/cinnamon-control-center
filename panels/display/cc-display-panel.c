@@ -75,8 +75,6 @@ struct _CcDisplayPanel
   UpClient *up_client;
   gboolean lid_is_closed;
 
-  GDBusProxy *shell_proxy;
-
   guint       sensor_watch_id;
   GDBusProxy *iio_sensor_proxy;
   gboolean    has_accelerometer;
@@ -372,8 +370,6 @@ cc_display_panel_dispose (GObject *object)
   g_clear_object (&self->manager);
   g_clear_object (&self->current_config);
   g_clear_object (&self->up_client);
-
-  g_clear_object (&self->shell_proxy);
 
   g_clear_object (&self->muffin_settings);
   g_clear_object (&self->labeler);
@@ -815,27 +811,6 @@ cc_display_panel_up_client_changed (UpClient       *client,
       on_screen_changed (self);
     }
 }
-
-// static void
-// shell_proxy_ready (GObject        *source,
-//                    GAsyncResult   *res,
-//                    CcDisplayPanel *self)
-// {
-//   GDBusProxy *proxy;
-//   g_autoptr(GError) error = NULL;
-
-//   proxy = cc_object_storage_create_dbus_proxy_finish (res, &error);
-//   if (!proxy)
-//     {
-//       if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
-//         g_warning ("Failed to contact gnome-shell: %s", error->message);
-//       return;
-//     }
-
-//   self->shell_proxy = proxy;
-
-//   ensure_monitor_labels (self);
-// }
 
 static void
 update_has_accel (CcDisplayPanel *self)
