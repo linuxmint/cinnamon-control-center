@@ -653,7 +653,7 @@ rebuild_ui (CcDisplayPanel *panel)
           /* Ensure that an output is selected; note that this doesn't ensure
            * the selected output is any useful (i.e. when switching types).
            */
-          if (!panel->current_output)
+          if (!panel->current_output || !cc_display_monitor_is_active (panel->current_output))
             set_current_output (panel, output, FALSE);
 
           n_active_outputs++;
