@@ -4,7 +4,13 @@ do
   intltool-extract --type=gettext/glade $ui
 done
 
-xgettext --add-comments --language=C --from-code=UTF-8 --keyword=_ --keyword=C_:1c,2 --keyword=N_ --keyword=NC_:1c,2 --output=cinnamon-control-center.pot panels/*/*.c shell/*.c panels/*/*.ui.h panels/*/*/*.ui.h generate_additional_files.py
+xgettext --add-comments --language=C --from-code=UTF-8 \
+         --keyword=_ --keyword=C_:1c,2 --keyword=N_ --keyword=NC_:1c,2 \
+         --output=cinnamon-control-center.pot \
+         panels/*/*.c panels/*/*/*.c \
+         shell/*.c \
+         panels/*/*.ui.h panels/*/*/*.ui.h \
+         generate_additional_files.py
 
 rm -f panels/*/*.ui.h
 rm -f panels/*/*/*.ui.h
