@@ -588,7 +588,7 @@ panel_get_ip6_address_as_string (NMIPConfig *ip6_config, const char *what)
                 g_ptr_array_add (ipv6, NULL);
                 str = g_strjoinv ("\n", (char **) ipv6->pdata);
         } else if (!strcmp (what, "gateway")) {
-                str = strdup (nm_ip_config_get_gateway (ip6_config));
+                str = g_strdup (nm_ip_config_get_gateway (ip6_config));
         }
         return str;
 }
