@@ -27,5 +27,5 @@ install_data('color.ui',
 
 install_data(
   'cinnamon-color-panel.desktop',
-  install_dir: panel_def_dir
+  install_dir: desktop_dir
 )

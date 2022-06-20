@@ -46,5 +46,5 @@ panel_wacom = shared_library('wacom-properties',
 
 install_data(
   'cinnamon-wacom-panel.desktop',
-  install_dir: panel_def_dir
+  install_dir: desktop_dir
 )

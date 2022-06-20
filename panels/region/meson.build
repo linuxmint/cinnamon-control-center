@@ -37,6 +37,7 @@ install_data([
   install_dir: ui_dir,
 )
 
+# Region panel is imported as a page of cs_keyboard so no share/applications entry needed.
 install_data(
   'cinnamon-region-panel.desktop',
   install_dir: panel_def_dir

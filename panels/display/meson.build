@@ -49,7 +49,7 @@ panel_display = shared_library(
 
 install_data(
   'cinnamon-display-panel.desktop',
-  install_dir: panel_def_dir
+  install_dir: desktop_dir
 )
 
 subdir('icons')

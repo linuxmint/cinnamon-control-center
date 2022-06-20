@@ -54,5 +54,5 @@ install_data('network.ui',
 
 install_data(
   'cinnamon-network-panel.desktop',
-  install_dir: panel_def_dir
+  install_dir: desktop_dir
 )

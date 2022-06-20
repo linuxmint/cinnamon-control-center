@@ -110,6 +110,7 @@ ui_dir     = get_option('datadir') / meson.project_name() / 'ui'
 um_pix_dir = get_option('datadir') / meson.project_name() / 'pixmaps'
 menu_dir   = get_option('sysconfdir') / 'xdg' / 'menus'
 panel_def_dir = get_option('datadir') / meson.project_name() / 'panels'
+desktop_dir = get_option('datadir') / 'applications'
 
 prefix = get_option('prefix')
 config.set_quoted('BINDIR',               prefix / get_option('bindir'))
@@ -185,6 +186,7 @@ rootInclude = include_directories('.')
 subdir('po')
 subdir('shell')
 subdir('panels')
+subdir('install-scripts')
 
 final_message = [ '',
   '',
