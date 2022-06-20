@@ -1,3 +1,20 @@
+cinnamon-control-center (5.4.1) vanessa; urgency=medium
+
+  [ Michael Webster ]
+  * cc-display-config: Check other monitors' capabilities when deciding which scales to offer for the selected one.
+  * display: Keep monitors visible when disabled.
+  * display: Select a different active monitor when the current selection is disabled.
+  * display: Clean up dead code.
+  * makepot: Include some missed files in the network panel.
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+  [ Michael Webster ]
+  * network/panel-common.c: Use null-safe g_strdup.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 20 Jun 2022 10:23:29 +0200
+
 cinnamon-control-center (5.4.0) vanessa; urgency=medium
 
   [ Michael Webster ]
