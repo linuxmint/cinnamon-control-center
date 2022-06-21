@@ -1,3 +1,10 @@
+cinnamon-control-center (5.4.2) vanessa; urgency=medium
+
+  [ Michael Webster ]
+  * packaging: Install correct desktop files to usr/share/applications instead of in the panel definition folder.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 21 Jun 2022 16:59:11 +0200
+
 cinnamon-control-center (5.4.1) vanessa; urgency=medium
 
   [ Michael Webster ]
