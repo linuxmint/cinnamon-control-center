@@ -67,7 +67,6 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
 Recommends: cinnamon-control-center (>= ${source:Version})
-Provides: cinnamon-capplets-data
 Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
