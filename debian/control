@@ -53,8 +53,7 @@ Depends:
 Recommends:
  cinnamon-l10n,
  iso-codes,
- mesa-utils,
- mousetweaks
+ mesa-utils
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
  This package contains configuration applets for the Cinnamon desktop,
