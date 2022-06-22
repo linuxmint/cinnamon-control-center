@@ -4,16 +4,11 @@ import os
 import subprocess
 
 # Symlinks desktop files to c-c-c's panel dir so the cinnamon-control-center binary can find the plugins.
-dest = os.environ.get('DESTDIR')
+destdir_prefix = os.environ.get('MESON_INSTALL_DESTDIR_PREFIX')
 prefix = os.environ.get('MESON_INSTALL_PREFIX')
 
-if dest:
-    root = dest
-else:
-    root = "/"
-
-source_location = os.path.join(root, prefix[1:], "share", "applications")
-target_location = os.path.join(root, prefix[1:], "share", "cinnamon-control-center", "panels")
+source_location = os.path.join(prefix, "share", "applications")
+target_location = os.path.join(destdir_prefix, "share", "cinnamon-control-center", "panels")
 
 links = [
     "cinnamon-color-panel.desktop",
