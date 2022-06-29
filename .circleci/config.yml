@@ -21,6 +21,10 @@ shared: &shared
                 rm -rf packages
 
         - run:
+            name: Prevent readline invocation during mint-build install step.
+            command: echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+        - run:
             name: Build project
             command: mint-build -i
 
