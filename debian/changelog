@@ -1,3 +1,17 @@
+cinnamon-control-center (5.4.3) vanessa; urgency=medium
+
+  [ Eli Schwartz ]
+  * meson: fix installation of symlinks
+  * meson: reimplement the symlink creation install script using builtin features
+
+  [ Michael Webster ]
+  * circleci: Fix mint21 build installation step.
+
+  [ Clement Lefebvre ]
+  * Fix desktop files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 04 Jul 2022 09:39:02 +0200
+
 cinnamon-control-center (5.4.2) vanessa; urgency=medium
 
   [ Michael Webster ]
