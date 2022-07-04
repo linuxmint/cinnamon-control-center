@@ -3,7 +3,12 @@ Exec=cinnamon-settings color
 Icon=cs-color
 Terminal=false
 Type=Application
+StartupNotify=true
+Categories=GTK;Settings;X-Cinnamon-Settings-Panel;HardwareSettings
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=color
+# Translators: those are keywords for the color control-center panel
+_Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
 Name=Color
 Name[am]=ቀለም
 Name[ar]=اللون

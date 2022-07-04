@@ -3,7 +3,12 @@ Exec=cinnamon-settings wacom
 Icon=cs-tablet
 Terminal=false
 Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
 X-Cinnamon-Settings-Panel=wacom
+OnlyShowIn=X-Cinnamon;
+# Translators: those are keywords for the wacom tablet control-center panel
+_Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
 Name=Graphics Tablet
 Name[am]=ግራፊክስ ታብሌት
 Name[ar]=جهاز الرسومات اللوحي

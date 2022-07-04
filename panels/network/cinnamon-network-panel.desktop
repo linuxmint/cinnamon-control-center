@@ -1,9 +1,14 @@
 [Desktop Entry]
-Exec=cinnamon-control-center network
+Exec=cinnamon-settings network
 Icon=cs-network
 Terminal=false
 Type=Application
+StartupNotify=true
+Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
+OnlyShowIn=X-Cinnamon;
 X-Cinnamon-Settings-Panel=network
+# Translators: those are keywords for the network control-center panel
+_Keywords=Network;Wireless;IP;LAN;Proxy;Internet;WiFi;
 Name=Network
 Name[am]=ኔትዎርክ
 Name[ar]=الشبكة
