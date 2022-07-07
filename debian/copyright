@@ -45,21 +45,13 @@ Copyright: 2013, Aleksander Morgado <aleksander@gnu.org>
            2003, The free software foundation, inc
 License: GPL-2+
 
-Files: panels/wacom/calibrator/COPYING
-       panels/wacom/calibrator/calibrator.c
-       panels/wacom/calibrator/calibrator.h
-       panels/wacom/calibrator/gui_gtk.c
-       panels/wacom/calibrator/gui_gtk.h
-       panels/wacom/calibrator/main.c
+Files: panels/wacom/calibrator/*
 Copyright: 2009, Soren Hauberg
-           2009, Tias Guns
-           2010, Tias Guns <tias@ulyssis.org> and others
+           2009-2010, Tias Guns <tias@ulyssis.org> and others
 License: Expat
 
-Files: panels/display/cc-rr-labeler.c
-       panels/display/cc-rr-labeler.h
-       panels/display/scrollarea.c
-       panels/display/scrollarea.h
+Files: panels/display/cc-display-labeler.c
+       panels/display/cc-display-labeler.h
        panels/network/wireless-security/nm-default.h
        panels/online-accounts/cc-online-accounts-panel.c
        panels/online-accounts/cc-online-accounts-panel.h
@@ -80,6 +72,7 @@ License: public-domain
 
 Files: debian/*
 Copyright: 2014, Maximiliano Curia <maxy@debian.org>
+           2015-2022, Debian Cinnamon Team <debian-cinnamon@lists.debian.org>
 License: GPL-2+
 
 License: Expat

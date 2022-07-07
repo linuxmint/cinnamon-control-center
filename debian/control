@@ -11,7 +11,6 @@ Build-Depends:
  libcinnamon-desktop-dev (>= 4.8),
  libcinnamon-menu-3-dev,
  libcolord-dev,
- libdbus-1-dev (>= 0.32),
  libgdk-pixbuf2.0-dev (>= 2.23.0),
  libglib2.0-dev (>= 2.44.0),
  libgnomekbd-dev,
@@ -54,8 +53,7 @@ Depends:
 Recommends:
  cinnamon-l10n,
  iso-codes,
- mesa-utils,
- mousetweaks
+ mesa-utils
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
  This package contains configuration applets for the Cinnamon desktop,
@@ -68,7 +66,6 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
 Recommends: cinnamon-control-center (>= ${source:Version})
-Provides: cinnamon-capplets-data
 Description: configuration applets for Cinnamon - data files
  This package contains data files (icons, pixmaps, locales files) needed by
  the configuration applets in the cinnamon-control-center package.
