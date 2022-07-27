@@ -1,5 +1,5 @@
 /*
- * Copyright © 2011 Red Hat, Inc.
+ * Copyright © 2016 Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,25 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
- * Authors: Peter Hutterer <peter.hutterer@redhat.com>
- *          Bastien Nocera <hadess@hadess.net>
+ * Authors: Carlos Garnacho <carlosg@gnome.org>
+ *
  */
 
 #pragma once
 
+#include "config.h"
 #include <gtk/gtk.h>
+#include "cc-wacom-device.h"
 #include "cc-wacom-tool.h"
 
 G_BEGIN_DECLS
 
-#define CC_TYPE_WACOM_STYLUS_PAGE (cc_wacom_stylus_page_get_type ())
-G_DECLARE_FINAL_TYPE (CcWacomStylusPage, cc_wacom_stylus_page, CC, WACOM_STYLUS_PAGE, GtkBox)
+#define CC_TYPE_TABLET_TOOL_MAP (cc_tablet_tool_map_get_type ())
+G_DECLARE_FINAL_TYPE (CcTabletToolMap, cc_tablet_tool_map, CC, TABLET_TOOL_MAP, GObject)
 
-GtkWidget * cc_wacom_stylus_page_new (CcWacomTool *stylus);
+CcTabletToolMap * cc_tablet_tool_map_new        (void);
 
-CcWacomTool * cc_wacom_stylus_page_get_tool (CcWacomStylusPage *page);
-
-void cc_wacom_stylus_page_set_navigation (CcWacomStylusPage *page,
-					  GtkNotebook *notebook);
+GList           * cc_tablet_tool_map_list_tools  (CcTabletToolMap *map,
+						  CcWacomDevice   *device);
+CcWacomTool     * cc_tablet_tool_map_lookup_tool (CcTabletToolMap *map,
+						  CcWacomDevice   *device,
+						  guint64          serial);
+void              cc_tablet_tool_map_add_relation (CcTabletToolMap *map,
+						   CcWacomDevice   *device,
+						   CcWacomTool     *tool);
 
 G_END_DECLS

@@ -21,18 +21,19 @@
  * THE SOFTWARE.
  */
 
-#ifndef _gui_gtk_h
-#define _gui_gtk_h
+#pragma once
 
 #include <gtk/gtk.h>
+
+G_BEGIN_DECLS
 
 /* struct to hold min/max info of the X and Y axis */
 typedef struct
 {
-	int x_min;
-	int x_max;
-	int y_min;
-	int y_max;
+	gdouble x_min;
+	gdouble x_max;
+	gdouble y_min;
+	gdouble y_max;
 } XYinfo;
 
 typedef struct CalibArea CalibArea;
@@ -40,17 +41,25 @@ typedef void (*FinishCallback) (CalibArea *area, gpointer user_data);
 
 CalibArea * calib_area_new (GdkScreen      *screen,
 			    int             monitor,
-			    int             device_id,
+			    GdkDevice      *device,
 			    FinishCallback  callback,
 			    gpointer        user_data,
-			    XYinfo         *old_axis,
 			    int             threshold_doubleclick,
 			    int             threshold_misclick);
 
-gboolean calib_area_finish (CalibArea *area,
-			    XYinfo    *new_axis,
-			    gboolean  *swap_xy);
+gboolean calib_area_finish (CalibArea *area);
 
 void calib_area_free (CalibArea *area);
 
-#endif /* _gui_gtk_h */
+void calib_area_get_display_size (CalibArea *area,
+				  gint      *width,
+				  gint      *height);
+
+void calib_area_get_axis (CalibArea *area,
+                          XYinfo    *new_axis,
+                          gboolean  *swap_xy);
+
+void calib_area_get_padding (CalibArea *area,
+                             XYinfo    *padding);
+
+G_END_DECLS

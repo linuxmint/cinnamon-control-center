@@ -1,5 +1,6 @@
-/*
- * Copyright © 2011 Red Hat, Inc.
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
+ *
+ * Copyright (C) 2010 Bastien Nocera <hadess@hadess.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,26 +14,18 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
- *
- * Authors: Peter Hutterer <peter.hutterer@redhat.com>
- *          Bastien Nocera <hadess@hadess.net>
  */
 
 #pragma once
 
-#include <gtk/gtk.h>
-#include "cc-wacom-tool.h"
-
 G_BEGIN_DECLS
 
-#define CC_TYPE_WACOM_STYLUS_PAGE (cc_wacom_stylus_page_get_type ())
-G_DECLARE_FINAL_TYPE (CcWacomStylusPage, cc_wacom_stylus_page, CC, WACOM_STYLUS_PAGE, GtkBox)
+#include <glib.h>
 
-GtkWidget * cc_wacom_stylus_page_new (CcWacomTool *stylus);
+gboolean  touchpad_is_present     (void);
+gboolean  touchscreen_is_present  (void);
+gboolean  mouse_is_present        (void);
 
-CcWacomTool * cc_wacom_stylus_page_get_tool (CcWacomStylusPage *page);
-
-void cc_wacom_stylus_page_set_navigation (CcWacomStylusPage *page,
-					  GtkNotebook *notebook);
+char *    xdevice_get_device_node  (int                     deviceid);
 
 G_END_DECLS

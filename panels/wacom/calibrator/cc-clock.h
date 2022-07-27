@@ -1,5 +1,5 @@
 /*
- * Copyright © 2011 Red Hat, Inc.
+ * Copyright © 2018 Red Hat, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,25 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
- * Authors: Peter Hutterer <peter.hutterer@redhat.com>
- *          Bastien Nocera <hadess@hadess.net>
+ * Author: Carlos Garnacho <carlosg@gnome.org>
  */
 
 #pragma once
 
+#include <glib.h>
 #include <gtk/gtk.h>
-#include "cc-wacom-tool.h"
 
 G_BEGIN_DECLS
 
-#define CC_TYPE_WACOM_STYLUS_PAGE (cc_wacom_stylus_page_get_type ())
-G_DECLARE_FINAL_TYPE (CcWacomStylusPage, cc_wacom_stylus_page, CC, WACOM_STYLUS_PAGE, GtkBox)
+#define CC_TYPE_CLOCK (cc_clock_get_type ())
 
-GtkWidget * cc_wacom_stylus_page_new (CcWacomTool *stylus);
+G_DECLARE_FINAL_TYPE (CcClock, cc_clock, CC, CLOCK, GtkWidget)
 
-CcWacomTool * cc_wacom_stylus_page_get_tool (CcWacomStylusPage *page);
+GtkWidget * cc_clock_new          (guint duration);
 
-void cc_wacom_stylus_page_set_navigation (CcWacomStylusPage *page,
-					  GtkNotebook *notebook);
+void        cc_clock_reset        (CcClock *clock);
+
+void        cc_clock_set_duration (CcClock *clock,
+                                   guint    duration);
+guint       cc_clock_get_duration (CcClock *clock);
+
+GType       cc_clock_get_type     (void);
 
 G_END_DECLS

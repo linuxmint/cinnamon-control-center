@@ -1,5 +1,9 @@
 /*
- * Copyright © 2011 Red Hat, Inc.
+ * csd-wacom-key-shortcut-button.h
+ *
+ * Copyright © 2013 Red Hat, Inc.
+ *
+ * Author: Joaquim Rocha <jrocha@redhat.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,26 +17,24 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
- *
- * Authors: Peter Hutterer <peter.hutterer@redhat.com>
- *          Bastien Nocera <hadess@hadess.net>
  */
 
 #pragma once
 
 #include <gtk/gtk.h>
-#include "cc-wacom-tool.h"
 
 G_BEGIN_DECLS
 
-#define CC_TYPE_WACOM_STYLUS_PAGE (cc_wacom_stylus_page_get_type ())
-G_DECLARE_FINAL_TYPE (CcWacomStylusPage, cc_wacom_stylus_page, CC, WACOM_STYLUS_PAGE, GtkBox)
+#define CSD_WACOM_TYPE_KEY_SHORTCUT_BUTTON (csd_wacom_key_shortcut_button_get_type ())
+G_DECLARE_FINAL_TYPE (CsdWacomKeyShortcutButton, csd_wacom_key_shortcut_button, CSD, WACOM_KEY_SHORTCUT_BUTTON, GtkButton)
 
-GtkWidget * cc_wacom_stylus_page_new (CcWacomTool *stylus);
+GType csd_wacom_key_shortcut_button_mode_type (void) G_GNUC_CONST;
+#define CSD_WACOM_TYPE_KEY_SHORTCUT_BUTTON_MODE (csd_wacom_key_shortcut_button_mode_type ())
 
-CcWacomTool * cc_wacom_stylus_page_get_tool (CcWacomStylusPage *page);
+typedef enum
+{
+  CSD_WACOM_KEY_SHORTCUT_BUTTON_MODE_OTHER,
+  CSD_WACOM_KEY_SHORTCUT_BUTTON_MODE_ALL
+} CsdWacomKeyShortcutButtonMode;
 
-void cc_wacom_stylus_page_set_navigation (CcWacomStylusPage *page,
-					  GtkNotebook *notebook);
-
-G_END_DECLS
+GtkWidget    * csd_wacom_key_shortcut_button_new             (void);

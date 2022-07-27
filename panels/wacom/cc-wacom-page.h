@@ -12,75 +12,37 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
  * Authors: Peter Hutterer <peter.hutterer@redhat.com>
  *          Bastien Nocera <hadess@hadess.net>
  */
 
-
-#ifndef _CC_WACOM_PAGE_H
-#define _CC_WACOM_PAGE_H
+#pragma once
 
 #include <gtk/gtk.h>
 #include "cc-wacom-panel.h"
-#include "csd-wacom-device.h"
+#include "cc-wacom-device.h"
 
 G_BEGIN_DECLS
 
-#define CC_TYPE_WACOM_PAGE cc_wacom_page_get_type()
+#define CC_TYPE_WACOM_PAGE (cc_wacom_page_get_type ())
+G_DECLARE_FINAL_TYPE (CcWacomPage, cc_wacom_page, CC, WACOM_PAGE, GtkBox)
 
-#define CC_WACOM_PAGE(obj) \
-  (G_TYPE_CHECK_INSTANCE_CAST ((obj), \
-  CC_TYPE_WACOM_PAGE, CcWacomPage))
+GtkWidget * cc_wacom_page_new (CcWacomPanel  *panel,
+			       CcWacomDevice *stylus,
+			       CcWacomDevice *pad);
 
-#define CC_WACOM_PAGE_CLASS(klass) \
-  (G_TYPE_CHECK_CLASS_CAST ((klass), \
-  CC_TYPE_WACOM_PAGE, CcWacomPageClass))
-
-#define CC_IS_WACOM_PAGE(obj) \
-  (G_TYPE_CHECK_INSTANCE_TYPE ((obj), \
-  CC_TYPE_WACOM_PAGE))
-
-#define CC_IS_WACOM_PAGE_CLASS(klass) \
-  (G_TYPE_CHECK_CLASS_TYPE ((klass), \
-  CC_TYPE_WACOM_PAGE))
-
-#define CC_WACOM_PAGE_GET_CLASS(obj) \
-  (G_TYPE_INSTANCE_GET_CLASS ((obj), \
-  CC_TYPE_WACOM_PAGE, CcWacomPageClass))
-
-typedef struct _CcWacomPage CcWacomPage;
-typedef struct _CcWacomPageClass CcWacomPageClass;
-typedef struct _CcWacomPagePrivate CcWacomPagePrivate;
-
-struct _CcWacomPage
-{
-  GtkBox parent;
-
-  CcWacomPagePrivate *priv;
-};
-
-struct _CcWacomPageClass
-{
-  GtkBoxClass parent_class;
-};
-
-GType cc_wacom_page_get_type (void) G_GNUC_CONST;
-
-GtkWidget * cc_wacom_page_new (CcWacomPanel   *panel,
-			       CsdWacomDevice *stylus,
-			       CsdWacomDevice *pad);
-
-gboolean cc_wacom_page_update_tools (CcWacomPage    *page,
-				     CsdWacomDevice *stylus,
-				     CsdWacomDevice *pad);
+gboolean cc_wacom_page_update_tools (CcWacomPage   *page,
+				     CcWacomDevice *stylus,
+				     CcWacomDevice *pad);
 
 void cc_wacom_page_set_navigation (CcWacomPage *page,
 				   GtkNotebook *notebook,
 				   gboolean     ignore_first_page);
 
-G_END_DECLS
+void        cc_wacom_page_calibrate        (CcWacomPage *page);
 
-#endif /* _CC_WACOM_PAGE_H */
+gboolean    cc_wacom_page_can_calibrate    (CcWacomPage *page);
+
+G_END_DECLS

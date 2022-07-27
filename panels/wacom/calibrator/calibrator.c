@@ -25,7 +25,10 @@
 
 #include "calibrator.h"
 
-#define SWAP(x,y)  do { int t; t=(x); x=(y); y=t; } while (0)
+#define SWAP(valtype,x,y)		\
+    G_STMT_START {			\
+    valtype t; t = (x); x = (y); y = t;	\
+    } G_STMT_END
 
 /* reset clicks */
 void
@@ -51,6 +54,8 @@ add_click (struct Calib *c,
            int           x,
            int           y)
 {
+    g_debug ("Trying to add click (%d, %d)", x, y);
+
     /* Double-click detection */
     if (c->threshold_doubleclick > 0 && c->num_clicks > 0)
     {
@@ -60,6 +65,7 @@ add_click (struct Calib *c,
             if (abs(x - c->clicked_x[i]) <= c->threshold_doubleclick &&
                 abs(y - c->clicked_y[i]) <= c->threshold_doubleclick)
             {
+                g_debug ("Detected double-click, ignoring");
                 return FALSE;
             }
             i--;
@@ -105,11 +111,13 @@ add_click (struct Calib *c,
 
         if (misclick)
         {
+            g_debug ("Detected misclick, resetting");
             reset(c);
             return FALSE;
         }
     }
 
+    g_debug ("Click (%d, %d) added", x, y);
     c->clicked_x[c->num_clicks] = x;
     c->clicked_y[c->num_clicks] = y;
     c->num_clicks++;
@@ -126,29 +134,29 @@ finish (struct Calib *c,
     gboolean swap_xy;
     float scale_x;
     float scale_y;
-    int delta_x;
-    int delta_y;
+    float delta_x;
+    float delta_y;
     XYinfo axis = {-1, -1, -1, -1};
 
     if (c->num_clicks != 4)
         return FALSE;
 
-    /* Should x and y be swapped? */
-    swap_xy = (abs (c->clicked_x [UL] - c->clicked_x [UR]) < abs (c->clicked_y [UL] - c->clicked_y [UR]));
-    if (swap_xy)
-    {
-        SWAP(c->clicked_x[LL], c->clicked_x[UR]);
-        SWAP(c->clicked_y[LL], c->clicked_y[UR]);
-    }
+    /* Should x and y be swapped? If the device and output are wider
+     * towards different axes, swapping must be performed
+     *
+     * FIXME: Would be even better to know the actual output orientation,
+     * not just the direction.
+     */
+    swap_xy = (c->geometry.width < c->geometry.height);
 
-    /* Compute min/max coordinates. */
-    /* These are scaled using the values of old_axis */
-    scale_x = (c->old_axis.x_max - c->old_axis.x_min)/(float)c->geometry.width;
-    axis.x_min = ((((c->clicked_x[UL] + c->clicked_x[LL]) / 2) - c->geometry.x) * scale_x) + c->old_axis.x_min;
-    axis.x_max = ((((c->clicked_x[UR] + c->clicked_x[LR]) / 2) - c->geometry.x) * scale_x) + c->old_axis.x_min;
-    scale_y = (c->old_axis.y_max - c->old_axis.y_min)/(float)c->geometry.height;
-    axis.y_min = ((((c->clicked_y[UL] + c->clicked_y[UR]) / 2) - c->geometry.y) * scale_y) + c->old_axis.y_min;
-    axis.y_max = ((((c->clicked_y[LL] + c->clicked_y[LR]) / 2) - c->geometry.y) * scale_y) + c->old_axis.y_min;
+    /* Compute the scale to transform from pixel positions to [0..1]. */
+    scale_x = 1 / (float)c->geometry.width;
+    scale_y = 1 / (float)c->geometry.height;
+
+    axis.x_min = ((((c->clicked_x[UL] + c->clicked_x[LL]) / 2)) * scale_x);
+    axis.x_max = ((((c->clicked_x[UR] + c->clicked_x[LR]) / 2)) * scale_x);
+    axis.y_min = ((((c->clicked_y[UL] + c->clicked_y[UR]) / 2)) * scale_y);
+    axis.y_max = ((((c->clicked_y[LL] + c->clicked_y[LR]) / 2)) * scale_y);
 
     /* Add/subtract the offset that comes from not having the points in the
      * corners (using the same coordinate system they are currently in)
@@ -163,8 +171,8 @@ finish (struct Calib *c,
     /* If x and y has to be swapped we also have to swap the parameters */
     if (swap_xy)
     {
-        SWAP(axis.x_min, axis.y_max);
-        SWAP(axis.y_min, axis.x_max);
+        SWAP (gdouble, axis.x_min, axis.y_min);
+        SWAP (gdouble, axis.x_max, axis.y_max);
     }
 
     *new_axis = axis;

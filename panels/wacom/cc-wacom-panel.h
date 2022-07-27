@@ -53,13 +53,6 @@ typedef struct _CcWacomPanel CcWacomPanel;
 typedef struct _CcWacomPanelClass CcWacomPanelClass;
 typedef struct _CcWacomPanelPrivate CcWacomPanelPrivate;
 
-struct _CcWacomPanel
-{
-  CcPanel parent;
-
-  CcWacomPanelPrivate *priv;
-};
-
 struct _CcWacomPanelClass
 {
   CcPanelClass parent_class;
