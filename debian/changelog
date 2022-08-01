@@ -1,3 +1,10 @@
+cinnamon-control-center (5.4.5) vanessa; urgency=medium
+
+  [ Bobby Rong ]
+  * build: add missing gio-unix-2.0 dependency (#294)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 01 Aug 2022 16:06:16 +0200
+
 cinnamon-control-center (5.4.4) vanessa; urgency=medium
 
   [ Eli Schwartz ]
