@@ -47,8 +47,12 @@ panel_display = shared_library(
   install_dir: panels_dir
 )
 
-install_data(
-  'cinnamon-display-panel.desktop',
+i18n.merge_file(
+  input : 'cinnamon-display-panel.desktop.in',
+  output: 'cinnamon-display-panel.desktop',
+  po_dir: po_dir,
+  type: 'desktop',
+  install: true,
   install_dir: desktop_dir
 )
 

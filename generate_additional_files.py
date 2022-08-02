@@ -22,7 +22,7 @@ X-Cinnamon-Settings-Panel=color
 _Keywords=Color;ICC;Profile;Calibrate;Printer;Display;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/color/cinnamon-color-panel.desktop", prefix, _("Color"), _("Color management settings"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/color/cinnamon-color-panel.desktop.in", prefix, _("Color"), _("Color management settings"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings region
@@ -38,7 +38,7 @@ _Keywords=Language;Layout;Keyboard;
 NoDisplay=true
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop", prefix, _("Region & Language"), _("Change your region and language settings"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop.in", prefix, _("Region & Language"), _("Change your region and language settings"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings display
@@ -53,7 +53,7 @@ X-Cinnamon-Settings-Panel=display
 _Keywords=Panel;Projector;xrandr;Screen;Resolution;Refresh;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop.in", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings network
@@ -68,7 +68,7 @@ X-Cinnamon-Settings-Panel=network
 _Keywords=Network;Wireless;IP;LAN;Proxy;Internet;WiFi;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop", prefix, _("Network"), _("Network settings"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/network/cinnamon-network-panel.desktop.in", prefix, _("Network"), _("Network settings"), "")
 
 prefix = """[Desktop Entry]
 Exec=cinnamon-settings wacom
@@ -83,4 +83,4 @@ OnlyShowIn=X-Cinnamon;
 _Keywords=Tablet;Wacom;Stylus;Eraser;Mouse;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")
+additionalfiles.generate(DOMAIN, PATH, "./panels/wacom/cinnamon-wacom-panel.desktop.in", prefix, _("Graphics Tablet"), _("Set button mappings and adjust stylus sensitivity for graphics tablets"), "")

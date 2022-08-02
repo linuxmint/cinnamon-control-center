@@ -38,7 +38,11 @@ install_data([
 )
 
 # Region panel is imported as a page of cs_keyboard so no share/applications entry needed.
-install_data(
-  'cinnamon-region-panel.desktop',
+i18n.merge_file(
+  input : 'cinnamon-region-panel.desktop.in',
+  output: 'cinnamon-region-panel.desktop',
+  po_dir: po_dir,
+  type: 'desktop',
+  install: true,
   install_dir: panel_def_dir
 )

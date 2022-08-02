@@ -25,8 +25,12 @@ wacom_gresource = gnome.compile_resources(
 
 subdir('calibrator')
 
-install_data(
-  'cinnamon-wacom-panel.desktop',
+i18n.merge_file(
+  input : 'cinnamon-wacom-panel.desktop.in',
+  output: 'cinnamon-wacom-panel.desktop',
+  po_dir: po_dir,
+  type: 'desktop',
+  install: true,
   install_dir: desktop_dir
 )
 
