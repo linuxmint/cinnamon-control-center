@@ -36,6 +36,11 @@ extern GSettings *xkb_keyboard_settings;
 extern GSettings *xkb_desktop_settings;
 extern GkbdKeyboardConfig initial_config;
 
+extern const gchar GKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP[];
+extern const gchar GKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW[];
+extern const gchar GKBD_KEYBOARD_CONFIG_KEY_LAYOUTS[];
+extern const gchar GKBD_KEYBOARD_CONFIG_KEY_OPTIONS[];
+
 extern void setup_xkb_tabs (GtkBuilder * dialog);
 
 extern void xkb_layouts_fill_selected_tree (GtkBuilder * dialog);

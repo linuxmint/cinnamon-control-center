@@ -36,6 +36,12 @@
 
 #define GKBD_CONFIG_KEY_LOAD_EXTRA_ITEMS "load-extra-items"
 
+// These were removed from the API of libgnomekbd in version 3.28
+const gchar GKBD_DESKTOP_CONFIG_KEY_DEFAULT_GROUP[] = "default-group";
+const gchar GKBD_DESKTOP_CONFIG_KEY_GROUP_PER_WINDOW[] = "group-per-window";
+const gchar GKBD_KEYBOARD_CONFIG_KEY_LAYOUTS[] = "layouts";
+const gchar GKBD_KEYBOARD_CONFIG_KEY_OPTIONS[] = "options";
+
 XklEngine *engine;
 XklConfigRegistry *config_registry;
 
