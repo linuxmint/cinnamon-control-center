@@ -113,7 +113,10 @@ get_scaled_geometry (CcDisplayConfig  *config,
   else
     {
       cc_display_monitor_get_geometry (output, x, y, NULL, NULL);
-      cc_display_mode_get_resolution (cc_display_monitor_get_preferred_mode (output), w, h);
+      CcDisplayMode *mode = cc_display_monitor_get_preferred_mode(output);
+      if (!mode)
+        mode = CC_DISPLAY_MODE (cc_display_monitor_get_modes(output)->data);
+      cc_display_mode_get_resolution (mode, w, h);
     }
 
   if (cc_display_config_is_layout_logical (config))
