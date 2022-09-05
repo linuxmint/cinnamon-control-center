@@ -4,45 +4,32 @@ Upstream-Contact: Linux Mint Project <root@linuxmint.com>
 Source: https://github.com/linuxmint/cinnamon-control-center.git
 
 Files: *
-Copyright: 2013, Aleksander Morgado <aleksander@gnu.org>
+Copyright: 2004, Alan Cox
+           2013, Aleksander Morgado <aleksander@gnu.org>
            2009, Bastien Nocera
            2010-2012, Bastien Nocera <hadess@hadess.net>
-           2012, Canonical
-           2009, Canonical Ltd
-           2012, Conor Curran
-           2011, Conor Curran <conor.curran@canonical.com>
+           2009-2012, Canonical Ltd
+           2011-2012, Conor Curran <conor.curran@canonical.com>
+           Croatian team
            2012, David Henningsson, Canonical Ltd <david.henningsson@canonical.com>
            2007, David Zeuthen <david@fubar.dk>
            2001, Eazel, Inc
            1999-2013, Free Software Foundation, Inc
            2011, Giovanni Campagna <scampa.giovanni@gmail.com>
-           2009-2010, Intel, Inc
+           2003, Hasbullah Bin Pit
+           2009-2013, Intel, Inc
            2006-2008, Lennart Poettering
-           2009-2010, Red Hat, Inc
+           2003, Nikos Charonitakis
            2010-2012, Richard Hughes <richard@hughsie.com>
            2003-2007, Sergey V Udaltsov
            2003-2007, Sergey V. Udaltsov
+           2004-2005, Sharif FarsiWeb, Inc
            2008, Sjoerd Simons <sjoerd@luon.net>
            2012, Thomas Bechtold <thomasbechtold@jpberlin.de>
            2012, Wacom
-           2008, William Jon McCann
-           2008, William Jon McCann <jmccann@redhat.com>
-           2007, William Jon McCann <mccann@jhu.edu>
-           2008, William Jon McCann <william.jon.mccann@gmail.com>
+           2007-2008, William Jon McCann <jmccann@redhat.com>
            2000-2001, Ximian, Inc
-           2004, Alan Cox
-           Croatian team
-           Free Software Foundation
-           2004-2007, Free Software Foundation Inc
-           2004-2008, Free Software Foundation, Inc
-           2003, Hasbullah Bin Pit
-           2003, Nikos Charonitakis
-           2002, Red Hat Inc
-           2005, Red Hat, Inc
-           2004, RedHat Inc
-           2002-2008, RedHat, Inc
-           2004-2005, Sharif FarsiWeb, Inc
-           2003, The free software foundation, inc
+           2002-2019, RedHat, Inc
 License: GPL-2+
 
 Files: panels/wacom/calibrator/*
