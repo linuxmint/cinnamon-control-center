@@ -1,3 +1,11 @@
+cinnamon-control-center (5.4.7) vanessa; urgency=medium
+
+  [ Eicke Herbertz ]
+  * region panel: add keys removed from libgnomekbd's API (#297)
+  * display panel: fallback if no preferred mode is set (#298)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 05 Sep 2022 15:36:40 +0100
+
 cinnamon-control-center (5.4.6) vanessa; urgency=medium
 
   [ Michael Webster ]
