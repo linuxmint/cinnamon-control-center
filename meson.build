@@ -85,7 +85,6 @@ endif
 if get_option('wacom')
   libwacom  = dependency('libwacom',  version: '>=0.7')
   libxi     = dependency('xi',        version: '>=1.2')
-  cinn_settings_daemon = dependency('cinnamon-settings-daemon', version: '>=1.0.0')
 else
   libwacom  = dependency('', required: false)
 endif

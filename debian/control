@@ -3,7 +3,6 @@ Section: x11
 Priority: optional
 Maintainer: Linux Mint <root@linuxmint.com>
 Build-Depends:
- cinnamon-settings-daemon-dev,
  debhelper-compat (= 12),
  gnome-pkg-tools (>= 0.10),
  gtk-doc-tools,
@@ -42,7 +41,6 @@ Depends:
  apg,
  cinnamon-control-center-data (= ${source:Version}),
  cinnamon-desktop-data (>= 4.8),
- cinnamon-settings-daemon,
  desktop-file-utils,
  gettext,
  gnome-online-accounts,
