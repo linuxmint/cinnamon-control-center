@@ -969,7 +969,7 @@ void
 cc_goa_panel_register (GIOModule *module)
 {
         textdomain (GETTEXT_PACKAGE);
-        bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+        bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         cc_goa_panel_register_type (G_TYPE_MODULE (module));
         g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,

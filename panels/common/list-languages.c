@@ -13,7 +13,7 @@ int main (int argc, char **argv)
 
 	setlocale (LC_ALL, NULL);
 	textdomain (GETTEXT_PACKAGE);
-	bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+	bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
 	g_type_init ();
