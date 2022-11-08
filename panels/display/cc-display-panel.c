@@ -1164,7 +1164,7 @@ void
 cc_display_panel_register (GIOModule *module)
 {
   textdomain (GETTEXT_PACKAGE);
-  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+  bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
   cc_display_panel_register_type (G_TYPE_MODULE (module));

@@ -711,7 +711,7 @@ cc_wacom_panel_register (GIOModule *module)
 {
     cc_wacom_panel_register_type (G_TYPE_MODULE (module));
     textdomain (GETTEXT_PACKAGE);
-    bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+    bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
     g_io_extension_point_implement (CC_SHELL_PANEL_EXTENSION_POINT,
                     CC_TYPE_WACOM_PANEL, "wacom", 0);

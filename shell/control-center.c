@@ -242,7 +242,7 @@ main (int argc, char **argv)
   GtkApplication *application;
   int status;
 
-  bindtextdomain (GETTEXT_PACKAGE, "/usr/share/locale");
+  bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
