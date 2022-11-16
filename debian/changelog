@@ -1,3 +1,22 @@
+cinnamon-control-center (5.6.0) vera; urgency=medium
+
+  [ Fabio Fantoni ]
+  * fix a spelling error
+  * update and improve d/copyright
+
+  [ Michael Webster ]
+  * Remove cinnamon-settings-daemon as a dependency.
+  * Use github instead of circleci.
+
+  [ Bobby Rong ]
+  * l10n: respect localedir option from meson again
+
+  [ Clement Lefebvre ]
+  * Desktop files: Fix keywords translations
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 16 Nov 2022 11:25:28 +0000
+
 cinnamon-control-center (5.4.7) vanessa; urgency=medium
 
   [ Eicke Herbertz ]
