@@ -124,13 +124,13 @@ cc_shell_model_add_item (CcShellModel   *model,
                          const gchar    *path)
 {
 
-  GAppInfo    *appinfo = G_APP_INFO (g_desktop_app_info_new_from_filename (path));
+  g_autoptr(GAppInfo) appinfo = G_APP_INFO (g_desktop_app_info_new_from_filename (path));
   GIcon       *icon = g_app_info_get_icon (appinfo);
   const gchar *name = g_app_info_get_name (appinfo);
   const gchar *comment = g_app_info_get_description (appinfo);
-  gchar *id;
-  gchar *basename;
-  GdkPixbuf *pixbuf = NULL;
+  g_autofree gchar *id;
+  g_autofree gchar *basename;
+  g_autoptr(GdkPixbuf) pixbuf = NULL;
   GKeyFile *key_file;
   gchar **keywords;
 
@@ -164,6 +164,5 @@ cc_shell_model_add_item (CcShellModel   *model,
                                      COL_KEYWORDS, keywords,
                                      -1);
 
-  g_free (id);
   g_strfreev (keywords);
 }
