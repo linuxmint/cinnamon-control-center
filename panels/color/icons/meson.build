@@ -1,5 +1,5 @@
 
-sizes = [
+color_icon_sizes = [
   '16x16',
   '22x22',
   '24x24',
@@ -10,7 +10,7 @@ sizes = [
   'scalable',
 ]
 
-foreach size : sizes
+foreach size : color_icon_sizes
   install_subdir(size,
     strip_directory: true,
     install_dir: get_option('datadir') / 'icons' / 'hicolor' / size / 'apps',
