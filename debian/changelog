@@ -1,3 +1,14 @@
+cinnamon-control-center (5.6.1) vera; urgency=medium
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+  [ Michael Webster ]
+  * Fix build when the color panel is disabled.
+  * Update translations in desktop files.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sat, 07 Jan 2023 15:55:30 +0000
+
 cinnamon-control-center (5.6.0) vera; urgency=medium
 
   [ Fabio Fantoni ]
