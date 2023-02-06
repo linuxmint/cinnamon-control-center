@@ -133,12 +133,12 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
 {
         NMIPConfig *ip4_config = NULL;
         NMIPConfig *ip6_config = NULL;
-        gchar *ip4_address = NULL;
-        gchar *ip4_route = NULL;
-        gchar *ip4_dns = NULL;
-        gchar *ip6_address = NULL;
-        gchar *ip6_route = NULL;
-        gchar *ip6_dns = NULL;
+        g_autofree gchar *ip4_address = NULL;
+        g_autofree gchar *ip4_route = NULL;
+        g_autofree gchar *ip4_dns = NULL;
+        g_autofree gchar *ip6_address = NULL;
+        g_autofree gchar *ip6_route = NULL;
+        g_autofree gchar *ip6_dns = NULL;
         gint i = 0;
 
         ip4_config = nm_device_get_ip4_config (device);
@@ -185,17 +185,10 @@ add_details (GtkWidget *details, NMDevice *device, NMConnection *connection)
         }
 
         if (nm_device_get_state (device) != NM_DEVICE_STATE_ACTIVATED) {
-                gchar *last_used;
+                g_autofree gchar *last_used = NULL;
                 last_used = get_last_used_string (connection);
                 add_details_row (details, i++, _("Last used"), last_used);
-                g_free (last_used);
         }
-
-        g_free (ip4_address);
-        g_free (ip4_route);
-        g_free (ip4_dns);
-        g_free (ip6_address);
-        g_free (ip6_dns);
 }
 
 static void populate_ui (NetDeviceEthernet *device);
@@ -221,7 +214,7 @@ device_ethernet_refresh_ui (NetDeviceEthernet *device)
         NMDevice *nm_device;
         NMDeviceState state;
         GtkWidget *widget;
-        gchar *speed = NULL;
+        g_autofree gchar *speed = NULL;
 
         nm_device = net_device_get_nm_device (NET_DEVICE (device));
 

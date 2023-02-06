@@ -111,7 +111,7 @@ iconview_button_release_event_cb (GtkWidget       *widget,
       gtk_icon_view_item_activated (GTK_ICON_VIEW (cc_view),
                                     (GtkTreePath*) selection->data);
 
-      g_list_free (selection);
+      g_list_free_full (selection, (GDestroyNotify) gtk_tree_path_free);
     }
 
   return TRUE;
