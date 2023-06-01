@@ -1,3 +1,14 @@
+cinnamon-control-center (5.8.0) victoria; urgency=medium
+
+  [ Oliver Kästner ]
+  * Fix memleaks (#306)
+
+  [ Michael Webster ]
+  * network/net-device.c: net_device_get_valid_connections - don't return early if there's no active connection.
+  * github workflow: Add optional ssh session.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 01 Jun 2023 13:57:38 +0100
+
 cinnamon-control-center (5.6.1) vera; urgency=medium
 
   [ Clement Lefebvre ]
