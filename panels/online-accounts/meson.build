@@ -1,5 +1,3 @@
-subdir('icons')
-
 panel_online_accounts_sources = [
   'cc-online-accounts-panel.c',
   'online-accounts-module.c',
