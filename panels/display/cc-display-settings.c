@@ -24,7 +24,7 @@
 #include "cc-display-settings.h"
 #include "cc-display-config.h"
 
-#define MAX_SCALE_BUTTONS 5
+#define MAX_SCALE_BUTTONS 6
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->builder, s))
 
