@@ -1,6 +1,6 @@
 project('cinnamon-control-center', 'c',
   version: '5.8.2',
-  meson_version: '>=0.49.0',
+  meson_version: '>=0.56.0',
 )
 
 i18n      = import('i18n')
@@ -46,7 +46,7 @@ config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 # This is a hard-dependency for the region and user-accounts panels
 
 isocodes = dependency('iso-codes')
-config.set_quoted('ISO_CODES_PREFIX', isocodes.get_pkgconfig_variable('prefix'))
+config.set_quoted('ISO_CODES_PREFIX', isocodes.get_variable(pkgconfig: 'prefix'))
 
 ###############################################################################
 # Network Manager stuff
