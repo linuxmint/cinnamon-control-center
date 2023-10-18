@@ -40,6 +40,10 @@
         <col id="0">4</col>
         <col id="1" translatable="yes">Forward</col>
       </row>
+      <row>
+        <col id="0">5</col>
+        <col id="1" translatable="yes">Disabled</col>
+      </row>
     </data>
   </object>
   <object class="GtkNotebook" id="stylus-notebook">
