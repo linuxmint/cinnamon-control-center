@@ -551,8 +551,8 @@ on_output_changed_cb (CcDisplayArrangement *self,
 static gint
 sort_outputs_by_disabled (gconstpointer a, gconstpointer b)
 {
-    CcDisplayMonitor *ma = CC_DISPLAY_MONITOR (a);
-    CcDisplayMonitor *mb = CC_DISPLAY_MONITOR (b);
+    CcDisplayMonitor *ma = CC_DISPLAY_MONITOR ((gpointer) a);
+    CcDisplayMonitor *mb = CC_DISPLAY_MONITOR ((gpointer) b);
 
     if (!cc_display_monitor_is_active (ma) && cc_display_monitor_is_active (mb))
         return -1;
@@ -561,7 +561,7 @@ sort_outputs_by_disabled (gconstpointer a, gconstpointer b)
     if (cc_display_monitor_is_active (ma) && !cc_display_monitor_is_active (mb))
         return 1;
 
-    return cc_display_monitor_get_ui_number (a) < cc_display_monitor_get_ui_number (b) ? -1 : 1;
+    return cc_display_monitor_get_ui_number ((gpointer) a) < cc_display_monitor_get_ui_number ((gpointer) b) ? -1 : 1;
 }
 
 static gboolean

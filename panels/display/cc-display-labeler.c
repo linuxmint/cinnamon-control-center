@@ -37,17 +37,24 @@
 
 #include "cc-display-labeler.h"
 
-struct _CcDisplayLabelerPrivate {
+typedef struct {
 	CcDisplayConfig *config;
 
 	int num_outputs;
 
-	GdkRGBA *palette;
 	GtkWidget **windows;
 
 	GdkScreen  *screen;
 	Atom        workarea_atom;
+} CcDisplayLabelerPrivate;
+
+struct _CcDisplayLabeler
+{
+    GObject parent;
+    CcDisplayLabelerPrivate *priv;
 };
+
+G_DEFINE_TYPE_WITH_PRIVATE (CcDisplayLabeler, cc_display_labeler, G_TYPE_OBJECT)
 
 enum {
 	PROP_0,
@@ -55,10 +62,7 @@ enum {
 	PROP_LAST
 };
 
-G_DEFINE_TYPE (CcDisplayLabeler, cc_display_labeler, G_TYPE_OBJECT);
-
 static void cc_display_labeler_finalize (GObject *object);
-static void setup_from_config (CcDisplayLabeler *labeler);
 
 static GdkFilterReturn
 screen_xevent_filter (GdkXEvent      *xevent,
@@ -86,14 +90,13 @@ cc_display_labeler_init (CcDisplayLabeler *labeler)
 {
 	GdkWindow *gdkwindow;
 
-	labeler->priv = G_TYPE_INSTANCE_GET_PRIVATE (labeler, GNOME_TYPE_RR_LABELER, CcDisplayLabelerPrivate);
+	labeler->priv = cc_display_labeler_get_instance_private (labeler);
 
 	labeler->priv->workarea_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()),
 						    "_NET_WORKAREA",
 						    True);
 
 	labeler->priv->screen = gdk_screen_get_default ();
-	/* code is not really designed to handle multiple screens so *shrug* */
 	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
 	gdk_window_add_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
 	gdk_window_set_events (gdkwindow, gdk_window_get_events (gdkwindow) | GDK_PROPERTY_CHANGE_MASK);
@@ -113,28 +116,15 @@ cc_display_labeler_set_property (GObject *gobject, guint property_id, const GVal
 	}
 }
 
-static GObject *
-cc_display_labeler_constructor (GType type, guint n_construct_properties, GObjectConstructParam *construct_properties)
-{
-	CcDisplayLabeler *self = (CcDisplayLabeler*) G_OBJECT_CLASS (cc_display_labeler_parent_class)->constructor (type, n_construct_properties, construct_properties);
-
-	setup_from_config (self);
-
-	return (GObject*) self;
-}
-
 static void
 cc_display_labeler_class_init (CcDisplayLabelerClass *klass)
 {
 	GObjectClass *object_class;
 
-	g_type_class_add_private (klass, sizeof (CcDisplayLabelerPrivate));
-
 	object_class = (GObjectClass *) klass;
 
 	object_class->set_property = cc_display_labeler_set_property;
 	object_class->finalize = cc_display_labeler_finalize;
-	object_class->constructor = cc_display_labeler_constructor;
 
 	g_object_class_install_property (object_class, PROP_CONFIG, g_param_spec_object ("config",
 											 "Configuration",
@@ -142,6 +132,11 @@ cc_display_labeler_class_init (CcDisplayLabelerClass *klass)
 											 CC_TYPE_DISPLAY_CONFIG,
 											 G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY |
 											 G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB));
+    g_signal_new ("get-output-color",
+                  CC_TYPE_DISPLAY_LABELER,
+                  G_SIGNAL_RUN_LAST,
+                  0, NULL, NULL, NULL,
+                  G_TYPE_STRING, 1, CC_TYPE_DISPLAY_MONITOR);
 }
 
 static void
@@ -152,8 +147,8 @@ cc_display_labeler_finalize (GObject *object)
 
 	labeler = CC_DISPLAY_LABELER (object);
 
-	gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
-	gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
+    gdkwindow = gdk_screen_get_root_window (labeler->priv->screen);
+    gdk_window_remove_filter (gdkwindow, (GdkFilterFunc) screen_xevent_filter, labeler);
 
 	if (labeler->priv->config != NULL) {
 		g_object_unref (labeler->priv->config);
@@ -163,8 +158,6 @@ cc_display_labeler_finalize (GObject *object)
 		cc_display_labeler_hide (labeler);
 		g_free (labeler->priv->windows);
 	}
-
-	g_free (labeler->priv->palette);
 
 	G_OBJECT_CLASS (cc_display_labeler_parent_class)->finalize (object);
 }
@@ -178,41 +171,6 @@ count_outputs (CcDisplayConfig *config)
 	i = g_list_length (outputs);
 
     return i;
-}
-
-static void
-make_palette (CcDisplayLabeler *labeler)
-{
-	/* The idea is that we go around an hue color wheel.  We want to start
-	 * at red, go around to green/etc. and stop at blue.
-	 *
-	 */
-	double start_hue;
-	double end_hue;
-	int i;
-
-	g_assert (labeler->priv->num_outputs > 0);
-
-	labeler->priv->palette = g_new (GdkRGBA, labeler->priv->num_outputs);
-
-	start_hue = 0.0; /* red */
-	end_hue   = 2.0/3; /* blue */
-
-	for (i = 0; i < labeler->priv->num_outputs; i++) {
-		double h, s, v;
-		double r, g, b;
-
-		h = start_hue + (end_hue - start_hue) / labeler->priv->num_outputs * i;
-		s = 0.6;
-		v = 1.0;
-
-		gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
-
-		labeler->priv->palette[i].red   = r;
-		labeler->priv->palette[i].green = g;
-		labeler->priv->palette[i].blue  = b;
-		labeler->priv->palette[i].alpha  = 1.0;
-	}
 }
 
 static void
@@ -262,10 +220,11 @@ rounded_rectangle (cairo_t *cr,
 static void
 label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr)
 {
-	GdkRGBA *rgba;
+	GdkRGBA rgba;
 	GtkAllocation allocation;
+    gchar *rgba_str;
 
-	rgba = g_object_get_data (G_OBJECT (widget), "rgba");
+	rgba_str = g_object_get_data (G_OBJECT (widget), "rgba");
 	gtk_widget_get_allocation (widget, &allocation);
 
 	cairo_save (cr);
@@ -284,8 +243,9 @@ label_draw_background_and_frame (GtkWidget *widget, cairo_t *cr)
 	cairo_stroke (cr);
 
 	/* fill */
-	rgba->alpha = 0.90;
-	gdk_cairo_set_source_rgba (cr, rgba);
+    gdk_rgba_parse (&rgba, rgba_str);
+	rgba.alpha = 0.90;
+	gdk_cairo_set_source_rgba (cr, &rgba);
 
 	rounded_rectangle (cr,
 	                   LABEL_WINDOW_EDGE_THICKNESS,
@@ -364,7 +324,7 @@ label_window_composited_changed_cb (GtkWidget *widget, CcDisplayLabeler *labeler
 }
 
 static GtkWidget *
-create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba, gint num)
+create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, gchar *rgba_str, gint num)
 {
 	GtkWidget *window;
 	GtkWidget *widget;
@@ -390,7 +350,8 @@ create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGB
 	 * array.  Note that in cc_display_labeler_finalize(), we are careful to
 	 * free the palette only after we free the windows.
 	 */
-	g_object_set_data (G_OBJECT (window), "rgba", rgba);
+
+	g_object_set_data_full (G_OBJECT (window), "rgba", rgba_str, (GDestroyNotify) g_free);
 
 	g_signal_connect (window, "draw",
 			  G_CALLBACK (label_window_draw_event_cb), labeler);
@@ -431,16 +392,6 @@ create_label_window (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGB
 	return window;
 }
 
-static void
-setup_from_config (CcDisplayLabeler *labeler)
-{
-	labeler->priv->num_outputs = count_outputs (labeler->priv->config);
-
-	make_palette (labeler);
-
-	cc_display_labeler_show (labeler);
-}
-
 /**
  * cc_display_labeler_new:
  * @config: Configuration of the screens to label
@@ -457,7 +408,7 @@ cc_display_labeler_new (CcDisplayConfig *config)
 {
 	g_return_val_if_fail (CC_IS_DISPLAY_CONFIG (config), NULL);
 
-	return g_object_new (GNOME_TYPE_RR_LABELER, "config", config, NULL);
+	return g_object_new (CC_TYPE_DISPLAY_LABELER, "config", config, NULL);
 }
 
 /**
@@ -473,11 +424,12 @@ cc_display_labeler_show (CcDisplayLabeler *labeler)
 	gboolean created_window_for_clone;
 	GList *outputs, *l;
 
-	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
+	g_return_if_fail (CC_IS_DISPLAY_LABELER (labeler));
 
 	if (labeler->priv->windows != NULL)
 		return;
 
+    labeler->priv->num_outputs = count_outputs (labeler->priv->config);
 	labeler->priv->windows = g_new (GtkWidget *, labeler->priv->num_outputs);
 
 	created_window_for_clone = FALSE;
@@ -488,7 +440,10 @@ cc_display_labeler_show (CcDisplayLabeler *labeler)
         CcDisplayMonitor *output = CC_DISPLAY_MONITOR (l->data);
 
 		if (!created_window_for_clone) {
-			labeler->priv->windows[i] = create_label_window (labeler, output, labeler->priv->palette + i, i + 1);
+            gchar *rgba_str;
+
+            g_signal_emit_by_name (G_OBJECT (labeler), "get-output-color", output, &rgba_str);
+			labeler->priv->windows[i] = create_label_window (labeler, output, rgba_str, i + 1);
 
 			if (cc_display_config_is_cloning (labeler->priv->config))
 				created_window_for_clone = TRUE;
@@ -509,7 +464,7 @@ cc_display_labeler_hide (CcDisplayLabeler *labeler)
 	int i;
 	CcDisplayLabelerPrivate *priv;
 
-	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
+	g_return_if_fail (CC_IS_DISPLAY_LABELER (labeler));
 
 	priv = labeler->priv;
 
@@ -525,39 +480,3 @@ cc_display_labeler_hide (CcDisplayLabeler *labeler)
 	priv->windows = NULL;
 }
 
-/**
- * cc_display_labeler_get_rgba_for_output:
- * @labeler: A #CcDisplayLabeler
- * @output: Output device (i.e. monitor) to query
- * @rgba_out: (out): Color of selected monitor.
- *
- * Get the color used for the label on a given output (monitor).
- */
-void
-cc_display_labeler_get_rgba_for_output (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba_out)
-{
-	int i;
-	GList *outputs, *l;
-
-	g_return_if_fail (GNOME_IS_RR_LABELER (labeler));
-	g_return_if_fail (CC_IS_DISPLAY_MONITOR (output));
-	g_return_if_fail (rgba_out != NULL);
-
-	outputs = cc_display_config_get_ui_sorted_monitors (labeler->priv->config);
-
-    for (l = outputs, i = 0; l != NULL; l = l->next, i++) {
-        CcDisplayMonitor *o = CC_DISPLAY_MONITOR (l->data);
-
-		if (o == output) {
-			*rgba_out = labeler->priv->palette[i];
-			return;
-		}
-    }
-
-	g_warning ("trying to get the color for unknown CcDisplayMonitor %p; returning magenta!", output);
-
-	rgba_out->red   = 1.0;
-	rgba_out->green = 0;
-	rgba_out->blue  = 1.0;
-	rgba_out->alpha  = 1.0;
-}

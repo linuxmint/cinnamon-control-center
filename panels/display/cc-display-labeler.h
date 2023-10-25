@@ -22,43 +22,18 @@
  *
  * Author: Federico Mena-Quintero <federico@novell.com>
  */
+#pragma once
 
-#ifndef CC_DISPLAY_LABELER_H
-#define CC_DISPLAY_LABELER_H
-
-#define GNOME_DESKTOP_USE_UNSTABLE_API
+// #define GNOME_DESKTOP_USE_UNSTABLE_API
 #include "cc-display-config.h"
 
-#define GNOME_TYPE_RR_LABELER            (cc_display_labeler_get_type ())
-#define CC_DISPLAY_LABELER(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GNOME_TYPE_RR_LABELER, CcDisplayLabeler))
-#define CC_DISPLAY_LABELER_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  GNOME_TYPE_RR_LABELER, CcDisplayLabelerClass))
-#define GNOME_IS_RR_LABELER(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GNOME_TYPE_RR_LABELER))
-#define GNOME_IS_RR_LABELER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  GNOME_TYPE_RR_LABELER))
-#define CC_DISPLAY_LABELER_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  GNOME_TYPE_RR_LABELER, CcDisplayLabelerClass))
+G_BEGIN_DECLS
 
-typedef struct _CcDisplayLabeler CcDisplayLabeler;
-typedef struct _CcDisplayLabelerClass CcDisplayLabelerClass;
-typedef struct _CcDisplayLabelerPrivate CcDisplayLabelerPrivate;
-
-struct _CcDisplayLabeler {
-	GObject parent;
-
-	/*< private >*/
-	CcDisplayLabelerPrivate *priv;
-};
-
-struct _CcDisplayLabelerClass {
-	GObjectClass parent_class;
-};
-
-GType cc_display_labeler_get_type (void);
+#define CC_TYPE_DISPLAY_LABELER (cc_display_labeler_get_type ())
+G_DECLARE_FINAL_TYPE (CcDisplayLabeler, cc_display_labeler, CC, DISPLAY_LABELER, GObject)
 
 CcDisplayLabeler *cc_display_labeler_new (CcDisplayConfig *config);
-
 void cc_display_labeler_show (CcDisplayLabeler *labeler);
-
 void cc_display_labeler_hide (CcDisplayLabeler *labeler);
 
-void cc_display_labeler_get_rgba_for_output (CcDisplayLabeler *labeler, CcDisplayMonitor *output, GdkRGBA *rgba_out);
-
-#endif
+G_END_DECLS

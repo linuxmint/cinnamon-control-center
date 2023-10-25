@@ -23,8 +23,12 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+
 #include <libcinnamon-desktop/cdesktop-enums.h>
 #include <math.h>
+#include <gdk/gdkwayland.h>
 
 #include <libupower-glib/upower.h>
 
@@ -64,6 +68,8 @@ struct _CcDisplayPanel
   CcDisplayConfigManager *manager;
   CcDisplayConfig *current_config;
   CcDisplayMonitor *current_output;
+
+  GDBusProxy *cinnamon_proxy;
 
   gint                  rebuilding_counter;
 
@@ -106,19 +112,40 @@ struct _CcDisplayPanel
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
-static void
-update_bottom_buttons (CcDisplayPanel *panel);
-static void
-apply_current_configuration (CcDisplayPanel *self);
-static void
-reset_current_config (CcDisplayPanel *panel);
-static void
-rebuild_ui (CcDisplayPanel *panel);
-static void
-set_current_output (CcDisplayPanel   *panel,
-                    CcDisplayMonitor *output,
-                    gboolean          force);
+#define WAYLAND_SESSION() (GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default()))
 
+static const gchar *COLORS[] = {
+    "rgb(255,102,102)",
+    "rgb(255,133,102)",
+    "rgb(255,163,102)",
+    "rgb(255,194,102)",
+    "rgb(255,224,102)",
+    "rgb(255,255,102)",
+    "rgb(224,255,102)",
+    "rgb(194,255,102)",
+    "rgb(163,255,102)",
+    "rgb(133,255,102)",
+    "rgb(102,255,102)",
+    "rgb(102,255,133)",
+    "rgb(102,255,163)",
+    "rgb(102,255,194)",
+    "rgb(102,255,224)",
+    "rgb(102,255,255)",
+    "rgb(102,224,255)",
+    "rgb(102,194,255)",
+    "rgb(102,163,255)",
+    "rgb(102,133,255)",
+};
+
+static void update_bottom_buttons (CcDisplayPanel *panel);
+static void apply_current_configuration (CcDisplayPanel *self);
+static void reset_current_config (CcDisplayPanel *panel);
+static void rebuild_ui (CcDisplayPanel *panel);
+static void set_current_output (CcDisplayPanel   *panel,
+                                CcDisplayMonitor *output,
+                                gboolean          force);
+static gchar *get_color_string_for_output (CcDisplayMonitor *output);
+static gchar *get_output_color (GObject *source, CcDisplayMonitor *output, CcDisplayPanel *self);
 
 static CcDisplayConfigType
 config_get_current_type (CcDisplayPanel *panel)
@@ -329,29 +356,128 @@ cc_panel_set_selected_type (CcDisplayPanel *panel, CcDisplayConfigType type)
 }
 
 static void
-ensure_monitor_labels (CcDisplayPanel *self)
+hide_labels_dbus (CcDisplayPanel *self)
 {
-  if (self->labeler) {
-    cc_display_labeler_hide (self->labeler);
-    g_object_unref (self->labeler);
-  }
+  if (!self->cinnamon_proxy)
+    return;
 
-  self->labeler = cc_display_labeler_new (self->current_config);
+  g_dbus_proxy_call (self->cinnamon_proxy,
+                     "HideMonitorLabels",
+                     NULL, G_DBUS_CALL_FLAGS_NONE,
+                     -1, NULL, NULL, NULL);
+}
 
-  cc_display_labeler_show (self->labeler);
+static void
+show_labels_dbus (CcDisplayPanel *self)
+{
+  GList *outputs, *l;
+  GVariantBuilder builder;
+  gint number = 0;
+
+  if (!self->cinnamon_proxy || !self->current_config)
+    return;
+
+  outputs = cc_display_config_get_ui_sorted_monitors (self->current_config);
+  if (!outputs)
+    return;
+
+  g_variant_builder_init (&builder, G_VARIANT_TYPE_TUPLE);
+  g_variant_builder_open (&builder, G_VARIANT_TYPE_ARRAY);
+
+  gint color_index = 0;
+
+  for (l = outputs; l != NULL; l = l->next)
+    {
+      CcDisplayMonitor *output = l->data;
+
+      number = cc_display_monitor_get_ui_number (output);
+      if (number == 0)
+        continue;
+
+      GVariant *var;
+
+      var = g_variant_new ("(ibss)",
+                           number,
+                           cc_display_config_is_cloning (self->current_config),
+                           cc_display_monitor_get_display_name (output),
+                           COLORS[color_index]);
+
+      g_variant_builder_add (&builder, "{sv}",
+                             cc_display_monitor_get_connector_name (output),
+                             var);
+
+      color_index++;
+    }
+
+  g_variant_builder_close (&builder);
+
+  if (number < 1)
+    {
+      g_variant_builder_clear (&builder);
+      return;
+    }
+
+  g_dbus_proxy_call (self->cinnamon_proxy,
+                     "ShowMonitorLabels",
+                     g_variant_builder_end (&builder),
+                     G_DBUS_CALL_FLAGS_NONE,
+                     -1, NULL, NULL, NULL);
+}
+
+static void
+hide_labels (CcDisplayPanel *self)
+{
+  if (WAYLAND_SESSION ())
+    {
+      hide_labels_dbus (self);
+    }
+  else
+    {
+      if (self->labeler) {
+        cc_display_labeler_hide (self->labeler);
+      }
+    }
+}
+
+static void
+show_labels (CcDisplayPanel *self)
+{
+  if (WAYLAND_SESSION ())
+    {
+      show_labels_dbus (self);
+    }
+  else
+    {
+      if (self->labeler) {
+        cc_display_labeler_hide (self->labeler);
+        g_object_unref (self->labeler);
+      }
+
+      self->labeler = cc_display_labeler_new (self->current_config);
+
+      g_signal_connect_object (self->labeler, "get-output-color",
+                               G_CALLBACK (get_output_color), self, 0);
+
+      cc_display_labeler_show (self->labeler);
+    }
 }
 
 static void
 widget_visible_changed (GtkWidget *widget,
                         gpointer user_data)
 {
-    if (CC_DISPLAY_PANEL(widget)->labeler == NULL)
-        return;
-    if (gtk_widget_get_visible (widget)) {
-        cc_display_labeler_show (CC_DISPLAY_PANEL (widget)->labeler);
-    } else {
-        cc_display_labeler_hide (CC_DISPLAY_PANEL (widget)->labeler);
-    }
+  CcDisplayPanel *self = CC_DISPLAY_PANEL (widget);
+  if (gtk_widget_get_visible (widget) && self->current_config != NULL) {
+    show_labels (self);
+  } else {
+    hide_labels (self);
+  }
+}
+
+static void
+ensure_monitor_labels (CcDisplayPanel *self)
+{
+    widget_visible_changed (GTK_WIDGET (self), self);
 }
 
 static void
@@ -370,6 +496,7 @@ cc_display_panel_dispose (GObject *object)
   g_clear_object (&self->manager);
   g_clear_object (&self->current_config);
   g_clear_object (&self->up_client);
+  g_clear_object (&self->cinnamon_proxy);
 
   g_clear_object (&self->muffin_settings);
   g_clear_object (&self->labeler);
@@ -612,7 +739,10 @@ rebuild_ui (CcDisplayPanel *panel)
       const gchar *label;
 
       pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 20, 20);
-      cc_display_labeler_get_rgba_for_output (panel->labeler, output, &color);
+
+      gchar *color_string = get_color_string_for_output (output);
+
+      gdk_rgba_parse (&color, color_string);
 
       pixel = pixel + ((int) (color.red * 255) << 24);
       pixel = pixel + ((int) (color.green * 255) << 16);
@@ -749,8 +879,6 @@ on_screen_changed (CcDisplayPanel *panel)
 
   if (!panel->current_config)
     return;
-
-  ensure_monitor_labels (panel);
 }
 
 static void
@@ -893,6 +1021,23 @@ sensor_proxy_vanished_cb (GDBusConnection *connection,
 }
 
 static void
+cinnamon_proxy_ready (GObject *source_object,
+                      GAsyncResult *res,
+                      gpointer user_data)
+{
+    CcDisplayPanel *self = CC_DISPLAY_PANEL (user_data);
+    GError *error = NULL;
+
+    self->cinnamon_proxy = g_dbus_proxy_new_finish (res, &error);
+
+    if (self->cinnamon_proxy == NULL)
+      {
+        g_critical ("Can't connect to Cinnamon, monitor labeler will be unavailable: %s", error->message);
+        g_clear_error (&error);
+      }
+}
+
+static void
 session_bus_ready (GObject        *source,
                    GAsyncResult   *res,
                    CcDisplayPanel *self)
@@ -915,6 +1060,21 @@ session_bus_ready (GObject        *source,
                            G_CALLBACK (on_screen_changed),
                            self,
                            G_CONNECT_SWAPPED);
+
+  if (WAYLAND_SESSION ())
+    {
+      g_dbus_proxy_new (bus,
+                        G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START |
+                            G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
+                            G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS,
+                        NULL,
+                        "org.Cinnamon",
+                        "/org/Cinnamon",
+                        "org.Cinnamon",
+                        NULL,
+                        (GAsyncReadyCallback) cinnamon_proxy_ready,
+                        self);
+    }
 }
 
 static void
@@ -1023,17 +1183,24 @@ defaults_button_clicked_cb (GtkWidget *widget,
 }
 
 static gchar *
-get_output_color (CcDisplayArrangement *arrangement, CcDisplayMonitor *output, CcDisplayPanel *self)
+get_color_string_for_output (CcDisplayMonitor *output)
 {
-  GdkRGBA color;
+  guint32 id;
 
-  if (self->labeler != NULL)
-    {
-      cc_display_labeler_get_rgba_for_output (self->labeler, output, &color);
-      return gdk_rgba_to_string (&color);
-    }
+  id = cc_display_monitor_get_id (output);
 
-  return g_strdup ("white");
+  if (id < 0 || id > G_N_ELEMENTS (COLORS) - 1)
+  {
+    return g_strdup ("white");
+  }
+
+  return g_strdup (COLORS[id]);
+}
+
+static gchar *
+get_output_color (GObject *source, CcDisplayMonitor *output, CcDisplayPanel *self)
+{
+  return get_color_string_for_output (output);
 }
 
 static void
