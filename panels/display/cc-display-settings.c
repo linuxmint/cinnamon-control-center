@@ -414,6 +414,8 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
                           1, l->data,
                           -1);
 
+      g_free (resolution_string);
+
       if (current_mode == l->data)
         {
            gtk_combo_box_set_active_iter (GTK_COMBO_BOX (self->resolution_combo), &iter);
@@ -678,6 +680,7 @@ cc_display_settings_finalize (GObject *object)
   g_clear_object (&self->orientation_list);
   g_clear_object (&self->refresh_rate_list);
   g_clear_object (&self->resolution_list);
+  g_clear_object (&self->builder);
 
   if (self->idle_udpate_id)
     g_source_remove (self->idle_udpate_id);

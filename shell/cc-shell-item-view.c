@@ -166,6 +166,8 @@ cc_shell_item_view_update_cells (CcShellItemView *view)
 			break;
 		}
 	}
+
+    g_list_free (cells);
 }
 
 static void

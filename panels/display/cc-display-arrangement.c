@@ -706,6 +706,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
           gtk_style_context_get (context, state, "font", &font, NULL);
           layout = gtk_widget_create_pango_layout (GTK_WIDGET (self), number_str);
           pango_layout_set_font_description (layout, font);
+          pango_font_description_free (font);
           pango_layout_get_extents (layout, NULL, &extents);
 
           h = (extents.height - extents.y) / PANGO_SCALE;

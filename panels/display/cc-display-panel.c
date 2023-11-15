@@ -480,6 +480,9 @@ cc_display_panel_dispose (GObject *object)
   g_clear_object (&self->labeler);
   g_clear_pointer (&self->palette, g_free);
 
+  g_clear_object (&self->output_selection_list);
+  g_clear_object (&self->builder);
+
   g_signal_handlers_disconnect_by_func (self, widget_visible_changed, NULL);
 
   G_OBJECT_CLASS (cc_display_panel_parent_class)->dispose (object);
@@ -722,9 +725,10 @@ rebuild_ui (CcDisplayPanel *panel)
 
       pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8, 20, 20);
 
-      gchar *color_string = get_color_string_for_output (output);
+      gchar *color_string = get_color_string_for_output (panel, index);
 
       gdk_rgba_parse (&color, color_string);
+      g_free (color_string);
 
       pixel = pixel + ((int) (color.red * 255) << 24);
       pixel = pixel + ((int) (color.green * 255) << 16);
@@ -750,6 +754,8 @@ rebuild_ui (CcDisplayPanel *panel)
                           1, output,
                           2, pixbuf,
                           -1);
+
+      g_object_unref (pixbuf);
 
       if (!cc_display_monitor_is_usable (output))
         continue;
