@@ -626,9 +626,6 @@ cc_display_arrangement_draw (GtkWidget *widget,
       if (cc_display_monitor_is_primary (output) || cc_display_config_is_cloning (self->config))
         gtk_style_context_add_class (context, "primary");
 
-      /* Set in cc-display-panel.c */
-      num = cc_display_monitor_get_ui_number (output);
-
       monitor_get_drawing_rect (self, output, &x1, &y1, &x2, &y2);
       w = x2 - x1;
       h = y2 - y1;
@@ -656,9 +653,11 @@ cc_display_arrangement_draw (GtkWidget *widget,
 
       cairo_save (cr);
 
+      /* Set in cc-display-panel.c */
+      num = cc_display_monitor_get_ui_number (output) - 1; // ui_numbers start at 1, our color index is 0-based.
       gchar *rgba_str;
 
-      g_signal_emit_by_name (G_OBJECT (widget), "get-output-color", output, &rgba_str);
+      g_signal_emit_by_name (G_OBJECT (widget), "get-output-color", num, &rgba_str);
 
       if (gdk_rgba_parse (&bg_rgba, rgba_str))
         {
@@ -970,7 +969,7 @@ cc_display_arrangement_class_init (CcDisplayArrangementClass *klass)
                 CC_TYPE_DISPLAY_ARRANGEMENT,
                 G_SIGNAL_RUN_LAST,
                 0, NULL, NULL, NULL,
-                G_TYPE_STRING, 1, CC_TYPE_DISPLAY_MONITOR);
+                G_TYPE_STRING, 1, G_TYPE_INT);
 }
 
 static void

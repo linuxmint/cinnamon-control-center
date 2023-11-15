@@ -92,6 +92,8 @@ struct _CcDisplayPanel
   GtkWidget *cancel_button;
 
   GtkListStore   *output_selection_list;
+  GdkRGBA   *palette;
+  gint n_outputs;
 
   GtkWidget *arrangement_frame;
   GtkWidget *arrangement_bin;
@@ -114,38 +116,16 @@ CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
 #define WAYLAND_SESSION() (GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default()))
 
-static const gchar *COLORS[] = {
-    "rgb(255,102,102)",
-    "rgb(255,133,102)",
-    "rgb(255,163,102)",
-    "rgb(255,194,102)",
-    "rgb(255,224,102)",
-    "rgb(255,255,102)",
-    "rgb(224,255,102)",
-    "rgb(194,255,102)",
-    "rgb(163,255,102)",
-    "rgb(133,255,102)",
-    "rgb(102,255,102)",
-    "rgb(102,255,133)",
-    "rgb(102,255,163)",
-    "rgb(102,255,194)",
-    "rgb(102,255,224)",
-    "rgb(102,255,255)",
-    "rgb(102,224,255)",
-    "rgb(102,194,255)",
-    "rgb(102,163,255)",
-    "rgb(102,133,255)",
-};
-
 static void update_bottom_buttons (CcDisplayPanel *panel);
 static void apply_current_configuration (CcDisplayPanel *self);
 static void reset_current_config (CcDisplayPanel *panel);
 static void rebuild_ui (CcDisplayPanel *panel);
+static void regenerate_palette (CcDisplayPanel *panel, gint n_outputs);
 static void set_current_output (CcDisplayPanel   *panel,
                                 CcDisplayMonitor *output,
                                 gboolean          force);
-static gchar *get_color_string_for_output (CcDisplayMonitor *output);
-static gchar *get_output_color (GObject *source, CcDisplayMonitor *output, CcDisplayPanel *self);
+static gchar *get_color_string_for_output (CcDisplayPanel *panel, gint index);
+static gchar *get_output_color (GObject *source, gint index, CcDisplayPanel *self);
 
 static CcDisplayConfigType
 config_get_current_type (CcDisplayPanel *panel)
@@ -386,7 +366,7 @@ show_labels_dbus (CcDisplayPanel *self)
 
   gint color_index = 0;
 
-  for (l = outputs; l != NULL; l = l->next)
+  for (l = outputs, color_index = 0; l != NULL; l = l->next, color_index++)
     {
       CcDisplayMonitor *output = l->data;
 
@@ -400,13 +380,11 @@ show_labels_dbus (CcDisplayPanel *self)
                            number,
                            cc_display_config_is_cloning (self->current_config),
                            cc_display_monitor_get_display_name (output),
-                           COLORS[color_index]);
+                           self->palette[color_index]);
 
       g_variant_builder_add (&builder, "{sv}",
                              cc_display_monitor_get_connector_name (output),
                              var);
-
-      color_index++;
     }
 
   g_variant_builder_close (&builder);
@@ -500,6 +478,7 @@ cc_display_panel_dispose (GObject *object)
 
   g_clear_object (&self->muffin_settings);
   g_clear_object (&self->labeler);
+  g_clear_pointer (&self->palette, g_free);
 
   g_signal_handlers_disconnect_by_func (self, widget_visible_changed, NULL);
 
@@ -711,6 +690,7 @@ rebuild_ui (CcDisplayPanel *panel)
   GList *outputs, *l;
   CcDisplayConfigType type;
   gboolean cloned = FALSE;
+  gint index = 0;
 
   panel->rebuilding_counter++;
 
@@ -722,14 +702,16 @@ rebuild_ui (CcDisplayPanel *panel)
       return;
     }
 
-  ensure_monitor_labels (panel);
-
   cloned = config_get_current_type (panel);
 
   n_active_outputs = 0;
   n_usable_outputs = 0;
   outputs = cc_display_config_get_ui_sorted_monitors (panel->current_config);
-  for (l = outputs; l; l = l->next)
+
+  regenerate_palette (panel, g_list_length (outputs));
+  ensure_monitor_labels (panel);
+
+  for (l = outputs, index = 0; l; l = l->next, index++)
     {
       GtkTreeIter iter;
       CcDisplayMonitor *output = l->data;
@@ -1182,25 +1164,57 @@ defaults_button_clicked_cb (GtkWidget *widget,
     }
 }
 
-static gchar *
-get_color_string_for_output (CcDisplayMonitor *output)
+static void
+regenerate_palette (CcDisplayPanel *panel, gint n_outputs)
 {
-  guint32 id;
+    /* The idea is that we go around an hue color wheel.  We want to start
+     * at red, go around to green/etc. and stop at blue.
+     *
+     */
+    double start_hue;
+    double end_hue;
+    int i;
 
-  id = cc_display_monitor_get_id (output);
+    g_clear_pointer (&panel->palette, g_free);
+    panel->palette = g_new (GdkRGBA, n_outputs);
 
-  if (id < 0 || id > G_N_ELEMENTS (COLORS) - 1)
+    start_hue = 0.0; /* red */
+    end_hue   = 2.0/3; /* blue */
+
+    for (i = 0; i < n_outputs; i++) {
+        double h, s, v;
+        double r, g, b;
+
+        h = start_hue + (end_hue - start_hue) / n_outputs * i;
+        s = 0.6;
+        v = 1.0;
+
+        gtk_hsv_to_rgb (h, s, v, &r, &g, &b);
+
+        panel->palette[i].red   = r;
+        panel->palette[i].green = g;
+        panel->palette[i].blue  = b;
+        panel->palette[i].alpha  = 1.0;
+    }
+
+    panel->n_outputs = n_outputs;
+}
+
+static gchar *
+get_color_string_for_output (CcDisplayPanel *panel, gint index)
+{
+  if (index < 0 || index > panel->n_outputs - 1)
   {
     return g_strdup ("white");
   }
 
-  return g_strdup (COLORS[id]);
+  return gdk_rgba_to_string (&panel->palette[index]);
 }
 
 static gchar *
-get_output_color (GObject *source, CcDisplayMonitor *output, CcDisplayPanel *self)
+get_output_color (GObject *source, gint index, CcDisplayPanel *self)
 {
-  return get_color_string_for_output (output);
+  return get_color_string_for_output (self, index);
 }
 
 static void

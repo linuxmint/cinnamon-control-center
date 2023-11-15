@@ -136,7 +136,7 @@ cc_display_labeler_class_init (CcDisplayLabelerClass *klass)
                   CC_TYPE_DISPLAY_LABELER,
                   G_SIGNAL_RUN_LAST,
                   0, NULL, NULL, NULL,
-                  G_TYPE_STRING, 1, CC_TYPE_DISPLAY_MONITOR);
+                  G_TYPE_STRING, 1, G_TYPE_INT);
 }
 
 static void
@@ -442,7 +442,7 @@ cc_display_labeler_show (CcDisplayLabeler *labeler)
 		if (!created_window_for_clone) {
             gchar *rgba_str;
 
-            g_signal_emit_by_name (G_OBJECT (labeler), "get-output-color", output, &rgba_str);
+            g_signal_emit_by_name (G_OBJECT (labeler), "get-output-color", i, &rgba_str);
 			labeler->priv->windows[i] = create_label_window (labeler, output, rgba_str, i + 1);
 
 			if (cc_display_config_is_cloning (labeler->priv->config))
