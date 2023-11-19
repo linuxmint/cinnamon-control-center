@@ -1,3 +1,22 @@
+cinnamon-control-center (6.0.0) virginia; urgency=medium
+
+  [ Michael Webster ]
+  * display: Increase the number of available fractional scale buttons to allow 75 - 200
+
+  [ Rick Calixte ]
+  * Fix meson.build deprecations up to 0.56.0 (#318)
+
+  [ Michael Webster ]
+  * wacom: Add "disabled" to stylus button actions.
+  * display: Add wayland compatibility
+  * display module: Fix color selection for monitor labels.
+  * display module: Fix some memory leaks.
+
+  [ Clement Lefebvre ]
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 19 Nov 2023 13:39:32 +0000
+
 cinnamon-control-center (5.8.2) victoria; urgency=medium
 
   [ Michael Webster ]
