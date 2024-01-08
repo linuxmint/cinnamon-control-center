@@ -196,6 +196,7 @@ final_message = [ '',
   '** Colord support (Color management panel)         : @0@'.format(colord.found()),
   '** Wacom support (Wacom panel)                     : @0@'.format(libwacom.found()),
   '** Online-Accounts support (Online-Accounts panel) : @0@'.format(goa.found()),
+  '** Wayland support                                 : @0@'.format(cc.has_header('gdk/gdkwayland.h', dependencies: gtk)),
   '',
 ]
 message('\n'.join(final_message))
