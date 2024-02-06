@@ -607,7 +607,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
       GdkRGBA bg_rgba;
       gint x1, y1, x2, y2;
       gint w, h;
-      gint num;
+      gint ui_number, color_index;
 
       if (!cc_display_monitor_is_usable (output))
         continue;
@@ -654,10 +654,12 @@ cc_display_arrangement_draw (GtkWidget *widget,
       cairo_save (cr);
 
       /* Set in cc-display-panel.c */
-      num = cc_display_monitor_get_ui_number (output) - 1; // ui_numbers start at 1, our color index is 0-based.
+      ui_number = cc_display_monitor_get_ui_number (output);
+      color_index = ui_number - 1; // ui_numbers start at 1, our color index is 0-based.
+
       gchar *rgba_str;
 
-      g_signal_emit_by_name (G_OBJECT (widget), "get-output-color", num, &rgba_str);
+      g_signal_emit_by_name (G_OBJECT (widget), "get-output-color", color_index, &rgba_str);
 
       if (gdk_rgba_parse (&bg_rgba, rgba_str))
         {
@@ -684,7 +686,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
 
       cairo_translate (cr, border.left + padding.left, border.top + padding.top);
 
-      if (num > 0)
+      if (ui_number > 0)
         {
           PangoLayout *layout;
           PangoFontDescription *font = NULL;
@@ -702,7 +704,7 @@ cc_display_arrangement_draw (GtkWidget *widget,
 
           cairo_translate (cr, margin.left, margin.top);
 
-          number_str = g_strdup_printf ("%d", num);
+          number_str = g_strdup_printf ("%d", ui_number);
           gtk_style_context_get (context, state, "font", &font, NULL);
           layout = gtk_widget_create_pango_layout (GTK_WIDGET (self), number_str);
           pango_layout_set_font_description (layout, font);
