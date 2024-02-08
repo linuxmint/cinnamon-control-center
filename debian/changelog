@@ -1,3 +1,13 @@
+cinnamon-control-center (6.0.1) virginia; urgency=medium
+
+  [ Leigh Scott ]
+  * network: Fix warning about missing cast to GtkWidget* (#324)
+
+  [ Michael Webster ]
+  * cc-display-arrangement.c: Fix monitor numbering in the layout view.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 08 Feb 2024 14:14:29 +0000
+
 cinnamon-control-center (6.0.0) virginia; urgency=medium
 
   [ Michael Webster ]
