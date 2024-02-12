@@ -28,7 +28,9 @@
 
 #include <libcinnamon-desktop/cdesktop-enums.h>
 #include <math.h>
+#ifdef GDK_WINDOWING_WAYLAND
 #include <gdk/gdkwayland.h>
+#endif
 
 #include <libupower-glib/upower.h>
 
@@ -114,7 +116,11 @@ struct _CcDisplayPanel
 
 CC_PANEL_REGISTER (CcDisplayPanel, cc_display_panel)
 
+#ifdef GDK_WINDOWING_WAYLAND
 #define WAYLAND_SESSION() (GDK_IS_WAYLAND_DISPLAY (gdk_display_get_default()))
+#else
+#define WAYLAND_SESSION() (FALSE)
+#endif
 
 static void update_bottom_buttons (CcDisplayPanel *panel);
 static void apply_current_configuration (CcDisplayPanel *self);
