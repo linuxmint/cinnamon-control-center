@@ -381,12 +381,13 @@ show_labels_dbus (CcDisplayPanel *self)
         continue;
 
       GVariant *var;
+      g_autofree gchar *color_str = get_color_string_for_output (self, color_index);
 
       var = g_variant_new ("(ibss)",
                            number,
                            cc_display_config_is_cloning (self->current_config),
                            cc_display_monitor_get_display_name (output),
-                           self->palette[color_index]);
+                           color_str);
 
       g_variant_builder_add (&builder, "{sv}",
                              cc_display_monitor_get_connector_name (output),
