@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gresources>
-  <gresource prefix="/org/cinnamon/control-center/online-accounts">
-    <file preprocess="xml-stripblanks">online-accounts.ui</file>
-  </gresource>
-</gresources>

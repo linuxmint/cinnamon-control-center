@@ -93,16 +93,6 @@ config.set('HAVE_WACOM_3D_STYLUS', libwacom.version().version_compare('>=0.27'))
 
 
 ###############################################################################
-# Online Accounts
-if get_option('onlineaccounts')
-  goa         = dependency('goa-1.0',         version: '>=3.18.0')
-  goa_backend = dependency('goa-backend-1.0', version: '>=3.18.0')
-else
-  goa         = dependency('', required: false)
-  goa_backend = dependency('', required: false)
-endif
-
-###############################################################################
 # Directories
 
 # Relative paths
@@ -195,7 +185,6 @@ final_message = [ '',
   '** ModemManager support                            : @0@'.format(modemmanager.found()),
   '** Colord support (Color management panel)         : @0@'.format(colord.found()),
   '** Wacom support (Wacom panel)                     : @0@'.format(libwacom.found()),
-  '** Online-Accounts support (Online-Accounts panel) : @0@'.format(goa.found()),
   '** Wayland support                                 : @0@'.format(cc.has_header('gdk/gdkwayland.h', dependencies: gtk)),
   '',
 ]
