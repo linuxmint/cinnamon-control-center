@@ -23,6 +23,7 @@
 #include <NetworkManager.h>
 #include <nma-wifi-dialog.h>
 #include <nma-mobile-wizard.h>
+#include <nma-mobile-providers.h>
 
 #include "network-dialogs.h"
 
@@ -473,6 +474,10 @@ cc_network_panel_connect_to_3g_network (GtkWidget        *toplevel,
         closure = g_slice_new (MobileDialogClosure);
         closure->client = g_object_ref (client);
         closure->device = g_object_ref (device);
+
+        g_type_ensure (NMA_TYPE_COUNTRY_INFO);
+        g_type_ensure (NMA_TYPE_MOBILE_ACCESS_METHOD);
+        g_type_ensure (NMA_TYPE_MOBILE_PROVIDER);
 
 	caps = nm_device_modem_get_current_capabilities (NM_DEVICE_MODEM (device));
 	if (caps & NM_DEVICE_MODEM_CAPABILITY_GSM_UMTS) {
