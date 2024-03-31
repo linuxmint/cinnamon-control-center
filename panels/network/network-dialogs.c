@@ -337,6 +337,15 @@ cdma_mobile_wizard_done (NMAMobileWizard *wizard,
 		              NULL);
 		nm_connection_add_setting (connection, setting);
 
+		/* Default to IPv4 & IPv6 'automatic' addressing */
+		setting = nm_setting_ip4_config_new ();
+		g_object_set (setting, NM_SETTING_IP_CONFIG_METHOD, NM_SETTING_IP4_CONFIG_METHOD_AUTO, NULL);
+		nm_connection_add_setting (connection, setting);
+
+		setting = nm_setting_ip6_config_new ();
+		g_object_set (setting, NM_SETTING_IP_CONFIG_METHOD, NM_SETTING_IP6_CONFIG_METHOD_AUTO, NULL);
+		nm_connection_add_setting (connection, setting);
+
 		nm_connection_add_setting (connection, nm_setting_ppp_new ());
 
 		setting = nm_setting_connection_new ();
@@ -388,6 +397,15 @@ gsm_mobile_wizard_done (NMAMobileWizard *wizard,
 		              NM_SETTING_GSM_PASSWORD, method->password,
 		              NM_SETTING_GSM_APN, method->gsm_apn,
 		              NULL);
+		nm_connection_add_setting (connection, setting);
+
+		/* Default to IPv4 & IPv6 'automatic' addressing */
+		setting = nm_setting_ip4_config_new ();
+		g_object_set (setting, NM_SETTING_IP_CONFIG_METHOD, NM_SETTING_IP4_CONFIG_METHOD_AUTO, NULL);
+		nm_connection_add_setting (connection, setting);
+
+		setting = nm_setting_ip6_config_new ();
+		g_object_set (setting, NM_SETTING_IP_CONFIG_METHOD, NM_SETTING_IP6_CONFIG_METHOD_AUTO, NULL);
 		nm_connection_add_setting (connection, setting);
 
 		nm_connection_add_setting (connection, nm_setting_ppp_new ());
