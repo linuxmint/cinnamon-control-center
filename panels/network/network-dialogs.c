@@ -337,16 +337,6 @@ cdma_mobile_wizard_done (NMAMobileWizard *wizard,
 		              NULL);
 		nm_connection_add_setting (connection, setting);
 
-		/* Serial setting */
-		setting = nm_setting_serial_new ();
-		g_object_set (setting,
-		              NM_SETTING_SERIAL_BAUD, 115200,
-		              NM_SETTING_SERIAL_BITS, 8,
-		              NM_SETTING_SERIAL_PARITY, 'n',
-		              NM_SETTING_SERIAL_STOPBITS, 1,
-		              NULL);
-		nm_connection_add_setting (connection, setting);
-
 		nm_connection_add_setting (connection, nm_setting_ppp_new ());
 
 		setting = nm_setting_connection_new ();
@@ -397,16 +387,6 @@ gsm_mobile_wizard_done (NMAMobileWizard *wizard,
 		              NM_SETTING_GSM_USERNAME, method->username,
 		              NM_SETTING_GSM_PASSWORD, method->password,
 		              NM_SETTING_GSM_APN, method->gsm_apn,
-		              NULL);
-		nm_connection_add_setting (connection, setting);
-
-		/* Serial setting */
-		setting = nm_setting_serial_new ();
-		g_object_set (setting,
-		              NM_SETTING_SERIAL_BAUD, 115200,
-		              NM_SETTING_SERIAL_BITS, 8,
-		              NM_SETTING_SERIAL_PARITY, 'n',
-		              NM_SETTING_SERIAL_STOPBITS, 1,
 		              NULL);
 		nm_connection_add_setting (connection, setting);
 
