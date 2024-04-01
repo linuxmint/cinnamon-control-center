@@ -353,7 +353,7 @@ update_current_tool (CcWacomPanel  *panel,
 }
 
 static gboolean
-on_event (GtkWidget    *wigdet,
+on_event (GtkWidget    *widget,
           GdkEvent     *event,
           CcWacomPanel *panel)
 {
