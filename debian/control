@@ -41,7 +41,6 @@ Depends:
  cinnamon-desktop-data (>= 4.8),
  desktop-file-utils,
  gettext,
- gnome-online-accounts,
  libcinnamon-control-center1 (= ${binary:Version}),
  policykit-1-gnome,
  xdg-utils,
