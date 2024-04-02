@@ -101,7 +101,7 @@
 			                     or not
 			    - "presentation" (b): whether this output is
 			                          for presentation only
-			    Note: properties might be ignored if not consistenly
+			    Note: properties might be ignored if not consistently
 			    applied to all outputs in the same clone group. In
 			    general, it's expected that presentation or primary
 			    outputs will not be cloned.
@@ -208,7 +208,7 @@
 
 
     @layout_mode current layout mode represents the way logical monitors
-    are layed out on the screen. Possible modes include:
+    are laid out on the screen. Possible modes include:
 
       1 : physical
       2 : logical
@@ -388,7 +388,7 @@
 	- -1: unknown (unsupported)
 
         A client should not attempt to change the powersave mode
-	from -1 (unknown) to any other value, and viceversa.
+	from -1 (unknown) to any other value, and vice versa.
 	Note that the actual effects of the different values
 	depend on the hardware and the kernel driver in use, and
 	it's perfectly possible that all values different than on

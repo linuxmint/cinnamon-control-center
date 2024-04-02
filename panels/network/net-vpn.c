@@ -100,7 +100,7 @@ net_vpn_set_connection (NetVpn *vpn, NMConnection *connection)
         NMClient *client;
 
         /*
-         * vpnc config exmaple:
+         * vpnc config example:
          * key=IKE DH Group, value=dh2
          * key=xauth-password-type, value=ask
          * key=ipsec-secret-type, value=save
