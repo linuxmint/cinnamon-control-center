@@ -76,7 +76,7 @@ panel_device_to_icon_name (NMDevice *device, gboolean symbolic)
  * panel_device_get_sort_category:
  *
  * Try to return order of approximate connection speed.
- * But sort wifi first, since thats the common case.
+ * But sort wifi first, since that's the common case.
  **/
 gint
 panel_device_get_sort_category (NMDevice *device)

@@ -551,7 +551,7 @@ ws_802_1x_fill_connection (WirelessSecurity *sec,
 	gtk_tree_model_get (model, &iter, AUTH_METHOD_COLUMN, &eap, -1);
 	g_assert (eap);
 
-	/* Get previous pasword flags, if any. Otherwise default to agent-owned secrets */
+	/* Get previous password flags, if any. Otherwise default to agent-owned secrets */
 	s_8021x = nm_connection_get_setting_802_1x (connection);
 	if (s_8021x)
 		nm_setting_get_secret_flags (NM_SETTING (s_8021x), eap->password_flags_name, &secret_flags, NULL);
