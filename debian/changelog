@@ -1,3 +1,31 @@
+cinnamon-control-center (6.2.0) wilma; urgency=medium
+
+  [ Matt Turnbull ]
+  * Fix optional wayland handling in cc-display-panel (#323)
+
+  [ Michael Webster ]
+  * cc-display-panel.c: Use correct type for dbus label colors.
+
+  [ Clement Lefebvre ]
+  * Remove Online Accounts panel
+  * l10n: Update POT
+
+  [ Leigh Scott ]
+  * Remove gnome-online-accounts dependency (#327)
+  * Update cc-wacom-panel.c: Fix name (#331)
+
+  [ Rick Calixte ]
+  * Apply edits from Codespell (#333)
+
+  [ Oliver Kästner ]
+  * network: better default settings for cellular connections (#330)
+  * network: fix crash when adding cellular connection (#329)
+
+  [ Clement Lefebvre ]
+  * l10n: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Jun 2024 17:01:01 +0100
+
 cinnamon-control-center (6.0.1) virginia; urgency=medium
 
   [ Leigh Scott ]

@@ -1,7 +1,4 @@
-project('cinnamon-control-center', 'c',
-  version: '6.0.1',
-  meson_version: '>=0.56.0',
-)
+project('cinnamon-control-center', 'c', version : '6.2.0', meson_version : '>=0.56.0')
 
 i18n      = import('i18n')
 pkgconfig = import('pkgconfig')
