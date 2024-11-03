@@ -120,8 +120,6 @@ config.set_quoted('PANEL_DEF_DIR',        prefix / panel_def_dir)
 
 
 more_cflags = [
-  '-Wno-strict-aliasing',
-  '-Wno-sign-compare',
 ]
 
 if get_option('warning_level').to_int() >=2
