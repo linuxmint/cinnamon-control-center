@@ -20,11 +20,10 @@
  * Copyright 2007 - 2015 Red Hat, Inc.
  */
 
-#include "nm-default.h"
-
 #include <string.h>
 #include <netinet/ether.h>
 
+#include "nm-default.h"
 #include "utils.h"
 
 /**
