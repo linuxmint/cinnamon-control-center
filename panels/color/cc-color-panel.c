@@ -259,61 +259,14 @@ gcm_prefs_file_chooser_get_icc_profile (CcColorPanel *prefs)
   return file;
 }
 
-typedef struct
-{
-  GPtrArray *argv;
-  guint xid;
-
-} ClosureData;
-
-static void free_data(ClosureData *data)
-{
-    g_ptr_array_unref (data->argv);
-    g_slice_free (ClosureData, data);
-}
-
 static void
-installer_finished_cb (gboolean success, gpointer user_data)
+install_gcm (void)
 {
-  ClosureData *data = (ClosureData *)user_data;
-  GError *error;
-  gboolean ret;
+  g_autofree gchar *apturl = g_find_program_in_path ("apturl");
 
-  if (!success)
-    {
-      g_warning ("failed to install required component");
-      free_data (data);
-      return;
-    }
-
-  error = NULL;
-
-  ret = g_spawn_async (NULL, (gchar**) data->argv->pdata, NULL, 0,
-                       NULL, NULL, NULL, &error);
-  free_data (data);
-  if (!ret)
-    {
-      g_warning ("failed to run command: %s", error->message);
-      g_error_free (error);
-    }
-}
-
-static void
-gcm_prefs_install_component (guint xid, GPtrArray *argv)
-{
-  ClosureData *data;
-  data = g_slice_new(ClosureData);
-  data->argv = argv;
-  data->xid = xid;
-  g_ptr_array_ref (data->argv);
-
-  const gchar *to_install[2];
-  to_install[0] = "gnome-color-manager";
-  to_install[1] = NULL;
-
-  gnome_installer_install_packages(to_install,
-                                   (GnomeInstallerClientCallback) installer_finished_cb,
-                                   data);
+  if (apturl != NULL) {
+    g_spawn_command_line_async ("apturl apt://gnome-color-manager", NULL);
+  }
 }
 
 static void
@@ -329,7 +282,7 @@ gcm_prefs_run_maybe_install (guint xid, gchar *filename, GPtrArray *argv)
       if ((error->domain == g_spawn_error_quark ()) &&
           (error->code == G_SPAWN_ERROR_NOENT))
         {
-          gcm_prefs_install_component (xid, argv);
+          install_gcm ();
         }
       else
         {
