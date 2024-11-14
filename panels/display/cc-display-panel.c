@@ -26,7 +26,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#include <libcinnamon-desktop/cdesktop-enums.h>
 #include <math.h>
 #ifdef GDK_WINDOWING_WAYLAND
 #include <gdk/gdkwayland.h>

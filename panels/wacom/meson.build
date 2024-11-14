@@ -1,6 +1,7 @@
 deps = [
   libwacom,
   cinn_desktop,
+  gtk,
   libx11,
   libxi
 ]
