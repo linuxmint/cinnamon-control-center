@@ -28,8 +28,6 @@
 #include <glib/gi18n.h>
 #include "cc-color-panel.h"
 
-#include <libcinnamon-desktop/gnome-installer.h>
-
 #define WID(b, w) (GtkWidget *) gtk_builder_get_object (b, w)
 
 CC_PANEL_REGISTER (CcColorPanel, cc_color_panel)

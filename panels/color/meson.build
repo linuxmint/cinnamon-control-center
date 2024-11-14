@@ -13,8 +13,7 @@ panel_color = shared_library('color',
   ],
   dependencies: [
     gtk,
-    colord,
-    cinn_desktop,
+    colord
   ],
   install: true,
   install_dir: panels_dir
