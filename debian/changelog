@@ -1,3 +1,25 @@
+cinnamon-control-center (6.4.0) xia; urgency=medium
+
+  [ Eli Schwartz ]
+  * meson: remove CFLAGS that were carried over from decades ago and aren't needed (#343)
+
+  [ EarldridgeJazzedPineda ]
+  * network: prevent redefinition error when building with musl libc (#344)
+
+  [ Michael Webster ]
+  * Remove datetime panel (long-unused).
+  * Clean up some obsolete dependencies.
+  * color-panel: Replace broken package-kit installation of gnome- color-manager with apturl (if available).
+  * Fix build from gnome_installer removal from cinnamon-desktop.
+
+  [ Douglas Kosovic ]
+  * network: Could not load editor VPN plugin warning (#346)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 26 Nov 2024 13:02:54 +0000
+
 cinnamon-control-center (6.2.0) wilma; urgency=medium
 
   [ Matt Turnbull ]
