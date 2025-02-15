@@ -42,7 +42,6 @@ Depends:
  desktop-file-utils,
  gettext,
  libcinnamon-control-center1 (= ${binary:Version}),
- policykit-1-gnome,
  xdg-utils,
  ${misc:Depends},
  ${shlibs:Depends},
