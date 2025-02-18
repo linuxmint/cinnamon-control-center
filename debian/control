@@ -10,7 +10,7 @@ Build-Depends:
  libcinnamon-desktop-dev (>= 4.8),
  libcinnamon-menu-3-dev,
  libcolord-dev,
- libgdk-pixbuf2.0-dev (>= 2.23.0),
+ libgdk-pixbuf-2.0-dev (>= 2.23.0),
  libglib2.0-dev (>= 2.44.0),
  libgnomekbd-dev,
  libgtk-3-dev (>= 3.16),
@@ -36,13 +36,11 @@ Package: cinnamon-control-center
 Architecture: any
 Depends:
  accountsservice,
- apg,
  cinnamon-control-center-data (= ${source:Version}),
  cinnamon-desktop-data (>= 4.8),
  desktop-file-utils,
  gettext,
  libcinnamon-control-center1 (= ${binary:Version}),
- policykit-1-gnome,
  xdg-utils,
  ${misc:Depends},
  ${shlibs:Depends},
