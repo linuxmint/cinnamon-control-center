@@ -88,10 +88,6 @@
                     <property name="label" translatable="yes">Please plug in or turn on your Wacom tablet</property>
                     <property name="justify">center</property>
                     <property name="yalign">0</property>
-                    <attributes>
-                      <attribute name="weight" value="bold"/>
-                      <attribute name="scale" value="1.2"/>
-                    </attributes>
                   </object>
                   <packing>
                     <property name="expand">False</property>
