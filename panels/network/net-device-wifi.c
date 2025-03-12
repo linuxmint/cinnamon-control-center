@@ -1119,13 +1119,13 @@ start_shared_connection (NetDeviceWifi *device_wifi)
                 c_path = nm_connection_get_path (c);
                 connection = nm_client_get_connection_by_path (client, c_path);
 
-                g_debug ("overwriting ssid to %s", (char *) g_bytes_get_data (ssid, NULL));
-
-                nm_remote_connection_commit_changes_async (connection,
-                                                           TRUE,
-                                                           NULL,
-                                                           overwrite_ssid_cb,
-                                                           device_wifi);
+                if (ssid != NULL) {
+                        nm_remote_connection_commit_changes_async (connection,
+                                                                   TRUE,
+                                                                   NULL,
+                                                                   overwrite_ssid_cb,
+                                                                   device_wifi);
+                }
                 return;
         }
 
