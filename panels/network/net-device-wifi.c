@@ -1121,10 +1121,10 @@ start_shared_connection (NetDeviceWifi *device_wifi)
 
                 if (ssid != NULL) {
                         nm_remote_connection_commit_changes_async (connection,
-                                                                   TRUE,
-                                                                   NULL,
-                                                                   overwrite_ssid_cb,
-                                                                   device_wifi);
+                                                                        TRUE,
+                                                                        NULL,
+                                                                        overwrite_ssid_cb,
+                                                                        device_wifi);
                 }
                 return;
         }
