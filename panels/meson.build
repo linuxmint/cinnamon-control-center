@@ -11,8 +11,6 @@ if libnm.found()
   subdir('network')
 endif
 
-subdir('region')
-
 if libwacom.found()
   subdir('wacom')
 endif
