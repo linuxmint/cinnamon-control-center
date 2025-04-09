@@ -12,7 +12,6 @@ Build-Depends:
  libcolord-dev,
  libgdk-pixbuf-2.0-dev (>= 2.23.0),
  libglib2.0-dev (>= 2.44.0),
- libgnomekbd-dev,
  libgtk-3-dev (>= 3.16),
  libmm-glib-dev (>= 0.7) [linux-any],
  libnm-dev (>= 1.2.0) [linux-any],
@@ -23,12 +22,8 @@ Build-Depends:
  libupower-glib-dev (>= 0.99.8),
  libwacom-dev (>= 0.4) [linux-any],
  libx11-dev,
- libxkbfile-dev,
- libxklavier-dev (>= 5.1),
  libxml2-dev,
- locales,
  meson,
- tzdata,
 Standards-Version: 3.9.8
 Homepage: https://www.github.com/linuxmint/cinnamon-control-center
 
@@ -46,7 +41,6 @@ Depends:
  ${shlibs:Depends},
 Recommends:
  cinnamon-l10n,
- iso-codes,
  mesa-utils
 Suggests: x11-xserver-utils
 Description: utilities to configure the Cinnamon desktop
