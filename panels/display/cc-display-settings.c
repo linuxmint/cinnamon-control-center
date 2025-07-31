@@ -228,7 +228,9 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
   CcDisplayMode *current_mode;
   GtkRadioButton *group = NULL;
   gint buttons = 0;
-  const gdouble *scales, *scale;
+  // Custom scales array: Added 125%, 150%, 175%. 0.0 is the list terminator.
+  const gdouble my_custom_scales[] = { 1.0, 1.25, 1.5, 1.75, 2.0, 0.0 };
+  // The original 'scales' variable is no longer needed as we're using 'my_custom_scales'.
 
   self->idle_udpate_id = 0;
 
@@ -250,13 +252,13 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
 
   cc_display_monitor_get_geometry (self->selected_output, NULL, NULL, &width, &height);
 
-  /* Selecte the first mode we can find if the monitor is disabled. */
+  /* Select the first mode we can find if the monitor is disabled. */
   current_mode = cc_display_monitor_get_mode (self->selected_output);
   if (current_mode == NULL)
     current_mode = cc_display_monitor_get_preferred_mode (self->selected_output);
   if (current_mode == NULL) {
     modes = cc_display_monitor_get_modes (self->selected_output);
-    /* Lets assume that a monitor always has at least one mode. */
+    /* Let's assume that a monitor always has at least one mode. */
     g_assert (modes);
     current_mode = CC_DISPLAY_MODE (modes->data);
   }
@@ -427,12 +429,18 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
 
   /* Scale row is usually shown. */
   gtk_container_foreach (GTK_CONTAINER (self->scale_bbox), (GtkCallback) gtk_widget_destroy, NULL);
-  scales = cc_display_mode_get_supported_scales (current_mode);
-  for (scale = scales; *scale != 0.0; scale++)
+  // Original line: scales = cc_display_mode_get_supported_scales (current_mode);
+  // Iterating over our custom hardcoded scale values instead.
+  for (const gdouble *scale = my_custom_scales; *scale != 0.0; scale++)
     {
       g_autofree gchar *scale_str = NULL;
       GtkWidget *scale_btn;
 
+      // Important: This check will still filter scales if your system's backend
+      // (e.g., Mutter/Muffin) does not actually support them for the current display mode.
+      // cc_display_config_is_scaled_mode_valid queries the backend.
+      // If you want the new scales to *always* appear regardless of backend support,
+      // you would need to modify or remove this conditional, but they might not function.
       if (!cc_display_config_is_scaled_mode_valid (self->config,
                                                    current_mode,
                                                    *scale) &&
@@ -496,7 +504,7 @@ on_output_changed_cb (CcDisplaySettings *self,
                       GParamSpec        *pspec,
                       CcDisplayMonitor  *output)
 {
-  /* Do this frmo an idle handler, because otherwise we may create an
+  /* Do this from an idle handler, because otherwise we may create an
    * infinite loop triggering the notify::selected-index from the
    * combo rows. */
   if (self->idle_udpate_id)
@@ -879,4 +887,3 @@ cc_display_settings_set_selected_output (CcDisplaySettings *self,
 
   g_object_notify_by_pspec (G_OBJECT (self), props[PROP_SELECTED_OUTPUT]);
 }
-
