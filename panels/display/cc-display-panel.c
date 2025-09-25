@@ -408,15 +408,31 @@ show_labels_dbus (CcDisplayPanel *self)
                      -1, NULL, NULL, NULL);
 }
 
+static gboolean
+have_cinnamon_connection (CcDisplayPanel *self)
+{
+  g_autofree gchar *name_owner = NULL;
+
+  if (self->cinnamon_proxy != NULL)
+    {
+      name_owner = g_dbus_proxy_get_name_owner (self->cinnamon_proxy);
+    }
+
+  return !!name_owner;
+}
+
 static void
 hide_labels (CcDisplayPanel *self)
 {
-  if (WAYLAND_SESSION ())
+  if (have_cinnamon_connection (self))
     {
       hide_labels_dbus (self);
     }
   else
     {
+      if (WAYLAND_SESSION ())
+        return;
+
       if (self->labeler) {
         cc_display_labeler_hide (self->labeler);
       }
@@ -426,12 +442,16 @@ hide_labels (CcDisplayPanel *self)
 static void
 show_labels (CcDisplayPanel *self)
 {
-  if (WAYLAND_SESSION ())
+  
+  if (have_cinnamon_connection (self))
     {
       show_labels_dbus (self);
     }
   else
     {
+      if (WAYLAND_SESSION ())
+        return;
+
       if (self->labeler) {
         cc_display_labeler_hide (self->labeler);
         g_object_unref (self->labeler);
@@ -1026,7 +1046,11 @@ cinnamon_proxy_ready (GObject *source_object,
 
     if (self->cinnamon_proxy == NULL)
       {
-        g_critical ("Can't connect to Cinnamon, monitor labeler will be unavailable: %s", error->message);
+        if (WAYLAND_SESSION ()) {
+            g_critical ("Can't connect to Cinnamon, monitor labels will not be shown: %s", error->message);
+        } else {
+            g_critical ("Can't connect to Cinnamon, using x11 monitor labeler: %s", error->message);
+        }
         g_clear_error (&error);
       }
 }
@@ -1055,20 +1079,17 @@ session_bus_ready (GObject        *source,
                            self,
                            G_CONNECT_SWAPPED);
 
-  if (WAYLAND_SESSION ())
-    {
-      g_dbus_proxy_new (bus,
-                        G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START |
-                            G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
-                            G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS,
-                        NULL,
-                        "org.Cinnamon",
-                        "/org/Cinnamon",
-                        "org.Cinnamon",
-                        NULL,
-                        (GAsyncReadyCallback) cinnamon_proxy_ready,
-                        self);
-    }
+  g_dbus_proxy_new (bus,
+                    G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START |
+                        G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES |
+                        G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS,
+                    NULL,
+                    "org.Cinnamon",
+                    "/org/Cinnamon",
+                    "org.Cinnamon",
+                    NULL,
+                    (GAsyncReadyCallback) cinnamon_proxy_ready,
+                    self);
 }
 
 static void
