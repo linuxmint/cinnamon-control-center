@@ -1730,7 +1730,7 @@ make_row (GtkSizeGroup   *rows,
         gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
 
         if (active) {
-                widget = gtk_image_new_from_icon_name ("object-select-symbolic", GTK_ICON_SIZE_MENU);
+                widget = gtk_image_new_from_icon_name ("xapp-object-select-symbolic", GTK_ICON_SIZE_MENU);
                 gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
                 gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
                 gtk_box_pack_start (GTK_BOX (row_box), widget, FALSE, FALSE, 0);
@@ -1739,7 +1739,7 @@ make_row (GtkSizeGroup   *rows,
         gtk_box_pack_start (GTK_BOX (row_box), gtk_label_new (""), TRUE, FALSE, 0);
 
         widget = NULL;
-        image = gtk_image_new_from_icon_name ("emblem-system-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xapp-emblem-system-symbolic", GTK_ICON_SIZE_MENU);
         gtk_widget_show (image);
         widget = gtk_button_new ();
         gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");
@@ -1780,22 +1780,22 @@ make_row (GtkSizeGroup   *rows,
         if (in_range) {
                 if (security != NM_AP_SEC_UNKNOWN &&
                     security != NM_AP_SEC_NONE) {
-                        widget = gtk_image_new_from_icon_name ("network-wireless-encrypted-symbolic", GTK_ICON_SIZE_MENU);
+                        widget = gtk_image_new_from_icon_name ("xapp-network-wireless-encrypted-symbolic", GTK_ICON_SIZE_MENU);
                 } else {
                         widget = gtk_label_new ("");
                 }
                 gtk_box_pack_start (GTK_BOX (box), widget, FALSE, FALSE, 0);
 
                 if (strength < 20)
-                        icon_name = "network-wireless-signal-none-symbolic";
+                        icon_name = "xapp-network-wireless-signal-none-symbolic";
                 else if (strength < 40)
-                        icon_name = "network-wireless-signal-weak-symbolic";
+                        icon_name = "xapp-network-wireless-signal-weak-symbolic";
                 else if (strength < 50)
-                        icon_name = "network-wireless-signal-ok-symbolic";
+                        icon_name = "xapp-network-wireless-signal-ok-symbolic";
                 else if (strength < 80)
-                        icon_name = "network-wireless-signal-good-symbolic";
+                        icon_name = "xapp-network-wireless-signal-good-symbolic";
                 else
-                        icon_name = "network-wireless-signal-excellent-symbolic";
+                        icon_name = "xapp-network-wireless-signal-excellent-symbolic";
                 widget = gtk_image_new_from_icon_name (icon_name, GTK_ICON_SIZE_MENU);
                 gtk_box_pack_start (GTK_BOX (box), widget, FALSE, FALSE, 0);
         }

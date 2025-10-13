@@ -418,7 +418,7 @@
                   <object class="GtkImage" id="image1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">emblem-system-symbolic</property>
+                    <property name="icon_name">xapp-emblem-system-symbolic</property>
                     <property name="icon_size">1</property>
                   </object>
                 </child>
