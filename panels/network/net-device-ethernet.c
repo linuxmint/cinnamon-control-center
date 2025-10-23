@@ -326,7 +326,7 @@ add_row (NetDeviceEthernet *device, NMConnection *connection)
         gtk_box_pack_start (GTK_BOX (box), widget, FALSE, TRUE, 0);
 
         if (active) {
-                widget = gtk_image_new_from_icon_name ("xapp-object-select-symbolic", GTK_ICON_SIZE_MENU);
+                widget = gtk_image_new_from_icon_name ("xsi-object-select-symbolic", GTK_ICON_SIZE_MENU);
                 gtk_widget_set_halign (widget, GTK_ALIGN_CENTER);
                 gtk_widget_set_valign (widget, GTK_ALIGN_CENTER);
                 gtk_box_pack_start (GTK_BOX (box), widget, FALSE, TRUE, 0);
@@ -345,7 +345,7 @@ add_row (NetDeviceEthernet *device, NMConnection *connection)
         gtk_widget_set_hexpand (widget, TRUE);
         gtk_box_pack_start (GTK_BOX (box), widget, TRUE, TRUE, 0);
 
-        image = gtk_image_new_from_icon_name ("xapp-emblem-system-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xsi-emblem-system-symbolic", GTK_ICON_SIZE_MENU);
         gtk_widget_show (image);
         widget = gtk_button_new ();
         gtk_style_context_add_class (gtk_widget_get_style_context (widget), "image-button");

@@ -219,7 +219,7 @@ add_address_row (CEPageIP6   *page,
         delete_button = gtk_button_new ();
         gtk_style_context_add_class (gtk_widget_get_style_context (delete_button), "image-button");
         g_signal_connect (delete_button, "clicked", G_CALLBACK (remove_row), page);
-        image = gtk_image_new_from_icon_name ("xapp-user-trash-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xsi-user-trash-symbolic", GTK_ICON_SIZE_MENU);
         atk_object_set_name (gtk_widget_get_accessible (delete_button), _("Delete Address"));
         gtk_button_set_image (GTK_BUTTON (delete_button), image);
         gtk_grid_attach (GTK_GRID (row_grid), delete_button, 3, 2, 1, 1);
@@ -273,7 +273,7 @@ add_section_toolbar (CEPageIP6 *page, GtkWidget *section, GCallback add_cb)
         gtk_container_add (GTK_CONTAINER (item), box);
         button = gtk_button_new ();
         g_signal_connect_swapped (button, "clicked", G_CALLBACK (add_cb), page);
-        image = gtk_image_new_from_icon_name ("xapp-list-add-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xsi-list-add-symbolic", GTK_ICON_SIZE_MENU);
         atk_object_set_name (gtk_widget_get_accessible (button), _("Add"));
         gtk_button_set_image (GTK_BUTTON (button), image);
         gtk_container_add (GTK_CONTAINER (box), button);
@@ -347,7 +347,7 @@ add_dns_row (CEPageIP6   *page,
         delete_button = gtk_button_new ();
         gtk_style_context_add_class (gtk_widget_get_style_context (delete_button), "image-button");
         g_signal_connect (delete_button, "clicked", G_CALLBACK (remove_row), page);
-        image = gtk_image_new_from_icon_name ("xapp-user-trash-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xsi-user-trash-symbolic", GTK_ICON_SIZE_MENU);
         atk_object_set_name (gtk_widget_get_accessible (delete_button), _("Delete DNS Server"));
         gtk_button_set_image (GTK_BUTTON (delete_button), image);
         gtk_box_pack_start (GTK_BOX (row_box), delete_button, FALSE, FALSE, 0);
@@ -480,7 +480,7 @@ add_route_row (CEPageIP6   *page,
         delete_button = gtk_button_new ();
         gtk_style_context_add_class (gtk_widget_get_style_context (delete_button), "image-button");
         g_signal_connect (delete_button, "clicked", G_CALLBACK (remove_row), page);
-        image = gtk_image_new_from_icon_name ("xapp-user-trash-symbolic", GTK_ICON_SIZE_MENU);
+        image = gtk_image_new_from_icon_name ("xsi-user-trash-symbolic", GTK_ICON_SIZE_MENU);
         atk_object_set_name (gtk_widget_get_accessible (delete_button), _("Delete Route"));
         gtk_button_set_image (GTK_BUTTON (delete_button), image);
         gtk_widget_set_halign (delete_button, GTK_ALIGN_CENTER);

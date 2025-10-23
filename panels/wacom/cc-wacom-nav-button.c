@@ -216,7 +216,7 @@ cc_wacom_nav_button_init (CcWacomNavButton *self)
 
 	/* Prev button */
 	self->prev = gtk_button_new ();
-	image = gtk_image_new_from_icon_name ("xapp-go-previous-symbolic", GTK_ICON_SIZE_MENU);
+	image = gtk_image_new_from_icon_name ("xsi-go-previous-symbolic", GTK_ICON_SIZE_MENU);
 	gtk_container_add (GTK_CONTAINER (self->prev), image);
 	g_signal_connect (G_OBJECT (self->prev), "clicked",
 			  G_CALLBACK (prev_clicked), self);
@@ -224,7 +224,7 @@ cc_wacom_nav_button_init (CcWacomNavButton *self)
 
 	/* Next button */
 	self->next = gtk_button_new ();
-	image = gtk_image_new_from_icon_name ("xapp-go-next-symbolic", GTK_ICON_SIZE_MENU);
+	image = gtk_image_new_from_icon_name ("xsi-go-next-symbolic", GTK_ICON_SIZE_MENU);
 	gtk_container_add (GTK_CONTAINER (self->next), image);
 	g_signal_connect (G_OBJECT (self->next), "clicked",
 			  G_CALLBACK (next_clicked), self);

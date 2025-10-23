@@ -907,7 +907,7 @@ panel_add_proxy_device (CcNetworkPanel *panel)
         gtk_list_store_append (liststore_devices, &iter);
         gtk_list_store_set (liststore_devices,
                             &iter,
-                            PANEL_DEVICES_COLUMN_ICON, "xapp-network-symbolic",
+                            PANEL_DEVICES_COLUMN_ICON, "xsi-network-symbolic",
                             PANEL_DEVICES_COLUMN_OBJECT, proxy,
                             -1);
 
@@ -1088,7 +1088,7 @@ panel_add_vpn_device (CcNetworkPanel *panel, NMConnection *connection)
         gtk_list_store_append (liststore_devices, &iter);
         gtk_list_store_set (liststore_devices,
                             &iter,
-                            PANEL_DEVICES_COLUMN_ICON, "xapp-network-vpn-symbolic",
+                            PANEL_DEVICES_COLUMN_ICON, "xsi-network-vpn-symbolic",
                             PANEL_DEVICES_COLUMN_OBJECT, net_vpn,
                             -1);
         g_signal_connect (net_vpn, "notify::title",

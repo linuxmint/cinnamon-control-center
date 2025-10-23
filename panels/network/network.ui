@@ -95,7 +95,7 @@
                             <property name="use_action_appearance">False</property>
                             <property name="label" translatable="yes">Add Device</property>
                             <property name="use_underline">True</property>
-                            <property name="icon_name">xapp-list-add-symbolic</property>
+                            <property name="icon_name">xsi-list-add-symbolic</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -110,7 +110,7 @@
                             <property name="use_action_appearance">False</property>
                             <property name="label" translatable="yes">Remove Device</property>
                             <property name="use_underline">True</property>
-                            <property name="icon_name">xapp-list-remove-symbolic</property>
+                            <property name="icon_name">xsi-list-remove-symbolic</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>

@@ -183,7 +183,7 @@
           <object class="GtkImage">
             <property name="visible">True</property>
             <property name="pixel_size">300</property>
-            <property name="icon_name">xapp-emblem-ok-symbolic</property>
+            <property name="icon_name">xsi-emblem-ok-symbolic</property>
           </object>
           <packing>
             <property name="name">page1</property>

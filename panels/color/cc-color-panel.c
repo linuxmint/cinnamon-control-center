@@ -1588,7 +1588,7 @@ gcm_prefs_device_set_model_by_iter (CcColorPanel *prefs, CdDevice *device, GtkTr
     }
   if (threshold > 0 && age > threshold)
     {
-      status_image = "xapp-dialog-warning-symbolic";
+      status_image = "xsi-dialog-warning-symbolic";
       tooltip = _("This device has an old profile that may no longer be accurate.");
     }
 skip:

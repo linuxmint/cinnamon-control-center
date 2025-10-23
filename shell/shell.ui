@@ -134,7 +134,7 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">xapp-view-grid-symbolic</property>
+    <property name="icon_name">xsi-view-grid-symbolic</property>
     <property name="use_fallback">True</property>
     <property name="pixel-size">16</property>
   </object>
