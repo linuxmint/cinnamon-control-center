@@ -37,12 +37,6 @@ upower_glib_dep = dependency('upower-glib', version: '>= 0.99.8')
 config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 
 ###############################################################################
-# This is a hard-dependency for the region and user-accounts panels
-
-isocodes = dependency('iso-codes')
-config.set_quoted('ISO_CODES_PREFIX', isocodes.get_variable(pkgconfig: 'prefix'))
-
-###############################################################################
 # Network Manager stuff
 
 if get_option('networkmanager')

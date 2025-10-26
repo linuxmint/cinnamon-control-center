@@ -24,7 +24,6 @@ Build-Depends:
  libx11-dev,
  libxml2-dev,
  meson,
- iso-codes,
 Standards-Version: 3.9.8
 Homepage: https://www.github.com/linuxmint/cinnamon-control-center
 
