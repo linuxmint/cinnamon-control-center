@@ -1,3 +1,32 @@
+cinnamon-control-center (6.6.0) zena; urgency=medium
+
+  [ Michael Webster ]
+  * debian/control: Update dependencies.
+  * wacom: Make 'no support' icon and text look similar to other pages in cinnamon-settings.
+  * wacom: Don't use bold for secondary text in detection messages.
+
+  [ ce-007 ]
+  * Fixed Segmentation fault that sometimes occurs when starting a hotspot. (#351)
+
+  [ Michael Webster ]
+  * Remove region panel, misc related code. (#355)
+  * cc-display-panel.c: Always try to use cinnamon's native display labeler.
+
+  [ Clement Lefebvre ]
+  * Switch to xapp-symbolic-icons (XSI)
+
+  [ Himadri Sekhar Basu ]
+  * Add iso-codes as debian build dependecy
+
+  [ Leigh Scott ]
+  * iso-codes: Remove unused build dependency (#369)
+
+  [ Clement Lefebvre ]
+  * l10n: Update POT
+  * l10: Update files
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 25 Nov 2025 14:23:16 +0000
+
 cinnamon-control-center (6.4.1) xia; urgency=medium
 
   * l10n: Update files
