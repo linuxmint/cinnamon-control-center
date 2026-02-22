@@ -55,7 +55,8 @@ controlcenter = executable('cinnamon-control-center',
     gio_unix,
     cinn_menu,
     libx11,
-    libnotify
+    libnotify,
+    libnma,
   ],
   link_with: libcinnamon_control_center,
   install: true
