@@ -1,3 +1,11 @@
+cinnamon-control-center (6.7.0) unstable; urgency=medium
+
+  [ Michael Webster ]
+  * .github/workflows: Add generate-test-packages trigger.
+  * Add stale workflow.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 13 Apr 2026 08:33:21 +0100
+
 cinnamon-control-center (6.6.0) zena; urgency=medium
 
   [ Michael Webster ]
