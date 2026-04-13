@@ -54,7 +54,6 @@ G_DEFINE_TYPE (CinnamonControlCenter, cinnamon_control_center, CC_TYPE_SHELL)
  * for the user than resizing vertically
  * Both sizes are defined in https://live.gnome.org/Design/SystemSettings/ */
 #define FIXED_WIDTH 740
-#define UNITY_FIXED_WIDTH 850
 #define FIXED_HEIGHT 650
 #define SMALL_SCREEN_FIXED_HEIGHT 400
 
@@ -905,12 +904,8 @@ notebook_page_notify_cb (GtkNotebook              *notebook,
     {
       gtk_widget_hide (W (priv->builder, "lock-button"));
 
-      if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
-        gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->main_vbox),
-                                                   UNITY_FIXED_WIDTH, NULL, &nat_height);
-      else
-        gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->main_vbox),
-                                                   FIXED_WIDTH, NULL, &nat_height);
+      gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->main_vbox),
+                                                 FIXED_WIDTH, NULL, &nat_height);
       gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (priv->scrolled_window),
                                                   priv->small_screen == SMALL_SCREEN_TRUE ? SMALL_SCREEN_FIXED_HEIGHT : nat_height);
     }
@@ -918,22 +913,12 @@ notebook_page_notify_cb (GtkNotebook              *notebook,
     {
       /* set the scrolled window small so that it doesn't force
          the window to be larger than this panel */
-      if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity")) {
-        gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->window),
-                                                   UNITY_FIXED_WIDTH, NULL, &nat_height);
-        gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (priv->scrolled_window), MIN_ICON_VIEW_HEIGHT);
-        gtk_window_resize (GTK_WINDOW (priv->window),
-                           UNITY_FIXED_WIDTH,
-                           nat_height);
-      }
-      else {
-        gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->window),
-                                                   FIXED_WIDTH, NULL, &nat_height);
-        gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (priv->scrolled_window), MIN_ICON_VIEW_HEIGHT);
-        gtk_window_resize (GTK_WINDOW (priv->window),
-                           FIXED_WIDTH,
-                           nat_height);
-      }
+      gtk_widget_get_preferred_height_for_width (GTK_WIDGET (priv->window),
+                                                 FIXED_WIDTH, NULL, &nat_height);
+      gtk_scrolled_window_set_min_content_height (GTK_SCROLLED_WINDOW (priv->scrolled_window), MIN_ICON_VIEW_HEIGHT);
+      gtk_window_resize (GTK_WINDOW (priv->window),
+                         FIXED_WIDTH,
+                         nat_height);
     }
 }
 
@@ -1372,10 +1357,7 @@ cinnamon_control_center_init (CinnamonControlCenter *self)
   /* Main scrolled window */
   priv->scrolled_window = W (priv->builder, "scrolledwindow1");
 
-  if (!g_strcmp0(g_getenv("XDG_CURRENT_DESKTOP"), "Unity"))
-    gtk_widget_set_size_request (priv->scrolled_window, UNITY_FIXED_WIDTH, -1);
-  else
-    gtk_widget_set_size_request (priv->scrolled_window, FIXED_WIDTH, -1);
+  gtk_widget_set_size_request (priv->scrolled_window, FIXED_WIDTH, -1);
   priv->main_vbox = W (priv->builder, "main-vbox");
   g_signal_connect (priv->notebook, "notify::page",
                     G_CALLBACK (notebook_page_notify_cb), priv);
