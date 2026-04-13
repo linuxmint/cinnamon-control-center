@@ -47,6 +47,8 @@ else
   libnma= dependency('', required: false)
 endif
 
+config.set('BUILD_NETWORK', get_option('networkmanager'))
+
 if get_option('modemmanager')
   if not get_option('networkmanager')
     error('*** NetworkManager is required by ModemManager ***')

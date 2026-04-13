@@ -39,7 +39,9 @@
 #include "cc-shell-model.h"
 #include "cc-shell-nav-bar.h"
 
+#ifdef BUILD_NETWORK
 #include <libnma/nma-cert-chooser.h>
+#endif
 
 G_DEFINE_TYPE (CinnamonControlCenter, cinnamon_control_center, CC_TYPE_SHELL)
 
@@ -1393,11 +1395,13 @@ cinnamon_control_center_init (CinnamonControlCenter *self)
   /* load the available settings panels */
   setup_model (self);
 
+#ifdef BUILD_NETWORK
   /* Pre-register NMA widget types so they are in the global GType table and
    * their get_type symbols are in RTLD_DEFAULT before any panel or VPN plugin
    * is loaded.  Without this, VPN editor plugins that reference NmaCertChooser
    * or NMACertChooser in their GtkBuilder UI fail with "Invalid object type" */
   g_type_ensure (NMA_TYPE_CERT_CHOOSER);
+#endif
 
   /* load the panels that are implemented as plugins */
   load_panel_plugins (self);

@@ -46,18 +46,23 @@ controlcenter_sources = [
   ),
 ]
 
+controlcenter_deps = [
+  gtk,
+  gio_unix,
+  cinn_menu,
+  libx11,
+  libnotify,
+]
+
+if get_option('networkmanager')
+  controlcenter_deps += libnma
+endif
+
 controlcenter = executable('cinnamon-control-center',
   controlcenter_sources,
 
   include_directories: rootInclude,
-  dependencies: [
-    gtk,
-    gio_unix,
-    cinn_menu,
-    libx11,
-    libnotify,
-    libnma,
-  ],
+  dependencies: controlcenter_deps,
   link_with: libcinnamon_control_center,
   install: true
 )
