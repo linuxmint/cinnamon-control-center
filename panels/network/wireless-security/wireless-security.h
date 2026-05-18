@@ -103,6 +103,8 @@ GType wireless_security_get_type (void);
 #include "ws-leap.h"
 #include "ws-wpa-eap.h"
 #include "ws-dynamic-wep.h"
+#include "ws-sae.h"
+#include "ws-owe.h"
 
 WirelessSecurity *wireless_security_init (gsize obj_size,
                                           WSValidateFunc validate,

@@ -60,6 +60,10 @@ get_default_type_for_security (NMSettingWirelessSecurity *sec)
         key_mgmt = nm_setting_wireless_security_get_key_mgmt (sec);
         auth_alg = nm_setting_wireless_security_get_auth_alg (sec);
 
+        g_debug ("ce-page-security: saved profile key-mgmt='%s' auth-alg='%s'",
+                 key_mgmt ? key_mgmt : "(null)",
+                 auth_alg ? auth_alg : "(null)");
+
         /* No IEEE 802.1x */
         if (!strcmp (key_mgmt, "none"))
                 return NMU_SEC_STATIC_WEP;
@@ -89,6 +93,12 @@ get_default_type_for_security (NMSettingWirelessSecurity *sec)
                         return NMU_SEC_WPA_ENTERPRISE;
         }
 
+        if (!strcmp (key_mgmt, "sae"))
+                return NMU_SEC_SAE;
+
+        if (!strcmp (key_mgmt, "owe"))
+                return NMU_SEC_OWE;
+
         return NMU_SEC_INVALID;
 }
 
@@ -109,14 +119,19 @@ security_combo_get_active (CEPageSecurity *page)
 static void
 wsec_size_group_clear (GtkSizeGroup *group)
 {
-        GSList *children;
+        GSList *to_remove;
         GSList *iter;
 
         g_return_if_fail (group != NULL);
 
-        children = gtk_size_group_get_widgets (group);
-        for (iter = children; iter; iter = g_slist_next (iter))
+        /* gtk_size_group_get_widgets() returns the live internal list, and
+         * gtk_size_group_remove_widget() mutates (frees nodes from) that same
+         * list. Iterating the original directly is a use-after-free, so copy
+         * the node list first and walk the copy. */
+        to_remove = g_slist_copy (gtk_size_group_get_widgets (group));
+        for (iter = to_remove; iter; iter = g_slist_next (iter))
                 gtk_size_group_remove_widget (group, GTK_WIDGET (iter->data));
+        g_slist_free (to_remove);
 }
 
 static void
@@ -339,6 +354,32 @@ finish_setup (CEPageSecurity *page)
                 }
         }
 
+        if (nm_utils_security_valid (NMU_SEC_SAE, dev_caps, FALSE, is_adhoc, 0, 0, 0)) {
+                WirelessSecuritySAE *ws_sae;
+
+                ws_sae = ws_sae_new (connection, FALSE);
+                if (ws_sae) {
+                        add_security_item (page, WIRELESS_SECURITY (ws_sae), sec_model,
+                                           &iter, _("WPA3 Personal"), FALSE);
+                        if ((active < 0) && (default_type == NMU_SEC_SAE))
+                                active = item;
+                        item++;
+                }
+        }
+
+        if (nm_utils_security_valid (NMU_SEC_OWE, dev_caps, FALSE, is_adhoc, 0, 0, 0)) {
+                WirelessSecurityOWE *ws_owe;
+
+                ws_owe = ws_owe_new (connection);
+                if (ws_owe) {
+                        add_security_item (page, WIRELESS_SECURITY (ws_owe), sec_model,
+                                           &iter, _("Enhanced Open"), FALSE);
+                        if ((active < 0) && (default_type == NMU_SEC_OWE))
+                                active = item;
+                        item++;
+                }
+        }
+
         gtk_combo_box_set_model (combo, GTK_TREE_MODEL (sec_model));
         gtk_cell_layout_clear (GTK_CELL_LAYOUT (combo));
 
@@ -465,7 +506,9 @@ ce_page_security_new (NMConnection      *connection,
         if (default_type == NMU_SEC_STATIC_WEP ||
             default_type == NMU_SEC_LEAP ||
             default_type == NMU_SEC_WPA_PSK ||
-            default_type == NMU_SEC_WPA2_PSK) {
+            default_type == NMU_SEC_WPA2_PSK ||
+            default_type == NMU_SEC_SAE ||
+            default_type == NMU_SEC_OWE) {
                 CE_PAGE (page)->security_setting = NM_SETTING_WIRELESS_SECURITY_SETTING_NAME;
         }
 

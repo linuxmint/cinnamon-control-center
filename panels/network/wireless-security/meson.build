@@ -16,6 +16,8 @@ libwireless_security_sources = [
   'ws-wep-key.c',
   'ws-wpa-eap.c',
   'ws-wpa-psk.c',
+  'ws-sae.c',
+  'ws-owe.c',
   gnome.compile_resources('wireless-security-resources',
     'wireless-security.gresource.xml',
     c_name: 'wireless_security',

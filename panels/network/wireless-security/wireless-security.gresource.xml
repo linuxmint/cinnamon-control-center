@@ -12,5 +12,7 @@
     <file preprocess="xml-stripblanks">ws-wep-key.ui</file>
     <file preprocess="xml-stripblanks">ws-wpa-eap.ui</file>
     <file preprocess="xml-stripblanks">ws-wpa-psk.ui</file>
+    <file preprocess="xml-stripblanks">ws-sae.ui</file>
+    <file preprocess="xml-stripblanks">ws-owe.ui</file>
   </gresource>
 </gresources>
