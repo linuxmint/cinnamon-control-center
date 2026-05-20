@@ -44,7 +44,10 @@ typedef enum {
   NM_AP_SEC_NONE,
   NM_AP_SEC_WEP,
   NM_AP_SEC_WPA,
-  NM_AP_SEC_WPA2
+  NM_AP_SEC_WPA2,
+  NM_AP_SEC_SAE,
+  NM_AP_SEC_OWE,
+  NM_AP_SEC_OWE_TM
 } NMAccessPointSecurity;
 
 static void nm_device_wifi_refresh_ui (NetDeviceWifi *device_wifi);
@@ -113,7 +116,13 @@ get_access_point_security (NMAccessPoint *ap)
         wpa_flags = nm_access_point_get_wpa_flags (ap);
         rsn_flags = nm_access_point_get_rsn_flags (ap);
 
-        if (!(flags & NM_802_11_AP_FLAGS_PRIVACY) &&
+        if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_SAE)
+                type = NM_AP_SEC_SAE;
+        else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE_TM)
+                type = NM_AP_SEC_OWE_TM;
+        else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE)
+                type = NM_AP_SEC_OWE;
+        else if (!(flags & NM_802_11_AP_FLAGS_PRIVACY) &&
             wpa_flags == NM_802_11_AP_SEC_NONE &&
             rsn_flags == NM_802_11_AP_SEC_NONE)
                 type = NM_AP_SEC_NONE;
@@ -214,13 +223,21 @@ get_ap_security_string (NMAccessPoint *ap)
                 /* TRANSLATORS: this WEP WiFi security */
                 g_string_append_printf (str, "%s, ", _("WEP"));
         }
-        if (wpa_flags != NM_802_11_AP_SEC_NONE) {
-                /* TRANSLATORS: this WPA WiFi security */
-                g_string_append_printf (str, "%s, ", _("WPA"));
-        }
-        if (rsn_flags != NM_802_11_AP_SEC_NONE) {
-                /* TRANSLATORS: this WPA WiFi security */
-                g_string_append_printf (str, "%s, ", _("WPA2"));
+        if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE) {
+                /* TRANSLATORS: Enhanced Open (OWE) WiFi security */
+                g_string_append_printf (str, "%s, ", _("Enhanced Open"));
+        } else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_SAE) {
+                /* TRANSLATORS: WPA3 (SAE) WiFi security */
+                g_string_append_printf (str, "%s, ", _("WPA3"));
+        } else {
+                if (wpa_flags != NM_802_11_AP_SEC_NONE) {
+                        /* TRANSLATORS: this WPA WiFi security */
+                        g_string_append_printf (str, "%s, ", _("WPA"));
+                }
+                if (rsn_flags != NM_802_11_AP_SEC_NONE) {
+                        /* TRANSLATORS: this WPA WiFi security */
+                        g_string_append_printf (str, "%s, ", _("WPA2"));
+                }
         }
         if ((wpa_flags & NM_802_11_AP_SEC_KEY_MGMT_802_1X) ||
             (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_802_1X)) {
@@ -668,6 +685,17 @@ connection_add_activate_cb (GObject *source_object,
                 g_error_free (error);
                 return;
         }
+
+        /* Log what NM actually saved, so we can tell whether key-mgmt forcing
+         * survived NM's auto-completion. */
+        {
+                NMRemoteConnection *rc = nm_active_connection_get_connection (conn);
+                NMSettingWirelessSecurity *s_wsec;
+
+                s_wsec = rc ? nm_connection_get_setting_wireless_security (NM_CONNECTION (rc)) : NULL;
+                g_debug ("connection_add_activate_cb: NM-saved key-mgmt='%s'",
+                         s_wsec ? nm_setting_wireless_security_get_key_mgmt (s_wsec) : "(no wsec)");
+        }
 }
 
 static void
@@ -781,6 +809,8 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
                 GPermission *permission;
                 gboolean allowed_to_share = FALSE;
                 NMConnection *partial = NULL;
+                NMAccessPoint *ap;
+                const char *forced_key_mgmt = NULL;
 
                 permission = polkit_permission_new_sync ("org.freedesktop.NetworkManager.settings.modify.system",
                                                          NULL, NULL, NULL);
@@ -789,13 +819,79 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
                         g_object_unref (permission);
                 }
 
+                /* Pick the right key-mgmt up front for SAE-only or OWE APs.
+                 * NM's auto-completion defaults to wpa-psk and never upgrades
+                 * to sae, so without this an SAE-only AP gets saved as a
+                 * wpa-psk profile (which then often connects via SAE anyway,
+                 * masking the misconfiguration). */
+                ap = nm_device_wifi_get_access_point_by_path (NM_DEVICE_WIFI (device), ap_object_path);
+                if (ap == NULL) {
+                        /* The DBus path can go stale between scan and click
+                         * (re-scan invalidates AP paths). Fall back to matching
+                         * by SSID so SAE/OWE detection still works. */
+                        const GPtrArray *aps = nm_device_wifi_get_access_points (NM_DEVICE_WIFI (device));
+                        guint i;
+
+                        for (i = 0; aps && i < aps->len; i++) {
+                                NMAccessPoint *cand = g_ptr_array_index (aps, i);
+                                GBytes *cand_ssid = nm_access_point_get_ssid (cand);
+
+                                if (cand_ssid && g_bytes_equal (cand_ssid, ssid)) {
+                                        ap = cand;
+                                        break;
+                                }
+                        }
+                }
+
+                if (ap != NULL) {
+                        NM80211ApSecurityFlags rsn_flags = nm_access_point_get_rsn_flags (ap);
+                        NM80211ApSecurityFlags wpa_flags = nm_access_point_get_wpa_flags (ap);
+
+                        g_debug ("wireless_try_to_connect: AP rsn=0x%x wpa=0x%x "
+                                 "(SAE=%d OWE=%d)",
+                                 rsn_flags, wpa_flags,
+                                 !!(rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_SAE),
+                                 !!(rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE));
+
+                        /* Prefer SAE/OWE whenever the AP advertises it. Many
+                         * routers in "WPA3" mode still advertise PSK alongside
+                         * SAE for legacy-client compatibility (WPA2/WPA3
+                         * transition mode); without this NM defaults the new
+                         * profile to wpa-psk and the user can never get a
+                         * WPA3-saved profile without manually switching. */
+                        if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_SAE)
+                                forced_key_mgmt = "sae";
+                        else if (rsn_flags & NM_802_11_AP_SEC_KEY_MGMT_OWE)
+                                forced_key_mgmt = "owe";
+                } else {
+                        /* Both path and SSID lookups failed -- new profile
+                         * will fall through to NM's wpa-psk default, which
+                         * may silently downgrade a pure-WPA3 AP to a WPA2
+                         * profile that can't reconnect later. */
+                        g_warning ("wireless_try_to_connect: could not resolve AP for SSID %s (path %s); "
+                                   "key-mgmt will use NetworkManager defaults",
+                                   ssid_target, ap_object_path);
+                }
+
+                if (!allowed_to_share || forced_key_mgmt != NULL) {
+                        partial = nm_simple_connection_new ();
+                }
+
                 if (!allowed_to_share) {
                         NMSettingConnection *s_con;
 
                         s_con = (NMSettingConnection *)nm_setting_connection_new ();
                         nm_setting_connection_add_permission (s_con, "user", g_get_user_name (), NULL);
-                        partial = nm_simple_connection_new ();
                         nm_connection_add_setting (partial, NM_SETTING (s_con));
+                }
+
+                if (forced_key_mgmt != NULL) {
+                        NMSettingWirelessSecurity *s_wsec;
+
+                        s_wsec = (NMSettingWirelessSecurity *) nm_setting_wireless_security_new ();
+                        g_object_set (s_wsec, NM_SETTING_WIRELESS_SECURITY_KEY_MGMT, forced_key_mgmt, NULL);
+                        nm_connection_add_setting (partial, NM_SETTING (s_wsec));
+                        g_debug ("forcing new connection key-mgmt=%s for %s", forced_key_mgmt, ssid_target);
                 }
 
                 g_debug ("no existing connection found for %s, creating and activating one", ssid_target);
@@ -806,7 +902,7 @@ wireless_try_to_connect (NetDeviceWifi *device_wifi,
                                                              NULL,
                                                              connection_add_activate_cb,
                                                              device_wifi);
-                if (!allowed_to_share)
+                if (partial != NULL)
                         g_object_unref (partial);
         } else {
                 CcNetworkPanel *panel;
@@ -1779,7 +1875,9 @@ make_row (GtkSizeGroup   *rows,
 
         if (in_range) {
                 if (security != NM_AP_SEC_UNKNOWN &&
-                    security != NM_AP_SEC_NONE) {
+                    security != NM_AP_SEC_NONE &&
+                    security != NM_AP_SEC_OWE &&
+                    security != NM_AP_SEC_OWE_TM) {
                         widget = gtk_image_new_from_icon_name ("xsi-network-wireless-encrypted-symbolic", GTK_ICON_SIZE_MENU);
                 } else {
                         widget = gtk_label_new ("");

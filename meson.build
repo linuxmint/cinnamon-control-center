@@ -40,8 +40,8 @@ config.set('HAVE_X11_EXTENSIONS_XKB_H', cc.has_header('X11/extensions/XKB.h'))
 # Network Manager stuff
 
 if get_option('networkmanager')
-  libnm         = dependency('libnm', version: '>=1.2.0')
-  libnma        = dependency('libnma',version: '>=1.2.0')
+  libnm         = dependency('libnm', version: '>=1.26')
+  libnma        = dependency('libnma',version: '>=1.8.36')
 else
   libnm = dependency('', required: false)
   libnma= dependency('', required: false)
