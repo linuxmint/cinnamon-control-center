@@ -1,3 +1,18 @@
+cinnamon-control-center (6.7.1) unstable; urgency=medium
+
+  [ Douglas Kosovic ]
+  * Fix for loading VPN plugins that are using either NmaCertChooser or NMACertChooser (#376)
+
+  [ Michael Webster ]
+  * build: Fix networkmanager-less builds.
+  * misc: Cleanup some unity references.
+  * networking: Add WPA3, OWE support.
+
+  [ Archisman Panigrahi ]
+  * Add 'Fractional' and 'Scaling' keywords to display panel (#375)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 21 May 2026 10:45:10 +0100
+
 cinnamon-control-center (6.7.0) unstable; urgency=medium
 
   [ Michael Webster ]
