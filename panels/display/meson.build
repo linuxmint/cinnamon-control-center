@@ -47,9 +47,4 @@ panel_display = shared_library(
   install_dir: panels_dir
 )
 
-install_data(
-  'cinnamon-display-panel.desktop',
-  install_dir: desktop_dir
-)
-
 subdir('icons')
