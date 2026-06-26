@@ -416,6 +416,10 @@ find_best_snapping (CcDisplayConfig   *config,
       maybe_update_snap (snap_data, x1, y1, _x1, bottom_snap_pos, SNAP_DIR_BOTH, SNAP_DIR_Y, 0);
       maybe_update_snap (snap_data, x1, y1, _x2 - w, bottom_snap_pos, SNAP_DIR_BOTH, SNAP_DIR_Y, 0);
 
+      /* Centers aligned, stacked on the top/bottom */
+      maybe_update_snap (snap_data, x1, y1, _x1 + _w / 2 - w / 2, top_snap_pos, SNAP_DIR_BOTH, SNAP_DIR_Y, 0);
+      maybe_update_snap (snap_data, x1, y1, _x1 + _w / 2 - w / 2, bottom_snap_pos, SNAP_DIR_BOTH, SNAP_DIR_Y, 0);
+
       /* Top/bottom edge identical on the left */
       maybe_update_snap (snap_data, x1, y1, left_snap_pos, _y1, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
       maybe_update_snap (snap_data, x1, y1, left_snap_pos, _y2 - h, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
@@ -423,6 +427,10 @@ find_best_snapping (CcDisplayConfig   *config,
       /* Top/bottom edge identical on the right */
       maybe_update_snap (snap_data, x1, y1, right_snap_pos, _y1, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
       maybe_update_snap (snap_data, x1, y1, right_snap_pos, _y2 - h, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
+
+      /* Centers aligned, side by side on the left/right */
+      maybe_update_snap (snap_data, x1, y1, left_snap_pos, _y1 + _h / 2 - h / 2, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
+      maybe_update_snap (snap_data, x1, y1, right_snap_pos, _y1 + _h / 2 - h / 2, SNAP_DIR_BOTH, SNAP_DIR_X, 0);
 
       /* If snapping is infinite, then add snapping points with minimal overlap
        * to prevent detachment.
