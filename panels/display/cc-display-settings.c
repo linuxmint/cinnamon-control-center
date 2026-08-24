@@ -24,7 +24,6 @@
 #include "cc-display-settings.h"
 #include "cc-display-config.h"
 
-#define MAX_SCALE_BUTTONS 6
 
 #define WID(s) GTK_WIDGET (gtk_builder_get_object (self->builder, s))
 
@@ -48,7 +47,8 @@ struct _CcDisplaySettings
   GtkWidget        *orientation_combo;
   GtkWidget        *refresh_rate_combo;
   GtkWidget        *resolution_combo;
-  GtkWidget        *scale_bbox;
+  GtkWidget        *scale_combo;
+  GtkListStore     *scale_list;
   GtkWidget        *scale_row;
   GtkWidget        *scale_label;
   GtkWidget        *underscanning_row;
@@ -71,9 +71,9 @@ G_DEFINE_TYPE (CcDisplaySettings, cc_display_settings, GTK_TYPE_BIN)
 
 static GParamSpec *props[PROP_LAST];
 
-static void on_scale_btn_active_changed_cb (GtkWidget         *widget,
-                                            GParamSpec        *pspec,
-                                            CcDisplaySettings *self);
+static void on_scale_selection_changed_cb (GtkComboBox       *box,
+                                           GParamSpec        *pspec,
+                                           CcDisplaySettings *self);
 
 static gboolean
 should_show_rotation (CcDisplaySettings *self)
@@ -190,17 +190,16 @@ get_frequency_string (CcDisplayMode *mode)
   return g_strdup_printf (_("%.2lf Hz"), cc_display_mode_get_freq_f (mode));
 }
 
-static double
-round_scale_for_ui (double scale)
-{
-  /* Keep in sync with mutter */
-  return round (scale*4)/4;
-}
-
 static gchar *
-make_scale_string (gdouble scale)
+make_scale_string (gdouble scale, gint width, gint height)
 {
-  return g_strdup_printf ("%d %%", (int) (round_scale_for_ui (scale)*100));
+  /* Muffin offers exact quotients, which include thirds and fifths. Rounding
+   * the label to the nearest quarter would render 1.25 and 1.3333 both as
+   * "125 %" - two entries selecting different scales. */
+  return g_strdup_printf ("%d%% (%d × %d)",
+                          (int) round (scale * 100),
+                          (int) round (width / scale),
+                          (int) round (height / scale));
 }
 
 static gint
@@ -226,8 +225,8 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
   GList *item;
   gint width, height;
   CcDisplayMode *current_mode;
-  GtkRadioButton *group = NULL;
-  gint buttons = 0;
+  gint n_scales = 0;
+  gint mode_width, mode_height;
   const gdouble *scales, *scale;
 
   self->idle_udpate_id = 0;
@@ -426,12 +425,13 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
   g_list_free (unique_resolutions);
 
   /* Scale row is usually shown. */
-  gtk_container_foreach (GTK_CONTAINER (self->scale_bbox), (GtkCallback) gtk_widget_destroy, NULL);
+  gtk_list_store_clear (self->scale_list);
+  cc_display_mode_get_resolution (current_mode, &mode_width, &mode_height);
   scales = cc_display_mode_get_supported_scales (current_mode);
   for (scale = scales; *scale != 0.0; scale++)
     {
       g_autofree gchar *scale_str = NULL;
-      GtkWidget *scale_btn;
+      GtkTreeIter iter;
 
       if (!cc_display_config_is_scaled_mode_valid (self->config,
                                                    current_mode,
@@ -439,32 +439,23 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
           cc_display_monitor_get_scale (self->selected_output) != *scale)
         continue;
 
-      scale_str = make_scale_string (*scale);
+      scale_str = make_scale_string (*scale, mode_width, mode_height);
 
-      scale_btn = gtk_radio_button_new_with_label_from_widget (group, scale_str);
-      if (!group)
-        group = GTK_RADIO_BUTTON (scale_btn);
-      gtk_toggle_button_set_mode (GTK_TOGGLE_BUTTON (scale_btn), FALSE);
-      g_object_set_data_full (G_OBJECT (scale_btn),
-                              "scale",
-                              g_memdup (scale, sizeof (gdouble)),
-                              g_free);
-      gtk_widget_show (scale_btn);
-      gtk_container_add (GTK_CONTAINER (self->scale_bbox), scale_btn);
-      g_signal_connect_object (scale_btn,
-                               "notify::active",
-                               G_CALLBACK (on_scale_btn_active_changed_cb),
-                               self, 0);
+      gtk_list_store_append (self->scale_list, &iter);
+      gtk_list_store_set (self->scale_list,
+                          &iter,
+                          0, scale_str,
+                          1, *scale,
+                          -1);
 
       if (cc_display_monitor_get_scale (self->selected_output) == *scale)
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (scale_btn), TRUE);
+        gtk_combo_box_set_active_iter (GTK_COMBO_BOX (self->scale_combo), &iter);
 
-      buttons += 1;
-      if (buttons >= MAX_SCALE_BUTTONS)
-        break;
+      n_scales += 1;
     }
 
-  gtk_widget_set_sensitive (self->scale_row, buttons > 1);
+  gtk_widget_set_sensitive (self->scale_row, n_scales > 1);
+  gtk_widget_set_sensitive (self->scale_combo, n_scales > 1);
 
   if (cc_display_config_get_fractional_scaling (self->config))
     {
@@ -583,21 +574,21 @@ on_resolution_selection_changed_cb (GtkComboBox       *box,
 }
 
 static void
-on_scale_btn_active_changed_cb (GtkWidget         *widget,
-                                GParamSpec        *pspec,
-                                CcDisplaySettings *self)
+on_scale_selection_changed_cb (GtkComboBox       *box,
+                               GParamSpec        *pspec,
+                               CcDisplaySettings *self)
 {
+  GtkTreeIter iter;
   gdouble scale;
 
   if (self->updating)
     return;
 
-  if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))
+  if (!gtk_combo_box_get_active_iter (box, &iter))
     return;
 
-  scale = *(gdouble*) g_object_get_data (G_OBJECT (widget), "scale");
-  cc_display_monitor_set_scale (self->selected_output,
-                                scale);
+  gtk_tree_model_get (GTK_TREE_MODEL (self->scale_list), &iter, 1, &scale, -1);
+  cc_display_monitor_set_scale (self->selected_output, scale);
 
   g_signal_emit_by_name (G_OBJECT (self), "updated", self->selected_output);
 }
@@ -680,6 +671,7 @@ cc_display_settings_finalize (GObject *object)
   g_clear_object (&self->orientation_list);
   g_clear_object (&self->refresh_rate_list);
   g_clear_object (&self->resolution_list);
+  g_clear_object (&self->scale_list);
   g_clear_object (&self->builder);
 
   if (self->idle_udpate_id)
@@ -737,7 +729,7 @@ cc_display_settings_init (CcDisplaySettings *self)
   self->orientation_combo = WID ("orientation_combo");
   self->refresh_rate_combo = WID ("refresh_rate_combo");
   self->resolution_combo = WID ("resolution_combo");
-  self->scale_bbox = WID ("scale_bbox");;
+  self->scale_combo = WID ("scale_combo");
   self->scale_row = WID ("scale_row");
   self->scale_label = WID ("scale_label");
   self->underscanning_row = WID ("underscanning_row");
@@ -746,6 +738,7 @@ cc_display_settings_init (CcDisplaySettings *self)
   gtk_builder_add_callback_symbol (self->builder, "on_orientation_selection_changed_cb", G_CALLBACK (on_orientation_selection_changed_cb));
   gtk_builder_add_callback_symbol (self->builder, "on_refresh_rate_selection_changed_cb", G_CALLBACK (on_refresh_rate_selection_changed_cb));
   gtk_builder_add_callback_symbol (self->builder, "on_resolution_selection_changed_cb", G_CALLBACK (on_resolution_selection_changed_cb));
+  gtk_builder_add_callback_symbol (self->builder, "on_scale_selection_changed_cb", G_CALLBACK (on_scale_selection_changed_cb));
   gtk_builder_add_callback_symbol (self->builder, "on_underscanning_switch_active_changed_cb", G_CALLBACK (on_underscanning_switch_active_changed_cb));
 
   GtkCellRenderer *renderer;
@@ -772,6 +765,18 @@ cc_display_settings_init (CcDisplaySettings *self)
                               renderer,
                               TRUE);
   gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (self->refresh_rate_combo), renderer,
+                                  "text", 0,
+                                  NULL);
+  gtk_cell_renderer_set_visible (renderer, TRUE);
+
+  self->scale_list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_DOUBLE);
+  gtk_combo_box_set_model (GTK_COMBO_BOX (self->scale_combo), GTK_TREE_MODEL (self->scale_list));
+  gtk_cell_layout_clear (GTK_CELL_LAYOUT (self->scale_combo));
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (self->scale_combo),
+                              renderer,
+                              TRUE);
+  gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (self->scale_combo), renderer,
                                   "text", 0,
                                   NULL);
   gtk_cell_renderer_set_visible (renderer, TRUE);
