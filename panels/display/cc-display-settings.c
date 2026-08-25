@@ -469,6 +469,7 @@ cc_display_settings_rebuild_ui (CcDisplaySettings *self)
   gtk_widget_set_visible (self->underscanning_row,
                           cc_display_monitor_supports_underscanning (self->selected_output) &&
                           !cc_display_config_is_cloning (self->config));
+  gtk_widget_set_sensitive (self->underscanning_row, TRUE);
   gtk_switch_set_active (GTK_SWITCH (self->underscanning_switch),
                          cc_display_monitor_get_underscanning (self->selected_output));
 
