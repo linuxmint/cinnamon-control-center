@@ -54,7 +54,6 @@ struct _CcDisplaySettings
   GtkWidget        *underscanning_row;
   GtkWidget        *underscanning_switch;
 
-  GSettings        *muffin_settings;
 };
 
 typedef struct _CcDisplaySettings CcDisplaySettings;

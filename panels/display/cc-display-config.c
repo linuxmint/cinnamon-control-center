@@ -20,16 +20,12 @@
 #define MUFFIN_SCHEMA                     "org.cinnamon.muffin"
 #define MUFFIN_EXPERIMENTAL_FEATURES_KEY  "experimental-features"
 #define MUFFIN_FEATURE_FRACTIONAL_SCALING_X11 "x11-randr-fractional-scaling"
-#define MUFFIN_FEATURE_FRACTIONAL_SCALING_WAYLAND "scale-monitor-framebuffer"
 
 #include <gdk/gdk.h>
 #include <gio/gio.h>
 #include <math.h>
 #include "cc-display-config.h"
 
-#ifdef GDK_WINDOWING_WAYLAND
-#include <gdk/gdkwayland.h>
-#endif
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
@@ -458,8 +454,6 @@ struct _CcDisplayConfigPrivate {
   GList *ui_sorted_monitors;
 
   GSettings *muffin_settings;
-  gboolean fractional_scaling;
-  gboolean fractional_scaling_pending_disable;
 };
 typedef struct _CcDisplayConfigPrivate CcDisplayConfigPrivate;
 
@@ -478,11 +472,8 @@ get_fractional_scaling_key (void)
   if (GDK_IS_X11_DISPLAY (display))
     return MUFFIN_FEATURE_FRACTIONAL_SCALING_X11;
 #endif /* GDK_WINDOWING_X11 */
-#if defined(GDK_WINDOWING_WAYLAND)
-  if (GDK_IS_WAYLAND_DISPLAY (display))
-    return MUFFIN_FEATURE_FRACTIONAL_SCALING_WAYLAND;
-#endif /* GDK_WINDOWING_WAYLAND */
-  g_return_val_if_reached (NULL);
+
+  return NULL;
 }
 
 static gboolean
@@ -492,43 +483,11 @@ get_fractional_scaling_active (CcDisplayConfig *self)
   g_auto(GStrv) features = NULL;
   const char *key = get_fractional_scaling_key ();
 
-  g_return_val_if_fail (key, FALSE);
+  if (!key)
+    return TRUE;
 
   features = g_settings_get_strv (priv->muffin_settings, MUFFIN_EXPERIMENTAL_FEATURES_KEY);
   return g_strv_contains ((const gchar **) features, key);
-}
-
-static void
-set_fractional_scaling_active (CcDisplayConfig *self,
-                               gboolean         enable)
-{
-  CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-  g_auto(GStrv) existing_features = NULL;
-  gboolean have_fractional_scaling = FALSE;
-  g_autoptr(GVariantBuilder) builder = NULL;
-  const char *key = get_fractional_scaling_key ();
-
-  /* Add or remove the fractional scaling feature from muffin */
-  existing_features = g_settings_get_strv (priv->muffin_settings,
-                                           MUFFIN_EXPERIMENTAL_FEATURES_KEY);
-  builder = g_variant_builder_new (G_VARIANT_TYPE ("as"));
-  for (int i = 0; existing_features[i] != NULL; i++)
-    {
-      if (g_strcmp0 (existing_features[i], key) == 0)
-        {
-          if (enable)
-            have_fractional_scaling = TRUE;
-          else
-            continue;
-        }
-
-      g_variant_builder_add (builder, "s", existing_features[i]);
-    }
-  if (enable && !have_fractional_scaling && key)
-    g_variant_builder_add (builder, "s", key);
-
-  g_settings_set_value (priv->muffin_settings, MUFFIN_EXPERIMENTAL_FEATURES_KEY,
-                        g_variant_builder_end (builder));
 }
 
 static void
@@ -537,10 +496,7 @@ cc_display_config_init (CcDisplayConfig *self)
   CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
 
   priv->ui_sorted_monitors = NULL;
-
-  /* No need to connect to the setting, as we'll get notified by mutter */
   priv->muffin_settings = g_settings_new (MUFFIN_SCHEMA);
-  priv->fractional_scaling = get_fractional_scaling_active (self);
 }
 
 static void
@@ -667,15 +623,8 @@ gboolean
 cc_display_config_equal (CcDisplayConfig *self,
                          CcDisplayConfig *other)
 {
-  CcDisplayConfigPrivate *spriv = cc_display_config_get_instance_private (self);
-  CcDisplayConfigPrivate *opriv = cc_display_config_get_instance_private (other);
-
   g_return_val_if_fail (CC_IS_DISPLAY_CONFIG (self), FALSE);
   g_return_val_if_fail (CC_IS_DISPLAY_CONFIG (other), FALSE);
-
-  if (spriv->fractional_scaling_pending_disable !=
-      opriv->fractional_scaling_pending_disable)
-    return FALSE;
 
   return CC_DISPLAY_CONFIG_GET_CLASS (self)->equal (self, other);
 }
@@ -684,8 +633,6 @@ gboolean
 cc_display_config_apply (CcDisplayConfig *self,
                          GError **error)
 {
-  CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-
   if (!CC_IS_DISPLAY_CONFIG (self))
     {
       g_warning ("Cannot apply invalid configuration");
@@ -694,12 +641,6 @@ cc_display_config_apply (CcDisplayConfig *self,
                    G_IO_ERROR_FAILED,
                    "Cannot apply invalid configuration");
       return FALSE;
-    }
-
-  if (priv->fractional_scaling_pending_disable)
-    {
-      set_fractional_scaling_active (self, FALSE);
-      priv->fractional_scaling_pending_disable = FALSE;
     }
 
   return CC_DISPLAY_CONFIG_GET_CLASS (self)->apply (self, error);
@@ -749,24 +690,13 @@ cc_display_config_get_legacy_ui_scale (CcDisplayConfig *self)
   return CC_DISPLAY_CONFIG_GET_CLASS (self)->get_legacy_ui_scale (self);
 }
 
-static gboolean
-scale_value_is_fractional (double scale)
-{
-  return (int) scale != scale;
-}
-
 gboolean
 cc_display_config_is_scaled_mode_valid (CcDisplayConfig *self,
                                         CcDisplayMode   *mode,
                                         double           scale)
 {
-  CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-
   g_return_val_if_fail (CC_IS_DISPLAY_CONFIG (self), FALSE);
   g_return_val_if_fail (CC_IS_DISPLAY_MODE (mode), FALSE);
-
-  if (priv->fractional_scaling_pending_disable && scale_value_is_fractional (scale))
-    return FALSE;
 
   return CC_DISPLAY_CONFIG_GET_CLASS (self)->is_scaled_mode_valid (self, mode, scale);
 }
@@ -797,120 +727,8 @@ cc_display_config_get_maximum_scaling (CcDisplayConfig *self)
   return max_scale;
 }
 
-static gboolean
-set_monitors_scaling_to_preferred_integers (CcDisplayConfig *self)
-{
-  GList *l;
-  gboolean any_changed = FALSE;
-
-  for (l = cc_display_config_get_monitors (self); l; l = l->next)
-    {
-      CcDisplayMonitor *monitor = l->data;
-      gdouble monitor_scale = cc_display_monitor_get_scale (monitor);
-
-      if (scale_value_is_fractional (monitor_scale))
-        {
-          CcDisplayMode *preferred_mode;
-          double preferred_scale;
-          double *saved_scale;
-
-          preferred_mode = cc_display_monitor_get_preferred_mode (monitor);
-          preferred_scale = cc_display_mode_get_preferred_scale (preferred_mode);
-          cc_display_monitor_set_scale (monitor, preferred_scale);
-          any_changed = TRUE;
-
-          saved_scale = g_new (double, 1);
-          *saved_scale = monitor_scale;
-          g_object_set_data_full (G_OBJECT (monitor),
-                                  "previous-fractional-scale",
-                                  saved_scale, g_free);
-        }
-      else
-        {
-          g_signal_emit_by_name (monitor, "scale");
-        }
-    }
-
-  return any_changed;
-}
-
-static void
-reset_monitors_scaling_to_selected_values (CcDisplayConfig *self)
-{
-  GList *l;
-
-  for (l = cc_display_config_get_monitors (self); l; l = l->next)
-    {
-      CcDisplayMonitor *monitor = l->data;
-      gdouble *saved_scale;
-
-      saved_scale = g_object_get_data (G_OBJECT (monitor),
-                                       "previous-fractional-scale");
-
-      if (saved_scale)
-        {
-          cc_display_monitor_set_scale (monitor, *saved_scale);
-          g_object_set_data (G_OBJECT (monitor), "previous-fractional-scale", NULL);
-        }
-      else
-        {
-          g_signal_emit_by_name (monitor, "scale");
-        }
-    }
-}
-
-void
-cc_display_config_set_fractional_scaling (CcDisplayConfig *self,
-                                          gboolean         enabled)
-{
-  CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-
-  if (priv->fractional_scaling == enabled)
-    return;
-
-  priv->fractional_scaling = enabled;
-
-  if (priv->fractional_scaling)
-    {
-      if (priv->fractional_scaling_pending_disable)
-        {
-          priv->fractional_scaling_pending_disable = FALSE;
-          reset_monitors_scaling_to_selected_values (self);
-        }
-
-      if (!get_fractional_scaling_active (self))
-        set_fractional_scaling_active (self, enabled);
-    }
-  else
-    {
-      priv->fractional_scaling_pending_disable = TRUE;
-
-      if (!set_monitors_scaling_to_preferred_integers (self))
-        {
-          gboolean disable_now = FALSE;
-
-          if (cc_display_config_layout_use_ui_scale (self))
-            {
-              disable_now =
-                G_APPROX_VALUE (cc_display_config_get_legacy_ui_scale (self),
-                                cc_display_config_get_maximum_scaling (self),
-                                DBL_EPSILON);
-            }
-
-          if (disable_now)
-            {
-              priv->fractional_scaling_pending_disable = FALSE;
-              reset_monitors_scaling_to_selected_values (self);
-              set_fractional_scaling_active (self, enabled);
-            }
-        }
-    }
-}
-
 gboolean
 cc_display_config_get_fractional_scaling (CcDisplayConfig *self)
 {
-  CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-
-  return priv->fractional_scaling;
+  return get_fractional_scaling_active (self);
 }

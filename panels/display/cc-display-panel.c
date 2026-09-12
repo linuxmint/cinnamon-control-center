@@ -71,6 +71,7 @@ struct _CcDisplayPanel
   CcDisplayMonitor *current_output;
 
   GDBusProxy *cinnamon_proxy;
+  GDBusConnection *session_bus;
 
   gint                  rebuilding_counter;
 
@@ -501,6 +502,7 @@ cc_display_panel_dispose (GObject *object)
   g_clear_object (&self->current_config);
   g_clear_object (&self->up_client);
   g_clear_object (&self->cinnamon_proxy);
+  g_clear_object (&self->session_bus);
 
   g_clear_object (&self->muffin_settings);
   g_clear_object (&self->labeler);
@@ -1073,6 +1075,8 @@ session_bus_ready (GObject        *source,
       return;
     }
 
+  self->session_bus = bus;
+
   self->manager = cc_display_config_manager_dbus_new ();
   g_signal_connect_object (self->manager, "changed",
                            G_CALLBACK (on_screen_changed),
@@ -1113,24 +1117,16 @@ cancel_button_clicked_cb (GtkWidget *widget,
 }
 
 static void
-config_file_deleted (GObject *xml,
-                     GAsyncResult *res,
-                     gpointer   user_data)
+reset_monitors_config_done (GObject      *source,
+                            GAsyncResult *res,
+                            gpointer      user_data)
 {
-  GError *error = NULL;
+  g_autoptr(GVariant) retval = NULL;
+  g_autoptr(GError) error = NULL;
 
-  if (!g_file_delete_finish (G_FILE (xml), res, &error))
-    {
-      if (error != NULL)
-        {
-          g_warning ("Problem deleting ~/.config/cinnamon-monitors.xml: %s", error->message);
-          g_clear_error (&error);
-        }
-
-      return;
-    }
-
-  g_spawn_command_line_async ("cinnamon-dbus-command RestartCinnamon 0", NULL);
+  retval = g_dbus_connection_call_finish (G_DBUS_CONNECTION (source), res, &error);
+  if (!retval)
+    g_warning ("Failed to reset the monitor configuration: %s", error->message);
 }
 
 static gboolean
@@ -1138,17 +1134,24 @@ reset_to_defaults (gpointer data)
 {
   CcDisplayPanel *panel = CC_DISPLAY_PANEL (data);
 
-  gchar *path = g_build_filename (g_get_user_config_dir (), "cinnamon-monitors.xml", NULL);
-  GFile *xml = g_file_new_for_path (path);
-  g_free (path);
+  if (!panel->session_bus)
+    {
+      g_warning ("No session bus, cannot reset the monitor configuration");
+      return G_SOURCE_REMOVE;
+    }
 
-  g_file_delete_async (xml,
-                       G_PRIORITY_DEFAULT,
-                       NULL,
-                       (GAsyncReadyCallback) (config_file_deleted),
-                       panel);
-
-  g_object_unref (xml);
+  g_dbus_connection_call (panel->session_bus,
+                          "org.cinnamon.Muffin.DisplayConfig",
+                          "/org/cinnamon/Muffin/DisplayConfig",
+                          "org.cinnamon.Muffin.DisplayConfig",
+                          "ResetMonitorsConfig",
+                          NULL,
+                          NULL,
+                          G_DBUS_CALL_FLAGS_NO_AUTO_START,
+                          -1,
+                          NULL,
+                          reset_monitors_config_done,
+                          panel);
 
   return G_SOURCE_REMOVE;
 }
