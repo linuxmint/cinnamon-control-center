@@ -1,3 +1,10 @@
+cinnamon-control-center (6.7.5) adrien; urgency=medium
+
+  [ Michael Webster ]
+  * display panel: Call new ResetMonitorsConfig for reset-to-defaults.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu, 17 Sep 2026 15:00:08 +0100
+
 cinnamon-control-center (6.7.4) alfa; urgency=medium
 
   [ Michael Webster ]
