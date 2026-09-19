@@ -175,6 +175,7 @@
             <property name="halign">end</property>
             <property name="valign">center</property>
             <property name="hexpand">True</property>
+            <signal name="notify::active" handler="on_underscanning_switch_active_changed_cb" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>
