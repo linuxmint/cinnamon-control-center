@@ -1,3 +1,10 @@
+cinnamon-control-center (6.7.6) adrien; urgency=medium
+
+  [ Michael Webster ]
+  * cc-display-settings.ui: Wire up the underscan switch callback.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 22 Sep 2026 10:11:12 +0100
+
 cinnamon-control-center (6.7.5) adrien; urgency=medium
 
   [ Michael Webster ]
