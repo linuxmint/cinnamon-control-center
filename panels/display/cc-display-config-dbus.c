@@ -1020,7 +1020,7 @@ cc_display_config_dbus_is_applicable (CcDisplayConfig *pself)
 
   if (!config_apply (self, CC_DISPLAY_CONFIG_METHOD_VERIFY, &error))
     {
-      g_warning ("Config not applicable: %s", error->message);
+      g_debug ("Config not applicable: %s", error->message);
       return FALSE;
     }
   else
