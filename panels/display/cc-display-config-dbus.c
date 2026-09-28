@@ -302,6 +302,7 @@ struct _CcDisplayMonitorDBus
   CcDisplayMonitorUnderscanning underscanning;
   int max_width;
   int max_height;
+  int logical_index;
 
   GList *modes;
   CcDisplayMode *current_mode;
@@ -714,6 +715,7 @@ cc_display_monitor_dbus_init (CcDisplayMonitorDBus *self)
   self->underscanning = UNDERSCANNING_UNSUPPORTED;
   self->max_width = G_MAXINT;
   self->max_height = G_MAXINT;
+  self->logical_index = -1;
 }
 
 static void
@@ -1369,11 +1371,26 @@ apply_global_scale_requirement (CcDisplayConfigDBus *self,
     }
 }
 
+static int
+compare_monitors_logical_order (gconstpointer a,
+                                gconstpointer b)
+{
+  const CcDisplayMonitorDBus *m1 = a;
+  const CcDisplayMonitorDBus *m2 = b;
+
+  if (m1->logical_index < 0 || m2->logical_index < 0)
+    return (m1->logical_index < 0) - (m2->logical_index < 0);
+
+  return m1->logical_index - m2->logical_index;
+}
+
 static void
 construct_monitors (CcDisplayConfigDBus *self,
                     GVariantIter *monitors,
                     GVariantIter *logical_monitors)
 {
+  int logical_index = 0;
+
   while (TRUE)
     {
       CcDisplayMonitorDBus *monitor;
@@ -1390,6 +1407,8 @@ construct_monitors (CcDisplayConfigDBus *self,
                                  G_CALLBACK (apply_global_scale_requirement),
                                  self, G_CONNECT_SWAPPED);
     }
+
+  self->monitors = g_list_reverse (self->monitors);
 
   while (TRUE)
     {
@@ -1423,7 +1442,10 @@ construct_monitors (CcDisplayConfigDBus *self,
             }
 
           cc_display_monitor_dbus_set_logical_monitor (m, logical_monitor);
+          m->logical_index = logical_index;
         }
+
+      logical_index++;
 
       if (g_hash_table_size (logical_monitor->monitors) > 0)
         {
@@ -1444,6 +1466,8 @@ construct_monitors (CcDisplayConfigDBus *self,
 
       register_logical_monitor (self, logical_monitor);
     }
+
+  self->monitors = g_list_sort (self->monitors, compare_monitors_logical_order);
 
   gather_clone_modes (self);
 }

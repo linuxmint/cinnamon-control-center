@@ -504,19 +504,10 @@ cc_display_config_constructed (GObject *object)
 {
   CcDisplayConfig *self = CC_DISPLAY_CONFIG (object);
   CcDisplayConfigPrivate *priv = cc_display_config_get_instance_private (self);
-  GList *monitors = cc_display_config_get_monitors (self);
   GList *item;
   gint ui_number = 1;
 
-  for (item = monitors; item != NULL; item = item->next)
-    {
-      CcDisplayMonitor *monitor = item->data;
-
-      if (cc_display_monitor_is_builtin (monitor))
-        priv->ui_sorted_monitors = g_list_prepend (priv->ui_sorted_monitors, monitor);
-      else
-        priv->ui_sorted_monitors = g_list_append (priv->ui_sorted_monitors, monitor);
-    }
+  priv->ui_sorted_monitors = g_list_copy (cc_display_config_get_monitors (self));
 
   for (item = priv->ui_sorted_monitors; item != NULL; item = item->next)
     {
