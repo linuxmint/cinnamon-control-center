@@ -331,6 +331,8 @@ cc_display_config_dbus_append_right (CcDisplayConfigDBus *self,
                                      CcDisplayLogicalMonitor *monitor);
 static void
 cc_display_config_dbus_make_linear (CcDisplayConfigDBus *self);
+static void
+gather_clone_modes (CcDisplayConfigDBus *self);
 
 
 static const char *
@@ -1171,17 +1173,29 @@ cc_display_config_dbus_set_cloning (CcDisplayConfig *pself,
     {
       logical_monitor = g_object_new (CC_TYPE_DISPLAY_LOGICAL_MONITOR, NULL);
       for (l = self->monitors; l != NULL; l = l->next)
-        cc_display_monitor_dbus_set_logical_monitor (CC_DISPLAY_MONITOR_DBUS (l->data),
-                                                     logical_monitor);
+        {
+          CcDisplayMonitorDBus *monitor = l->data;
+
+          cc_display_monitor_dbus_set_logical_monitor (monitor,
+                                                       cc_display_monitor_is_usable (CC_DISPLAY_MONITOR (monitor)) ?
+                                                       logical_monitor : NULL);
+        }
       register_logical_monitor (self, logical_monitor);
     }
   else if (!clone && is_cloning)
     {
       for (l = self->monitors; l != NULL; l = l->next)
         {
+          CcDisplayMonitorDBus *monitor = l->data;
+
+          if (!cc_display_monitor_is_usable (CC_DISPLAY_MONITOR (monitor)))
+            {
+              cc_display_monitor_dbus_set_logical_monitor (monitor, NULL);
+              continue;
+            }
+
           logical_monitor = g_object_new (CC_TYPE_DISPLAY_LOGICAL_MONITOR, NULL);
-          cc_display_monitor_dbus_set_logical_monitor (CC_DISPLAY_MONITOR_DBUS (l->data),
-                                                       logical_monitor);
+          cc_display_monitor_dbus_set_logical_monitor (monitor, logical_monitor);
           register_logical_monitor (self, logical_monitor);
         }
       cc_display_config_dbus_make_linear (self);
@@ -1192,6 +1206,9 @@ static GList *
 cc_display_config_dbus_get_cloning_modes (CcDisplayConfig *pself)
 {
   CcDisplayConfigDBus *self = CC_DISPLAY_CONFIG_DBUS (pself);
+
+  /* Usability (lid state) is only set by the panel after construction. */
+  gather_clone_modes (self);
 
   return self->clone_modes;
 }
@@ -1311,20 +1328,26 @@ cc_display_config_dbus_init (CcDisplayConfigDBus *self)
 static void
 gather_clone_modes (CcDisplayConfigDBus *self)
 {
-  guint n_monitors = g_list_length (self->monitors);
+  g_autoptr(GList) usable = NULL;
   CcDisplayMonitorDBus *monitor;
   GList *l;
 
-  if (n_monitors < 2)
+  g_clear_pointer (&self->clone_modes, g_list_free);
+
+  for (l = self->monitors; l != NULL; l = l->next)
+    if (cc_display_monitor_is_usable (CC_DISPLAY_MONITOR (l->data)))
+      usable = g_list_append (usable, l->data);
+
+  if (g_list_length (usable) < 2)
     return;
 
-  monitor = self->monitors->data;
+  monitor = usable->data;
   for (l = monitor->modes; l != NULL; l = l->next)
     {
       CcDisplayModeDBus *mode = l->data;
       gboolean valid = TRUE;
       GList *ll;
-      for (ll = self->monitors->next; ll != NULL; ll = ll->next)
+      for (ll = usable->next; ll != NULL; ll = ll->next)
         {
           CcDisplayMonitorDBus *other_monitor = ll->data;
           if (!cc_display_monitor_dbus_get_closest_mode (other_monitor, mode))
@@ -1468,8 +1491,6 @@ construct_monitors (CcDisplayConfigDBus *self,
     }
 
   self->monitors = g_list_sort (self->monitors, compare_monitors_logical_order);
-
-  gather_clone_modes (self);
 }
 
 static void

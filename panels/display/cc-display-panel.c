@@ -308,6 +308,10 @@ config_ensure_of_type (CcDisplayPanel *panel, CcDisplayConfigType type)
           {
             CcDisplayMonitor *output = l->data;
 
+            /* Not part of the clone, and may lack the mode entirely. */
+            if (!cc_display_monitor_is_usable (output))
+              continue;
+
             cc_display_monitor_set_mode (output, best);
             cc_display_monitor_set_scale (output, scale);
           }
@@ -356,9 +360,11 @@ hide_labels_dbus (CcDisplayPanel *self)
 static void
 show_labels_dbus (CcDisplayPanel *self)
 {
+  g_autoptr(CcDisplayConfig) applied_config = NULL;
   GList *outputs, *l;
   GVariantBuilder builder;
   gint number = 0;
+  gboolean cloned;
 
   if (!self->cinnamon_proxy || !self->current_config)
     return;
@@ -366,6 +372,12 @@ show_labels_dbus (CcDisplayPanel *self)
   outputs = cc_display_config_get_ui_sorted_monitors (self->current_config);
   if (!outputs)
     return;
+
+  /* Labels land on the applied layout, which stays mirrored until a change
+   * away from mirroring is applied. */
+  applied_config = cc_display_config_manager_get_current (self->manager);
+  cloned = cc_display_config_is_cloning (self->current_config) ||
+           (applied_config && cc_display_config_is_cloning (applied_config));
 
   g_variant_builder_init (&builder, G_VARIANT_TYPE_TUPLE);
   g_variant_builder_open (&builder, G_VARIANT_TYPE_ARRAY);
@@ -385,7 +397,7 @@ show_labels_dbus (CcDisplayPanel *self)
 
       var = g_variant_new ("(ibss)",
                            number,
-                           cc_display_config_is_cloning (self->current_config),
+                           cloned,
                            cc_display_monitor_get_display_name (output),
                            color_str);
 
@@ -717,7 +729,7 @@ set_current_output (CcDisplayPanel   *panel,
 static void
 rebuild_ui (CcDisplayPanel *panel)
 {
-  guint n_outputs, n_active_outputs, n_usable_outputs;
+  guint n_outputs, n_usable_outputs;
   GList *outputs, *l;
   CcDisplayConfigType type;
   gboolean cloned = FALSE;
@@ -735,7 +747,6 @@ rebuild_ui (CcDisplayPanel *panel)
 
   cloned = config_get_current_type (panel);
 
-  n_active_outputs = 0;
   n_usable_outputs = 0;
   outputs = cc_display_config_get_ui_sorted_monitors (panel->current_config);
 
@@ -797,8 +808,6 @@ rebuild_ui (CcDisplayPanel *panel)
            */
           if (!panel->current_output || !cc_display_monitor_is_active (panel->current_output))
             set_current_output (panel, output, FALSE);
-
-          n_active_outputs++;
         }
     }
 
@@ -808,24 +817,28 @@ rebuild_ui (CcDisplayPanel *panel)
   n_outputs = g_list_length (outputs);
   type = config_get_current_type (panel);
 
-  if (n_outputs == 2 && n_usable_outputs == 2 && n_active_outputs == 2)
+  if (n_usable_outputs > 1)
     {
-      /* We only show the top chooser with two monitors that are
-       * both usable (i.e. two monitors incl. internal and lid not closed).
+      /* Joining and mirroring both cover every usable monitor (a builtin one
+       * with its lid closed is left out).
        * In this case, the arrangement widget is shown if we are in JOIN mode.
        */
       if (type > CC_DISPLAY_CONFIG_LAST_VALID)
         type = CC_DISPLAY_CONFIG_JOIN;
 
+      /* Mirroring needs a resolution all of them support. */
+      gtk_widget_set_sensitive (panel->config_type_mirror,
+                                cc_display_config_get_cloning_modes (panel->current_config) != NULL);
+
       gtk_revealer_set_reveal_child (GTK_REVEALER (panel->config_type_revealer), TRUE);
     }
   else
     {
-      /* We have 1 monitor, or 2+ including active and inactive. In this case there is no chooser,
+      /* We have 1 usable monitor. In this case there is no chooser,
        */
       gtk_revealer_set_reveal_child (GTK_REVEALER (panel->config_type_revealer), FALSE);
 
-      /* Mirror is also invalid as it cannot be configured using this UI. */
+      /* Mirror is also invalid as there is nothing to mirror to. */
       if (type == CC_DISPLAY_CONFIG_CLONE || type > CC_DISPLAY_CONFIG_LAST_VALID)
         type = CC_DISPLAY_CONFIG_JOIN;
     }
