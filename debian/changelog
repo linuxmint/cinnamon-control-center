@@ -1,3 +1,15 @@
+cinnamon-control-center (6.7.7) adrien; urgency=medium
+
+  [ Gary T. Giesen ]
+  * display: snap monitors to aligned centers in the arrangement view (#384)
+
+  [ Michael Webster ]
+  * cc-display-config-dbus.c: Don't warn on invalid monitor positions
+  * cc-display-config.c: Use logical_monitors to determine monitor order
+  * display panel: Don't restrict mirror mode to two monitors, ignore a closed laptop panel when offering mirroring.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 13 Oct 2026 13:27:24 +0100
+
 cinnamon-control-center (6.7.6) adrien; urgency=medium
 
   [ Michael Webster ]
