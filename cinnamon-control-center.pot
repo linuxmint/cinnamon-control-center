@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-25 14:21+0000\n"
+"POT-Creation-Date: 2026-10-27 10:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -229,58 +229,57 @@ msgstr ""
 #. * the Spanish translation could be "Pantallas en Espejo".
 #.
 #: panels/display/cc-display-labeler.c:369
-#: panels/display/cc-display-panel.c:767
+#: panels/display/cc-display-panel.c:780
 msgid "Mirrored Displays"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1170
+#: panels/display/cc-display-panel.c:1186
 msgid "Confirm reset to defaults"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1172
+#: panels/display/cc-display-panel.c:1188
 msgid "Cancel"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1172
+#: panels/display/cc-display-panel.c:1188
 msgid "Continue"
 msgstr ""
 
-#: panels/display/cc-display-panel.c:1185
+#: panels/display/cc-display-panel.c:1201
 msgid ""
 "This will remove all existing display configurations and reset the current "
 "layout."
 msgstr ""
 
-#: panels/display/cc-display-settings.c:107
+#: panels/display/cc-display-settings.c:106
 msgctxt "Display rotation"
 msgid "Landscape"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:110
+#: panels/display/cc-display-settings.c:109
 msgctxt "Display rotation"
 msgid "Portrait Right"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:113
+#: panels/display/cc-display-settings.c:112
 msgctxt "Display rotation"
 msgid "Portrait Left"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:116
+#: panels/display/cc-display-settings.c:115
 msgctxt "Display rotation"
 msgid "Landscape (flipped)"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:190
-#, c-format
+#: panels/display/cc-display-settings.c:189
 msgid "%.2lf Hz"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:471
+#: panels/display/cc-display-settings.c:461
 msgid "Monitor scale"
 msgstr ""
 
-#: panels/display/cc-display-settings.c:475
+#: panels/display/cc-display-settings.c:465
 #: panels/display/cc-display-settings.ui.h:4
 msgid "User interface scale"
 msgstr ""
@@ -308,30 +307,30 @@ msgid "NetworkManager needs to be running."
 msgstr ""
 
 #. Translators: network device speed
-#: panels/network/net-device-ethernet.c:50 panels/network/net-device-wifi.c:549
-#: panels/network/connection-editor/ce-page-details.c:153
+#: panels/network/net-device-ethernet.c:50 panels/network/net-device-wifi.c:566
+#: panels/network/connection-editor/ce-page-details.c:161
 #, c-format
 msgid "%d Mb/s"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:107
-#: panels/network/net-device-wifi.c:477
+#: panels/network/net-device-wifi.c:494
 msgid "never"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:117
-#: panels/network/net-device-wifi.c:487
+#: panels/network/net-device-wifi.c:504
 msgid "today"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:119
-#: panels/network/net-device-wifi.c:489
+#: panels/network/net-device-wifi.c:506
 msgid "yesterday"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:121
-#: panels/network/net-device-wifi.c:491
-#: panels/network/connection-editor/ce-page-details.c:104
+#: panels/network/net-device-wifi.c:508
+#: panels/network/connection-editor/ce-page-details.c:112
 #, c-format
 msgid "%i day ago"
 msgid_plural "%i days ago"
@@ -409,7 +408,7 @@ msgid "Wired"
 msgstr ""
 
 #: panels/network/net-device-ethernet.c:360
-#: panels/network/net-device-wifi.c:1751 panels/network/network-ethernet.ui.h:3
+#: panels/network/net-device-wifi.c:1847 panels/network/network-ethernet.ui.h:3
 #: panels/network/network-mobile.ui.h:9 panels/network/network-simple.ui.h:9
 #: panels/network/network-vpn.ui.h:7
 msgid "Options…"
@@ -420,88 +419,101 @@ msgid "Add new connection"
 msgstr ""
 
 #. TRANSLATORS: this WEP WiFi security
-#: panels/network/net-device-wifi.c:215 panels/network/net-device-wifi.c:393
+#: panels/network/net-device-wifi.c:224 panels/network/net-device-wifi.c:410
 #: panels/network/connection-editor/ce-page-details.c:50
 msgid "WEP"
 msgstr ""
 
-#. TRANSLATORS: this WPA WiFi security
-#: panels/network/net-device-wifi.c:219 panels/network/net-device-wifi.c:398
+#. TRANSLATORS: Enhanced Open (OWE) WiFi security
+#: panels/network/net-device-wifi.c:228
 #: panels/network/connection-editor/ce-page-details.c:54
+#: panels/network/connection-editor/ce-page-security.c:376
+msgid "Enhanced Open"
+msgstr ""
+
+#. TRANSLATORS: WPA3 (SAE) WiFi security
+#: panels/network/net-device-wifi.c:231
+#: panels/network/connection-editor/ce-page-details.c:57
+msgid "WPA3"
+msgstr ""
+
+#. TRANSLATORS: this WPA WiFi security
+#: panels/network/net-device-wifi.c:235 panels/network/net-device-wifi.c:415
+#: panels/network/connection-editor/ce-page-details.c:61
 #: panels/network/network-wifi.ui.h:20
 msgid "WPA"
 msgstr ""
 
 #. TRANSLATORS: this WPA WiFi security
-#: panels/network/net-device-wifi.c:223
-#: panels/network/connection-editor/ce-page-details.c:58
+#: panels/network/net-device-wifi.c:239
+#: panels/network/connection-editor/ce-page-details.c:65
 msgid "WPA2"
 msgstr ""
 
 #. TRANSLATORS: this Enterprise WiFi security
-#: panels/network/net-device-wifi.c:228
-#: panels/network/connection-editor/ce-page-details.c:63
+#: panels/network/net-device-wifi.c:245
+#: panels/network/connection-editor/ce-page-details.c:71
 msgid "Enterprise"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:233 panels/network/net-device-wifi.c:383
-#: panels/network/connection-editor/ce-page-details.c:68
+#: panels/network/net-device-wifi.c:250 panels/network/net-device-wifi.c:400
+#: panels/network/connection-editor/ce-page-details.c:76
 msgctxt "Wifi security"
 msgid "None"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:578
-#: panels/network/connection-editor/ce-page-details.c:179
+#: panels/network/net-device-wifi.c:595
+#: panels/network/connection-editor/ce-page-details.c:187
 msgctxt "Signal strength"
 msgid "None"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:580
-#: panels/network/connection-editor/ce-page-details.c:181
+#: panels/network/net-device-wifi.c:597
+#: panels/network/connection-editor/ce-page-details.c:189
 msgctxt "Signal strength"
 msgid "Weak"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:582
-#: panels/network/connection-editor/ce-page-details.c:183
+#: panels/network/net-device-wifi.c:599
+#: panels/network/connection-editor/ce-page-details.c:191
 msgctxt "Signal strength"
 msgid "Ok"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:584
-#: panels/network/connection-editor/ce-page-details.c:185
+#: panels/network/net-device-wifi.c:601
+#: panels/network/connection-editor/ce-page-details.c:193
 msgctxt "Signal strength"
 msgid "Good"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:586
-#: panels/network/connection-editor/ce-page-details.c:187
+#: panels/network/net-device-wifi.c:603
+#: panels/network/connection-editor/ce-page-details.c:195
 msgctxt "Signal strength"
 msgid "Excellent"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1260
+#: panels/network/net-device-wifi.c:1356
 msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
 "a wireless hotspot to share the connection with others."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1264
+#: panels/network/net-device-wifi.c:1360
 #, c-format
 msgid "Switching on the wireless hotspot will disconnect you from <b>%s</b>."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1268
+#: panels/network/net-device-wifi.c:1364
 msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1350
+#: panels/network/net-device-wifi.c:1446
 msgid "Stop hotspot and disconnect any users?"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1352 panels/network/net-device-wifi.c:1592
+#: panels/network/net-device-wifi.c:1448 panels/network/net-device-wifi.c:1688
 #: panels/network/connection-editor/vpn-helpers.c:181
 #: panels/network/connection-editor/vpn-helpers.c:310
 #: panels/network/network-wifi.ui.h:1
@@ -509,40 +521,40 @@ msgstr ""
 msgid "_Cancel"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1353
+#: panels/network/net-device-wifi.c:1449
 msgid "_Stop Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1454
+#: panels/network/net-device-wifi.c:1550
 msgid "System policy prohibits use as a Hotspot"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1457
+#: panels/network/net-device-wifi.c:1553
 msgid "Wireless device does not support Hotspot mode"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1589
+#: panels/network/net-device-wifi.c:1685
 msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1593 panels/network/network-wifi.ui.h:43
+#: panels/network/net-device-wifi.c:1689 panels/network/network-wifi.ui.h:43
 #: panels/network/connection-editor/reset-page.ui.h:2
 msgid "_Forget"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1899
+#: panels/network/net-device-wifi.c:1997
 msgid "History"
 msgstr ""
 
-#: panels/network/net-device-wifi.c:1903 panels/wacom/cc-wacom-page.c:467
+#: panels/network/net-device-wifi.c:2001 panels/wacom/cc-wacom-page.c:467
 #: panels/wacom/button-mapping.ui.h:2
 msgid "_Close"
 msgstr ""
 
 #. translators: This is the label for the "Forget wireless network" functionality
-#: panels/network/net-device-wifi.c:1911
+#: panels/network/net-device-wifi.c:2009
 msgctxt "Wi-Fi Network"
 msgid "_Forget"
 msgstr ""
@@ -896,7 +908,7 @@ msgid "New shortcut…"
 msgstr ""
 
 #: panels/network/connection-editor/ce-page-8021x-security.c:101
-#: panels/network/connection-editor/ce-page-security.c:459
+#: panels/network/connection-editor/ce-page-security.c:500
 #: panels/network/network-wifi.ui.h:6
 #: panels/network/connection-editor/details-page.ui.h:3
 msgid "Security"
@@ -911,19 +923,19 @@ msgstr ""
 msgid "Profile %d"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-details.c:89
+#: panels/network/connection-editor/ce-page-details.c:97
 msgid "Never"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-details.c:100
+#: panels/network/connection-editor/ce-page-details.c:108
 msgid "Today"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-details.c:102
+#: panels/network/connection-editor/ce-page-details.c:110
 msgid "Yesterday"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-details.c:225
+#: panels/network/connection-editor/ce-page-details.c:233
 #: panels/network/network-wifi.ui.h:47
 msgid "Details"
 msgstr ""
@@ -1034,34 +1046,38 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:248
+#: panels/network/connection-editor/ce-page-security.c:263
 msgctxt "Wi-Fi/Ethernet security"
 msgid "None"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:271
+#: panels/network/connection-editor/ce-page-security.c:286
 msgid "WEP 40/128-bit Key (Hex or ASCII)"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:281
+#: panels/network/connection-editor/ce-page-security.c:296
 msgid "WEP 128-bit Passphrase"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:294
+#: panels/network/connection-editor/ce-page-security.c:309
 #: panels/network/wireless-security/wireless-security.c:463
 msgid "LEAP"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:307
+#: panels/network/connection-editor/ce-page-security.c:322
 msgid "Dynamic WEP (802.1x)"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:321
+#: panels/network/connection-editor/ce-page-security.c:336
 msgid "WPA & WPA2 Personal"
 msgstr ""
 
-#: panels/network/connection-editor/ce-page-security.c:335
+#: panels/network/connection-editor/ce-page-security.c:350
 msgid "WPA & WPA2 Enterprise"
+msgstr ""
+
+#: panels/network/connection-editor/ce-page-security.c:363
+msgid "WPA3 Personal"
 msgstr ""
 
 #: panels/network/connection-editor/firewall-helpers.c:49
@@ -1408,11 +1424,11 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 
-#: shell/control-center.c:222
+#: shell/control-center.c:218
 msgid "Help"
 msgstr ""
 
-#: shell/control-center.c:223
+#: shell/control-center.c:219
 msgid "Quit"
 msgstr ""
 
@@ -1680,6 +1696,7 @@ msgstr ""
 #: panels/network/wireless-security/eap-method-leap.ui.h:2
 #: panels/network/wireless-security/eap-method-simple.ui.h:2
 #: panels/network/wireless-security/ws-leap.ui.h:2
+#: panels/network/wireless-security/ws-sae.ui.h:1
 #: panels/network/wireless-security/ws-wpa-psk.ui.h:1
 msgid "_Password"
 msgstr ""
@@ -2154,6 +2171,7 @@ msgstr ""
 #: panels/network/wireless-security/eap-method-simple.ui.h:3
 #: panels/network/wireless-security/eap-method-tls.ui.h:7
 #: panels/network/wireless-security/ws-leap.ui.h:3
+#: panels/network/wireless-security/ws-sae.ui.h:2
 #: panels/network/wireless-security/ws-wpa-psk.ui.h:3
 msgid "Sho_w password"
 msgstr ""
