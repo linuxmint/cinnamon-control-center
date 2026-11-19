@@ -23,33 +23,6 @@ X-Cinnamon-Settings-Panel=color
 additionalfiles.generate(DOMAIN, PATH, "./panels/color/cinnamon-color-panel.desktop", prefix, _("Color"), _("Color management settings"), "", keywords=_("Color, ICC, Profile, Calibrate, Printer, Display"))
 
 prefix = """[Desktop Entry]
-Exec=cinnamon-settings region
-Icon=cs-language
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;DesktopSettings;X-Cinnamon-Settings-Panel;X-Cinnamon-PersonalSettings
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=region
-NoDisplay=true
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/region/cinnamon-region-panel.desktop", prefix, _("Region & Language"), _("Change your region and language settings"), "")
-
-prefix = """[Desktop Entry]
-Exec=cinnamon-settings display
-Icon=cs-display
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=GTK;Settings;HardwareSettings;X-Cinnamon-Settings-Panel;
-OnlyShowIn=X-Cinnamon;
-X-Cinnamon-Settings-Panel=display
-"""
-
-additionalfiles.generate(DOMAIN, PATH, "./panels/display/cinnamon-display-panel.desktop", prefix, _("Display"), _("Change resolution and position of monitors and projectors"), "", keywords=_("Panel, Projector, xrandr, Screen, Resolution, Refresh"))
-
-prefix = """[Desktop Entry]
 Exec=cinnamon-settings network
 Icon=cs-network
 Terminal=false
