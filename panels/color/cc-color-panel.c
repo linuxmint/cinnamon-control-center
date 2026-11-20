@@ -651,7 +651,8 @@ gcm_prefs_profile_view_cb (GtkWidget *widget, CcColorPanel *prefs)
   gchar *options = NULL;
   gchar *viewer_filename;
   GPtrArray *argv = NULL;
-  guint xid;
+  guint xid = 0;
+  GdkWindow *window;
   CcColorPanelPrivate *priv = prefs->priv;
 
   /* get the selected row */
@@ -666,8 +667,9 @@ gcm_prefs_profile_view_cb (GtkWidget *widget, CcColorPanel *prefs)
                       GCM_PREFS_COLUMN_PROFILE, &profile,
                       -1);
 
-  /* get xid */
-  xid = gdk_x11_window_get_xid (gtk_widget_get_window (GTK_WIDGET (priv->main_window)));
+  window = gtk_widget_get_window (GTK_WIDGET (priv->main_window));
+  if (GDK_IS_X11_WINDOW (window))
+    xid = gdk_x11_window_get_xid (window);
 
   viewer_filename = g_build_filename (BINDIR, "gcm-viewer", NULL);
   /* open up gcm-viewer as a info pane */
@@ -675,8 +677,11 @@ gcm_prefs_profile_view_cb (GtkWidget *widget, CcColorPanel *prefs)
   g_ptr_array_add (argv, viewer_filename);
   g_ptr_array_add (argv, g_strdup ("--profile"));
   g_ptr_array_add (argv, g_strdup (cd_profile_get_id (profile)));
-  g_ptr_array_add (argv, g_strdup ("--parent-window"));
-  g_ptr_array_add (argv, g_strdup_printf ("%i", xid));
+  if (xid != 0)
+    {
+      g_ptr_array_add (argv, g_strdup ("--parent-window"));
+      g_ptr_array_add (argv, g_strdup_printf ("%i", xid));
+    }
   g_ptr_array_add (argv, NULL);
 
   gcm_prefs_run_maybe_install (xid, viewer_filename, argv);
