@@ -1,3 +1,12 @@
+cinnamon-control-center (6.8.1) adrien; urgency=medium
+
+  [ Michael Webster ]
+  * i18n: Fix generate_additional_files.py
+  * i18n: Run generate_additional_files
+  * cc-color-panel.c: Guard gdk_x11_window_get_xid() for Wayland sessions
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri, 20 Nov 2026 17:42:12 +0000
+
 cinnamon-control-center (6.8.0) adrien; urgency=medium
 
   * l10n: Update POT
